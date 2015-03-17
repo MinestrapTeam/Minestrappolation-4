@@ -29,7 +29,7 @@ public class MinistrappolationBlocks {
 	public static Block glass_refined;
 	public static Block glass_tiles;
 	public static Block glass_window;
-	//public static Block crate;
+	public static Block crate;
 	
 	public static void init()
 	{
@@ -43,7 +43,7 @@ public class MinistrappolationBlocks {
 		glass_refined = new BlockTransparent(Material.glass, MapColor.airColor, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setUnlocalizedName("glass_refined").setCreativeTab(Ministrappolation.tabMinistrappolation);
 		glass_tiles = new BlockTransparent(Material.glass, MapColor.airColor, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setLightOpacity(1).setUnlocalizedName("glass_tiles").setCreativeTab(Ministrappolation.tabMinistrappolation);
 		glass_window = new BlockTransparent(Material.iron, MapColor.airColor, false).setHardness(0.8F).setResistance(2.0F).setStepSound(Block.soundTypeGlass).setLightOpacity(2).setUnlocalizedName("glass_window").setCreativeTab(Ministrappolation.tabMinistrappolation);
-		//crate = new BlockMinistrappolationContainer(0).setUnlocalizedName("crate").setCreativeTab(Ministrappolation.tabMinistrappolation);
+		crate = new BlockMinistrappolationContainer(Material.wood, MapColor.woodColor).setHardness(2.5F).setCreativeTab(Ministrappolation.tabMinistrappolation).setStepSound(Block.soundTypeWood).setUnlocalizedName("crate");
 	}
 	
 	public static void register()
@@ -58,6 +58,7 @@ public class MinistrappolationBlocks {
 		GameRegistry.registerBlock(glass_refined, glass_refined.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(glass_tiles, glass_tiles.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(glass_window, glass_window.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(crate, crate.getUnlocalizedName().substring(5));
 	}
 	
 	public static void registerRenders()
@@ -72,6 +73,7 @@ public class MinistrappolationBlocks {
 		registerRender(glass_refined);
 		registerRender(glass_tiles);
 		registerRender(glass_window);
+		registerRender(crate);
 	}
 	
 	public static void registerRender(Block block)

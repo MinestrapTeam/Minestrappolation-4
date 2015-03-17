@@ -1,6 +1,8 @@
 #Workspace Files
 .gradle
+.classpath
 .settings
+backups
 bin
 build
 eclipse

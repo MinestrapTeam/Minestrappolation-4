@@ -65,7 +65,7 @@ public class MinistrappolationGenHandler implements IWorldGenerator{
 		generateOre(MinistrappolationBlocks.copper_ore, world, rand, x1, z1, 3, 12, 30, 15, 100, BlockHelper.forBlock(Blocks.stone));
 		generateOre(MinistrappolationBlocks.tin_ore, world, rand, x1, z1, 3, 12, 30, 15, 100, BlockHelper.forBlock(Blocks.stone));
 		generateOre(MinistrappolationBlocks.sunstone_ore, world, rand, x1, z1, 2, 4, 30, 1, 200, BlockHelper.forBlock(Blocks.stone));
-		System.out.println("Generated Ore Vein at Chunk" + x1 + " " + z1);
+		//System.out.println("Generated Ore Vein at Chunk" + x1 + " " + z1);
 	}
 	
 	public void generateNether(World world, Random rand, int x, int z)
