@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": [
+			{ "model": "granite_smooth_1" },
+			{ "model": "granite_smooth_2" },
+			{ "model": "granite_smooth_3" },
+			{ "model": "granite_smooth_4" }
+		]
+    }
+}

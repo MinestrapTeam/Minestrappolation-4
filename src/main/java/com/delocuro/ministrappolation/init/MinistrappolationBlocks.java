@@ -1,6 +1,7 @@
 package com.delocuro.ministrappolation.init;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockStoneBrick;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -10,9 +11,11 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.delocuro.ministrappolation.Ministrappolation;
 import com.delocuro.ministrappolation.Reference;
+import com.delocuro.ministrappolation.blocks.BlockBoulder;
 import com.delocuro.ministrappolation.blocks.BlockDefault;
 import com.delocuro.ministrappolation.blocks.BlockMinistrappOre;
 import com.delocuro.ministrappolation.blocks.BlockMinistrappolationContainer;
+import com.delocuro.ministrappolation.blocks.BlockStoneDecor;
 import com.delocuro.ministrappolation.blocks.BlockSunstoneBlock;
 import com.delocuro.ministrappolation.blocks.BlockTransparent;
 //import com.delocuro.ministrappolation.blocks.MinistrappolationContainer;
@@ -29,7 +32,16 @@ public class MinistrappolationBlocks {
 	public static Block glass_refined;
 	public static Block glass_tiles;
 	public static Block glass_window;
-	public static Block crate;
+	public static Block stone_boulder;
+	public static Block stone_lamp_glowstone;
+	public static Block stone_lamp_prismarine;
+	public static Block stone_lamp_sunstone;
+	public static Block stone_pattern_bricks;
+	public static Block stone_refined;
+	public static Block stone_tiles;
+	
+	//public static Block stone_decor;
+	//public static Block crate;
 	
 	public static void init()
 	{
@@ -43,7 +55,10 @@ public class MinistrappolationBlocks {
 		glass_refined = new BlockTransparent(Material.glass, MapColor.airColor, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setUnlocalizedName("glass_refined").setCreativeTab(Ministrappolation.tabMinistrappolation);
 		glass_tiles = new BlockTransparent(Material.glass, MapColor.airColor, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setLightOpacity(1).setUnlocalizedName("glass_tiles").setCreativeTab(Ministrappolation.tabMinistrappolation);
 		glass_window = new BlockTransparent(Material.iron, MapColor.airColor, false).setHardness(0.8F).setResistance(2.0F).setStepSound(Block.soundTypeGlass).setLightOpacity(2).setUnlocalizedName("glass_window").setCreativeTab(Ministrappolation.tabMinistrappolation);
-		crate = new BlockMinistrappolationContainer(Material.wood, MapColor.woodColor).setHardness(2.5F).setCreativeTab(Ministrappolation.tabMinistrappolation).setStepSound(Block.soundTypeWood).setUnlocalizedName("crate");
+		stone_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_boulder").setCreativeTab(Ministrappolation.tabMinistrappolation);
+		
+		//stone_decor = (new BlockStoneDecor()).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_decor");
+		//crate = new BlockMinistrappolationContainer(Material.wood, MapColor.woodColor).setHardness(2.5F).setCreativeTab(Ministrappolation.tabMinistrappolation).setStepSound(Block.soundTypeWood).setUnlocalizedName("crate");
 	}
 	
 	public static void register()
@@ -58,7 +73,10 @@ public class MinistrappolationBlocks {
 		GameRegistry.registerBlock(glass_refined, glass_refined.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(glass_tiles, glass_tiles.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(glass_window, glass_window.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(crate, crate.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(stone_boulder, stone_boulder.getUnlocalizedName().substring(5));
+		
+		//GameRegistry.registerBlock(stone_decor, stone_decor.getUnlocalizedName().substring(5));
+		//GameRegistry.registerBlock(crate, crate.getUnlocalizedName().substring(5));
 	}
 	
 	public static void registerRenders()
@@ -73,7 +91,10 @@ public class MinistrappolationBlocks {
 		registerRender(glass_refined);
 		registerRender(glass_tiles);
 		registerRender(glass_window);
-		registerRender(crate);
+		registerRender(stone_boulder);
+		
+		//registerRender(stone_decor);
+		//registerRender(crate);
 	}
 	
 	public static void registerRender(Block block)
@@ -90,5 +111,8 @@ public class MinistrappolationBlocks {
 		tin_block.setHarvestLevel("pickaxe", 0);
 		sunstone_ore.setHarvestLevel("pickaxe", 2);
 		glass_window.setHarvestLevel("pickaxe", 0);
+		stone_boulder.setHarvestLevel("pickaxe", 1);
+		
+		//stone_decor.setHarvestLevel("pickaxe", 0);
 	}
 }

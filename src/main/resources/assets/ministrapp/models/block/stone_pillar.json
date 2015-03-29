@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "ministrapp:blocks/stone_pillar_top",
+        "side": "ministrapp:blocks/stone_pillar_side"
+    }
+}

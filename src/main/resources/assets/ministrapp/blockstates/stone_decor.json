@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "variant=stone_pattern_bricks": { "model": "ministrapp:stone_pattern_bricks" },
+		"variant=stone_refined": { "model": "ministrapp:stone_refined" },
+		"variant=stone_lamp_prismarine": { "model": "ministrapp:stone_lamp_prismarine" },
+		"variant=stone_tiles": { "model": "ministrapp:stone_tiles" },
+		"variant=stone_lamp_glowstone": { "model": "ministrapp:stone_lamp_glowstone" },
+		"variant=stone_lamp_sunstone": { "model": "ministrapp:stone_lamp_sunstone" }
+    }
+}

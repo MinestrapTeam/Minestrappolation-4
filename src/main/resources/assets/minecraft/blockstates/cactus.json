@@ -1,0 +1,22 @@
+{
+    "variants": {
+        "normal": [
+			{ "model": "cactus" },
+			{ "model": "cactus" },
+			{ "model": "cactus" },
+			{ "model": "cactus" },
+			{ "model": "cactus" },
+			{ "model": "cactus" },
+			{ "model": "cactus" },
+			{ "model": "cactus" },
+			{ "model": "cactus" },
+			{ "model": "cactus" },
+			{ "model": "cactus" },
+			{ "model": "cactus" },
+			{ "model": "cactus_armed" },
+			{ "model": "cactus_armed", "y": 90 },
+			{ "model": "cactus_armed", "y": 180 },
+			{ "model": "cactus_armed", "y": 270 }
+		]
+    }
+}
