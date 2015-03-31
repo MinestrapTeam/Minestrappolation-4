@@ -56,6 +56,12 @@ public class MinistrappolationBlocks {
 		glass_tiles = new BlockTransparent(Material.glass, MapColor.airColor, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setLightOpacity(1).setUnlocalizedName("glass_tiles").setCreativeTab(Ministrappolation.tabMinistrappolation);
 		glass_window = new BlockTransparent(Material.iron, MapColor.airColor, false).setHardness(0.8F).setResistance(2.0F).setStepSound(Block.soundTypeGlass).setLightOpacity(2).setUnlocalizedName("glass_window").setCreativeTab(Ministrappolation.tabMinistrappolation);
 		stone_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_boulder").setCreativeTab(Ministrappolation.tabMinistrappolation);
+		stone_lamp_glowstone = new BlockDefault(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setLightLevel(1.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_lamp_glowstone").setCreativeTab(Ministrappolation.tabMinistrappolation);
+		stone_lamp_prismarine = new BlockDefault(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setLightLevel(1.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_lamp_prismarine").setCreativeTab(Ministrappolation.tabMinistrappolation);
+		stone_lamp_sunstone = new BlockDefault(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setLightLevel(0.9F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_lamp_sunstone").setCreativeTab(Ministrappolation.tabMinistrappolation);
+		stone_pattern_bricks = new BlockDefault(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_pattern_bricks").setCreativeTab(Ministrappolation.tabMinistrappolation);
+		stone_refined = new BlockDefault(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_refined").setCreativeTab(Ministrappolation.tabMinistrappolation);
+		stone_tiles = new BlockDefault(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_tiles").setCreativeTab(Ministrappolation.tabMinistrappolation);
 		
 		//stone_decor = (new BlockStoneDecor()).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_decor");
 		//crate = new BlockMinistrappolationContainer(Material.wood, MapColor.woodColor).setHardness(2.5F).setCreativeTab(Ministrappolation.tabMinistrappolation).setStepSound(Block.soundTypeWood).setUnlocalizedName("crate");
@@ -74,6 +80,12 @@ public class MinistrappolationBlocks {
 		GameRegistry.registerBlock(glass_tiles, glass_tiles.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(glass_window, glass_window.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(stone_boulder, stone_boulder.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(stone_lamp_glowstone, stone_lamp_glowstone.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(stone_lamp_prismarine, stone_lamp_prismarine.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(stone_lamp_sunstone, stone_lamp_sunstone.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(stone_pattern_bricks, stone_pattern_bricks.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(stone_refined, stone_refined.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(stone_tiles, stone_tiles.getUnlocalizedName().substring(5));
 		
 		//GameRegistry.registerBlock(stone_decor, stone_decor.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(crate, crate.getUnlocalizedName().substring(5));
@@ -92,6 +104,12 @@ public class MinistrappolationBlocks {
 		registerRender(glass_tiles);
 		registerRender(glass_window);
 		registerRender(stone_boulder);
+		registerRender(stone_lamp_glowstone);
+		registerRender(stone_lamp_prismarine);
+		registerRender(stone_lamp_sunstone);
+		registerRender(stone_pattern_bricks);
+		registerRender(stone_refined);
+		registerRender(stone_tiles);
 		
 		//registerRender(stone_decor);
 		//registerRender(crate);
@@ -112,6 +130,12 @@ public class MinistrappolationBlocks {
 		sunstone_ore.setHarvestLevel("pickaxe", 2);
 		glass_window.setHarvestLevel("pickaxe", 0);
 		stone_boulder.setHarvestLevel("pickaxe", 1);
+		stone_lamp_glowstone.setHarvestLevel("pickaxe", 0);
+		stone_lamp_prismarine.setHarvestLevel("pickaxe", 0);
+		stone_lamp_sunstone.setHarvestLevel("pickaxe", 0);
+		stone_pattern_bricks.setHarvestLevel("pickaxe", 0);
+		stone_refined.setHarvestLevel("pickaxe", 0);
+		stone_tiles.setHarvestLevel("pickaxe", 0);
 		
 		//stone_decor.setHarvestLevel("pickaxe", 0);
 	}

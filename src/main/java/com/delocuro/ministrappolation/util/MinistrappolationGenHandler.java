@@ -27,7 +27,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.event.terraingen.ChunkProviderEvent.ReplaceBiomeBlocks;
 
 public class MinistrappolationGenHandler implements IWorldGenerator{
-
+	
 	public static void load()
 	{
 		GameRegistry.registerWorldGenerator(new MinistrappolationGenHandler(), 0);
@@ -38,6 +38,7 @@ public class MinistrappolationGenHandler implements IWorldGenerator{
 	{
 		//chunkX <<= 4;
 		//chunkZ <<= 4;
+		BlockPos pos = new BlockPos(chunkX, 1, chunkZ);
 		if(chunkGenerator instanceof ChunkProviderGenerate)
 		{
 			this.generateOverworld(world, random, chunkX, chunkZ);
@@ -61,10 +62,25 @@ public class MinistrappolationGenHandler implements IWorldGenerator{
 	public void generateOverworld(World world, Random rand, int x, int z)
 	{
 		int x1 = x;
+		int y1 = 0;
 		int z1 = z;
 		generateOre(MinistrappolationBlocks.copper_ore, world, rand, x1, z1, 3, 12, 30, 15, 100, BlockHelper.forBlock(Blocks.stone));
 		generateOre(MinistrappolationBlocks.tin_ore, world, rand, x1, z1, 3, 12, 30, 15, 100, BlockHelper.forBlock(Blocks.stone));
 		generateOre(MinistrappolationBlocks.sunstone_ore, world, rand, x1, z1, 2, 4, 30, 1, 200, BlockHelper.forBlock(Blocks.stone));
+		generateBoulder(world, rand, x1, z1);
+		
+		/*for (int i = 0; i < 10; i++)
+		{
+			int xRand = x * 16 + rand.nextInt(16);
+			int yRand = rand.nextInt(120) + 20;
+			int zRand = z * 16 + rand.nextInt(16);
+			BlockPos pos1 = new BlockPos(xRand,yRand,zRand);
+			boulderGen.generate(world, rand, pos1);
+			if (boulderGen.generate(world, rand, pos1) == true)
+			{
+				System.out.println("Generated Boulder Patch at " + pos1.getX() + ", " + pos1.getY() + ", " + pos1.getZ() + ".");
+			}
+		}*/
 		//System.out.println("Generated Ore Vein at Chunk" + x1 + " " + z1);
 	}
 	
@@ -82,6 +98,19 @@ public class MinistrappolationGenHandler implements IWorldGenerator{
 		{
 			int xRand = chunkX * 16 + rand.nextInt(16);
 			int yRand = rand.nextInt(heightRange) + minY;
+			int zRand = chunkZ * 16 + rand.nextInt(16);
+			BlockPos position = new BlockPos(xRand, yRand, zRand);
+			gen.generate(world, rand, position);
+		}
+	}
+	
+	private void generateBoulder(World world, Random rand, int chunkX, int chunkZ)
+	{
+		WorldGenBoulder gen = new WorldGenBoulder();
+		for(int i = 0; i < 1; i++)
+		{
+			int xRand = chunkX * 16 + rand.nextInt(16);
+			int yRand = rand.nextInt(100);
 			int zRand = chunkZ * 16 + rand.nextInt(16);
 			BlockPos position = new BlockPos(xRand, yRand, zRand);
 			gen.generate(world, rand, position);

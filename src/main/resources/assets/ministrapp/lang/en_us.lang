@@ -8,6 +8,7 @@ tile.glass_bricks.name=Bricked Glass
 tile.glass_refined.name=Refined Glass
 tile.glass_tiles.name=Tiled Glass
 tile.glass_window.name=Framed Glass
+tile.stone_boulder.name=Stone Boulder
 
 tile.crate.name=Crate
 
