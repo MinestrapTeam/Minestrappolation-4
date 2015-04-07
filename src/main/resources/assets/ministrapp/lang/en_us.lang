@@ -9,6 +9,13 @@ tile.glass_refined.name=Refined Glass
 tile.glass_tiles.name=Tiled Glass
 tile.glass_window.name=Framed Glass
 tile.stone_boulder.name=Stone Boulder
+tile.ministrapp_log.name=Redwood Log
+tile.stone_lamp_glowstone.name=Stone Glowstone Lamp
+tile.stone_lamp_prismarine.name=Stone Prismarine Lamp
+tile.stone_lamp_sunstone.name=Stone Sunstone Lamp
+tile.stone_pattern_bricks.name=Patterned Stone Bricks
+tile.stone_refined.name=Refined Stone
+tile.stone_tiles.name=Stone Tiles
 
 tile.crate.name=Crate
 
@@ -19,6 +26,7 @@ item.sugar_cookie.name=Sugar Cookie
 item.copper_ingot.name=Copper Ingot
 item.tin_ingot.name=Tin Ingot
 item.sunstone_shard.name=Sunstone Shard
+item.stone_brick.name=Stone Brick
 
 item.copper_pickaxe.name=Copper Pickaxe
 item.copper_axe.name=Copper Axe

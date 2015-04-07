@@ -1,6 +1,7 @@
 package com.delocuro.ministrappolation.init;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockNewLog;
 import net.minecraft.block.BlockStoneBrick;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -13,6 +14,7 @@ import com.delocuro.ministrappolation.Ministrappolation;
 import com.delocuro.ministrappolation.Reference;
 import com.delocuro.ministrappolation.blocks.BlockBoulder;
 import com.delocuro.ministrappolation.blocks.BlockDefault;
+import com.delocuro.ministrappolation.blocks.BlockMinistrappLog;
 import com.delocuro.ministrappolation.blocks.BlockMinistrappOre;
 import com.delocuro.ministrappolation.blocks.BlockMinistrappolationContainer;
 import com.delocuro.ministrappolation.blocks.BlockStoneDecor;
@@ -39,6 +41,7 @@ public class MinistrappolationBlocks {
 	public static Block stone_pattern_bricks;
 	public static Block stone_refined;
 	public static Block stone_tiles;
+	public static Block ministrapp_log;
 	
 	//public static Block stone_decor;
 	//public static Block crate;
@@ -62,6 +65,7 @@ public class MinistrappolationBlocks {
 		stone_pattern_bricks = new BlockDefault(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_pattern_bricks").setCreativeTab(Ministrappolation.tabMinistrappolation);
 		stone_refined = new BlockDefault(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_refined").setCreativeTab(Ministrappolation.tabMinistrappolation);
 		stone_tiles = new BlockDefault(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_tiles").setCreativeTab(Ministrappolation.tabMinistrappolation);
+		ministrapp_log = new BlockMinistrappLog().setUnlocalizedName("ministrapp_log");
 		
 		//stone_decor = (new BlockStoneDecor()).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_decor");
 		//crate = new BlockMinistrappolationContainer(Material.wood, MapColor.woodColor).setHardness(2.5F).setCreativeTab(Ministrappolation.tabMinistrappolation).setStepSound(Block.soundTypeWood).setUnlocalizedName("crate");
@@ -86,6 +90,7 @@ public class MinistrappolationBlocks {
 		GameRegistry.registerBlock(stone_pattern_bricks, stone_pattern_bricks.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(stone_refined, stone_refined.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(stone_tiles, stone_tiles.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(ministrapp_log, ministrapp_log.getUnlocalizedName().substring(5));
 		
 		//GameRegistry.registerBlock(stone_decor, stone_decor.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(crate, crate.getUnlocalizedName().substring(5));
@@ -110,6 +115,7 @@ public class MinistrappolationBlocks {
 		registerRender(stone_pattern_bricks);
 		registerRender(stone_refined);
 		registerRender(stone_tiles);
+		registerRender(ministrapp_log);
 		
 		//registerRender(stone_decor);
 		//registerRender(crate);

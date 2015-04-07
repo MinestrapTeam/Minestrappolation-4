@@ -26,6 +26,7 @@ public class MinistrappolationItems extends Item{
 	public static Item copper_ingot;
 	public static Item tin_ingot;
 	public static Item sunstone_shard;
+	public static Item stone_brick;
 	
 	public static Item copper_pickaxe;
 	public static Item copper_axe;
@@ -50,6 +51,7 @@ public class MinistrappolationItems extends Item{
 		copper_ingot = new Item().setUnlocalizedName("copper_ingot").setCreativeTab(Ministrappolation.tabMinistrappolation);
 		tin_ingot = new Item().setUnlocalizedName("tin_ingot").setCreativeTab(Ministrappolation.tabMinistrappolation);
 		sunstone_shard = new Item().setUnlocalizedName("sunstone_shard").setCreativeTab(Ministrappolation.tabMinistrappolation);
+		stone_brick = new Item().setUnlocalizedName("stone_brick").setCreativeTab(Ministrappolation.tabMinistrappolation);
 		
 		copper_pickaxe = new ItemMinistrappolationPickaxe(COPPER).setUnlocalizedName("copper_pickaxe").setCreativeTab(Ministrappolation.tabMinistrappolation);
 		copper_axe = new ItemMinistrappolationAxe(COPPER).setUnlocalizedName("copper_axe").setCreativeTab(Ministrappolation.tabMinistrappolation);
@@ -71,6 +73,7 @@ public class MinistrappolationItems extends Item{
 		GameRegistry.registerItem(copper_ingot, copper_ingot.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(tin_ingot, tin_ingot.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(sunstone_shard, sunstone_shard.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(stone_brick, stone_brick.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerItem(copper_pickaxe, copper_pickaxe.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(copper_axe, copper_axe.getUnlocalizedName().substring(5));
@@ -92,6 +95,7 @@ public class MinistrappolationItems extends Item{
 		registerRender(copper_ingot);
 		registerRender(tin_ingot);
 		registerRender(sunstone_shard);
+		registerRender(stone_brick);
 		
 		registerRender(copper_pickaxe);
 		registerRender(copper_axe);

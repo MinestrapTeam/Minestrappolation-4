@@ -1,0 +1,7 @@
+{
+    "parent": "block/column_side",
+    "textures": {
+        "end": "ministrapp:blocks/redwood_log_top",
+        "side": "ministrapp:blocks/redwood_log_side"
+    }
+}
