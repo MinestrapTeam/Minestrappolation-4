@@ -20,7 +20,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class BlockMinistrappPlanks extends Block
 {
     public static final PropertyEnum VARIANT = PropertyEnum.create("variant", BlockMinistrappPlanks.EnumType.class);
-    private static final String __OBFID = "CL_00002082";
 
     public BlockMinistrappPlanks()
     {
@@ -81,8 +80,6 @@ public class BlockMinistrappPlanks extends Block
         private final int meta;
         private final String name;
         private final String unlocalizedName;
-
-        private static final String __OBFID = "CL_00002081";
 
         private EnumType(int meta, String name)
         {

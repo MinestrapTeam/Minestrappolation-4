@@ -5,6 +5,7 @@ import java.util.List;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.BlockPlanks;
+import net.minecraft.block.BlockPlanks.EnumType;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockState;
@@ -25,7 +26,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.google.common.base.Predicate;
 
-public class BlockMinistrappLeaf extends BlockLeaves
+public class BlockMinistrappLeaf extends BlockMinistrappolationLeavesBase
 {
     public static final PropertyEnum VARIANT = PropertyEnum.create("variant", BlockMinistrappPlanks.EnumType.class, new Predicate()
     {
@@ -57,6 +58,7 @@ public class BlockMinistrappLeaf extends BlockLeaves
         {
             //BlockMinistrappPlanks.EnumType enumtype = (BlockMinistrappPlanks.EnumType)state.getValue(VARIANT);
             //return enumtype == BlockMinistrappPlanks.EnumType.REDWOOD ? super.getRenderColor(state);
+        	BlockMinistrappPlanks.EnumType enumtype = (BlockMinistrappPlanks.EnumType)state.getValue(VARIANT);
         	return super.getRenderColor(state);
         }
     }
@@ -129,7 +131,7 @@ public class BlockMinistrappLeaf extends BlockLeaves
 
         return i;
     }
-
+    
     public BlockMinistrappPlanks.EnumType getWoodType(int meta)
     {
     	return BlockMinistrappPlanks.EnumType.byMetadata((meta & 3) % 4);
