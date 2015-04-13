@@ -86,7 +86,7 @@ public class BlockMinistrappLeaf extends BlockMinistrappolationLeavesBase
 
     protected int getSaplingDropChance(IBlockState state)
     {
-        return state.getValue(VARIANT) == BlockMinistrappPlanks.EnumType.REDWOOD ? 40 : super.getSaplingDropChance(state);
+        return state.getValue(VARIANT) == BlockMinistrappPlanks.EnumType.REDWOOD ? 30 : super.getSaplingDropChance(state);
     }
 
     /**
@@ -155,7 +155,7 @@ public class BlockMinistrappLeaf extends BlockMinistrappolationLeavesBase
         if (!worldIn.isRemote && player.getCurrentEquippedItem() != null && player.getCurrentEquippedItem().getItem() == Items.shears)
         {
             player.triggerAchievement(StatList.mineBlockStatArray[Block.getIdFromBlock(this)]);
-            spawnAsEntity(worldIn, pos, new ItemStack(Item.getItemFromBlock(this), 1, ((BlockMinistrappPlanks.EnumType)state.getValue(VARIANT)).getMetadata()));
+            //spawnAsEntity(worldIn, pos, new ItemStack(Item.getItemFromBlock(this), 1, ((BlockMinistrappPlanks.EnumType)state.getValue(VARIANT)).getMetadata()));
         }
         else
         {

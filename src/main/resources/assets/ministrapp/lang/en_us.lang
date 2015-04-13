@@ -10,6 +10,7 @@ tile.glass_tiles.name=Tiled Glass
 tile.glass_window.name=Framed Glass
 tile.stone_boulder.name=Stone Boulder
 tile.ministrapp_log.name=Redwood Log
+tile.ministrapp_leaves.name=Redwood Leaves
 tile.stone_lamp_glowstone.name=Stone Glowstone Lamp
 tile.stone_lamp_prismarine.name=Stone Prismarine Lamp
 tile.stone_lamp_sunstone.name=Stone Sunstone Lamp
