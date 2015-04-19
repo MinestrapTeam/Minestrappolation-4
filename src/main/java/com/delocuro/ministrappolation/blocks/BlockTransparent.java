@@ -6,7 +6,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumWorldBlockLayer;
@@ -14,15 +13,15 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import com.delocuro.ministrappolation.init.MinistrappolationBlocks;
+import com.delocuro.ministrappolation.init.MinestrappolationBlocks;
 
-public class BlockTransparent extends Block{
+public class BlockTransparent extends MBlock{
 	
 	private final MapColor mapColor;
 	private boolean ignoreSimilarity;
 	
 	public BlockTransparent(Material materialIn, MapColor mapColorIn, boolean ignoreSimilarityIn) {
-		super(materialIn);
+		super(materialIn, mapColorIn);
 		this.mapColor = mapColorIn;
 		this.ignoreSimilarity = ignoreSimilarityIn;
 	}
@@ -45,7 +44,7 @@ public class BlockTransparent extends Block{
 	        IBlockState iblockstate = worldIn.getBlockState(pos);
 	        Block block = iblockstate.getBlock();
 
-	        if (this == MinistrappolationBlocks.glass_bricks || this == MinistrappolationBlocks.glass_refined || this == MinistrappolationBlocks.glass_tiles || this == MinistrappolationBlocks.glass_window)
+	        if (this == MinestrappolationBlocks.glass_bricks || this == MinestrappolationBlocks.glass_refined || this == MinestrappolationBlocks.glass_tiles || this == MinestrappolationBlocks.glass_window)
 	        {
 	            if (worldIn.getBlockState(pos.offset(side.getOpposite())) != iblockstate)
 	            {
@@ -68,7 +67,7 @@ public class BlockTransparent extends Block{
     
     public int quantityDropped(Random random)
     {
-        if(this == MinistrappolationBlocks.glass_window)
+        if(this == MinestrappolationBlocks.glass_window)
         {
         	return 1;
         }

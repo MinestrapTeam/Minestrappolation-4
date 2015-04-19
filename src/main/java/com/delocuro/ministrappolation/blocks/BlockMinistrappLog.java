@@ -2,20 +2,23 @@ package com.delocuro.ministrappolation.blocks;
 
 import java.util.List;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockLog;
-import net.minecraft.block.BlockNewLog;
-import net.minecraft.block.BlockOldLog;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import com.delocuro.ministrappolation.Ministrappolation;
+import com.delocuro.ministrappolation.Minestrappolation;
+import com.delocuro.ministrappolation.Reference;
 import com.google.common.base.Predicate;
 
 public class BlockMinistrappLog extends BlockLog
@@ -37,7 +40,7 @@ public class BlockMinistrappLog extends BlockLog
     public BlockMinistrappLog()
     {
         this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, BlockMinistrappPlanks.EnumType.REDWOOD).withProperty(LOG_AXIS, BlockLog.EnumAxis.Y));
-        this.setCreativeTab(Ministrappolation.tabMinistrappolation);
+        this.setCreativeTab(Minestrappolation.tabMinistrappolation);
     }
 
     /**

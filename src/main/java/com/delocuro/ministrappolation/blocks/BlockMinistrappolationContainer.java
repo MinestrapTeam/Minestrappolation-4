@@ -1,38 +1,23 @@
 package com.delocuro.ministrappolation.blocks;
 
-import java.util.Iterator;
-import java.util.Random;
-
-import com.delocuro.ministrappolation.Ministrappolation;
-import com.delocuro.ministrappolation.Reference;
-import com.delocuro.ministrappolation.tile_entity.TileEntityCrate;
-
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockChest;
 import net.minecraft.block.BlockFalling;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityFallingBlock;
 import net.minecraft.entity.item.EntityItem;
-import net.minecraft.entity.passive.EntityOcelot;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
-import net.minecraft.inventory.InventoryHelper;
-import net.minecraft.inventory.InventoryLargeChest;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.MathHelper;
-import net.minecraft.world.IBlockAccess;
-import net.minecraft.world.ILockableContainer;
 import net.minecraft.world.World;
+
+import com.delocuro.ministrappolation.Minestrappolation;
+import com.delocuro.ministrappolation.tile_entity.TileEntityCrate;
 
 public class BlockMinistrappolationContainer extends BlockFalling implements ITileEntityProvider{
 
@@ -102,7 +87,7 @@ public class BlockMinistrappolationContainer extends BlockFalling implements ITi
 	{
 		if (world.isRemote)
 		{
-			player.openGui(Ministrappolation.instance, 1, world, pos.getX(), pos.getY(), pos.getZ());
+			player.openGui(Minestrappolation.instance, 1, world, pos.getX(), pos.getY(), pos.getZ());
 		}
 		return true;
 	}

@@ -2,9 +2,6 @@ package com.delocuro.ministrappolation.blocks;
 
 import java.util.List;
 
-import com.delocuro.ministrappolation.Ministrappolation;
-
-import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -18,7 +15,9 @@ import net.minecraft.util.IStringSerializable;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockStoneDecor extends BlockDefault
+import com.delocuro.ministrappolation.Minestrappolation;
+
+public class BlockStoneDecor extends MBlock
 {
     public static final PropertyEnum VARIANT = PropertyEnum.create("variant", BlockStoneDecor.EnumType.class);
     public static final int GLOWSTONE_LAMP_META = BlockStoneDecor.EnumType.GLOWSTONE_LAMP.getMetadata();
@@ -33,7 +32,7 @@ public class BlockStoneDecor extends BlockDefault
     {
         super(Material.rock, MapColor.stoneColor);
         this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, BlockStoneDecor.EnumType.REFINED));
-        this.setCreativeTab(Ministrappolation.tabMinistrappolation);
+        this.setCreativeTab(Minestrappolation.tabMinistrappolation);
     }
 
     /**

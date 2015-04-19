@@ -23,22 +23,22 @@ public class MinistrappolationRecipes {
 		GameRegistry.addSmelting(new ItemStack(MinistrappolationItems.chocolate_dough), new ItemStack(Items.cookie,6), 0.2F);
 		
 		//Minerals
-		GameRegistry.addSmelting(MinistrappolationBlocks.copper_ore, new ItemStack(MinistrappolationItems.copper_ingot), 0.5F);
-		GameRegistry.addRecipe(new ItemStack(MinistrappolationBlocks.copper_block), new Object[]{"III","III","III",'I',MinistrappolationItems.copper_ingot});
-		GameRegistry.addShapelessRecipe(new ItemStack(MinistrappolationItems.copper_ingot,9), new Object[]{MinistrappolationBlocks.copper_block});
+		GameRegistry.addSmelting(MinestrappolationBlocks.copper_ore, new ItemStack(MinistrappolationItems.copper_ingot), 0.5F);
+		GameRegistry.addRecipe(new ItemStack(MinestrappolationBlocks.copper_block), new Object[]{"III","III","III",'I',MinistrappolationItems.copper_ingot});
+		GameRegistry.addShapelessRecipe(new ItemStack(MinistrappolationItems.copper_ingot,9), new Object[]{MinestrappolationBlocks.copper_block});
 		
-		GameRegistry.addSmelting(MinistrappolationBlocks.tin_ore, new ItemStack(MinistrappolationItems.tin_ingot), 0.5F);
-		GameRegistry.addRecipe(new ItemStack(MinistrappolationBlocks.tin_block), new Object[]{"III","III","III",'I',MinistrappolationItems.tin_ingot});
-		GameRegistry.addShapelessRecipe(new ItemStack(MinistrappolationItems.tin_ingot,9), new Object[]{MinistrappolationBlocks.tin_block});
+		GameRegistry.addSmelting(MinestrappolationBlocks.tin_ore, new ItemStack(MinistrappolationItems.tin_ingot), 0.5F);
+		GameRegistry.addRecipe(new ItemStack(MinestrappolationBlocks.tin_block), new Object[]{"III","III","III",'I',MinistrappolationItems.tin_ingot});
+		GameRegistry.addShapelessRecipe(new ItemStack(MinistrappolationItems.tin_ingot,9), new Object[]{MinestrappolationBlocks.tin_block});
 		
-		GameRegistry.addSmelting(MinistrappolationBlocks.sunstone_ore, new ItemStack(MinistrappolationItems.sunstone_shard), 1.0F);
-		GameRegistry.addRecipe(new ItemStack(MinistrappolationBlocks.sunstone_block), new Object[]{"SS","SS",'S',MinistrappolationItems.sunstone_shard});
+		GameRegistry.addSmelting(MinestrappolationBlocks.sunstone_ore, new ItemStack(MinistrappolationItems.sunstone_shard), 1.0F);
+		GameRegistry.addRecipe(new ItemStack(MinestrappolationBlocks.sunstone_block), new Object[]{"SS","SS",'S',MinistrappolationItems.sunstone_shard});
 		
 		//Decor
-		GameRegistry.addRecipe(new ItemStack(MinistrappolationBlocks.glass_bricks,4), new Object[]{"GG","GG",'G',Blocks.glass});
-		GameRegistry.addSmelting(new ItemStack(Blocks.glass), new ItemStack(MinistrappolationBlocks.glass_refined), .1F);
-		GameRegistry.addRecipe(new ItemStack(MinistrappolationBlocks.glass_tiles,4), new Object[]{"GG","GG",'G',MinistrappolationBlocks.glass_refined});
-		GameRegistry.addRecipe(new ItemStack(MinistrappolationBlocks.glass_window,4), new Object[]{"IGI","GIG","IGI",'I',Blocks.iron_bars,'G',MinistrappolationBlocks.glass_refined});
+		GameRegistry.addRecipe(new ItemStack(MinestrappolationBlocks.glass_bricks,4), new Object[]{"GG","GG",'G',Blocks.glass});
+		GameRegistry.addSmelting(new ItemStack(Blocks.glass), new ItemStack(MinestrappolationBlocks.glass_refined), .1F);
+		GameRegistry.addRecipe(new ItemStack(MinestrappolationBlocks.glass_tiles,4), new Object[]{"GG","GG",'G',MinestrappolationBlocks.glass_refined});
+		GameRegistry.addRecipe(new ItemStack(MinestrappolationBlocks.glass_window,4), new Object[]{"IGI","GIG","IGI",'I',Blocks.iron_bars,'G',MinestrappolationBlocks.glass_refined});
 		
 		//Tools and Weapons
 		GameRegistry.addRecipe(new ItemStack(MinistrappolationItems.copper_pickaxe), new Object[]{"III"," S "," S ",'I',MinistrappolationItems.copper_ingot,'S',Items.stick});

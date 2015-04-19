@@ -5,14 +5,14 @@ import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 
-import com.delocuro.ministrappolation.init.MinistrappolationBlocks;
+import com.delocuro.ministrappolation.init.MinestrappolationBlocks;
 import com.delocuro.ministrappolation.init.MinistrappolationItems;
 
 public class ClientProxy extends CommonProxy{
 	@Override
 	public void registerRenders()
 	{
-		MinistrappolationBlocks.registerRenders();
+		MinestrappolationBlocks.registerRenders();
 		MinistrappolationItems.registerRenders();
 	}
 

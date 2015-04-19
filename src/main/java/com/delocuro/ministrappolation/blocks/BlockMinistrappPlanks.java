@@ -2,8 +2,6 @@ package com.delocuro.ministrappolation.blocks;
 
 import java.util.List;
 
-import com.delocuro.ministrappolation.Ministrappolation;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -17,6 +15,8 @@ import net.minecraft.util.IStringSerializable;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.delocuro.ministrappolation.Minestrappolation;
+
 public class BlockMinistrappPlanks extends Block
 {
     public static final PropertyEnum VARIANT = PropertyEnum.create("variant", BlockMinistrappPlanks.EnumType.class);
@@ -25,7 +25,7 @@ public class BlockMinistrappPlanks extends Block
     {
         super(Material.wood);
         this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, BlockMinistrappPlanks.EnumType.REDWOOD));
-        this.setCreativeTab(Ministrappolation.tabMinistrappolation);
+        this.setCreativeTab(Minestrappolation.tabMinistrappolation);
     }
 
     /**

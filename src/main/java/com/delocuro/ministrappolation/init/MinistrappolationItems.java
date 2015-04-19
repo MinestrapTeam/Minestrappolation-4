@@ -9,7 +9,7 @@ import net.minecraft.potion.Potion;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-import com.delocuro.ministrappolation.Ministrappolation;
+import com.delocuro.ministrappolation.Minestrappolation;
 import com.delocuro.ministrappolation.Reference;
 import com.delocuro.ministrappolation.items.ItemMinistrappolationArmor;
 import com.delocuro.ministrappolation.items.ItemMinistrappolationAxe;
@@ -44,25 +44,25 @@ public class MinistrappolationItems extends Item{
 	
 	public static void init() 
 	{
-		dough = new ItemFood(1,0.2F,false).setUnlocalizedName("dough").setCreativeTab(Ministrappolation.tabMinistrappolation);
-		sugar_dough = new ItemFood(1,0.2F,false).setPotionEffect(Potion.moveSpeed.id, 5, 0, 0.3F).setUnlocalizedName("sugar_dough").setCreativeTab(Ministrappolation.tabMinistrappolation);
-		chocolate_dough = new ItemFood(1,0.3F,false).setUnlocalizedName("chocolate_dough").setCreativeTab(Ministrappolation.tabMinistrappolation);
-		sugar_cookie = new ItemFood(1,0.4F,false).setPotionEffect(Potion.moveSpeed.id, 10, 0, 0.5F).setUnlocalizedName("sugar_cookie").setCreativeTab(Ministrappolation.tabMinistrappolation);
-		copper_ingot = new Item().setUnlocalizedName("copper_ingot").setCreativeTab(Ministrappolation.tabMinistrappolation);
-		tin_ingot = new Item().setUnlocalizedName("tin_ingot").setCreativeTab(Ministrappolation.tabMinistrappolation);
-		sunstone_shard = new Item().setUnlocalizedName("sunstone_shard").setCreativeTab(Ministrappolation.tabMinistrappolation);
-		stone_brick = new Item().setUnlocalizedName("stone_brick").setCreativeTab(Ministrappolation.tabMinistrappolation);
+		dough = new ItemFood(1,0.2F,false).setUnlocalizedName("dough").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		sugar_dough = new ItemFood(1,0.2F,false).setPotionEffect(Potion.moveSpeed.id, 5, 0, 0.3F).setUnlocalizedName("sugar_dough").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		chocolate_dough = new ItemFood(1,0.3F,false).setUnlocalizedName("chocolate_dough").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		sugar_cookie = new ItemFood(1,0.4F,false).setPotionEffect(Potion.moveSpeed.id, 10, 0, 0.5F).setUnlocalizedName("sugar_cookie").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		copper_ingot = new Item().setUnlocalizedName("copper_ingot").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		tin_ingot = new Item().setUnlocalizedName("tin_ingot").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		sunstone_shard = new Item().setUnlocalizedName("sunstone_shard").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		stone_brick = new Item().setUnlocalizedName("stone_brick").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		
-		copper_pickaxe = new ItemMinistrappolationPickaxe(COPPER).setUnlocalizedName("copper_pickaxe").setCreativeTab(Ministrappolation.tabMinistrappolation);
-		copper_axe = new ItemMinistrappolationAxe(COPPER).setUnlocalizedName("copper_axe").setCreativeTab(Ministrappolation.tabMinistrappolation);
-		copper_shovel = new ItemMinistrappolationShovel(COPPER).setUnlocalizedName("copper_shovel").setCreativeTab(Ministrappolation.tabMinistrappolation);
-		copper_hoe = new ItemMinistrappolationHoe(COPPER).setUnlocalizedName("copper_hoe").setCreativeTab(Ministrappolation.tabMinistrappolation);
-		copper_sword = new ItemMinistrappolationSword(COPPER).setUnlocalizedName("copper_sword").setCreativeTab(Ministrappolation.tabMinistrappolation);
+		copper_pickaxe = new ItemMinistrappolationPickaxe(COPPER).setUnlocalizedName("copper_pickaxe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		copper_axe = new ItemMinistrappolationAxe(COPPER).setUnlocalizedName("copper_axe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		copper_shovel = new ItemMinistrappolationShovel(COPPER).setUnlocalizedName("copper_shovel").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		copper_hoe = new ItemMinistrappolationHoe(COPPER).setUnlocalizedName("copper_hoe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		copper_sword = new ItemMinistrappolationSword(COPPER).setUnlocalizedName("copper_sword").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		
-		tin_helmet = new ItemMinistrappolationArmor(ARMOR_TIN,0,0).setUnlocalizedName("tin_helmet").setCreativeTab(Ministrappolation.tabMinistrappolation);
-		tin_chestplate = new ItemMinistrappolationArmor(ARMOR_TIN,0,1).setUnlocalizedName("tin_chestplate").setCreativeTab(Ministrappolation.tabMinistrappolation);
-		tin_leggings = new ItemMinistrappolationArmor(ARMOR_TIN,0,2).setUnlocalizedName("tin_leggings").setCreativeTab(Ministrappolation.tabMinistrappolation);
-		tin_boots = new ItemMinistrappolationArmor(ARMOR_TIN,0,3).setUnlocalizedName("tin_boots").setCreativeTab(Ministrappolation.tabMinistrappolation);
+		tin_helmet = new ItemMinistrappolationArmor(ARMOR_TIN,0,0).setUnlocalizedName("tin_helmet").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		tin_chestplate = new ItemMinistrappolationArmor(ARMOR_TIN,0,1).setUnlocalizedName("tin_chestplate").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		tin_leggings = new ItemMinistrappolationArmor(ARMOR_TIN,0,2).setUnlocalizedName("tin_leggings").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		tin_boots = new ItemMinistrappolationArmor(ARMOR_TIN,0,3).setUnlocalizedName("tin_boots").setCreativeTab(Minestrappolation.tabMinistrappolation);
 	}
 	public static void register()
 	{

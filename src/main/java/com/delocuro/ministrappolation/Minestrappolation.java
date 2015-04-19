@@ -8,19 +8,18 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
-import com.delocuro.ministrappolation.init.MinistrappolationBlocks;
+import com.delocuro.ministrappolation.init.MinestrappolationBlocks;
 import com.delocuro.ministrappolation.init.MinistrappolationItems;
 import com.delocuro.ministrappolation.init.MinistrappolationRecipes;
 import com.delocuro.ministrappolation.proxy.CommonProxy;
-import com.delocuro.ministrappolation.util.MinistrappolationGenHandler;
+import com.delocuro.ministrappolation.world.MinistrappolationGenHandler;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSON)
-public class Ministrappolation {
+public class Minestrappolation {
 	
 	@Instance(Reference.MOD_ID)
-	public static Ministrappolation instance;
+	public static Minestrappolation instance;
 	
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
@@ -30,9 +29,9 @@ public class Ministrappolation {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
-		MinistrappolationBlocks.init();
-		MinistrappolationBlocks.register();
-		MinistrappolationBlocks.registerHarvestLevels();
+		MinestrappolationBlocks.init();
+		MinestrappolationBlocks.register();
+		MinestrappolationBlocks.registerHarvestLevels();
 		MinistrappolationItems.init();
 		MinistrappolationItems.register();
 		MinistrappolationRecipes.register();

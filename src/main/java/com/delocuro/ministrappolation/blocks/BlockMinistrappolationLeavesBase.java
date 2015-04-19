@@ -2,14 +2,13 @@ package com.delocuro.ministrappolation.blocks;
 
 import java.util.Random;
 
-import com.delocuro.ministrappolation.Ministrappolation;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLeavesBase;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -20,8 +19,12 @@ import net.minecraft.world.ColorizerFoliage;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeColorHelper;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import com.delocuro.ministrappolation.Minestrappolation;
+import com.delocuro.ministrappolation.Reference;
 
 public abstract class BlockMinistrappolationLeavesBase extends BlockLeavesBase implements net.minecraftforge.common.IShearable
 {
@@ -38,7 +41,7 @@ public abstract class BlockMinistrappolationLeavesBase extends BlockLeavesBase i
     {
         super(Material.leaves, false);
         this.setTickRandomly(true);
-        this.setCreativeTab(Ministrappolation.tabMinistrappolation);
+        this.setCreativeTab(Minestrappolation.tabMinistrappolation);
         this.setHardness(0.2F);
         this.setLightOpacity(1);
         this.setStepSound(soundTypeGrass);

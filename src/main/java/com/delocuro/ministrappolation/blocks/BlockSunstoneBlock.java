@@ -11,12 +11,12 @@ import net.minecraft.util.MathHelper;
 
 import com.delocuro.ministrappolation.init.MinistrappolationItems;
 
-public class BlockSunstoneBlock extends Block{
+public class BlockSunstoneBlock extends MBlock{
 	
 	private final MapColor mapColor;
 	
 	public BlockSunstoneBlock(Material materialIn, MapColor mapColorIn) {
-		super(materialIn);
+		super(materialIn, mapColorIn);
 		this.mapColor = mapColorIn;
 	}
 	

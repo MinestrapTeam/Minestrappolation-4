@@ -2,39 +2,37 @@ package com.delocuro.ministrappolation.blocks;
 
 import java.util.Random;
 
-import com.delocuro.ministrappolation.init.MinistrappolationBlocks;
-import com.delocuro.ministrappolation.init.MinistrappolationItems;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class BlockMinistrappOre extends Block{
+import com.delocuro.ministrappolation.init.MinestrappolationBlocks;
+import com.delocuro.ministrappolation.init.MinistrappolationItems;
+
+public class BlockMinistrappOre extends MBlock{
 	
 	private final MapColor mapColor;
 	
 	public BlockMinistrappOre(Material materialIn, MapColor mapColorIn) 
 	{
-		super(materialIn);
+		super(materialIn, mapColorIn);
 		this.mapColor = mapColorIn;
 	}
 	
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        return this == MinistrappolationBlocks.sunstone_ore ? MinistrappolationItems.sunstone_shard : Item.getItemFromBlock(this);
+        return this == MinestrappolationBlocks.sunstone_ore ? MinistrappolationItems.sunstone_shard : Item.getItemFromBlock(this);
     }
 	
 	public int quantityDropped(Random random)
     {
-		return this == MinistrappolationBlocks.sunstone_ore ? 1 + random.nextInt(3) : 1;
+		return this == MinestrappolationBlocks.sunstone_ore ? 1 + random.nextInt(3) : 1;
     }
 
     public int quantityDroppedWithBonus(int fortune, Random random)
@@ -70,7 +68,7 @@ public class BlockMinistrappOre extends Block{
         {
             int j = 0;
 
-            if (this == MinistrappolationBlocks.sunstone_ore)
+            if (this == MinestrappolationBlocks.sunstone_ore)
             {
                 j = MathHelper.getRandomIntegerInRange(rand, 2, 5);
             }

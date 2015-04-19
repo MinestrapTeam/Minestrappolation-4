@@ -1,22 +1,17 @@
-package com.delocuro.ministrappolation.util;
+package com.delocuro.ministrappolation.world;
 
 import java.util.Random;
 
-import com.delocuro.ministrappolation.init.MinistrappolationBlocks;
-import com.google.common.base.Predicate;
-
 import net.minecraft.block.Block;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.block.state.pattern.BlockHelper;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
-import net.minecraft.block.state.BlockState;
-import net.minecraft.block.state.IBlockState;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.BiomeGenBase.TempCategory;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.Chunk;
-import net.minecraft.world.chunk.ChunkPrimer;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.ChunkProviderEnd;
 import net.minecraft.world.gen.ChunkProviderGenerate;
@@ -24,7 +19,9 @@ import net.minecraft.world.gen.ChunkProviderHell;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraftforge.fml.common.IWorldGenerator;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.event.terraingen.ChunkProviderEvent.ReplaceBiomeBlocks;
+
+import com.delocuro.ministrappolation.init.MinestrappolationBlocks;
+import com.google.common.base.Predicate;
 
 public class MinistrappolationGenHandler implements IWorldGenerator{
 	
@@ -64,24 +61,10 @@ public class MinistrappolationGenHandler implements IWorldGenerator{
 		int x1 = x;
 		int y1 = 0;
 		int z1 = z;
-		generateOre(MinistrappolationBlocks.copper_ore, world, rand, x1, z1, 3, 12, 30, 15, 100, BlockHelper.forBlock(Blocks.stone));
-		generateOre(MinistrappolationBlocks.tin_ore, world, rand, x1, z1, 3, 12, 30, 15, 100, BlockHelper.forBlock(Blocks.stone));
-		generateOre(MinistrappolationBlocks.sunstone_ore, world, rand, x1, z1, 2, 4, 30, 1, 200, BlockHelper.forBlock(Blocks.stone));
+		generateOre(MinestrappolationBlocks.copper_ore, world, rand, x1, z1, 3, 12, 30, 15, 100, BlockHelper.forBlock(Blocks.stone));
+		generateOre(MinestrappolationBlocks.tin_ore, world, rand, x1, z1, 3, 12, 30, 15, 100, BlockHelper.forBlock(Blocks.stone));
+		generateOre(MinestrappolationBlocks.sunstone_ore, world, rand, x1, z1, 2, 4, 30, 1, 200, BlockHelper.forBlock(Blocks.stone));
 		generateBoulder(world, rand, x1, z1);
-		
-		/*for (int i = 0; i < 10; i++)
-		{
-			int xRand = x * 16 + rand.nextInt(16);
-			int yRand = rand.nextInt(120) + 20;
-			int zRand = z * 16 + rand.nextInt(16);
-			BlockPos pos1 = new BlockPos(xRand,yRand,zRand);
-			boulderGen.generate(world, rand, pos1);
-			if (boulderGen.generate(world, rand, pos1) == true)
-			{
-				System.out.println("Generated Boulder Patch at " + pos1.getX() + ", " + pos1.getY() + ", " + pos1.getZ() + ".");
-			}
-		}*/
-		//System.out.println("Generated Ore Vein at Chunk" + x1 + " " + z1);
 	}
 	
 	public void generateNether(World world, Random rand, int x, int z)
@@ -103,6 +86,8 @@ public class MinistrappolationGenHandler implements IWorldGenerator{
 			gen.generate(world, rand, position);
 		}
 	}
+	
+	
 	
 	private void generateBoulder(World world, Random rand, int chunkX, int chunkZ)
 	{
@@ -180,11 +165,7 @@ public class MinistrappolationGenHandler implements IWorldGenerator{
 					BlockPos subpos2 = new BlockPos(x,y,z);
 					Block block = chunk.getBlock(x, y, z);
 					IBlockState biomeStoneBlock = stoneBlock.getDefaultState();
-					/*if (world.getBlockState(subpos2).getBlock().isReplaceableOreGen(world, subpos2, BlockHelper.forBlock(Blocks.stone)))
-                    {
-                        world.setBlockState(subpos2, Blocks.netherrack.getDefaultState());
-                        
-                    }*/
+			
 					if (block == Blocks.stone)
 					{
 						System.out.println("Replacable Stone Detected");
@@ -204,62 +185,6 @@ public class MinistrappolationGenHandler implements IWorldGenerator{
 		}
 	}
 	
-	//Old Method (Non-Functional)
-	private static void genBiomeStone(BiomeGenBase biome, World world, Random random, Block[] blocks, byte[] metadata, int chunkX, int chunkZ)
-	{
-		Block stoneBlock = Blocks.stone;
-		Block deepStoneBlock = null;
-		int deepStoneDepth = 0;
-		
-		if (biome.temperature < 0.2F)
-		{
-			stoneBlock = Blocks.snow;
-			deepStoneBlock = Blocks.packed_ice;
-			deepStoneDepth = random.nextInt(5) + 30;
-		}
-		else if (biome.temperature < 0.4F)
-		{
-			stoneBlock = Blocks.lapis_block;
-			deepStoneBlock = Blocks.diamond_block;
-			deepStoneDepth = random.nextInt(5) + 35;
-		}
-		else if (biome.getTempCategory() == TempCategory.OCEAN)
-		{
-			stoneBlock = Blocks.sandstone;
-			deepStoneBlock = Blocks.red_sandstone;
-			deepStoneDepth = random.nextInt(5) + 20;
-		}
-		else if (biome.temperature >= 1.0F)
-		{
-			stoneBlock = Blocks.netherrack;
-			deepStoneBlock = Blocks.nether_brick;
-			deepStoneDepth = random.nextInt(5) + 35;
-		}
-		else
-		{
-			deepStoneBlock = Blocks.mossy_cobblestone;
-			deepStoneDepth = random.nextInt(5) + 35;
-		}
-		
-		int x = chunkX & 15;
-		int z = chunkZ & 15;
-		int count = blocks.length / 256;
-		
-		for (int y = 128; y >= 0; y--)
-		{
-			int index = (z * 16 + x) * count + y;
-			if (blocks[index] == Blocks.stone)
-			{
-				if (y < deepStoneDepth)
-				{
-					blocks[index] = deepStoneBlock;
-				}
-				else
-				{
-					blocks[index] = stoneBlock;
-				}
-			}
-		}
-	}
+	
 }
 
