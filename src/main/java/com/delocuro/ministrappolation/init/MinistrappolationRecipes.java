@@ -35,6 +35,9 @@ public class MinistrappolationRecipes {
 		GameRegistry.addRecipe(new ItemStack(MinestrappolationBlocks.sunstone_block), new Object[]{"SS","SS",'S',MinistrappolationItems.sunstone_shard});
 		
 		//Decor
+		GameRegistry.addRecipe(new ItemStack(MinestrappolationBlocks.snow_bricks,4), new Object[]{"SS","SS",'S',Blocks.snow});
+		GameRegistry.addRecipe(new ItemStack(MinestrappolationBlocks.snow_refined,9), new Object[]{"SSS","SSS","SSS",'S',Blocks.snow});
+		GameRegistry.addRecipe(new ItemStack(MinestrappolationBlocks.snow_tiles,4), new Object[]{"SS","SS",'S',MinestrappolationBlocks.snow_refined});
 		GameRegistry.addRecipe(new ItemStack(MinestrappolationBlocks.glass_bricks,4), new Object[]{"GG","GG",'G',Blocks.glass});
 		GameRegistry.addSmelting(new ItemStack(Blocks.glass), new ItemStack(MinestrappolationBlocks.glass_refined), .1F);
 		GameRegistry.addRecipe(new ItemStack(MinestrappolationBlocks.glass_tiles,4), new Object[]{"GG","GG",'G',MinestrappolationBlocks.glass_refined});

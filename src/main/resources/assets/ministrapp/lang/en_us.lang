@@ -17,6 +17,9 @@ tile.stone_lamp_sunstone.name=Stone Sunstone Lamp
 tile.stone_pattern_bricks.name=Patterned Stone Bricks
 tile.stone_refined.name=Refined Stone
 tile.stone_tiles.name=Stone Tiles
+tile.snow_refined.name=Refined Snow
+tile.snow_bricks.name=Snow Bricks
+tile.snow_tiles.name=Snow Tiles
 
 tile.crate.name=Crate
 

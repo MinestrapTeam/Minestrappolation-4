@@ -11,6 +11,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import com.delocuro.ministrappolation.Minestrappolation;
 import com.delocuro.ministrappolation.Reference;
 import com.delocuro.ministrappolation.blocks.BlockBoulder;
+import com.delocuro.ministrappolation.blocks.BlockMinistrappSnow;
 import com.delocuro.ministrappolation.blocks.MBlock;
 import com.delocuro.ministrappolation.blocks.BlockMinistrappLeaf;
 import com.delocuro.ministrappolation.blocks.BlockMinistrappLog;
@@ -27,6 +28,9 @@ public class MinestrappolationBlocks {
 	public static Block tin_block;
 	public static Block sunstone_ore;
 	public static Block sunstone_block;
+	public static Block snow_refined;
+	public static Block snow_bricks;
+	public static Block snow_tiles;
 	public static Block glass_bricks;
 	public static Block glass_refined;
 	public static Block glass_tiles;
@@ -52,6 +56,9 @@ public class MinestrappolationBlocks {
 		tin_block = new MBlock(Material.iron, MapColor.ironColor).setHardness(5.0F).setResistance(5.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("tin_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		sunstone_ore = new BlockMinistrappOre(Material.rock, MapColor.stoneColor).setHardness(2.8F).setResistance(4.0F).setStepSound(Block.soundTypePiston).setLightLevel(0.7F).setUnlocalizedName("sunstone_ore").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		sunstone_block = new BlockSunstoneBlock(Material.glass, MapColor.sandColor).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setLightLevel(0.9F).setUnlocalizedName("sunstone_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		snow_refined = new BlockMinistrappSnow(Material.snow, MapColor.snowColor).setHardness(0.4F).setStepSound(Block.soundTypeSnow).setUnlocalizedName("snow_refined").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		snow_bricks = new BlockMinistrappSnow(Material.snow, MapColor.snowColor).setHardness(0.6F).setStepSound(Block.soundTypeSnow).setUnlocalizedName("snow_bricks").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		snow_tiles = new BlockMinistrappSnow(Material.snow, MapColor.snowColor).setHardness(0.6F).setStepSound(Block.soundTypeSnow).setUnlocalizedName("snow_tiles").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		glass_bricks = new BlockTransparent(Material.glass, MapColor.airColor, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setLightOpacity(1).setUnlocalizedName("glass_bricks").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		glass_refined = new BlockTransparent(Material.glass, MapColor.airColor, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setUnlocalizedName("glass_refined").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		glass_tiles = new BlockTransparent(Material.glass, MapColor.airColor, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setLightOpacity(1).setUnlocalizedName("glass_tiles").setCreativeTab(Minestrappolation.tabMinistrappolation);
@@ -78,6 +85,9 @@ public class MinestrappolationBlocks {
 		GameRegistry.registerBlock(tin_block, tin_block.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(sunstone_ore, sunstone_ore.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(sunstone_block, sunstone_block.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(snow_bricks, snow_bricks.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(snow_refined, snow_refined.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(snow_tiles, snow_tiles.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(glass_bricks, glass_bricks.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(glass_refined, glass_refined.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(glass_tiles, glass_tiles.getUnlocalizedName().substring(5));
@@ -104,6 +114,9 @@ public class MinestrappolationBlocks {
 		registerRender(tin_block);
 		registerRender(sunstone_ore);
 		registerRender(sunstone_block);
+		registerRender(snow_refined);
+		registerRender(snow_tiles);
+		registerRender(snow_bricks);
 		registerRender(glass_bricks);
 		registerRender(glass_refined);
 		registerRender(glass_tiles);
@@ -130,6 +143,9 @@ public class MinestrappolationBlocks {
 	
 	public static void registerHarvestLevels()
 	{
+		snow_refined.setHarvestLevel("shovel", 0);
+		snow_tiles.setHarvestLevel("shovel", 0);
+		snow_bricks.setHarvestLevel("shovel", 0);
 		copper_ore.setHarvestLevel("pickaxe", 0);
 		copper_block.setHarvestLevel("pickaxe", 0);
 		tin_ore.setHarvestLevel("pickaxe", 0);

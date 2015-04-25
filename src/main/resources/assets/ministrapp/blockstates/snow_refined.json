@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "ministrapp:snow_refined" }
+    }
+}
