@@ -13,6 +13,7 @@ import com.delocuro.ministrappolation.init.MinestrappolationBlocks;
 import com.delocuro.ministrappolation.init.MinistrappolationItems;
 import com.delocuro.ministrappolation.init.MinistrappolationRecipes;
 import com.delocuro.ministrappolation.proxy.CommonProxy;
+import com.delocuro.ministrappolation.world.MBiomeManager;
 import com.delocuro.ministrappolation.world.MinistrappolationGenHandler;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSON)
@@ -36,6 +37,7 @@ public class Minestrappolation {
 		MinistrappolationItems.register();
 		MinistrappolationRecipes.register();
 		MinistrappolationRecipes.removeRecipes();
+		MBiomeManager.load();
 		
 		if (this.proxy != null)
 		{
