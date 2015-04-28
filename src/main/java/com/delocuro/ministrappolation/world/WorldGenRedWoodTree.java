@@ -2,6 +2,8 @@ package com.delocuro.ministrappolation.world;
 
 import java.util.Random;
 
+import com.delocuro.ministrappolation.init.MinestrappolationBlocks;
+
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
@@ -13,7 +15,7 @@ public class WorldGenRedWoodTree extends WorldGenBaseTree
 	
 	public WorldGenRedWoodTree()
 	{
-		super(Blocks.log, Blocks.leaves, 17, 23, 2);
+		super(MinestrappolationBlocks.ministrapp_log, MinestrappolationBlocks.ministrapp_leaves, 17, 23, 2);
 	}
 	
 	@Override

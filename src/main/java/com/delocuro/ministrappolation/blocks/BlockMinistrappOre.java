@@ -81,15 +81,4 @@ public class BlockMinistrappOre extends MBlock{
         return 0;
     }
     
-    @Override
-    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ)
-    {
-    	WorldGenRedWoodTree tree = new WorldGenRedWoodTree();
-    	Random rand = new Random();
-    	tree.generate(worldIn, rand, pos);
-    	System.out.println("Grow");
-		return true;
-    }
-    
-    
 }

@@ -61,7 +61,7 @@ public abstract class WorldGenBaseTree extends WorldGenAbstractTree
 		if (this.width == 1)
 		{
 			IBlockState ground = world.getBlockState(pos.add(0, -1, 0));
-			return ground.getBlock() == Blocks.dirt.getDefaultState()|| ground == Blocks.grass.getDefaultState();
+			return ground.getBlock() == Blocks.dirt|| ground == Blocks.grass.getDefaultState();
 		}
 		else
 		{
@@ -70,7 +70,7 @@ public abstract class WorldGenBaseTree extends WorldGenAbstractTree
 				for (int j = 0; j < this.width; j++)
 				{
 					IBlockState block = world.getBlockState(pos.add(0, -1, 0));
-					if (block != Blocks.dirt.getDefaultState() && block != Blocks.grass.getDefaultState())
+					if (block != Blocks.dirt && block != Blocks.grass.getDefaultState())
 					{
 						System.out.println(false +" "+block.getBlock().getLocalizedName());
 						return false;
