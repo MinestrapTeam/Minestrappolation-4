@@ -11,13 +11,13 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import com.delocuro.ministrappolation.Minestrappolation;
 import com.delocuro.ministrappolation.Reference;
 import com.delocuro.ministrappolation.blocks.BlockBoulder;
-import com.delocuro.ministrappolation.blocks.BlockMinistrappSnow;
-import com.delocuro.ministrappolation.blocks.MBlock;
 import com.delocuro.ministrappolation.blocks.BlockMinistrappLeaf;
 import com.delocuro.ministrappolation.blocks.BlockMinistrappLog;
 import com.delocuro.ministrappolation.blocks.BlockMinistrappOre;
+import com.delocuro.ministrappolation.blocks.BlockMinistrappSnow;
 import com.delocuro.ministrappolation.blocks.BlockSunstoneBlock;
 import com.delocuro.ministrappolation.blocks.BlockTransparent;
+import com.delocuro.ministrappolation.blocks.MBlock;
 //import com.delocuro.ministrappolation.blocks.MinistrappolationContainer;
 
 public class MinestrappolationBlocks {
@@ -50,7 +50,7 @@ public class MinestrappolationBlocks {
 	
 	public static void init()
 	{
-		copper_ore = new MBlock(Material.rock, MapColor.stoneColor).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("copper_ore").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		copper_ore = new BlockMinistrappOre(Material.rock, MapColor.stoneColor).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("copper_ore").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		copper_block = new MBlock(Material.iron, MapColor.adobeColor).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("copper_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		tin_ore = new MBlock(Material.rock, MapColor.stoneColor).setHardness(3.0F).setResistance(3.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("tin_ore").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		tin_block = new MBlock(Material.iron, MapColor.ironColor).setHardness(5.0F).setResistance(5.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("tin_block").setCreativeTab(Minestrappolation.tabMinistrappolation);

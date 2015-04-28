@@ -6,14 +6,17 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 import com.delocuro.ministrappolation.init.MinestrappolationBlocks;
 import com.delocuro.ministrappolation.init.MinistrappolationItems;
+import com.delocuro.ministrappolation.world.WorldGenRedWoodTree;
 
 public class BlockMinistrappOre extends MBlock{
 	
@@ -77,4 +80,16 @@ public class BlockMinistrappOre extends MBlock{
         }
         return 0;
     }
+    
+    @Override
+    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ)
+    {
+    	WorldGenRedWoodTree tree = new WorldGenRedWoodTree();
+    	Random rand = new Random();
+    	tree.generate(worldIn, rand, pos);
+    	System.out.println("Grow");
+		return true;
+    }
+    
+    
 }

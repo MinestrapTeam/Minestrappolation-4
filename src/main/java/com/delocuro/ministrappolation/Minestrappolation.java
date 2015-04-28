@@ -37,6 +37,7 @@ public class Minestrappolation {
 		MinistrappolationItems.register();
 		MinistrappolationRecipes.register();
 		MinistrappolationRecipes.removeRecipes();
+		
 		MBiomeManager.load();
 		
 		if (this.proxy != null)
