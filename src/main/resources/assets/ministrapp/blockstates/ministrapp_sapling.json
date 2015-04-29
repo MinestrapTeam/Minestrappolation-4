@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "stage=0,type=redwood": { "model": "ministrapp:redwood_sapling" },
+        "stage=1,type=redwood": { "model": "ministrapp:redwood_sapling" }
+    }
+}
