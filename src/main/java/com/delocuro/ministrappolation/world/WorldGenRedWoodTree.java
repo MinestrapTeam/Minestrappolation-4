@@ -31,7 +31,6 @@ public class WorldGenRedWoodTree extends WorldGenBaseTree
 		{
 			if (r % this.leafSpacing == 0)
 			{
-				System.out.println("Circle @ "+pos.add(1, r, 1));
 				this.generateLeafCircles(world, rand, thinkness, pos.add(0, r, 0));
 				thinkness -= 0.4D;
 			}

@@ -167,8 +167,9 @@ public class MinistrappolationGenHandler implements IWorldGenerator{
 				{
 					BlockPos subpos2 = new BlockPos(x,y,z);
 					Block block = chunk.getBlock(x, y, z);
+					IBlockState state = chunk.getBlockState(subpos2);
 			
-					if (block == Blocks.stone)
+					if (state == Blocks.stone.getDefaultState())
 					{		
 						if (y < deepStoneDepth)
 						{
