@@ -6,6 +6,7 @@ import java.util.Random;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.BlockPlanks;
 import net.minecraft.block.IGrowable;
+import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.properties.PropertyInteger;
@@ -36,6 +37,7 @@ public class BlockMSapling extends BlockBush implements IGrowable {
 	
 	public BlockMSapling()
 	{
+		super(Material.plants);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, BlockMinistrappPlanks.EnumType.REDWOOD).withProperty(STAGE, Integer.valueOf(0)));
 		float f = 0.4F;
 		this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, f * 2.0F, 0.5F + f);

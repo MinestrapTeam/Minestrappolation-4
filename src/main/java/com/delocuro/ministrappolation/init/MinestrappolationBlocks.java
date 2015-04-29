@@ -21,6 +21,7 @@ import com.delocuro.ministrappolation.blocks.BlockMinistrappSnow;
 import com.delocuro.ministrappolation.blocks.BlockSunstoneBlock;
 import com.delocuro.ministrappolation.blocks.BlockTransparent;
 import com.delocuro.ministrappolation.blocks.MBlock;
+import com.delocuro.ministrappolation.items.ItemBlockSapling;
 //import com.delocuro.ministrappolation.blocks.MinistrappolationContainer;
 import com.google.common.collect.ImmutableSet;
 
@@ -77,7 +78,7 @@ public class MinestrappolationBlocks {
 		stone_tiles = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_tiles").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		ministrapp_log = new BlockMinistrappLog().setUnlocalizedName("ministrapp_log");
 		ministrapp_leaves = new BlockMinistrappLeaf().setUnlocalizedName("ministrapp_leaves");
-		ministrapp_sapling = new BlockMSapling().setUnlocalizedName("sapling");
+		ministrapp_sapling = new BlockMSapling().setUnlocalizedName("ministrapp_sapling");
 		
 		//stone_decor = (new BlockStoneDecor()).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_decor");
 		//crate = new BlockMinistrappolationContainer(Material.wood, MapColor.woodColor).setHardness(2.5F).setCreativeTab(Ministrappolation.tabMinistrappolation).setStepSound(Block.soundTypeWood).setUnlocalizedName("crate");
@@ -107,7 +108,7 @@ public class MinestrappolationBlocks {
 		GameRegistry.registerBlock(stone_tiles, stone_tiles.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(ministrapp_log, ministrapp_log.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(ministrapp_leaves, ministrapp_leaves.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(ministrapp_sapling, ministrapp_sapling.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(ministrapp_sapling, ItemBlockSapling.class, ministrapp_sapling.getUnlocalizedName().substring(5));
 		
 		//GameRegistry.registerBlock(stone_decor, stone_decor.getUnlocalizedName().substring(5));
 		//GameRegistry.registerBlock(crate, crate.getUnlocalizedName().substring(5));
