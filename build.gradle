@@ -1,0 +1,103 @@
+buildscript
+{
+    repositories
+    {
+        mavenCentral()
+        maven
+        {
+            name = "forge"
+            url = "http://files.minecraftforge.net/maven"
+        }
+        maven
+        {
+            name = "sonatype"
+            url = "https://oss.sonatype.org/content/repositories/snapshots/"
+        }
+    }
+    dependencies
+    {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
+    }
+}
+
+apply plugin: 'forge'
+
+version = "1.8-4.0.0"
+group = "minestrapteam"
+archivesBaseName = "Minestrappolation"
+
+minecraft
+{
+    version = "1.8-11.14.1.1375"
+    if(file('../run').exists())
+	{
+        runDir = "../run/"
+	}
+	else
+	{
+        runDir = "eclipse/"
+	}
+}
+
+task textureZip(type:Zip)
+textureZip
+{
+	classifier = 'avt'
+	archiveName = "${archivesBaseName}-${version}-avt.zip";
+	
+	from ('src/extra/resources')
+    {
+        include('**')
+    }
+}
+
+task devJar(type:Jar, dependsOn:'classes')
+devJar
+{
+    classifier = 'dev'
+    archiveName = "${archivesBaseName}-${version}-dev.jar"
+    
+    from ('build/classes/main')
+    {
+        include('minestrapteam/minestrappolation/**')
+    }
+    from ('build/resources/main')
+    {
+        include('assets/**')
+    }
+}
+
+task srcJar(type:Jar)
+srcJar
+{
+    classifier = 'src'
+    archiveName = "${archivesBaseName}-${version}-src.jar"
+    
+    from ('src/main/java')
+    {
+        include('minestrapteam/minestrappolation/**')
+    }
+    from ('src/main/resources')
+    {
+        include('assets/**')
+    }
+}
+
+task buildApi(dependsOn:['build', 'srcJar', 'devJar', 'textureZip'])
+
+processResources
+{
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
+
+    from(sourceSets.main.resources.srcDirs)
+    {
+        include 'mcmod.info'
+        expand 'version':project.version, 'mcversion':project.minecraft.version
+    }
+
+    from(sourceSets.main.resources.srcDirs)
+    {
+        exclude 'mcmod.info'
+    }
+}
