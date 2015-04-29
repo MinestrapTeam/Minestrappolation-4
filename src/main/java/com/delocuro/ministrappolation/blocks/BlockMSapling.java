@@ -32,7 +32,7 @@ import com.delocuro.ministrappolation.world.WorldGenRedWoodTreeSmall;
 
 public class BlockMSapling extends BlockBush implements IGrowable {
 	
-	private static final PropertyEnum TYPE = PropertyEnum.create("type" , BlockMinistrappPlanks.EnumType.class);
+	 private static final PropertyEnum TYPE = PropertyEnum.create("type" , BlockMinistrappPlanks.EnumType.class);
 	 public static final PropertyInteger STAGE = PropertyInteger.create("stage", 0, 1);
 	
 	public BlockMSapling()

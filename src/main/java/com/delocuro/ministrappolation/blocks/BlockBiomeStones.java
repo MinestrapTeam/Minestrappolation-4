@@ -1,6 +1,7 @@
 package com.delocuro.ministrappolation.blocks;
 
 import java.util.List;
+import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -16,6 +17,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.delocuro.ministrappolation.Minestrappolation;
+import com.delocuro.ministrappolation.init.MBlocks;
 
 public class BlockBiomeStones extends Block
 {
@@ -26,6 +28,17 @@ public class BlockBiomeStones extends Block
         super(Material.rock);
         this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, BlockBiomeStones.EnumType.DEEPSTONE));
         this.setCreativeTab(Minestrappolation.tabMinistrappolation);
+    }
+    
+    /**
+     * Get the Item that this Block should drop when harvested.
+     *  
+     * @param fortune the level of the Fortune enchantment on the player's tool
+     */
+	@Override
+    public Item getItemDropped(IBlockState state, Random rand, int fortune)
+    {
+        return Item.getItemFromBlock(MBlocks.biome_cobble.getStateFromMeta(this.getMetaFromState(state)).getBlock());
     }
 
     /**

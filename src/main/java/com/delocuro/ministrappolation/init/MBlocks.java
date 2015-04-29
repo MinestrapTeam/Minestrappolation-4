@@ -10,6 +10,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.delocuro.ministrappolation.Minestrappolation;
 import com.delocuro.ministrappolation.Reference;
+import com.delocuro.ministrappolation.blocks.BlockBiomeCobble;
 import com.delocuro.ministrappolation.blocks.BlockBiomeStones;
 import com.delocuro.ministrappolation.blocks.BlockBoulder;
 import com.delocuro.ministrappolation.blocks.BlockMSapling;
@@ -21,6 +22,7 @@ import com.delocuro.ministrappolation.blocks.BlockMinistrappSnow;
 import com.delocuro.ministrappolation.blocks.BlockSunstoneBlock;
 import com.delocuro.ministrappolation.blocks.BlockTransparent;
 import com.delocuro.ministrappolation.blocks.MBlock;
+import com.delocuro.ministrappolation.items.ItemBlockBiomeCobble;
 import com.delocuro.ministrappolation.items.ItemBlockBiomeStones;
 import com.delocuro.ministrappolation.items.ItemBlockLeaves;
 import com.delocuro.ministrappolation.items.ItemBlockPlanks;
@@ -56,6 +58,7 @@ public class MBlocks {
 	
 	//Biome Stones
 	public static Block biome_stones;
+	public static Block biome_cobble;
 	
 	//public static Block stone_decor;
 	//public static Block crate;
@@ -88,7 +91,8 @@ public class MBlocks {
 		ministrapp_planks = new BlockMinistrappPlanks();
 		
 		//Biome Stones
-		biome_stones = new BlockBiomeStones().setHardness(1F).setUnlocalizedName("deepstone");
+		biome_stones = new BlockBiomeStones().setHardness(1F).setUnlocalizedName("biome_stone");
+		biome_cobble = new BlockBiomeCobble().setHardness(1F).setUnlocalizedName("biome_cobble");
 		//stone_decor = (new BlockStoneDecor()).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_decor");
 		//crate = new BlockMinistrappolationContainer(Material.wood, MapColor.woodColor).setHardness(2.5F).setCreativeTab(Ministrappolation.tabMinistrappolation).setStepSound(Block.soundTypeWood).setUnlocalizedName("crate");
 	}
@@ -122,6 +126,7 @@ public class MBlocks {
 		
 		//Biome Stones
 		GameRegistry.registerBlock(biome_stones, ItemBlockBiomeStones.class,biome_stones.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(biome_cobble, ItemBlockBiomeCobble.class,biome_cobble.getUnlocalizedName().substring(5));
 	}
 	
 	public static void registerRenders()
@@ -151,6 +156,7 @@ public class MBlocks {
 		registerRender(ministrapp_sapling);
 		registerRender(ministrapp_planks);
 		registerRender(biome_stones);
+		registerRender(biome_cobble);
 		
 		//registerRender(stone_decor);
 		//registerRender(crate);
