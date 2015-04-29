@@ -25,7 +25,7 @@ import com.delocuro.ministrappolation.items.ItemBlockPlanks;
 import com.delocuro.ministrappolation.items.ItemBlockSapling;
 //import com.delocuro.ministrappolation.blocks.MinistrappolationContainer;
 
-public class MinestrappolationBlocks {
+public class MBlocks {
 	
 	public static Block copper_ore;
 	public static Block copper_block;
@@ -51,6 +51,17 @@ public class MinestrappolationBlocks {
 	public static Block ministrapp_leaves;	
 	public static Block ministrapp_sapling;
 	public static Block ministrapp_planks;
+	
+	//Biome Stones
+	public static Block deepstone;
+	public static Block rock_red;
+	public static Block deeprock_red;
+	public static Block coldstone;
+	public static Block deep_coldstone;
+	public static Block icestone;
+	public static Block glacierrock;
+	public static Block oceanstone;
+	public static Block p_oceanstone;
 	
 	//public static Block stone_decor;
 	//public static Block crate;
@@ -82,6 +93,16 @@ public class MinestrappolationBlocks {
 		ministrapp_sapling = new BlockMSapling().setUnlocalizedName("ministrapp_sapling");
 		ministrapp_planks = new BlockMinistrappPlanks();
 		
+		//Biome Stones
+		deepstone = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1F).setUnlocalizedName("deepstone");
+		rock_red = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1F).setUnlocalizedName("rock_red");
+		deeprock_red = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1F).setUnlocalizedName("deeprock_red");
+		coldstone = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1F).setUnlocalizedName("coldstone");
+		deep_coldstone = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1F).setUnlocalizedName("deep_coldstone");
+		icestone = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1F).setUnlocalizedName("icestone");
+		glacierrock = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1F).setUnlocalizedName("glacier_rock");
+		oceanstone = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1F).setUnlocalizedName("oceanstone");
+		p_oceanstone = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1F).setUnlocalizedName("p_oceanstone");
 		//stone_decor = (new BlockStoneDecor()).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_decor");
 		//crate = new BlockMinistrappolationContainer(Material.wood, MapColor.woodColor).setHardness(2.5F).setCreativeTab(Ministrappolation.tabMinistrappolation).setStepSound(Block.soundTypeWood).setUnlocalizedName("crate");
 	}
@@ -112,6 +133,17 @@ public class MinestrappolationBlocks {
 		GameRegistry.registerBlock(ministrapp_leaves, ItemBlockLeaves.class,ministrapp_leaves.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(ministrapp_sapling, ItemBlockSapling.class, ministrapp_sapling.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(ministrapp_planks, ItemBlockPlanks.class, ministrapp_planks.getUnlocalizedName().substring(5));
+		
+		//Biome Stones
+		GameRegistry.registerBlock(deepstone, deepstone.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(rock_red, rock_red.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(deeprock_red, deeprock_red.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(coldstone, coldstone.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(deep_coldstone, deep_coldstone.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(icestone, icestone.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(glacierrock, glacierrock.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(oceanstone, oceanstone.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(p_oceanstone, p_oceanstone.getUnlocalizedName().substring(5));
 	}
 	
 	public static void registerRenders()
@@ -140,12 +172,21 @@ public class MinestrappolationBlocks {
 		registerRender(ministrapp_leaves);
 		registerRender(ministrapp_sapling);
 		registerRender(ministrapp_planks);
+		registerRender(deepstone);
+		registerRender(rock_red);
+		registerRender(deeprock_red);
+		registerRender(coldstone);
+		registerRender(deep_coldstone);
+		registerRender(icestone);
+		registerRender(glacierrock);
+		registerRender(oceanstone);
+		registerRender(p_oceanstone);
 		
 		//registerRender(stone_decor);
 		//registerRender(crate);
 	}
-	
-	public static void registerRender(Block block)
+
+	private static void registerRender(Block block)
 	{
 		Item item = Item.getItemFromBlock(block);
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Reference.MOD_ID + ":" + item.getUnlocalizedName().substring(5), "inventory"));

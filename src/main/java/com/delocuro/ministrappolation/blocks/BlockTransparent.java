@@ -13,7 +13,7 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import com.delocuro.ministrappolation.init.MinestrappolationBlocks;
+import com.delocuro.ministrappolation.init.MBlocks;
 
 public class BlockTransparent extends MBlock{
 	
@@ -44,7 +44,7 @@ public class BlockTransparent extends MBlock{
 	        IBlockState iblockstate = worldIn.getBlockState(pos);
 	        Block block = iblockstate.getBlock();
 
-	        if (this == MinestrappolationBlocks.glass_bricks || this == MinestrappolationBlocks.glass_refined || this == MinestrappolationBlocks.glass_tiles || this == MinestrappolationBlocks.glass_window)
+	        if (this == MBlocks.glass_bricks || this == MBlocks.glass_refined || this == MBlocks.glass_tiles || this == MBlocks.glass_window)
 	        {
 	            if (worldIn.getBlockState(pos.offset(side.getOpposite())) != iblockstate)
 	            {
@@ -67,7 +67,7 @@ public class BlockTransparent extends MBlock{
     
     public int quantityDropped(Random random)
     {
-        if(this == MinestrappolationBlocks.glass_window)
+        if(this == MBlocks.glass_window)
         {
         	return 1;
         }

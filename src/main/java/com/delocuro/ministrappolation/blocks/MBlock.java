@@ -1,5 +1,6 @@
 package com.delocuro.ministrappolation.blocks;
 
+import com.delocuro.ministrappolation.Minestrappolation;
 import com.delocuro.ministrappolation.Reference;
 
 import net.minecraft.block.Block;
@@ -18,6 +19,7 @@ public class MBlock extends Block{
 	public MBlock(Material materialIn, MapColor mapColorIn) {
 		super(materialIn);
 		this.mapColor = mapColorIn;
+		this.setCreativeTab(Minestrappolation.tabMinistrappolation);
 	}
 	
 	public MapColor getMapColor(IBlockState state)

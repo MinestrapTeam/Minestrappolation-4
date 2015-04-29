@@ -4,8 +4,6 @@ import java.util.List;
 import java.util.Random;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockLeaves;
-import net.minecraft.block.BlockPlanks.EnumType;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockState;
@@ -24,7 +22,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import com.delocuro.ministrappolation.init.MinestrappolationBlocks;
+import com.delocuro.ministrappolation.init.MBlocks;
 import com.google.common.base.Predicate;
 
 public class BlockMinistrappLeaf extends BlockMinistrappolationLeavesBase
@@ -147,7 +145,7 @@ public class BlockMinistrappLeaf extends BlockMinistrappolationLeavesBase
     
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-        return Item.getItemFromBlock(MinestrappolationBlocks.ministrapp_sapling);
+        return Item.getItemFromBlock(MBlocks.ministrapp_sapling);
     }
 
     @Override

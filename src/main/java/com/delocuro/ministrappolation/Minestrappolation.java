@@ -9,7 +9,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 
-import com.delocuro.ministrappolation.init.MinestrappolationBlocks;
+import com.delocuro.ministrappolation.init.MBlocks;
 import com.delocuro.ministrappolation.init.MinistrappolationItems;
 import com.delocuro.ministrappolation.init.MinistrappolationRecipes;
 import com.delocuro.ministrappolation.proxy.CommonProxy;
@@ -30,9 +30,9 @@ public class Minestrappolation {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
-		MinestrappolationBlocks.init();
-		MinestrappolationBlocks.register();
-		MinestrappolationBlocks.registerHarvestLevels();
+		MBlocks.init();
+		MBlocks.register();
+		MBlocks.registerHarvestLevels();
 		MinistrappolationItems.init();
 		MinistrappolationItems.register();
 		MinistrappolationRecipes.register();

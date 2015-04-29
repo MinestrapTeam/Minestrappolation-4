@@ -25,28 +25,28 @@ public class MinistrappolationRecipes {
 		GameRegistry.addSmelting(new ItemStack(MinistrappolationItems.chocolate_dough), new ItemStack(Items.cookie,6), 0.2F);
 		
 		//Minerals
-		GameRegistry.addSmelting(MinestrappolationBlocks.copper_ore, new ItemStack(MinistrappolationItems.copper_ingot), 0.5F);
-		GameRegistry.addRecipe(new ItemStack(MinestrappolationBlocks.copper_block), new Object[]{"III","III","III",'I',MinistrappolationItems.copper_ingot});
-		GameRegistry.addShapelessRecipe(new ItemStack(MinistrappolationItems.copper_ingot,9), new Object[]{MinestrappolationBlocks.copper_block});
+		GameRegistry.addSmelting(MBlocks.copper_ore, new ItemStack(MinistrappolationItems.copper_ingot), 0.5F);
+		GameRegistry.addRecipe(new ItemStack(MBlocks.copper_block), new Object[]{"III","III","III",'I',MinistrappolationItems.copper_ingot});
+		GameRegistry.addShapelessRecipe(new ItemStack(MinistrappolationItems.copper_ingot,9), new Object[]{MBlocks.copper_block});
 		
-		GameRegistry.addSmelting(MinestrappolationBlocks.tin_ore, new ItemStack(MinistrappolationItems.tin_ingot), 0.5F);
-		GameRegistry.addRecipe(new ItemStack(MinestrappolationBlocks.tin_block), new Object[]{"III","III","III",'I',MinistrappolationItems.tin_ingot});
-		GameRegistry.addShapelessRecipe(new ItemStack(MinistrappolationItems.tin_ingot,9), new Object[]{MinestrappolationBlocks.tin_block});
+		GameRegistry.addSmelting(MBlocks.tin_ore, new ItemStack(MinistrappolationItems.tin_ingot), 0.5F);
+		GameRegistry.addRecipe(new ItemStack(MBlocks.tin_block), new Object[]{"III","III","III",'I',MinistrappolationItems.tin_ingot});
+		GameRegistry.addShapelessRecipe(new ItemStack(MinistrappolationItems.tin_ingot,9), new Object[]{MBlocks.tin_block});
 		
-		GameRegistry.addSmelting(MinestrappolationBlocks.sunstone_ore, new ItemStack(MinistrappolationItems.sunstone_shard), 1.0F);
-		GameRegistry.addRecipe(new ItemStack(MinestrappolationBlocks.sunstone_block), new Object[]{"SS","SS",'S',MinistrappolationItems.sunstone_shard});
+		GameRegistry.addSmelting(MBlocks.sunstone_ore, new ItemStack(MinistrappolationItems.sunstone_shard), 1.0F);
+		GameRegistry.addRecipe(new ItemStack(MBlocks.sunstone_block), new Object[]{"SS","SS",'S',MinistrappolationItems.sunstone_shard});
 		
 		//Decor
-		GameRegistry.addRecipe(new ItemStack(MinestrappolationBlocks.snow_bricks,4), new Object[]{"SS","SS",'S',Blocks.snow});
-		GameRegistry.addRecipe(new ItemStack(MinestrappolationBlocks.snow_refined,9), new Object[]{"SSS","SSS","SSS",'S',Blocks.snow});
-		GameRegistry.addRecipe(new ItemStack(MinestrappolationBlocks.snow_tiles,4), new Object[]{"SS","SS",'S',MinestrappolationBlocks.snow_refined});
-		GameRegistry.addRecipe(new ItemStack(MinestrappolationBlocks.glass_bricks,4), new Object[]{"GG","GG",'G',Blocks.glass});
-		GameRegistry.addSmelting(new ItemStack(Blocks.glass), new ItemStack(MinestrappolationBlocks.glass_refined), .1F);
-		GameRegistry.addRecipe(new ItemStack(MinestrappolationBlocks.glass_tiles,4), new Object[]{"GG","GG",'G',MinestrappolationBlocks.glass_refined});
-		GameRegistry.addRecipe(new ItemStack(MinestrappolationBlocks.glass_window,4), new Object[]{"IGI","GIG","IGI",'I',Blocks.iron_bars,'G',MinestrappolationBlocks.glass_refined});
+		GameRegistry.addRecipe(new ItemStack(MBlocks.snow_bricks,4), new Object[]{"SS","SS",'S',Blocks.snow});
+		GameRegistry.addRecipe(new ItemStack(MBlocks.snow_refined,9), new Object[]{"SSS","SSS","SSS",'S',Blocks.snow});
+		GameRegistry.addRecipe(new ItemStack(MBlocks.snow_tiles,4), new Object[]{"SS","SS",'S',MBlocks.snow_refined});
+		GameRegistry.addRecipe(new ItemStack(MBlocks.glass_bricks,4), new Object[]{"GG","GG",'G',Blocks.glass});
+		GameRegistry.addSmelting(new ItemStack(Blocks.glass), new ItemStack(MBlocks.glass_refined), .1F);
+		GameRegistry.addRecipe(new ItemStack(MBlocks.glass_tiles,4), new Object[]{"GG","GG",'G',MBlocks.glass_refined});
+		GameRegistry.addRecipe(new ItemStack(MBlocks.glass_window,4), new Object[]{"IGI","GIG","IGI",'I',Blocks.iron_bars,'G',MBlocks.glass_refined});
 		
 		//Wood
-		GameRegistry.addShapelessRecipe(new ItemStack(MinestrappolationBlocks.ministrapp_planks,4,0), new Object[]{new ItemStack(MinestrappolationBlocks.ministrapp_log,1,0)});
+		GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.ministrapp_planks,4,0), new Object[]{new ItemStack(MBlocks.ministrapp_log,1,0)});
 		
 		//Tools and Weapons
 		GameRegistry.addRecipe(new ItemStack(MinistrappolationItems.copper_pickaxe), new Object[]{"III"," S "," S ",'I',MinistrappolationItems.copper_ingot,'S',Items.stick});

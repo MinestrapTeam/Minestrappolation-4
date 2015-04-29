@@ -3,6 +3,7 @@ package com.delocuro.ministrappolation.world;
 import java.util.Random;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockOre;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.block.state.pattern.BlockHelper;
 import net.minecraft.init.Blocks;
@@ -20,7 +21,7 @@ import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraftforge.fml.common.IWorldGenerator;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-import com.delocuro.ministrappolation.init.MinestrappolationBlocks;
+import com.delocuro.ministrappolation.init.MBlocks;
 import com.google.common.base.Predicate;
 
 public class MinistrappolationGenHandler implements IWorldGenerator{
@@ -61,9 +62,9 @@ public class MinistrappolationGenHandler implements IWorldGenerator{
 		int x1 = x;
 		int y1 = 0;
 		int z1 = z;
-		generateOre(MinestrappolationBlocks.copper_ore, world, rand, x1, z1, 3, 12, 30, 15, 100, BlockHelper.forBlock(Blocks.stone));
-		generateOre(MinestrappolationBlocks.tin_ore, world, rand, x1, z1, 3, 12, 30, 15, 100, BlockHelper.forBlock(Blocks.stone));
-		generateOre(MinestrappolationBlocks.sunstone_ore, world, rand, x1, z1, 2, 4, 30, 1, 200, BlockHelper.forBlock(Blocks.stone));
+		generateOre(MBlocks.copper_ore, world, rand, x1, z1, 3, 12, 30, 15, 100, BlockHelper.forBlock(Blocks.stone));
+		generateOre(MBlocks.tin_ore, world, rand, x1, z1, 3, 12, 30, 15, 100, BlockHelper.forBlock(Blocks.stone));
+		generateOre(MBlocks.sunstone_ore, world, rand, x1, z1, 2, 4, 30, 1, 200, BlockHelper.forBlock(Blocks.stone));
 		generateBoulder(world, rand, x1, z1);
 	}
 	
@@ -116,47 +117,42 @@ public class MinistrappolationGenHandler implements IWorldGenerator{
 				BiomeGenBase biome = chunk.getBiome(subpos, chunkManager);
 				Block stoneBlock = Blocks.cobblestone;
 				Block deepStoneBlock = Blocks.mossy_cobblestone;
-				int oreMetadata = 0;
-				int deepOreMetadata = 0;
 				int deepStoneDepth = 0;
+				Block ore;
 				
 				if (biome.temperature < 0.2F)
 				{
-					stoneBlock = Blocks.snow;
-					deepStoneBlock = Blocks.packed_ice;
+					stoneBlock = MBlocks.icestone;
+					deepStoneBlock = MBlocks.glacierrock;
 					deepStoneDepth = random.nextInt(5) + 30;
-					oreMetadata = 10;
-					deepOreMetadata = 11;
+					ore = Blocks.coal_ore;
 				}
 				else if (biome.temperature <0.4F)
 				{
-					stoneBlock = Blocks.lapis_block;
-					deepStoneBlock = Blocks.diamond_block;
+					stoneBlock = MBlocks.coldstone;
+					deepStoneBlock = MBlocks.deep_coldstone;
 					deepStoneDepth = random.nextInt(5) + 35;
-					oreMetadata = 8;
-					deepOreMetadata = 9;
+					ore = Blocks.coal_ore;
 				}
 				else if (biome.getTempCategory() == TempCategory.OCEAN)
 				{
-					stoneBlock = Blocks.sandstone;
-					deepStoneBlock = Blocks.red_sandstone;
+					stoneBlock = MBlocks.oceanstone;
+					deepStoneBlock = MBlocks.p_oceanstone;
 					deepStoneDepth = random.nextInt(5) + 20;
-					oreMetadata = 12;
-					deepOreMetadata = 13;
+					ore = Blocks.coal_ore;
 				}
 				else if (biome.temperature >= 1.0F)
 				{
-					stoneBlock = Blocks.netherrack;
-					deepStoneBlock = Blocks.nether_brick;
+					stoneBlock = MBlocks.rock_red;
+					deepStoneBlock = MBlocks.deeprock_red;
 					deepStoneDepth = random.nextInt(5) + 35;
-					oreMetadata = 6;
-					deepOreMetadata = 7;
+					ore = Blocks.coal_ore;
 				}
 				else
 				{
-					deepStoneBlock = Blocks.mossy_cobblestone;
+					deepStoneBlock = MBlocks.deepstone;
 					deepStoneDepth = random.nextInt(5) + 35;
-					deepOreMetadata = 5;
+					ore = Blocks.coal_ore;
 				}
 				
 				for (int y = 128; y >= 0; y--)
@@ -166,18 +162,20 @@ public class MinistrappolationGenHandler implements IWorldGenerator{
 					IBlockState biomeStoneBlock = stoneBlock.getDefaultState();
 			
 					if (block == Blocks.stone)
-					{
-						System.out.println("Replacable Stone Detected");
+					{		
 						if (y < deepStoneDepth)
 						{
 							chunk.setBlockState(subpos2, deepStoneBlock.getDefaultState());
-							System.out.println("Placed DeepStone Block at " + subpos);
+
 						}
 						else
 						{
 							chunk.setBlockState(subpos2, stoneBlock.getDefaultState());
-							System.out.println("Placed Stone Block at " + subpos2.getX() + ", " + subpos2.getY() + ", " + subpos2.getZ() + ".");
 						}
+					}
+					else if (block instanceof BlockOre)
+					{
+						chunk.setBlockState(subpos2, ore.getDefaultState());
 					}
 				}
 			}
