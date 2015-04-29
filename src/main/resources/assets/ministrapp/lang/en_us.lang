@@ -21,6 +21,45 @@ tile.snow_refined.name=Refined Snow
 tile.snow_bricks.name=Snow Bricks
 tile.snow_tiles.name=Snow Tiles
 
+redwood_sapling.name=Redwood Sapling
+redwood_planks.name=Redwood Planks
+
+deepstone_rock.name=Deep Stone
+deepstone_cobble.name=Cobbled Deep Stone
+deepstone_bricks.name=Deep Stone Bricks
+
+red_rock_rock.name=Redrock
+red_rock_cobble.name=Cobbled Redrock
+red_rock_bricks.name=Redrock Bricks
+
+deep_redrock_rock.name=Deep Redrock
+deep_redrock_cobble.name=Cobbled Deep Redrock
+deep_redrock_bricks.name=Deep Redrock Bricks
+
+coldstone_rock.name=Coldstone
+coldstone_cobble.name=Cobbled Coldstone
+coldstone_bricks.name=Coldstone Bricks
+
+deep_coldstone_rock.name=Deep Coldstone
+deep_coldstone_cobble.name=Cobbled Deep Coldstone
+deep_coldstone_bricks.name=Deep Coldstone Bricks
+
+icestone_rock.name=Icestone
+icestone_cobble.name=Cobbled Icestone
+icestone_bricks.name=Icestone Bricks
+
+glacierstone_rock.name=Glacierrock
+glacierstone_cobble.name=Cobbled Glacierrock
+glacierstone_bricks.name=Glacierrock Bricks
+
+oceanstone_rock.name=Oceanstone
+oceanstone_cobble.name=Cobbled Oceanstone
+oceanstone_bricks.name=Oceanstone Bricks
+
+p_oceanstone_rock.name=Pressureized Oceanstone
+p_oceanstone_cobble.name=Cobbled Pressureized Oceanstone
+p_oceanstone_bricks.name=Pressureized Oceanstone Bricks
+
 tile.crate.name=Crate
 
 item.dough.name=Dough
