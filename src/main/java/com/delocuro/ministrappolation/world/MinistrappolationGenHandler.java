@@ -39,7 +39,7 @@ public class MinistrappolationGenHandler implements IWorldGenerator{
 		if(chunkGenerator instanceof ChunkProviderGenerate)
 		{
 			this.generateOverworld(world, random, chunkX, chunkZ);
-			//this.genBiomeStone(world, chunkX, chunkZ, random);
+			this.genBiomeStone(world, chunkX, chunkZ, random);
 		}
 		else if(chunkGenerator instanceof ChunkProviderHell)
 		{
@@ -107,8 +107,7 @@ public class MinistrappolationGenHandler implements IWorldGenerator{
 		BlockPos pos = new BlockPos(chunkX, 0, chunkZ);
 		Chunk chunk = world.getChunkFromBlockCoords(pos);
 		WorldChunkManager chunkManager = world.getWorldChunkManager();
-		//System.out.println("Biome Stone Generator Initiated");
-		
+
 		for (int x = 0; x < 16; x++)
 		{
 			for (int z = 0; z < 16; z++)
@@ -172,7 +171,7 @@ public class MinistrappolationGenHandler implements IWorldGenerator{
 						if (y < deepStoneDepth)
 						{
 							chunk.setBlockState(subpos2, deepStoneBlock.getDefaultState());
-							System.out.println("Placed DeepStone Block at " + subpos2.getX() + ", " + subpos2.getY() + ", " + subpos2.getZ() + ".");
+							System.out.println("Placed DeepStone Block at " + subpos);
 						}
 						else
 						{

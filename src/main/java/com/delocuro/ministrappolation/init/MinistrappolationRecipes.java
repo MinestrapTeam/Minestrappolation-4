@@ -3,6 +3,8 @@ package com.delocuro.ministrappolation.init;
 import java.util.Iterator;
 import java.util.List;
 
+import com.delocuro.ministrappolation.blocks.BlockMinistrappPlanks;
+
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -42,6 +44,9 @@ public class MinistrappolationRecipes {
 		GameRegistry.addSmelting(new ItemStack(Blocks.glass), new ItemStack(MinestrappolationBlocks.glass_refined), .1F);
 		GameRegistry.addRecipe(new ItemStack(MinestrappolationBlocks.glass_tiles,4), new Object[]{"GG","GG",'G',MinestrappolationBlocks.glass_refined});
 		GameRegistry.addRecipe(new ItemStack(MinestrappolationBlocks.glass_window,4), new Object[]{"IGI","GIG","IGI",'I',Blocks.iron_bars,'G',MinestrappolationBlocks.glass_refined});
+		
+		//Wood
+		GameRegistry.addShapelessRecipe(new ItemStack(MinestrappolationBlocks.ministrapp_planks,4,0), new Object[]{new ItemStack(MinestrappolationBlocks.ministrapp_log,1,0)});
 		
 		//Tools and Weapons
 		GameRegistry.addRecipe(new ItemStack(MinistrappolationItems.copper_pickaxe), new Object[]{"III"," S "," S ",'I',MinistrappolationItems.copper_ingot,'S',Items.stick});

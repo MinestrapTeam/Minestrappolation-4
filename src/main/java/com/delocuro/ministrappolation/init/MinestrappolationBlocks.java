@@ -3,10 +3,8 @@ package com.delocuro.ministrappolation.init;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -17,13 +15,15 @@ import com.delocuro.ministrappolation.blocks.BlockMSapling;
 import com.delocuro.ministrappolation.blocks.BlockMinistrappLeaf;
 import com.delocuro.ministrappolation.blocks.BlockMinistrappLog;
 import com.delocuro.ministrappolation.blocks.BlockMinistrappOre;
+import com.delocuro.ministrappolation.blocks.BlockMinistrappPlanks;
 import com.delocuro.ministrappolation.blocks.BlockMinistrappSnow;
 import com.delocuro.ministrappolation.blocks.BlockSunstoneBlock;
 import com.delocuro.ministrappolation.blocks.BlockTransparent;
 import com.delocuro.ministrappolation.blocks.MBlock;
+import com.delocuro.ministrappolation.items.ItemBlockLeaves;
+import com.delocuro.ministrappolation.items.ItemBlockPlanks;
 import com.delocuro.ministrappolation.items.ItemBlockSapling;
 //import com.delocuro.ministrappolation.blocks.MinistrappolationContainer;
-import com.google.common.collect.ImmutableSet;
 
 public class MinestrappolationBlocks {
 	
@@ -50,6 +50,7 @@ public class MinestrappolationBlocks {
 	public static Block ministrapp_log;
 	public static Block ministrapp_leaves;	
 	public static Block ministrapp_sapling;
+	public static Block ministrapp_planks;
 	
 	//public static Block stone_decor;
 	//public static Block crate;
@@ -79,6 +80,7 @@ public class MinestrappolationBlocks {
 		ministrapp_log = new BlockMinistrappLog().setUnlocalizedName("ministrapp_log");
 		ministrapp_leaves = new BlockMinistrappLeaf().setUnlocalizedName("ministrapp_leaves");
 		ministrapp_sapling = new BlockMSapling().setUnlocalizedName("ministrapp_sapling");
+		ministrapp_planks = new BlockMinistrappPlanks();
 		
 		//stone_decor = (new BlockStoneDecor()).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_decor");
 		//crate = new BlockMinistrappolationContainer(Material.wood, MapColor.woodColor).setHardness(2.5F).setCreativeTab(Ministrappolation.tabMinistrappolation).setStepSound(Block.soundTypeWood).setUnlocalizedName("crate");
@@ -106,12 +108,10 @@ public class MinestrappolationBlocks {
 		GameRegistry.registerBlock(stone_pattern_bricks, stone_pattern_bricks.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(stone_refined, stone_refined.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(stone_tiles, stone_tiles.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(ministrapp_log, ministrapp_log.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(ministrapp_leaves, ministrapp_leaves.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(ministrapp_log, ItemBlockPlanks.class,ministrapp_log.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(ministrapp_leaves, ItemBlockLeaves.class,ministrapp_leaves.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(ministrapp_sapling, ItemBlockSapling.class, ministrapp_sapling.getUnlocalizedName().substring(5));
-		
-		//GameRegistry.registerBlock(stone_decor, stone_decor.getUnlocalizedName().substring(5));
-		//GameRegistry.registerBlock(crate, crate.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(ministrapp_planks, ItemBlockPlanks.class, ministrapp_planks.getUnlocalizedName().substring(5));
 	}
 	
 	public static void registerRenders()
@@ -139,6 +139,7 @@ public class MinestrappolationBlocks {
 		registerRender(ministrapp_log);
 		registerRender(ministrapp_leaves);
 		registerRender(ministrapp_sapling);
+		registerRender(ministrapp_planks);
 		
 		//registerRender(stone_decor);
 		//registerRender(crate);
