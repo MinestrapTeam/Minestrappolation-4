@@ -65,34 +65,6 @@ public abstract class BlockMinistrappolationLeavesBase extends BlockLeavesBase i
         return BiomeColorHelper.getFoliageColorAtPos(worldIn, pos);
     }
 
-    public void breakBlock(World worldIn, BlockPos pos, IBlockState state)
-    {
-        byte b0 = 1;
-        int i = b0 + 1;
-        int j = pos.getX();
-        int k = pos.getY();
-        int l = pos.getZ();
-
-        if (worldIn.isAreaLoaded(new BlockPos(j - i, k - i, l - i), new BlockPos(j + i, k + i, l + i)))
-        {
-            for (int i1 = -b0; i1 <= b0; ++i1)
-            {
-                for (int j1 = -b0; j1 <= b0; ++j1)
-                {
-                    for (int k1 = -b0; k1 <= b0; ++k1)
-                    {
-                        BlockPos blockpos1 = pos.add(i1, j1, k1);
-                        IBlockState iblockstate1 = worldIn.getBlockState(blockpos1);
-
-                        if (iblockstate1.getBlock().isLeaves(worldIn, blockpos1))
-                        {
-                            iblockstate1.getBlock().beginLeavesDecay(worldIn, blockpos1);
-                        }
-                    }
-                }
-            }
-        }
-    }
 
     public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
     {

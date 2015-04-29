@@ -1,10 +1,10 @@
 package com.delocuro.ministrappolation.blocks;
 
 import java.util.List;
+import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLeaves;
-import net.minecraft.block.BlockPlanks;
 import net.minecraft.block.BlockPlanks.EnumType;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
@@ -18,12 +18,13 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.stats.StatList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
-import net.minecraft.world.ColorizerFoliage;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.delocuro.ministrappolation.init.MinestrappolationBlocks;
 import com.google.common.base.Predicate;
 
 public class BlockMinistrappLeaf extends BlockMinistrappolationLeavesBase
@@ -50,43 +51,18 @@ public class BlockMinistrappLeaf extends BlockMinistrappolationLeavesBase
     @SideOnly(Side.CLIENT)
     public int getRenderColor(IBlockState state)
     {
-        if (state.getBlock() != this)
-        {
-            return super.getRenderColor(state);
-        }
-        else
-        {
-            //BlockMinistrappPlanks.EnumType enumtype = (BlockMinistrappPlanks.EnumType)state.getValue(VARIANT);
-            //return enumtype == BlockMinistrappPlanks.EnumType.REDWOOD ? super.getRenderColor(state);
-        	BlockMinistrappPlanks.EnumType enumtype = (BlockMinistrappPlanks.EnumType)state.getValue(VARIANT);
-        	return super.getRenderColor(state);
-        }
+        	return super.getRenderColor(state);      
     }
 
     @SideOnly(Side.CLIENT)
     public int colorMultiplier(IBlockAccess worldIn, BlockPos pos, int renderPass)
     {
-        IBlockState iblockstate = worldIn.getBlockState(pos);
-
-        if (iblockstate.getBlock() == this)
-        {
-            BlockMinistrappPlanks.EnumType enumtype = (BlockMinistrappPlanks.EnumType)iblockstate.getValue(VARIANT);
-        }
-
         return super.colorMultiplier(worldIn, pos, renderPass);
     }
 
-    /*protected void dropApple(World worldIn, BlockPos pos, IBlockState state, int chance)
-    {
-        if (state.getValue(VARIANT) == BlockMinistrappPlanks.EnumType.OAK && worldIn.rand.nextInt(chance) == 0)
-        {
-            spawnAsEntity(worldIn, pos, new ItemStack(Items.apple, 1, 0));
-        }
-    }*/
-
     protected int getSaplingDropChance(IBlockState state)
     {
-        return state.getValue(VARIANT) == BlockMinistrappPlanks.EnumType.REDWOOD ? 30 : super.getSaplingDropChance(state);
+        return super.getSaplingDropChance(state);
     }
 
     /**
@@ -95,7 +71,13 @@ public class BlockMinistrappLeaf extends BlockMinistrappolationLeavesBase
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(Item itemIn, CreativeTabs tab, List list)
     {
-        list.add(new ItemStack(itemIn, 1, BlockMinistrappPlanks.EnumType.REDWOOD.getMetadata()));
+    	 BlockMinistrappPlanks.EnumType[] aenumtype = BlockMinistrappPlanks.EnumType.values();
+         int i = aenumtype.length;
+
+         for (int j = 0; j < i; ++j) {
+             BlockMinistrappPlanks.EnumType enumtype = aenumtype[j];
+             list.add(new ItemStack(itemIn, 1, enumtype.getMetadata()));
+         }
     }
 
     protected ItemStack createStackedBlock(IBlockState state)
@@ -108,7 +90,7 @@ public class BlockMinistrappLeaf extends BlockMinistrappolationLeavesBase
      */
     public IBlockState getStateFromMeta(int meta)
     {
-        return this.getDefaultState().withProperty(VARIANT, this.getWoodType(meta)).withProperty(DECAYABLE, Boolean.valueOf((meta & 4) == 0)).withProperty(CHECK_DECAY, Boolean.valueOf((meta & 8) > 0));
+        return this.getDefaultState().withProperty(VARIANT, this.getCustomWoodType(meta)).withProperty(DECAYABLE, Boolean.valueOf((meta & 4) == 0)).withProperty(CHECK_DECAY, Boolean.valueOf((meta & 8) > 0));
     }
 
     /**
@@ -132,7 +114,7 @@ public class BlockMinistrappLeaf extends BlockMinistrappolationLeavesBase
         return i;
     }
     
-    public BlockMinistrappPlanks.EnumType getWoodType(int meta)
+    public BlockMinistrappPlanks.EnumType getCustomWoodType(int meta)
     {
     	return BlockMinistrappPlanks.EnumType.byMetadata((meta & 3) % 4);
     }
@@ -155,18 +137,37 @@ public class BlockMinistrappLeaf extends BlockMinistrappolationLeavesBase
         if (!worldIn.isRemote && player.getCurrentEquippedItem() != null && player.getCurrentEquippedItem().getItem() == Items.shears)
         {
             player.triggerAchievement(StatList.mineBlockStatArray[Block.getIdFromBlock(this)]);
-            //spawnAsEntity(worldIn, pos, new ItemStack(Item.getItemFromBlock(this), 1, ((BlockMinistrappPlanks.EnumType)state.getValue(VARIANT)).getMetadata()));
+            spawnAsEntity(worldIn, pos, new ItemStack(Item.getItemFromBlock(this), 1, ((BlockMinistrappPlanks.EnumType) state.getValue(VARIANT)).getMetadata()));
         }
         else
         {
             super.harvestBlock(worldIn, player, pos, state, te);
         }
     }
+    
+    @Override
+    public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+        return Item.getItemFromBlock(MinestrappolationBlocks.ministrapp_sapling);
+    }
 
     @Override
     public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune)
     {
         IBlockState state = world.getBlockState(pos);
-        return new java.util.ArrayList(java.util.Arrays.asList(new ItemStack(this, 1, ((BlockMinistrappPlanks.EnumType)state.getValue(VARIANT)).getMetadata())));
+        return new java.util.ArrayList(java.util.Arrays.asList(new ItemStack(this, 0, ((BlockMinistrappPlanks.EnumType)state.getValue(VARIANT)).getMetadata())));
     }
+
+	@Override
+	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ)
+    {
+		IBlockState state2 = worldIn.getBlockState(pos);
+        return true;
+    }
+
+	@Override
+	public com.delocuro.ministrappolation.blocks.BlockMinistrappPlanks.EnumType getWoodType(
+			int meta) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
