@@ -110,7 +110,7 @@ public class MinistrappolationGenHandler implements IWorldGenerator{
 		BlockPos pos = new BlockPos(chunkX, 0, chunkZ);
 		Chunk chunk = world.getChunkFromBlockCoords(pos);
 		WorldChunkManager chunkManager = world.getWorldChunkManager();
-
+		
 		for (int x = 0; x < 16; x++)
 		{
 			for (int z = 0; z < 16; z++)
@@ -131,7 +131,6 @@ public class MinistrappolationGenHandler implements IWorldGenerator{
 					sType = BlockBiomeStones.EnumType.ICESTONE;
 					dType = BlockBiomeStones.EnumType.GLACIERSTONE;
 					deepStoneDepth = random.nextInt(5) + 30;
-					ore = Blocks.coal_ore;
 				}
 				else if (biome.temperature <0.4F)
 				{
@@ -140,7 +139,6 @@ public class MinistrappolationGenHandler implements IWorldGenerator{
 					deepStoneDepth = random.nextInt(5) + 35;
 					sType = BlockBiomeStones.EnumType.COLDSTONE;
 					dType = BlockBiomeStones.EnumType.DEEPCOLDSTONE;
-					ore = Blocks.coal_ore;
 				}
 				else if (biome.getTempCategory() == TempCategory.OCEAN)
 				{
@@ -149,7 +147,6 @@ public class MinistrappolationGenHandler implements IWorldGenerator{
 					deepStoneDepth = random.nextInt(5) + 20;
 					sType = BlockBiomeStones.EnumType.OCEANSTONE;
 					dType = BlockBiomeStones.EnumType.POCEANSTONE;
-					ore = Blocks.coal_ore;
 				}
 				else if (biome.temperature >= 1.0F)
 				{
@@ -158,14 +155,12 @@ public class MinistrappolationGenHandler implements IWorldGenerator{
 					deepStoneDepth = random.nextInt(5) + 35;
 					sType = BlockBiomeStones.EnumType.REDROCK;
 					dType = BlockBiomeStones.EnumType.DEEPREDROCK;
-					ore = Blocks.coal_ore;
 				}
 				else
 				{
 					deepStoneBlock = MBlocks.biome_stones.getStateFromMeta(BlockBiomeStones.EnumType.DEEPSTONE.getMetadata());
 					deepStoneDepth = random.nextInt(5) + 35;
 					dType = BlockBiomeStones.EnumType.DEEPSTONE;
-					ore = Blocks.coal_ore;
 				}
 				
 				for (int y = 128; y >= 0; y--)
@@ -178,7 +173,7 @@ public class MinistrappolationGenHandler implements IWorldGenerator{
 						if (y < deepStoneDepth)
 						{
 							chunk.setBlockState(subpos2, deepStoneBlock.withProperty(BlockBiomeStones.VARIANT, dType));
-							System.out.println(subpos2+" name = " + dType);
+							System.out.println(pos+" name = " + dType);
 						}
 						else
 						{
@@ -187,7 +182,7 @@ public class MinistrappolationGenHandler implements IWorldGenerator{
 					}
 					else if (block instanceof BlockOre)
 					{
-						chunk.setBlockState(subpos2, ore.getDefaultState());
+						chunk.setBlockState(subpos2, block.getDefaultState());
 					}
 				}
 			}
