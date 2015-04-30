@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "ministrapp:block/redwood_sapling"
+        "layer0": "ministrapp:blocks/redwood_sapling"
     },
     "display": {
         "thirdperson": {
