@@ -1,25 +1,24 @@
 package com.delocuro.ministrappolation.items;
 
-import com.delocuro.ministrappolation.init.MItems;
-
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemStack;
 
-public class ItemMinistrappolationAxe extends ItemAxe{
+import com.delocuro.ministrappolation.init.MItems;
+
+public class ItemMinistrappolationAxe extends ItemAxe
+{
 	
-	public ItemMinistrappolationAxe(ToolMaterial material) {
+	public ItemMinistrappolationAxe(ToolMaterial material)
+	{
 		super(material);
 	}
 	
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
-    {
-       if(toRepair == new ItemStack(MItems.copper_pickaxe) || toRepair == new ItemStack(MItems.copper_axe) || toRepair == new ItemStack(MItems.copper_shovel) || toRepair == new ItemStack(MItems.copper_hoe) || toRepair == new ItemStack(MItems.copper_sword))
-       {
-    	   return new ItemStack(MItems.copper_ingot) == repair ? true : super.getIsRepairable(toRepair, repair);
-       }
-       else
-    	   return true;
-    }
+	{
+		if (toRepair == new ItemStack(MItems.copper_pickaxe) || toRepair == new ItemStack(MItems.copper_axe) || toRepair == new ItemStack(MItems.copper_shovel) || toRepair == new ItemStack(MItems.copper_hoe) || toRepair == new ItemStack(MItems.copper_sword))
+			return new ItemStack(MItems.copper_ingot) == repair ? true : super.getIsRepairable(toRepair, repair);
+		else
+			return true;
+	}
 }

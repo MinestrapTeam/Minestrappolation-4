@@ -17,15 +17,16 @@ import com.delocuro.ministrappolation.world.MBiomeManager;
 import com.delocuro.ministrappolation.world.MinistrappolationGenHandler;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSON)
-public class Minestrappolation {
+public class Minestrappolation
+{
 	
 	@Instance(Reference.MOD_ID)
-	public static Minestrappolation instance;
+	public static Minestrappolation	instance;
 	
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
-	public static CommonProxy proxy;
+	public static CommonProxy		proxy;
 	
-	public static final MTab tabMinistrappolation = new MTab("tabMinistrappolation");
+	public static final MTab		tabMinistrappolation	= new MTab("tabMinistrappolation");
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
@@ -38,9 +39,9 @@ public class Minestrappolation {
 		MRecipes.removeRecipes();
 		MBiomeManager.load();
 		proxy.preInit(event);
-		if (this.proxy != null)
+		if (Minestrappolation.proxy != null)
 		{
-			NetworkRegistry.INSTANCE.registerGuiHandler(this, this.proxy);
+			NetworkRegistry.INSTANCE.registerGuiHandler(this, Minestrappolation.proxy);
 		}
 		
 	}

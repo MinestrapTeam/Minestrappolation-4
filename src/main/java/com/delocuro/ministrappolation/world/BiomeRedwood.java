@@ -3,7 +3,6 @@ package com.delocuro.ministrappolation.world;
 import java.util.Random;
 
 import net.minecraft.block.BlockDirt;
-import net.minecraft.block.BlockFlower;
 import net.minecraft.block.BlockTallGrass;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
@@ -12,11 +11,11 @@ import net.minecraft.world.chunk.ChunkPrimer;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 import net.minecraft.world.gen.feature.WorldGenTallGrass;
 import net.minecraft.world.gen.feature.WorldGenerator;
-import net.minecraftforge.common.BiomeManager.BiomeType;
 
-public class BiomeRedwood extends BiomeGenBase {
-
-	public BiomeRedwood(int id) 
+public class BiomeRedwood extends BiomeGenBase
+{
+	
+	public BiomeRedwood(int id)
 	{
 		super(id);
 		
@@ -56,16 +55,14 @@ public class BiomeRedwood extends BiomeGenBase {
 		{
 			this.topBlock = Blocks.dirt.getStateFromMeta(BlockDirt.DirtType.PODZOL.getMetadata());
 		}
-
-	    this.generateBiomeTerrain(worldIn, rand, primer, p_180622_4_, p_180622_5_, noise);
+		
+		this.func_180628_b(worldIn, rand, primer, p_180622_4_, p_180622_5_, noise);
 	}
-	
-	
 	
 	@Override
 	public WorldGenAbstractTree genBigTreeChance(Random random)
-    {	
-		return random.nextInt(4) == 0 ? new WorldGenRedWoodTree() : random.nextInt(8) < 2 ? this.worldGeneratorTrees : new WorldGenRedWoodTreeSmall();	
+	{
+		return random.nextInt(4) == 0 ? new WorldGenRedWoodTree() : random.nextInt(8) < 2 ? this.worldGeneratorTrees : new WorldGenRedWoodTreeSmall();
 	}
-
+	
 }

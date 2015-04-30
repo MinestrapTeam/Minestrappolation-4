@@ -13,24 +13,24 @@ public class WorldGenBoulder extends WorldGenerator
 {
 	@Override
 	public boolean generate(World worldIn, Random rand, BlockPos pos)
-    {
-        
-            BlockPos blockpos1 = pos.add(rand.nextInt(8) - rand.nextInt(8), rand.nextInt(4) - rand.nextInt(4), rand.nextInt(8) - rand.nextInt(8));
-
-            if (worldIn.isAirBlock(blockpos1) && (worldIn.getBlockState(blockpos1.down()).getBlock() == Blocks.grass || worldIn.getBlockState(blockpos1.down()).getBlock() == Blocks.stone))
-            {
-            	worldIn.setBlockState(blockpos1, MBlocks.stone_boulder.getDefaultState(), 2);
-            	
-            	for (int i = 0; i < 64; i++)
-                {
-            		blockpos1 = pos.add(rand.nextInt(8) - rand.nextInt(8), rand.nextInt(4) - rand.nextInt(4), rand.nextInt(8) - rand.nextInt(8));
-            		
-            		if (worldIn.isAirBlock(blockpos1) && (worldIn.getBlockState(blockpos1.down()).getBlock() == Blocks.grass || worldIn.getBlockState(blockpos1.down()).getBlock() == Blocks.stone))
-                    {
-            			worldIn.setBlockState(blockpos1, MBlocks.stone_boulder.getDefaultState(), 2);
-                    }
-                }
-            }
-            return true;
-    }
+	{
+		BlockPos randPos = pos.add(rand.nextInt(8) - rand.nextInt(8), rand.nextInt(4) - rand.nextInt(4), rand.nextInt(8) - rand.nextInt(8));
+		BlockPos down = randPos.offsetDown();
+		
+		if (worldIn.isAirBlock(randPos) && (worldIn.getBlockState(down).getBlock() == Blocks.grass || worldIn.getBlockState(down).getBlock() == Blocks.stone))
+		{
+			worldIn.setBlockState(randPos, MBlocks.stone_boulder.getDefaultState(), 2);
+			
+			for (int i = 0; i < 64; i++)
+			{
+				randPos = pos.add(rand.nextInt(8) - rand.nextInt(8), rand.nextInt(4) - rand.nextInt(4), rand.nextInt(8) - rand.nextInt(8));
+				
+				if (worldIn.isAirBlock(randPos) && (worldIn.getBlockState(down).getBlock() == Blocks.grass || worldIn.getBlockState(down).getBlock() == Blocks.stone))
+				{
+					worldIn.setBlockState(randPos, MBlocks.stone_boulder.getDefaultState(), 2);
+				}
+			}
+		}
+		return true;
+	}
 }

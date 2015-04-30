@@ -19,14 +19,11 @@ import net.minecraft.world.World;
 import com.delocuro.ministrappolation.Minestrappolation;
 import com.delocuro.ministrappolation.tile_entity.TileEntityCrate;
 
-public class BlockMContainer extends BlockFalling implements ITileEntityProvider{
-
-	private final MapColor mapColor;
-	
+public class BlockMContainer extends BlockFalling implements ITileEntityProvider
+{
 	public BlockMContainer(Material materialIn, MapColor mapColorIn)
 	{
 		super(materialIn);
-		this.mapColor = mapColorIn;
 	}
 	
 	@Override
@@ -57,10 +54,10 @@ public class BlockMContainer extends BlockFalling implements ITileEntityProvider
 					float f = world.rand.nextFloat() * 0.8F + 0.1F;
 					float f1 = world.rand.nextFloat() * 0.8F + 0.1F;
 					EntityItem entityitem;
-					for(float f2 = world.rand.nextFloat() * 0.8F + 0.1F; itemstack.stackSize > 0; world.spawnEntityInWorld(entityitem))
+					for (float f2 = world.rand.nextFloat() * 0.8F + 0.1F; itemstack.stackSize > 0; world.spawnEntityInWorld(entityitem))
 					{
 						int j1 = world.rand.nextInt(21) + 10;
-						if(j1 > itemstack.stackSize)
+						if (j1 > itemstack.stackSize)
 						{
 							j1 = itemstack.stackSize;
 						}

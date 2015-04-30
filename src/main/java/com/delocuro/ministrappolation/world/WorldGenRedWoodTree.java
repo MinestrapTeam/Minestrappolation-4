@@ -2,11 +2,10 @@ package com.delocuro.ministrappolation.world;
 
 import java.util.Random;
 
-import com.delocuro.ministrappolation.init.MBlocks;
-
-import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
+
+import com.delocuro.ministrappolation.init.MBlocks;
 
 public class WorldGenRedWoodTree extends WorldGenBaseTree
 {
@@ -21,10 +20,10 @@ public class WorldGenRedWoodTree extends WorldGenBaseTree
 	@Override
 	public boolean genLeafStructure(World world, Random rand, BlockPos pos)
 	{
-		world.setBlockState(pos.add(0, this.topHeight, 0), this.leaves.getDefaultState() ,2);
-		world.setBlockState(pos.add(0, this.topHeight, 1), this.leaves.getDefaultState() ,2);
-		world.setBlockState(pos.add(1, this.topHeight, 1), this.leaves.getDefaultState() ,2);
-		world.setBlockState(pos.add(1, this.topHeight, 0), this.leaves.getDefaultState() ,2);
+		world.setBlockState(pos.add(0, this.topHeight, 0), this.leaves.getDefaultState(), 2);
+		world.setBlockState(pos.add(0, this.topHeight, 1), this.leaves.getDefaultState(), 2);
+		world.setBlockState(pos.add(1, this.topHeight, 1), this.leaves.getDefaultState(), 2);
+		world.setBlockState(pos.add(1, this.topHeight, 0), this.leaves.getDefaultState(), 2);
 		
 		double thinkness = 6.5D;
 		for (int r = this.leafStart; r < this.topHeight; r++)
@@ -59,7 +58,7 @@ public class WorldGenRedWoodTree extends WorldGenBaseTree
 					{
 						for (int l = 0; l < rand.nextInt(2) + minL; l++)
 						{
-							world.setBlockState(pos.add(l, r, 0), this.wood.getDefaultState(),2);
+							world.setBlockState(pos.add(l, r, 0), this.wood.getDefaultState(), 2);
 						}
 						
 					}
@@ -68,7 +67,7 @@ public class WorldGenRedWoodTree extends WorldGenBaseTree
 					{
 						for (int l = 0; l < rand.nextInt(2) + minL; l++)
 						{
-							world.setBlockState(pos.add(-l, r, 0), this.wood.getDefaultState(),2);
+							world.setBlockState(pos.add(-l, r, 0), this.wood.getDefaultState(), 2);
 						}
 					}
 					
@@ -76,7 +75,7 @@ public class WorldGenRedWoodTree extends WorldGenBaseTree
 					{
 						for (int l = 0; l < rand.nextInt(2) + minL; l++)
 						{
-							world.setBlockState(pos.add(0, r, -l), this.wood.getDefaultState(),2);
+							world.setBlockState(pos.add(0, r, -l), this.wood.getDefaultState(), 2);
 						}
 						
 					}
@@ -85,7 +84,7 @@ public class WorldGenRedWoodTree extends WorldGenBaseTree
 					{
 						for (int l = 0; l < rand.nextInt(2) + minL; l++)
 						{
-							world.setBlockState(pos.add(0, r, l), this.wood.getDefaultState(),2);
+							world.setBlockState(pos.add(0, r, l), this.wood.getDefaultState(), 2);
 						}
 					}
 					

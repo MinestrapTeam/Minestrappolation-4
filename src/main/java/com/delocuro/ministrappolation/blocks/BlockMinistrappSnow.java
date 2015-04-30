@@ -7,15 +7,16 @@ import net.minecraft.block.state.IBlockState;
 
 public class BlockMinistrappSnow extends BlockSnowBlock
 {
-	private final MapColor mapColor;
+	private final MapColor	mapColor;
 	
-	public BlockMinistrappSnow(Material materialIn, MapColor mapColorIn) 
+	public BlockMinistrappSnow(Material materialIn, MapColor mapColorIn)
 	{
 		this.mapColor = mapColorIn;
 	}
 	
+	@Override
 	public MapColor getMapColor(IBlockState state)
-    {
-        return this.mapColor;
-    }
+	{
+		return this.mapColor;
+	}
 }

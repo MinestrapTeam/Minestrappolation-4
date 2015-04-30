@@ -13,9 +13,7 @@ import net.minecraftforge.fml.common.network.IGuiHandler;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.delocuro.ministrappolation.Reference;
-import com.delocuro.ministrappolation.blocks.BlockBiomeStones;
-import com.delocuro.ministrappolation.init.MBlocks;
-import com.delocuro.ministrappolation.init.MItems;
+import com.delocuro.ministrappolation.blocks.MStoneType;
 
 public abstract class CommonProxy implements IGuiHandler
 {
@@ -31,48 +29,48 @@ public abstract class CommonProxy implements IGuiHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		Item itemBlockVariants = GameRegistry.findItem(Reference.MOD_ID, "biome_stone");
- 
-	    ModelBakery.addVariantName(itemBlockVariants, "ministrapp:deepstone");
-	    ModelBakery.addVariantName(itemBlockVariants, "ministrapp:coldstone");
-	    ModelBakery.addVariantName(itemBlockVariants, "ministrapp:icestone");
-	    ModelBakery.addVariantName(itemBlockVariants, "ministrapp:glacierrock");
-	    ModelBakery.addVariantName(itemBlockVariants, "ministrapp:deep_coldstone");
-	    ModelBakery.addVariantName(itemBlockVariants, "ministrapp:red_rock");
-	    ModelBakery.addVariantName(itemBlockVariants, "ministrapp:deep_redrock");
-	    ModelBakery.addVariantName(itemBlockVariants, "ministrapp:oceanstone");
-	    ModelBakery.addVariantName(itemBlockVariants, "ministrapp:p_oceanstone");
+		
+		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:deepstone");
+		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:coldstone");
+		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:icestone");
+		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:glacierrock");
+		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:deep_coldstone");
+		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:red_rock");
+		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:deep_redrock");
+		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:oceanstone");
+		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:p_oceanstone");
 	}
 	
 	public void init(FMLInitializationEvent event)
 	{
 		Item itemBlockVariants = GameRegistry.findItem(Reference.MOD_ID, "biome_stone");
-	   
-		ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(Reference.MOD_ID+":deepstone", "inventory");
-	    Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, BlockBiomeStones.EnumType.DEEPSTONE.getMetadata(), itemModelResourceLocation);
-	    
-	    itemModelResourceLocation = new ModelResourceLocation(Reference.MOD_ID+":coldstone", "inventory");
-	    Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, BlockBiomeStones.EnumType.COLDSTONE.getMetadata(), itemModelResourceLocation);
-	    
-	    itemModelResourceLocation = new ModelResourceLocation(Reference.MOD_ID+":icestone", "inventory");
-	    Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, BlockBiomeStones.EnumType.ICESTONE.getMetadata(), itemModelResourceLocation);
-	    
-	    itemModelResourceLocation = new ModelResourceLocation(Reference.MOD_ID+":glacierrock", "inventory");
-	    Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, BlockBiomeStones.EnumType.GLACIERSTONE.getMetadata(), itemModelResourceLocation);
-	    
-	    itemModelResourceLocation = new ModelResourceLocation(Reference.MOD_ID+":deep_coldstone", "inventory");
-	    Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, BlockBiomeStones.EnumType.DEEPCOLDSTONE.getMetadata(), itemModelResourceLocation);
-	    
-	    itemModelResourceLocation = new ModelResourceLocation(Reference.MOD_ID+":red_rock", "inventory");
-	    Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, BlockBiomeStones.EnumType.REDROCK.getMetadata(), itemModelResourceLocation);
-	    
-	    itemModelResourceLocation = new ModelResourceLocation(Reference.MOD_ID+":deep_redrock", "inventory");
-	    Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, BlockBiomeStones.EnumType.DEEPREDROCK.getMetadata(), itemModelResourceLocation);
-	    
-	    itemModelResourceLocation = new ModelResourceLocation(Reference.MOD_ID+":oceanstone", "inventory");
-	    Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, BlockBiomeStones.EnumType.OCEANSTONE.getMetadata(), itemModelResourceLocation);
-	    
-	    itemModelResourceLocation = new ModelResourceLocation(Reference.MOD_ID+":pressurized_oceanstone", "inventory");
-	    Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, BlockBiomeStones.EnumType.POCEANSTONE.getMetadata(), itemModelResourceLocation);
+		
+		ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(Reference.MOD_ID + ":deepstone", "inventory");
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.DEEPSTONE.getMetadata(), itemModelResourceLocation);
+		
+		itemModelResourceLocation = new ModelResourceLocation(Reference.MOD_ID + ":coldstone", "inventory");
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.COLDSTONE.getMetadata(), itemModelResourceLocation);
+		
+		itemModelResourceLocation = new ModelResourceLocation(Reference.MOD_ID + ":icestone", "inventory");
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.ICESTONE.getMetadata(), itemModelResourceLocation);
+		
+		itemModelResourceLocation = new ModelResourceLocation(Reference.MOD_ID + ":glacierrock", "inventory");
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.GLACIERSTONE.getMetadata(), itemModelResourceLocation);
+		
+		itemModelResourceLocation = new ModelResourceLocation(Reference.MOD_ID + ":deep_coldstone", "inventory");
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.DEEPCOLDSTONE.getMetadata(), itemModelResourceLocation);
+		
+		itemModelResourceLocation = new ModelResourceLocation(Reference.MOD_ID + ":red_rock", "inventory");
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.REDROCK.getMetadata(), itemModelResourceLocation);
+		
+		itemModelResourceLocation = new ModelResourceLocation(Reference.MOD_ID + ":deep_redrock", "inventory");
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.DEEPREDROCK.getMetadata(), itemModelResourceLocation);
+		
+		itemModelResourceLocation = new ModelResourceLocation(Reference.MOD_ID + ":oceanstone", "inventory");
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.OCEANSTONE.getMetadata(), itemModelResourceLocation);
+		
+		itemModelResourceLocation = new ModelResourceLocation(Reference.MOD_ID + ":pressurized_oceanstone", "inventory");
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.POCEANSTONE.getMetadata(), itemModelResourceLocation);
 	}
 	
 	public void postInit(FMLPostInitializationEvent event)

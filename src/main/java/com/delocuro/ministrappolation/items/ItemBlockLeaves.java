@@ -1,14 +1,15 @@
 package com.delocuro.ministrappolation.items;
 
-import com.delocuro.ministrappolation.blocks.BlockMPlanks;
-
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemBlockLeaves extends ItemBlock{
+import com.delocuro.ministrappolation.blocks.MWoodType;
 
-	public ItemBlockLeaves(Block block) 
+public class ItemBlockLeaves extends ItemBlock
+{
+	
+	public ItemBlockLeaves(Block block)
 	{
 		super(block);
 		this.setHasSubtypes(true);
@@ -17,17 +18,15 @@ public class ItemBlockLeaves extends ItemBlock{
 	}
 	
 	@Override
-    public int getMetadata (int damageValue) 
+	public int getMetadata(int damageValue)
 	{
-        return damageValue;
-    }
-
-    @Override
-    public String getUnlocalizedName(ItemStack item) 
-    {
-        return BlockMPlanks.EnumType.byMetadata(item.getItemDamage()) + "_leaves";
-    }
+		return damageValue;
+	}
 	
+	@Override
+	public String getUnlocalizedName(ItemStack item)
+	{
+		return MWoodType.byMetadata(item.getItemDamage()) + "_leaves";
+	}
 	
-
 }

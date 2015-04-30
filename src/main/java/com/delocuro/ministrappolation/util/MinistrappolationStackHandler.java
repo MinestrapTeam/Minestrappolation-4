@@ -5,9 +5,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.oredict.OreDictionary;
 
-public class MinistrappolationStackHandler 
+public class MinistrappolationStackHandler
 {
-	public static final int WILDCARD_VALUE = OreDictionary.WILDCARD_VALUE;
+	public static final int	WILDCARD_VALUE	= OreDictionary.WILDCARD_VALUE;
 	
 	public static boolean equals(ItemStack input, ItemStack target)
 	{
@@ -17,34 +17,22 @@ public class MinistrappolationStackHandler
 	public static boolean stackEquals(ItemStack input, ItemStack target)
 	{
 		if (input == target)
-		{
 			return true;
-		}
 		else if (input == null)
-		{
 			return target == null;
-		}
 		else if (target == null)
-		{
 			return false;
-		}
 		return equals(input.getItem(), input.stackSize, input.getItemDamage(), target.getItem(), target.stackSize, target.getItemDamage());
 	}
 	
 	public static boolean itemEquals(ItemStack input, ItemStack target)
 	{
 		if (input == target)
-		{
 			return true;
-		}
 		else if (input == null)
-		{
 			return target == null;
-		}
 		else if (target == null)
-		{
 			return false;
-		}
 		return equals(input.getItem(), input.getItemDamage(), target.getItem(), target.getItemDamage());
 	}
 	
@@ -152,5 +140,7 @@ public class MinistrappolationStackHandler
 		return nbt;
 	}
 	
-	//Finish class based on Clashsoft-Lib/src/main/java/cslib/minecraft/stacks/CSStacks.java. See GitHub for source.
+	// Finish class based on
+	// Clashsoft-Lib/src/main/java/cslib/minecraft/stacks/CSStacks.java. See
+	// GitHub for source.
 }

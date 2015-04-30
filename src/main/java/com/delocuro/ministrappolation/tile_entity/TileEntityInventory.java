@@ -1,7 +1,5 @@
 package com.delocuro.ministrappolation.tile_entity;
 
-import com.delocuro.ministrappolation.util.MinistrappolationStackHandler;
-
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
@@ -12,10 +10,13 @@ import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.IChatComponent;
 
-public abstract class TileEntityInventory extends TileEntity implements IInventory{
+import com.delocuro.ministrappolation.util.MinistrappolationStackHandler;
 
-	public String name;
-	public ItemStack[] itemStacks;
+public abstract class TileEntityInventory extends TileEntity implements IInventory
+{
+	
+	public String		name;
+	public ItemStack[]	itemStacks;
 	
 	public TileEntityInventory()
 	{
@@ -50,9 +51,7 @@ public abstract class TileEntityInventory extends TileEntity implements IInvento
 	public ItemStack getStackInSlot(int slotID)
 	{
 		if (this.rangeCheck(slotID))
-		{
 			return this.itemStacks[slotID];
-		}
 		return null;
 	}
 	
@@ -122,13 +121,9 @@ public abstract class TileEntityInventory extends TileEntity implements IInvento
 	public String getName()
 	{
 		if (this.name != null && !this.name.isEmpty())
-		{
 			return this.name;
-		}
 		else
-		{
 			return new ItemStack(this.blockType, 1, this.getBlockMetadata()).getDisplayName();
-		}
 	}
 	
 	@Override
@@ -151,7 +146,7 @@ public abstract class TileEntityInventory extends TileEntity implements IInvento
 	@Override
 	public boolean isUseableByPlayer(EntityPlayer player)
 	{
-		return this.worldObj.getTileEntity(this.getPos()) == this && player.getDistanceSq(this.getPos().getX() + 0.5D, this.getPos().getY() + 0.5D,this.getPos().getZ() + 0.5D) <= 64.0D;
+		return this.worldObj.getTileEntity(this.getPos()) == this && player.getDistanceSq(this.getPos().getX() + 0.5D, this.getPos().getY() + 0.5D, this.getPos().getZ() + 0.5D) <= 64.0D;
 	}
 	
 	@Override
@@ -218,35 +213,38 @@ public abstract class TileEntityInventory extends TileEntity implements IInvento
 	}
 	
 	@Override
-	public int getField(int id) {
-		return 0;
-	}
-
-	@Override
-	public void setField(int id, int value) 
-	{		
-	}
-
-	@Override
-	public int getFieldCount() 
+	public int getField(int id)
 	{
 		return 0;
-	}
-
-	@Override
-	public void clear() 
-	{
-		for (int i = 0; i < this.itemStacks.length; ++i)
-        {
-            this.itemStacks[i] = null;
-        }
-	}
-
-	@Override
-	public IChatComponent getDisplayName() 
-	{
-		return (IChatComponent)(this.hasCustomName() ? new ChatComponentText(this.getName()) : new ChatComponentTranslation(this.getName(), new Object[0]));
 	}
 	
-	//From Clashsoft-Lib/src/main/java/cslib/minecraft/tileentity/TileEntityInventory.java. See GitHub for source.
+	@Override
+	public void setField(int id, int value)
+	{
+	}
+	
+	@Override
+	public int getFieldCount()
+	{
+		return 0;
+	}
+	
+	@Override
+	public void clear()
+	{
+		for (int i = 0; i < this.itemStacks.length; ++i)
+		{
+			this.itemStacks[i] = null;
+		}
+	}
+	
+	@Override
+	public IChatComponent getDisplayName()
+	{
+		return this.hasCustomName() ? new ChatComponentText(this.getName()) : new ChatComponentTranslation(this.getName(), new Object[0]);
+	}
+	
+	// From
+	// Clashsoft-Lib/src/main/java/cslib/minecraft/tileentity/TileEntityInventory.java.
+	// See GitHub for source.
 }

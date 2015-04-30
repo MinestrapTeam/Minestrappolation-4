@@ -34,17 +34,13 @@ public abstract class WorldGenBaseTree extends WorldGenAbstractTree
 	public boolean generate(World world, Random rand, BlockPos pos)
 	{
 		if (!this.canSpawn(world, pos))
-		{
 			return false;
-		}
 		
 		// Calculates the random height of the tree
 		this.topHeight = rand.nextInt(this.maxHeight - this.minHeight + 1) + this.minHeight;
 		
 		if (!world.isAirBlock(pos.add(0, this.topHeight, 0)))
-		{
 			return false;
-		}
 		
 		this.createTrunk(world, rand, pos);
 		this.genLeafStructure(world, rand, pos);
@@ -61,7 +57,7 @@ public abstract class WorldGenBaseTree extends WorldGenAbstractTree
 		if (this.width == 1)
 		{
 			IBlockState ground = world.getBlockState(pos.add(0, -1, 0));
-			return ground.getBlock() == Blocks.dirt|| ground == Blocks.grass.getDefaultState();
+			return ground.getBlock() == Blocks.dirt || ground == Blocks.grass.getDefaultState();
 		}
 		else
 		{
@@ -72,7 +68,7 @@ public abstract class WorldGenBaseTree extends WorldGenAbstractTree
 					IBlockState block = world.getBlockState(pos.add(0, -1, 0));
 					if (block != Blocks.dirt && block != Blocks.grass.getDefaultState())
 					{
-						System.out.println(false +" "+block.getBlock().getLocalizedName());
+						System.out.println(false + " " + block.getBlock().getLocalizedName());
 						return false;
 					}
 				}
@@ -93,9 +89,9 @@ public abstract class WorldGenBaseTree extends WorldGenAbstractTree
 			else if (this.width == 2)
 			{
 				world.setBlockState(pos.add(0, h, 0), this.wood.getDefaultState(), 2);
-				world.setBlockState(pos.add(0, h, 1), this.wood.getDefaultState(),  2);
-				world.setBlockState(pos.add(1, h, 1), this.wood.getDefaultState(),  2);
-				world.setBlockState(pos.add(1, h, 0), this.wood.getDefaultState(),  2);
+				world.setBlockState(pos.add(0, h, 1), this.wood.getDefaultState(), 2);
+				world.setBlockState(pos.add(1, h, 1), this.wood.getDefaultState(), 2);
+				world.setBlockState(pos.add(1, h, 0), this.wood.getDefaultState(), 2);
 			}
 			else
 			{

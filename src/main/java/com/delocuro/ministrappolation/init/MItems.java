@@ -18,36 +18,37 @@ import com.delocuro.ministrappolation.items.ItemMinistrappolationPickaxe;
 import com.delocuro.ministrappolation.items.ItemMinistrappolationShovel;
 import com.delocuro.ministrappolation.items.ItemMinistrappolationSword;
 
-public class MItems extends Item{
-	public static Item dough;
-	public static Item sugar_dough;
-	public static Item chocolate_dough;
-	public static Item sugar_cookie;
-	public static Item copper_ingot;
-	public static Item tin_ingot;
-	public static Item sunstone_shard;
-	public static Item stone_brick;
+public class MItems extends Item
+{
+	public static Item							dough;
+	public static Item							sugar_dough;
+	public static Item							chocolate_dough;
+	public static Item							sugar_cookie;
+	public static Item							copper_ingot;
+	public static Item							tin_ingot;
+	public static Item							sunstone_shard;
+	public static Item							stone_brick;
 	
-	public static Item copper_pickaxe;
-	public static Item copper_axe;
-	public static Item copper_shovel;
-	public static Item copper_hoe;
-	public static Item copper_sword;
+	public static Item							copper_pickaxe;
+	public static Item							copper_axe;
+	public static Item							copper_shovel;
+	public static Item							copper_hoe;
+	public static Item							copper_sword;
 	
-	public static Item tin_helmet;
-	public static Item tin_chestplate;
-	public static Item tin_leggings;
-	public static Item tin_boots;
+	public static Item							tin_helmet;
+	public static Item							tin_chestplate;
+	public static Item							tin_leggings;
+	public static Item							tin_boots;
 	
-	public static final Item.ToolMaterial COPPER = EnumHelper.addToolMaterial("COPPER", 1, 186, 4.5F, 1.5F, 18);
-	public static final ItemArmor.ArmorMaterial ARMOR_TIN = EnumHelper.addArmorMaterial("ARMOR_TIN", "tin", 4, new int[]{2,4,3,2}, 6);
+	public static final Item.ToolMaterial		COPPER		= EnumHelper.addToolMaterial("COPPER", 1, 186, 4.5F, 1.5F, 18);
+	public static final ItemArmor.ArmorMaterial	ARMOR_TIN	= EnumHelper.addArmorMaterial("ARMOR_TIN", "tin", 4, new int[] { 2, 4, 3, 2 }, 6);
 	
-	public static void init() 
+	public static void init()
 	{
-		dough = new ItemFood(1,0.2F,false).setUnlocalizedName("dough").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		sugar_dough = new ItemFood(1,0.2F,false).setPotionEffect(Potion.moveSpeed.id, 5, 0, 0.3F).setUnlocalizedName("sugar_dough").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		chocolate_dough = new ItemFood(1,0.3F,false).setUnlocalizedName("chocolate_dough").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		sugar_cookie = new ItemFood(1,0.4F,false).setPotionEffect(Potion.moveSpeed.id, 10, 0, 0.5F).setUnlocalizedName("sugar_cookie").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		dough = new ItemFood(1, 0.2F, false).setUnlocalizedName("dough").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		sugar_dough = new ItemFood(1, 0.2F, false).setPotionEffect(Potion.moveSpeed.id, 5, 0, 0.3F).setUnlocalizedName("sugar_dough").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		chocolate_dough = new ItemFood(1, 0.3F, false).setUnlocalizedName("chocolate_dough").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		sugar_cookie = new ItemFood(1, 0.4F, false).setPotionEffect(Potion.moveSpeed.id, 10, 0, 0.5F).setUnlocalizedName("sugar_cookie").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		copper_ingot = new Item().setUnlocalizedName("copper_ingot").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		tin_ingot = new Item().setUnlocalizedName("tin_ingot").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		sunstone_shard = new Item().setUnlocalizedName("sunstone_shard").setCreativeTab(Minestrappolation.tabMinistrappolation);
@@ -59,11 +60,12 @@ public class MItems extends Item{
 		copper_hoe = new ItemMinistrappolationHoe(COPPER).setUnlocalizedName("copper_hoe").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		copper_sword = new ItemMinistrappolationSword(COPPER).setUnlocalizedName("copper_sword").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		
-		tin_helmet = new ItemMinistrappolationArmor(ARMOR_TIN,0,0).setUnlocalizedName("tin_helmet").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		tin_chestplate = new ItemMinistrappolationArmor(ARMOR_TIN,0,1).setUnlocalizedName("tin_chestplate").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		tin_leggings = new ItemMinistrappolationArmor(ARMOR_TIN,0,2).setUnlocalizedName("tin_leggings").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		tin_boots = new ItemMinistrappolationArmor(ARMOR_TIN,0,3).setUnlocalizedName("tin_boots").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		tin_helmet = new ItemMinistrappolationArmor(ARMOR_TIN, 0, 0).setUnlocalizedName("tin_helmet").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		tin_chestplate = new ItemMinistrappolationArmor(ARMOR_TIN, 0, 1).setUnlocalizedName("tin_chestplate").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		tin_leggings = new ItemMinistrappolationArmor(ARMOR_TIN, 0, 2).setUnlocalizedName("tin_leggings").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		tin_boots = new ItemMinistrappolationArmor(ARMOR_TIN, 0, 3).setUnlocalizedName("tin_boots").setCreativeTab(Minestrappolation.tabMinistrappolation);
 	}
+	
 	public static void register()
 	{
 		GameRegistry.registerItem(dough, dough.getUnlocalizedName().substring(5));
@@ -86,6 +88,7 @@ public class MItems extends Item{
 		GameRegistry.registerItem(tin_leggings, tin_leggings.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(tin_boots, tin_boots.getUnlocalizedName().substring(5));
 	}
+	
 	public static void registerRenders()
 	{
 		registerRender(dough);
@@ -108,6 +111,7 @@ public class MItems extends Item{
 		registerRender(tin_leggings);
 		registerRender(tin_boots);
 	}
+	
 	public static void registerRender(Item item)
 	{
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Reference.MOD_ID + ":" + item.getUnlocalizedName().substring(5), "inventory"));

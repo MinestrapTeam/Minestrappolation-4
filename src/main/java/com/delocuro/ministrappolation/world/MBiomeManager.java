@@ -7,12 +7,12 @@ import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.common.BiomeManager.BiomeEntry;
 import net.minecraftforge.common.BiomeManager.BiomeType;
 
-public class MBiomeManager {
+public class MBiomeManager
+{
 	
-	private static int nextBiomeID = 50;
+	private static int			nextBiomeID	= 50;
 	
-	
-	public static BiomeGenBase redwood;
+	public static BiomeGenBase	redwood;
 	
 	public static void load()
 	{
@@ -22,14 +22,14 @@ public class MBiomeManager {
 	private static void initBiomes()
 	{
 		redwood = new BiomeRedwood(nextBiomeID).setBiomeName("Redwood Forest");
-		registerBiomes(redwood, BiomeType.WARM ,Type.FOREST, 50);
+		registerBiomes(redwood, BiomeType.WARM, Type.FOREST, 50);
 	}
 	
-	private static void registerBiomes(BiomeGenBase biome , BiomeType type, Type forgeType ,int weight)
+	private static void registerBiomes(BiomeGenBase biome, BiomeType type, Type forgeType, int weight)
 	{
 		BiomeDictionary.registerBiomeType(biome, forgeType);
 		BiomeManager.addSpawnBiome(biome);
-		BiomeManager.addBiome(type, new BiomeEntry(biome , weight));
+		BiomeManager.addBiome(type, new BiomeEntry(biome, weight));
 	}
 	
 	/**
@@ -39,7 +39,7 @@ public class MBiomeManager {
 	{
 		for (int id = nextBiomeID; id < 256; id++)
 		{
-			if(BiomeGenBase.getBiomeGenArray()[id] == null)
+			if (BiomeGenBase.getBiomeGenArray()[id] == null)
 			{
 				nextBiomeID = id + 1;
 				return id;
@@ -48,5 +48,5 @@ public class MBiomeManager {
 		
 		return -1;
 	}
-
+	
 }

@@ -8,16 +8,17 @@ import net.minecraft.world.World;
 import com.delocuro.ministrappolation.init.MBlocks;
 import com.delocuro.ministrappolation.init.MItems;
 
-public class ClientProxy extends CommonProxy{
+public class ClientProxy extends CommonProxy
+{
 	@Override
 	public void registerRenders()
 	{
 		MBlocks.registerRenders();
 		MItems.registerRenders();
 	}
-
+	
 	@Override
-	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) 
+	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
 	{
 		return null;
 	}

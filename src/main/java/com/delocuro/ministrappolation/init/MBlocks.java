@@ -4,7 +4,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.resources.model.ModelBakery;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -30,45 +29,46 @@ import com.delocuro.ministrappolation.items.ItemBlockBiomeStones;
 import com.delocuro.ministrappolation.items.ItemBlockLeaves;
 import com.delocuro.ministrappolation.items.ItemBlockPlanks;
 import com.delocuro.ministrappolation.items.ItemBlockSapling;
+
 //import com.delocuro.ministrappolation.blocks.MinistrappolationContainer;
 
-public class MBlocks {
+public class MBlocks
+{
 	
-	public static Block copper_ore;
-	public static Block copper_block;
-	public static Block tin_ore;
-	public static Block tin_block;
-	public static Block sunstone_ore;
-	public static Block sunstone_block;
-	public static Block slate;
+	public static Block	copper_ore;
+	public static Block	copper_block;
+	public static Block	tin_ore;
+	public static Block	tin_block;
+	public static Block	sunstone_ore;
+	public static Block	sunstone_block;
+	public static Block	slate;
 	
+	public static Block	snow_refined;
+	public static Block	snow_bricks;
+	public static Block	snow_tiles;
+	public static Block	glass_bricks;
+	public static Block	glass_refined;
+	public static Block	glass_tiles;
+	public static Block	glass_window;
+	public static Block	stone_boulder;
+	public static Block	stone_lamp_glowstone;
+	public static Block	stone_lamp_prismarine;
+	public static Block	stone_lamp_sunstone;
+	public static Block	stone_pattern_bricks;
+	public static Block	stone_refined;
+	public static Block	stone_tiles;
+	public static Block	ministrapp_log;
+	public static Block	ministrapp_leaves;
+	public static Block	ministrapp_sapling;
+	public static Block	ministrapp_planks;
 	
-	public static Block snow_refined;
-	public static Block snow_bricks;
-	public static Block snow_tiles;
-	public static Block glass_bricks;
-	public static Block glass_refined;
-	public static Block glass_tiles;
-	public static Block glass_window;
-	public static Block stone_boulder;
-	public static Block stone_lamp_glowstone;
-	public static Block stone_lamp_prismarine;
-	public static Block stone_lamp_sunstone;
-	public static Block stone_pattern_bricks;
-	public static Block stone_refined;
-	public static Block stone_tiles;
-	public static Block ministrapp_log;
-	public static Block ministrapp_leaves;	
-	public static Block ministrapp_sapling;
-	public static Block ministrapp_planks;
+	// Biome Stones
+	public static Block	biome_stones;
+	public static Block	biome_cobble;
+	public static Block	biome_bricks;
 	
-	//Biome Stones
-	public static Block biome_stones;
-	public static Block biome_cobble;
-	public static Block biome_bricks;
-	
-	//public static Block stone_decor;
-	//public static Block crate;
+	// public static Block stone_decor;
+	// public static Block crate;
 	
 	public static void init()
 	{
@@ -99,13 +99,15 @@ public class MBlocks {
 		ministrapp_sapling = new BlockMSapling();
 		ministrapp_planks = new BlockMPlanks().setUnlocalizedName("ministrapp_planks");
 		
-		//Biome Stones
+		// Biome Stones
 		biome_stones = new BlockBiomeStones().setHardness(1.5F).setUnlocalizedName("biome_stone");
 		biome_cobble = new BlockBiomeCobble().setHardness(1F).setUnlocalizedName("biome_cobble");
 		biome_bricks = new BlockBiomeBricks().setHardness(.8F).setUnlocalizedName("biome_bricks");
 		
-		//stone_decor = (new BlockStoneDecor()).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_decor");
-		//crate = new BlockMinistrappolationContainer(Material.wood, MapColor.woodColor).setHardness(2.5F).setCreativeTab(Ministrappolation.tabMinistrappolation).setStepSound(Block.soundTypeWood).setUnlocalizedName("crate");
+		// stone_decor = (new
+		// BlockStoneDecor()).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_decor");
+		// crate = new BlockMinistrappolationContainer(Material.wood,
+		// MapColor.woodColor).setHardness(2.5F).setCreativeTab(Ministrappolation.tabMinistrappolation).setStepSound(Block.soundTypeWood).setUnlocalizedName("crate");
 		register();
 		registerHarvestLevels();
 	}
@@ -119,7 +121,6 @@ public class MBlocks {
 		register(sunstone_ore);
 		register(sunstone_block);
 		register(slate);
-		
 		
 		register(snow_bricks);
 		register(snow_refined);
@@ -135,15 +136,15 @@ public class MBlocks {
 		register(stone_pattern_bricks);
 		register(stone_refined);
 		register(stone_tiles);
-		GameRegistry.registerBlock(ministrapp_log, ItemBlockPlanks.class,ministrapp_log.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(ministrapp_leaves, ItemBlockLeaves.class,ministrapp_leaves.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(ministrapp_log, ItemBlockPlanks.class, ministrapp_log.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(ministrapp_leaves, ItemBlockLeaves.class, ministrapp_leaves.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(ministrapp_sapling, ItemBlockSapling.class, ministrapp_sapling.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(ministrapp_planks, ItemBlockPlanks.class, ministrapp_planks.getUnlocalizedName().substring(5));
 		
-		//Biome Stones
-		GameRegistry.registerBlock(biome_stones, ItemBlockBiomeStones.class,biome_stones.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(biome_cobble, ItemBlockBiomeCobble.class,biome_cobble.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(biome_bricks, ItemBlockBiomeBricks.class,biome_bricks.getUnlocalizedName().substring(5));
+		// Biome Stones
+		GameRegistry.registerBlock(biome_stones, ItemBlockBiomeStones.class, biome_stones.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(biome_cobble, ItemBlockBiomeCobble.class, biome_cobble.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(biome_bricks, ItemBlockBiomeBricks.class, biome_bricks.getUnlocalizedName().substring(5));
 	}
 	
 	public static void registerRenders()
@@ -175,7 +176,7 @@ public class MBlocks {
 		registerRender(ministrapp_sapling);
 		registerRender(ministrapp_planks);
 		
-		//Biome Stones
+		// Biome Stones
 		registerRender(biome_stones);
 		registerRender(biome_cobble);
 		registerRender(biome_bricks);
@@ -187,7 +188,6 @@ public class MBlocks {
 		GameRegistry.registerBlock(block, block.getUnlocalizedName().substring(5));
 	}
 	
-
 	private static void registerRender(Block block)
 	{
 		Item item = Item.getItemFromBlock(block);
@@ -213,6 +213,6 @@ public class MBlocks {
 		stone_refined.setHarvestLevel("pickaxe", 0);
 		stone_tiles.setHarvestLevel("pickaxe", 0);
 		
-		//stone_decor.setHarvestLevel("pickaxe", 0);
+		// stone_decor.setHarvestLevel("pickaxe", 0);
 	}
 }

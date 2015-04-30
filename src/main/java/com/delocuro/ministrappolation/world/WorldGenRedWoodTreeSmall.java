@@ -1,13 +1,11 @@
 package com.delocuro.ministrappolation.world;
 
-
 import java.util.Random;
 
-import com.delocuro.ministrappolation.init.MBlocks;
-
-import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
+
+import com.delocuro.ministrappolation.init.MBlocks;
 
 public class WorldGenRedWoodTreeSmall extends WorldGenBaseTree
 {

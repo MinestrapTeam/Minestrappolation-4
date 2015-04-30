@@ -73,37 +73,27 @@ public class MinistrappolationInventoryHandler extends Container
 			if (slotID < inv_low)
 			{
 				if (!this.mergeItemStack(stack, inv_low, hotbar_high, false))
-				{
 					return null;
-				}
 			}
 			else if (slotID >= inv_low && slotID < hotbar_high && (merge = this.merge(player, slotID, stack)) != null)
 			{
 				int i = merge[0];
 				int j = merge.length > 1 ? merge[1] : i + 1;
 				if (!this.mergeItemStack(stack, i, j, false))
-				{
 					return null;
-				}
 			}
 			else if (slotID >= inv_low && slotID < inv_high)
 			{
 				if (!this.mergeItemStack(stack, hotbar_low, hotbar_high, false))
-				{
 					return null;
-				}
 			}
 			else if (slotID >= hotbar_low && slotID < hotbar_high)
 			{
 				if (!this.mergeItemStack(stack, inv_low, inv_high, false))
-				{
 					return null;
-				}
 			}
 			else if (!this.mergeItemStack(stack, inv_low, hotbar_high, false))
-			{
 				return null;
-			}
 			
 			if (stack.stackSize == 0)
 			{
@@ -115,9 +105,7 @@ public class MinistrappolationInventoryHandler extends Container
 			}
 			
 			if (stack.stackSize == theStack.stackSize)
-			{
 				return null;
-			}
 			
 			slot.onPickupFromSlot(player, stack);
 		}

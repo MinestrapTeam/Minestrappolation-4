@@ -11,7 +11,6 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.IStringSerializable;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -19,120 +18,50 @@ import com.delocuro.ministrappolation.Minestrappolation;
 
 public class BlockMPlanks extends Block
 {
-    public static final PropertyEnum VARIANT = PropertyEnum.create("variant", BlockMPlanks.EnumType.class);
-
-    public BlockMPlanks()
-    {
-        super(Material.wood);
-        this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, BlockMPlanks.EnumType.REDWOOD));
-        this.setCreativeTab(Minestrappolation.tabMinistrappolation);
-    }
-
-    /**
-     * Get the damage value that this Block should drop
-     */
-    public int damageDropped(IBlockState state)
-    {
-        return ((BlockMPlanks.EnumType)state.getValue(VARIANT)).getMetadata();
-    }
-
-    /**
-     * returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
-     */
-    @SideOnly(Side.CLIENT)
-    public void getSubBlocks(Item itemIn, CreativeTabs tab, List list)
-    {
-        BlockMPlanks.EnumType[] aenumtype = BlockMPlanks.EnumType.values();
-        int i = aenumtype.length;
-
-        for (int j = 0; j < i; ++j)
-        {
-            BlockMPlanks.EnumType enumtype = aenumtype[j];
-            list.add(new ItemStack(itemIn, 1, enumtype.getMetadata()));
-        }
-    }
-
-    /**
-     * Convert the given metadata into a BlockState for this Block
-     */
-    public IBlockState getStateFromMeta(int meta)
-    {
-        return this.getDefaultState().withProperty(VARIANT, BlockMPlanks.EnumType.byMetadata(meta));
-    }
-
-    /**
-     * Convert the BlockState into the correct metadata value
-     */
-    public int getMetaFromState(IBlockState state)
-    {
-        return ((BlockMPlanks.EnumType)state.getValue(VARIANT)).getMetadata();
-    }
-
-    protected BlockState createBlockState()
-    {
-        return new BlockState(this, new IProperty[] {VARIANT});
-    }
-
-    public static enum EnumType implements IStringSerializable
-    {
-        REDWOOD(0, "redwood");
-        private static final BlockMPlanks.EnumType[] META_LOOKUP = new BlockMPlanks.EnumType[values().length];
-        private final int meta;
-        private final String name;
-        private final String unlocalizedName;
-
-        private EnumType(int meta, String name)
-        {
-            this(meta, name, name);
-        }
-
-        private EnumType(int meta, String name, String unlocalizedName)
-        {
-            this.meta = meta;
-            this.name = name;
-            this.unlocalizedName = unlocalizedName;
-        }
-
-        public int getMetadata()
-        {
-            return this.meta;
-        }
-
-        public String toString()
-        {
-            return this.name;
-        }
-
-        public static BlockMPlanks.EnumType byMetadata(int meta)
-        {
-            if (meta < 0 || meta >= META_LOOKUP.length)
-            {
-                meta = 0;
-            }
-
-            return META_LOOKUP[meta];
-        }
-
-        public String getName()
-        {
-            return this.name;
-        }
-
-        public String getUnlocalizedName()
-        {
-            return this.unlocalizedName;
-        }
-
-        static
-        {
-            BlockMPlanks.EnumType[] var0 = values();
-            int var1 = var0.length;
-
-            for (int var2 = 0; var2 < var1; ++var2)
-            {
-                BlockMPlanks.EnumType var3 = var0[var2];
-                META_LOOKUP[var3.getMetadata()] = var3;
-            }
-        }
-    }
+	public static final PropertyEnum	VARIANT	= PropertyEnum.create("variant", MWoodType.class);
+	
+	public BlockMPlanks()
+	{
+		super(Material.wood);
+		this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, MWoodType.REDWOOD));
+		this.setCreativeTab(Minestrappolation.tabMinistrappolation);
+	}
+	
+	@Override
+	public int damageDropped(IBlockState state)
+	{
+		return ((MWoodType) state.getValue(VARIANT)).getMetadata();
+	}
+	
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void getSubBlocks(Item itemIn, CreativeTabs tab, List list)
+	{
+		MWoodType[] aenumtype = MWoodType.values();
+		int i = aenumtype.length;
+		
+		for (int j = 0; j < i; ++j)
+		{
+			MWoodType enumtype = aenumtype[j];
+			list.add(new ItemStack(itemIn, 1, enumtype.getMetadata()));
+		}
+	}
+	
+	@Override
+	public IBlockState getStateFromMeta(int meta)
+	{
+		return this.getDefaultState().withProperty(VARIANT, MWoodType.byMetadata(meta));
+	}
+	
+	@Override
+	public int getMetaFromState(IBlockState state)
+	{
+		return ((MWoodType) state.getValue(VARIANT)).getMetadata();
+	}
+	
+	@Override
+	protected BlockState createBlockState()
+	{
+		return new BlockState(this, new IProperty[] { VARIANT });
+	}
 }

@@ -1,12 +1,13 @@
 package com.delocuro.ministrappolation.items;
 
-import com.delocuro.ministrappolation.blocks.BlockMPlanks;
-
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemBlockSapling extends ItemBlock{
+import com.delocuro.ministrappolation.blocks.MWoodType;
+
+public class ItemBlockSapling extends ItemBlock
+{
 	
 	public ItemBlockSapling(Block block)
 	{
@@ -24,7 +25,7 @@ public class ItemBlockSapling extends ItemBlock{
 	@Override
 	public String getUnlocalizedName(ItemStack item)
 	{
-		return BlockMPlanks.EnumType.byMetadata(item.getItemDamage()) + "_sapling";
+		return MWoodType.byMetadata(item.getItemDamage()) + "_sapling";
 	}
-
+	
 }
