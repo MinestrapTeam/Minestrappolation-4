@@ -3,7 +3,7 @@ package com.delocuro.ministrappolation.init;
 import java.util.Iterator;
 import java.util.List;
 
-import com.delocuro.ministrappolation.blocks.BlockMinistrappPlanks;
+import com.delocuro.ministrappolation.blocks.BlockMPlanks;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;

@@ -19,11 +19,11 @@ import net.minecraft.world.World;
 import com.delocuro.ministrappolation.Minestrappolation;
 import com.delocuro.ministrappolation.tile_entity.TileEntityCrate;
 
-public class BlockMinistrappolationContainer extends BlockFalling implements ITileEntityProvider{
+public class BlockMContainer extends BlockFalling implements ITileEntityProvider{
 
 	private final MapColor mapColor;
 	
-	public BlockMinistrappolationContainer(Material materialIn, MapColor mapColorIn)
+	public BlockMContainer(Material materialIn, MapColor mapColorIn)
 	{
 		super(materialIn);
 		this.mapColor = mapColorIn;

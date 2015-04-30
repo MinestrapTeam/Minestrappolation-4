@@ -80,7 +80,7 @@ public class BlockBiomeBricks extends Block{
     
     static final class SwitchEnumType
     {
-        static final int[] WOOD_TYPE_LOOKUP = new int[BlockMinistrappPlanks.EnumType.values().length];
+        static final int[] WOOD_TYPE_LOOKUP = new int[BlockBiomeStones.EnumType.values().length];
         private static final String __OBFID = "CL_00002067";
 
         static

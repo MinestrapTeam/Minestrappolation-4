@@ -26,7 +26,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.delocuro.ministrappolation.Minestrappolation;
 import com.delocuro.ministrappolation.Reference;
 
-public abstract class BlockMinistrappolationLeavesBase extends BlockLeavesBase implements net.minecraftforge.common.IShearable
+public abstract class BlockMLeavesBase extends BlockLeavesBase implements net.minecraftforge.common.IShearable
 {
     public static final PropertyBool DECAYABLE = PropertyBool.create("decayable");
     public static final PropertyBool CHECK_DECAY = PropertyBool.create("check_decay");
@@ -37,7 +37,7 @@ public abstract class BlockMinistrappolationLeavesBase extends BlockLeavesBase i
     protected boolean isTransparent;
     private static final String __OBFID = "CL_00000263";
 
-    public BlockMinistrappolationLeavesBase()
+    public BlockMLeavesBase()
     {
         super(Material.leaves, false);
         this.setTickRandomly(true);
@@ -262,7 +262,7 @@ public abstract class BlockMinistrappolationLeavesBase extends BlockLeavesBase i
         return false;
     }
 
-    public abstract BlockMinistrappPlanks.EnumType getWoodType(int meta);
+    public abstract BlockMPlanks.EnumType getWoodType(int meta);
 
     @Override public boolean isShearable(ItemStack item, IBlockAccess world, BlockPos pos){ return true; }
     @Override public boolean isLeaves(IBlockAccess world, BlockPos pos){ return true; }

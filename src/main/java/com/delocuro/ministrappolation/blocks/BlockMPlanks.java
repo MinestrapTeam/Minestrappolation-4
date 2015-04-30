@@ -17,14 +17,14 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.delocuro.ministrappolation.Minestrappolation;
 
-public class BlockMinistrappPlanks extends Block
+public class BlockMPlanks extends Block
 {
-    public static final PropertyEnum VARIANT = PropertyEnum.create("variant", BlockMinistrappPlanks.EnumType.class);
+    public static final PropertyEnum VARIANT = PropertyEnum.create("variant", BlockMPlanks.EnumType.class);
 
-    public BlockMinistrappPlanks()
+    public BlockMPlanks()
     {
         super(Material.wood);
-        this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, BlockMinistrappPlanks.EnumType.REDWOOD));
+        this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, BlockMPlanks.EnumType.REDWOOD));
         this.setCreativeTab(Minestrappolation.tabMinistrappolation);
     }
 
@@ -33,7 +33,7 @@ public class BlockMinistrappPlanks extends Block
      */
     public int damageDropped(IBlockState state)
     {
-        return ((BlockMinistrappPlanks.EnumType)state.getValue(VARIANT)).getMetadata();
+        return ((BlockMPlanks.EnumType)state.getValue(VARIANT)).getMetadata();
     }
 
     /**
@@ -42,12 +42,12 @@ public class BlockMinistrappPlanks extends Block
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(Item itemIn, CreativeTabs tab, List list)
     {
-        BlockMinistrappPlanks.EnumType[] aenumtype = BlockMinistrappPlanks.EnumType.values();
+        BlockMPlanks.EnumType[] aenumtype = BlockMPlanks.EnumType.values();
         int i = aenumtype.length;
 
         for (int j = 0; j < i; ++j)
         {
-            BlockMinistrappPlanks.EnumType enumtype = aenumtype[j];
+            BlockMPlanks.EnumType enumtype = aenumtype[j];
             list.add(new ItemStack(itemIn, 1, enumtype.getMetadata()));
         }
     }
@@ -57,7 +57,7 @@ public class BlockMinistrappPlanks extends Block
      */
     public IBlockState getStateFromMeta(int meta)
     {
-        return this.getDefaultState().withProperty(VARIANT, BlockMinistrappPlanks.EnumType.byMetadata(meta));
+        return this.getDefaultState().withProperty(VARIANT, BlockMPlanks.EnumType.byMetadata(meta));
     }
 
     /**
@@ -65,7 +65,7 @@ public class BlockMinistrappPlanks extends Block
      */
     public int getMetaFromState(IBlockState state)
     {
-        return ((BlockMinistrappPlanks.EnumType)state.getValue(VARIANT)).getMetadata();
+        return ((BlockMPlanks.EnumType)state.getValue(VARIANT)).getMetadata();
     }
 
     protected BlockState createBlockState()
@@ -76,7 +76,7 @@ public class BlockMinistrappPlanks extends Block
     public static enum EnumType implements IStringSerializable
     {
         REDWOOD(0, "redwood");
-        private static final BlockMinistrappPlanks.EnumType[] META_LOOKUP = new BlockMinistrappPlanks.EnumType[values().length];
+        private static final BlockMPlanks.EnumType[] META_LOOKUP = new BlockMPlanks.EnumType[values().length];
         private final int meta;
         private final String name;
         private final String unlocalizedName;
@@ -103,7 +103,7 @@ public class BlockMinistrappPlanks extends Block
             return this.name;
         }
 
-        public static BlockMinistrappPlanks.EnumType byMetadata(int meta)
+        public static BlockMPlanks.EnumType byMetadata(int meta)
         {
             if (meta < 0 || meta >= META_LOOKUP.length)
             {
@@ -125,12 +125,12 @@ public class BlockMinistrappPlanks extends Block
 
         static
         {
-            BlockMinistrappPlanks.EnumType[] var0 = values();
+            BlockMPlanks.EnumType[] var0 = values();
             int var1 = var0.length;
 
             for (int var2 = 0; var2 < var1; ++var2)
             {
-                BlockMinistrappPlanks.EnumType var3 = var0[var2];
+                BlockMPlanks.EnumType var3 = var0[var2];
                 META_LOOKUP[var3.getMetadata()] = var3;
             }
         }

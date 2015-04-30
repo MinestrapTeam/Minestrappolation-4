@@ -21,25 +21,25 @@ import com.delocuro.ministrappolation.Minestrappolation;
 import com.delocuro.ministrappolation.Reference;
 import com.google.common.base.Predicate;
 
-public class BlockMinistrappLog extends BlockLog
+public class BlockMLog extends BlockLog
 {
-	public static final PropertyEnum VARIANT = PropertyEnum.create("variant", BlockMinistrappPlanks.EnumType.class, new Predicate()
+	public static final PropertyEnum VARIANT = PropertyEnum.create("variant", BlockMPlanks.EnumType.class, new Predicate()
     {
         private static final String __OBFID = "CL_00002084";
-        public boolean apply(BlockMinistrappPlanks.EnumType type)
+        public boolean apply(BlockMPlanks.EnumType type)
         {
             return type.getMetadata() < 4;
         }
         public boolean apply(Object p_apply_1_)
         {
-            return this.apply((BlockMinistrappPlanks.EnumType)p_apply_1_);
+            return this.apply((BlockMPlanks.EnumType)p_apply_1_);
         }
     });
     private static final String __OBFID = "CL_00000281";
 
-    public BlockMinistrappLog()
+    public BlockMLog()
     {
-        this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, BlockMinistrappPlanks.EnumType.REDWOOD).withProperty(LOG_AXIS, BlockLog.EnumAxis.Y));
+        this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, BlockMPlanks.EnumType.REDWOOD).withProperty(LOG_AXIS, BlockLog.EnumAxis.Y));
         this.setCreativeTab(Minestrappolation.tabMinistrappolation);
     }
 
@@ -49,7 +49,7 @@ public class BlockMinistrappLog extends BlockLog
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(Item itemIn, CreativeTabs tab, List list)
     {
-        list.add(new ItemStack(itemIn, 1, BlockMinistrappPlanks.EnumType.REDWOOD.getMetadata()));
+        list.add(new ItemStack(itemIn, 1, BlockMPlanks.EnumType.REDWOOD.getMetadata()));
     }
 
     /**
@@ -57,7 +57,7 @@ public class BlockMinistrappLog extends BlockLog
      */
     public IBlockState getStateFromMeta(int meta)
     {
-        IBlockState iblockstate = this.getDefaultState().withProperty(VARIANT, BlockMinistrappPlanks.EnumType.byMetadata((meta & 3) % 4));
+        IBlockState iblockstate = this.getDefaultState().withProperty(VARIANT, BlockMPlanks.EnumType.byMetadata((meta & 3) % 4));
 
         switch (meta & 12)
         {
@@ -83,9 +83,9 @@ public class BlockMinistrappLog extends BlockLog
     public int getMetaFromState(IBlockState state)
     {
         byte b0 = 0;
-        int i = b0 | ((BlockMinistrappPlanks.EnumType)state.getValue(VARIANT)).getMetadata();
+        int i = b0 | ((BlockMPlanks.EnumType)state.getValue(VARIANT)).getMetadata();
 
-        switch (BlockMinistrappLog.SwitchEnumAxis.AXIS_LOOKUP[((BlockLog.EnumAxis)state.getValue(LOG_AXIS)).ordinal()])
+        switch (BlockMLog.SwitchEnumAxis.AXIS_LOOKUP[((BlockLog.EnumAxis)state.getValue(LOG_AXIS)).ordinal()])
         {
             case 1:
                 i |= 4;
@@ -107,7 +107,7 @@ public class BlockMinistrappLog extends BlockLog
 
     protected ItemStack createStackedBlock(IBlockState state)
     {
-        return new ItemStack(Item.getItemFromBlock(this), 1, ((BlockMinistrappPlanks.EnumType)state.getValue(VARIANT)).getMetadata());
+        return new ItemStack(Item.getItemFromBlock(this), 1, ((BlockMPlanks.EnumType)state.getValue(VARIANT)).getMetadata());
     }
 
     /**
@@ -115,7 +115,7 @@ public class BlockMinistrappLog extends BlockLog
      */
     public int damageDropped(IBlockState state)
     {
-        return ((BlockMinistrappPlanks.EnumType)state.getValue(VARIANT)).getMetadata();
+        return ((BlockMPlanks.EnumType)state.getValue(VARIANT)).getMetadata();
     }
 
     static final class SwitchEnumAxis

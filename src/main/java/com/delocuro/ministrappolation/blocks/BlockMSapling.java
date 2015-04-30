@@ -32,13 +32,13 @@ import com.delocuro.ministrappolation.world.WorldGenRedWoodTreeSmall;
 
 public class BlockMSapling extends BlockBush implements IGrowable {
 	
-	 private static final PropertyEnum TYPE = PropertyEnum.create("type" , BlockMinistrappPlanks.EnumType.class);
+	 private static final PropertyEnum TYPE = PropertyEnum.create("type" , BlockMPlanks.EnumType.class);
 	 public static final PropertyInteger STAGE = PropertyInteger.create("stage", 0, 1);
 	
 	public BlockMSapling()
 	{
 		super(Material.plants);
-		this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, BlockMinistrappPlanks.EnumType.REDWOOD).withProperty(STAGE, Integer.valueOf(0)));
+		this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, BlockMPlanks.EnumType.REDWOOD).withProperty(STAGE, Integer.valueOf(0)));
 		float f = 0.4F;
 		this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, f * 2.0F, 0.5F + f);
 		this.setCreativeTab(Minestrappolation.tabMinistrappolation);
@@ -90,7 +90,7 @@ public class BlockMSapling extends BlockBush implements IGrowable {
         int j = 0;
         boolean flag = false;
 
-        switch (BlockMSapling.SwitchEnumType.WOOD_TYPE_LOOKUP[((BlockMinistrappPlanks.EnumType)state.getValue(TYPE)).ordinal()])
+        switch (BlockMSapling.SwitchEnumType.WOOD_TYPE_LOOKUP[((BlockMPlanks.EnumType)state.getValue(TYPE)).ordinal()])
         {       
             case 1:
             	label78:
@@ -99,7 +99,7 @@ public class BlockMSapling extends BlockBush implements IGrowable {
                     {
                         for (j = 0; j >= -1; --j)
                         {
-                            if (this.isTypeAt(worldIn, pos.add(i, 0, j), BlockMinistrappPlanks.EnumType.REDWOOD) && this.isTypeAt(worldIn, pos.add(i + 1, 0, j), BlockMinistrappPlanks.EnumType.REDWOOD) && this.isTypeAt(worldIn, pos.add(i, 0, j + 1), BlockMinistrappPlanks.EnumType.REDWOOD) && this.isTypeAt(worldIn, pos.add(i + 1, 0, j + 1), BlockMinistrappPlanks.EnumType.REDWOOD))
+                            if (this.isTypeAt(worldIn, pos.add(i, 0, j), BlockMPlanks.EnumType.REDWOOD) && this.isTypeAt(worldIn, pos.add(i + 1, 0, j), BlockMPlanks.EnumType.REDWOOD) && this.isTypeAt(worldIn, pos.add(i, 0, j + 1), BlockMPlanks.EnumType.REDWOOD) && this.isTypeAt(worldIn, pos.add(i + 1, 0, j + 1), BlockMPlanks.EnumType.REDWOOD))
                             {
                                 object = new WorldGenRedWoodTree();
                                 flag = true;
@@ -149,7 +149,7 @@ public class BlockMSapling extends BlockBush implements IGrowable {
 	/**
      * Check whether the given BlockPos has a Sapling of the given type
      */
-    public boolean isTypeAt(World worldIn, BlockPos pos, BlockMinistrappPlanks.EnumType type)
+    public boolean isTypeAt(World worldIn, BlockPos pos, BlockMPlanks.EnumType type)
     {
         IBlockState iblockstate = worldIn.getBlockState(pos);
         return iblockstate.getBlock() == this && iblockstate.getValue(TYPE) == type;
@@ -160,7 +160,7 @@ public class BlockMSapling extends BlockBush implements IGrowable {
      */
     public int damageDropped(IBlockState state)
     {
-        return ((BlockMinistrappPlanks.EnumType)state.getValue(TYPE)).getMetadata();
+        return ((BlockMPlanks.EnumType)state.getValue(TYPE)).getMetadata();
     }
 
     /**
@@ -169,12 +169,12 @@ public class BlockMSapling extends BlockBush implements IGrowable {
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(Item itemIn, CreativeTabs tab, List list)
     {
-        BlockMinistrappPlanks.EnumType[] aenumtype = BlockMinistrappPlanks.EnumType.values();
+        BlockMPlanks.EnumType[] aenumtype = BlockMPlanks.EnumType.values();
         int i = aenumtype.length;
 
         for (int j = 0; j < i; ++j)
         {
-            BlockMinistrappPlanks.EnumType enumtype = aenumtype[j];
+            BlockMPlanks.EnumType enumtype = aenumtype[j];
             list.add(new ItemStack(itemIn, 1, enumtype.getMetadata()));
         }
     
@@ -185,7 +185,7 @@ public class BlockMSapling extends BlockBush implements IGrowable {
      */
     public IBlockState getStateFromMeta(int meta)
     {
-        return this.getDefaultState().withProperty(TYPE, BlockMinistrappPlanks.EnumType.byMetadata(meta & 7)).withProperty(STAGE, Integer.valueOf((meta & 8) >> 3));
+        return this.getDefaultState().withProperty(TYPE, BlockMPlanks.EnumType.byMetadata(meta & 7)).withProperty(STAGE, Integer.valueOf((meta & 8) >> 3));
     }
 
     /**
@@ -194,21 +194,21 @@ public class BlockMSapling extends BlockBush implements IGrowable {
     public int getMetaFromState(IBlockState state)
     {
         byte b0 = 0;
-        int i = b0 | ((BlockMinistrappPlanks.EnumType)state.getValue(TYPE)).getMetadata();
+        int i = b0 | ((BlockMPlanks.EnumType)state.getValue(TYPE)).getMetadata();
         i |= ((Integer)state.getValue(STAGE)).intValue() << 3;
         return i;
     }
 	
 	static final class SwitchEnumType
     {
-        static final int[] WOOD_TYPE_LOOKUP = new int[BlockMinistrappPlanks.EnumType.values().length];
+        static final int[] WOOD_TYPE_LOOKUP = new int[BlockMPlanks.EnumType.values().length];
         private static final String __OBFID = "CL_00002067";
 
         static
         {
             try
             {
-                WOOD_TYPE_LOOKUP[BlockMinistrappPlanks.EnumType.REDWOOD.ordinal()] = 1;
+                WOOD_TYPE_LOOKUP[BlockMPlanks.EnumType.REDWOOD.ordinal()] = 1;
             }
             catch (NoSuchFieldError var6)
             {

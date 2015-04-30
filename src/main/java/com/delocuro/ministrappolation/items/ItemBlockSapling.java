@@ -1,6 +1,6 @@
 package com.delocuro.ministrappolation.items;
 
-import com.delocuro.ministrappolation.blocks.BlockMinistrappPlanks;
+import com.delocuro.ministrappolation.blocks.BlockMPlanks;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
@@ -24,7 +24,7 @@ public class ItemBlockSapling extends ItemBlock{
 	@Override
 	public String getUnlocalizedName(ItemStack item)
 	{
-		return BlockMinistrappPlanks.EnumType.byMetadata(item.getItemDamage()) + "_sapling";
+		return BlockMPlanks.EnumType.byMetadata(item.getItemDamage()) + "_sapling";
 	}
 
 }

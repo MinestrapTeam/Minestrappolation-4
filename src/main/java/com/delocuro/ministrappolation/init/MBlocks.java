@@ -14,11 +14,11 @@ import com.delocuro.ministrappolation.blocks.BlockBiomeBricks;
 import com.delocuro.ministrappolation.blocks.BlockBiomeCobble;
 import com.delocuro.ministrappolation.blocks.BlockBiomeStones;
 import com.delocuro.ministrappolation.blocks.BlockBoulder;
+import com.delocuro.ministrappolation.blocks.BlockMLeaf;
 import com.delocuro.ministrappolation.blocks.BlockMSapling;
-import com.delocuro.ministrappolation.blocks.BlockMinistrappLeaf;
-import com.delocuro.ministrappolation.blocks.BlockMinistrappLog;
-import com.delocuro.ministrappolation.blocks.BlockMinistrappOre;
-import com.delocuro.ministrappolation.blocks.BlockMinistrappPlanks;
+import com.delocuro.ministrappolation.blocks.BlockMLog;
+import com.delocuro.ministrappolation.blocks.BlockMOre;
+import com.delocuro.ministrappolation.blocks.BlockMPlanks;
 import com.delocuro.ministrappolation.blocks.BlockMinistrappSnow;
 import com.delocuro.ministrappolation.blocks.BlockSunstoneBlock;
 import com.delocuro.ministrappolation.blocks.BlockTransparent;
@@ -68,11 +68,11 @@ public class MBlocks {
 	
 	public static void init()
 	{
-		copper_ore = new BlockMinistrappOre(Material.rock, MapColor.stoneColor).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("copper_ore").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		copper_ore = new BlockMOre(Material.rock, MapColor.stoneColor).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("copper_ore").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		copper_block = new MBlock(Material.iron, MapColor.adobeColor).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("copper_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		tin_ore = new MBlock(Material.rock, MapColor.stoneColor).setHardness(3.0F).setResistance(3.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("tin_ore").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		tin_block = new MBlock(Material.iron, MapColor.ironColor).setHardness(5.0F).setResistance(5.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("tin_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		sunstone_ore = new BlockMinistrappOre(Material.rock, MapColor.stoneColor).setHardness(2.8F).setResistance(4.0F).setStepSound(Block.soundTypePiston).setLightLevel(0.7F).setUnlocalizedName("sunstone_ore").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		sunstone_ore = new BlockMOre(Material.rock, MapColor.stoneColor).setHardness(2.8F).setResistance(4.0F).setStepSound(Block.soundTypePiston).setLightLevel(0.7F).setUnlocalizedName("sunstone_ore").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		sunstone_block = new BlockSunstoneBlock(Material.glass, MapColor.sandColor).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setLightLevel(0.9F).setUnlocalizedName("sunstone_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		snow_refined = new BlockMinistrappSnow(Material.snow, MapColor.snowColor).setHardness(0.4F).setStepSound(Block.soundTypeSnow).setUnlocalizedName("snow_refined").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		snow_bricks = new BlockMinistrappSnow(Material.snow, MapColor.snowColor).setHardness(0.6F).setStepSound(Block.soundTypeSnow).setUnlocalizedName("snow_bricks").setCreativeTab(Minestrappolation.tabMinistrappolation);
@@ -88,10 +88,10 @@ public class MBlocks {
 		stone_pattern_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_pattern_bricks").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		stone_refined = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_refined").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		stone_tiles = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_tiles").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		ministrapp_log = new BlockMinistrappLog().setUnlocalizedName("ministrapp_log");
-		ministrapp_leaves = new BlockMinistrappLeaf().setUnlocalizedName("ministrapp_leaves");
+		ministrapp_log = new BlockMLog().setUnlocalizedName("ministrapp_log");
+		ministrapp_leaves = new BlockMLeaf().setUnlocalizedName("ministrapp_leaves");
 		ministrapp_sapling = new BlockMSapling().setUnlocalizedName("ministrapp_sapling");
-		ministrapp_planks = new BlockMinistrappPlanks();
+		ministrapp_planks = new BlockMPlanks();
 		
 		//Biome Stones
 		biome_stones = new BlockBiomeStones().setHardness(1F).setUnlocalizedName("biome_stone");

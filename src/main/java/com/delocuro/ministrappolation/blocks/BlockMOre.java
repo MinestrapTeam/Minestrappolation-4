@@ -14,11 +14,11 @@ import net.minecraft.world.World;
 import com.delocuro.ministrappolation.init.MBlocks;
 import com.delocuro.ministrappolation.init.MinistrappolationItems;
 
-public class BlockMinistrappOre extends MBlock{
+public class BlockMOre extends MBlock{
 	
 	private final MapColor mapColor;
 	
-	public BlockMinistrappOre(Material materialIn, MapColor mapColorIn) 
+	public BlockMOre(Material materialIn, MapColor mapColorIn) 
 	{
 		super(materialIn, mapColorIn);
 		this.mapColor = mapColorIn;

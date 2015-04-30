@@ -25,25 +25,25 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.delocuro.ministrappolation.init.MBlocks;
 import com.google.common.base.Predicate;
 
-public class BlockMinistrappLeaf extends BlockMinistrappolationLeavesBase
+public class BlockMLeaf extends BlockMLeavesBase
 {
-    public static final PropertyEnum VARIANT = PropertyEnum.create("variant", BlockMinistrappPlanks.EnumType.class, new Predicate()
+    public static final PropertyEnum VARIANT = PropertyEnum.create("variant", BlockMPlanks.EnumType.class, new Predicate()
     {
         private static final String __OBFID = "CL_00002085";
-        public boolean apply(BlockMinistrappPlanks.EnumType type)
+        public boolean apply(BlockMPlanks.EnumType type)
         {
             return type.getMetadata() < 4;
         }
         public boolean apply(Object p_apply_1_)
         {
-            return this.apply((BlockMinistrappPlanks.EnumType)p_apply_1_);
+            return this.apply((BlockMPlanks.EnumType)p_apply_1_);
         }
     });
     private static final String __OBFID = "CL_00000280";
 
-    public BlockMinistrappLeaf()
+    public BlockMLeaf()
     {
-        this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, BlockMinistrappPlanks.EnumType.REDWOOD).withProperty(CHECK_DECAY, Boolean.valueOf(true)).withProperty(DECAYABLE, Boolean.valueOf(true)));
+        this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, BlockMPlanks.EnumType.REDWOOD).withProperty(CHECK_DECAY, Boolean.valueOf(true)).withProperty(DECAYABLE, Boolean.valueOf(true)));
     }
 
     @SideOnly(Side.CLIENT)
@@ -69,18 +69,18 @@ public class BlockMinistrappLeaf extends BlockMinistrappolationLeavesBase
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(Item itemIn, CreativeTabs tab, List list)
     {
-    	 BlockMinistrappPlanks.EnumType[] aenumtype = BlockMinistrappPlanks.EnumType.values();
+    	 BlockMPlanks.EnumType[] aenumtype = BlockMPlanks.EnumType.values();
          int i = aenumtype.length;
 
          for (int j = 0; j < i; ++j) {
-             BlockMinistrappPlanks.EnumType enumtype = aenumtype[j];
+             BlockMPlanks.EnumType enumtype = aenumtype[j];
              list.add(new ItemStack(itemIn, 1, enumtype.getMetadata()));
          }
     }
 
     protected ItemStack createStackedBlock(IBlockState state)
     {
-        return new ItemStack(Item.getItemFromBlock(this), 1, ((BlockMinistrappPlanks.EnumType)state.getValue(VARIANT)).getMetadata());
+        return new ItemStack(Item.getItemFromBlock(this), 1, ((BlockMPlanks.EnumType)state.getValue(VARIANT)).getMetadata());
     }
 
     /**
@@ -97,7 +97,7 @@ public class BlockMinistrappLeaf extends BlockMinistrappolationLeavesBase
     public int getMetaFromState(IBlockState state)
     {
         byte b0 = 0;
-        int i = b0 | ((BlockMinistrappPlanks.EnumType)state.getValue(VARIANT)).getMetadata();
+        int i = b0 | ((BlockMPlanks.EnumType)state.getValue(VARIANT)).getMetadata();
 
         if (!((Boolean)state.getValue(DECAYABLE)).booleanValue())
         {
@@ -112,9 +112,9 @@ public class BlockMinistrappLeaf extends BlockMinistrappolationLeavesBase
         return i;
     }
     
-    public BlockMinistrappPlanks.EnumType getCustomWoodType(int meta)
+    public BlockMPlanks.EnumType getCustomWoodType(int meta)
     {
-    	return BlockMinistrappPlanks.EnumType.byMetadata((meta & 3) % 4);
+    	return BlockMPlanks.EnumType.byMetadata((meta & 3) % 4);
     }
 
     protected BlockState createBlockState()
@@ -127,7 +127,7 @@ public class BlockMinistrappLeaf extends BlockMinistrappolationLeavesBase
      */
     public int damageDropped(IBlockState state)
     {
-        return ((BlockMinistrappPlanks.EnumType)state.getValue(VARIANT)).getMetadata();
+        return ((BlockMPlanks.EnumType)state.getValue(VARIANT)).getMetadata();
     }
 
     public void harvestBlock(World worldIn, EntityPlayer player, BlockPos pos, IBlockState state, TileEntity te)
@@ -135,7 +135,7 @@ public class BlockMinistrappLeaf extends BlockMinistrappolationLeavesBase
         if (!worldIn.isRemote && player.getCurrentEquippedItem() != null && player.getCurrentEquippedItem().getItem() == Items.shears)
         {
             player.triggerAchievement(StatList.mineBlockStatArray[Block.getIdFromBlock(this)]);
-            spawnAsEntity(worldIn, pos, new ItemStack(Item.getItemFromBlock(this), 1, ((BlockMinistrappPlanks.EnumType) state.getValue(VARIANT)).getMetadata()));
+            spawnAsEntity(worldIn, pos, new ItemStack(Item.getItemFromBlock(this), 1, ((BlockMPlanks.EnumType) state.getValue(VARIANT)).getMetadata()));
         }
         else
         {
@@ -152,7 +152,7 @@ public class BlockMinistrappLeaf extends BlockMinistrappolationLeavesBase
     public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune)
     {
         IBlockState state = world.getBlockState(pos);
-        return new java.util.ArrayList(java.util.Arrays.asList(new ItemStack(this, 0, ((BlockMinistrappPlanks.EnumType)state.getValue(VARIANT)).getMetadata())));
+        return new java.util.ArrayList(java.util.Arrays.asList(new ItemStack(this, 0, ((BlockMPlanks.EnumType)state.getValue(VARIANT)).getMetadata())));
     }
 
 	@Override
@@ -163,9 +163,9 @@ public class BlockMinistrappLeaf extends BlockMinistrappolationLeavesBase
     }
 
 	@Override
-	public com.delocuro.ministrappolation.blocks.BlockMinistrappPlanks.EnumType getWoodType(
-			int meta) {
+	public BlockMPlanks.EnumType getWoodType(int meta) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
 }

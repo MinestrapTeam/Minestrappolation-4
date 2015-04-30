@@ -1,11 +1,10 @@
 package com.delocuro.ministrappolation.items;
 
-import com.delocuro.ministrappolation.blocks.BlockBiomeStones;
-import com.delocuro.ministrappolation.blocks.BlockMinistrappPlanks;
-
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
+
+import com.delocuro.ministrappolation.blocks.BlockBiomeStones;
 
 public class ItemBlockBiomeBricks extends ItemBlock{
 
