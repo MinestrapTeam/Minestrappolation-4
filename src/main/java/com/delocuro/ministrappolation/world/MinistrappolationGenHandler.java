@@ -67,6 +67,7 @@ public class MinistrappolationGenHandler implements IWorldGenerator{
 		generateOre(MBlocks.copper_ore, world, rand, x1, z1, 3, 12, 30, 15, 100, BlockHelper.forBlock(Blocks.stone));
 		generateOre(MBlocks.tin_ore, world, rand, x1, z1, 3, 12, 30, 15, 100, BlockHelper.forBlock(Blocks.stone));
 		generateOre(MBlocks.sunstone_ore, world, rand, x1, z1, 2, 4, 30, 1, 200, BlockHelper.forBlock(Blocks.stone));
+		generateOre(MBlocks.slate, world, rand, x1, z1, 5, 25, 20, 1, 256, BlockHelper.forBlock(Blocks.stone));
 		generateBoulder(world, rand, x1, z1);
 	}
 	
