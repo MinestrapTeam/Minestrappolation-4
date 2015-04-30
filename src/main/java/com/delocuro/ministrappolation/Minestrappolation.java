@@ -10,8 +10,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 import com.delocuro.ministrappolation.init.MBlocks;
-import com.delocuro.ministrappolation.init.MinistrappolationItems;
-import com.delocuro.ministrappolation.init.MinistrappolationRecipes;
+import com.delocuro.ministrappolation.init.MItems;
+import com.delocuro.ministrappolation.init.MRecipes;
 import com.delocuro.ministrappolation.proxy.CommonProxy;
 import com.delocuro.ministrappolation.world.MBiomeManager;
 import com.delocuro.ministrappolation.world.MinistrappolationGenHandler;
@@ -25,32 +25,33 @@ public class Minestrappolation {
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
 	
-	public static final MinistrappolationTab tabMinistrappolation = new MinistrappolationTab("tabMinistrappolation");
+	public static final MTab tabMinistrappolation = new MTab("tabMinistrappolation");
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
+		
 		MBlocks.init();
-		MBlocks.register();
-		MBlocks.registerHarvestLevels();
-		MinistrappolationItems.init();
-		MinistrappolationItems.register();
-		MinistrappolationRecipes.register();
-		MinistrappolationRecipes.removeRecipes();
-		
+		MItems.init();
+		MItems.register();
+		MRecipes.register();
+		MRecipes.removeRecipes();
 		MBiomeManager.load();
-		
+		proxy.preInit(event);
 		if (this.proxy != null)
 		{
 			NetworkRegistry.INSTANCE.registerGuiHandler(this, this.proxy);
 		}
+		
 	}
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
 		proxy.registerRenders();
+		proxy.init(event);
 		MinistrappolationGenHandler.load();
+		
 	}
 	
 	@EventHandler

@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.model.ModelBakery;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -95,19 +96,21 @@ public class MBlocks {
 		stone_tiles = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_tiles").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		ministrapp_log = new BlockMLog().setUnlocalizedName("ministrapp_log");
 		ministrapp_leaves = new BlockMLeaf().setUnlocalizedName("ministrapp_leaves");
-		ministrapp_sapling = new BlockMSapling().setUnlocalizedName("ministrapp_sapling");
+		ministrapp_sapling = new BlockMSapling();
 		ministrapp_planks = new BlockMPlanks().setUnlocalizedName("ministrapp_planks");
 		
 		//Biome Stones
-		biome_stones = new BlockBiomeStones().setHardness(1F).setUnlocalizedName("biome_stone");
+		biome_stones = new BlockBiomeStones().setHardness(1.5F).setUnlocalizedName("biome_stone");
 		biome_cobble = new BlockBiomeCobble().setHardness(1F).setUnlocalizedName("biome_cobble");
 		biome_bricks = new BlockBiomeBricks().setHardness(.8F).setUnlocalizedName("biome_bricks");
 		
 		//stone_decor = (new BlockStoneDecor()).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_decor");
 		//crate = new BlockMinistrappolationContainer(Material.wood, MapColor.woodColor).setHardness(2.5F).setCreativeTab(Ministrappolation.tabMinistrappolation).setStepSound(Block.soundTypeWood).setUnlocalizedName("crate");
+		register();
+		registerHarvestLevels();
 	}
 	
-	public static void register()
+	private static void register()
 	{
 		register(copper_ore);
 		register(copper_block);
@@ -183,6 +186,7 @@ public class MBlocks {
 	{
 		GameRegistry.registerBlock(block, block.getUnlocalizedName().substring(5));
 	}
+	
 
 	private static void registerRender(Block block)
 	{
@@ -190,7 +194,7 @@ public class MBlocks {
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Reference.MOD_ID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
 	}
 	
-	public static void registerHarvestLevels()
+	private static void registerHarvestLevels()
 	{
 		snow_refined.setHarvestLevel("shovel", 0);
 		snow_tiles.setHarvestLevel("shovel", 0);

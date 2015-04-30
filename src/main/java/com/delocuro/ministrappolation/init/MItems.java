@@ -18,7 +18,7 @@ import com.delocuro.ministrappolation.items.ItemMinistrappolationPickaxe;
 import com.delocuro.ministrappolation.items.ItemMinistrappolationShovel;
 import com.delocuro.ministrappolation.items.ItemMinistrappolationSword;
 
-public class MinistrappolationItems extends Item{
+public class MItems extends Item{
 	public static Item dough;
 	public static Item sugar_dough;
 	public static Item chocolate_dough;

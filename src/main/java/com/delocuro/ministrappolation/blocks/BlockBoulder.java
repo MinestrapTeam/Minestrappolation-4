@@ -2,7 +2,7 @@ package com.delocuro.ministrappolation.blocks;
 
 import java.util.Random;
 
-import com.delocuro.ministrappolation.init.MinistrappolationItems;
+import com.delocuro.ministrappolation.init.MItems;
 
 import net.minecraft.block.BlockFalling;
 import net.minecraft.block.material.MapColor;
@@ -58,7 +58,7 @@ public class BlockBoulder extends BlockFalling
         	}
         	else
         	{
-        		return MinistrappolationItems.sunstone_shard;
+        		return MItems.sunstone_shard;
         	}
         }
         else if (rand.nextInt(100 - fortune * 10) == 1)

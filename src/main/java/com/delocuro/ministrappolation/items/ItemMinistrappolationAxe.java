@@ -1,6 +1,6 @@
 package com.delocuro.ministrappolation.items;
 
-import com.delocuro.ministrappolation.init.MinistrappolationItems;
+import com.delocuro.ministrappolation.init.MItems;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemAxe;
@@ -15,9 +15,9 @@ public class ItemMinistrappolationAxe extends ItemAxe{
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
     {
-       if(toRepair == new ItemStack(MinistrappolationItems.copper_pickaxe) || toRepair == new ItemStack(MinistrappolationItems.copper_axe) || toRepair == new ItemStack(MinistrappolationItems.copper_shovel) || toRepair == new ItemStack(MinistrappolationItems.copper_hoe) || toRepair == new ItemStack(MinistrappolationItems.copper_sword))
+       if(toRepair == new ItemStack(MItems.copper_pickaxe) || toRepair == new ItemStack(MItems.copper_axe) || toRepair == new ItemStack(MItems.copper_shovel) || toRepair == new ItemStack(MItems.copper_hoe) || toRepair == new ItemStack(MItems.copper_sword))
        {
-    	   return new ItemStack(MinistrappolationItems.copper_ingot) == repair ? true : super.getIsRepairable(toRepair, repair);
+    	   return new ItemStack(MItems.copper_ingot) == repair ? true : super.getIsRepairable(toRepair, repair);
        }
        else
     	   return true;

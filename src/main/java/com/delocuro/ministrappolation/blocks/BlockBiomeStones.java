@@ -9,6 +9,8 @@ import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -17,6 +19,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.delocuro.ministrappolation.Minestrappolation;
+import com.delocuro.ministrappolation.Reference;
 import com.delocuro.ministrappolation.init.MBlocks;
 
 public class BlockBiomeStones extends Block
@@ -94,7 +97,7 @@ public class BlockBiomeStones extends Block
         COLDSTONE(3, "coldstone"),
         DEEPCOLDSTONE(4, "deep_coldstone"),
         ICESTONE(5, "icestone"),
-        GLACIERSTONE(6, "glacierstone"),
+        GLACIERSTONE(6, "glacierrock"),
         OCEANSTONE(7, "oceanstone"),
         POCEANSTONE(8, "p_oceanstone");
         private static final BlockBiomeStones.EnumType[] META_LOOKUP = new BlockBiomeStones.EnumType[values().length];

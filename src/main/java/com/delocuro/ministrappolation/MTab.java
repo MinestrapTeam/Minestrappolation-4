@@ -1,20 +1,20 @@
 package com.delocuro.ministrappolation;
 
-import com.delocuro.ministrappolation.init.MinistrappolationItems;
+import com.delocuro.ministrappolation.init.MItems;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-public class MinistrappolationTab extends CreativeTabs {
+public class MTab extends CreativeTabs {
 
-	public MinistrappolationTab(String label) {
+	public MTab(String label) {
 		super(label);
 		this.setBackgroundImageName("ministrappolation.png");
 	}
 
 	@Override
 	public Item getTabIconItem() {
-		return MinistrappolationItems.copper_ingot;
+		return MItems.copper_ingot;
 	}
 
 	

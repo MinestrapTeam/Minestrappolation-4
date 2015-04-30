@@ -1,0 +1,31 @@
+{
+   "variants":{
+      "variant=deepstone":{
+         "model":"ministrapp:deepstone"
+      },
+      "variant=red_rock":{
+         "model":"ministrapp:red_rock"
+      },
+      "variant=deep_redrock":{
+         "model":"ministrapp:deep_red_rock"
+      },
+      "variant=coldstone":{
+         "model":"ministrapp:coldstone"
+      },
+      "variant=deep_coldstone":{
+         "model":"ministrapp:deep_coldstone"
+      },
+      "variant=icestone":{
+         "model":"ministrapp:icestone"
+      },
+      "variant=glacierrock":{
+         "model":"ministrapp:glacierrock"
+      },
+      "variant=oceanstone":{
+         "model":"ministrapp:oceanstone"
+      },
+      "variant=p_oceanstone":{
+         "model":"ministrapp:pressurized_oceanstone"
+      }
+   }
+}

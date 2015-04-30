@@ -48,9 +48,9 @@ icestone_rock.name=Icestone
 icestone_cobble.name=Cobbled Icestone
 icestone_bricks.name=Icestone Bricks
 
-glacierstone_rock.name=Glacierrock
-glacierstone_cobble.name=Cobbled Glacierrock
-glacierstone_bricks.name=Glacierrock Bricks
+glacierrock_rock.name=Glacierrock
+glacierrock_cobble.name=Cobbled Glacierrock
+glacierrock_bricks.name=Glacierrock Bricks
 
 oceanstone_rock.name=Oceanstone
 oceanstone_cobble.name=Cobbled Oceanstone

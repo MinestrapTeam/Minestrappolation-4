@@ -12,7 +12,7 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 import com.delocuro.ministrappolation.init.MBlocks;
-import com.delocuro.ministrappolation.init.MinistrappolationItems;
+import com.delocuro.ministrappolation.init.MItems;
 
 public class BlockMOre extends MBlock{
 	
@@ -26,7 +26,7 @@ public class BlockMOre extends MBlock{
 	
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        return this == MBlocks.sunstone_ore ? MinistrappolationItems.sunstone_shard : Item.getItemFromBlock(this);
+        return this == MBlocks.sunstone_ore ? MItems.sunstone_shard : Item.getItemFromBlock(this);
     }
 	
 	public int quantityDropped(Random random)

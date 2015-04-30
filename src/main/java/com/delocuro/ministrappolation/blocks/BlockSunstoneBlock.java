@@ -9,7 +9,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
 import net.minecraft.util.MathHelper;
 
-import com.delocuro.ministrappolation.init.MinistrappolationItems;
+import com.delocuro.ministrappolation.init.MItems;
 
 public class BlockSunstoneBlock extends MBlock{
 	
@@ -37,6 +37,6 @@ public class BlockSunstoneBlock extends MBlock{
 
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        return MinistrappolationItems.sunstone_shard;
+        return MItems.sunstone_shard;
     }
 }
