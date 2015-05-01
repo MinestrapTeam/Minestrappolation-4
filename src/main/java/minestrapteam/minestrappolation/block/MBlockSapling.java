@@ -19,6 +19,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenBigTree;
 import net.minecraft.world.gen.feature.WorldGenTrees;
@@ -50,7 +51,7 @@ public class MBlockSapling extends BlockBush implements IGrowable
 		{
 			super.updateTick(worldIn, pos, state, rand);
 			
-			if (worldIn.getLightFromNeighbors(pos.offsetUp()) >= 9 && rand.nextInt(7) == 0)
+			if (worldIn.getLightFromNeighbors(pos.offset(EnumFacing.UP)) >= 9 && rand.nextInt(7) == 0)
 			{
 				this.grow(worldIn, pos, state, rand);
 			}
@@ -73,12 +74,6 @@ public class MBlockSapling extends BlockBush implements IGrowable
 	protected BlockState createBlockState()
 	{
 		return new BlockState(this, new IProperty[] { TYPE, STAGE });
-	}
-	
-	@Override
-	public boolean isStillGrowing(World world, BlockPos pos, IBlockState state, boolean isClient)
-	{
-		return false;
 	}
 	
 	public void generateTree(World world, BlockPos pos, IBlockState state, Random random)
@@ -199,5 +194,11 @@ public class MBlockSapling extends BlockBush implements IGrowable
 	{
 		this.grow(worldIn, pos, state, rand);
 	}
+
+	@Override
+	public boolean canGrow(World worldIn, BlockPos pos, IBlockState state, boolean isClient) {
+		return true;
+	}
+
 	
 }

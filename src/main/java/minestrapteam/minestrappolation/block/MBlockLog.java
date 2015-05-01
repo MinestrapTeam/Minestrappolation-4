@@ -34,7 +34,7 @@ public class MBlockLog extends BlockLog
 	
 	public MBlockLog()
 	{
-		this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, MWoodType.REDWOOD).withProperty(AXIS_PROP, BlockLog.EnumAxis.Y));
+		this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, MWoodType.REDWOOD).withProperty(LOG_AXIS, BlockLog.EnumAxis.Y));
 		this.setCreativeTab(Minestrappolation.tabMinistrappolation);
 	}
 	
@@ -53,16 +53,16 @@ public class MBlockLog extends BlockLog
 		switch (meta & 12)
 		{
 		case 0:
-			iblockstate = iblockstate.withProperty(AXIS_PROP, BlockLog.EnumAxis.Y);
+			iblockstate = iblockstate.withProperty(LOG_AXIS, BlockLog.EnumAxis.Y);
 			break;
 		case 4:
-			iblockstate = iblockstate.withProperty(AXIS_PROP, BlockLog.EnumAxis.X);
+			iblockstate = iblockstate.withProperty(LOG_AXIS, BlockLog.EnumAxis.X);
 			break;
 		case 8:
-			iblockstate = iblockstate.withProperty(AXIS_PROP, BlockLog.EnumAxis.Z);
+			iblockstate = iblockstate.withProperty(LOG_AXIS, BlockLog.EnumAxis.Z);
 			break;
 		default:
-			iblockstate = iblockstate.withProperty(AXIS_PROP, BlockLog.EnumAxis.NONE);
+			iblockstate = iblockstate.withProperty(LOG_AXIS, BlockLog.EnumAxis.NONE);
 		}
 		
 		return iblockstate;
@@ -74,7 +74,7 @@ public class MBlockLog extends BlockLog
 		byte b0 = 0;
 		int i = b0 | ((MWoodType) state.getValue(VARIANT)).getMetadata();
 		
-		switch ((BlockLog.EnumAxis) state.getValue(AXIS_PROP))
+		switch ((BlockLog.EnumAxis) state.getValue(LOG_AXIS))
 		{
 		case X:
 			i |= 4;
@@ -94,7 +94,7 @@ public class MBlockLog extends BlockLog
 	@Override
 	protected BlockState createBlockState()
 	{
-		return new BlockState(this, new IProperty[] { VARIANT, AXIS_PROP });
+		return new BlockState(this, new IProperty[] { VARIANT, LOG_AXIS });
 	}
 	
 	@Override

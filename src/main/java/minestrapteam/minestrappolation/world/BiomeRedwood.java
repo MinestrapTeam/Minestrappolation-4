@@ -56,7 +56,7 @@ public class BiomeRedwood extends BiomeGenBase
 			this.topBlock = Blocks.dirt.getStateFromMeta(BlockDirt.DirtType.PODZOL.getMetadata());
 		}
 		
-		this.func_180628_b(worldIn, rand, primer, p_180622_4_, p_180622_5_, noise);
+		this.generateBiomeTerrain(worldIn, rand, primer, p_180622_4_, p_180622_5_, noise);;
 	}
 	
 	@Override

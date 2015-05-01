@@ -5,6 +5,7 @@ import java.util.Random;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
@@ -14,7 +15,7 @@ public class WorldGenBoulder extends WorldGenerator
 	public boolean generate(World worldIn, Random rand, BlockPos pos)
 	{
 		BlockPos randPos = pos.add(rand.nextInt(8) - rand.nextInt(8), rand.nextInt(4) - rand.nextInt(4), rand.nextInt(8) - rand.nextInt(8));
-		BlockPos down = randPos.offsetDown();
+		BlockPos down = randPos.offset(EnumFacing.DOWN);
 		
 		if (worldIn.isAirBlock(randPos) && (worldIn.getBlockState(down).getBlock() == Blocks.grass || worldIn.getBlockState(down).getBlock() == Blocks.stone))
 		{

@@ -12,6 +12,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.EnumWorldBlockLayer;
 import net.minecraft.world.ColorizerFoliage;
@@ -59,7 +60,7 @@ public abstract class MBlockLeavesBase extends BlockLeavesBase implements net.mi
 	@SideOnly(Side.CLIENT)
 	public int colorMultiplier(IBlockAccess worldIn, BlockPos pos, int renderPass)
 	{
-		return BiomeColorHelper.func_180287_b(worldIn, pos);
+		return super.colorMultiplier(worldIn, pos, renderPass);
 	}
 	
 	@Override
@@ -182,7 +183,7 @@ public abstract class MBlockLeavesBase extends BlockLeavesBase implements net.mi
 	@SideOnly(Side.CLIENT)
 	public void randomDisplayTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
 	{
-		if (rand.nextInt(15) == 1 && worldIn.canSeeSky(pos.offsetUp()) && !World.doesBlockHaveSolidTopSurface(worldIn, pos.offsetDown()))
+		if (rand.nextInt(15) == 1 && worldIn.canSeeSky(pos.offset(EnumFacing.UP)) && !World.doesBlockHaveSolidTopSurface(worldIn, pos.offset(EnumFacing.DOWN)))
 		{
 			double d0 = pos.getX() + rand.nextFloat();
 			double d1 = pos.getY() - 0.05D;
