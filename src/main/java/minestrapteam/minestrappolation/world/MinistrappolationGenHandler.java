@@ -176,7 +176,6 @@ public class MinistrappolationGenHandler implements IWorldGenerator
 						if (y < deepStoneDepth)
 						{
 							chunk.setBlockState(subpos2, deepStoneBlock.withProperty(BlockBiomeStones.VARIANT, dType));
-							System.out.println(pos + " name = " + dType);
 						}
 						else
 						{

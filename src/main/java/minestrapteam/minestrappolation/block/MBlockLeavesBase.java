@@ -60,7 +60,7 @@ public abstract class MBlockLeavesBase extends BlockLeavesBase implements net.mi
 	@SideOnly(Side.CLIENT)
 	public int colorMultiplier(IBlockAccess worldIn, BlockPos pos, int renderPass)
 	{
-		return super.colorMultiplier(worldIn, pos, renderPass);
+		return BiomeColorHelper.getFoliageColorAtPos(worldIn, pos);
 	}
 	
 	@Override

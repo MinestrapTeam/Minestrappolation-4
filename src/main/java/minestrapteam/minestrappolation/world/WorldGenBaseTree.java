@@ -1,5 +1,6 @@
 package minestrapteam.minestrappolation.world;
 
+import java.util.List;
 import java.util.Random;
 
 import net.minecraft.block.Block;
@@ -11,8 +12,8 @@ import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 
 public abstract class WorldGenBaseTree extends WorldGenAbstractTree
 {
-	protected Block	wood;
-	protected Block	leaves;
+	protected IBlockState	wood;
+	protected IBlockState	leaves;
 	
 	public int		minHeight;
 	public int		maxHeight;
@@ -20,7 +21,9 @@ public abstract class WorldGenBaseTree extends WorldGenAbstractTree
 	
 	public int		topHeight;
 	
-	public WorldGenBaseTree(Block wood, Block leaves, int minHeight, int maxHeight, int width)
+	public Block[]  canGrowOn;
+	
+	public WorldGenBaseTree(IBlockState wood, IBlockState leaves, int minHeight, int maxHeight, int width,Block...blocks)
 	{
 		super(true);
 		this.wood = wood;
@@ -28,6 +31,7 @@ public abstract class WorldGenBaseTree extends WorldGenAbstractTree
 		this.minHeight = minHeight;
 		this.maxHeight = maxHeight;
 		this.width = width;
+		this.canGrowOn = blocks;
 	}
 	
 	@Override
@@ -54,10 +58,21 @@ public abstract class WorldGenBaseTree extends WorldGenAbstractTree
 	
 	public boolean canSpawn(World world, BlockPos pos)
 	{
-		if (this.width == 1)
+		IBlockState ground = world.getBlockState(pos.add(0, -1, 0));
+		Block groundBlock = Blocks.grass;
+		
+		for(int b = 0; b < this.canGrowOn.length; b++)
 		{
-			IBlockState ground = world.getBlockState(pos.add(0, -1, 0));
-			return ground.getBlock() == Blocks.dirt || ground == Blocks.grass.getDefaultState();
+			if(ground.getBlock() == this.canGrowOn[b])
+			{
+				groundBlock = ground.getBlock();
+				continue;
+			}
+		}
+		
+		if (this.width == 1)
+		{		
+			return ground.getBlock() == groundBlock;
 		}
 		else
 		{
@@ -65,13 +80,8 @@ public abstract class WorldGenBaseTree extends WorldGenAbstractTree
 			{
 				for (int j = 0; j < this.width; j++)
 				{
-					IBlockState block = world.getBlockState(pos.add(0, -1, 0));
-					if (block != Blocks.dirt && block != Blocks.grass.getDefaultState())
-					{
-						System.out.println(false + " " + block.getBlock().getLocalizedName());
-						return false;
-					}
-				}
+					return ground.getBlock() == groundBlock;
+  				}
 			}
 			return true;
 		}
@@ -84,14 +94,14 @@ public abstract class WorldGenBaseTree extends WorldGenAbstractTree
 		{
 			if (this.width == 1)
 			{
-				world.setBlockState(pos.add(0, h, 0), this.wood.getDefaultState(), 2);
+				world.setBlockState(pos.add(0, h, 0), this.wood, 2);
 			}
 			else if (this.width == 2)
 			{
-				world.setBlockState(pos.add(0, h, 0), this.wood.getDefaultState(), 2);
-				world.setBlockState(pos.add(0, h, 1), this.wood.getDefaultState(), 2);
-				world.setBlockState(pos.add(1, h, 1), this.wood.getDefaultState(), 2);
-				world.setBlockState(pos.add(1, h, 0), this.wood.getDefaultState(), 2);
+				world.setBlockState(pos.add(0, h, 0), this.wood, 2);
+				world.setBlockState(pos.add(0, h, 1), this.wood, 2);
+				world.setBlockState(pos.add(1, h, 1), this.wood, 2);
+				world.setBlockState(pos.add(1, h, 0), this.wood, 2);
 			}
 			else
 			{
@@ -99,7 +109,7 @@ public abstract class WorldGenBaseTree extends WorldGenAbstractTree
 				{
 					for (int j = 0; j < this.width; j++)
 					{
-						world.setBlockState(pos.add(i, h, j), this.wood.getDefaultState(), 2);
+						world.setBlockState(pos.add(i, h, j), this.wood, 2);
 					}
 				}
 			}
@@ -127,7 +137,7 @@ public abstract class WorldGenBaseTree extends WorldGenAbstractTree
 				{
 					if (d <= radius2 || random.nextInt(2) == 0)
 					{
-						world.setBlockState(pos.add(xfr, 0, zfr), this.leaves.getDefaultState(), 2);
+						world.setBlockState(pos.add(xfr, 0, zfr), this.leaves, 2);
 					}
 				}
 			}
