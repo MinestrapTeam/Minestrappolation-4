@@ -12,7 +12,7 @@ public enum MStoneType implements IStringSerializable
 	ICESTONE(5, "icestone"),
 	GLACIERSTONE(6, "glacierrock"),
 	OCEANSTONE(7, "oceanstone"),
-	POCEANSTONE(8, "p_oceanstone");
+	POCEANSTONE(8, "pressurized_oceanstone");
 	private static final MStoneType[]	META_LOOKUP	= new MStoneType[values().length];
 	private final int					meta;
 	private final String				name;

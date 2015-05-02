@@ -37,19 +37,19 @@ public abstract class CommonProxy implements IGuiHandler
 		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:red_rock");
 		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:deep_redrock");
 		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:oceanstone");
-		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:p_oceanstone");
+		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:pressurized_oceanstone");
 		
 		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "biome_bricks");
 		
-		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:deepstone_bricks");
-		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:coldstone_bricks");
-		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:icestone_bricks");
-		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:glacierrock_bricks");
-		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:deep_coldstone_bricks");
-		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:red_rock_bricks");
-		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:deep_redrock_bricks");
-		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:oceanstone_bricks");
-		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:p_oceanstone_bricks");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:deepstone_bricks");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:coldstone_bricks");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:icestone_bricks");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:glacierrock_bricks");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:deep_coldstone_bricks");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:red_rock_bricks");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:deep_redrock_bricks");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:oceanstone_bricks");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:pressurized_oceanstone_bricks");
 	}
 	
 	public void init(FMLInitializationEvent event)
@@ -86,31 +86,31 @@ public abstract class CommonProxy implements IGuiHandler
 		
 		//Bricks
 		ModelResourceLocation itemModelBrickResourceLocation = new ModelResourceLocation(MReference.MODID + ":deepstone_bricks", "inventory");
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.DEEPSTONE.getMetadata(), itemModelResourceLocation);
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockBrickVariants, MStoneType.DEEPSTONE.getMetadata(), itemModelBrickResourceLocation);
 		
 		itemModelBrickResourceLocation = new ModelResourceLocation(MReference.MODID + ":coldstone_bricks", "inventory");
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.COLDSTONE.getMetadata(), itemModelResourceLocation);
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockBrickVariants, MStoneType.COLDSTONE.getMetadata(), itemModelBrickResourceLocation);
 		
 		itemModelBrickResourceLocation = new ModelResourceLocation(MReference.MODID + ":icestone_bricks", "inventory");
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.ICESTONE.getMetadata(), itemModelResourceLocation);
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockBrickVariants, MStoneType.ICESTONE.getMetadata(), itemModelBrickResourceLocation);
 		
 		itemModelBrickResourceLocation = new ModelResourceLocation(MReference.MODID + ":glacierrock_bricks", "inventory");
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.GLACIERSTONE.getMetadata(), itemModelResourceLocation);
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockBrickVariants, MStoneType.GLACIERSTONE.getMetadata(), itemModelBrickResourceLocation);
 		
 		itemModelBrickResourceLocation = new ModelResourceLocation(MReference.MODID + ":deep_coldstone_bricks", "inventory");
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.DEEPCOLDSTONE.getMetadata(), itemModelResourceLocation);
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockBrickVariants, MStoneType.DEEPCOLDSTONE.getMetadata(), itemModelBrickResourceLocation);
 		
 		itemModelBrickResourceLocation = new ModelResourceLocation(MReference.MODID + ":red_rock_bricks", "inventory");
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.REDROCK.getMetadata(), itemModelResourceLocation);
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockBrickVariants, MStoneType.REDROCK.getMetadata(), itemModelBrickResourceLocation);
 		
 		itemModelBrickResourceLocation = new ModelResourceLocation(MReference.MODID + ":deep_redrock_bricks", "inventory");
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.DEEPREDROCK.getMetadata(), itemModelResourceLocation);
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockBrickVariants, MStoneType.DEEPREDROCK.getMetadata(), itemModelBrickResourceLocation);
 		
 		itemModelBrickResourceLocation = new ModelResourceLocation(MReference.MODID + ":oceanstone_bricks", "inventory");
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.OCEANSTONE.getMetadata(), itemModelResourceLocation);
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockBrickVariants, MStoneType.OCEANSTONE.getMetadata(), itemModelBrickResourceLocation);
 		
 		itemModelBrickResourceLocation = new ModelResourceLocation(MReference.MODID + ":pressurized_oceanstone_bricks", "inventory");
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.POCEANSTONE.getMetadata(), itemModelResourceLocation);
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockBrickVariants, MStoneType.POCEANSTONE.getMetadata(), itemModelBrickResourceLocation);
 	}
 	
 	public void postInit(FMLPostInitializationEvent event)

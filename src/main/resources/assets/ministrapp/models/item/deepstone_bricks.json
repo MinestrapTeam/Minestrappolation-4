@@ -1,5 +1,5 @@
 {
-  "parent":"ministrapp:block/pressurized_oceanstone",
+  "parent":"ministrapp:block/deepstone_bricks",
   "display": {
     "thirdperson": {
       "rotation": [ 10, -45, 170 ],

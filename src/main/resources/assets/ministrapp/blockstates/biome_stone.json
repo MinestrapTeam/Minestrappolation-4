@@ -24,7 +24,7 @@
       "variant=oceanstone":{
          "model":"ministrapp:oceanstone"
       },
-      "variant=p_oceanstone":{
+      "variant=pressurized_oceanstone":{
          "model":"ministrapp:pressurized_oceanstone"
       }
    }
