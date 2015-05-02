@@ -13,7 +13,6 @@ public class ItemBlockPlanks extends ItemBlock
 		super(block);
 		this.setHasSubtypes(true);
 		this.setMaxDamage(0);
-		
 	}
 	
 	@Override

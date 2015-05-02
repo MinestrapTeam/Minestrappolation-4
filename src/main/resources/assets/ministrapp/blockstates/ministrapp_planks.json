@@ -1,0 +1,7 @@
+{
+   "variants":{
+      "type=redwood":{
+         "model":"ministrapp:redwood_planks"
+      }
+    }
+}

@@ -3,6 +3,7 @@ package minestrapteam.minestrappolation.client;
 import minestrapteam.minestrappolation.block.BlockBiomeBricks;
 import minestrapteam.minestrappolation.block.BlockBiomeCobble;
 import minestrapteam.minestrappolation.block.BlockBiomeStones;
+import minestrapteam.minestrappolation.block.MBlockPlanks;
 import minestrapteam.minestrappolation.block.MStoneType;
 import minestrapteam.minestrappolation.lib.MReference;
 import net.minecraft.client.Minecraft;
@@ -33,6 +34,7 @@ public abstract class CommonProxy implements IGuiHandler
 		BlockBiomeStones.preinventoryRender();
 		BlockBiomeBricks.preinventoryRender();
 		BlockBiomeCobble.preinventoryRender();
+		MBlockPlanks.preinventoryRender();
 	}
 	
 	public void init(FMLInitializationEvent event)
@@ -40,6 +42,7 @@ public abstract class CommonProxy implements IGuiHandler
 		BlockBiomeStones.inventoryRender();
 		BlockBiomeBricks.inventoryRender();
 		BlockBiomeCobble.inventoryRender();
+		MBlockPlanks.inventoryRender();
 	}
 	
 	public void postInit(FMLPostInitializationEvent event)

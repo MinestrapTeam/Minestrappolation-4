@@ -18,6 +18,7 @@ import minestrapteam.minestrappolation.item.ItemBlockBiomeBricks;
 import minestrapteam.minestrappolation.item.ItemBlockBiomeCobble;
 import minestrapteam.minestrappolation.item.ItemBlockBiomeStones;
 import minestrapteam.minestrappolation.item.ItemBlockLeaves;
+import minestrapteam.minestrappolation.item.ItemBlockLog;
 import minestrapteam.minestrappolation.item.ItemBlockPlanks;
 import minestrapteam.minestrappolation.item.ItemBlockSapling;
 import net.minecraft.block.Block;
@@ -102,10 +103,6 @@ public class MBlocks
 		biome_cobble = new BlockBiomeCobble().setHardness(1F).setUnlocalizedName("biome_cobble");
 		biome_bricks = new BlockBiomeBricks().setHardness(.8F).setUnlocalizedName("biome_bricks");
 		
-		// stone_decor = (new
-		// BlockStoneDecor()).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_decor");
-		// crate = new BlockMinistrappolationContainer(Material.wood,
-		// MapColor.woodColor).setHardness(2.5F).setCreativeTab(Ministrappolation.tabMinistrappolation).setStepSound(Block.soundTypeWood).setUnlocalizedName("crate");
 		register();
 		registerHarvestLevels();
 	}
@@ -134,7 +131,9 @@ public class MBlocks
 		register(stone_pattern_bricks);
 		register(stone_refined);
 		register(stone_tiles);
-		GameRegistry.registerBlock(ministrapp_log, ItemBlockPlanks.class, ministrapp_log.getUnlocalizedName().substring(5));
+		
+		//Wood stuff
+		GameRegistry.registerBlock(ministrapp_log, ItemBlockLog.class, ministrapp_log.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(ministrapp_leaves, ItemBlockLeaves.class, ministrapp_leaves.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(ministrapp_sapling, ItemBlockSapling.class, ministrapp_sapling.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(ministrapp_planks, ItemBlockPlanks.class, ministrapp_planks.getUnlocalizedName().substring(5));
@@ -172,12 +171,6 @@ public class MBlocks
 		registerRender(ministrapp_log);
 		registerRender(ministrapp_leaves);
 		registerRender(ministrapp_sapling);
-		registerRender(ministrapp_planks);
-		
-		// Biome Stones
-		registerRender(biome_stones);
-		registerRender(biome_cobble);
-		registerRender(biome_bricks);
 		
 	}
 	
