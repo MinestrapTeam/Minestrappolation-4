@@ -3,6 +3,7 @@ package minestrapteam.minestrappolation.lib;
 import java.util.Iterator;
 import java.util.List;
 
+import minestrapteam.minestrappolation.block.BlockBiomeBricks;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -46,6 +47,10 @@ public class MRecipes
 		
 		// Wood
 		GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.ministrapp_planks, 4, 0), new Object[] { new ItemStack(MBlocks.ministrapp_log, 1, 0) });
+		
+		//Stones
+		BlockBiomeBricks.addRecipes();
+		
 		
 		// Tools and Weapons
 		GameRegistry.addRecipe(new ItemStack(MItems.copper_pickaxe), new Object[] { "III", " S ", " S ", 'I', MItems.copper_ingot, 'S', Items.stick });

@@ -61,9 +61,9 @@ public class MBlocks
 	public static Block	ministrapp_planks;
 	
 	// Biome Stones
-	public static Block	biome_stones;
-	public static Block	biome_cobble;
-	public static Block	biome_bricks;
+	public static Block			   biome_stones;
+	public static Block			   biome_cobble;
+	public static Block biome_bricks;
 	
 	// public static Block stone_decor;
 	// public static Block crate;
