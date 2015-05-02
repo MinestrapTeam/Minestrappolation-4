@@ -56,7 +56,7 @@ public class BlockBiomeBricks extends Block
 	@Override
 	public IBlockState getStateFromMeta(int meta)
 	{
-		return this.getDefaultState().withProperty(VARIANT, MStoneType.byMetadata(meta & 7));
+		return this.getDefaultState().withProperty(VARIANT, MStoneType.byMetadata(meta));
 	}
 	
 	@Override
