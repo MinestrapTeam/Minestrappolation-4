@@ -6,4 +6,4 @@ RULES FOR COMMITTING ANY CODE
 - NO structure changes without consulting other team members or at least explain how you are changing it(Just so every knows what going on)
 - NO adding libraries or APIs without consulting other team members
 
-IF YOU YOU DO ANY OF THIS YOUR CHANGES WILL BE REVERTED EACH AND EVERY TIME YOU COMMIT IT UNTIL ITS RIGHT
+IF YOU YOU DO ANY OF THIS YOUR CHANGES WILL BE REVERTED EACH AND EVERY TIME YOU COMMIT IT
