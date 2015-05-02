@@ -38,11 +38,24 @@ public abstract class CommonProxy implements IGuiHandler
 		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:deep_redrock");
 		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:oceanstone");
 		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:p_oceanstone");
+		
+		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "biome_bricks");
+		
+		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:deepstone_bricks");
+		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:coldstone_bricks");
+		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:icestone_bricks");
+		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:glacierrock_bricks");
+		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:deep_coldstone_bricks");
+		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:red_rock_bricks");
+		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:deep_redrock_bricks");
+		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:oceanstone_bricks");
+		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:p_oceanstone_bricks");
 	}
 	
 	public void init(FMLInitializationEvent event)
 	{
 		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "biome_stone");
+		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "biome_bricks");
 		
 		ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(MReference.MODID + ":deepstone", "inventory");
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.DEEPSTONE.getMetadata(), itemModelResourceLocation);
@@ -69,6 +82,34 @@ public abstract class CommonProxy implements IGuiHandler
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.OCEANSTONE.getMetadata(), itemModelResourceLocation);
 		
 		itemModelResourceLocation = new ModelResourceLocation(MReference.MODID + ":pressurized_oceanstone", "inventory");
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.POCEANSTONE.getMetadata(), itemModelResourceLocation);
+		
+		//Bricks
+		ModelResourceLocation itemModelBrickResourceLocation = new ModelResourceLocation(MReference.MODID + ":deepstone_bricks", "inventory");
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.DEEPSTONE.getMetadata(), itemModelResourceLocation);
+		
+		itemModelBrickResourceLocation = new ModelResourceLocation(MReference.MODID + ":coldstone_bricks", "inventory");
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.COLDSTONE.getMetadata(), itemModelResourceLocation);
+		
+		itemModelBrickResourceLocation = new ModelResourceLocation(MReference.MODID + ":icestone_bricks", "inventory");
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.ICESTONE.getMetadata(), itemModelResourceLocation);
+		
+		itemModelBrickResourceLocation = new ModelResourceLocation(MReference.MODID + ":glacierrock_bricks", "inventory");
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.GLACIERSTONE.getMetadata(), itemModelResourceLocation);
+		
+		itemModelBrickResourceLocation = new ModelResourceLocation(MReference.MODID + ":deep_coldstone_bricks", "inventory");
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.DEEPCOLDSTONE.getMetadata(), itemModelResourceLocation);
+		
+		itemModelBrickResourceLocation = new ModelResourceLocation(MReference.MODID + ":red_rock_bricks", "inventory");
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.REDROCK.getMetadata(), itemModelResourceLocation);
+		
+		itemModelBrickResourceLocation = new ModelResourceLocation(MReference.MODID + ":deep_redrock_bricks", "inventory");
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.DEEPREDROCK.getMetadata(), itemModelResourceLocation);
+		
+		itemModelBrickResourceLocation = new ModelResourceLocation(MReference.MODID + ":oceanstone_bricks", "inventory");
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.OCEANSTONE.getMetadata(), itemModelResourceLocation);
+		
+		itemModelBrickResourceLocation = new ModelResourceLocation(MReference.MODID + ":pressurized_oceanstone_bricks", "inventory");
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, MStoneType.POCEANSTONE.getMetadata(), itemModelResourceLocation);
 	}
 	
