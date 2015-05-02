@@ -5,15 +5,20 @@ import java.util.Random;
 
 import minestrapteam.minestrappolation.Minestrappolation;
 import minestrapteam.minestrappolation.lib.MBlocks;
+import minestrapteam.minestrappolation.lib.MReference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.model.ModelBakery;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -70,5 +75,34 @@ public class BlockBiomeStones extends Block
 	protected BlockState createBlockState()
 	{
 		return new BlockState(this, new IProperty[] { VARIANT });
+	}
+	
+	public static void preinventoryRender()
+	{
+		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "biome_stone");
+		
+		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:deepstone");
+		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:coldstone");
+		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:icestone");
+		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:glacierrock");
+		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:deep_coldstone");
+		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:red_rock");
+		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:deep_redrock");
+		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:oceanstone");
+		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:pressurized_oceanstone");
+	}
+	
+	public static void inventoryRender()
+	{
+		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "biome_stone");
+		MStoneType[] aenumtype = MStoneType.values();
+		int i = aenumtype.length;
+		
+		for (int j = 0; j < i; ++j)
+		{
+			MStoneType enumtype = aenumtype[j];
+			ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(MReference.MODID + ":"+enumtype.getUnlocalizedName(), "inventory");
+			Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, enumtype.getMetadata(), itemModelResourceLocation);
+		}
 	}
 }

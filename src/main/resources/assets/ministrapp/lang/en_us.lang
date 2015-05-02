@@ -20,6 +20,7 @@ tile.stone_tiles.name=Stone Tiles
 tile.snow_refined.name=Refined Snow
 tile.snow_bricks.name=Snow Bricks
 tile.snow_tiles.name=Snow Tiles
+tile.slate.name=Slate
 
 redwood_sapling.name=Redwood Sapling
 redwood_planks.name=Redwood Planks
