@@ -8,6 +8,7 @@ import minestrapteam.minestrappolation.lib.MRecipes;
 import minestrapteam.minestrappolation.lib.MReference;
 import minestrapteam.minestrappolation.world.MBiomeManager;
 import minestrapteam.minestrappolation.world.MinistrappolationGenHandler;
+import net.minecraft.init.Blocks;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -43,7 +44,7 @@ public class Minestrappolation
 		{
 			NetworkRegistry.INSTANCE.registerGuiHandler(this, Minestrappolation.proxy);
 		}
-		
+	
 	}
 	
 	@EventHandler

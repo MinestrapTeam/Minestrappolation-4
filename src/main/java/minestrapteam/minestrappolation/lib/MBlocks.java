@@ -5,6 +5,7 @@ import minestrapteam.minestrappolation.block.BlockBiomeBricks;
 import minestrapteam.minestrappolation.block.BlockBiomeCobble;
 import minestrapteam.minestrappolation.block.BlockBiomeStones;
 import minestrapteam.minestrappolation.block.BlockBoulder;
+import minestrapteam.minestrappolation.block.BlockGodstone;
 import minestrapteam.minestrappolation.block.BlockSunstoneBlock;
 import minestrapteam.minestrappolation.block.BlockTransparent;
 import minestrapteam.minestrappolation.block.MBlock;
@@ -61,10 +62,12 @@ public class MBlocks
 	public static Block	ministrapp_sapling;
 	public static Block	ministrapp_planks;
 	
+	public static Block godstone;
+	
 	// Biome Stones
 	public static Block			   biome_stones;
 	public static Block			   biome_cobble;
-	public static Block biome_bricks;
+	public static Block			   biome_bricks;
 	
 	// public static Block stone_decor;
 	// public static Block crate;
@@ -97,6 +100,8 @@ public class MBlocks
 		ministrapp_leaves = new MBlockLeaves().setUnlocalizedName("ministrapp_leaves");
 		ministrapp_sapling = new MBlockSapling();
 		ministrapp_planks = new MBlockPlanks().setUnlocalizedName("ministrapp_planks");
+		
+		godstone = new BlockGodstone(Material.rock, MapColor.yellowColor).setHardness(6F).setResistance(9F).setUnlocalizedName("godstone");
 		
 		// Biome Stones
 		biome_stones = new BlockBiomeStones().setHardness(1.5F).setUnlocalizedName("biome_stone");
@@ -131,6 +136,8 @@ public class MBlocks
 		register(stone_pattern_bricks);
 		register(stone_refined);
 		register(stone_tiles);
+		
+		register(godstone);
 		
 		//Wood stuff
 		GameRegistry.registerBlock(ministrapp_log, ItemBlockLog.class, ministrapp_log.getUnlocalizedName().substring(5));
@@ -171,6 +178,7 @@ public class MBlocks
 		registerRender(ministrapp_log);
 		registerRender(ministrapp_leaves);
 		registerRender(ministrapp_sapling);
+		registerRender(godstone);
 		
 	}
 	

@@ -1,10 +1,10 @@
 {
 "__comment": "Designed by Delocuro with BDcraft Cubik PRO 0.93 Beta - http://bdcraft.net",
 "textures": {
-    "particle": "blocks/godstone",
-    "texture": "blocks/godstone",
-    "godstone_layer_1": "blocks/godstone_layer_1",
-    "godstone_layer_2": "blocks/godstone_layer_2"
+    "particle": "ministrapp:blocks/godstone",
+    "texture": "ministrapp:blocks/godstone",
+    "godstone_layer_1": "ministrapp:blocks/godstone_layer_1",
+    "godstone_layer_2": "ministrapp:blocks/godstone_layer_2"
 },
 "elements": [ 
 {
