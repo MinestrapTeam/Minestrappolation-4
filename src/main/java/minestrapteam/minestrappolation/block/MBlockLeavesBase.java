@@ -1,5 +1,7 @@
 package minestrapteam.minestrappolation.block;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import minestrapteam.minestrappolation.Minestrappolation;
@@ -173,7 +175,7 @@ public abstract class MBlockLeavesBase extends BlockLeavesBase implements net.mi
 				}
 				else
 				{
-					this.destroy(worldIn, pos);
+					worldIn.destroyBlock(pos, true);
 				}
 			}
 		}
@@ -192,12 +194,6 @@ public abstract class MBlockLeavesBase extends BlockLeavesBase implements net.mi
 		}
 	}
 	
-	private void destroy(World worldIn, BlockPos pos)
-	{
-		this.dropBlockAsItem(worldIn, pos, worldIn.getBlockState(pos), 0);
-		worldIn.setBlockToAir(pos);
-	}
-	
 	@Override
 	public int quantityDropped(Random random)
 	{
@@ -208,16 +204,6 @@ public abstract class MBlockLeavesBase extends BlockLeavesBase implements net.mi
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
 	{
 		return Item.getItemFromBlock(Blocks.sapling);
-	}
-	
-	@Override
-	public void dropBlockAsItemWithChance(World worldIn, BlockPos pos, IBlockState state, float chance, int fortune)
-	{
-		super.dropBlockAsItemWithChance(worldIn, pos, state, chance, fortune);
-	}
-	
-	protected void dropApple(World worldIn, BlockPos pos, IBlockState state, int chance)
-	{
 	}
 	
 	protected int getSaplingDropChance(IBlockState state)
@@ -269,10 +255,10 @@ public abstract class MBlockLeavesBase extends BlockLeavesBase implements net.mi
 	}
 	
 	@Override
-	public java.util.List<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState state, int fortune)
+	public List<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState state, int fortune)
 	{
-		java.util.List<ItemStack> ret = new java.util.ArrayList<ItemStack>();
-		Random rand = world instanceof World ? ((World) world).rand : new Random();
+		List<ItemStack> ret = new ArrayList<ItemStack>();
+		Random rand = world instanceof World ? ((World) world).rand : RANDOM;
 		int chance = this.getSaplingDropChance(state);
 		
 		if (fortune > 0)
@@ -289,23 +275,10 @@ public abstract class MBlockLeavesBase extends BlockLeavesBase implements net.mi
 			ret.add(new ItemStack(this.getItemDropped(state, rand, fortune), 1, this.damageDropped(state)));
 		}
 		
-		chance = 200;
-		if (fortune > 0)
-		{
-			chance -= 10 << fortune;
-			if (chance < 40)
-			{
-				chance = 40;
-			}
-		}
+		// TODO Apples?
+		// The code that was here previously didn't do anything
+		// other than wasting time and cursing Mojang, so I'm not sure...
 		
-		this.captureDrops(true);
-		if (world instanceof World)
-		{
-			this.dropApple((World) world, pos, state, chance); // Dammet mojang
-		}
-		ret.addAll(this.captureDrops(false));
 		return ret;
 	}
-	
 }
