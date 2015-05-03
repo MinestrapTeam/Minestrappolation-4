@@ -45,8 +45,8 @@ public abstract class WorldGenBaseTree extends WorldGenAbstractTree
 		if (!world.isAirBlock(pos.add(0, this.topHeight, 0)))
 			return false;
 		
-		this.createTrunk(world, rand, pos);
 		this.genLeafStructure(world, rand, pos);
+		this.createTrunk(world, rand, pos);
 		this.genExtras(world, rand, pos);
 		return true;
 	}

@@ -58,7 +58,7 @@ public class BiomeRedwood extends BiomeGenBase
 			this.fillerBlock = Blocks.dirt.getDefaultState();
 		}
 		
-		this.genTerrainBlocks(world, random, primer, x, y, noise);
+		this.func_180628_b(world, random, primer, x, y, noise);
 	}
 	
 	@Override
