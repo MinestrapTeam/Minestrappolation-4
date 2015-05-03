@@ -1,0 +1,8 @@
+{
+    "parent": "block/half_slab",
+    "textures": {
+        "bottom": "ministrapp:blocks/redwood_planks",
+        "top": "ministrapp:blocks/redwood_planks",
+        "side": "ministrapp:blocks/redwood_planks"
+    }
+}
