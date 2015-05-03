@@ -1,0 +1,50 @@
+{
+"__comment": "Designed by Delocuro with BDcraft Cubik PRO 0.93 Beta - http://bdcraft.net",
+"textures": {
+    "particle": "blocks/godstone",
+    "texture": "blocks/godstone",
+    "godstone_layer_1": "blocks/godstone_layer_1",
+    "godstone_layer_2": "blocks/godstone_layer_2"
+},
+"elements": [ 
+{
+    "from": [ 0, 0, 0 ],
+    "to": [ 16, 16, 16 ],
+    "shade": false,
+    "faces": {
+        "down":  { "uv": [ 16, 16, 0, 0 ], "texture": "#texture" },
+        "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#texture" },
+        "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#texture" },
+        "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#texture" },
+        "west":  { "uv": [ 0, 0, 16, 16 ], "texture": "#texture" },
+        "east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#texture" }
+    }
+},
+{
+    "from": [ -0.5, -0.5, -0.5 ],
+    "to": [ 16.5, 16.5, 16.5 ],
+    "shade": false,
+    "faces": {
+        "down":  { "uv": [ 16, 16, 0, 0 ], "texture": "#godstone_layer_1" },
+        "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#godstone_layer_1" },
+        "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#godstone_layer_1" },
+        "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#godstone_layer_1" },
+        "west":  { "uv": [ 0, 0, 16, 16 ], "texture": "#godstone_layer_1" },
+        "east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#godstone_layer_1" }
+    }
+},
+{
+    "from": [ -1, -1, -1 ],
+    "to": [ 17, 17, 17 ],
+    "shade": false,
+    "faces": {
+        "down":  { "uv": [ 16, 16, 0, 0 ], "texture": "#godstone_layer_2" },
+        "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#godstone_layer_2" },
+        "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#godstone_layer_2" },
+        "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#godstone_layer_2" },
+        "west":  { "uv": [ 0, 0, 16, 16 ], "texture": "#godstone_layer_2" },
+        "east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#godstone_layer_2" }
+    }
+}
+]
+}
