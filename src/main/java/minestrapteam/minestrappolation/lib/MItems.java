@@ -1,12 +1,12 @@
 package minestrapteam.minestrappolation.lib;
 
 import minestrapteam.minestrappolation.Minestrappolation;
-import minestrapteam.minestrappolation.item.MItemArmor;
-import minestrapteam.minestrappolation.item.MItemAxe;
-import minestrapteam.minestrappolation.item.MItemHoe;
-import minestrapteam.minestrappolation.item.MItemPickaxe;
-import minestrapteam.minestrappolation.item.MItemShovel;
-import minestrapteam.minestrappolation.item.MItemSword;
+import minestrapteam.minestrappolation.item.ItemMinistrappolationArmor;
+import minestrapteam.minestrappolation.item.ItemMinistrappolationAxe;
+import minestrapteam.minestrappolation.item.ItemMinistrappolationHoe;
+import minestrapteam.minestrappolation.item.ItemMinistrappolationPickaxe;
+import minestrapteam.minestrappolation.item.ItemMinistrappolationShovel;
+import minestrapteam.minestrappolation.item.ItemMinistrappolationSword;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -52,16 +52,16 @@ public class MItems extends Item
 		sunstone_shard = new Item().setUnlocalizedName("sunstone_shard").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		stone_brick = new Item().setUnlocalizedName("stone_brick").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		
-		copper_pickaxe = new MItemPickaxe(COPPER).setUnlocalizedName("copper_pickaxe").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		copper_axe = new MItemAxe(COPPER).setUnlocalizedName("copper_axe").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		copper_shovel = new MItemShovel(COPPER).setUnlocalizedName("copper_shovel").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		copper_hoe = new MItemHoe(COPPER).setUnlocalizedName("copper_hoe").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		copper_sword = new MItemSword(COPPER).setUnlocalizedName("copper_sword").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		copper_pickaxe = new ItemMinistrappolationPickaxe(COPPER).setUnlocalizedName("copper_pickaxe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		copper_axe = new ItemMinistrappolationAxe(COPPER).setUnlocalizedName("copper_axe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		copper_shovel = new ItemMinistrappolationShovel(COPPER).setUnlocalizedName("copper_shovel").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		copper_hoe = new ItemMinistrappolationHoe(COPPER).setUnlocalizedName("copper_hoe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		copper_sword = new ItemMinistrappolationSword(COPPER).setUnlocalizedName("copper_sword").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		
-		tin_helmet = new MItemArmor(ARMOR_TIN, 0, 0).setUnlocalizedName("tin_helmet").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		tin_chestplate = new MItemArmor(ARMOR_TIN, 0, 1).setUnlocalizedName("tin_chestplate").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		tin_leggings = new MItemArmor(ARMOR_TIN, 0, 2).setUnlocalizedName("tin_leggings").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		tin_boots = new MItemArmor(ARMOR_TIN, 0, 3).setUnlocalizedName("tin_boots").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		tin_helmet = new ItemMinistrappolationArmor(ARMOR_TIN, 0, 0).setUnlocalizedName("tin_helmet").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		tin_chestplate = new ItemMinistrappolationArmor(ARMOR_TIN, 0, 1).setUnlocalizedName("tin_chestplate").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		tin_leggings = new ItemMinistrappolationArmor(ARMOR_TIN, 0, 2).setUnlocalizedName("tin_leggings").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		tin_boots = new ItemMinistrappolationArmor(ARMOR_TIN, 0, 3).setUnlocalizedName("tin_boots").setCreativeTab(Minestrappolation.tabMinistrappolation);
 	}
 	
 	public static void register()

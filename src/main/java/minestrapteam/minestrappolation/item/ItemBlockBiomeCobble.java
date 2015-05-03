@@ -1,14 +1,14 @@
-package minestrapteam.minestrappolation.item.block;
+package minestrapteam.minestrappolation.item;
 
-import minestrapteam.minestrappolation.block.MWoodType;
+import minestrapteam.minestrappolation.block.MStoneType;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemBlockLog extends ItemBlock
+public class ItemBlockBiomeCobble extends ItemBlock
 {
 	
-	public ItemBlockLog(Block block)
+	public ItemBlockBiomeCobble(Block block)
 	{
 		super(block);
 		this.setHasSubtypes(true);
@@ -25,7 +25,6 @@ public class ItemBlockLog extends ItemBlock
 	@Override
 	public String getUnlocalizedName(ItemStack item)
 	{
-		return MWoodType.byMetadata(item.getItemDamage()) + "_log";
+		return MStoneType.byMetadata(item.getItemDamage()) + "_cobble";
 	}
-	
 }

@@ -1,7 +1,5 @@
 package minestrapteam.minestrappolation.block;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 import minestrapteam.minestrappolation.Minestrappolation;
@@ -62,117 +60,122 @@ public abstract class MBlockLeavesBase extends BlockLeavesBase implements net.mi
 	@SideOnly(Side.CLIENT)
 	public int colorMultiplier(IBlockAccess worldIn, BlockPos pos, int renderPass)
 	{
-		return super.colorMultiplier(worldIn, pos);
+		return BiomeColorHelper.getFoliageColorAtPos(worldIn, pos);
 	}
 	
 	@Override
-	public void updateTick(World world, BlockPos pos, IBlockState state, Random rand)
+	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
 	{
-		if (world.isRemote)
-			return;
-		if (!((Boolean) state.getValue(CHECK_DECAY)).booleanValue() || !((Boolean) state.getValue(DECAYABLE)).booleanValue())
-			return;
-		
-		byte b0 = 6;
-		int i = b0 + 1;
-		int j = pos.getX();
-		int k = pos.getY();
-		int l = pos.getZ();
-		byte b1 = 32;
-		int i1 = b1 * b1;
-		int j1 = b1 / 2;
-		if (this.surroundings == null)
+		if (!worldIn.isRemote)
 		{
-			this.surroundings = new int[b1 * b1 * b1];
-		}
-		int k1;
-		if (world.isAreaLoaded(new BlockPos(j - i, k - i, l - i), new BlockPos(j + i, k + i, l + i)))
-		{
-			int l1;
-			int i2;
-			
-			for (k1 = -b0; k1 <= b0; ++k1)
+			if (((Boolean) state.getValue(CHECK_DECAY)).booleanValue() && ((Boolean) state.getValue(DECAYABLE)).booleanValue())
 			{
-				for (l1 = -b0; l1 <= b0; ++l1)
+				byte b0 = 4;
+				int i = b0 + 1;
+				int j = pos.getX();
+				int k = pos.getY();
+				int l = pos.getZ();
+				byte b1 = 32;
+				int i1 = b1 * b1;
+				int j1 = b1 / 2;
+				
+				if (this.surroundings == null)
 				{
-					for (i2 = -b0; i2 <= b0; ++i2)
-					{
-						BlockPos tmp = new BlockPos(j + k1, k + l1, l + i2);
-						Block block = world.getBlockState(tmp).getBlock();
-						
-						if (!block.canSustainLeaves(world, tmp))
-						{
-							if (block.isLeaves(world, tmp))
-							{
-								this.surroundings[(k1 + j1) * i1 + (l1 + j1) * b1 + i2 + j1] = -2;
-							}
-							else
-							{
-								this.surroundings[(k1 + j1) * i1 + (l1 + j1) * b1 + i2 + j1] = -1;
-							}
-						}
-						else
-						{
-							this.surroundings[(k1 + j1) * i1 + (l1 + j1) * b1 + i2 + j1] = 0;
-						}
-					}
+					this.surroundings = new int[b1 * b1 * b1];
 				}
-			}
-			
-			for (k1 = 1; k1 <= 4; ++k1)
-			{
-				for (l1 = -b0; l1 <= b0; ++l1)
+				
+				int k1;
+				
+				if (worldIn.isAreaLoaded(new BlockPos(j - i, k - i, l - i), new BlockPos(j + i, k + i, l + i)))
 				{
-					for (i2 = -b0; i2 <= b0; ++i2)
+					int l1;
+					int i2;
+					
+					for (k1 = -b0; k1 <= b0; ++k1)
 					{
-						for (int j2 = -b0; j2 <= b0; ++j2)
+						for (l1 = -b0; l1 <= b0; ++l1)
 						{
-							if (this.surroundings[(l1 + j1) * i1 + (i2 + j1) * b1 + j2 + j1] == k1 - 1)
+							for (i2 = -b0; i2 <= b0; ++i2)
 							{
-								if (this.surroundings[(l1 + j1 - 1) * i1 + (i2 + j1) * b1 + j2 + j1] == -2)
-								{
-									this.surroundings[(l1 + j1 - 1) * i1 + (i2 + j1) * b1 + j2 + j1] = k1;
-								}
+								BlockPos tmp = new BlockPos(j + k1, k + l1, l + i2);
+								Block block = worldIn.getBlockState(tmp).getBlock();
 								
-								if (this.surroundings[(l1 + j1 + 1) * i1 + (i2 + j1) * b1 + j2 + j1] == -2)
+								if (!block.canSustainLeaves(worldIn, tmp))
 								{
-									this.surroundings[(l1 + j1 + 1) * i1 + (i2 + j1) * b1 + j2 + j1] = k1;
+									if (block.isLeaves(worldIn, tmp))
+									{
+										this.surroundings[(k1 + j1) * i1 + (l1 + j1) * b1 + i2 + j1] = -2;
+									}
+									else
+									{
+										this.surroundings[(k1 + j1) * i1 + (l1 + j1) * b1 + i2 + j1] = -1;
+									}
 								}
-								
-								if (this.surroundings[(l1 + j1) * i1 + (i2 + j1 - 1) * b1 + j2 + j1] == -2)
+								else
 								{
-									this.surroundings[(l1 + j1) * i1 + (i2 + j1 - 1) * b1 + j2 + j1] = k1;
-								}
-								
-								if (this.surroundings[(l1 + j1) * i1 + (i2 + j1 + 1) * b1 + j2 + j1] == -2)
-								{
-									this.surroundings[(l1 + j1) * i1 + (i2 + j1 + 1) * b1 + j2 + j1] = k1;
-								}
-								
-								if (this.surroundings[(l1 + j1) * i1 + (i2 + j1) * b1 + j2 + j1 - 1] == -2)
-								{
-									this.surroundings[(l1 + j1) * i1 + (i2 + j1) * b1 + j2 + j1 - 1] = k1;
-								}
-								
-								if (this.surroundings[(l1 + j1) * i1 + (i2 + j1) * b1 + j2 + j1 + 1] == -2)
-								{
-									this.surroundings[(l1 + j1) * i1 + (i2 + j1) * b1 + j2 + j1 + 1] = k1;
+									this.surroundings[(k1 + j1) * i1 + (l1 + j1) * b1 + i2 + j1] = 0;
 								}
 							}
 						}
 					}
+					
+					for (k1 = 1; k1 <= 4; ++k1)
+					{
+						for (l1 = -b0; l1 <= b0; ++l1)
+						{
+							for (i2 = -b0; i2 <= b0; ++i2)
+							{
+								for (int j2 = -b0; j2 <= b0; ++j2)
+								{
+									if (this.surroundings[(l1 + j1) * i1 + (i2 + j1) * b1 + j2 + j1] == k1 - 1)
+									{
+										if (this.surroundings[(l1 + j1 - 1) * i1 + (i2 + j1) * b1 + j2 + j1] == -2)
+										{
+											this.surroundings[(l1 + j1 - 1) * i1 + (i2 + j1) * b1 + j2 + j1] = k1;
+										}
+										
+										if (this.surroundings[(l1 + j1 + 1) * i1 + (i2 + j1) * b1 + j2 + j1] == -2)
+										{
+											this.surroundings[(l1 + j1 + 1) * i1 + (i2 + j1) * b1 + j2 + j1] = k1;
+										}
+										
+										if (this.surroundings[(l1 + j1) * i1 + (i2 + j1 - 1) * b1 + j2 + j1] == -2)
+										{
+											this.surroundings[(l1 + j1) * i1 + (i2 + j1 - 1) * b1 + j2 + j1] = k1;
+										}
+										
+										if (this.surroundings[(l1 + j1) * i1 + (i2 + j1 + 1) * b1 + j2 + j1] == -2)
+										{
+											this.surroundings[(l1 + j1) * i1 + (i2 + j1 + 1) * b1 + j2 + j1] = k1;
+										}
+										
+										if (this.surroundings[(l1 + j1) * i1 + (i2 + j1) * b1 + j2 + j1 - 1] == -2)
+										{
+											this.surroundings[(l1 + j1) * i1 + (i2 + j1) * b1 + j2 + j1 - 1] = k1;
+										}
+										
+										if (this.surroundings[(l1 + j1) * i1 + (i2 + j1) * b1 + j2 + j1 + 1] == -2)
+										{
+											this.surroundings[(l1 + j1) * i1 + (i2 + j1) * b1 + j2 + j1 + 1] = k1;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				
+				k1 = this.surroundings[j1 * i1 + j1 * b1 + j1];
+				
+				if (k1 >= 0)
+				{
+					worldIn.setBlockState(pos, state.withProperty(CHECK_DECAY, Boolean.valueOf(false)), 4);
+				}
+				else
+				{
+					this.destroy(worldIn, pos);
 				}
 			}
-		}
-		k1 = this.surroundings[j1 * i1 + j1 * b1 + j1];
-		if (k1 >= 0)
-		{
-			world.setBlockState(pos, state.withProperty(CHECK_DECAY, Boolean.valueOf(false)), 4);
-		}
-		else
-		{
-			this.dropBlockAsItem(world, pos, state, 0);
-			world.setBlockState(pos, Blocks.air.getDefaultState(), 3);
 		}
 	}
 	
@@ -189,6 +192,12 @@ public abstract class MBlockLeavesBase extends BlockLeavesBase implements net.mi
 		}
 	}
 	
+	private void destroy(World worldIn, BlockPos pos)
+	{
+		this.dropBlockAsItem(worldIn, pos, worldIn.getBlockState(pos), 0);
+		worldIn.setBlockToAir(pos);
+	}
+	
 	@Override
 	public int quantityDropped(Random random)
 	{
@@ -199,6 +208,16 @@ public abstract class MBlockLeavesBase extends BlockLeavesBase implements net.mi
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
 	{
 		return Item.getItemFromBlock(Blocks.sapling);
+	}
+	
+	@Override
+	public void dropBlockAsItemWithChance(World worldIn, BlockPos pos, IBlockState state, float chance, int fortune)
+	{
+		super.dropBlockAsItemWithChance(worldIn, pos, state, chance, fortune);
+	}
+	
+	protected void dropApple(World worldIn, BlockPos pos, IBlockState state, int chance)
+	{
 	}
 	
 	protected int getSaplingDropChance(IBlockState state)
@@ -250,10 +269,10 @@ public abstract class MBlockLeavesBase extends BlockLeavesBase implements net.mi
 	}
 	
 	@Override
-	public List<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState state, int fortune)
+	public java.util.List<ItemStack> getDrops(IBlockAccess world, BlockPos pos, IBlockState state, int fortune)
 	{
-		List<ItemStack> ret = new ArrayList<ItemStack>();
-		Random rand = world instanceof World ? ((World) world).rand : RANDOM;
+		java.util.List<ItemStack> ret = new java.util.ArrayList<ItemStack>();
+		Random rand = world instanceof World ? ((World) world).rand : new Random();
 		int chance = this.getSaplingDropChance(state);
 		
 		if (fortune > 0)
@@ -270,10 +289,23 @@ public abstract class MBlockLeavesBase extends BlockLeavesBase implements net.mi
 			ret.add(new ItemStack(this.getItemDropped(state, rand, fortune), 1, this.damageDropped(state)));
 		}
 		
-		// TODO Apples?
-		// The code that was here previously didn't do anything
-		// other than wasting time and cursing Mojang, so I'm not sure...
+		chance = 200;
+		if (fortune > 0)
+		{
+			chance -= 10 << fortune;
+			if (chance < 40)
+			{
+				chance = 40;
+			}
+		}
 		
+		this.captureDrops(true);
+		if (world instanceof World)
+		{
+			this.dropApple((World) world, pos, state, chance); // Dammet mojang
+		}
+		ret.addAll(this.captureDrops(false));
 		return ret;
 	}
+	
 }

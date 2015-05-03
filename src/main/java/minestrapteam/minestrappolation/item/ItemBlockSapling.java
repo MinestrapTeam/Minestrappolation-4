@@ -1,14 +1,14 @@
-package minestrapteam.minestrappolation.item.block;
+package minestrapteam.minestrappolation.item;
 
 import minestrapteam.minestrappolation.block.MWoodType;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemBlockPlanks extends ItemBlock
+public class ItemBlockSapling extends ItemBlock
 {
 	
-	public ItemBlockPlanks(Block block)
+	public ItemBlockSapling(Block block)
 	{
 		super(block);
 		this.setHasSubtypes(true);
@@ -16,15 +16,15 @@ public class ItemBlockPlanks extends ItemBlock
 	}
 	
 	@Override
-	public int getMetadata(int damageValue)
+	public int getMetadata(int meta)
 	{
-		return damageValue;
+		return meta;
 	}
 	
 	@Override
 	public String getUnlocalizedName(ItemStack item)
 	{
-		return MWoodType.byMetadata(item.getItemDamage()) + "_planks";
+		return MWoodType.byMetadata(item.getItemDamage()) + "_sapling";
 	}
 	
 }

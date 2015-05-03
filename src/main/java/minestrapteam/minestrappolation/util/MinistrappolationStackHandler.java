@@ -5,7 +5,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.oredict.OreDictionary;
 
-public class MStackHandler
+public class MinistrappolationStackHandler
 {
 	public static final int	WILDCARD_VALUE	= OreDictionary.WILDCARD_VALUE;
 	

@@ -26,18 +26,19 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.google.common.base.Predicate;
 
-public class MGenHandler implements IWorldGenerator
+public class MinistrappolationGenHandler implements IWorldGenerator
 {
+	
 	public static void load()
 	{
-		GameRegistry.registerWorldGenerator(new MGenHandler(), 0);
+		GameRegistry.registerWorldGenerator(new MinistrappolationGenHandler(), 0);
 	}
 	
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider)
 	{
-		chunkX <<= 4;
-		chunkZ <<= 4;
+		// chunkX <<= 4;
+		// chunkZ <<= 4;
 		BlockPos pos = new BlockPos(chunkX, 1, chunkZ);
 		if (chunkGenerator instanceof ChunkProviderGenerate)
 		{
