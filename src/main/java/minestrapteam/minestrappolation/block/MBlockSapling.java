@@ -194,11 +194,10 @@ public class MBlockSapling extends BlockBush implements IGrowable
 	{
 		this.grow(worldIn, pos, state, rand);
 	}
-
+	
 	@Override
-	public boolean canGrow(World worldIn, BlockPos pos, IBlockState state, boolean isClient) {
+	public boolean isStillGrowing(World world, BlockPos pos, IBlockState state, boolean client)
+	{
 		return true;
 	}
-
-	
 }

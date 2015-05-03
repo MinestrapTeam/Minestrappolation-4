@@ -13,8 +13,7 @@ import net.minecraft.world.gen.feature.WorldGenTallGrass;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class BiomeRedwood extends BiomeGenBase
-{
-	
+{	
 	public BiomeRedwood(int id)
 	{
 		super(id);
@@ -41,7 +40,7 @@ public class BiomeRedwood extends BiomeGenBase
 	}
 	
 	@Override
-	public void genTerrainBlocks(World worldIn, Random rand, ChunkPrimer primer, int p_180622_4_, int p_180622_5_, double noise)
+	public void genTerrainBlocks(World world, Random random, ChunkPrimer primer, int x, int y, double noise)
 	{
 		this.fillerBlock = Blocks.dirt.getDefaultState();
 		this.topBlock = Blocks.grass.getDefaultState();
@@ -56,7 +55,7 @@ public class BiomeRedwood extends BiomeGenBase
 			this.topBlock = Blocks.dirt.getStateFromMeta(BlockDirt.DirtType.PODZOL.getMetadata());
 		}
 		
-		this.generateBiomeTerrain(worldIn, rand, primer, p_180622_4_, p_180622_5_, noise);;
+		this.genTerrainBlocks(world, random, primer, x, y, noise);
 	}
 	
 	@Override
