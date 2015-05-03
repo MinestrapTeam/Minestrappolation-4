@@ -5,8 +5,7 @@ import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemStack;
 
 public class MItemShovel extends ItemSpade
-{
-	
+{	
 	public MItemShovel(ToolMaterial material)
 	{
 		super(material);
@@ -15,9 +14,10 @@ public class MItemShovel extends ItemSpade
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
-		if (toRepair == new ItemStack(MItems.copper_pickaxe) || toRepair == new ItemStack(MItems.copper_axe) || toRepair == new ItemStack(MItems.copper_shovel) || toRepair == new ItemStack(MItems.copper_hoe) || toRepair == new ItemStack(MItems.copper_sword))
-			return new ItemStack(MItems.copper_ingot) == repair ? true : super.getIsRepairable(toRepair, repair);
-		else
-			return true;
+		if (toRepair.getItem() == MItems.copper_shovel)
+		{
+			return repair.getItem() == MItems.copper_ingot;
+		}
+		return false;
 	}
 }
