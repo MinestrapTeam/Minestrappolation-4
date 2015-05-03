@@ -42,6 +42,9 @@ public class BiomeRedwood extends BiomeGenBase
 	@Override
 	public void genTerrainBlocks(World world, Random random, ChunkPrimer primer, int x, int y, double noise)
 	{
+		this.topBlock = Blocks.grass.getDefaultState();
+		this.fillerBlock = Blocks.dirt.getDefaultState();
+		
 		if (noise > 3.5D)
 		{
 			this.topBlock = Blocks.sand.getDefaultState();
@@ -50,21 +53,15 @@ public class BiomeRedwood extends BiomeGenBase
 		else if (noise > -0.95D)
 		{
 			this.topBlock = Blocks.dirt.getDefaultState().withProperty(BlockDirt.VARIANT, BlockDirt.DirtType.PODZOL);
-			this.fillerBlock = Blocks.dirt.getDefaultState();
 		}
-		else
-		{
-			this.topBlock = Blocks.grass.getDefaultState();
-			this.fillerBlock = Blocks.dirt.getDefaultState();
-		}
-		
-		this.func_180628_b(world, random, primer, x, y, noise);
+
+		this.generateBiomeTerrain(world, random, primer, x, y, noise);
 	}
 	
 	@Override
 	public WorldGenAbstractTree genBigTreeChance(Random random)
 	{
-		return random.nextInt(4) == 0 ? new WorldGenRedwoodTree() : random.nextInt(8) < 2 ? this.worldGeneratorTrees : new WorldGenRedwoodTreeSmall();
+		return random.nextInt(4) == 0 ? new WorldGenRedWoodTree() : random.nextInt(8) < 2 ? this.worldGeneratorTrees : new WorldGenRedWoodTreeSmall();
 	}
 	
 }

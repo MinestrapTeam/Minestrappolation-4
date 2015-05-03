@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.Random;
 
 import minestrapteam.minestrappolation.Minestrappolation;
-import minestrapteam.minestrappolation.world.WorldGenRedwoodTree;
-import minestrapteam.minestrappolation.world.WorldGenRedwoodTreeSmall;
+import minestrapteam.minestrappolation.world.WorldGenRedWoodTree;
+import minestrapteam.minestrappolation.world.WorldGenRedWoodTreeSmall;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.IGrowable;
 import net.minecraft.block.material.Material;
@@ -96,7 +96,7 @@ public class MBlockSapling extends BlockBush implements IGrowable
 				{
 					if (this.isTypeAt(world, pos.add(i, 0, j), MWoodType.REDWOOD) && this.isTypeAt(world, pos.add(i + 1, 0, j), MWoodType.REDWOOD) && this.isTypeAt(world, pos.add(i, 0, j + 1), MWoodType.REDWOOD) && this.isTypeAt(world, pos.add(i + 1, 0, j + 1), MWoodType.REDWOOD))
 					{
-						object = new WorldGenRedwoodTree();
+						object = new WorldGenRedWoodTree();
 						flag = true;
 						break label78;
 					}
@@ -107,7 +107,7 @@ public class MBlockSapling extends BlockBush implements IGrowable
 			{
 				j = 0;
 				i = 0;
-				object = new WorldGenRedwoodTreeSmall();
+				object = new WorldGenRedWoodTreeSmall();
 			}
 		}
 		
@@ -194,10 +194,10 @@ public class MBlockSapling extends BlockBush implements IGrowable
 	{
 		this.grow(worldIn, pos, state, rand);
 	}
-	
+
 	@Override
-	public boolean isStillGrowing(World world, BlockPos pos, IBlockState state, boolean client)
-	{
+	public boolean canGrow(World worldIn, BlockPos pos, IBlockState state, boolean isClient) {
 		return true;
 	}
+
 }

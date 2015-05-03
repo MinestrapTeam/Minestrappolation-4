@@ -22,13 +22,13 @@ buildscript
 
 apply plugin: 'forge'
 
-version = "1.8-4.0.0-alpha"
+version = "1.8-4.0.0"
 group = "minestrapteam"
 archivesBaseName = "Minestrappolation"
 
 minecraft
 {
-    version = "1.8-11.14.1.1398"
+    version = "1.8-11.14.1.1375"
     if(file('../run').exists())
 	{
         runDir = "../run/"

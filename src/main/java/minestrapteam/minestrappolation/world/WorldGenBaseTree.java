@@ -1,5 +1,5 @@
 package minestrapteam.minestrappolation.world;
-
+import java.util.List;
 import java.util.Random;
 
 import net.minecraft.block.Block;
@@ -14,15 +14,15 @@ public abstract class WorldGenBaseTree extends WorldGenAbstractTree
 	protected IBlockState	wood;
 	protected IBlockState	leaves;
 	
-	public int				minHeight;
-	public int				maxHeight;
-	public int				width;
+	public int		minHeight;
+	public int		maxHeight;
+	public int		width;
 	
-	public int				topHeight;
+	public int		topHeight;
 	
-	public Block[]			canGrowOn;
+	public Block[]  canGrowOn;
 	
-	public WorldGenBaseTree(IBlockState wood, IBlockState leaves, int minHeight, int maxHeight, int width, Block... blocks)
+	public WorldGenBaseTree(IBlockState wood, IBlockState leaves, int minHeight, int maxHeight, int width,Block...blocks)
 	{
 		super(true);
 		this.wood = wood;
@@ -45,8 +45,8 @@ public abstract class WorldGenBaseTree extends WorldGenAbstractTree
 		if (!world.isAirBlock(pos.add(0, this.topHeight, 0)))
 			return false;
 		
-		this.genLeafStructure(world, rand, pos);
 		this.createTrunk(world, rand, pos);
+		this.genLeafStructure(world, rand, pos);
 		this.genExtras(world, rand, pos);
 		return true;
 	}
@@ -57,35 +57,34 @@ public abstract class WorldGenBaseTree extends WorldGenAbstractTree
 	
 	public boolean canSpawn(World world, BlockPos pos)
 	{
-		BlockPos pos1 = pos.offsetDown(1);
-		IBlockState ground = world.getBlockState(pos1);
+		IBlockState ground = world.getBlockState(pos.add(0, -1, 0));
 		Block groundBlock = Blocks.grass;
 		
-		for (Block b : this.canGrowOn)
+		for(int b = 0; b < this.canGrowOn.length; b++)
 		{
-			if (ground.getBlock() == b)
+			if(ground.getBlock() == this.canGrowOn[b])
 			{
-				groundBlock = b;
-				break;
+				groundBlock = ground.getBlock();
+				continue;
 			}
 		}
 		
 		if (this.width == 1)
-		{
+		{		
 			return ground.getBlock() == groundBlock;
 		}
-		
-		for (int i = 0; i < this.width; i++)
+		else
 		{
-			for (int j = 0; j < this.width; j++)
+			for (int i = 0; i < this.width; i++)
 			{
-				if (world.getBlockState(pos1.add(j, 0, j)).getBlock() != groundBlock)
+				for (int j = 0; j < this.width; j++)
 				{
-					return false;
-				}
+					return ground.getBlock() == groundBlock;
+  				}
 			}
+			return true;
 		}
-		return true;
+		
 	}
 	
 	public void createTrunk(World world, Random rand, BlockPos pos)
