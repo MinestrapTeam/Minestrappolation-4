@@ -1,13 +1,13 @@
 package minestrapteam.minestrappolation.item;
 
 import minestrapteam.minestrappolation.lib.MItems;
+import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemSword;
 
-public class ItemMinistrappolationSword extends ItemSword
+public class MItemPickaxe extends ItemPickaxe
 {
 	
-	public ItemMinistrappolationSword(ToolMaterial material)
+	public MItemPickaxe(ToolMaterial material)
 	{
 		super(material);
 	}

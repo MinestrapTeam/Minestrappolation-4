@@ -1,4 +1,4 @@
-package minestrapteam.minestrappolation.util;
+package minestrapteam.minestrappolation.inventory;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -7,12 +7,12 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
-public class MinistrappolationInventoryHandler extends Container
+public class MContainer extends Container
 {
 	public final IInventory		inventory;
 	public final EntityPlayer	player;
 	
-	public MinistrappolationInventoryHandler(EntityPlayer player, IInventory inventory)
+	public MContainer(EntityPlayer player, IInventory inventory)
 	{
 		this.inventory = inventory;
 		this.player = player;

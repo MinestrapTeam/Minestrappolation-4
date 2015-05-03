@@ -1,13 +1,13 @@
 package minestrapteam.minestrappolation.item;
 
 import minestrapteam.minestrappolation.lib.MItems;
-import net.minecraft.item.ItemAxe;
+import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemStack;
 
-public class ItemMinistrappolationAxe extends ItemAxe
+public class MItemHoe extends ItemHoe
 {
 	
-	public ItemMinistrappolationAxe(ToolMaterial material)
+	public MItemHoe(ToolMaterial material)
 	{
 		super(material);
 	}

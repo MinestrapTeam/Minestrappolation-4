@@ -1,4 +1,4 @@
-package minestrapteam.minestrappolation.item;
+package minestrapteam.minestrappolation.item.block;
 
 import minestrapteam.minestrappolation.block.MWoodType;
 import net.minecraft.block.Block;

@@ -64,7 +64,7 @@ public class BiomeRedwood extends BiomeGenBase
 	@Override
 	public WorldGenAbstractTree genBigTreeChance(Random random)
 	{
-		return random.nextInt(4) == 0 ? new WorldGenRedWoodTree() : random.nextInt(8) < 2 ? this.worldGeneratorTrees : new WorldGenRedWoodTreeSmall();
+		return random.nextInt(4) == 0 ? new WorldGenRedwoodTree() : random.nextInt(8) < 2 ? this.worldGeneratorTrees : new WorldGenRedwoodTreeSmall();
 	}
 	
 }

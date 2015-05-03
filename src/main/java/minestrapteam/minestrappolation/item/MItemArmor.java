@@ -5,10 +5,10 @@ import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 
-public class ItemMinistrappolationArmor extends ItemArmor
+public class MItemArmor extends ItemArmor
 {
 	
-	public ItemMinistrappolationArmor(ArmorMaterial material, int renderIndex, int armorType)
+	public MItemArmor(ArmorMaterial material, int renderIndex, int armorType)
 	{
 		super(material, renderIndex, armorType);
 	}

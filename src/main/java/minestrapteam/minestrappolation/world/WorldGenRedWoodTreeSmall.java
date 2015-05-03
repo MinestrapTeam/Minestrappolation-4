@@ -7,12 +7,12 @@ import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 
-public class WorldGenRedWoodTreeSmall extends WorldGenBaseTree
+public class WorldGenRedwoodTreeSmall extends WorldGenBaseTree
 {
 	protected int	leafStart	= 5;
 	protected int	leafSpacing	= 2;
 	
-	public WorldGenRedWoodTreeSmall()
+	public WorldGenRedwoodTreeSmall()
 	{
 		super(MBlocks.ministrapp_log.getDefaultState(), MBlocks.ministrapp_leaves.getDefaultState(), 13, 18, 1, Blocks.grass, Blocks.dirt);
 	}

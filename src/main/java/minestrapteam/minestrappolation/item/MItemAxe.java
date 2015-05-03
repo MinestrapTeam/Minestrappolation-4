@@ -1,13 +1,13 @@
 package minestrapteam.minestrappolation.item;
 
 import minestrapteam.minestrappolation.lib.MItems;
-import net.minecraft.item.ItemSpade;
+import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemStack;
 
-public class ItemMinistrappolationShovel extends ItemSpade
+public class MItemAxe extends ItemAxe
 {
 	
-	public ItemMinistrappolationShovel(ToolMaterial material)
+	public MItemAxe(ToolMaterial material)
 	{
 		super(material);
 	}
