@@ -12,7 +12,7 @@
     "to": [ 16, 16, 16 ],
     "shade": false,
     "faces": {
-        "down":  { "uv": [ 16, 16, 0, 0 ], "texture": "#texture" },
+        "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#texture" },
         "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#texture" },
         "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#texture" },
         "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#texture" },
@@ -25,7 +25,7 @@
     "to": [ 16.5, 16.5, 16.5 ],
     "shade": false,
     "faces": {
-        "down":  { "uv": [ 16, 16, 0, 0 ], "texture": "#godstone_layer_1" },
+        "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#godstone_layer_1" },
         "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#godstone_layer_1" },
         "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#godstone_layer_1" },
         "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#godstone_layer_1" },
@@ -38,7 +38,7 @@
     "to": [ 17, 17, 17 ],
     "shade": false,
     "faces": {
-        "down":  { "uv": [ 16, 16, 0, 0 ], "texture": "#godstone_layer_2" },
+        "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#godstone_layer_2" },
         "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#godstone_layer_2" },
         "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#godstone_layer_2" },
         "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#godstone_layer_2" },

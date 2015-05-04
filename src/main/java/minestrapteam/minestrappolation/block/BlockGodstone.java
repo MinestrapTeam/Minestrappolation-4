@@ -10,8 +10,11 @@ import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumWorldBlockLayer;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockGodstone extends MBlock
 {
@@ -20,6 +23,12 @@ public class BlockGodstone extends MBlock
 		super(material, mapColor);
 		this.setLightLevel(1F);
 	}
+	
+	@SideOnly(Side.CLIENT)
+    public EnumWorldBlockLayer getBlockLayer()
+    {
+        return EnumWorldBlockLayer.TRANSLUCENT;
+    }
 	
 	@Override
 	public void onBlockAdded(World world, BlockPos pos, IBlockState state)
