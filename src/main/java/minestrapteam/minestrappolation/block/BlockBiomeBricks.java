@@ -71,7 +71,7 @@ public class BlockBiomeBricks extends Block
 		return ((MStoneType) state.getValue(VARIANT)).getMetadata();
 	}
 	
-	public static void addRecipes()
+	/*public static void addRecipes()
 	{
 		MStoneType[] aenumtype = MStoneType.values();
 		int i = aenumtype.length;
@@ -81,7 +81,7 @@ public class BlockBiomeBricks extends Block
 			MStoneType enumtype = aenumtype[j];
 			GameRegistry.addRecipe(new ItemStack(MBlocks.biome_bricks, 1, enumtype.getMetadata()), new Object[] { "II", "II", 'I', new ItemStack(MBlocks.biome_stones, 1, enumtype.getMetadata()) });
 		}
-	}
+	}*/
 	
 	public static void preinventoryRender()
 	{

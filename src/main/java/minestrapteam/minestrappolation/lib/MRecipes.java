@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import minestrapteam.minestrappolation.block.BlockBiomeBricks;
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -35,6 +36,7 @@ public class MRecipes
 		
 		GameRegistry.addSmelting(MBlocks.sunstone_ore, new ItemStack(MItems.sunstone_shard), 1.0F);
 		GameRegistry.addRecipe(new ItemStack(MBlocks.sunstone_block), new Object[] { "SS", "SS", 'S', MItems.sunstone_shard });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.godstone), new Object[] { "SGS", "PEP", "SGS", 'S', MItems.sunstone_shard, 'G', Items.glowstone_dust, 'P', Items.prismarine_crystals, 'E', Blocks.end_stone});
 		
 		// Decor
 		GameRegistry.addRecipe(new ItemStack(MBlocks.snow_bricks, 4), new Object[] { "SS", "SS", 'S', Blocks.snow });
@@ -49,8 +51,47 @@ public class MRecipes
 		GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.ministrapp_planks, 4, 0), new Object[] { new ItemStack(MBlocks.ministrapp_log, 1, 0) });
 		
 		//Stones
-		BlockBiomeBricks.addRecipes();
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.stone_brick, 4), new Object[] { new ItemStack(Blocks.stone, 1, 0) });
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.deepstone_brick, 4), new Object[] { new ItemStack(MBlocks.biome_stones, 1, 0) });
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.red_rock_brick, 4), new Object[] { new ItemStack(MBlocks.biome_stones, 1, 1) });
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.deep_red_rock_brick, 4), new Object[] { new ItemStack(MBlocks.biome_stones, 1, 2) });
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.coldstone_brick, 4), new Object[] { new ItemStack(MBlocks.biome_stones, 1, 3) });
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.deep_coldstone_brick, 4), new Object[] { new ItemStack(MBlocks.biome_stones, 1, 4) });
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.icestone_brick, 4), new Object[] { new ItemStack(MBlocks.biome_stones, 1, 5) });
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.glacierrock_brick, 4), new Object[] { new ItemStack(MBlocks.biome_stones, 1, 6) });
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.oceanstone_brick, 4), new Object[] { new ItemStack(MBlocks.biome_stones, 1, 7) });
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.pressurized_oceanstone_brick, 4), new Object[] { new ItemStack(MBlocks.biome_stones, 1, 8) });
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.slate_brick, 4), new Object[] { new ItemStack(MBlocks.slate, 1, 0) });
 		
+		GameRegistry.addRecipe(new ItemStack(Blocks.stonebrick, 1, 0), new Object[] { "BB", "BB", 'B', MItems.stone_brick });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.biome_bricks, 1, 0), new Object[] { "BB", "BB", 'B', MItems.deepstone_brick });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.biome_bricks, 1, 1), new Object[] { "BB", "BB", 'B', MItems.red_rock_brick });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.biome_bricks, 1, 2), new Object[] { "BB", "BB", 'B', MItems.deep_red_rock_brick });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.biome_bricks, 1, 3), new Object[] { "BB", "BB", 'B', MItems.coldstone_brick });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.biome_bricks, 1, 4), new Object[] { "BB", "BB", 'B', MItems.deep_coldstone_brick });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.biome_bricks, 1, 5), new Object[] { "BB", "BB", 'B', MItems.icestone_brick });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.biome_bricks, 1, 6), new Object[] { "BB", "BB", 'B', MItems.glacierrock_brick });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.biome_bricks, 1, 7), new Object[] { "BB", "BB", 'B', MItems.oceanstone_brick });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.biome_bricks, 1, 8), new Object[] { "BB", "BB", 'B', MItems.pressurized_oceanstone_brick });
+		
+		GameRegistry.addSmelting(new ItemStack(MBlocks.biome_cobble, 1, 0), new ItemStack(MBlocks.biome_stones, 1, 0), .1F);
+		GameRegistry.addSmelting(new ItemStack(MBlocks.biome_cobble, 1, 1), new ItemStack(MBlocks.biome_stones, 1, 1), .1F);
+		GameRegistry.addSmelting(new ItemStack(MBlocks.biome_cobble, 1, 2), new ItemStack(MBlocks.biome_stones, 1, 2), .1F);
+		GameRegistry.addSmelting(new ItemStack(MBlocks.biome_cobble, 1, 3), new ItemStack(MBlocks.biome_stones, 1, 3), .1F);
+		GameRegistry.addSmelting(new ItemStack(MBlocks.biome_cobble, 1, 4), new ItemStack(MBlocks.biome_stones, 1, 4), .1F);
+		GameRegistry.addSmelting(new ItemStack(MBlocks.biome_cobble, 1, 5), new ItemStack(MBlocks.biome_stones, 1, 5), .1F);
+		GameRegistry.addSmelting(new ItemStack(MBlocks.biome_cobble, 1, 6), new ItemStack(MBlocks.biome_stones, 1, 6), .1F);
+		GameRegistry.addSmelting(new ItemStack(MBlocks.biome_cobble, 1, 7), new ItemStack(MBlocks.biome_stones, 1, 7), .1F);
+		GameRegistry.addSmelting(new ItemStack(MBlocks.biome_cobble, 1, 8), new ItemStack(MBlocks.biome_stones, 1, 8), .1F);
+		
+		GameRegistry.addRecipe(new ItemStack(MBlocks.stone_pattern_bricks, 2), new Object[] { "BBB", "BBB", "BBB", 'B', MItems.stone_brick });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.stone_refined, 9), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(Blocks.stone, 1, 0) });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.stone_tiles, 4), new Object[] { "BB", "BB", 'B', MBlocks.stone_refined });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.stone_lamp_glowstone, 4), new Object[] { " S ", "SGS", " S ", 'S', new ItemStack(Blocks.stonebrick, 1, 3), 'G', Blocks.glowstone });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.stone_lamp_sunstone, 4), new Object[] { " S ", "SGS", " S ", 'S', new ItemStack(Blocks.stonebrick, 1, 3), 'G', MBlocks.sunstone_block });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.stone_lamp_prismarine, 4), new Object[] { " S ", "SGS", " S ", 'S', new ItemStack(Blocks.stonebrick, 1, 3), 'G', Blocks.sea_lantern });
+		
+		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.stone_button, 1), new Object[] { new ItemStack(MItems.stone_brick, 1) });
 		
 		// Tools and Weapons
 		GameRegistry.addRecipe(new ItemStack(MItems.copper_pickaxe), new Object[] { "III", " S ", " S ", 'I', MItems.copper_ingot, 'S', Items.stick });
@@ -79,6 +120,14 @@ public class MRecipes
 				remover.remove();
 			}
 			if (itemstack != null && itemstack.getItem() == Items.cookie)
+			{
+				remover.remove();
+			}
+			if (itemstack != null && itemstack == new ItemStack(Blocks.stonebrick, 4, 0))
+			{
+				remover.remove();
+			}
+			if (itemstack != null && itemstack == new ItemStack(Blocks.stone_button, 1))
 			{
 				remover.remove();
 			}

@@ -25,7 +25,18 @@ public class MItems extends Item
 	public static Item							copper_ingot;
 	public static Item							tin_ingot;
 	public static Item							sunstone_shard;
+	
 	public static Item							stone_brick;
+	public static Item							deepstone_brick;
+	public static Item							red_rock_brick;
+	public static Item							deep_red_rock_brick;
+	public static Item							coldstone_brick;
+	public static Item							deep_coldstone_brick;
+	public static Item							icestone_brick;
+	public static Item							glacierrock_brick;
+	public static Item							oceanstone_brick;
+	public static Item							pressurized_oceanstone_brick;
+	public static Item							slate_brick;
 	
 	public static Item							copper_pickaxe;
 	public static Item							copper_axe;
@@ -50,7 +61,18 @@ public class MItems extends Item
 		copper_ingot = new Item().setUnlocalizedName("copper_ingot").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		tin_ingot = new Item().setUnlocalizedName("tin_ingot").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		sunstone_shard = new Item().setUnlocalizedName("sunstone_shard").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		
 		stone_brick = new Item().setUnlocalizedName("stone_brick").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		deepstone_brick = new Item().setUnlocalizedName("deepstone_brick").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		red_rock_brick = new Item().setUnlocalizedName("red_rock_brick").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		deep_red_rock_brick = new Item().setUnlocalizedName("deep_red_rock_brick").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		coldstone_brick = new Item().setUnlocalizedName("coldstone_brick").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		deep_coldstone_brick = new Item().setUnlocalizedName("deep_coldstone_brick").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		icestone_brick = new Item().setUnlocalizedName("icestone_brick").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		glacierrock_brick = new Item().setUnlocalizedName("glacierrock_brick").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		oceanstone_brick = new Item().setUnlocalizedName("oceanstone_brick").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		pressurized_oceanstone_brick = new Item().setUnlocalizedName("pressurized_oceanstone_brick").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		slate_brick = new Item().setUnlocalizedName("slate_brick").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		
 		copper_pickaxe = new ItemMinistrappolationPickaxe(COPPER).setUnlocalizedName("copper_pickaxe").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		copper_axe = new ItemMinistrappolationAxe(COPPER).setUnlocalizedName("copper_axe").setCreativeTab(Minestrappolation.tabMinistrappolation);
@@ -73,7 +95,18 @@ public class MItems extends Item
 		GameRegistry.registerItem(copper_ingot, copper_ingot.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(tin_ingot, tin_ingot.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(sunstone_shard, sunstone_shard.getUnlocalizedName().substring(5));
+		
 		GameRegistry.registerItem(stone_brick, stone_brick.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(deepstone_brick, deepstone_brick.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(red_rock_brick, red_rock_brick.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(deep_red_rock_brick, deep_red_rock_brick.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(coldstone_brick, coldstone_brick.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(deep_coldstone_brick, deep_coldstone_brick.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(icestone_brick, icestone_brick.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(glacierrock_brick, glacierrock_brick.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(oceanstone_brick, oceanstone_brick.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(pressurized_oceanstone_brick, pressurized_oceanstone_brick.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(slate_brick, slate_brick.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerItem(copper_pickaxe, copper_pickaxe.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(copper_axe, copper_axe.getUnlocalizedName().substring(5));
@@ -96,7 +129,18 @@ public class MItems extends Item
 		registerRender(copper_ingot);
 		registerRender(tin_ingot);
 		registerRender(sunstone_shard);
+		
 		registerRender(stone_brick);
+		registerRender(deepstone_brick);
+		registerRender(coldstone_brick);
+		registerRender(deep_coldstone_brick);
+		registerRender(red_rock_brick);
+		registerRender(deep_red_rock_brick);
+		registerRender(icestone_brick);
+		registerRender(glacierrock_brick);
+		registerRender(oceanstone_brick);
+		registerRender(pressurized_oceanstone_brick);
+		registerRender(slate_brick);
 		
 		registerRender(copper_pickaxe);
 		registerRender(copper_axe);

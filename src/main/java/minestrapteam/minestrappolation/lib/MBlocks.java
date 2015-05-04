@@ -80,7 +80,7 @@ public class MBlocks
 		tin_block = new MBlock(Material.iron, MapColor.ironColor).setHardness(5.0F).setResistance(5.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("tin_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		sunstone_ore = new MBlockOre(Material.rock, MapColor.stoneColor).setHardness(2.8F).setResistance(4.0F).setStepSound(Block.soundTypePiston).setLightLevel(0.7F).setUnlocalizedName("sunstone_ore").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		sunstone_block = new BlockSunstoneBlock(Material.glass, MapColor.sandColor).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setLightLevel(0.9F).setUnlocalizedName("sunstone_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		slate = new MBlock(Material.rock, MapColor.stoneColor).setUnlocalizedName("slate");
+		slate = new MBlock(Material.rock, MapColor.grayColor).setUnlocalizedName("slate");
 		
 		snow_refined = new MBlockSnow(Material.snow, MapColor.snowColor).setHardness(0.4F).setStepSound(Block.soundTypeSnow).setUnlocalizedName("snow_refined").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		snow_bricks = new MBlockSnow(Material.snow, MapColor.snowColor).setHardness(0.6F).setStepSound(Block.soundTypeSnow).setUnlocalizedName("snow_bricks").setCreativeTab(Minestrappolation.tabMinistrappolation);
@@ -101,7 +101,7 @@ public class MBlocks
 		ministrapp_sapling = new MBlockSapling();
 		ministrapp_planks = new MBlockPlanks().setUnlocalizedName("ministrapp_planks");
 		
-		godstone = new BlockGodstone(Material.rock, MapColor.yellowColor).setHardness(6F).setResistance(9F).setUnlocalizedName("godstone");
+		godstone = new BlockGodstone(Material.rock, MapColor.sandColor).setHardness(3F).setResistance(15F).setUnlocalizedName("godstone");
 		
 		// Biome Stones
 		biome_stones = new BlockBiomeStones().setHardness(1.5F).setUnlocalizedName("biome_stone");
@@ -211,6 +211,7 @@ public class MBlocks
 		stone_pattern_bricks.setHarvestLevel("pickaxe", 0);
 		stone_refined.setHarvestLevel("pickaxe", 0);
 		stone_tiles.setHarvestLevel("pickaxe", 0);
+		godstone.setHarvestLevel("pickaxe", 0);
 		
 		// stone_decor.setHarvestLevel("pickaxe", 0);
 	}
