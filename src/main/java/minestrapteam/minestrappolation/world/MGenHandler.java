@@ -26,12 +26,12 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.google.common.base.Predicate;
 
-public class MinistrappolationGenHandler implements IWorldGenerator
+public class MGenHandler implements IWorldGenerator
 {
 	
 	public static void load()
 	{
-		GameRegistry.registerWorldGenerator(new MinistrappolationGenHandler(), 0);
+		GameRegistry.registerWorldGenerator(new MGenHandler(), 0);
 	}
 	
 	@Override

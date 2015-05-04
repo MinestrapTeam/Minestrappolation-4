@@ -1,12 +1,12 @@
 package minestrapteam.minestrappolation.lib;
 
 import minestrapteam.minestrappolation.Minestrappolation;
-import minestrapteam.minestrappolation.item.ItemMinistrappolationArmor;
-import minestrapteam.minestrappolation.item.ItemMinistrappolationAxe;
-import minestrapteam.minestrappolation.item.ItemMinistrappolationHoe;
-import minestrapteam.minestrappolation.item.ItemMinistrappolationPickaxe;
-import minestrapteam.minestrappolation.item.ItemMinistrappolationShovel;
-import minestrapteam.minestrappolation.item.ItemMinistrappolationSword;
+import minestrapteam.minestrappolation.item.ItemMArmor;
+import minestrapteam.minestrappolation.item.ItemMAxe;
+import minestrapteam.minestrappolation.item.ItemMHoe;
+import minestrapteam.minestrappolation.item.ItemMPickaxe;
+import minestrapteam.minestrappolation.item.ItemMShovel;
+import minestrapteam.minestrappolation.item.ItemMSword;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -74,16 +74,16 @@ public class MItems extends Item
 		pressurized_oceanstone_brick = new Item().setUnlocalizedName("pressurized_oceanstone_brick").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		slate_brick = new Item().setUnlocalizedName("slate_brick").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		
-		copper_pickaxe = new ItemMinistrappolationPickaxe(COPPER).setUnlocalizedName("copper_pickaxe").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		copper_axe = new ItemMinistrappolationAxe(COPPER).setUnlocalizedName("copper_axe").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		copper_shovel = new ItemMinistrappolationShovel(COPPER).setUnlocalizedName("copper_shovel").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		copper_hoe = new ItemMinistrappolationHoe(COPPER).setUnlocalizedName("copper_hoe").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		copper_sword = new ItemMinistrappolationSword(COPPER).setUnlocalizedName("copper_sword").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		copper_pickaxe = new ItemMPickaxe(COPPER, copper_ingot).setUnlocalizedName("copper_pickaxe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		copper_axe = new ItemMAxe(COPPER, copper_ingot).setUnlocalizedName("copper_axe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		copper_shovel = new ItemMShovel(COPPER, copper_ingot).setUnlocalizedName("copper_shovel").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		copper_hoe = new ItemMHoe(COPPER, copper_ingot).setUnlocalizedName("copper_hoe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		copper_sword = new ItemMSword(COPPER, copper_ingot).setUnlocalizedName("copper_sword").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		
-		tin_helmet = new ItemMinistrappolationArmor(ARMOR_TIN, 0, 0).setUnlocalizedName("tin_helmet").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		tin_chestplate = new ItemMinistrappolationArmor(ARMOR_TIN, 0, 1).setUnlocalizedName("tin_chestplate").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		tin_leggings = new ItemMinistrappolationArmor(ARMOR_TIN, 0, 2).setUnlocalizedName("tin_leggings").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		tin_boots = new ItemMinistrappolationArmor(ARMOR_TIN, 0, 3).setUnlocalizedName("tin_boots").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		tin_helmet = new ItemMArmor(ARMOR_TIN, 0, 0, tin_ingot).setUnlocalizedName("tin_helmet").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		tin_chestplate = new ItemMArmor(ARMOR_TIN, 0, 1, tin_ingot).setUnlocalizedName("tin_chestplate").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		tin_leggings = new ItemMArmor(ARMOR_TIN, 0, 2, tin_ingot).setUnlocalizedName("tin_leggings").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		tin_boots = new ItemMArmor(ARMOR_TIN, 0, 3, tin_ingot).setUnlocalizedName("tin_boots").setCreativeTab(Minestrappolation.tabMinistrappolation);
 	}
 	
 	public static void register()
