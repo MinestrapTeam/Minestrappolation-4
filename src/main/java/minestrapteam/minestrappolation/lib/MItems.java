@@ -50,7 +50,10 @@ public class MItems extends Item
 	public static Item							tin_leggings;
 	public static Item							tin_boots;
 	
-	public static Item							radiant_quartz;
+	public static Item							radiant_quartz;	
+	public static Item							meurodite_gem;
+	public static Item							torite_ingot;
+	public static Item 							desert_quartz;
 	
 	public static final Item.ToolMaterial		COPPER		= EnumHelper.addToolMaterial("COPPER", 1, 186, 4.5F, 1.5F, 18);
 	public static final ItemArmor.ArmorMaterial	ARMOR_TIN	= EnumHelper.addArmorMaterial("ARMOR_TIN", "tin", 4, new int[] { 2, 4, 3, 2 }, 6);
@@ -89,6 +92,9 @@ public class MItems extends Item
 		tin_boots = new ItemMArmor(ARMOR_TIN, 0, 3, tin_ingot).setUnlocalizedName("tin_boots").setCreativeTab(Minestrappolation.tabMinistrappolation);
 	
 		radiant_quartz = new MItemFoiled().setUnlocalizedName("radiant_quartz").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		meurodite_gem = new Item().setUnlocalizedName("meurodite_gem").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		torite_ingot = new Item().setUnlocalizedName("torite_ingot").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		desert_quartz = new Item().setUnlocalizedName("desert_quartz").setCreativeTab(Minestrappolation.tabMinistrappolation);
 	}
 	
 	public static void register()
@@ -125,6 +131,11 @@ public class MItems extends Item
 		GameRegistry.registerItem(tin_boots, tin_boots.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerItem(radiant_quartz, radiant_quartz.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(meurodite_gem, meurodite_gem.getUnlocalizedName().substring(5));
+		
+		GameRegistry.registerItem(torite_ingot, torite_ingot.getUnlocalizedName().substring(5));
+		
+		GameRegistry.registerItem(desert_quartz, "item_desert_quartz");
 	}
 	
 	public static void registerRenders()
@@ -148,6 +159,7 @@ public class MItems extends Item
 		registerRender(oceanstone_brick);
 		registerRender(pressurized_oceanstone_brick);
 		registerRender(slate_brick);
+		registerRender(desert_quartz);
 		
 		registerRender(copper_pickaxe);
 		registerRender(copper_axe);
@@ -161,6 +173,9 @@ public class MItems extends Item
 		registerRender(tin_boots);
 		
 		registerRender(radiant_quartz);
+		registerRender(meurodite_gem);
+		
+		registerRender(torite_ingot);
 	}
 	
 	public static void registerRender(Item item)

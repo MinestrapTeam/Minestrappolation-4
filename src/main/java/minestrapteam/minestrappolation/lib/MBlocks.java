@@ -32,7 +32,6 @@ import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-//import com.delocuro.ministrappolation.blocks.MinistrappolationContainer;
 
 public class MBlocks
 {
@@ -50,6 +49,9 @@ public class MBlocks
 	public static Block uranium_ore;
 	public static Block radiant_ore;
 	public static Block titanium_ore;
+	public static Block meurodite_ore;
+	public static Block torite_ore;
+	public static Block desert_quartz;
 	
 	public static Block	snow_refined;
 	public static Block	snow_bricks;
@@ -103,15 +105,13 @@ public class MBlocks
 		copper_block = new MBlock(Material.iron, MapColor.adobeColor).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("copper_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		tin_block = new MBlock(Material.iron, MapColor.ironColor).setHardness(5.0F).setResistance(5.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("tin_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		sunstone_block = new BlockSunstoneBlock(Material.glass, MapColor.sandColor).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setLightLevel(0.9F).setUnlocalizedName("sunstone_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		
+		godstone = new BlockGodstone(Material.rock, MapColor.sandColor).setHardness(3F).setResistance(15F).setUnlocalizedName("godstone");
+				
 		//WOOD
 		ministrapp_log = new MBlockLog().setUnlocalizedName("ministrapp_log");
 		ministrapp_leaves = new MBlockLeaves().setUnlocalizedName("ministrapp_leaves");
 		ministrapp_sapling = new MBlockSapling();
-		ministrapp_planks = new MBlockPlanks().setUnlocalizedName("ministrapp_planks");
-		
-		godstone = new BlockGodstone(Material.rock, MapColor.sandColor).setHardness(3F).setResistance(15F).setUnlocalizedName("godstone");
-		
+		ministrapp_planks = new MBlockPlanks().setUnlocalizedName("ministrapp_planks");	
 		
 		//ORES
 		sunstone_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.sunstone_shard, 2, 5, 1, 3, "pickaxe", 2, false).setHardness(2.8F).setResistance(4.0F).setStepSound(Block.soundTypePiston).setLightLevel(0.7F).setUnlocalizedName("sunstone_ore").setCreativeTab(Minestrappolation.tabMinistrappolation);
@@ -121,6 +121,9 @@ public class MBlocks
 		uranium_ore = new BlockUraniumOre(Material.rock, 2, 60).setHardness(1F).setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("uranium_ore");
 		radiant_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.radiant_quartz, 1, 5, 1, 2, "pickaxe", 0, true).setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("radiant_ore");
 		titanium_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 1, 2, 1, 0, "pickaxe", 0, false).setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("titanium_ore");
+		meurodite_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.meurodite_gem, 1, 2, 1, 0, "pickaxe", 0, false).setUnlocalizedName("meurodite_ore").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		torite_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 1, 2, 1, 0, "pickaxe", 0, false).setUnlocalizedName("torite_ore").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		desert_quartz = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.desert_quartz, 1, 2, 1, 2, "pickaxe", 0, true).setUnlocalizedName("desert_quartz").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		
 		// Biome Stones
 		biome_stones = new BlockBiomeStones().setHardness(1.5F).setUnlocalizedName("biome_stone");
@@ -162,6 +165,9 @@ public class MBlocks
 		register(uranium_ore);
 		register(radiant_ore);
 		register(titanium_ore);
+		register(meurodite_ore);
+		register(torite_ore);
+		register(desert_quartz);
 		
 		//Wood stuff
 		GameRegistry.registerBlock(ministrapp_log, ItemBlockLog.class, ministrapp_log.getUnlocalizedName().substring(5));
@@ -206,7 +212,9 @@ public class MBlocks
 		registerRender(plutonium_ore);
 		registerRender(uranium_ore);
 		registerRender(titanium_ore);
-		
+		registerRender(meurodite_ore);
+		registerRender(torite_ore);
+		registerRender(desert_quartz);
 	}
 	
 	private static void register(Block block)
