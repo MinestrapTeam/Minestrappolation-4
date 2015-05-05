@@ -32,9 +32,8 @@ public class Minestrappolation
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
-		
-		MBlocks.init();
 		MItems.init();
+		MBlocks.init();
 		MItems.register();
 		MRecipes.register();
 		MRecipes.removeRecipes();
@@ -53,7 +52,6 @@ public class Minestrappolation
 		proxy.registerRenders();
 		proxy.init(event);
 		MGenHandler.load();
-		
 	}
 	
 	@EventHandler

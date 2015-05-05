@@ -6,8 +6,10 @@ import minestrapteam.minestrappolation.block.BlockBiomeCobble;
 import minestrapteam.minestrappolation.block.BlockBiomeStones;
 import minestrapteam.minestrappolation.block.BlockBoulder;
 import minestrapteam.minestrappolation.block.BlockGodstone;
+import minestrapteam.minestrappolation.block.BlockPlutoniumOre;
 import minestrapteam.minestrappolation.block.BlockSunstoneBlock;
 import minestrapteam.minestrappolation.block.BlockTransparent;
+import minestrapteam.minestrappolation.block.BlockUraniumOre;
 import minestrapteam.minestrappolation.block.MBlock;
 import minestrapteam.minestrappolation.block.MBlockLeaves;
 import minestrapteam.minestrappolation.block.MBlockLog;
@@ -35,13 +37,19 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class MBlocks
 {
 	
-	public static Block	copper_ore;
+	
 	public static Block	copper_block;
-	public static Block	tin_ore;
 	public static Block	tin_block;
-	public static Block	sunstone_ore;
 	public static Block	sunstone_block;
 	public static Block	slate;
+	
+	public static Block	sunstone_ore;
+	public static Block	copper_ore;
+	public static Block	tin_ore;
+	public static Block plutonium_ore;
+	public static Block uranium_ore;
+	public static Block radiant_ore;
+	public static Block titanium_ore;
 	
 	public static Block	snow_refined;
 	public static Block	snow_bricks;
@@ -74,14 +82,10 @@ public class MBlocks
 	
 	public static void init()
 	{
-		copper_ore = new MBlockOre(Material.rock, MapColor.stoneColor).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("copper_ore").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		copper_block = new MBlock(Material.iron, MapColor.adobeColor).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("copper_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		tin_ore = new MBlock(Material.rock, MapColor.stoneColor).setHardness(3.0F).setResistance(3.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("tin_ore").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		tin_block = new MBlock(Material.iron, MapColor.ironColor).setHardness(5.0F).setResistance(5.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("tin_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		sunstone_ore = new MBlockOre(Material.rock, MapColor.stoneColor).setHardness(2.8F).setResistance(4.0F).setStepSound(Block.soundTypePiston).setLightLevel(0.7F).setUnlocalizedName("sunstone_ore").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		sunstone_block = new BlockSunstoneBlock(Material.glass, MapColor.sandColor).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setLightLevel(0.9F).setUnlocalizedName("sunstone_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		slate = new MBlock(Material.rock, MapColor.grayColor).setUnlocalizedName("slate");
 		
+		
+		//DECOR
 		snow_refined = new MBlockSnow(Material.snow, MapColor.snowColor).setHardness(0.4F).setStepSound(Block.soundTypeSnow).setUnlocalizedName("snow_refined").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		snow_bricks = new MBlockSnow(Material.snow, MapColor.snowColor).setHardness(0.6F).setStepSound(Block.soundTypeSnow).setUnlocalizedName("snow_bricks").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		snow_tiles = new MBlockSnow(Material.snow, MapColor.snowColor).setHardness(0.6F).setStepSound(Block.soundTypeSnow).setUnlocalizedName("snow_tiles").setCreativeTab(Minestrappolation.tabMinistrappolation);
@@ -96,12 +100,27 @@ public class MBlocks
 		stone_pattern_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_pattern_bricks").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		stone_refined = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_refined").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		stone_tiles = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_tiles").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		copper_block = new MBlock(Material.iron, MapColor.adobeColor).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("copper_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		tin_block = new MBlock(Material.iron, MapColor.ironColor).setHardness(5.0F).setResistance(5.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("tin_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		sunstone_block = new BlockSunstoneBlock(Material.glass, MapColor.sandColor).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setLightLevel(0.9F).setUnlocalizedName("sunstone_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		
+		//WOOD
 		ministrapp_log = new MBlockLog().setUnlocalizedName("ministrapp_log");
 		ministrapp_leaves = new MBlockLeaves().setUnlocalizedName("ministrapp_leaves");
 		ministrapp_sapling = new MBlockSapling();
 		ministrapp_planks = new MBlockPlanks().setUnlocalizedName("ministrapp_planks");
 		
 		godstone = new BlockGodstone(Material.rock, MapColor.sandColor).setHardness(3F).setResistance(15F).setUnlocalizedName("godstone");
+		
+		
+		//ORES
+		sunstone_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.sunstone_shard, 2, 5, 1, 3, "pickaxe", 2, false).setHardness(2.8F).setResistance(4.0F).setStepSound(Block.soundTypePiston).setLightLevel(0.7F).setUnlocalizedName("sunstone_ore").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		tin_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 1, 2, 1, 0, "pickaxe", 0, false).setHardness(3.0F).setResistance(3.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("tin_ore").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		copper_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 1, 2, 1, 0, "pickaxe", 0, false).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("copper_ore").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		plutonium_ore = new BlockPlutoniumOre(Material.rock, 5, 60).setHardness(1F).setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("plutonium_ore");
+		uranium_ore = new BlockUraniumOre(Material.rock, 2, 60).setHardness(1F).setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("uranium_ore");
+		radiant_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.radiant_quartz, 1, 5, 1, 2, "pickaxe", 0, true).setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("radiant_ore");
+		titanium_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 1, 2, 1, 0, "pickaxe", 0, false).setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("titanium_ore");
 		
 		// Biome Stones
 		biome_stones = new BlockBiomeStones().setHardness(1.5F).setUnlocalizedName("biome_stone");
@@ -138,6 +157,11 @@ public class MBlocks
 		register(stone_tiles);
 		
 		register(godstone);
+		
+		register(plutonium_ore);
+		register(uranium_ore);
+		register(radiant_ore);
+		register(titanium_ore);
 		
 		//Wood stuff
 		GameRegistry.registerBlock(ministrapp_log, ItemBlockLog.class, ministrapp_log.getUnlocalizedName().substring(5));
@@ -179,6 +203,9 @@ public class MBlocks
 		registerRender(ministrapp_leaves);
 		registerRender(ministrapp_sapling);
 		registerRender(godstone);
+		registerRender(plutonium_ore);
+		registerRender(uranium_ore);
+		registerRender(titanium_ore);
 		
 	}
 	
@@ -198,11 +225,8 @@ public class MBlocks
 		snow_refined.setHarvestLevel("shovel", 0);
 		snow_tiles.setHarvestLevel("shovel", 0);
 		snow_bricks.setHarvestLevel("shovel", 0);
-		copper_ore.setHarvestLevel("pickaxe", 0);
 		copper_block.setHarvestLevel("pickaxe", 0);
-		tin_ore.setHarvestLevel("pickaxe", 0);
 		tin_block.setHarvestLevel("pickaxe", 0);
-		sunstone_ore.setHarvestLevel("pickaxe", 2);
 		glass_window.setHarvestLevel("pickaxe", 0);
 		stone_boulder.setHarvestLevel("pickaxe", 1);
 		stone_lamp_glowstone.setHarvestLevel("pickaxe", 0);
@@ -212,7 +236,5 @@ public class MBlocks
 		stone_refined.setHarvestLevel("pickaxe", 0);
 		stone_tiles.setHarvestLevel("pickaxe", 0);
 		godstone.setHarvestLevel("pickaxe", 0);
-		
-		// stone_decor.setHarvestLevel("pickaxe", 0);
 	}
 }

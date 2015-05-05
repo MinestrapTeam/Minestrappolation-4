@@ -7,6 +7,7 @@ import minestrapteam.minestrappolation.item.ItemMHoe;
 import minestrapteam.minestrappolation.item.ItemMPickaxe;
 import minestrapteam.minestrappolation.item.ItemMShovel;
 import minestrapteam.minestrappolation.item.ItemMSword;
+import minestrapteam.minestrappolation.item.MItemFoiled;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -49,6 +50,8 @@ public class MItems extends Item
 	public static Item							tin_leggings;
 	public static Item							tin_boots;
 	
+	public static Item							radiant_quartz;
+	
 	public static final Item.ToolMaterial		COPPER		= EnumHelper.addToolMaterial("COPPER", 1, 186, 4.5F, 1.5F, 18);
 	public static final ItemArmor.ArmorMaterial	ARMOR_TIN	= EnumHelper.addArmorMaterial("ARMOR_TIN", "tin", 4, new int[] { 2, 4, 3, 2 }, 6);
 	
@@ -84,6 +87,8 @@ public class MItems extends Item
 		tin_chestplate = new ItemMArmor(ARMOR_TIN, 0, 1, tin_ingot).setUnlocalizedName("tin_chestplate").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		tin_leggings = new ItemMArmor(ARMOR_TIN, 0, 2, tin_ingot).setUnlocalizedName("tin_leggings").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		tin_boots = new ItemMArmor(ARMOR_TIN, 0, 3, tin_ingot).setUnlocalizedName("tin_boots").setCreativeTab(Minestrappolation.tabMinistrappolation);
+	
+		radiant_quartz = new MItemFoiled().setUnlocalizedName("radiant_quartz").setCreativeTab(Minestrappolation.tabMinistrappolation);
 	}
 	
 	public static void register()
@@ -118,6 +123,8 @@ public class MItems extends Item
 		GameRegistry.registerItem(tin_chestplate, tin_chestplate.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(tin_leggings, tin_leggings.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(tin_boots, tin_boots.getUnlocalizedName().substring(5));
+		
+		GameRegistry.registerItem(radiant_quartz, radiant_quartz.getUnlocalizedName().substring(5));
 	}
 	
 	public static void registerRenders()
@@ -152,6 +159,8 @@ public class MItems extends Item
 		registerRender(tin_chestplate);
 		registerRender(tin_leggings);
 		registerRender(tin_boots);
+		
+		registerRender(radiant_quartz);
 	}
 	
 	public static void registerRender(Item item)
