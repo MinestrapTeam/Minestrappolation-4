@@ -21,7 +21,7 @@ public class BiomeRedwood extends BiomeGenBase
 		
 		this.theBiomeDecorator = new MBiomeDecorator();
 		
-		this.setTemperatureRainfall(1.0F, 2F);
+		this.setTemperatureRainfall(1.0F, 1.5F);
 		this.setHeight(height_LowPlains);
 		this.enableSnow = false;
 		
