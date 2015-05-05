@@ -22,7 +22,7 @@ public class MBiomeManager
 	private static void initBiomes()
 	{
 		redwood = new BiomeRedwood(nextBiomeID).setBiomeName("Redwood Forest");
-		registerBiomes(redwood, BiomeType.WARM, Type.FOREST, 50);
+		registerBiomes(redwood, BiomeType.WARM, Type.FOREST, nextBiomeID());
 	}
 	
 	private static void registerBiomes(BiomeGenBase biome, BiomeType type, Type forgeType, int weight)
@@ -42,7 +42,8 @@ public class MBiomeManager
 			if (BiomeGenBase.getBiomeGenArray()[id] == null)
 			{
 				nextBiomeID = id + 1;
-				return id;
+				System.out.println("Found next Biome ID: " + nextBiomeID);
+				return nextBiomeID;
 			}
 		}
 		

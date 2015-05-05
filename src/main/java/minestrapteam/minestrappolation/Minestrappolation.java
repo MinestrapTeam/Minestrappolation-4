@@ -6,6 +6,7 @@ import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MItems;
 import minestrapteam.minestrappolation.lib.MRecipes;
 import minestrapteam.minestrappolation.lib.MReference;
+import minestrapteam.minestrappolation.util.MGuiHandler;
 import minestrapteam.minestrappolation.world.MBiomeManager;
 import minestrapteam.minestrappolation.world.MGenHandler;
 import net.minecraft.init.Blocks;
@@ -41,7 +42,7 @@ public class Minestrappolation
 		proxy.preInit(event);
 		if (Minestrappolation.proxy != null)
 		{
-			NetworkRegistry.INSTANCE.registerGuiHandler(this, Minestrappolation.proxy);
+			NetworkRegistry.INSTANCE.registerGuiHandler(this, new MGuiHandler());
 		}
 	
 	}

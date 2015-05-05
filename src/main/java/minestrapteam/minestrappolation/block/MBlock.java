@@ -8,7 +8,6 @@ import net.minecraft.block.state.IBlockState;
 
 public class MBlock extends Block
 {
-	
 	private final MapColor	mapColor;
 	
 	public MBlock(Material materialIn, MapColor mapColorIn)
@@ -23,5 +22,4 @@ public class MBlock extends Block
 	{
 		return this.mapColor;
 	}
-	
 }

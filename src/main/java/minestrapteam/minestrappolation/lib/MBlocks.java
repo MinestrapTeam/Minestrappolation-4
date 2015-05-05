@@ -1,6 +1,7 @@
 package minestrapteam.minestrappolation.lib;
 
 import minestrapteam.minestrappolation.Minestrappolation;
+import minestrapteam.minestrappolation.block.BlockBarrel;
 import minestrapteam.minestrappolation.block.BlockBiomeBricks;
 import minestrapteam.minestrappolation.block.BlockBiomeCobble;
 import minestrapteam.minestrappolation.block.BlockBiomeStones;
@@ -77,6 +78,8 @@ public class MBlocks
 	
 	public static Block godstone;
 	
+	public static Block barrel;
+	
 	// Biome Stones
 	public static Block			   biome_stones;
 	public static Block			   biome_cobble;
@@ -135,6 +138,8 @@ public class MBlocks
 		biome_cobble = new BlockBiomeCobble().setHardness(1F).setUnlocalizedName("biome_cobble");
 		biome_bricks = new BlockBiomeBricks().setHardness(.8F).setUnlocalizedName("biome_bricks");
 		
+		barrel = new BlockBarrel().setCreativeTab(Minestrappolation.tabMinistrappolation);
+		
 		register();
 		registerHarvestLevels();
 	}
@@ -175,6 +180,8 @@ public class MBlocks
 		register(desert_quartz);
 		register(blazium_ore);
 		register(soul_ore);
+		
+		register(barrel);
 		
 		//Wood stuff
 		GameRegistry.registerBlock(ministrapp_log, ItemBlockLog.class, ministrapp_log.getUnlocalizedName().substring(5));
@@ -224,6 +231,7 @@ public class MBlocks
 		registerRender(desert_quartz);
 		registerRender(blazium_ore);
 		registerRender(soul_ore);
+		registerRender(barrel);
 	}
 	
 	private static void register(Block block)

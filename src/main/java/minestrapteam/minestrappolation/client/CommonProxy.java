@@ -6,6 +6,7 @@ import minestrapteam.minestrappolation.block.BlockBiomeStones;
 import minestrapteam.minestrappolation.block.MBlockPlanks;
 import minestrapteam.minestrappolation.block.MStoneType;
 import minestrapteam.minestrappolation.lib.MReference;
+import minestrapteam.minestrappolation.tileentity.TileEntityBarrel;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelBakery;
 import net.minecraft.client.resources.model.ModelResourceLocation;
@@ -35,6 +36,8 @@ public abstract class CommonProxy implements IGuiHandler
 		BlockBiomeBricks.preinventoryRender();
 		BlockBiomeCobble.preinventoryRender();
 		MBlockPlanks.preinventoryRender();
+		
+		GameRegistry.registerTileEntity(TileEntityBarrel.class, "tile_entity_barrel");
 	}
 	
 	public void init(FMLInitializationEvent event)
