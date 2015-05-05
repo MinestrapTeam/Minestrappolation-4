@@ -6,6 +6,7 @@ import minestrapteam.minestrappolation.block.BlockBiomeBricks;
 import minestrapteam.minestrappolation.block.BlockBiomeCobble;
 import minestrapteam.minestrappolation.block.BlockBiomeStones;
 import minestrapteam.minestrappolation.block.BlockBoulder;
+import minestrapteam.minestrappolation.block.BlockCrate;
 import minestrapteam.minestrappolation.block.BlockGodstone;
 import minestrapteam.minestrappolation.block.BlockPlutoniumOre;
 import minestrapteam.minestrappolation.block.BlockSoulOre;
@@ -79,6 +80,7 @@ public class MBlocks
 	public static Block godstone;
 	
 	public static Block barrel;
+	public static Block crate;
 	
 	// Biome Stones
 	public static Block			   biome_stones;
@@ -138,7 +140,8 @@ public class MBlocks
 		biome_cobble = new BlockBiomeCobble().setHardness(1F).setUnlocalizedName("biome_cobble");
 		biome_bricks = new BlockBiomeBricks().setHardness(.8F).setUnlocalizedName("biome_bricks");
 		
-		barrel = new BlockBarrel().setCreativeTab(Minestrappolation.tabMinistrappolation);
+		barrel = new BlockBarrel().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("barrel");
+		crate = new BlockCrate().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("crate");
 		
 		register();
 		registerHarvestLevels();
@@ -182,6 +185,7 @@ public class MBlocks
 		register(soul_ore);
 		
 		register(barrel);
+		register(crate);
 		
 		//Wood stuff
 		GameRegistry.registerBlock(ministrapp_log, ItemBlockLog.class, ministrapp_log.getUnlocalizedName().substring(5));
@@ -232,6 +236,7 @@ public class MBlocks
 		registerRender(blazium_ore);
 		registerRender(soul_ore);
 		registerRender(barrel);
+		registerRender(crate);
 	}
 	
 	private static void register(Block block)
