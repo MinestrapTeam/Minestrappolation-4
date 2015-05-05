@@ -89,7 +89,7 @@ public class MBlockOre extends MBlock
 		if (this.getItemDropped(state, rand, fortune) != Item.getItemFromBlock(this))
 		{
 			int j = 0;		
-			j = MathHelper.getRandomIntegerInRange(rand, expMin, expMax);
+			j = MathHelper.getRandomIntegerInRange(rand, expMin, expMax + fortune);
 			return j;
 		}
 		return 0;

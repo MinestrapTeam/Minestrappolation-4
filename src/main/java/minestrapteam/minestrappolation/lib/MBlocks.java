@@ -7,6 +7,7 @@ import minestrapteam.minestrappolation.block.BlockBiomeStones;
 import minestrapteam.minestrappolation.block.BlockBoulder;
 import minestrapteam.minestrappolation.block.BlockGodstone;
 import minestrapteam.minestrappolation.block.BlockPlutoniumOre;
+import minestrapteam.minestrappolation.block.BlockSoulOre;
 import minestrapteam.minestrappolation.block.BlockSunstoneBlock;
 import minestrapteam.minestrappolation.block.BlockTransparent;
 import minestrapteam.minestrappolation.block.BlockUraniumOre;
@@ -52,6 +53,8 @@ public class MBlocks
 	public static Block meurodite_ore;
 	public static Block torite_ore;
 	public static Block desert_quartz;
+	public static Block blazium_ore;
+	public static Block soul_ore;
 	
 	public static Block	snow_refined;
 	public static Block	snow_bricks;
@@ -124,6 +127,8 @@ public class MBlocks
 		meurodite_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.meurodite_gem, 1, 2, 1, 0, "pickaxe", 0, false).setUnlocalizedName("meurodite_ore").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		torite_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 1, 2, 1, 0, "pickaxe", 0, false).setUnlocalizedName("torite_ore").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		desert_quartz = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.desert_quartz, 1, 2, 1, 2, "pickaxe", 0, true).setUnlocalizedName("desert_quartz").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		blazium_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.blaze_shard, 1, 2, 1, 4, "pickaxe", 0, false).setUnlocalizedName("blazium_ore").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		soul_ore = new BlockSoulOre(Material.rock, MapColor.stoneColor, MItems.soul_gem, 1, 7, 1, 0, "pickaxe", 0, false);
 		
 		// Biome Stones
 		biome_stones = new BlockBiomeStones().setHardness(1.5F).setUnlocalizedName("biome_stone");
@@ -168,6 +173,8 @@ public class MBlocks
 		register(meurodite_ore);
 		register(torite_ore);
 		register(desert_quartz);
+		register(blazium_ore);
+		register(soul_ore);
 		
 		//Wood stuff
 		GameRegistry.registerBlock(ministrapp_log, ItemBlockLog.class, ministrapp_log.getUnlocalizedName().substring(5));
@@ -215,6 +222,8 @@ public class MBlocks
 		registerRender(meurodite_ore);
 		registerRender(torite_ore);
 		registerRender(desert_quartz);
+		registerRender(blazium_ore);
+		registerRender(soul_ore);
 	}
 	
 	private static void register(Block block)

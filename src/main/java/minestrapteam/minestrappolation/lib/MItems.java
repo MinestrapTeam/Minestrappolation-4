@@ -7,6 +7,7 @@ import minestrapteam.minestrappolation.item.ItemMHoe;
 import minestrapteam.minestrappolation.item.ItemMPickaxe;
 import minestrapteam.minestrappolation.item.ItemMShovel;
 import minestrapteam.minestrappolation.item.ItemMSword;
+import minestrapteam.minestrappolation.item.ItemSoulGem;
 import minestrapteam.minestrappolation.item.MItemFoiled;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
@@ -52,8 +53,10 @@ public class MItems extends Item
 	
 	public static Item							radiant_quartz;	
 	public static Item							meurodite_gem;
+	public static Item							soul_gem;
 	public static Item							torite_ingot;
 	public static Item 							desert_quartz;
+	public static Item 							blaze_shard;
 	
 	public static final Item.ToolMaterial		COPPER		= EnumHelper.addToolMaterial("COPPER", 1, 186, 4.5F, 1.5F, 18);
 	public static final ItemArmor.ArmorMaterial	ARMOR_TIN	= EnumHelper.addArmorMaterial("ARMOR_TIN", "tin", 4, new int[] { 2, 4, 3, 2 }, 6);
@@ -95,6 +98,8 @@ public class MItems extends Item
 		meurodite_gem = new Item().setUnlocalizedName("meurodite_gem").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		torite_ingot = new Item().setUnlocalizedName("torite_ingot").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		desert_quartz = new Item().setUnlocalizedName("desert_quartz").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		blaze_shard = new Item().setUnlocalizedName("blaze_shard").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		soul_gem = new ItemSoulGem().setUnlocalizedName("soul_gem").setCreativeTab(Minestrappolation.tabMinistrappolation);
 	}
 	
 	public static void register()
@@ -132,9 +137,9 @@ public class MItems extends Item
 		
 		GameRegistry.registerItem(radiant_quartz, radiant_quartz.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(meurodite_gem, meurodite_gem.getUnlocalizedName().substring(5));
-		
-		GameRegistry.registerItem(torite_ingot, torite_ingot.getUnlocalizedName().substring(5));
-		
+		GameRegistry.registerItem(blaze_shard, blaze_shard.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(soul_gem, soul_gem.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(torite_ingot, torite_ingot.getUnlocalizedName().substring(5));		
 		GameRegistry.registerItem(desert_quartz, "item_desert_quartz");
 	}
 	
@@ -174,7 +179,8 @@ public class MItems extends Item
 		
 		registerRender(radiant_quartz);
 		registerRender(meurodite_gem);
-		
+		registerRender(blaze_shard);
+		registerRender(soul_gem);
 		registerRender(torite_ingot);
 	}
 	
