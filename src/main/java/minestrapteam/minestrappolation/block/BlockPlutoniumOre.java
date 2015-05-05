@@ -2,9 +2,11 @@ package minestrapteam.minestrappolation.block;
 
 import java.util.Random;
 
+import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntitySkeleton;
+import net.minecraft.item.Item;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.BlockPos;
@@ -14,16 +16,10 @@ import net.minecraft.world.World;
 
 public class BlockPlutoniumOre extends BlockRadiation
 {
-	public BlockPlutoniumOre(Material material, int range, int rate)
+	public BlockPlutoniumOre(int range, int rate, Material material, MapColor mapColor, Item itemDrop, int expMin, int expMax, int dropAmount, int bonusAmount, String tool, int level, boolean silkHarvest)
 	{
-		super(material, range, rate);
+		super(range, rate, material, mapColor, itemDrop, expMin, expMax, dropAmount,bonusAmount, tool, level, silkHarvest);
 	}	
-	
-	@Override
-	public int quantityDropped(Random random)
-	{
-		return 1 + random.nextInt(2);
-	}
 	
 	@Override
 	public void addPotionEffect(EntityLivingBase living)

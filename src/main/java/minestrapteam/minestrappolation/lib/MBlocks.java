@@ -117,18 +117,18 @@ public class MBlocks
 		ministrapp_planks = new MBlockPlanks().setUnlocalizedName("ministrapp_planks");	
 		
 		//ORES
-		sunstone_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.sunstone_shard, 2, 5, 1, 3, "pickaxe", 2, false).setHardness(2.8F).setResistance(4.0F).setStepSound(Block.soundTypePiston).setLightLevel(0.7F).setUnlocalizedName("sunstone_ore").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		tin_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 1, 2, 1, 0, "pickaxe", 0, false).setHardness(3.0F).setResistance(3.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("tin_ore").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		copper_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 1, 2, 1, 0, "pickaxe", 0, false).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("copper_ore").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		plutonium_ore = new BlockPlutoniumOre(Material.rock, 5, 60).setHardness(1F).setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("plutonium_ore");
-		uranium_ore = new BlockUraniumOre(Material.rock, 2, 60).setHardness(1F).setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("uranium_ore");
-		radiant_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.radiant_quartz, 1, 5, 1, 2, "pickaxe", 0, true).setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("radiant_ore");
-		titanium_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 1, 2, 1, 0, "pickaxe", 0, false).setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("titanium_ore");
-		meurodite_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.meurodite_gem, 1, 2, 1, 0, "pickaxe", 0, false).setUnlocalizedName("meurodite_ore").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		torite_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 1, 2, 1, 0, "pickaxe", 0, false).setUnlocalizedName("torite_ore").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		desert_quartz = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.desert_quartz, 1, 2, 1, 2, "pickaxe", 0, true).setUnlocalizedName("desert_quartz").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		blazium_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.blaze_shard, 1, 2, 1, 4, "pickaxe", 0, false).setUnlocalizedName("blazium_ore").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		soul_ore = new BlockSoulOre(Material.rock, MapColor.stoneColor, MItems.soul_gem, 1, 7, 1, 0, "pickaxe", 0, false);
+		sunstone_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.sunstone_shard, 2, 5, 1, 3, "pickaxe", 2, false).setHardness(2.8F).setResistance(4.0F).setStepSound(Block.soundTypePiston).setLightLevel(0.7F).setUnlocalizedName("sunstone_ore");
+		tin_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 1, 2, 1, 0, "pickaxe", 0, false).setHardness(3.0F).setResistance(3.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("tin_ore");
+		copper_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 1, 2, 1, 0, "pickaxe", 0, false).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("copper_ore");
+		plutonium_ore = new BlockPlutoniumOre(5, 60, Material.rock, MapColor.stoneColor, null, 1, 2, 1, 0, "pickaxe", 0, false).setHardness(1F).setUnlocalizedName("plutonium_ore");
+		uranium_ore = new BlockUraniumOre(2, 60, Material.rock, MapColor.stoneColor, null, 1, 2, 1, 0, "pickaxe", 0, false).setHardness(1F).setUnlocalizedName("uranium_ore");
+		radiant_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.radiant_quartz, 1, 5, 1, 2, "pickaxe", 0, true).setUnlocalizedName("radiant_ore");
+		titanium_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 1, 2, 1, 0, "pickaxe", 0, false).setUnlocalizedName("titanium_ore");
+		meurodite_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.meurodite_gem, 1, 2, 1, 0, "pickaxe", 0, false).setUnlocalizedName("meurodite_ore");
+		torite_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 1, 2, 1, 0, "pickaxe", 0, false).setUnlocalizedName("torite_ore");
+		desert_quartz = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.desert_quartz, 1, 2, 1, 2, "pickaxe", 0, true).setUnlocalizedName("desert_quartz");
+		blazium_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.blaze_shard, 1, 2, 1, 4, "pickaxe", 0, false).setUnlocalizedName("blazium_ore");
+		soul_ore = new BlockSoulOre(Material.rock, MapColor.stoneColor, MItems.soul_gem, 1, 7, 1, 0, "pickaxe", 0, false).setUnlocalizedName("soul_ore");
 		
 		// Biome Stones
 		biome_stones = new BlockBiomeStones().setHardness(1.5F).setUnlocalizedName("biome_stone");

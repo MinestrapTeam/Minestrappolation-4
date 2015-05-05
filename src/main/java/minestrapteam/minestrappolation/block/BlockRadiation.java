@@ -5,22 +5,24 @@ import java.util.List;
 import java.util.Random;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.item.Item;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 
-public abstract class BlockRadiation extends Block
+public abstract class BlockRadiation extends MBlockOre
 {
 	
 	int range;
 	int effectRate;
 	
-	public BlockRadiation(Material material, int range, int rate)
+	public BlockRadiation(int range, int rate, Material material, MapColor mapColor, Item itemDrop, int expMin, int expMax, int dropAmount, int bonusAmount, String tool, int level, boolean silkHarvest)
 	{
-		super(material);
+		super(material, mapColor, itemDrop, expMin, expMax, dropAmount,bonusAmount, tool, level, silkHarvest);
 		this.range = range;
 		this.effectRate = rate;
 	}
