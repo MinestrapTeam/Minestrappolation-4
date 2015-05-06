@@ -107,7 +107,7 @@ public class MGenHandler implements IWorldGenerator
 	
 	public void genBiomeStone(World world, int chunkX, int chunkZ, Random random)
 	{
-		BlockPos pos = new BlockPos(chunkX * 16, 0, chunkZ * 16);
+		BlockPos pos = new BlockPos(chunkX, 0, chunkZ);
 		Chunk chunk = world.getChunkFromBlockCoords(pos);
 		WorldChunkManager chunkManager = world.getWorldChunkManager();
 		
@@ -165,7 +165,7 @@ public class MGenHandler implements IWorldGenerator
 					dType = MStoneType.DEEPSTONE;
 				}
 				
-				for (int y = 256; y >= 0; y--)
+				for (int y = 128; y >= 0; y--)
 				{
 					BlockPos subpos2 = new BlockPos(x, y, z);
 					Block block = chunk.getBlock(x, y, z);
@@ -179,10 +179,7 @@ public class MGenHandler implements IWorldGenerator
 						}
 						else
 						{
-							if (biome.temperature < 0.4F || biome.temperature >= 1.0F || biome.getTempCategory() == TempCategory.OCEAN)
-							{
-								chunk.setBlockState(subpos2, stoneBlock.withProperty(BlockBiomeStones.VARIANT, sType));
-							}
+							chunk.setBlockState(subpos2, stoneBlock.withProperty(BlockBiomeStones.VARIANT, sType));
 						}
 					}
 					else if (block instanceof BlockOre)

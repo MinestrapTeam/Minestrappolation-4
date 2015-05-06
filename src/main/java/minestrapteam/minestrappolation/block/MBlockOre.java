@@ -9,7 +9,9 @@ import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
@@ -17,32 +19,53 @@ import net.minecraft.world.World;
 
 public class MBlockOre extends MBlock
 {
-	Item itemDrop;
+	Item itemStack;
 	int dropAmount;
 	int bonusAmount;
 	int expMin;
 	int expMax;
+	int meta;
 	boolean silkHarvest;
 	
-	
-	public MBlockOre(Material materialIn, MapColor mapColorIn, Item itemDrop, int expMin, int expMax, int dropAmount, int bonusAmount, String tool, int level, boolean silkHarvest)
+	public MBlockOre(Material materialIn, MapColor mapColorIn, Item itemDrop, int meta, int expMin, int expMax, int dropAmount, int bonusAmount, String tool, int level, boolean silkHarvest)
 	{
 		super(materialIn, mapColorIn);
-		this.itemDrop = itemDrop;
+		this.itemStack = itemDrop;
 		this.expMin = expMin;
 		this.expMax = expMax;
 		this.dropAmount = dropAmount;
 		this.bonusAmount = bonusAmount;
 		this.setHarvestLevel(tool, level);
 		this.silkHarvest = silkHarvest;
+		this.meta = meta;
 	}
+	
+	public MBlockOre(Material materialIn, MapColor mapColorIn, Item itemDrop, int expMin, int expMax, int dropAmount, int bonusAmount, String tool, int level, boolean silkHarvest)
+	{
+		super(materialIn, mapColorIn);
+		this.itemStack = itemDrop;
+		this.expMin = expMin;
+		this.expMax = expMax;
+		this.dropAmount = dropAmount;
+		this.bonusAmount = bonusAmount;
+		this.setHarvestLevel(tool, level);
+		this.silkHarvest = silkHarvest;
+		this.meta = 0;
+	}
+	
+	@Override
+	public int damageDropped(IBlockState state)
+    {
+        return meta;
+    }
+
 	
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
 	{
-		if(itemDrop != null)
+		if(itemStack != null)
 		{
-			return itemDrop;
+			return itemStack;
 		}
 		return Item.getItemFromBlock(this);
 	}

@@ -29,9 +29,9 @@ public class BlockBiomeLapis extends MBlockOre
 	
 	private static final PropertyEnum	VARIANT	= PropertyEnum.create("type", MStoneType.class);
 	
-	public BlockBiomeLapis(int range, int rate, Material material, MapColor mapColor, Item itemDrop, int expMin, int expMax, int dropAmount, int bonusAmount, String tool, int level, boolean silkHarvest)
+	public BlockBiomeLapis(int range, int rate, Material material, MapColor mapColor, Item itemDrop, int meta, int expMin, int expMax, int dropAmount, int bonusAmount, String tool, int level, boolean silkHarvest)
 	{
-		super(material, mapColor, itemDrop, expMin, expMax, dropAmount,bonusAmount, tool, level, silkHarvest);
+		super(material, mapColor, itemDrop, meta, expMin, expMax, dropAmount,bonusAmount, tool, level, silkHarvest);
 		this.setCreativeTab(Minestrappolation.tabMinistrappolation);
 		this.setUnlocalizedName("biome_lapis");
 	}
@@ -40,12 +40,6 @@ public class BlockBiomeLapis extends MBlockOre
 	protected BlockState createBlockState()
 	{
 		return new BlockState(this, new IProperty[] { VARIANT });
-	}
-	
-	@Override
-	public int damageDropped(IBlockState state)
-	{
-		return ((MStoneType) state.getValue(VARIANT)).getMetadata();
 	}
 	
 	@Override

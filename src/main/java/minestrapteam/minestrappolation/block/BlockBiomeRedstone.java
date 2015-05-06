@@ -35,9 +35,9 @@ public class BlockBiomeRedstone extends MBlockOre
 	private static final PropertyEnum	VARIANT	= PropertyEnum.create("type", MStoneType.class);
 	//private final boolean isOn;
 	
-	public BlockBiomeRedstone(int range, int rate, Material material, MapColor mapColor, Item itemDrop, int expMin, int expMax, int dropAmount, int bonusAmount, String tool, int level, boolean silkHarvest)
+	public BlockBiomeRedstone(int range, int rate, Material material, MapColor mapColor, Item itemDrop, int meta, int expMin, int expMax, int dropAmount, int bonusAmount, String tool, int level, boolean silkHarvest)
 	{
-		super(material, mapColor, itemDrop, expMin, expMax, dropAmount,bonusAmount, tool, level, silkHarvest);
+		super(material, mapColor, itemDrop, meta, expMin, expMax, dropAmount,bonusAmount, tool, level, silkHarvest);
 		this.setCreativeTab(Minestrappolation.tabMinistrappolation);
 		this.setUnlocalizedName("biome_redstone");
 		/*

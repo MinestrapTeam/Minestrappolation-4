@@ -28,6 +28,10 @@ import minestrapteam.minestrappolation.block.MBlockSnow;
 import minestrapteam.minestrappolation.item.ItemBlockBiomeBricks;
 import minestrapteam.minestrappolation.item.ItemBlockBiomeCoal;
 import minestrapteam.minestrappolation.item.ItemBlockBiomeCobble;
+import minestrapteam.minestrappolation.item.ItemBlockBiomeGold;
+import minestrapteam.minestrappolation.item.ItemBlockBiomeIron;
+import minestrapteam.minestrappolation.item.ItemBlockBiomeLapis;
+import minestrapteam.minestrappolation.item.ItemBlockBiomeRedstone;
 import minestrapteam.minestrappolation.item.ItemBlockBiomeStones;
 import minestrapteam.minestrappolation.item.ItemBlockLeaves;
 import minestrapteam.minestrappolation.item.ItemBlockLog;
@@ -39,7 +43,6 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.init.Items;
-import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -137,24 +140,24 @@ public class MBlocks
 		ministrapp_planks = new MBlockPlanks().setUnlocalizedName("ministrapp_planks");	
 		
 		//ORES
-		sunstone_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.sunstone_shard, 2, 5, 1, 3, "pickaxe", 2, true).setHardness(2.6F).setResistance(4.0F).setStepSound(Block.soundTypePiston).setLightLevel(0.7F).setUnlocalizedName("sunstone_ore");
+		sunstone_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.sunstone_shard, 0, 2, 5, 1, 3, "pickaxe", 2, true).setHardness(2.6F).setResistance(4.0F).setStepSound(Block.soundTypePiston).setLightLevel(0.7F).setUnlocalizedName("sunstone_ore");
 		tin_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 0, false).setHardness(3.0F).setResistance(3.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("tin_ore");
 		copper_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 0, false).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("copper_ore");
 		plutonium_ore = new BlockPlutoniumOre(5, 60, Material.rock, MapColor.stoneColor, null, 1, 2, 1, 0, "pickaxe", 2, true).setHardness(3.0F).setResistance(5.0F).setUnlocalizedName("plutonium_ore");
 		uranium_ore = new BlockUraniumOre(2, 60, Material.rock, MapColor.stoneColor, null, 1, 2, 1, 0, "pickaxe", 2, true).setHardness(3.0F).setResistance(5.0F).setUnlocalizedName("uranium_ore");
-		radiant_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.radiant_quartz, 1, 5, 1, 2, "pickaxe", 3, true).setHardness(3.0F).setResistance(5.0F).setUnlocalizedName("radiant_ore");
+		radiant_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.radiant_quartz, 0, 1, 5, 1, 2, "pickaxe", 3, true).setHardness(3.0F).setResistance(5.0F).setUnlocalizedName("radiant_ore");
 		titanium_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 3, false).setHardness(5.0F).setResistance(40.0F).setUnlocalizedName("titanium_ore");
-		meurodite_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.meurodite_gem, 1, 2, 1, 0, "pickaxe", 2, true).setHardness(3.0F).setResistance(5.0F).setUnlocalizedName("meurodite_ore");
+		meurodite_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.meurodite_gem, 0, 1, 2, 1, 0, "pickaxe", 2, true).setHardness(3.0F).setResistance(5.0F).setUnlocalizedName("meurodite_ore");
 		torite_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 2, false).setHardness(3.0F).setResistance(5.0F).setUnlocalizedName("torite_ore");
-		desert_quartz = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.desert_quartz, 1, 2, 1, 2, "pickaxe", 0, true).setHardness(2.0F).setResistance(3.0F).setUnlocalizedName("desert_quartz");
-		blazium_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.blaze_shard, 1, 2, 1, 4, "pickaxe", 2, true).setHardness(3.0F).setResistance(5.0F).setUnlocalizedName("blazium_ore");
-		soul_ore = new BlockSoulOre(Material.rock, MapColor.stoneColor, MItems.soul_gem, 1, 7, 1, 0, "shovel", 2, true).setHardness(2.0F).setResistance(3.0F).setUnlocalizedName("soul_ore");
+		desert_quartz = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.desert_quartz, 0, 1, 2, 1, 2, "pickaxe", 0, true).setHardness(2.0F).setResistance(3.0F).setUnlocalizedName("desert_quartz");
+		blazium_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.blaze_shard, 0, 1, 2, 1, 4, "pickaxe", 2, true).setHardness(3.0F).setResistance(5.0F).setUnlocalizedName("blazium_ore");
+		soul_ore = new BlockSoulOre(Material.rock, MapColor.stoneColor, MItems.soul_gem, 0, 1, 7, 1, 0, "shovel", 2, true).setHardness(2.0F).setResistance(3.0F).setUnlocalizedName("soul_ore");
 		
-		biome_coal = new BlockBiomeCoal(0, 0, Material.rock, MapColor.stoneColor, Items.coal, 0, 1, 1, 0, "pickaxe", 0, true).setHardness(3.0F).setResistance(5.0F).setUnlocalizedName("biome_coal");
+		biome_coal = new BlockBiomeCoal(0, 0, Material.rock, MapColor.stoneColor, Items.coal, 1, 0, 1, 1, 0, "pickaxe", 0, true).setHardness(3.0F).setResistance(5.0F).setUnlocalizedName("biome_coal");
 		biome_iron = new BlockBiomeIron(0, 0, Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 1, false).setHardness(3.0F).setResistance(5.0F).setUnlocalizedName("biome_iron");
 		biome_gold = new BlockBiomeGold(0, 0, Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 2, false).setHardness(3.0F).setResistance(5.0F).setUnlocalizedName("biome_gold");
-		biome_redstone = new BlockBiomeRedstone(0, 0, Material.rock, MapColor.stoneColor, Items.redstone, 1, 5, 4, 2, "pickaxe", 2, true).setHardness(3.0F).setResistance(5.0F).setUnlocalizedName("biome_redstone");
-		biome_lapis = new BlockBiomeLapis(0, 0, Material.rock, MapColor.stoneColor, Item.getByNameOrId("dye 4"), 2, 5, 4, 5, "pickaxe", 1, true).setHardness(3.0F).setResistance(5.0F).setUnlocalizedName("biome_lapis");
+		biome_redstone = new BlockBiomeRedstone(0, 0, Material.rock, MapColor.stoneColor, Items.redstone, 0, 1, 5, 4, 2, "pickaxe", 2, true).setHardness(3.0F).setResistance(5.0F).setUnlocalizedName("biome_redstone");
+		biome_lapis = new BlockBiomeLapis(0, 0, Material.rock, MapColor.stoneColor, Items.dye, 4, 2, 5, 4, 5, "pickaxe", 1, true).setHardness(3.0F).setResistance(5.0F).setUnlocalizedName("biome_lapis");
 		
 		// Biome Stones
 		biome_stones = new BlockBiomeStones().setHardness(1.5F).setUnlocalizedName("biome_stone");
@@ -216,10 +219,10 @@ public class MBlocks
 		
 		// Biome Stones
 		GameRegistry.registerBlock(biome_coal, ItemBlockBiomeCoal.class, biome_coal.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(biome_iron, ItemBlockBiomeCoal.class, biome_iron.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(biome_gold, ItemBlockBiomeCoal.class, biome_gold.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(biome_redstone, ItemBlockBiomeCoal.class, biome_redstone.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(biome_lapis, ItemBlockBiomeCoal.class, biome_lapis.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(biome_iron, ItemBlockBiomeIron.class, biome_iron.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(biome_gold, ItemBlockBiomeGold.class, biome_gold.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(biome_redstone, ItemBlockBiomeRedstone.class, biome_redstone.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(biome_lapis, ItemBlockBiomeLapis.class, biome_lapis.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerBlock(biome_stones, ItemBlockBiomeStones.class, biome_stones.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(biome_cobble, ItemBlockBiomeCobble.class, biome_cobble.getUnlocalizedName().substring(5));

@@ -15,8 +15,8 @@ import net.minecraftforge.common.IPlantable;
 
 public class BlockSoulOre extends MBlockOre{
 
-	public BlockSoulOre(Material materialIn, MapColor mapColorIn, Item itemDrop, int expMin, int expMax, int dropAmount, int bonusAmount, String tool, int level, boolean silkHarvest) {
-		super(materialIn, mapColorIn, itemDrop, expMin, expMax, dropAmount,bonusAmount, tool, level, silkHarvest);
+	public BlockSoulOre(Material materialIn, MapColor mapColorIn, Item itemDrop, int meta, int expMin, int expMax, int dropAmount, int bonusAmount, String tool, int level, boolean silkHarvest) {
+		super(materialIn, mapColorIn, itemDrop, meta, expMin, expMax, dropAmount,bonusAmount, tool, level, silkHarvest);
 	}
 
 	@Override
