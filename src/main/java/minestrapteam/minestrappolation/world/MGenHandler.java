@@ -3,6 +3,7 @@ package minestrapteam.minestrappolation.world;
 import java.util.Random;
 
 import minestrapteam.minestrappolation.block.BlockBiomeStones;
+import minestrapteam.minestrappolation.block.MBlockOre;
 import minestrapteam.minestrappolation.block.MStoneType;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import net.minecraft.block.Block;
@@ -107,7 +108,7 @@ public class MGenHandler implements IWorldGenerator
 	
 	public void genBiomeStone(World world, int chunkX, int chunkZ, Random random)
 	{
-		BlockPos pos = new BlockPos(chunkX, 0, chunkZ);
+		BlockPos pos = new BlockPos(chunkX * 16, 0, chunkZ * 16);
 		Chunk chunk = world.getChunkFromBlockCoords(pos);
 		WorldChunkManager chunkManager = world.getWorldChunkManager();
 		
@@ -122,6 +123,8 @@ public class MGenHandler implements IWorldGenerator
 				MStoneType sType = MStoneType.DEEPSTONE;
 				MStoneType dType = MStoneType.DEEPSTONE;
 				int deepStoneDepth = 0;
+				int oreMeta = MStoneType.DEEPSTONE.getMetadata();
+				int deepOreMeta = MStoneType.DEEPSTONE.getMetadata();
 				Block ore;
 				
 				if (biome.temperature < 0.2F)
@@ -131,6 +134,8 @@ public class MGenHandler implements IWorldGenerator
 					sType = MStoneType.ICESTONE;
 					dType = MStoneType.GLACIERSTONE;
 					deepStoneDepth = random.nextInt(5) + 30;
+					oreMeta = MStoneType.ICESTONE.getMetadata();
+					deepOreMeta = MStoneType.GLACIERSTONE.getMetadata();
 				}
 				else if (biome.temperature < 0.4F)
 				{
@@ -140,6 +145,8 @@ public class MGenHandler implements IWorldGenerator
 					deepStoneDepth = random.nextInt(5) + 35;
 					sType = MStoneType.COLDSTONE;
 					dType = MStoneType.DEEPCOLDSTONE;
+					oreMeta = MStoneType.COLDSTONE.getMetadata();
+					deepOreMeta = MStoneType.DEEPCOLDSTONE.getMetadata();
 				}
 				else if (biome.getTempCategory() == TempCategory.OCEAN)
 				{
@@ -148,6 +155,8 @@ public class MGenHandler implements IWorldGenerator
 					deepStoneDepth = random.nextInt(5) + 20;
 					sType = MStoneType.OCEANSTONE;
 					dType = MStoneType.POCEANSTONE;
+					oreMeta = MStoneType.OCEANSTONE.getMetadata();
+					deepOreMeta = MStoneType.POCEANSTONE.getMetadata();
 				}
 				else if (biome.temperature >= 1.0F)
 				{
@@ -157,6 +166,8 @@ public class MGenHandler implements IWorldGenerator
 					deepStoneDepth = random.nextInt(5) + 35;
 					sType = MStoneType.REDROCK;
 					dType = MStoneType.DEEPREDROCK;
+					oreMeta = MStoneType.REDROCK.getMetadata();
+					deepOreMeta = MStoneType.DEEPREDROCK.getMetadata();
 				}
 				else
 				{
@@ -165,7 +176,7 @@ public class MGenHandler implements IWorldGenerator
 					dType = MStoneType.DEEPSTONE;
 				}
 				
-				for (int y = 128; y >= 0; y--)
+				for (int y = 256; y >= 0; y--)
 				{
 					BlockPos subpos2 = new BlockPos(x, y, z);
 					Block block = chunk.getBlock(x, y, z);
@@ -182,12 +193,94 @@ public class MGenHandler implements IWorldGenerator
 							chunk.setBlockState(subpos2, stoneBlock.withProperty(BlockBiomeStones.VARIANT, sType));
 						}
 					}
-					else if (block instanceof BlockOre)
+					else if (block instanceof BlockOre || block instanceof MBlockOre)
 					{
-						chunk.setBlockState(subpos2, block.getDefaultState());
+						Block oreToReplace = getOreToReplace(block);
+						
+						if(y < deepStoneDepth)
+						{
+							chunk.setBlockState(subpos2, oreToReplace.getStateFromMeta(deepOreMeta));
+
+						}
+						else
+						{
+							chunk.setBlockState(subpos2, oreToReplace.getStateFromMeta(oreMeta));
+						}
 					}
 				}
 			}
+		}
+	}
+	
+	public Block getOreToReplace(Block block)
+	{
+		if(block == Blocks.coal_ore)
+		{
+			return MBlocks.biome_coal;
+		}
+		else if(block == Blocks.iron_ore)
+		{
+			return MBlocks.biome_iron;
+		}
+		else if(block == Blocks.gold_ore)
+		{
+			return MBlocks.biome_gold;
+		}
+		else if(block == Blocks.redstone_ore)
+		{
+			return MBlocks.biome_redstone;
+		}
+		else if(block == Blocks.diamond_ore)
+		{
+			return MBlocks.biome_diamond;
+		}
+		else if(block == Blocks.lapis_ore)
+		{
+			return MBlocks.biome_lapis;
+		}
+		else if(block == Blocks.emerald_ore)
+		{
+			return MBlocks.biome_emerald;
+		}
+		else if(block == MBlocks.sunstone_ore)
+		{
+			return MBlocks.biome_sunstone;
+		}
+		else if(block == MBlocks.tin_ore)
+		{
+			return MBlocks.biome_tin;
+		}
+		else if(block == MBlocks.biome_copper)
+		{
+			return MBlocks.biome_copper;
+		}
+		else if(block == MBlocks.plutonium_ore)
+		{
+			return MBlocks.biome_plutonium;
+		}
+		else if(block == MBlocks.uranium_ore)
+		{
+			return MBlocks.biome_uranium;
+		}
+		else if(block == MBlocks.radiant_ore)
+		{
+			return MBlocks.biome_radiant;
+		}
+		else if(block == MBlocks.torite_ore)
+		{
+			return MBlocks.biome_torite;
+		}
+		else if(block == MBlocks.titanium_ore)
+		{
+			return MBlocks.biome_torite;
+		}
+		else if(block == MBlocks.torite_ore)
+		{
+			return MBlocks.biome_meurodite;
+		}
+		else
+		{
+			return MBlocks.biome_copper;
 		}
 	}
 	
