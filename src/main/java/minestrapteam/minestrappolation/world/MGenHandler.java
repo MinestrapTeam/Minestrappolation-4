@@ -190,7 +190,10 @@ public class MGenHandler implements IWorldGenerator
 						}
 						else
 						{
-							chunk.setBlockState(subpos2, stoneBlock.withProperty(BlockBiomeStones.VARIANT, sType));
+							if(biome.temperature >= 1.0F || biome.temperature < 0.4F || biome.getTempCategory() == TempCategory.OCEAN)
+							{
+								chunk.setBlockState(subpos2, stoneBlock.withProperty(BlockBiomeStones.VARIANT, sType));
+							}
 						}
 					}
 					else if (block instanceof BlockOre || block instanceof MBlockOre)
@@ -204,7 +207,10 @@ public class MGenHandler implements IWorldGenerator
 						}
 						else
 						{
-							chunk.setBlockState(subpos2, oreToReplace.getStateFromMeta(oreMeta));
+							if(biome.temperature >= 1.0F || biome.temperature < 0.4F || biome.getTempCategory() == TempCategory.OCEAN)
+							{
+								chunk.setBlockState(subpos2, oreToReplace.getStateFromMeta(oreMeta));
+							}
 						}
 					}
 				}
@@ -227,6 +233,10 @@ public class MGenHandler implements IWorldGenerator
 			return MBlocks.biome_gold;
 		}
 		else if(block == Blocks.redstone_ore)
+		{
+			return MBlocks.biome_redstone;
+		}
+		else if(block == Blocks.lit_redstone_ore)
 		{
 			return MBlocks.biome_redstone;
 		}
