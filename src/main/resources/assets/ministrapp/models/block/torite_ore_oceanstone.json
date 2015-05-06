@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "ministrapp:blocks/torite_ore_oceanstone"
+    }
+}

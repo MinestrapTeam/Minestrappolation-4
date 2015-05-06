@@ -1,0 +1,31 @@
+{
+   "variants":{
+      "type=deepstone":{
+         "model":"ministrapp:uranium_ore_deepstone"
+      },
+      "type=red_rock":{
+         "model":"ministrapp:uranium_ore_red_rock"
+      },
+      "type=deep_redrock":{
+         "model":"ministrapp:uranium_ore_deep_red_rock"
+      },
+      "type=coldstone":{
+         "model":"ministrapp:uranium_ore_coldstone"
+      },
+      "type=deep_coldstone":{
+         "model":"ministrapp:uranium_ore_deep_coldstone"
+      },
+      "type=icestone":{
+         "model":"ministrapp:uranium_ore_icestone"
+      },
+      "type=glacierrock":{
+         "model":"ministrapp:uranium_ore_glacierrock"
+      },
+      "type=oceanstone":{
+         "model":"ministrapp:uranium_ore_oceanstone"
+      },
+      "type=pressurized_oceanstone":{
+         "model":"ministrapp:uranium_ore_pressurized_oceanstone"
+      }
+   }
+}
