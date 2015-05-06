@@ -24,6 +24,7 @@ import minestrapteam.minestrappolation.block.BlockBiomeUranium;
 import minestrapteam.minestrappolation.block.BlockBoulder;
 import minestrapteam.minestrappolation.block.BlockCrate;
 import minestrapteam.minestrappolation.block.BlockGodstone;
+import minestrapteam.minestrappolation.block.BlockMelter;
 import minestrapteam.minestrappolation.block.BlockPlutoniumOre;
 import minestrapteam.minestrappolation.block.BlockSoulOre;
 import minestrapteam.minestrappolation.block.BlockSunstoneBlock;
@@ -66,7 +67,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 
@@ -115,6 +115,7 @@ public class MBlocks
 	
 	public static Block barrel;
 	public static Block crate;
+	public static Block melter;
 	
 	// Biome Stones
 	public static Block			   biome_coal;
@@ -210,6 +211,7 @@ public class MBlocks
 		
 		barrel = new BlockBarrel().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("barrel");
 		crate = new BlockCrate().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("crate");
+		melter = new BlockMelter().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("melter");
 		
 		register();
 		registerHarvestLevels();
@@ -254,6 +256,7 @@ public class MBlocks
 		
 		register(barrel);
 		register(crate);
+		register(melter);
 		
 		//Wood stuff
 		GameRegistry.registerBlock(ministrapp_log, ItemBlockLog.class, ministrapp_log.getUnlocalizedName().substring(5));
@@ -322,6 +325,7 @@ public class MBlocks
 		registerRender(soul_ore);
 		registerRender(barrel);
 		registerRender(crate);
+		registerRender(melter);
 	}
 	
 	private static void register(Block block)
