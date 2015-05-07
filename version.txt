@@ -1,2 +1,2 @@
-version=1.8.0-4.0.0 - alpha
+version=1.8.0-4.0.0A
 motd=Testing version checker
