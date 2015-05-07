@@ -70,6 +70,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 
@@ -107,6 +108,8 @@ public class MBlocks
 	public static Block	stone_pattern_bricks;
 	public static Block	stone_refined;
 	public static Block	stone_tiles;
+	
+	//Wood
 	public static Block	ministrapp_log;
 	public static Block	ministrapp_leaves;
 	public static Block	ministrapp_sapling;
@@ -166,7 +169,7 @@ public class MBlocks
 		tin_block = new MBlock(Material.iron, MapColor.ironColor).setHardness(5.0F).setResistance(5.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("tin_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		sunstone_block = new BlockSunstoneBlock(Material.glass, MapColor.sandColor).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setLightLevel(0.9F).setUnlocalizedName("sunstone_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		godstone = new BlockGodstone(Material.rock, MapColor.sandColor).setHardness(3F).setResistance(15F).setUnlocalizedName("godstone");
-				
+		
 		//WOOD
 		ministrapp_log = new MBlockLog().setUnlocalizedName("ministrapp_log");
 		ministrapp_leaves = new MBlockLeaves().setUnlocalizedName("ministrapp_leaves");

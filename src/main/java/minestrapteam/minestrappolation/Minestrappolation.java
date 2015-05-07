@@ -6,10 +6,11 @@ import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MItems;
 import minestrapteam.minestrappolation.lib.MRecipes;
 import minestrapteam.minestrappolation.lib.MReference;
+import minestrapteam.minestrappolation.util.MEventHandler;
 import minestrapteam.minestrappolation.util.MGuiHandler;
 import minestrapteam.minestrappolation.world.MBiomeManager;
 import minestrapteam.minestrappolation.world.MGenHandler;
-import net.minecraft.init.Blocks;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -39,6 +40,7 @@ public class Minestrappolation
 		MRecipes.register();
 		MRecipes.removeRecipes();
 		MBiomeManager.load();
+		MinecraftForge.EVENT_BUS.register(new MEventHandler());
 		proxy.preInit(event);
 		if (Minestrappolation.proxy != null)
 		{
