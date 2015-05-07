@@ -1,11 +1,11 @@
 package minestrapteam.minestrappolation.util;
 
-import minestrapteam.minestrappolation.inventory.ContainerBarrel;
-import minestrapteam.minestrappolation.inventory.ContainerCrate;
-import minestrapteam.minestrappolation.inventory.ContainerMelter;
-import minestrapteam.minestrappolation.inventory.GuiBarrel;
-import minestrapteam.minestrappolation.inventory.GuiCrate;
-import minestrapteam.minestrappolation.inventory.GuiMelter;
+import minestrapteam.minestrappolation.inventory.container.ContainerBarrel;
+import minestrapteam.minestrappolation.inventory.container.ContainerCrate;
+import minestrapteam.minestrappolation.inventory.container.ContainerMelter;
+import minestrapteam.minestrappolation.inventory.gui.GuiBarrel;
+import minestrapteam.minestrappolation.inventory.gui.GuiCrate;
+import minestrapteam.minestrappolation.inventory.gui.GuiMelter;
 import minestrapteam.minestrappolation.tileentity.TileEntityBarrel;
 import minestrapteam.minestrappolation.tileentity.TileEntityCrate;
 import minestrapteam.minestrappolation.tileentity.TileEntityMelter;

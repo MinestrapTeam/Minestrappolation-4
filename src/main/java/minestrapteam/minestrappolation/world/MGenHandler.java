@@ -2,9 +2,9 @@ package minestrapteam.minestrappolation.world;
 
 import java.util.Random;
 
-import minestrapteam.minestrappolation.block.BlockBiomeStones;
 import minestrapteam.minestrappolation.block.MBlockOre;
 import minestrapteam.minestrappolation.block.MStoneType;
+import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeStones;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockOre;

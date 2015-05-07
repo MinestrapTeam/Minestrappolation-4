@@ -86,6 +86,15 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 	@Override
 	public void update()
 	{
+		if(this.worldObj.isBlockIndirectlyGettingPowered(this.getPos()) > 0)
+		{
+			this.hasPower = true;
+		}
+		else
+		{
+			this.hasPower = false;
+		}
+ 		
 		boolean burning = this.burnTime > 0;
 		
 		if (burning)
