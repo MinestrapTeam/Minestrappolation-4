@@ -3,10 +3,12 @@ package minestrapteam.minestrappolation;
 import minestrapteam.minestrappolation.client.CommonProxy;
 import minestrapteam.minestrappolation.creativetab.MTab;
 import minestrapteam.minestrappolation.lib.MBlocks;
+import minestrapteam.minestrappolation.lib.MDictionary;
 import minestrapteam.minestrappolation.lib.MItems;
 import minestrapteam.minestrappolation.lib.MRecipes;
 import minestrapteam.minestrappolation.lib.MReference;
 import minestrapteam.minestrappolation.util.MEventHandler;
+import minestrapteam.minestrappolation.util.MFuelHandler;
 import minestrapteam.minestrappolation.util.MGuiHandler;
 import minestrapteam.minestrappolation.world.MBiomeManager;
 import minestrapteam.minestrappolation.world.MGenHandler;
@@ -19,6 +21,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = MReference.MODID, name = MReference.NAME, version = MReference.VERSION)
 public class Minestrappolation
@@ -39,6 +42,7 @@ public class Minestrappolation
 		MItems.register();
 		MRecipes.register();
 		MRecipes.removeRecipes();
+		MDictionary.load();
 		MBiomeManager.load();
 		MinecraftForge.EVENT_BUS.register(new MEventHandler());
 		proxy.preInit(event);
@@ -55,6 +59,8 @@ public class Minestrappolation
 		proxy.registerRenders();
 		proxy.init(event);
 		MGenHandler.load();
+		
+		GameRegistry.registerFuelHandler(new MFuelHandler());
 	}
 	
 	@EventHandler
