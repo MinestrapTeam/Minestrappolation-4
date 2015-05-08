@@ -3,6 +3,7 @@ package minestrapteam.minestrappolation.lib;
 import java.util.Iterator;
 import java.util.List;
 
+import minestrapteam.minestrappolation.Minestrappolation;
 import minestrapteam.minestrappolation.block.BlockBiomeBricks;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
@@ -39,6 +40,11 @@ public class MRecipes
 		GameRegistry.addRecipe(new ItemStack(MBlocks.godstone), new Object[] { "SGS", "PEP", "SGS", 'S', MItems.sunstone_shard, 'G', Items.glowstone_dust, 'P', Items.prismarine_crystals, 'E', Blocks.end_stone});
 		
 		GameRegistry.addSmelting(MBlocks.torite_ore, new ItemStack(MItems.torite_ingot), 0.5F);
+		
+		GameRegistry.addSmelting(MBlocks.biome_iron, new ItemStack(Items.iron_ingot), 0.5F);
+		GameRegistry.addSmelting(MBlocks.biome_copper, new ItemStack(MItems.copper_ingot), 0.5F);
+		GameRegistry.addSmelting(MBlocks.biome_tin, new ItemStack(MItems.tin_ingot), 0.5F);
+		GameRegistry.addSmelting(MBlocks.biome_gold, new ItemStack(Items.gold_ingot), 0.5F);
 		
 		// Decor
 		GameRegistry.addRecipe(new ItemStack(MBlocks.snow_bricks, 4), new Object[] { "SS", "SS", 'S', Blocks.snow });
