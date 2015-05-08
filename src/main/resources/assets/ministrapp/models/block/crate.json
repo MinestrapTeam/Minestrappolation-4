@@ -1,9 +1,9 @@
 {
 "__comment": "Designed by - with BDcraft Cubik PRO 0.92 Beta - http://bdcraft.net",
 "textures": {
-    "particle": "blocks/crate_side",
-    "side": "blocks/crate_side",
-    "top": "blocks/crate_top"
+    "particle": "ministrapp:blocks/crate_side",
+    "side": "ministrapp:blocks/crate_side",
+    "top": "ministrapp:blocks/crate_top"
 },
 "elements": [ 
 {

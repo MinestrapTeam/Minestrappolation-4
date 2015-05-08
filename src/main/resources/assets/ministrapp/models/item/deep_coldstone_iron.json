@@ -1,5 +1,5 @@
 {
-    "parent": "ministrapp:block/desert_quartz",
+    "parent": "ministrapp:block/iron_ore_deep_coldstone",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

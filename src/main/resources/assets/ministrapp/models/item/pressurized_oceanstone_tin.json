@@ -1,5 +1,5 @@
 {
-    "parent": "ministrapp:block/desert_quartz",
+    "parent": "ministrapp:block/tin_ore_pressurized_oceanstone",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

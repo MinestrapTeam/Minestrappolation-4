@@ -1,5 +1,5 @@
 {
-    "parent": "ministrapp:block/desert_quartz",
+    "parent": "ministrapp:block/torite_ore_icestone",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],
