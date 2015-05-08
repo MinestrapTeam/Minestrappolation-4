@@ -15,29 +15,40 @@ tile.stone_lamp_glowstone.name=Stone Glowstone Lamp
 tile.stone_lamp_prismarine.name=Stone Prismarine Lamp
 tile.stone_lamp_sunstone.name=Stone Sunstone Lamp
 tile.stone_pattern_bricks.name=Patterned Stone Bricks
-tile.stone_refined.name=Refined Stone
+tile.stone_refined.name=Polished Stone
 tile.stone_tiles.name=Stone Tiles
-tile.snow_refined.name=Refined Snow
+tile.snow_refined.name=Packed Snow
 tile.snow_bricks.name=Snow Bricks
 tile.snow_tiles.name=Snow Tiles
 tile.slate.name=Slate
 tile.godstone.name=Godstone
+tile.plutonium_ore.name=Plutonium Ore
+tile.uranium_ore.name=Uranium Ore
+tile.radiant_ore.name=Radiant Quartz Ore
+tile.titanium_ore.name=Titanium Ore
+tile.meurodite_ore.name=Meurodite Ore
+tile.torite_ore.name=Torite Ore
+tile.desert_quartz.name=Desert Quartz Ore
+tile.blazium_ore.name=Blazium Ore
+tile.soul_ore.name=Soul Ore
 
 redwood_sapling.name=Redwood Sapling
 redwood_planks.name=Redwood Planks
 redwood_log.name=Redwood Log
+tile.redwood_stairs.name=Redwood Plank Stairs
+redwood_leaves.name=Redwood Leaves
 
-deepstone_rock.name=Deep Stone
-deepstone_cobble.name=Cobbled Deep Stone
-deepstone_bricks.name=Deep Stone Bricks
+deepstone_rock.name=Deepstone
+deepstone_cobble.name=Cobbled Deepstone
+deepstone_bricks.name=Deepstone Bricks
 
-red_rock_rock.name=Redrock
-red_rock_cobble.name=Cobbled Redrock
-red_rock_bricks.name=Redrock Bricks
+red_rock_rock.name=Red Rock
+red_rock_cobble.name=Cobbled Red Rock
+red_rock_bricks.name=Red Rock Bricks
 
-deep_redrock_rock.name=Deep Redrock
-deep_redrock_cobble.name=Cobbled Deep Redrock
-deep_redrock_bricks.name=Deep Redrock Bricks
+deep_redrock_rock.name=Deep Red Rock
+deep_redrock_cobble.name=Cobbled Deep Red Rock
+deep_redrock_bricks.name=Deep Red Rock Bricks
 
 coldstone_rock.name=Coldstone
 coldstone_cobble.name=Cobbled Coldstone
@@ -48,22 +59,185 @@ deep_coldstone_cobble.name=Cobbled Deep Coldstone
 deep_coldstone_bricks.name=Deep Coldstone Bricks
 
 icestone_rock.name=Icestone
-icestone_cobble.name=Cobbled Icestone
+icestone_cobble.name=Cracked Icestone
 icestone_bricks.name=Icestone Bricks
 
 glacierrock_rock.name=Glacierrock
-glacierrock_cobble.name=Cobbled Glacierrock
+glacierrock_cobble.name=Cracked Glacierrock
 glacierrock_bricks.name=Glacierrock Bricks
 
 oceanstone_rock.name=Oceanstone
 oceanstone_cobble.name=Cobbled Oceanstone
 oceanstone_bricks.name=Oceanstone Bricks
 
-p_oceanstone_rock.name=Pressureized Oceanstone
-p_oceanstone_cobble.name=Cobbled Pressureized Oceanstone
-p_oceanstone_bricks.name=Pressureized Oceanstone Bricks
+pressurized_oceanstone_rock.name=Pressurized Oceanstone
+pressurized_oceanstone_cobble.name=Cracked Pressurized Oceanstone
+pressurized_oceanstone_bricks.name=Pressurized Oceanstone Bricks
+
+deepstone_coal.name=Coal Ore
+red_rock_coal.name=Coal Ore
+deep_redrock_coal.name=Coal Ore
+coldstone_coal.name=Coal Ore
+deep_coldstone_coal.name=Coal Ore
+icestone_coal.name=Coal Ore
+glacierrock_coal.name=Coal Ore
+oceanstone_coal.name=Coal Ore
+pressurized_oceanstone_coal.name=Coal Ore
+
+deepstone_iron.name=Iron Ore
+red_rock_iron.name=Iron Ore
+deep_redrock_iron.name=Iron Ore
+coldstone_iron.name=Iron Ore
+deep_coldstone_iron.name=Iron Ore
+icestone_iron.name=Iron Ore
+glacierrock_iron.name=Iron Ore
+oceanstone_iron.name=Iron Ore
+pressurized_oceanstone_iron.name=Iron Ore
+
+deepstone_gold.name=Gold Ore
+red_rock_gold.name=Gold Ore
+deep_redrock_gold.name=Gold Ore
+coldstone_gold.name=Gold Ore
+deep_coldstone_gold.name=Gold Ore
+icestone_gold.name=Gold Ore
+glacierrock_gold.name=Gold Ore
+oceanstone_gold.name=Gold Ore
+pressurized_oceanstone_gold.name=Gold Ore
+
+deepstone_redstone.name=Redstone Ore
+red_rock_redstone.name=Redstone Ore
+deep_redrock_redstone.name=Redstone Ore
+coldstone_redstone.name=Redstone Ore
+deep_coldstone_redstone.name=Redstone Ore
+icestone_redstone.name=Redstone Ore
+glacierrock_redstone.name=Redstone Ore
+oceanstone_redstone.name=Redstone Ore
+pressurized_oceanstone_redstone.name=Redstone Ore
+
+deepstone_lapis.name=Lapis Lazuli Ore
+red_rock_lapis.name=Lapis Lazuli Ore
+deep_redrock_lapis.name=Lapis Lazuli Ore
+coldstone_lapis.name=Lapis Lazuli Ore
+deep_coldstone_lapis.name=Lapis Lazuli Ore
+icestone_lapis.name=Lapis Lazuli Ore
+glacierrock_lapis.name=Lapis Lazuli Ore
+oceanstone_lapis.name=Lapis Lazuli Ore
+pressurized_oceanstone_lapis.name=Lapis Lazuli Ore
+
+deepstone_diamond.name=Diamond Ore
+red_rock_diamond.name=Diamond Ore
+deep_redrock_diamond.name=Diamond Ore
+coldstone_diamond.name=Diamond Ore
+deep_coldstone_diamond.name=Diamond Ore
+icestone_diamond.name=Diamond Ore
+glacierrock_diamond.name=Diamond Ore
+oceanstone_diamond.name=Diamond Ore
+pressurized_oceanstone_diamond.name=Diamond Ore
+
+deepstone_emerald.name=Emerald Ore
+red_rock_emerald.name=Emerald Ore
+deep_redrock_emerald.name=Emerald Ore
+coldstone_emerald.name=Emerald Ore
+deep_coldstone_emerald.name=Emerald Ore
+icestone_emerald.name=Emerald Ore
+glacierrock_emerald.name=Emerald Ore
+oceanstone_emerald.name=Emerald Ore
+pressurized_oceanstone_emerald.name=Emerald Ore
+
+deepstone_sunstone.name=Sunstone Ore
+red_rock_sunstone.name=Sunstone Ore
+deep_redrock_sunstone.name=Sunstone Ore
+coldstone_sunstone.name=Sunstone Ore
+deep_coldstone_sunstone.name=Sunstone Ore
+icestone_sunstone.name=Sunstone Ore
+glacierrock_sunstone.name=Sunstone Ore
+oceanstone_sunstone.name=Sunstone Ore
+pressurized_oceanstone_sunstone.name=Sunstone Ore
+
+deepstone_copper.name=Copper Ore
+red_rock_copper.name=Copper Ore
+deep_redrock_copper.name=Copper Ore
+coldstone_copper.name=Copper Ore
+deep_coldstone_copper.name=Copper Ore
+icestone_copper.name=Copper Ore
+glacierrock_copper.name=Copper Ore
+oceanstone_copper.name=Copper Ore
+pressurized_oceanstone_copper.name=Copper Ore
+
+deepstone_tin.name=Tin Ore
+red_rock_tin.name=Tin Ore
+deep_redrock_tin.name=Tin Ore
+coldstone_tin.name=Tin Ore
+deep_coldstone_tin.name=Tin Ore
+icestone_tin.name=Tin Ore
+glacierrock_tin.name=Tin Ore
+oceanstone_tin.name=Tin Ore
+pressurized_oceanstone_tin.name=Tin Ore
+
+deepstone_plutonium.name=Plutonium Ore
+red_rock_plutonium.name=Plutonium Ore
+deep_redrock_plutonium.name=Plutonium Ore
+coldstone_plutonium.name=Plutonium Ore
+deep_coldstone_plutonium.name=Plutonium Ore
+icestone_plutonium.name=Plutonium Ore
+glacierrock_plutonium.name=Plutonium Ore
+oceanstone_plutonium.name=Plutonium Ore
+pressurized_oceanstone_plutonium.name=Plutonium Ore
+
+deepstone_uranium.name=Uranium Ore
+red_rock_uranium.name=Uranium Ore
+deep_redrock_uranium.name=Uranium Ore
+coldstone_uranium.name=Uranium Ore
+deep_coldstone_uranium.name=Uranium Ore
+icestone_uranium.name=Uranium Ore
+glacierrock_uranium.name=Uranium Ore
+oceanstone_uranium.name=Uranium Ore
+pressurized_oceanstone_uranium.name=Uranium Ore
+
+deepstone_titanium.name=Titanium Ore
+red_rock_titanium.name=Titanium Ore
+deep_redrock_titanium.name=Titanium Ore
+coldstone_titanium.name=Titanium Ore
+deep_coldstone_titanium.name=Titanium Ore
+icestone_titanium.name=Titanium Ore
+glacierrock_titanium.name=Titanium Ore
+oceanstone_titanium.name=Titanium Ore
+pressurized_oceanstone_titanium.name=Titanium Ore
+
+deepstone_meurodite.name=Meurodite Ore
+red_rock_meurodite.name=Meurodite Ore
+deep_redrock_meurodite.name=Meurodite Ore
+coldstone_meurodite.name=Meurodite Ore
+deep_coldstone_meurodite.name=Meurodite Ore
+icestone_meurodite.name=Meurodite Ore
+glacierrock_meurodite.name=Meurodite Ore
+oceanstone_meurodite.name=Meurodite Ore
+pressurized_oceanstone_meurodite.name=Meurodite Ore
+
+deepstone_torite.name=Torite Ore
+red_rock_torite.name=Torite Ore
+deep_redrock_torite.name=Torite Ore
+coldstone_torite.name=Torite Ore
+deep_coldstone_torite.name=Torite Ore
+icestone_torite.name=Torite Ore
+glacierrock_torite.name=Torite Ore
+oceanstone_torite.name=Torite Ore
+pressurized_oceanstone_torite.name=Torite Ore
+
+deepstone_radiant.name=Radiant Quartz Ore
+red_rock_radiant.name=Radiant Quartz Ore
+deep_redrock_radiant.name=Radiant Quartz Ore
+coldstone_radiant.name=Radiant Quartz Ore
+deep_coldstone_radiant.name=Radiant Quartz Ore
+icestone_radiant.name=Radiant Quartz Ore
+glacierrock_radiant.name=Radiant Quartz Ore
+oceanstone_radiant.name=Radiant Quartz Ore
+pressurized_oceanstone_radiant.name=Radiant Quartz Ore
 
 tile.crate.name=Crate
+tile.barrel.name=Barrel
+tile.melter.name=Melter
+tile.alloy.name=Alloy Furnace
 
 item.dough.name=Dough
 item.sugar_dough.name=Sugar Dough
@@ -72,7 +246,24 @@ item.sugar_cookie.name=Sugar Cookie
 item.copper_ingot.name=Copper Ingot
 item.tin_ingot.name=Tin Ingot
 item.sunstone_shard.name=Sunstone Shard
+item.radiant_quartz.name=Radiant Quartz
+item.meurodite_gem.name=Meurodite
+item.blaze_shard.name=Blaze Shard
+item.soul_gem.name=Soul Gem
+item.torite_ingot.name=Torite Ingot
+item.desert_quartz.name=Desert Quartz
+
 item.stone_brick.name=Stone Brick
+item.deepstone_brick.name=Deepstone Brick
+item.red_rock_brick.name=Red Rock Brick
+item.deep_red_rock_brick.name=Deep Red Rock Brick
+item.coldstone_brick.name=Coldstone Brick
+item.deep_coldstone_brick.name=Deep Coldstone Brick
+item.icestone_brick.name=Icestone Brick
+item.glacierrock_brick.name=Glacierrock Brick
+item.oceanstone_brick.name=Oceanstone Brick
+item.pressurized_oceanstone_brick.name=Pressurized Oceanstone Brick
+item.slate_brick.name=Slate Brick
 
 item.copper_pickaxe.name=Copper Pickaxe
 item.copper_axe.name=Copper Axe
