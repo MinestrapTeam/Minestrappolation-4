@@ -1,8 +1,0 @@
-{
-    "parent": "block/orientable",
-    "textures": {
-        "top": "ministrapp:blocks/melter_top",
-        "front": "ministrapp:blocks/melter_front_off",
-        "side": "ministrapp:blocks/melter_side"
-    }
-}
