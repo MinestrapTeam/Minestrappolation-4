@@ -1,6 +1,7 @@
 package minestrapteam.minestrappolation.lib;
 
 import minestrapteam.minestrappolation.Minestrappolation;
+import minestrapteam.minestrappolation.block.BlockAlloy;
 import minestrapteam.minestrappolation.block.BlockBarrel;
 import minestrapteam.minestrappolation.block.BlockBiomeBricks;
 import minestrapteam.minestrappolation.block.BlockBoulder;
@@ -120,6 +121,7 @@ public class MBlocks
 	public static Block barrel;
 	public static Block crate;
 	public static Block melter;
+	public static Block alloy;
 	
 	// Biome Stones
 	public static Block			   biome_coal;
@@ -215,6 +217,7 @@ public class MBlocks
 		barrel = new BlockBarrel().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("barrel");
 		crate = new BlockCrate().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("crate");
 		melter = new BlockMelter().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("melter");
+		alloy = new BlockAlloy().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("alloy");
 		
 		
 		//Stairs
@@ -265,6 +268,7 @@ public class MBlocks
 		register(barrel);
 		register(crate);
 		register(melter);
+		register(alloy);
 		
 		//Stairs
 		register(redwood_stairs);
@@ -338,6 +342,7 @@ public class MBlocks
 		registerRender(crate);
 		registerRender(melter);
 		registerRender(redwood_stairs);
+		registerRender(alloy);
 	}
 	
 	private static void register(Block block)

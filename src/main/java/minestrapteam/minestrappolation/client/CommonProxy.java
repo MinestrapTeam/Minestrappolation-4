@@ -20,6 +20,7 @@ import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTin;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTitanium;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTorite;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeUranium;
+import minestrapteam.minestrappolation.tileentity.TileEntityAlloy;
 import minestrapteam.minestrappolation.tileentity.TileEntityBarrel;
 import minestrapteam.minestrappolation.tileentity.TileEntityCrate;
 import minestrapteam.minestrappolation.tileentity.TileEntityMelter;
@@ -68,6 +69,7 @@ public abstract class CommonProxy implements IGuiHandler
 		GameRegistry.registerTileEntity(TileEntityBarrel.class, "tile_entity_barrel");
 		GameRegistry.registerTileEntity(TileEntityCrate.class, "tile_entity_crate");
 		GameRegistry.registerTileEntity(TileEntityMelter.class, "tile_entity_melter");
+		GameRegistry.registerTileEntity(TileEntityAlloy.class, "tile_entity_alloy");
 	}
 	
 	public void init(FMLInitializationEvent event)
