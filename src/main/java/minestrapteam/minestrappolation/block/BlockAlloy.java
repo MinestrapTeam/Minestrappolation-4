@@ -15,6 +15,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -37,6 +38,12 @@ public class BlockAlloy extends BlockContainer
 	{
 		super(Material.rock);
 	}
+	
+	@Override
+	public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state)
+    {
+        this.setDefaultFacing(worldIn, pos, state);
+    }
 	
 	@Override
 	public TileEntity createNewTileEntity(World world, int metadata)
@@ -152,7 +159,7 @@ public class BlockAlloy extends BlockContainer
 	                worldIn.spawnParticle(EnumParticleTypes.FLAME, d0 + d4, d1, d2 + d3, 0.0D, 0.0D, 0.0D, new int[0]);
 	        }
 	     }
-	    }
+	    }  
 	   
 	@Override
 	public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
@@ -175,6 +182,12 @@ public class BlockAlloy extends BlockContainer
 	public boolean isFullCube() {
 		return false;
 	}
+	
+	@Override
+	public int getRenderType()
+    {
+        return 3;
+    }
 
 	
 	@Override

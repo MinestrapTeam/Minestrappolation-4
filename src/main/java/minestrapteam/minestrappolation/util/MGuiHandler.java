@@ -49,10 +49,10 @@ public class MGuiHandler implements IGuiHandler {
 			return new ContainerMelter(player, tileEntityMelter);
 		}
 		
-		//Crate
+		//Alloy
 		if (tileEntity instanceof TileEntityAlloy) {
-			TileEntityAlloy tileEntityMelter = (TileEntityAlloy) tileEntity;
-			return new ContainerAlloy(player, tileEntityMelter);
+			TileEntityAlloy tileEntityAlloy = (TileEntityAlloy) tileEntity;
+			return new ContainerAlloy(player, tileEntityAlloy);
 		}
 		
 		return null;
@@ -83,10 +83,10 @@ public class MGuiHandler implements IGuiHandler {
 			return new GuiMelter(player, tileEntityMelter);
 		}
 		
-
+		//Alloy
 		if (tileEntity instanceof TileEntityAlloy) {
-			TileEntityAlloy tileEntityMelter = (TileEntityAlloy) tileEntity;
-			return new GuiAlloy(player, tileEntityMelter);
+			TileEntityAlloy tileEntityAlloy = (TileEntityAlloy) tileEntity;
+			return new GuiAlloy(player, tileEntityAlloy);
 		}
 		
 		return null;

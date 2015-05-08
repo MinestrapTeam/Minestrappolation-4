@@ -50,9 +50,7 @@ public class AlloyRecipes
     {
         this.meltingList.put(input, stack);
         this.meltingList2.put(input, input2);
-        
-        this.meltingList.put(input2, stack);
-        this.meltingList2.put(input2, input);
+       
         this.experienceList.put(stack, Float.valueOf(experience));
     }
 
@@ -65,25 +63,15 @@ public class AlloyRecipes
         
         do
         {
-            if (!iterator.hasNext())
+            if (!iterator.hasNext() && !iterator2.hasNext())
             {
                 return null;
             }
             
             entry = (Entry)iterator.next();
-        } while (!this.compareItemStacks(input, (ItemStack)entry.getKey()));
-        
-        do
-        {
-        	if (!iterator2.hasNext())
-            {
-                return null;
-            }
-            
             entry2 = (Entry)iterator2.next();
-            System.out.println(entry2.getKey());
-        } while (!this.compareItemStacks(input2, (ItemStack)entry2.getValue()));
-        
+        } while (!this.compareItemStacks(input, (ItemStack)entry.getKey()) || !this.compareItemStacks(input2, (ItemStack)entry2.getValue()));
+       
         return (ItemStack)this.meltingList.get(entry.getKey());
     }
 

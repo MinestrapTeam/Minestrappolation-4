@@ -40,6 +40,12 @@ public class BlockMelter extends BlockContainer
 	}
 	
 	@Override
+	public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state)
+    {
+        this.setDefaultFacing(worldIn, pos, state);
+    }
+	
+	@Override
 	public TileEntity createNewTileEntity(World world, int metadata)
 	{
 		return new TileEntityMelter();
@@ -176,6 +182,12 @@ public class BlockMelter extends BlockContainer
 	public boolean isFullCube() {
 		return false;
 	}
+	
+	@Override
+	public int getRenderType()
+    {
+        return 3;
+    }
 
 	
 	@Override
