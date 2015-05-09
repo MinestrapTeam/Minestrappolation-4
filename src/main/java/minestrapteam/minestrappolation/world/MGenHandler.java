@@ -74,19 +74,19 @@ public class MGenHandler implements IWorldGenerator
 		
 		this.generateOre(MBlocks.copper_ore, world, rand, x1, z1, 3, 12, 20, 15, 100, BlockHelper.forBlock(Blocks.stone));
 		this.generateOre(MBlocks.tin_ore, world, rand, x1, z1, 3, 12, 20, 15, 100, BlockHelper.forBlock(Blocks.stone));
-		this.generateOre(MBlocks.meurodite_ore, world, rand, x1, z1, 1, 9, 3, 1, 32, BlockHelper.forBlock(Blocks.stone));
-		this.generateOre(MBlocks.sunstone_ore, world, rand, x1, z1, 2, 4, 30, 1, 200, BlockHelper.forBlock(Blocks.stone));
+		this.generateOre(MBlocks.meurodite_ore, world, rand, x1, z1, 1, 9, 10, 1, 32, BlockHelper.forBlock(Blocks.stone));
+		this.generateOre(MBlocks.sunstone_ore, world, rand, x1, z1, 2, 4, 20, 1, 200, BlockHelper.forBlock(Blocks.stone));
 		
-		this.generateOre(MBlocks.plutonium_ore, world, rand, x1, z1, 1, 4, 30, 1, 100, BlockHelper.forBlock(Blocks.stone));
-		this.generateOre(MBlocks.uranium_ore, world, rand, x1, z1, 1, 4, 30, 1, 100, BlockHelper.forBlock(Blocks.stone));
-		this.generateOre(MBlocks.radiant_ore, world, rand, x1, z1, 3, 12, 20, 15, 100, BlockHelper.forBlock(Blocks.stone));
-		this.generateOre(MBlocks.titanium_ore, world, rand, x1, z1, 1, 3, 30, 1, 100, BlockHelper.forBlock(Blocks.stone));
-		this.generateOre(MBlocks.slate, world, rand, x1, z1, 10, 33, 10, 30, 80, BlockHelper.forBlock(Blocks.stone));
+		this.generateOre(MBlocks.plutonium_ore, world, rand, x1, z1, 1, 4, 15, 1, 32, BlockHelper.forBlock(Blocks.stone));
+		this.generateOre(MBlocks.uranium_ore, world, rand, x1, z1, 1, 4, 15, 1, 32, BlockHelper.forBlock(Blocks.stone));
+		this.generateOre(MBlocks.radiant_ore, world, rand, x1, z1, 1, 4, 10, 15, 128, BlockHelper.forBlock(Blocks.stone));
+		this.generateOre(MBlocks.titanium_ore, world, rand, x1, z1, 1, 3, 8, 1, 10, BlockHelper.forBlock(Blocks.stone));
+		this.generateOre(MBlocks.slate, world, rand, x1, z1, 10, 33, 18, 0, 80, BlockHelper.forBlock(Blocks.stone));
 		this.generateBoulder(world, rand, x1, z1);
 		
 		if (biome == biome.jungle || biome == biome.jungleEdge || biome == biome.jungleHills || biome == biome.swampland || biome == biome.roofedForest)
 		{
-			this.generateOre(MBlocks.torite_ore, world, rand, x1, z1, 1, 6, 2, 1, 20, BlockHelper.forBlock(Blocks.stone));
+			this.generateOre(MBlocks.torite_ore, world, rand, x1, z1, 1, 6, 4, 1, 20, BlockHelper.forBlock(Blocks.stone));
 		}
 		if (biome == biome.desert || biome == biome.desertHills)
 		{
@@ -100,7 +100,7 @@ public class MGenHandler implements IWorldGenerator
 		int y1 = 0;
 		int z1 = z;
 		this.generateOre(MBlocks.blazium_ore, world, rand, x1, z1, 1, 10, 15, 0, 128, BlockHelper.forBlock(Blocks.netherrack));
-		this.generateOre(MBlocks.soul_ore, world, rand, x1, z1, 3, 8, 30, 0, 128, BlockHelper.forBlock(Blocks.netherrack));
+		this.generateOre(MBlocks.soul_ore, world, rand, x1, z1, 3, 8, 30, 0, 128, BlockHelper.forBlock(Blocks.soul_sand));
 	}
 	
 	private void generateOre(Block block, World world, Random rand, int chunkX, int chunkZ, int minVienSize, int maxVienSize, int chance, int minY, int maxY, Predicate blockType)
@@ -134,7 +134,7 @@ public class MGenHandler implements IWorldGenerator
 	private void generateDesertQuartz(World world, Random rand, int chunkX, int chunkZ)
 	{
 		WorldGenSpire gen = new WorldGenSpire(MBlocks.desert_quartz, Blocks.sand);
-		for (int i = 0; i < 10; i++)
+		for (int i = 0; i < 6; i++)
 		{
 			int xRand = chunkX * 16 + rand.nextInt(16);
 			int yRand = rand.nextInt(100);
@@ -234,7 +234,7 @@ public class MGenHandler implements IWorldGenerator
 							}
 						}
 					}
-					else if (block instanceof BlockOre || block instanceof MBlockOre || block instanceof BlockPlutoniumOre || block instanceof BlockUraniumOre)
+					else if (block instanceof BlockOre || (block instanceof MBlockOre && block != MBlocks.desert_quartz) || block instanceof BlockPlutoniumOre || block instanceof BlockUraniumOre)
 					{
 						Block oreToReplace = getOreToReplace(block);
 						
