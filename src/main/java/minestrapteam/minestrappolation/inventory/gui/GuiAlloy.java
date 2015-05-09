@@ -14,7 +14,7 @@ import org.lwjgl.opengl.GL11;
 
 public class GuiAlloy extends GuiContainer
 {
-	private static final ResourceLocation texture = new ResourceLocation(MReference.MODID, "textures/gui/melter.png");
+	private static final ResourceLocation texture = new ResourceLocation(MReference.MODID, "textures/gui/alloy_furnace.png");
 	
 	private TileEntityAlloy		furnace;
 	
@@ -43,7 +43,7 @@ public class GuiAlloy extends GuiContainer
 		if (this.furnace.isBurning())
 		{
 			int burn = this.furnace.getBurnTimeRemainingScaled(12);
-			this.drawTexturedModalRect(j + 56, k + 48 - burn, 176, 12 - burn, 14, burn + 2);
+			this.drawTexturedModalRect(j + 47, k + 48 - burn, 176, 12 - burn, 14, burn + 2);
 		}
 		
 		int update = this.furnace.getProgressScaled(24);

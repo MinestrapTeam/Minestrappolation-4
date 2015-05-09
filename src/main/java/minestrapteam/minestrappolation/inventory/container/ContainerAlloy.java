@@ -27,14 +27,14 @@ public class ContainerAlloy extends MinistrappolationInventoryHandler
 		this.lastSmeltTime = 0;
 		this.lastBurnTime = 0;
 		this.lastMaxBurnTime = 0;
+		// input1
+		this.addSlotToContainer(new Slot(furnace, 0, 37, 17));
 		// fuel
-		this.addSlotToContainer(new Slot(furnace, 0, 56, 17));
-		// smelt1
-		this.addSlotToContainer(new Slot(furnace, 1, 47, 53));
+		this.addSlotToContainer(new Slot(furnace, 1, 46, 53));
 		// result
 		this.addSlotToContainer(new Slot(furnace, 2, 116, 35));
 		// smelt2
-		this.addSlotToContainer(new Slot(furnace, 3, 66, 53));
+		this.addSlotToContainer(new Slot(furnace, 3, 55, 17));
 		
 		this.addInventorySlots();
 	}

@@ -2,8 +2,6 @@ package minestrapteam.minestrappolation.world;
 
 import java.util.Random;
 
-import minestrapteam.minestrappolation.block.BlockPlutoniumOre;
-import minestrapteam.minestrappolation.block.BlockUraniumOre;
 import minestrapteam.minestrappolation.block.MBlockOre;
 import minestrapteam.minestrappolation.block.MStoneType;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeStones;
@@ -73,34 +71,22 @@ public class MGenHandler implements IWorldGenerator
 		WorldChunkManager chunkManager = world.getWorldChunkManager();
 		BiomeGenBase biome = chunk.getBiome(pos, chunkManager);
 		
-		this.generateOre(MBlocks.copper_ore, world, rand, x1, z1, 3, 12, 20, 15, 100, BlockHelper.forBlock(Blocks.stone));
-		this.generateOre(MBlocks.tin_ore, world, rand, x1, z1, 3, 12, 20, 15, 100, BlockHelper.forBlock(Blocks.stone));
+		this.generateOre(MBlocks.copper_ore, world, rand, x1, z1, 3, 12, 30, 15, 100, BlockHelper.forBlock(Blocks.stone));
+		this.generateOre(MBlocks.tin_ore, world, rand, x1, z1, 3, 12, 30, 15, 100, BlockHelper.forBlock(Blocks.stone));
 		this.generateOre(MBlocks.meurodite_ore, world, rand, x1, z1, 1, 9, 3, 1, 32, BlockHelper.forBlock(Blocks.stone));
 		this.generateOre(MBlocks.sunstone_ore, world, rand, x1, z1, 2, 4, 30, 1, 200, BlockHelper.forBlock(Blocks.stone));
-		this.generateOre(MBlocks.plutonium_ore, world, rand, x1, z1, 1, 4, 3, 1, 32, BlockHelper.forBlock(Blocks.stone));
-		this.generateOre(MBlocks.uranium_ore, world, rand, x1, z1, 1, 4, 3, 1, 32, BlockHelper.forBlock(Blocks.stone));
-		this.generateOre(MBlocks.radiant_ore, world, rand, x1, z1, 0, 3, 2, 1, 256, BlockHelper.forBlock(Blocks.stone));
-		this.generateOre(MBlocks.titanium_ore, world, rand, x1, z1, 0, 3, 1, 1, 8, BlockHelper.forBlock(Blocks.stone));
 		this.generateOre(MBlocks.slate, world, rand, x1, z1, 10, 33, 10, 1, 80, BlockHelper.forBlock(Blocks.stone));
 		this.generateBoulder(world, rand, x1, z1);
 		
 		if (biome == biome.jungle || biome == biome.jungleEdge || biome == biome.jungleHills || biome == biome.swampland || biome == biome.roofedForest)
 		{
-			this.generateOre(MBlocks.torite_ore, world, rand, x1, z1, 1, 6, 2, 1, 20, BlockHelper.forBlock(Blocks.stone));
-		}
-		if (biome == biome.desert || biome == biome.desertHills)
-		{
-			this.generateDesertQuartz(world, rand, x1, z1);
+			this.generateOre(MBlocks.torite_ore, world, rand, x1, z1, 1, 6, 2, 20, 200, BlockHelper.forBlock(Blocks.stone));
 		}
 	}
 	
 	public void generateNether(World world, Random rand, int x, int z)
 	{
-		int x1 = x;
-		int y1 = 0;
-		int z1 = z;
-		this.generateOre(MBlocks.blazium_ore, world, rand, x1, z1, 1, 10, 15, 0, 128, BlockHelper.forBlock(Blocks.netherrack));
-		this.generateOre(MBlocks.soul_ore, world, rand, x1, z1, 3, 8, 30, 0, 128, BlockHelper.forBlock(Blocks.netherrack));
+		
 	}
 	
 	private void generateOre(Block block, World world, Random rand, int chunkX, int chunkZ, int minVienSize, int maxVienSize, int chance, int minY, int maxY, Predicate blockType)
@@ -122,19 +108,6 @@ public class MGenHandler implements IWorldGenerator
 	{
 		WorldGenBoulder gen = new WorldGenBoulder();
 		for (int i = 0; i < 1; i++)
-		{
-			int xRand = chunkX * 16 + rand.nextInt(16);
-			int yRand = rand.nextInt(100);
-			int zRand = chunkZ * 16 + rand.nextInt(16);
-			BlockPos position = new BlockPos(xRand, yRand, zRand);
-			gen.generate(world, rand, position);
-		}
-	}
-	
-	private void generateDesertQuartz(World world, Random rand, int chunkX, int chunkZ)
-	{
-		WorldGenSpire gen = new WorldGenSpire(MBlocks.desert_quartz, Blocks.sand);
-		for (int i = 0; i < 10; i++)
 		{
 			int xRand = chunkX * 16 + rand.nextInt(16);
 			int yRand = rand.nextInt(100);
@@ -234,7 +207,7 @@ public class MGenHandler implements IWorldGenerator
 							}
 						}
 					}
-					else if (block instanceof BlockOre || block instanceof MBlockOre || block instanceof BlockPlutoniumOre || block instanceof BlockUraniumOre)
+					else if (block instanceof BlockOre || block instanceof MBlockOre)
 					{
 						Block oreToReplace = getOreToReplace(block);
 						
@@ -298,7 +271,7 @@ public class MGenHandler implements IWorldGenerator
 		{
 			return MBlocks.biome_tin;
 		}
-		else if(block == MBlocks.copper_ore)
+		else if(block == MBlocks.biome_copper)
 		{
 			return MBlocks.biome_copper;
 		}
@@ -320,15 +293,15 @@ public class MGenHandler implements IWorldGenerator
 		}
 		else if(block == MBlocks.titanium_ore)
 		{
-			return MBlocks.biome_titanium;
+			return MBlocks.biome_torite;
 		}
-		else if(block == MBlocks.meurodite_ore)
+		else if(block == MBlocks.torite_ore)
 		{
 			return MBlocks.biome_meurodite;
 		}
 		else
 		{
-			return MBlocks.biome_bricks;
+			return MBlocks.biome_copper;
 		}
 	}
 	

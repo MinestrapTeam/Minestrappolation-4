@@ -16,10 +16,10 @@ public class ContainerBarrel extends MinistrappolationInventoryHandler
 		{
 			for (int k = 0; k < 9; ++k)
 			{
-				this.addSlotToContainer(new Slot(barrel, k + j * 9, 8 + k * 18, 19 + j * 18));
+				this.addSlotToContainer(new Slot(barrel, k + j * 9, 8 + k * 18, 18 + j * 18));
 			}
 		}
-		this.addInventorySlots(0, 21);
+		this.addInventorySlots(0, 20);
 	}
 	
 	@Override

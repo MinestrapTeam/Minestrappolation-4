@@ -8,6 +8,7 @@ import net.minecraft.block.BlockLeavesBase;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.Minecraft;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -70,7 +71,7 @@ public abstract class MBlockLeavesBase extends BlockLeavesBase implements net.mi
 		{
 			if (((Boolean) state.getValue(CHECK_DECAY)).booleanValue() && ((Boolean) state.getValue(DECAYABLE)).booleanValue())
 			{
-				byte b0 = 6;
+				byte b0 = 8;
 				int i = b0 + 1;
 				int j = pos.getX();
 				int k = pos.getY();
@@ -183,13 +184,13 @@ public abstract class MBlockLeavesBase extends BlockLeavesBase implements net.mi
 	@SideOnly(Side.CLIENT)
 	public void randomDisplayTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
 	{
-		if (rand.nextInt(15) == 1 && worldIn.canSeeSky(pos.offset(EnumFacing.UP)) && !World.doesBlockHaveSolidTopSurface(worldIn, pos.offset(EnumFacing.DOWN)))
-		{
-			double d0 = pos.getX() + rand.nextFloat();
-			double d1 = pos.getY() - 0.05D;
-			double d2 = pos.getZ() + rand.nextFloat();
-			worldIn.spawnParticle(EnumParticleTypes.DRIP_WATER, d0, d1, d2, 0.0D, 0.0D, 0.0D, new int[0]);
-		}
+		if (worldIn.canLightningStrike(pos.up()) && !World.doesBlockHaveSolidTopSurface(worldIn, pos.down()) && rand.nextInt(15) == 1)
+        {
+            double d0 = (double)((float)pos.getX() + rand.nextFloat());
+            double d1 = (double)pos.getY() - 0.05D;
+            double d2 = (double)((float)pos.getZ() + rand.nextFloat());
+            worldIn.spawnParticle(EnumParticleTypes.DRIP_WATER, d0, d1, d2, 0.0D, 0.0D, 0.0D, new int[0]);
+        }
 	}
 	
 	private void destroy(World worldIn, BlockPos pos)
@@ -223,19 +224,6 @@ public abstract class MBlockLeavesBase extends BlockLeavesBase implements net.mi
 	protected int getSaplingDropChance(IBlockState state)
 	{
 		return 20;
-	}
-	
-	@Override
-	public boolean isOpaqueCube()
-	{
-		return !this.isTransparent;
-	}
-	
-	@Override
-	@SideOnly(Side.CLIENT)
-	public EnumWorldBlockLayer getBlockLayer()
-	{
-		return this.isTransparent ? EnumWorldBlockLayer.CUTOUT_MIPPED : EnumWorldBlockLayer.SOLID;
 	}
 	
 	@Override

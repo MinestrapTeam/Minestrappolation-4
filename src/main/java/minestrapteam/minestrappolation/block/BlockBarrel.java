@@ -16,7 +16,11 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumWorldBlockLayer;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockBarrel extends BlockFalling implements ITileEntityProvider
 {
@@ -92,4 +96,10 @@ public class BlockBarrel extends BlockFalling implements ITileEntityProvider
 	{
 		return new TileEntityBarrel();
 	}
+	
+	@Override
+	public boolean isOpaqueCube()
+    {
+        return false;
+    }
 }

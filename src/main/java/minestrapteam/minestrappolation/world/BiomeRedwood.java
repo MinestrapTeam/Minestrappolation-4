@@ -5,12 +5,18 @@ import java.util.Random;
 import net.minecraft.block.BlockDirt;
 import net.minecraft.block.BlockTallGrass;
 import net.minecraft.init.Blocks;
+import net.minecraft.util.BlockPos;
+import net.minecraft.util.MathHelper;
+import net.minecraft.world.ColorizerFoliage;
+import net.minecraft.world.ColorizerGrass;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.ChunkPrimer;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 import net.minecraft.world.gen.feature.WorldGenTallGrass;
 import net.minecraft.world.gen.feature.WorldGenerator;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BiomeRedwood extends BiomeGenBase
 {
@@ -41,12 +47,26 @@ public class BiomeRedwood extends BiomeGenBase
 	}
 	
 	@Override
+	@SideOnly(Side.CLIENT)
+    public int getGrassColorAtPos(BlockPos p_180627_1_)
+    {
+        return 1928747;
+    }
+
+	@Override
+    @SideOnly(Side.CLIENT)
+    public int getFoliageColorAtPos(BlockPos p_180625_1_)
+    {
+        return 1928747;
+    }
+	
+	@Override
 	public void genTerrainBlocks(World worldIn, Random rand, ChunkPrimer primer, int p_180622_4_, int p_180622_5_, double noise)
 	{
 		this.fillerBlock = Blocks.dirt.getDefaultState();
 		this.topBlock = Blocks.grass.getDefaultState();
 		
-		if (noise > 3.5D)
+		if (noise > 2.5D)
 		{
 			this.topBlock = Blocks.sand.getDefaultState();
 			this.fillerBlock = Blocks.sand.getDefaultState();
