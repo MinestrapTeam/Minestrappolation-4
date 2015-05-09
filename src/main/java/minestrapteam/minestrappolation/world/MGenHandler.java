@@ -66,11 +66,22 @@ public class MGenHandler implements IWorldGenerator
 		int x1 = x;
 		int y1 = 0;
 		int z1 = z;
+		BlockPos pos = new BlockPos(x1 * 16, 0, z1 * 16);
+		Chunk chunk = world.getChunkFromBlockCoords(pos);
+		WorldChunkManager chunkManager = world.getWorldChunkManager();
+		BiomeGenBase biome = chunk.getBiome(pos, chunkManager);
+		
 		this.generateOre(MBlocks.copper_ore, world, rand, x1, z1, 3, 12, 30, 15, 100, BlockHelper.forBlock(Blocks.stone));
 		this.generateOre(MBlocks.tin_ore, world, rand, x1, z1, 3, 12, 30, 15, 100, BlockHelper.forBlock(Blocks.stone));
+		this.generateOre(MBlocks.meurodite_ore, world, rand, x1, z1, 1, 9, 3, 1, 32, BlockHelper.forBlock(Blocks.stone));
 		this.generateOre(MBlocks.sunstone_ore, world, rand, x1, z1, 2, 4, 30, 1, 200, BlockHelper.forBlock(Blocks.stone));
-		this.generateOre(MBlocks.slate, world, rand, x1, z1, 5, 25, 20, 1, 256, BlockHelper.forBlock(Blocks.stone));
+		this.generateOre(MBlocks.slate, world, rand, x1, z1, 10, 33, 10, 1, 80, BlockHelper.forBlock(Blocks.stone));
 		this.generateBoulder(world, rand, x1, z1);
+		
+		if (biome == biome.jungle || biome == biome.jungleEdge || biome == biome.jungleHills || biome == biome.swampland || biome == biome.roofedForest)
+		{
+			this.generateOre(MBlocks.torite_ore, world, rand, x1, z1, 1, 6, 2, 20, 200, BlockHelper.forBlock(Blocks.stone));
+		}
 	}
 	
 	public void generateNether(World world, Random rand, int x, int z)
