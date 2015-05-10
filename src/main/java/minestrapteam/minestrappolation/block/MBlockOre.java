@@ -3,6 +3,7 @@ package minestrapteam.minestrappolation.block;
 import java.util.Iterator;
 import java.util.Random;
 
+import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeCoal;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MItems;
 import net.minecraft.block.BlockContainer;
