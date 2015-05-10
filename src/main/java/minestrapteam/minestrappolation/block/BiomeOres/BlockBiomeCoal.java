@@ -102,11 +102,13 @@ public class BlockBiomeCoal extends MBlockOre
 	public float getBlockHardness(World worldIn, BlockPos pos)
     {
 		IBlockState state = worldIn.getBlockState(pos);
-		if(state == this.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()))
+		if(state == this.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()) || state == this.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()) || state == this.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()) || state == this.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()) || state == this.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()))
 		{
-			return 100F;
+			return 1.5F * this.blockHardness;
 		}
-        return this.blockHardness;
+		else
+		{
+			return this.blockHardness;
+		}
     }
-
 }
