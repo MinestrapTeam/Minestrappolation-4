@@ -16,6 +16,8 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.BiomeGenBase.TempCategory;
+import net.minecraft.world.biome.BiomeGenHills;
+import net.minecraft.world.biome.BiomeGenTaiga;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.IChunkProvider;
@@ -92,6 +94,17 @@ public class MGenHandler implements IWorldGenerator
 		{
 			this.generateDesertQuartz(world, rand, x1, z1);
 		}
+		
+		
+		// Redwood Trees
+		if ((biome instanceof BiomeGenHills || biome instanceof BiomeGenTaiga))
+		{
+			new WorldGenRedWoodTreeSmall().generate(world, rand, pos);
+		}
+		
+		
+		
+		
 	}
 	
 	public void generateNether(World world, Random rand, int x, int z)

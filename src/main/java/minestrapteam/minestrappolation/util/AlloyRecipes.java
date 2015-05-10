@@ -50,6 +50,9 @@ public class AlloyRecipes
     {
         this.meltingList.put(input, stack);
         this.meltingList2.put(input, input2);
+        
+        this.meltingList.put(input2, stack);
+        this.meltingList2.put(input2, input);
        
         this.experienceList.put(stack, Float.valueOf(experience));
     }

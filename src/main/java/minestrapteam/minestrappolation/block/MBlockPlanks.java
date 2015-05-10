@@ -16,6 +16,9 @@ import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -26,11 +29,14 @@ public class MBlockPlanks extends Block
 {
 	public static final PropertyEnum	VARIANT	= PropertyEnum.create("type", MWoodType.class);
 	
-	public MBlockPlanks()
+	private int flammability;
+	
+	public MBlockPlanks(int flame)
 	{
 		super(Material.wood);
 		this.setCreativeTab(Minestrappolation.tabMinistrappolation);
 		this.setUnlocalizedName("ministrapp_planks");
+		this.flammability = flame;
 	}
 	
 	@Override
@@ -91,6 +97,12 @@ public class MBlockPlanks extends Block
 			Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, enumtype.getMetadata(), itemModelResourceLocation);
 		}
 	}
+	
+	@Override
+	public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face)
+    {
+        return this.flammability;
+    }
 	
 	
 }

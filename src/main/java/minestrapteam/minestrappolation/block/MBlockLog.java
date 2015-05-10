@@ -11,6 +11,9 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -32,10 +35,13 @@ public class MBlockLog extends BlockLog
 													}
 												});
 	
-	public MBlockLog()
+	private int flammability;
+	
+	public MBlockLog(int flame)
 	{
 		this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, MWoodType.REDWOOD).withProperty(LOG_AXIS, BlockLog.EnumAxis.Y));
 		this.setCreativeTab(Minestrappolation.tabMinistrappolation);
+		this.flammability = flame;
 	}
 	
 	@Override
@@ -111,5 +117,11 @@ public class MBlockLog extends BlockLog
 	{
 		return ((MWoodType) state.getValue(VARIANT)).getMetadata();
 	}
+	
+	@Override
+	public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face)
+    {
+        return this.flammability;
+    }
 	
 }

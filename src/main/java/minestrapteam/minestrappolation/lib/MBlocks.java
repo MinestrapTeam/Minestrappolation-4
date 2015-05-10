@@ -7,6 +7,7 @@ import minestrapteam.minestrappolation.block.BlockBiomeBricks;
 import minestrapteam.minestrappolation.block.BlockBoulder;
 import minestrapteam.minestrappolation.block.BlockCrate;
 import minestrapteam.minestrappolation.block.BlockGodstone;
+import minestrapteam.minestrappolation.block.BlockMDoor;
 import minestrapteam.minestrappolation.block.BlockMelter;
 import minestrapteam.minestrappolation.block.BlockPlutoniumOre;
 import minestrapteam.minestrappolation.block.BlockSoulOre;
@@ -45,6 +46,7 @@ import minestrapteam.minestrappolation.item.ItemBlockLeaves;
 import minestrapteam.minestrappolation.item.ItemBlockLog;
 import minestrapteam.minestrappolation.item.ItemBlockPlanks;
 import minestrapteam.minestrappolation.item.ItemBlockSapling;
+import minestrapteam.minestrappolation.item.ItemMDoor;
 import minestrapteam.minestrappolation.item.BiomeItems.ItemBlockBiomeCoal;
 import minestrapteam.minestrappolation.item.BiomeItems.ItemBlockBiomeCobble;
 import minestrapteam.minestrappolation.item.BiomeItems.ItemBlockBiomeCopper;
@@ -108,6 +110,8 @@ public class MBlocks
 	public static Block	stone_refined;
 	public static Block	stone_tiles;
 	
+	public static Block redwood_door;
+	
 	//Wood
 	public static Block	ministrapp_log;
 	public static Block	ministrapp_leaves;
@@ -146,6 +150,9 @@ public class MBlocks
 	//Stairs
 	public static Block			   redwood_stairs;
 	
+	//BLOCK ITEMS
+	public static Item			   redwood_door_item;
+	
 	public static void init()
 	{
 		slate = new MBlock(Material.rock, MapColor.grayColor).setUnlocalizedName("slate");
@@ -170,11 +177,14 @@ public class MBlocks
 		sunstone_block = new BlockSunstoneBlock(Material.glass, MapColor.sandColor).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setLightLevel(0.9F).setUnlocalizedName("sunstone_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		godstone = new BlockGodstone(Material.rock, MapColor.sandColor).setHardness(3F).setResistance(15F).setUnlocalizedName("godstone");
 		
+		
+		redwood_door = new BlockMDoor(Material.wood).setUnlocalizedName("redwood_door");
+	
 		//WOOD
-		ministrapp_log = new MBlockLog().setUnlocalizedName("ministrapp_log");
+		ministrapp_log = new MBlockLog(300).setUnlocalizedName("ministrapp_log");
 		ministrapp_leaves = new MBlockLeaves().setUnlocalizedName("ministrapp_leaves");
 		ministrapp_sapling = new MBlockSapling();
-		ministrapp_planks = new MBlockPlanks().setUnlocalizedName("ministrapp_planks");	
+		ministrapp_planks = new MBlockPlanks(300).setUnlocalizedName("ministrapp_planks");	
 		
 		//ORES
 		sunstone_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.sunstone_shard, 0, 2, 5, 1, 3, "pickaxe", 2, true).setHardness(2.6F).setResistance(4.0F).setStepSound(Block.soundTypePiston).setLightLevel(0.7F).setUnlocalizedName("sunstone_ore");
@@ -212,14 +222,18 @@ public class MBlocks
 		biome_cobble = new BlockBiomeCobble().setHardness(1F).setUnlocalizedName("biome_cobble");
 		biome_bricks = new BlockBiomeBricks().setHardness(.8F).setUnlocalizedName("biome_bricks");
 		
-		barrel = new BlockBarrel().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("barrel");
-		crate = new BlockCrate().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("crate");
+		barrel = new BlockBarrel().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("barrel").setHardness(1F).setResistance(1F);
+		crate = new BlockCrate().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("crate").setHardness(1F).setResistance(1F);
 		melter = new BlockMelter().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("melter");
 		alloy = new BlockAlloy().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("alloy");
 		
 		
 		//Stairs
 		redwood_stairs = new MBlockStairs(ministrapp_planks.getStateFromMeta(MWoodType.REDWOOD.getMetadata())).setUnlocalizedName("redwood_stairs");
+		
+		
+		//BLOCK ITEMS
+		redwood_door_item = new ItemMDoor(redwood_door).setUnlocalizedName("redwood_door_item");
 		
 		register();
 		registerHarvestLevels();
@@ -252,6 +266,8 @@ public class MBlocks
 		
 		register(godstone);
 		
+		register(redwood_door);
+		
 		//Ores
 		register(plutonium_ore);
 		register(uranium_ore);
@@ -270,6 +286,9 @@ public class MBlocks
 		
 		//Stairs
 		register(redwood_stairs);
+		
+		//BLOCK ITEMS
+		GameRegistry.registerItem(redwood_door_item, redwood_door_item.getUnlocalizedName().substring(5));
 		
 		//Wood stuff
 		GameRegistry.registerBlock(ministrapp_log, ItemBlockLog.class, ministrapp_log.getUnlocalizedName().substring(5));
@@ -340,7 +359,9 @@ public class MBlocks
 		registerRender(crate);
 		registerRender(melter);
 		registerRender(redwood_stairs);
+		registerRender(redwood_door);
 		registerRender(alloy);
+		registerRender(redwood_door_item);
 	}
 	
 	private static void register(Block block)
@@ -351,6 +372,11 @@ public class MBlocks
 	private static void registerRender(Block block)
 	{
 		Item item = Item.getItemFromBlock(block);
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(MReference.MODID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
+	}
+	
+	private static void registerRender(Item item)
+	{
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(MReference.MODID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
 	}
 	
