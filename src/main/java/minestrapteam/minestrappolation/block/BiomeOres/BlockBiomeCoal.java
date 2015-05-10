@@ -18,6 +18,8 @@ import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.BlockPos;
+import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -95,5 +97,16 @@ public class BlockBiomeCoal extends MBlockOre
 			Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, enumtype.getMetadata(), itemModelResourceLocation);
 		}
 	}
+	
+	@Override
+	public float getBlockHardness(World worldIn, BlockPos pos)
+    {
+		IBlockState state = worldIn.getBlockState(pos);
+		if(state == this.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()))
+		{
+			return 100F;
+		}
+        return this.blockHardness;
+    }
 
 }
