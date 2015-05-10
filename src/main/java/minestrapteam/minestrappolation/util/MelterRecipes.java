@@ -1,9 +1,12 @@
 package minestrapteam.minestrappolation.util;
 
 import com.google.common.collect.Maps;
+
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
+
+import minestrapteam.minestrappolation.lib.MBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockStoneBrick;
 import net.minecraft.init.Blocks;
@@ -27,10 +30,28 @@ public class MelterRecipes
    
     private MelterRecipes()
     {
-        this.addRecipeForBlock(Blocks.cobblestone, new ItemStack(Items.lava_bucket), 1F);
+    	//Vanilla Lava
+        this.addRecipe(Blocks.cobblestone, new ItemStack(Items.lava_bucket), 1F);
+        this.addRecipe(Blocks.cobblestone, new ItemStack(Items.lava_bucket), 0.4F);
+		this.addRecipe(Blocks.mossy_cobblestone, new ItemStack(Items.lava_bucket), 0.6F);
+		this.addRecipe(Blocks.stone, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(Blocks.stonebrick, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(Blocks.stone_stairs, new ItemStack(Items.lava_bucket), 0.4F);
+		this.addRecipe(Blocks.stone_brick_stairs, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(Blocks.cobblestone_wall, new ItemStack(Items.lava_bucket), 0.4F);
+ 		this.addRecipe(Blocks.sandstone, new ItemStack(Items.lava_bucket), 0.4F);
+		this.addRecipe(Blocks.sandstone_stairs, new ItemStack(Items.lava_bucket), 0.4F);
+		
+		//Vanilla Water
+		this.addRecipe(Blocks.snow, new ItemStack(Items.water_bucket), 0.4F);
+		this.addRecipe(Blocks.ice, new ItemStack(Items.water_bucket), 0.7F);
+		
+		//Minestrappolation lava
+		this.addRecipe(MBlocks.biome_stones, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.biome_cobble, new ItemStack(Items.lava_bucket), 0.5F);
     }
 
-    public void addRecipeForBlock(Block input, ItemStack stack, float experience)
+    public void addRecipe(Block input, ItemStack stack, float experience)
     {
         this.addRecipe(Item.getItemFromBlock(input), stack, experience);
     }
