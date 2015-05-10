@@ -47,12 +47,12 @@ public class BlockBiomeUranium extends BlockRadiation
 	{
 		if (living instanceof EntityZombie)
 		{
-			living.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 180, 1, false, false));
-			living.addPotionEffect(new PotionEffect(Potion.damageBoost.getId(), 180, 0, false, false));
+			living.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 20 * 6, 1, false, false));
+			living.addPotionEffect(new PotionEffect(Potion.damageBoost.getId(), 20 * 6, 0, false, false));
 		}
 		else
 		{
-			living.addPotionEffect(new PotionEffect(Potion.poison.getId(), 200, 0, false, false));
+			living.addPotionEffect(new PotionEffect(Potion.poison.getId(), 20 * 10, 0, false, false));
 		}
 	}
 	

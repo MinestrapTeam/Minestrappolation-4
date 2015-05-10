@@ -49,11 +49,10 @@ public class BlockBiomePlutonium extends BlockRadiation
 		{
 			living.addPotionEffect(new PotionEffect(Potion.resistance.getId(), 20 * 6, 1, false, false));
 			living.addPotionEffect(new PotionEffect(Potion.regeneration.getId(), 20 * 6, 0, false, false));
-			
 		}
 		else
 		{
-			living.addPotionEffect(new PotionEffect(Potion.wither.getId(), 40, 0, false, false));
+			living.addPotionEffect(new PotionEffect(Potion.wither.getId(), 20 * 2, 0, false, false));
 		}
 	}
 	
