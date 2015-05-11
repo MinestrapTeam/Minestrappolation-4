@@ -232,7 +232,6 @@ public class MBlocks
 		//Stairs
 		redwood_stairs = new MBlockStairs(ministrapp_planks.getStateFromMeta(MWoodType.REDWOOD.getMetadata())).setUnlocalizedName("redwood_stairs");
 		
-		
 		//BLOCK ITEMS
 		redwood_door_item = new ItemMDoor(redwood_door).setUnlocalizedName("redwood_door_item");
 		
@@ -318,6 +317,7 @@ public class MBlocks
 		GameRegistry.registerBlock(biome_stones, ItemBlockBiomeStones.class, biome_stones.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(biome_cobble, ItemBlockBiomeCobble.class, biome_cobble.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(biome_bricks, ItemBlockBiomeBricks.class, biome_bricks.getUnlocalizedName().substring(5));
+		
 	}
 	
 	public static void registerRenders()

@@ -68,24 +68,9 @@ public abstract class WorldGenBaseTree extends WorldGenAbstractTree
 				groundBlock = ground.getBlock();
 				continue;
 			}
-		}
-		
-		if (this.width == 1)
-		{		
-			return ground.getBlock() == groundBlock;
-		}
-		else
-		{
-			for (int i = 0; i < this.width; i++)
-			{
-				for (int j = 0; j < this.width; j++)
-				{
-					return ground.getBlock() == groundBlock;
-  				}
-			}
-			return true;
-		}
-		
+		}	
+			
+		return ground.getBlock() == groundBlock;
 	}
 	
 	public void createTrunk(World world, Random rand, BlockPos pos)
