@@ -67,6 +67,8 @@ import minestrapteam.minestrappolation.item.BiomeItems.ItemBlockBiomeTitanium;
 import minestrapteam.minestrappolation.item.BiomeItems.ItemBlockBiomeTorite;
 import minestrapteam.minestrappolation.item.BiomeItems.ItemBlockBiomeUranium;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFence;
+import net.minecraft.block.BlockFenceGate;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -151,6 +153,10 @@ public class MBlocks
 	//Stairs
 	public static Block			   redwood_stairs;
 	
+	//Fence
+	public static Block 		   redwood_fence;
+	public static Block 		   redwood_fence_gate;
+	
 	//BLOCK ITEMS
 	public static Item			   redwood_door_item;
 	
@@ -232,6 +238,10 @@ public class MBlocks
 		//Stairs
 		redwood_stairs = new MBlockStairs(ministrapp_planks.getStateFromMeta(MWoodType.REDWOOD.getMetadata())).setUnlocalizedName("redwood_stairs");
 		
+		//Fence
+		redwood_fence = new BlockFence(Material.wood).setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("redwood_fence");
+		redwood_fence_gate = new BlockFenceGate().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("redwood_fence_gate");
+		
 		//BLOCK ITEMS
 		redwood_door_item = new ItemMDoor(redwood_door).setUnlocalizedName("redwood_door_item");
 		
@@ -286,6 +296,10 @@ public class MBlocks
 		
 		//Stairs
 		register(redwood_stairs);
+		
+		//Fence
+		register(redwood_fence);
+		register(redwood_fence_gate);
 		
 		//BLOCK ITEMS
 		GameRegistry.registerItem(redwood_door_item, redwood_door_item.getUnlocalizedName().substring(5));
@@ -363,6 +377,8 @@ public class MBlocks
 		registerRender(redwood_door);
 		registerRender(alloy);
 		registerRender(redwood_door_item);
+		registerRender(redwood_fence);
+		registerRender(redwood_fence_gate);
 	}
 	
 	private static void register(Block block)
