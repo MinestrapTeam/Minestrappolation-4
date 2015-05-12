@@ -20,12 +20,16 @@ import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTin;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTitanium;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTorite;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeUranium;
+import minestrapteam.minestrappolation.item.RenderXpOrb;
 import minestrapteam.minestrappolation.tileentity.TileEntityAlloy;
 import minestrapteam.minestrappolation.tileentity.TileEntityBarrel;
 import minestrapteam.minestrappolation.tileentity.TileEntityCrate;
 import minestrapteam.minestrappolation.tileentity.TileEntityMelter;
+import net.minecraft.client.Minecraft;
+import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -94,6 +98,8 @@ public abstract class CommonProxy implements IGuiHandler
 		BlockBiomeUranium.inventoryRender();
 		BlockBiomeMeurodite.inventoryRender();
 		MBlockPlanks.inventoryRender();
+		
+		RenderingRegistry.registerEntityRenderingHandler(EntityXPOrb.class, new RenderXpOrb(Minecraft.getMinecraft().getRenderManager()));
 	}
 	
 	public void postInit(FMLPostInitializationEvent event)
