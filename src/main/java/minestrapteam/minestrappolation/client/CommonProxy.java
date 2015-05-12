@@ -25,6 +25,7 @@ import minestrapteam.minestrappolation.tileentity.TileEntityAlloy;
 import minestrapteam.minestrappolation.tileentity.TileEntityBarrel;
 import minestrapteam.minestrappolation.tileentity.TileEntityCrate;
 import minestrapteam.minestrappolation.tileentity.TileEntityMelter;
+import minestrapteam.minestrappolation.util.Config;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;
@@ -99,7 +100,10 @@ public abstract class CommonProxy implements IGuiHandler
 		BlockBiomeMeurodite.inventoryRender();
 		MBlockPlanks.inventoryRender();
 		
-		RenderingRegistry.registerEntityRenderingHandler(EntityXPOrb.class, new RenderXpOrb(Minecraft.getMinecraft().getRenderManager()));
+		if(Config.useRainBowXp)
+		{
+			RenderingRegistry.registerEntityRenderingHandler(EntityXPOrb.class, new RenderXpOrb(Minecraft.getMinecraft().getRenderManager()));
+		}
 	}
 	
 	public void postInit(FMLPostInitializationEvent event)
