@@ -8,6 +8,7 @@ import minestrapteam.minestrappolation.block.BlockBoulder;
 import minestrapteam.minestrappolation.block.BlockCrate;
 import minestrapteam.minestrappolation.block.BlockGodstone;
 import minestrapteam.minestrappolation.block.BlockMDoor;
+import minestrapteam.minestrappolation.block.BlockMPane;
 import minestrapteam.minestrappolation.block.BlockMelter;
 import minestrapteam.minestrappolation.block.BlockPlutoniumOre;
 import minestrapteam.minestrappolation.block.BlockSoulOre;
@@ -69,6 +70,7 @@ import minestrapteam.minestrappolation.item.BiomeItems.ItemBlockBiomeUranium;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.BlockFenceGate;
+import net.minecraft.block.BlockPane;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -157,6 +159,12 @@ public class MBlocks
 	public static Block 		   redwood_fence;
 	public static Block 		   redwood_fence_gate;
 	
+	//Panes
+	public static Block			   refined_glass_pane;
+	public static Block			   bricked_glass_pane;
+	public static Block			   tiled_glass_pane;
+	public static Block			   framed_glass_pane;
+	
 	//BLOCK ITEMS
 	public static Item			   redwood_door_item;
 	
@@ -242,6 +250,12 @@ public class MBlocks
 		redwood_fence = new BlockFence(Material.wood).setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("redwood_fence");
 		redwood_fence_gate = new BlockFenceGate().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("redwood_fence_gate");
 		
+		//Pane
+		refined_glass_pane = new BlockMPane(Material.glass, false).setUnlocalizedName("refined_pane");
+		bricked_glass_pane = new BlockMPane(Material.glass, false).setUnlocalizedName("bricked_pane");
+		tiled_glass_pane = new BlockMPane(Material.glass, false).setUnlocalizedName("tiled_pane");
+		framed_glass_pane = new BlockMPane(Material.glass, false).setUnlocalizedName("framed_pane");
+		
 		//BLOCK ITEMS
 		redwood_door_item = new ItemMDoor(redwood_door).setUnlocalizedName("redwood_door_item");
 		
@@ -300,6 +314,12 @@ public class MBlocks
 		//Fence
 		register(redwood_fence);
 		register(redwood_fence_gate);
+		
+		//Panes
+		register(refined_glass_pane);
+		register(bricked_glass_pane);
+		register(tiled_glass_pane);
+		register(framed_glass_pane);
 		
 		//BLOCK ITEMS
 		GameRegistry.registerItem(redwood_door_item, redwood_door_item.getUnlocalizedName().substring(5));
@@ -379,6 +399,10 @@ public class MBlocks
 		registerRender(redwood_door_item);
 		registerRender(redwood_fence);
 		registerRender(redwood_fence_gate);
+		registerRender(refined_glass_pane);
+		registerRender(bricked_glass_pane);
+		registerRender(tiled_glass_pane);
+		registerRender(framed_glass_pane);
 	}
 	
 	private static void register(Block block)
