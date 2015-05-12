@@ -2,6 +2,7 @@
 .gradle
 .classpath
 .settings
+.project
 backups
 bin
 build

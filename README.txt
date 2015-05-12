@@ -1,4 +1,3 @@
-
 RULES FOR COMMITTING ANY CODE
 - Do NOT commit code with errors(Doing this makes no sense)
 - Do NOT EVER commit without testing(this just causes problems for everyone)
