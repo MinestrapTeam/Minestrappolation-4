@@ -12,6 +12,7 @@ import minestrapteam.minestrappolation.item.ItemSoulGem;
 import minestrapteam.minestrappolation.item.MItemFoiled;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemFood;
@@ -28,6 +29,10 @@ public class MItems extends Item
 	public static Item							copper_ingot;
 	public static Item							tin_ingot;
 	public static Item							sunstone_shard;
+	public static Item							bronze_ingot;
+	public static Item							steel_ingot;
+	public static Item							blazium_ingot;
+	public static Item							titanium_ingot;
 	
 	public static Item							stone_brick;
 	public static Item							deepstone_brick;
@@ -47,10 +52,81 @@ public class MItems extends Item
 	public static Item							copper_hoe;
 	public static Item							copper_sword;
 	
+	public static Item							bronze_pickaxe;
+	public static Item							bronze_axe;
+	public static Item							bronze_shovel;
+	public static Item							bronze_hoe;
+	public static Item							bronze_sword;
+	
+	public static Item							steel_pickaxe;
+	public static Item							steel_axe;
+	public static Item							steel_shovel;
+	public static Item							steel_hoe;
+	public static Item							steel_sword;
+	
+	public static Item							meurodite_pickaxe;
+	public static Item							meurodite_axe;
+	public static Item							meurodite_shovel;
+	public static Item							meurodite_hoe;
+	public static Item							meurodite_sword;
+	
+	public static Item							torite_pickaxe;
+	public static Item							torite_axe;
+	public static Item							torite_shovel;
+	public static Item							torite_hoe;
+	public static Item							torite_sword;
+	
+	public static Item							fire_pickaxe;
+	public static Item							fire_axe;
+	public static Item							fire_shovel;
+	public static Item							fire_hoe;
+	public static Item							fire_sword;
+	
+	public static Item							titanium_pickaxe;
+	public static Item							titanium_axe;
+	public static Item							titanium_shovel;
+	public static Item							titanium_hoe;
+	public static Item							titanium_sword;
+	
+	public static Item							bedrock_pickaxe;
+	public static Item							bedrock_axe;
+	public static Item							bedrock_shovel;
+	public static Item							bedrock_hoe;
+	
 	public static Item							tin_helmet;
 	public static Item							tin_chestplate;
 	public static Item							tin_leggings;
 	public static Item							tin_boots;
+	
+	public static Item							bronze_helmet;
+	public static Item							bronze_chestplate;
+	public static Item							bronze_leggings;
+	public static Item							bronze_boots;
+	
+	public static Item							steel_helmet;
+	public static Item							steel_chestplate;
+	public static Item							steel_leggings;
+	public static Item							steel_boots;
+	
+	public static Item							meurodite_helmet;
+	public static Item							meurodite_chestplate;
+	public static Item							meurodite_leggings;
+	public static Item							meurodite_boots;
+	
+	public static Item							torite_helmet;
+	public static Item							torite_chestplate;
+	public static Item							torite_leggings;
+	public static Item							torite_boots;
+	
+	public static Item							blazium_helmet;
+	public static Item							blazium_chestplate;
+	public static Item							blazium_leggings;
+	public static Item							blazium_boots;
+	
+	public static Item							titanium_helmet;
+	public static Item							titanium_chestplate;
+	public static Item							titanium_leggings;
+	public static Item							titanium_boots;
 	
 	public static Item							radiant_quartz;	
 	public static Item							meurodite_gem;
@@ -59,8 +135,22 @@ public class MItems extends Item
 	public static Item 							desert_quartz;
 	public static Item 							blaze_shard;
 	
-	public static final Item.ToolMaterial		COPPER		= EnumHelper.addToolMaterial("COPPER", 1, 186, 4.5F, 1.5F, 18);
-	public static final ItemArmor.ArmorMaterial	ARMOR_TIN	= EnumHelper.addArmorMaterial("ARMOR_TIN", "tin", 4, new int[] { 2, 4, 3, 2 }, 6);
+	public static final Item.ToolMaterial		COPPER			= EnumHelper.addToolMaterial("COPPER", 1, 186, 4.5F, 1.5F, 18);
+	public static final Item.ToolMaterial		BRONZE			= EnumHelper.addToolMaterial("BRONZE", 2, 1016, 5.8F, 2.0F, 16);
+	public static final Item.ToolMaterial		STEEL			= EnumHelper.addToolMaterial("STEEL", 2, 420, 7.8F, 2.5F, 20);
+	public static final Item.ToolMaterial		MEURODITE		= EnumHelper.addToolMaterial("MEURODITE", 2, 905, 7.0F, 2.5F, 13);
+	public static final Item.ToolMaterial		TORITE			= EnumHelper.addToolMaterial("TORITE", 3, 1208, 9.0F, 3.5F, 28);
+	public static final Item.ToolMaterial		BLAZIUM			= EnumHelper.addToolMaterial("BLAZIUM", 2, 808, 8.0F, 3.5F, 18);
+	public static final Item.ToolMaterial		TITANIUM		= EnumHelper.addToolMaterial("TITANIUM", 4, 3122, 14.0F, 5.0F, 8);
+	public static final Item.ToolMaterial		BEDROCK			= EnumHelper.addToolMaterial("BEDROCK", 5, 6244, 7.0F, 1.0F, 5);
+	
+	public static final ItemArmor.ArmorMaterial	ARMOR_TIN		= EnumHelper.addArmorMaterial("ARMOR_TIN", "tin", 4, new int[] { 2, 4, 3, 2 }, 6);
+	public static final ItemArmor.ArmorMaterial	ARMOR_BRONZE	= EnumHelper.addArmorMaterial("ARMOR_BRONZE", "bronze", 30, new int[] { 2, 6, 5, 2 }, 10);
+	public static final ItemArmor.ArmorMaterial	ARMOR_STEEL		= EnumHelper.addArmorMaterial("ARMOR_STEEL", "steel", 19, new int[] { 3, 7, 5, 3 }, 14);
+	public static final ItemArmor.ArmorMaterial	ARMOR_MEURODITE	= EnumHelper.addArmorMaterial("ARMOR_MEURODITE", "meurodite", 24, new int[] { 3, 7, 6, 2 }, 10);
+	public static final ItemArmor.ArmorMaterial	ARMOR_TORITE	= EnumHelper.addArmorMaterial("ARMOR_TORITE", "torite", 31, new int[] { 4, 9, 7, 3 }, 30);
+	public static final ItemArmor.ArmorMaterial	ARMOR_BLAZIUM	= EnumHelper.addArmorMaterial("ARMOR_BLAZIUM", "blazium", 22, new int[] { 2, 7, 6, 2 }, 10);
+	public static final ItemArmor.ArmorMaterial	ARMOR_TITANIUM	= EnumHelper.addArmorMaterial("ARMOR_TITANIUM", "titanium", 66, new int[] { 6, 16, 12, 6 }, 8);
 	
 	public static void init()
 	{
@@ -70,6 +160,10 @@ public class MItems extends Item
 		sugar_cookie = new ItemFood(1, 0.4F, false).setPotionEffect(Potion.moveSpeed.id, 10, 0, 0.5F).setUnlocalizedName("sugar_cookie").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		copper_ingot = new Item().setUnlocalizedName("copper_ingot").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		tin_ingot = new Item().setUnlocalizedName("tin_ingot").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		bronze_ingot = new Item().setUnlocalizedName("bronze_ingot").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		steel_ingot = new Item().setUnlocalizedName("steel_ingot").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		blazium_ingot = new Item().setUnlocalizedName("blazium_ingot").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		titanium_ingot = new Item().setUnlocalizedName("titanium_ingot").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		sunstone_shard = new Item().setUnlocalizedName("sunstone_shard").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		
 		stone_brick = new Item().setUnlocalizedName("stone_brick").setCreativeTab(Minestrappolation.tabMinistrappolation);
@@ -90,10 +184,81 @@ public class MItems extends Item
 		copper_hoe = new ItemMHoe(COPPER, copper_ingot).setUnlocalizedName("copper_hoe").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		copper_sword = new ItemMSword(COPPER, copper_ingot).setUnlocalizedName("copper_sword").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		
+		bronze_pickaxe = new ItemMPickaxe(BRONZE, bronze_ingot).setUnlocalizedName("bronze_pickaxe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		bronze_axe = new ItemMAxe(BRONZE, bronze_ingot).setUnlocalizedName("bronze_axe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		bronze_shovel = new ItemMShovel(BRONZE, bronze_ingot).setUnlocalizedName("bronze_shovel").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		bronze_hoe = new ItemMHoe(BRONZE, bronze_ingot).setUnlocalizedName("bronze_hoe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		bronze_sword = new ItemMSword(BRONZE, bronze_ingot).setUnlocalizedName("bronze_sword").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		
+		steel_pickaxe = new ItemMPickaxe(STEEL, steel_ingot).setUnlocalizedName("steel_pickaxe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		steel_axe = new ItemMAxe(STEEL, steel_ingot).setUnlocalizedName("steel_axe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		steel_shovel = new ItemMShovel(STEEL, steel_ingot).setUnlocalizedName("steel_shovel").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		steel_hoe = new ItemMHoe(STEEL, steel_ingot).setUnlocalizedName("steel_hoe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		steel_sword = new ItemMSword(STEEL, steel_ingot).setUnlocalizedName("steel_sword").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		
+		meurodite_pickaxe = new ItemMPickaxe(MEURODITE, meurodite_gem).setUnlocalizedName("meurodite_pickaxe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		meurodite_axe = new ItemMAxe(MEURODITE, meurodite_gem).setUnlocalizedName("meurodite_axe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		meurodite_shovel = new ItemMShovel(MEURODITE, meurodite_gem).setUnlocalizedName("meurodite_shovel").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		meurodite_hoe = new ItemMHoe(MEURODITE, meurodite_gem).setUnlocalizedName("meurodite_hoe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		meurodite_sword = new ItemMSword(MEURODITE, meurodite_gem).setUnlocalizedName("meurodite_sword").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		
+		torite_pickaxe = new ItemMPickaxe(TORITE, torite_ingot).setUnlocalizedName("torite_pickaxe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		torite_axe = new ItemMAxe(TORITE, torite_ingot).setUnlocalizedName("torite_axe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		torite_shovel = new ItemMShovel(TORITE, torite_ingot).setUnlocalizedName("torite_shovel").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		torite_hoe = new ItemMHoe(TORITE, torite_ingot).setUnlocalizedName("torite_hoe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		torite_sword = new ItemMSword(TORITE, torite_ingot).setUnlocalizedName("torite_sword").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		
+		fire_pickaxe = new ItemMPickaxe(BLAZIUM, blazium_ingot).setUnlocalizedName("fire_pickaxe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		fire_axe = new ItemMAxe(BLAZIUM, blazium_ingot).setUnlocalizedName("fire_axe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		fire_shovel = new ItemMShovel(BLAZIUM, blazium_ingot).setUnlocalizedName("fire_shovel").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		fire_hoe = new ItemMHoe(BLAZIUM, blazium_ingot).setUnlocalizedName("fire_hoe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		fire_sword = new ItemMSword(BLAZIUM, blazium_ingot).setUnlocalizedName("fire_sword").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		
+		titanium_pickaxe = new ItemMAxe(TITANIUM, titanium_ingot).setUnlocalizedName("titanium_pickaxe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		titanium_axe = new ItemMAxe(TITANIUM, titanium_ingot).setUnlocalizedName("titanium_axe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		titanium_shovel = new ItemMShovel(TITANIUM, titanium_ingot).setUnlocalizedName("titanium_shovel").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		titanium_hoe = new ItemMHoe(TITANIUM, titanium_ingot).setUnlocalizedName("titanium_hoe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		titanium_sword = new ItemMSword(TITANIUM, titanium_ingot).setUnlocalizedName("titanium_sword").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		
+		bedrock_pickaxe = new ItemMPickaxe(BEDROCK, Item.getItemFromBlock(Blocks.bedrock)).setUnlocalizedName("bedrock_pickaxe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		bedrock_axe = new ItemMAxe(BEDROCK, Item.getItemFromBlock(Blocks.bedrock)).setUnlocalizedName("bedrock_axe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		bedrock_shovel = new ItemMShovel(BEDROCK, Item.getItemFromBlock(Blocks.bedrock)).setUnlocalizedName("bedrock_shovel").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		bedrock_hoe = new ItemMHoe(BEDROCK, Item.getItemFromBlock(Blocks.bedrock)).setUnlocalizedName("bedrock_hoe").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		
 		tin_helmet = new ItemMArmor(ARMOR_TIN, 0, 0, tin_ingot).setUnlocalizedName("tin_helmet").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		tin_chestplate = new ItemMArmor(ARMOR_TIN, 0, 1, tin_ingot).setUnlocalizedName("tin_chestplate").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		tin_leggings = new ItemMArmor(ARMOR_TIN, 0, 2, tin_ingot).setUnlocalizedName("tin_leggings").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		tin_boots = new ItemMArmor(ARMOR_TIN, 0, 3, tin_ingot).setUnlocalizedName("tin_boots").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		
+		bronze_helmet = new ItemMArmor(ARMOR_BRONZE, 0, 0, bronze_ingot).setUnlocalizedName("bronze_helmet").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		bronze_chestplate = new ItemMArmor(ARMOR_BRONZE, 0, 1, bronze_ingot).setUnlocalizedName("bronze_chestplate").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		bronze_leggings = new ItemMArmor(ARMOR_BRONZE, 0, 2, bronze_ingot).setUnlocalizedName("bronze_leggings").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		bronze_boots = new ItemMArmor(ARMOR_BRONZE, 0, 3, bronze_ingot).setUnlocalizedName("bronze_boots").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		
+		steel_helmet = new ItemMArmor(ARMOR_STEEL, 0, 0, steel_ingot).setUnlocalizedName("steel_helmet").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		steel_chestplate = new ItemMArmor(ARMOR_STEEL, 0, 1, steel_ingot).setUnlocalizedName("steel_chestplate").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		steel_leggings = new ItemMArmor(ARMOR_STEEL, 0, 2, steel_ingot).setUnlocalizedName("steel_leggings").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		steel_boots = new ItemMArmor(ARMOR_STEEL, 0, 3, steel_ingot).setUnlocalizedName("steel_boots").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		
+		meurodite_helmet = new ItemMArmor(ARMOR_MEURODITE, 0, 0, meurodite_gem).setUnlocalizedName("meurodite_helmet").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		meurodite_chestplate = new ItemMArmor(ARMOR_MEURODITE, 0, 1, meurodite_gem).setUnlocalizedName("meurodite_chestplate").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		meurodite_leggings = new ItemMArmor(ARMOR_MEURODITE, 0, 2, meurodite_gem).setUnlocalizedName("meurodite_leggings").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		meurodite_boots = new ItemMArmor(ARMOR_MEURODITE, 0, 3, meurodite_gem).setUnlocalizedName("meurodite_boots").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		
+		torite_helmet = new ItemMArmor(ARMOR_TORITE, 0, 0, torite_ingot).setUnlocalizedName("torite_helmet").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		torite_chestplate = new ItemMArmor(ARMOR_TORITE, 0, 1, torite_ingot).setUnlocalizedName("torite_chestplate").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		torite_leggings = new ItemMArmor(ARMOR_TORITE, 0, 2, torite_ingot).setUnlocalizedName("torite_leggings").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		torite_boots = new ItemMArmor(ARMOR_TORITE, 0, 3, torite_ingot).setUnlocalizedName("torite_boots").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		
+		blazium_helmet = new ItemMArmor(ARMOR_BLAZIUM, 0, 0, blazium_ingot).setUnlocalizedName("blazium_helmet").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		blazium_chestplate = new ItemMArmor(ARMOR_BLAZIUM, 0, 1, blazium_ingot).setUnlocalizedName("blazium_chestplate").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		blazium_leggings = new ItemMArmor(ARMOR_BLAZIUM, 0, 2, blazium_ingot).setUnlocalizedName("blazium_leggings").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		blazium_boots = new ItemMArmor(ARMOR_BLAZIUM, 0, 3, blazium_ingot).setUnlocalizedName("blazium_boots").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		
+		titanium_helmet = new ItemMArmor(ARMOR_TITANIUM, 0, 0, titanium_ingot).setUnlocalizedName("titanium_helmet").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		titanium_chestplate = new ItemMArmor(ARMOR_TITANIUM, 0, 1, titanium_ingot).setUnlocalizedName("titanium_chestplate").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		titanium_leggings = new ItemMArmor(ARMOR_TITANIUM, 0, 2, titanium_ingot).setUnlocalizedName("titanium_leggings").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		titanium_boots = new ItemMArmor(ARMOR_TITANIUM, 0, 3, titanium_ingot).setUnlocalizedName("titanium_boots").setCreativeTab(Minestrappolation.tabMinistrappolation);
 	
 		radiant_quartz = new MItemFoiled().setUnlocalizedName("radiant_quartz").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		meurodite_gem = new Item().setUnlocalizedName("meurodite_gem").setCreativeTab(Minestrappolation.tabMinistrappolation);
@@ -111,6 +276,10 @@ public class MItems extends Item
 		GameRegistry.registerItem(sugar_cookie, sugar_cookie.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(copper_ingot, copper_ingot.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(tin_ingot, tin_ingot.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(bronze_ingot, bronze_ingot.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(steel_ingot, steel_ingot.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(blazium_ingot, blazium_ingot.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(titanium_ingot, titanium_ingot.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(sunstone_shard, sunstone_shard.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerItem(stone_brick, stone_brick.getUnlocalizedName().substring(5));
@@ -131,10 +300,81 @@ public class MItems extends Item
 		GameRegistry.registerItem(copper_hoe, copper_hoe.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(copper_sword, copper_sword.getUnlocalizedName().substring(5));
 		
+		GameRegistry.registerItem(bronze_pickaxe, bronze_pickaxe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(bronze_axe, bronze_axe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(bronze_shovel, bronze_shovel.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(bronze_hoe, bronze_hoe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(bronze_sword, bronze_sword.getUnlocalizedName().substring(5));
+		
+		GameRegistry.registerItem(steel_pickaxe, steel_pickaxe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(steel_axe, steel_axe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(steel_shovel, steel_shovel.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(steel_hoe, steel_hoe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(steel_sword, steel_sword.getUnlocalizedName().substring(5));
+		
+		GameRegistry.registerItem(meurodite_pickaxe, meurodite_pickaxe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(meurodite_axe, meurodite_axe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(meurodite_shovel, meurodite_shovel.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(meurodite_hoe, meurodite_hoe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(meurodite_sword, meurodite_sword.getUnlocalizedName().substring(5));
+		
+		GameRegistry.registerItem(torite_pickaxe, torite_pickaxe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(torite_axe, torite_axe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(torite_shovel, torite_shovel.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(torite_hoe, torite_hoe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(torite_sword, torite_sword.getUnlocalizedName().substring(5));
+		
+		GameRegistry.registerItem(fire_pickaxe, fire_pickaxe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(fire_axe, fire_axe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(fire_shovel, fire_shovel.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(fire_hoe, fire_hoe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(fire_sword, fire_sword.getUnlocalizedName().substring(5));
+		
+		GameRegistry.registerItem(titanium_pickaxe, titanium_pickaxe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(titanium_axe, titanium_axe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(titanium_shovel, titanium_shovel.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(titanium_hoe, titanium_hoe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(titanium_sword, titanium_sword.getUnlocalizedName().substring(5));
+		
+		GameRegistry.registerItem(bedrock_pickaxe, bedrock_pickaxe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(bedrock_axe, bedrock_axe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(bedrock_shovel, bedrock_shovel.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(bedrock_hoe, bedrock_hoe.getUnlocalizedName().substring(5));
+		
 		GameRegistry.registerItem(tin_helmet, tin_helmet.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(tin_chestplate, tin_chestplate.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(tin_leggings, tin_leggings.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(tin_boots, tin_boots.getUnlocalizedName().substring(5));
+		
+		GameRegistry.registerItem(bronze_helmet, bronze_helmet.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(bronze_chestplate, bronze_chestplate.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(bronze_leggings, bronze_leggings.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(bronze_boots, bronze_boots.getUnlocalizedName().substring(5));
+		
+		GameRegistry.registerItem(steel_helmet, steel_helmet.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(steel_chestplate, steel_chestplate.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(steel_leggings, steel_leggings.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(steel_boots, steel_boots.getUnlocalizedName().substring(5));
+		
+		GameRegistry.registerItem(meurodite_helmet, meurodite_helmet.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(meurodite_chestplate, meurodite_chestplate.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(meurodite_leggings, meurodite_leggings.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(meurodite_boots, meurodite_boots.getUnlocalizedName().substring(5));
+		
+		GameRegistry.registerItem(torite_helmet, torite_helmet.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(torite_chestplate, torite_chestplate.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(torite_leggings, torite_leggings.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(torite_boots, torite_boots.getUnlocalizedName().substring(5));
+		
+		GameRegistry.registerItem(blazium_helmet, blazium_helmet.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(blazium_chestplate, blazium_chestplate.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(blazium_leggings, blazium_leggings.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(blazium_boots, blazium_boots.getUnlocalizedName().substring(5));
+		
+		GameRegistry.registerItem(titanium_helmet, titanium_helmet.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(titanium_chestplate, titanium_chestplate.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(titanium_leggings, titanium_leggings.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(titanium_boots, titanium_boots.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerItem(radiant_quartz, radiant_quartz.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(meurodite_gem, meurodite_gem.getUnlocalizedName().substring(5));
@@ -152,6 +392,10 @@ public class MItems extends Item
 		registerRender(sugar_cookie);
 		registerRender(copper_ingot);
 		registerRender(tin_ingot);
+		registerRender(bronze_ingot);
+		registerRender(steel_ingot);
+		registerRender(blazium_ingot);
+		registerRender(titanium_ingot);
 		registerRender(sunstone_shard);
 		
 		registerRender(stone_brick);
@@ -173,10 +417,81 @@ public class MItems extends Item
 		registerRender(copper_hoe);
 		registerRender(copper_sword);
 		
+		registerRender(bronze_pickaxe);
+		registerRender(bronze_axe);
+		registerRender(bronze_shovel);
+		registerRender(bronze_hoe);
+		registerRender(bronze_sword);
+		
+		registerRender(steel_pickaxe);
+		registerRender(steel_axe);
+		registerRender(steel_shovel);
+		registerRender(steel_hoe);
+		registerRender(steel_sword);
+		
+		registerRender(meurodite_pickaxe);
+		registerRender(meurodite_axe);
+		registerRender(meurodite_shovel);
+		registerRender(meurodite_hoe);
+		registerRender(meurodite_sword);
+		
+		registerRender(torite_pickaxe);
+		registerRender(torite_axe);
+		registerRender(torite_shovel);
+		registerRender(torite_hoe);
+		registerRender(torite_sword);
+		
+		registerRender(fire_pickaxe);
+		registerRender(fire_axe);
+		registerRender(fire_shovel);
+		registerRender(fire_hoe);
+		registerRender(fire_sword);
+		
+		registerRender(titanium_pickaxe);
+		registerRender(titanium_axe);
+		registerRender(titanium_shovel);
+		registerRender(titanium_hoe);
+		registerRender(titanium_sword);
+		
+		registerRender(bedrock_pickaxe);
+		registerRender(bedrock_axe);
+		registerRender(bedrock_shovel);
+		registerRender(bedrock_hoe);
+		
 		registerRender(tin_helmet);
 		registerRender(tin_chestplate);
 		registerRender(tin_leggings);
 		registerRender(tin_boots);
+		
+		registerRender(bronze_helmet);
+		registerRender(bronze_chestplate);
+		registerRender(bronze_leggings);
+		registerRender(bronze_boots);
+		
+		registerRender(steel_helmet);
+		registerRender(steel_chestplate);
+		registerRender(steel_leggings);
+		registerRender(steel_boots);
+		
+		registerRender(meurodite_helmet);
+		registerRender(meurodite_chestplate);
+		registerRender(meurodite_leggings);
+		registerRender(meurodite_boots);
+		
+		registerRender(torite_helmet);
+		registerRender(torite_chestplate);
+		registerRender(torite_leggings);
+		registerRender(torite_boots);
+		
+		registerRender(blazium_helmet);
+		registerRender(blazium_chestplate);
+		registerRender(blazium_leggings);
+		registerRender(blazium_boots);
+		
+		registerRender(titanium_helmet);
+		registerRender(titanium_chestplate);
+		registerRender(titanium_leggings);
+		registerRender(titanium_boots);
 		
 		registerRender(radiant_quartz);
 		registerRender(meurodite_gem);
