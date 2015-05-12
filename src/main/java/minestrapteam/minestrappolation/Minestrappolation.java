@@ -7,6 +7,7 @@ import minestrapteam.minestrappolation.lib.MDictionary;
 import minestrapteam.minestrappolation.lib.MItems;
 import minestrapteam.minestrappolation.lib.MRecipes;
 import minestrapteam.minestrappolation.lib.MReference;
+import minestrapteam.minestrappolation.util.Config;
 import minestrapteam.minestrappolation.util.MEventHandler;
 import minestrapteam.minestrappolation.util.MFuelHandler;
 import minestrapteam.minestrappolation.util.MGuiHandler;
@@ -37,6 +38,7 @@ public class Minestrappolation
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
+		Config.configInit(event);
 		MItems.init();
 		MBlocks.init();
 		MItems.register();
