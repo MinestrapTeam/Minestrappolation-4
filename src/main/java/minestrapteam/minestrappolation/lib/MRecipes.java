@@ -8,6 +8,7 @@ import minestrapteam.minestrappolation.block.BlockBiomeBricks;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
@@ -28,35 +29,67 @@ public class MRecipes
 		
 		// Minerals
 		GameRegistry.addSmelting(MBlocks.copper_ore, new ItemStack(MItems.copper_ingot), 0.5F);
+		GameRegistry.addSmelting(MBlocks.biome_copper, new ItemStack(MItems.copper_ingot), 0.5F);
 		GameRegistry.addRecipe(new ItemStack(MBlocks.copper_block), new Object[] { "III", "III", "III", 'I', MItems.copper_ingot });
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.copper_ingot, 9), new Object[] { MBlocks.copper_block });
 		
 		GameRegistry.addSmelting(MBlocks.tin_ore, new ItemStack(MItems.tin_ingot), 0.5F);
+		GameRegistry.addSmelting(MBlocks.biome_tin, new ItemStack(MItems.tin_ingot), 0.5F);
 		GameRegistry.addRecipe(new ItemStack(MBlocks.tin_block), new Object[] { "III", "III", "III", 'I', MItems.tin_ingot });
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.tin_ingot, 9), new Object[] { MBlocks.tin_block });
 		
 		GameRegistry.addSmelting(MBlocks.sunstone_ore, new ItemStack(MItems.sunstone_shard), 1.0F);
+		GameRegistry.addSmelting(MBlocks.biome_sunstone, new ItemStack(MItems.sunstone_shard), 1.0F);
 		GameRegistry.addRecipe(new ItemStack(MBlocks.sunstone_block), new Object[] { "SS", "SS", 'S', MItems.sunstone_shard });
 		GameRegistry.addRecipe(new ItemStack(MBlocks.godstone), new Object[] { "SGS", "PEP", "SGS", 'S', MItems.sunstone_shard, 'G', Items.glowstone_dust, 'P', Items.prismarine_crystals, 'E', Blocks.end_stone});
 		
-		GameRegistry.addSmelting(MBlocks.torite_ore, new ItemStack(MItems.torite_ingot), 0.5F);
+		GameRegistry.addSmelting(MBlocks.meurodite_ore, new ItemStack(MItems.meurodite_gem), 1.0F);
+		GameRegistry.addSmelting(MBlocks.biome_meurodite, new ItemStack(MItems.meurodite_gem), 1.0F);
 		
-		GameRegistry.addSmelting(MBlocks.biome_iron, new ItemStack(Items.iron_ingot), 0.5F);
-		GameRegistry.addSmelting(MBlocks.biome_copper, new ItemStack(MItems.copper_ingot), 0.5F);
-		GameRegistry.addSmelting(MBlocks.biome_tin, new ItemStack(MItems.tin_ingot), 0.5F);
-		GameRegistry.addSmelting(MBlocks.biome_gold, new ItemStack(Items.gold_ingot), 0.5F);
+		GameRegistry.addSmelting(MBlocks.torite_ore, new ItemStack(MItems.torite_ingot), 1.2F);
+		GameRegistry.addSmelting(MBlocks.biome_torite, new ItemStack(MItems.torite_ingot), 1.2F);
+		
+		//GameRegistry.addSmelting(MBlocks.plutonium_ore, new ItemStack(MItems.plutonium), 1.0F);
+		//GameRegistry.addSmelting(MBlocks.biome_plutonium, new ItemStack(MItems.plutonium), 1.0F);
+		
+		//GameRegistry.addSmelting(MBlocks.uranium_ore, new ItemStack(MItems.uranium), 1.0F);
+		//GameRegistry.addSmelting(MBlocks.biome_uranium, new ItemStack(MItems.uranium), 1.0F);
+		
+		GameRegistry.addSmelting(MBlocks.desert_quartz, new ItemStack(MItems.desert_quartz_item), 0.2F);
+		
+		GameRegistry.addSmelting(MBlocks.radiant_ore, new ItemStack(MItems.radiant_quartz), 1.2F);
+		GameRegistry.addSmelting(MBlocks.biome_radiant, new ItemStack(MItems.radiant_quartz), 1.2F);
+		
+		GameRegistry.addSmelting(MBlocks.blazium_ore, new ItemStack(MItems.blaze_shard), 1.0F);
+		
+		GameRegistry.addSmelting(MBlocks.soul_ore, new ItemStack(MItems.soul_gem), 1.0F);
+		
+		GameRegistry.addSmelting(MBlocks.biome_coal, new ItemStack(Items.coal, 1, 0), 0.1F);
+		GameRegistry.addSmelting(MBlocks.biome_iron, new ItemStack(Items.iron_ingot), 0.7F);
+		GameRegistry.addSmelting(MBlocks.biome_gold, new ItemStack(Items.gold_ingot), 1.0F);
+		GameRegistry.addSmelting(MBlocks.biome_redstone, new ItemStack(Items.redstone), 0.7F);
+		GameRegistry.addSmelting(MBlocks.biome_lapis, new ItemStack(Items.dye, 1, EnumDyeColor.BLUE.getDyeDamage()), 0.2F);
+		GameRegistry.addSmelting(MBlocks.biome_diamond, new ItemStack(Items.diamond), 1.0F);
+		GameRegistry.addSmelting(MBlocks.biome_emerald, new ItemStack(Items.emerald), 1.0F);
 		
 		// Decor
 		GameRegistry.addRecipe(new ItemStack(MBlocks.snow_bricks, 4), new Object[] { "SS", "SS", 'S', Blocks.snow });
 		GameRegistry.addRecipe(new ItemStack(MBlocks.snow_refined, 9), new Object[] { "SSS", "SSS", "SSS", 'S', Blocks.snow });
 		GameRegistry.addRecipe(new ItemStack(MBlocks.snow_tiles, 4), new Object[] { "SS", "SS", 'S', MBlocks.snow_refined });
+		
 		GameRegistry.addRecipe(new ItemStack(MBlocks.glass_bricks, 4), new Object[] { "GG", "GG", 'G', Blocks.glass });
 		GameRegistry.addSmelting(new ItemStack(Blocks.glass), new ItemStack(MBlocks.glass_refined), .1F);
 		GameRegistry.addRecipe(new ItemStack(MBlocks.glass_tiles, 4), new Object[] { "GG", "GG", 'G', MBlocks.glass_refined });
 		GameRegistry.addRecipe(new ItemStack(MBlocks.glass_window, 4), new Object[] { "IGI", "GIG", "IGI", 'I', Blocks.iron_bars, 'G', MBlocks.glass_refined });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.bricked_glass_pane, 16), new Object[] { "GGG", "GGG", 'G', MBlocks.glass_bricks });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.refined_glass_pane, 16), new Object[] { "GGG", "GGG", 'G', MBlocks.glass_refined });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.tiled_glass_pane, 16), new Object[] { "GGG", "GGG", 'G', MBlocks.glass_tiles });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.framed_glass_pane, 16), new Object[] { "GGG", "GGG", 'G', MBlocks.glass_window });
 		
 		// Wood
 		GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.ministrapp_planks, 4, 0), new Object[] { new ItemStack(MBlocks.ministrapp_log, 1, 0) });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.redwood_door_item, 3), new Object[] { "WW", "WW", "WW", 'W', new ItemStack(MBlocks.ministrapp_planks, 1, 0) });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.redwood_stairs, 4), new Object[] { "W  ", "WW ", "WWW", 'W', new ItemStack(MBlocks.ministrapp_planks, 1, 0) });
 		
 		//Stones
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.stone_brick, 4), new Object[] { new ItemStack(Blocks.stone, 1, 0) });
@@ -98,8 +131,6 @@ public class MRecipes
 		GameRegistry.addRecipe(new ItemStack(MBlocks.stone_lamp_glowstone, 4), new Object[] { " S ", "SGS", " S ", 'S', new ItemStack(Blocks.stonebrick, 1, 3), 'G', Blocks.glowstone });
 		GameRegistry.addRecipe(new ItemStack(MBlocks.stone_lamp_sunstone, 4), new Object[] { " S ", "SGS", " S ", 'S', new ItemStack(Blocks.stonebrick, 1, 3), 'G', MBlocks.sunstone_block });
 		GameRegistry.addRecipe(new ItemStack(MBlocks.stone_lamp_prismarine, 4), new Object[] { " S ", "SGS", " S ", 'S', new ItemStack(Blocks.stonebrick, 1, 3), 'G', Blocks.sea_lantern });
-		
-		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.stone_button, 1), new Object[] { new ItemStack(MItems.stone_brick, 1) });
 		
 		// Tools and Weapons
 		GameRegistry.addRecipe(new ItemStack(MItems.copper_pickaxe), new Object[] { "III", " S ", " S ", 'I', MItems.copper_ingot, 'S', Items.stick });
