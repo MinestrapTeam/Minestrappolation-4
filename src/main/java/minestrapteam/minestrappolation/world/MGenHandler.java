@@ -9,6 +9,7 @@ import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeStones;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockOre;
+import net.minecraft.block.BlockRedstoneOre;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.block.state.pattern.BlockHelper;
 import net.minecraft.init.Blocks;
@@ -247,7 +248,7 @@ public class MGenHandler implements IWorldGenerator
 							}
 						}
 					}
-					else if (block instanceof BlockOre || (block instanceof MBlockOre && block != MBlocks.desert_quartz) || block instanceof BlockPlutoniumOre || block instanceof BlockUraniumOre)
+					else if (block instanceof BlockOre || (block instanceof MBlockOre && block != MBlocks.desert_quartz) || block instanceof BlockPlutoniumOre || block instanceof BlockUraniumOre || block instanceof BlockRedstoneOre)
 					{
 						Block oreToReplace = getOreToReplace(block);
 						

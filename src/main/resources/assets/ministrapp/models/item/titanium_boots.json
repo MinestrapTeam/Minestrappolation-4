@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "ministrapp:items/blazium_ingot"
+        "layer0": "ministrapp:items/titanium_boots"
     },
     "display": {
         "thirdperson": {

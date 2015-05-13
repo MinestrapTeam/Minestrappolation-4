@@ -10,19 +10,23 @@ public class ItemMArmor extends ItemArmor
 {
 	
 	Item repairItem;
+	ArmorMaterial materialType;
+	String textureName;
 	
 	public ItemMArmor(ArmorMaterial material, int renderIndex, int armorType, Item repair)
 	{
 		super(material, renderIndex, armorType);
 		this.repairItem = repair;
+		this.materialType = material;
+		this.textureName = material.getName();
 	}
 	
 	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
 	{
-		if (this.armorType == 2)
-			return "ministrapp:textures/models/armor/tin_2.png";
-		return "ministrapp:textures/models/armor/tin_1.png";
+			if (this.armorType == 2)
+				return "ministrapp:textures/models/armor/" + this.textureName + "_2.png";
+			return "ministrapp:textures/models/armor/" + this.textureName + "_1.png";
 	}
 	
 	@Override

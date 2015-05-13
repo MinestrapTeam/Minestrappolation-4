@@ -132,7 +132,7 @@ public class MItems extends Item
 	public static Item							meurodite_gem;
 	public static Item							soul_gem;
 	public static Item							torite_ingot;
-	public static Item 							desert_quartz;
+	public static Item 							desert_quartz_item;
 	public static Item 							blaze_shard;
 	
 	public static final Item.ToolMaterial		COPPER			= EnumHelper.addToolMaterial("COPPER", 1, 186, 4.5F, 1.5F, 18);
@@ -263,7 +263,7 @@ public class MItems extends Item
 		radiant_quartz = new MItemFoiled().setUnlocalizedName("radiant_quartz").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		meurodite_gem = new Item().setUnlocalizedName("meurodite_gem").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		torite_ingot = new Item().setUnlocalizedName("torite_ingot").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		desert_quartz = new Item().setUnlocalizedName("desert_quartz").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		desert_quartz_item = new Item().setUnlocalizedName("desert_quartz_item").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		blaze_shard = new Item().setUnlocalizedName("blaze_shard").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		soul_gem = new ItemSoulGem().setUnlocalizedName("soul_gem").setCreativeTab(Minestrappolation.tabMinistrappolation);
 	}
@@ -381,7 +381,7 @@ public class MItems extends Item
 		GameRegistry.registerItem(blaze_shard, blaze_shard.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(soul_gem, soul_gem.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(torite_ingot, torite_ingot.getUnlocalizedName().substring(5));		
-		GameRegistry.registerItem(desert_quartz, "item_desert_quartz");
+		GameRegistry.registerItem(desert_quartz_item, desert_quartz_item.getUnlocalizedName().substring(5));
 	}
 	
 	public static void registerRenders()
@@ -409,7 +409,7 @@ public class MItems extends Item
 		registerRender(oceanstone_brick);
 		registerRender(pressurized_oceanstone_brick);
 		registerRender(slate_brick);
-		registerRender(desert_quartz);
+		registerRender(desert_quartz_item);
 		
 		registerRender(copper_pickaxe);
 		registerRender(copper_axe);
