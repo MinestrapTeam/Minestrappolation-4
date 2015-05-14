@@ -269,6 +269,10 @@ item.blazium_ingot.name=Blazium Ingot
 item.bronze_ingot.name=Bronze Ingot
 item.titanium_ingot.name=Titanium Ingot
 
+item.tin_plating.name=Tin Plating
+item.meurodite_plating.name=Meurodite Plating
+item.reinforced_stick.name=Reinforced Stick
+
 item.stone_brick.name=Stone Brick
 item.deepstone_brick.name=Deepstone Brick
 item.red_rock_brick.name=Red Rock Brick

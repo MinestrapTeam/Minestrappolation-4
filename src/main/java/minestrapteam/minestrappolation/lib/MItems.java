@@ -33,6 +33,9 @@ public class MItems extends Item
 	public static Item							steel_ingot;
 	public static Item							blazium_ingot;
 	public static Item							titanium_ingot;
+	public static Item							tin_plating;
+	public static Item							meurodite_plating;
+	public static Item							reinforced_stick;
 	
 	public static Item							stone_brick;
 	public static Item							deepstone_brick;
@@ -165,6 +168,9 @@ public class MItems extends Item
 		blazium_ingot = new Item().setUnlocalizedName("blazium_ingot").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		titanium_ingot = new Item().setUnlocalizedName("titanium_ingot").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		sunstone_shard = new Item().setUnlocalizedName("sunstone_shard").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		tin_plating = new Item().setUnlocalizedName("tin_plating").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		meurodite_plating = new Item().setUnlocalizedName("meurodite_plating").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		reinforced_stick = new Item().setUnlocalizedName("reinforced_stick").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		
 		stone_brick = new Item().setUnlocalizedName("stone_brick").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		deepstone_brick = new Item().setUnlocalizedName("deepstone_brick").setCreativeTab(Minestrappolation.tabMinistrappolation);
@@ -281,6 +287,9 @@ public class MItems extends Item
 		GameRegistry.registerItem(blazium_ingot, blazium_ingot.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(titanium_ingot, titanium_ingot.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(sunstone_shard, sunstone_shard.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(tin_plating, tin_plating.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(meurodite_plating, meurodite_plating.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(reinforced_stick, reinforced_stick.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerItem(stone_brick, stone_brick.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(deepstone_brick, deepstone_brick.getUnlocalizedName().substring(5));
@@ -397,6 +406,9 @@ public class MItems extends Item
 		registerRender(blazium_ingot);
 		registerRender(titanium_ingot);
 		registerRender(sunstone_shard);
+		registerRender(tin_plating);
+		registerRender(meurodite_plating);
+		registerRender(reinforced_stick);
 		
 		registerRender(stone_brick);
 		registerRender(deepstone_brick);

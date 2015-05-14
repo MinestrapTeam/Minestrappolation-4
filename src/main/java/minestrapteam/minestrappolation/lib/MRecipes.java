@@ -132,6 +132,9 @@ public class MRecipes
 		GameRegistry.addRecipe(new ItemStack(MBlocks.stone_lamp_sunstone, 4), new Object[] { " S ", "SGS", " S ", 'S', new ItemStack(Blocks.stonebrick, 1, 3), 'G', MBlocks.sunstone_block });
 		GameRegistry.addRecipe(new ItemStack(MBlocks.stone_lamp_prismarine, 4), new Object[] { " S ", "SGS", " S ", 'S', new ItemStack(Blocks.stonebrick, 1, 3), 'G', Blocks.sea_lantern });
 		
+		//Tech
+		GameRegistry.addRecipe(new ItemStack(MBlocks.alloy, 1), new Object[] { "TTT", "TFT", "BBB", 'T', new ItemStack(MItems.tin_plating), 'F', new ItemStack(Blocks.furnace), 'B', new ItemStack(MBlocks.biome_bricks, 1, 1) });
+		
 		// Tools and Weapons
 		GameRegistry.addRecipe(new ItemStack(MItems.copper_pickaxe), new Object[] { "III", " S ", " S ", 'I', MItems.copper_ingot, 'S', Items.stick });
 		GameRegistry.addRecipe(new ItemStack(MItems.copper_axe), new Object[] { "II", "IS", " S", 'I', MItems.copper_ingot, 'S', Items.stick });
@@ -139,10 +142,87 @@ public class MRecipes
 		GameRegistry.addRecipe(new ItemStack(MItems.copper_hoe), new Object[] { "II", " S", " S", 'I', MItems.copper_ingot, 'S', Items.stick });
 		GameRegistry.addRecipe(new ItemStack(MItems.copper_sword), new Object[] { "I", "I", "S", 'I', MItems.copper_ingot, 'S', Items.stick });
 		
+		GameRegistry.addRecipe(new ItemStack(MItems.bronze_pickaxe), new Object[] { "III", " S ", " S ", 'I', MItems.bronze_ingot, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(MItems.bronze_axe), new Object[] { "II", "IS", " S", 'I', MItems.bronze_ingot, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(MItems.bronze_shovel), new Object[] { "I", "S", "S", 'I', MItems.bronze_ingot, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(MItems.bronze_hoe), new Object[] { "II", " S", " S", 'I', MItems.bronze_ingot, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(MItems.bronze_sword), new Object[] { "I", "I", "S", 'I', MItems.bronze_ingot, 'S', Items.stick });
+		
+		GameRegistry.addRecipe(new ItemStack(MItems.steel_pickaxe), new Object[] { "III", " S ", " S ", 'I', MItems.steel_ingot, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(MItems.steel_axe), new Object[] { "II", "IS", " S", 'I', MItems.steel_ingot, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(MItems.steel_shovel), new Object[] { "I", "S", "S", 'I', MItems.steel_ingot, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(MItems.steel_hoe), new Object[] { "II", " S", " S", 'I', MItems.steel_ingot, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(MItems.steel_sword), new Object[] { "I", "I", "S", 'I', MItems.steel_ingot, 'S', Items.stick });
+		
+		GameRegistry.addRecipe(new ItemStack(MItems.meurodite_pickaxe), new Object[] { "III", " S ", " S ", 'I', MItems.meurodite_gem, 'S', MItems.reinforced_stick });
+		GameRegistry.addRecipe(new ItemStack(MItems.meurodite_axe), new Object[] { "II", "IS", " S", 'I', MItems.meurodite_gem, 'S', MItems.reinforced_stick });
+		GameRegistry.addRecipe(new ItemStack(MItems.meurodite_shovel), new Object[] { "I", "S", "S", 'I', MItems.meurodite_gem, 'S', MItems.reinforced_stick });
+		GameRegistry.addRecipe(new ItemStack(MItems.meurodite_hoe), new Object[] { "II", " S", " S", 'I', MItems.meurodite_gem, 'S', MItems.reinforced_stick });
+		GameRegistry.addRecipe(new ItemStack(MItems.meurodite_sword), new Object[] { "I", "I", "S", 'I', MItems.meurodite_gem, 'S', MItems.reinforced_stick });
+		
+		GameRegistry.addRecipe(new ItemStack(MItems.torite_pickaxe), new Object[] { "III", " S ", " S ", 'I', MItems.torite_ingot, 'S', MItems.reinforced_stick });
+		GameRegistry.addRecipe(new ItemStack(MItems.torite_axe), new Object[] { "II", "IS", " S", 'I', MItems.torite_ingot, 'S', MItems.reinforced_stick });
+		GameRegistry.addRecipe(new ItemStack(MItems.torite_shovel), new Object[] { "I", "S", "S", 'I', MItems.torite_ingot, 'S', MItems.reinforced_stick });
+		GameRegistry.addRecipe(new ItemStack(MItems.torite_hoe), new Object[] { "II", " S", " S", 'I', MItems.torite_ingot, 'S', MItems.reinforced_stick });
+		GameRegistry.addRecipe(new ItemStack(MItems.torite_sword), new Object[] { "I", "I", "S", 'I', MItems.torite_ingot, 'S', MItems.reinforced_stick });
+		
+		GameRegistry.addRecipe(new ItemStack(MItems.fire_pickaxe), new Object[] { "III", " S ", " S ", 'I', MItems.blazium_ingot, 'S', Items.blaze_rod });
+		GameRegistry.addRecipe(new ItemStack(MItems.fire_axe), new Object[] { "II", "IS", " S", 'I', MItems.blazium_ingot, 'S', Items.blaze_rod });
+		GameRegistry.addRecipe(new ItemStack(MItems.fire_shovel), new Object[] { "I", "S", "S", 'I', MItems.blazium_ingot, 'S', Items.blaze_rod });
+		GameRegistry.addRecipe(new ItemStack(MItems.fire_hoe), new Object[] { "II", " S", " S", 'I', MItems.blazium_ingot, 'S', Items.blaze_rod });
+		GameRegistry.addRecipe(new ItemStack(MItems.fire_sword), new Object[] { "I", "I", "S", 'I', MItems.blazium_ingot, 'S', Items.blaze_rod });
+		
+		GameRegistry.addRecipe(new ItemStack(Items.diamond_pickaxe), new Object[] { "III", " S ", " S ", 'I', Items.diamond, 'S', MItems.reinforced_stick });
+		GameRegistry.addRecipe(new ItemStack(Items.diamond_axe), new Object[] { "II", "IS", " S", 'I', Items.diamond, 'S', MItems.reinforced_stick });
+		GameRegistry.addRecipe(new ItemStack(Items.diamond_shovel), new Object[] { "I", "S", "S", 'I', Items.diamond, 'S', MItems.reinforced_stick });
+		GameRegistry.addRecipe(new ItemStack(Items.diamond_hoe), new Object[] { "II", " S", " S", 'I', Items.diamond, 'S', MItems.reinforced_stick });
+		GameRegistry.addRecipe(new ItemStack(Items.diamond_sword), new Object[] { "I", "I", "S", 'I', Items.diamond, 'S', MItems.reinforced_stick });
+		
+		GameRegistry.addRecipe(new ItemStack(MItems.titanium_pickaxe), new Object[] { "III", " S ", " S ", 'I', MItems.titanium_ingot, 'S', MItems.reinforced_stick });
+		GameRegistry.addRecipe(new ItemStack(MItems.titanium_axe), new Object[] { "II", "IS", " S", 'I', MItems.titanium_ingot, 'S', MItems.reinforced_stick });
+		GameRegistry.addRecipe(new ItemStack(MItems.titanium_shovel), new Object[] { "I", "S", "S", 'I', MItems.titanium_ingot, 'S', MItems.reinforced_stick });
+		GameRegistry.addRecipe(new ItemStack(MItems.titanium_hoe), new Object[] { "II", " S", " S", 'I', MItems.titanium_ingot, 'S', MItems.reinforced_stick });
+		GameRegistry.addRecipe(new ItemStack(MItems.titanium_sword), new Object[] { "I", "I", "S", 'I', MItems.titanium_ingot, 'S', MItems.reinforced_stick });
+		
+		GameRegistry.addRecipe(new ItemStack(MItems.bedrock_pickaxe), new Object[] { "III", " S ", " S ", 'I', Blocks.bedrock, 'S', MItems.reinforced_stick });
+		GameRegistry.addRecipe(new ItemStack(MItems.bedrock_axe), new Object[] { "II", "IS", " S", 'I', Blocks.bedrock, 'S', MItems.reinforced_stick });
+		GameRegistry.addRecipe(new ItemStack(MItems.bedrock_shovel), new Object[] { "I", "S", "S", 'I', Blocks.bedrock, 'S', MItems.reinforced_stick });
+		GameRegistry.addRecipe(new ItemStack(MItems.bedrock_hoe), new Object[] { "II", " S", " S", 'I', Blocks.bedrock, 'S', MItems.reinforced_stick });
+		
 		GameRegistry.addRecipe(new ItemStack(MItems.tin_helmet), new Object[] { "III", "I I", 'I', MItems.tin_ingot });
 		GameRegistry.addRecipe(new ItemStack(MItems.tin_chestplate), new Object[] { "I I", "III", "III", 'I', MItems.tin_ingot });
 		GameRegistry.addRecipe(new ItemStack(MItems.tin_leggings), new Object[] { "III", "I I", "I I", 'I', MItems.tin_ingot });
 		GameRegistry.addRecipe(new ItemStack(MItems.tin_boots), new Object[] { "I I", "I I", 'I', MItems.tin_ingot });
+		
+		GameRegistry.addRecipe(new ItemStack(MItems.bronze_helmet), new Object[] { "III", "I I", 'I', MItems.bronze_ingot });
+		GameRegistry.addRecipe(new ItemStack(MItems.bronze_chestplate), new Object[] { "I I", "III", "III", 'I', MItems.bronze_ingot });
+		GameRegistry.addRecipe(new ItemStack(MItems.bronze_leggings), new Object[] { "III", "I I", "I I", 'I', MItems.bronze_ingot });
+		GameRegistry.addRecipe(new ItemStack(MItems.bronze_boots), new Object[] { "I I", "I I", 'I', MItems.bronze_ingot });
+		
+		GameRegistry.addRecipe(new ItemStack(MItems.steel_helmet), new Object[] { "III", "I I", 'I', MItems.steel_ingot });
+		GameRegistry.addRecipe(new ItemStack(MItems.steel_chestplate), new Object[] { "I I", "III", "III", 'I', MItems.steel_ingot });
+		GameRegistry.addRecipe(new ItemStack(MItems.steel_leggings), new Object[] { "III", "I I", "I I", 'I', MItems.steel_ingot });
+		GameRegistry.addRecipe(new ItemStack(MItems.steel_boots), new Object[] { "I I", "I I", 'I', MItems.steel_ingot });
+		
+		GameRegistry.addRecipe(new ItemStack(MItems.meurodite_helmet), new Object[] { "III", "I I", 'I', MItems.meurodite_gem });
+		GameRegistry.addRecipe(new ItemStack(MItems.meurodite_chestplate), new Object[] { "I I", "III", "III", 'I', MItems.meurodite_gem });
+		GameRegistry.addRecipe(new ItemStack(MItems.meurodite_leggings), new Object[] { "III", "I I", "I I", 'I', MItems.meurodite_gem });
+		GameRegistry.addRecipe(new ItemStack(MItems.meurodite_boots), new Object[] { "I I", "I I", 'I', MItems.meurodite_gem });
+		
+		GameRegistry.addRecipe(new ItemStack(MItems.torite_helmet), new Object[] { "III", "I I", 'I', MItems.torite_ingot });
+		GameRegistry.addRecipe(new ItemStack(MItems.torite_chestplate), new Object[] { "I I", "III", "III", 'I', MItems.torite_ingot });
+		GameRegistry.addRecipe(new ItemStack(MItems.torite_leggings), new Object[] { "III", "I I", "I I", 'I', MItems.torite_ingot });
+		GameRegistry.addRecipe(new ItemStack(MItems.torite_boots), new Object[] { "I I", "I I", 'I', MItems.torite_ingot });
+		
+		GameRegistry.addRecipe(new ItemStack(MItems.blazium_helmet), new Object[] { "III", "I I", 'I', MItems.blazium_ingot });
+		GameRegistry.addRecipe(new ItemStack(MItems.blazium_chestplate), new Object[] { "I I", "III", "III", 'I', MItems.blazium_ingot });
+		GameRegistry.addRecipe(new ItemStack(MItems.blazium_leggings), new Object[] { "III", "I I", "I I", 'I', MItems.blazium_ingot });
+		GameRegistry.addRecipe(new ItemStack(MItems.blazium_boots), new Object[] { "I I", "I I", 'I', MItems.blazium_ingot });
+		
+		GameRegistry.addRecipe(new ItemStack(MItems.titanium_helmet), new Object[] { "III", "I I", 'I', MItems.titanium_ingot });
+		GameRegistry.addRecipe(new ItemStack(MItems.titanium_chestplate), new Object[] { "I I", "III", "III", 'I', MItems.titanium_ingot });
+		GameRegistry.addRecipe(new ItemStack(MItems.titanium_leggings), new Object[] { "III", "I I", "I I", 'I', MItems.titanium_ingot });
+		GameRegistry.addRecipe(new ItemStack(MItems.titanium_boots), new Object[] { "I I", "I I", 'I', MItems.titanium_ingot });
 	}
 	
 	public static void removeRecipes()
@@ -167,6 +247,30 @@ public class MRecipes
 				remover.remove();
 			}
 			if (itemstack != null && itemstack == new ItemStack(Blocks.stone_button, 1))
+			{
+				remover.remove();
+			}
+			if (itemstack != null && itemstack == new ItemStack(Items.diamond_axe, 1))
+			{
+				remover.remove();
+			}
+			if (itemstack != null && itemstack == new ItemStack(Items.diamond_hoe, 1))
+			{
+				remover.remove();
+			}
+			if (itemstack != null && itemstack == new ItemStack(Items.diamond_pickaxe, 1))
+			{
+				remover.remove();
+			}
+			if (itemstack != null && itemstack == new ItemStack(Items.diamond_shovel, 1))
+			{
+				remover.remove();
+			}
+			if (itemstack != null && itemstack == new ItemStack(Items.diamond_sword, 1))
+			{
+				remover.remove();
+			}
+			if (itemstack != null && itemstack == new ItemStack(Items.flint_and_steel, 1))
 			{
 				remover.remove();
 			}

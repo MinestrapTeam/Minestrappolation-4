@@ -2,6 +2,7 @@ package minestrapteam.minestrappolation.lib;
 
 import minestrapteam.minestrappolation.block.MStoneType;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
@@ -96,7 +97,16 @@ public class MDictionary {
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.redwood_fence, 3), new Object[] { "WSW", "WSW", 'W', new ItemStack(MBlocks.ministrapp_planks, 1, 0), 'S', "stickWood" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.redwood_fence_gate, 1), new Object[] { "SWS", "SWS", 'W', new ItemStack(MBlocks.ministrapp_planks, 1, 0), 'S', "stickWood" }));
 		
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.crate, 1), new Object[] { "WWW", "SSS", "WWW", 'W', "plankWood", 'S', "stickWood" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.barrel, 1), new Object[] { "WTW", "W W", "WTW", 'W', "plankWood", 'T', "ingotTin" }));
+		//GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.melter, 1), new Object[] { "MMM", "MFM", "IBI", 'M', new ItemStack(MItems.meurodite_plating), 'F', new ItemStack(Blocks.furnace), 'I', new ItemStack(Blocks.iron_bars), 'B', "blockBlazium" }));
+		
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MItems.tin_plating, 1), new Object[] { "TTT", "TTT", 'T', "ingotTin" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MItems.meurodite_plating, 1), new Object[] { "TTT", "TTT", 'T', "gemMeurodite" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MItems.reinforced_stick, 8), new Object[] { "SSS", "STS", "SSS", 'S', "stickWood", 'T', new ItemStack(MItems.tin_plating) }));
+		
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Blocks.stone_button, 1), new Object[] { "ingotBrickStone" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.flint_and_steel), new Object[] { "S ", " F", 'S', "ingotSteel", 'F', new ItemStack(Items.flint) }));
 	}
 
 }
