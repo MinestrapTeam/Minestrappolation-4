@@ -154,6 +154,15 @@ public class MBlocks
 	
 	//Stairs
 	public static Block			   redwood_stairs;
+	public static Block			   deepstone_stairs;
+	public static Block			   coldstone_stairs;
+	public static Block			   redrock_stairs;
+	public static Block			   oceanstone_stairs;
+	public static Block			   icestone_stairs;
+	public static Block			   poceanstone_stairs;
+	public static Block			   glacierstone_stairs;
+	public static Block			   deep_redrock_stairs;
+	public static Block			   deep_coldstone_stairs;
 	
 	//Fence
 	public static Block 		   redwood_fence;
@@ -242,9 +251,17 @@ public class MBlocks
 		melter = new BlockMelter().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("melter");
 		alloy = new BlockAlloy().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("alloy");
 		
-		
 		//Stairs
 		redwood_stairs = new MBlockStairs(ministrapp_planks.getStateFromMeta(MWoodType.REDWOOD.getMetadata())).setUnlocalizedName("redwood_stairs");
+		deepstone_stairs = new MBlockStairs(biome_stones.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata())).setUnlocalizedName("deepstone_stairs");
+		coldstone_stairs = new MBlockStairs(biome_stones.getStateFromMeta(MStoneType.COLDSTONE.getMetadata())).setUnlocalizedName("coldstone_stairs");
+		redrock_stairs = new MBlockStairs(biome_stones.getStateFromMeta(MStoneType.REDROCK.getMetadata())).setUnlocalizedName("redrock_stairs");
+		oceanstone_stairs = new MBlockStairs(biome_stones.getStateFromMeta(MStoneType.OCEANSTONE.getMetadata())).setUnlocalizedName("oceanstone_stairs");
+		icestone_stairs = new MBlockStairs(biome_stones.getStateFromMeta(MStoneType.ICESTONE.getMetadata())).setUnlocalizedName("icestone_stairs");
+		poceanstone_stairs = new MBlockStairs(biome_stones.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata())).setUnlocalizedName("poceanstone_stairs");
+		glacierstone_stairs = new MBlockStairs(biome_stones.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata())).setUnlocalizedName("glacierstone_stairs");
+		deep_redrock_stairs = new MBlockStairs(biome_stones.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata())).setUnlocalizedName("deep_redrock_stairs");
+		deep_coldstone_stairs = new MBlockStairs(biome_stones.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata())).setUnlocalizedName("deep_coldstone_stairs");
 		
 		//Fence
 		redwood_fence = new BlockFence(Material.wood).setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("redwood_fence");
@@ -310,6 +327,15 @@ public class MBlocks
 		
 		//Stairs
 		register(redwood_stairs);
+		register(deepstone_stairs);
+		register(coldstone_stairs);
+		register(redrock_stairs);
+		register(oceanstone_stairs);
+		register(icestone_stairs);
+		register(poceanstone_stairs);
+		register(glacierstone_stairs);
+		register(deep_redrock_stairs);
+		register(deep_coldstone_stairs);
 		
 		//Fence
 		register(redwood_fence);
@@ -395,6 +421,15 @@ public class MBlocks
 		registerRender(crate);
 		registerRender(melter);
 		registerRender(redwood_stairs);
+		registerRender(deepstone_stairs);
+		registerRender(coldstone_stairs);
+		registerRender(redrock_stairs);
+		registerRender(oceanstone_stairs);
+		registerRender(icestone_stairs);
+		registerRender(poceanstone_stairs);
+		registerRender(glacierstone_stairs);
+		registerRender(deep_redrock_stairs);
+		registerRender(deep_coldstone_stairs);
 		registerRender(redwood_door);
 		registerRender(alloy);
 		registerRender(redwood_door_item);
