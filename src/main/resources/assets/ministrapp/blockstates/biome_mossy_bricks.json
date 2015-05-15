@@ -1,0 +1,31 @@
+{
+   "variants":{
+      "type=deepstone":{
+         "model":"ministrapp:deepstone_mossy_bricks"
+      },
+      "type=red_rock":{
+         "model":"ministrapp:red_rock_mossy_bricks"
+      },
+      "type=deep_redrock":{
+         "model":"ministrapp:deep_red_rock_mossy_bricks"
+      },
+      "type=coldstone":{
+         "model":"ministrapp:coldstone_mossy_bricks"
+      },
+      "type=deep_coldstone":{
+         "model":"ministrapp:deep_coldstone_mossy_bricks"
+      },
+      "type=icestone":{
+         "model":"ministrapp:icestone_mossy_bricks"
+      },
+      "type=glacierrock":{
+         "model":"ministrapp:glacierrock_mossy_bricks"
+      },
+      "type=oceanstone":{
+         "model":"ministrapp:oceanstone_mossy_bricks"
+      },
+      "type=pressurized_oceanstone":{
+         "model":"ministrapp:pressurized_oceanstone_mossy_bricks"
+      }
+   }
+}

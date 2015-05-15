@@ -1,0 +1,31 @@
+{
+   "variants":{
+      "type=deepstone":{
+         "model":"ministrapp:deepstone_lamp_glowstone"
+      },
+      "type=red_rock":{
+         "model":"ministrapp:red_rock_lamp_glowstone"
+      },
+      "type=deep_redrock":{
+         "model":"ministrapp:deep_red_rock_lamp_glowstone"
+      },
+      "type=coldstone":{
+         "model":"ministrapp:coldstone_lamp_glowstone"
+      },
+      "type=deep_coldstone":{
+         "model":"ministrapp:deep_coldstone_lamp_glowstone"
+      },
+      "type=icestone":{
+         "model":"ministrapp:icestone_lamp_glowstone"
+      },
+      "type=glacierrock":{
+         "model":"ministrapp:glacierrock_lamp_glowstone"
+      },
+      "type=oceanstone":{
+         "model":"ministrapp:oceanstone_lamp_glowstone"
+      },
+      "type=pressurized_oceanstone":{
+         "model":"ministrapp:pressurized_oceanstone_lamp_glowstone"
+      }
+   }
+}

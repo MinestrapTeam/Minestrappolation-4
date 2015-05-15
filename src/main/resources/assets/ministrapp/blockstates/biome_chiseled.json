@@ -1,0 +1,31 @@
+{
+   "variants":{
+      "type=deepstone":{
+         "model":"ministrapp:deepstone_chiseled"
+      },
+      "type=red_rock":{
+         "model":"ministrapp:red_rock_chiseled"
+      },
+      "type=deep_redrock":{
+         "model":"ministrapp:deep_red_rock_chiseled"
+      },
+      "type=coldstone":{
+         "model":"ministrapp:coldstone_chiseled"
+      },
+      "type=deep_coldstone":{
+         "model":"ministrapp:deep_coldstone_chiseled"
+      },
+      "type=icestone":{
+         "model":"ministrapp:icestone_chiseled"
+      },
+      "type=glacierrock":{
+         "model":"ministrapp:glacierrock_chiseled"
+      },
+      "type=oceanstone":{
+         "model":"ministrapp:oceanstone_chiseled"
+      },
+      "type=pressurized_oceanstone":{
+         "model":"ministrapp:pressurized_oceanstone_chiseled"
+      }
+   }
+}

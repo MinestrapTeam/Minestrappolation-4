@@ -1,0 +1,31 @@
+{
+   "variants":{
+      "type=deepstone":{
+         "model":"ministrapp:deepstone_cracked_bricks"
+      },
+      "type=red_rock":{
+         "model":"ministrapp:red_rock_cracked_bricks"
+      },
+      "type=deep_redrock":{
+         "model":"ministrapp:deep_red_rock_cracked_bricks"
+      },
+      "type=coldstone":{
+         "model":"ministrapp:coldstone_cracked_bricks"
+      },
+      "type=deep_coldstone":{
+         "model":"ministrapp:deep_coldstone_cracked_bricks"
+      },
+      "type=icestone":{
+         "model":"ministrapp:icestone_cracked_bricks"
+      },
+      "type=glacierrock":{
+         "model":"ministrapp:glacierrock_cracked_bricks"
+      },
+      "type=oceanstone":{
+         "model":"ministrapp:oceanstone_cracked_bricks"
+      },
+      "type=pressurized_oceanstone":{
+         "model":"ministrapp:pressurized_oceanstone_cracked_bricks"
+      }
+   }
+}
