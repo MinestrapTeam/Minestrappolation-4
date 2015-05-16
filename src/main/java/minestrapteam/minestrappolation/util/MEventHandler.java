@@ -27,11 +27,12 @@ public class MEventHandler {
 	@SideOnly(Side.CLIENT)
 	public void onPlayerJoin(EntityJoinWorldEvent event)
 	{
+		VersionChecker  check = new VersionChecker(MReference.VERSION, "https://raw.githubusercontent.com/MinestrapTeam/Minestrappolation-4/master/version.txt");
 		if(event.entity instanceof EntityPlayer)
 		{
 			if(event.world.isRemote == false)
 			{
-				VersionChecker.checkIfCurrent(MReference.VERSION, "https://raw.githubusercontent.com/MinestrapTeam/Minestrappolation-4/master/version.txt");
+				check.run();
 				event.entity.addChatMessage(VersionChecker.uptoDate);
 				event.entity.addChatMessage(VersionChecker.motd);
 			}
@@ -58,6 +59,11 @@ public class MEventHandler {
 		}	
 	}
 	
+	@SubscribeEvent
+	public void playerTick(PlayerTickEvent event)
+	{
+		
+	}
 
 	@SubscribeEvent
 	public void playerUpdate(LivingUpdateEvent event)

@@ -7,12 +7,23 @@ import java.net.URL;
 
 import net.minecraft.util.ChatComponentText;
 
-public class VersionChecker {
+public class VersionChecker implements Runnable {
+	
+	private String versionToCheck;
+	private String	urlToCheck;
+	
+	public static boolean hasChecked = false;
 	
 	public static ChatComponentText uptoDate;
 	public static ChatComponentText motd;
 	
-	public static boolean checkIfCurrent(String versiontocheck, String urlToCheck){
+	public VersionChecker(String versionToCheck, String url)
+	{
+		this.versionToCheck = versionToCheck;
+		this.urlToCheck = url;
+	}
+	
+	private static boolean checkIfCurrent(String versiontocheck, String urlToCheck){
 		boolean upToDate = false;
 		try{
 			URL url = new URL(urlToCheck);
@@ -42,5 +53,11 @@ public class VersionChecker {
 			motd = new ChatComponentText("§4Are you connected to the internet?");
 		}
 		return upToDate;
+	}
+
+	@Override
+	public void run() 
+	{
+		this.checkIfCurrent(versionToCheck, urlToCheck);
 	}
 }

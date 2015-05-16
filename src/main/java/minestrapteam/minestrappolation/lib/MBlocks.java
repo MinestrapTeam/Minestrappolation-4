@@ -70,7 +70,6 @@ import minestrapteam.minestrappolation.item.BiomeItems.ItemBlockBiomeUranium;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.BlockFenceGate;
-import net.minecraft.block.BlockPane;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
