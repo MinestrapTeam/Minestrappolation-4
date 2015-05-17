@@ -12,6 +12,8 @@ public class Config {
 	
 	//Integers
 	public static int soulGemDropChance;
+	public static int soulBlockDamage;
+	public static int soulGemXPGain;
 	
 	public static void configInit(FMLPreInitializationEvent event)
 	{
@@ -22,6 +24,8 @@ public class Config {
 		   blaziumFireEffect = config.get("Mechanics", "BlaziumFireEffect", true).getBoolean();
 		   
 		   soulGemDropChance = config.get("Mechanics", "SoulGemDropChance", 3).getInt();
+		   soulBlockDamage = config.get("Mechanics", "SoulBlockDamage", 200).getInt();
+		   soulGemXPGain = config.get("Mechanics", "SoulGemXPGain", 20).getInt();
 		   config.save();
 	}
 

@@ -1,5 +1,6 @@
 package minestrapteam.minestrappolation.item;
 
+import minestrapteam.minestrappolation.util.Config;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
@@ -15,7 +16,7 @@ public class ItemSoulGem extends MItemFoiled{
 	@Override
 	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player)
 	{
-		player.addExperience(20);
+		player.addExperience(Config.soulGemXPGain);
 		--stack.stackSize;
 		return stack;
 	}

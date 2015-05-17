@@ -67,7 +67,7 @@ public class MEventHandler {
 			ItemStack stack = event.getPlayer().getHeldItem();
 			if(stack.canHarvestBlock(event.state.getBlock()))
 			{
-				stack.damageItem(200, event.getPlayer());
+				stack.damageItem(Config.soulBlockDamage, event.getPlayer());
 			}
 		}	
 	}
