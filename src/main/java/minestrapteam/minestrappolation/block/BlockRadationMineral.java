@@ -9,6 +9,8 @@ import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.item.Item;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.BlockPos;
+import net.minecraft.world.World;
 
 public class BlockRadationMineral extends BlockRadiation{
 
@@ -18,7 +20,7 @@ public class BlockRadationMineral extends BlockRadiation{
 	}
 
 	@Override
-	public void addPotionEffect(EntityLivingBase living) 
+	public void addPotionEffect(EntityLivingBase living, World world, BlockPos pos)
 	{
 		if(this == MBlocks.plutonium_block)
 		{

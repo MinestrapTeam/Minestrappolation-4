@@ -4,6 +4,7 @@ package minestrapteam.minestrappolation.block;
 import java.util.List;
 import java.util.Random;
 
+import minestrapteam.minestrappolation.block.ore.MBlockOre;
 import minestrapteam.minestrappolation.util.Config;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
@@ -47,10 +48,10 @@ public abstract class BlockRadiation extends MBlockOre
 			
 			for (EntityLivingBase living : list)
 			{
-				this.addPotionEffect(living);
+				this.addPotionEffect(living, world, pos);
 			}
 		}
 	}
 	
-	public abstract void addPotionEffect(EntityLivingBase living);
+	public abstract void addPotionEffect(EntityLivingBase living, World world, BlockPos pos);
 }

@@ -1,7 +1,8 @@
-package minestrapteam.minestrappolation.block;
+package minestrapteam.minestrappolation.block.ore;
 
 import java.util.Random;
 
+import minestrapteam.minestrappolation.block.BlockRadiation;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.EntityLivingBase;
@@ -23,7 +24,7 @@ public class BlockPlutoniumOre extends BlockRadiation
 	}	
 	
 	@Override
-	public void addPotionEffect(EntityLivingBase living)
+	public void addPotionEffect(EntityLivingBase living, World world, BlockPos pos)
 	{
 		if (living instanceof EntitySkeleton)
 		{

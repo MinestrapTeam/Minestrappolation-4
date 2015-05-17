@@ -1,11 +1,11 @@
 package minestrapteam.minestrappolation.world;
 import java.util.Random;
 
-import minestrapteam.minestrappolation.block.BlockPlutoniumOre;
-import minestrapteam.minestrappolation.block.BlockUraniumOre;
-import minestrapteam.minestrappolation.block.MBlockOre;
 import minestrapteam.minestrappolation.block.MStoneType;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeStones;
+import minestrapteam.minestrappolation.block.ore.BlockPlutoniumOre;
+import minestrapteam.minestrappolation.block.ore.BlockUraniumOre;
+import minestrapteam.minestrappolation.block.ore.MBlockOre;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockOre;

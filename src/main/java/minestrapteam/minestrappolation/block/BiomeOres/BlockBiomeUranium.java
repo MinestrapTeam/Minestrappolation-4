@@ -43,7 +43,7 @@ public class BlockBiomeUranium extends BlockRadiation
 	}
 	
 	@Override
-	public void addPotionEffect(EntityLivingBase living)
+	public void addPotionEffect(EntityLivingBase living, World world, BlockPos pos)
 	{
 		if (living instanceof EntityZombie)
 		{

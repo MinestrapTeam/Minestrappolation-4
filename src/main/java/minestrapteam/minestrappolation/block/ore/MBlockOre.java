@@ -1,8 +1,9 @@
-package minestrapteam.minestrappolation.block;
+package minestrapteam.minestrappolation.block.ore;
 
 import java.util.Iterator;
 import java.util.Random;
 
+import minestrapteam.minestrappolation.block.MBlock;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeCoal;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MItems;
