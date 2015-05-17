@@ -41,9 +41,11 @@ public class Minestrappolation
 		Config.configInit(event);
 		MItems.init();
 		MBlocks.init();
+		
 		MItems.register();
 		MRecipes.register();
 		MRecipes.removeRecipes();
+		
 		MDictionary.load();
 		MBiomeManager.load();
 		MinecraftForge.EVENT_BUS.register(new MEventHandler());

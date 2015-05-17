@@ -3,7 +3,6 @@ package minestrapteam.minestrappolation.lib;
 import minestrapteam.minestrappolation.Minestrappolation;
 import minestrapteam.minestrappolation.item.ItemMArmor;
 import minestrapteam.minestrappolation.item.ItemMAxe;
-import minestrapteam.minestrappolation.item.ItemMDoor;
 import minestrapteam.minestrappolation.item.ItemMHoe;
 import minestrapteam.minestrappolation.item.ItemMPickaxe;
 import minestrapteam.minestrappolation.item.ItemMShovel;
@@ -16,7 +15,10 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemFood;
+import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
+import net.minecraft.util.WeightedRandomChestContent;
+import net.minecraftforge.common.ChestGenHooks;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -276,6 +278,8 @@ public class MItems extends Item
 		desert_quartz_item = new Item().setUnlocalizedName("desert_quartz_item").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		blaze_shard = new Item().setUnlocalizedName("blaze_shard").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		soul_gem = new ItemSoulGem().setUnlocalizedName("soul_gem").setCreativeTab(Minestrappolation.tabMinistrappolation);
+	
+		addItemsToChests();
 	}
 	
 	public static void register()
@@ -518,6 +522,108 @@ public class MItems extends Item
 		registerRender(blaze_shard);
 		registerRender(soul_gem);
 		registerRender(torite_ingot);
+	}
+	
+	public static void addItemsToChests()
+	{
+		ChestGenHooks bonusChest = ChestGenHooks.getInfo(ChestGenHooks.BONUS_CHEST);
+		ChestGenHooks dungeonChest = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
+		ChestGenHooks mineshaftCorridor = ChestGenHooks.getInfo(ChestGenHooks.MINESHAFT_CORRIDOR);
+		ChestGenHooks strongholdCorridor = ChestGenHooks.getInfo(ChestGenHooks.STRONGHOLD_CORRIDOR);
+		ChestGenHooks strongholdCrossing = ChestGenHooks.getInfo(ChestGenHooks.STRONGHOLD_CROSSING);
+		ChestGenHooks jungleChest = ChestGenHooks.getInfo(ChestGenHooks.PYRAMID_JUNGLE_CHEST);
+		ChestGenHooks desertChest = ChestGenHooks.getInfo(ChestGenHooks.PYRAMID_DESERT_CHEST);
+		ChestGenHooks blacksmithChest = ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH);
+		ChestGenHooks strongholdLibrary = ChestGenHooks.getInfo(ChestGenHooks.STRONGHOLD_LIBRARY);
+		
+		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(copper_ingot), 1, 4, 20));
+		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(tin_ingot), 1, 4, 20));
+		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(sunstone_shard), 1, 4, 25));
+		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(steel_ingot), 1, 3, 10));
+		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(bronze_ingot), 1, 3, 10));
+		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(meurodite_gem), 1, 1, 5));
+		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(radiant_quartz), 1, 2, 4));
+		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(copper_ingot), 1, 5, 30));
+		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(tin_ingot), 1, 5, 30));
+		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(sunstone_shard), 4, 8, 30));
+		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(steel_ingot), 1, 3, 15));
+		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(bronze_ingot), 1, 3, 15));
+		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(meurodite_gem), 1, 3, 8));
+		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(steel_pickaxe), 1, 1, 2));
+		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(bronze_pickaxe), 1, 1, 2));
+		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.sunstone_block), 1, 1, 3));
+		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(uranium), 0, 2, 2));
+		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(plutonium), 0, 2, 2));
+		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(radiant_quartz), 0, 5, 1));
+		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(copper_ingot), 1, 5, 30));
+		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(tin_ingot), 1, 5, 30));
+		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(sunstone_shard), 3, 9, 30));
+		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(bronze_ingot), 1, 3, 15));
+		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(steel_ingot), 1, 3, 15));
+		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(meurodite_gem), 1, 3, 13));
+		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(torite_ingot), 1, 3, 8));
+		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(bronze_pickaxe), 1, 1, 2));
+		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(steel_sword), 1, 1, 2));
+		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(bronze_helmet), 1, 1, 2));
+		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(steel_chestplate), 1, 1, 2));
+		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(bronze_leggings), 1, 1, 2));
+		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(steel_boots), 1, 1, 2));
+		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(titanium_ingot), 0, 1, 1));
+		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.godstone), 0, 1, 1));
+		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(soul_gem), 1, 2, 1));
+		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(radiant_quartz), 1, 2, 2));
+		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(copper_ingot), 1, 5, 15));
+		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(tin_ingot), 1, 5, 15));
+		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(sunstone_shard), 1, 6, 20));
+		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(bronze_ingot), 1, 3, 8));
+		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(steel_ingot), 1, 3, 8));
+		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(meurodite_gem), 1, 1, 8));
+		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(bronze_pickaxe), 0, 1, 2));
+		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(steel_pickaxe), 0, 1, 2));
+		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(meurodite_pickaxe), 0, 1, 2));
+		strongholdLibrary.addItem(new WeightedRandomChestContent(new ItemStack(desert_quartz_item), 1, 3, 15));
+		strongholdLibrary.addItem(new WeightedRandomChestContent(new ItemStack(radiant_quartz), 1, 3, 8));
+		strongholdLibrary.addItem(new WeightedRandomChestContent(new ItemStack(soul_gem), 1, 2, 3));
+		strongholdLibrary.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.radiant_ore), 1, 1, 2));
+		jungleChest.addItem(new WeightedRandomChestContent(new ItemStack(copper_ingot), 1, 4, 30));
+		jungleChest.addItem(new WeightedRandomChestContent(new ItemStack(tin_ingot), 1, 4, 30));
+		jungleChest.addItem(new WeightedRandomChestContent(new ItemStack(bronze_ingot), 1, 4, 25));
+		jungleChest.addItem(new WeightedRandomChestContent(new ItemStack(torite_ingot), 1, 5, 15));
+		jungleChest.addItem(new WeightedRandomChestContent(new ItemStack(meurodite_gem), 1, 3, 13));
+		jungleChest.addItem(new WeightedRandomChestContent(new ItemStack(radiant_quartz), 1, 2, 6));
+		jungleChest.addItem(new WeightedRandomChestContent(new ItemStack(steel_ingot), 1, 3, 8));
+		jungleChest.addItem(new WeightedRandomChestContent(new ItemStack(soul_gem), 0, 3, 1));
+		desertChest.addItem(new WeightedRandomChestContent(new ItemStack(copper_ingot), 1, 4, 30));
+		desertChest.addItem(new WeightedRandomChestContent(new ItemStack(tin_ingot), 1, 4, 30));
+		desertChest.addItem(new WeightedRandomChestContent(new ItemStack(bronze_ingot), 1, 4, 25));
+		desertChest.addItem(new WeightedRandomChestContent(new ItemStack(desert_quartz_item), 3, 11, 30));
+		desertChest.addItem(new WeightedRandomChestContent(new ItemStack(meurodite_gem), 1, 3, 13));
+		desertChest.addItem(new WeightedRandomChestContent(new ItemStack(radiant_quartz), 1, 4, 6));
+		desertChest.addItem(new WeightedRandomChestContent(new ItemStack(steel_ingot), 1, 3, 8));
+		desertChest.addItem(new WeightedRandomChestContent(new ItemStack(soul_gem), 0, 3, 1));
+		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(copper_ingot), 1, 5, 30));
+		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(tin_ingot), 1, 5, 30));
+		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(bronze_ingot), 1, 3, 25));
+		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(steel_ingot), 1, 3, 25));
+		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(meurodite_gem), 1, 2, 13));
+		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(sunstone_shard), 1, 8, 15));
+		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(desert_quartz_item), 1, 5, 15));
+		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(radiant_quartz), 1, 3, 8));
+		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(steel_sword), 1, 1, 2));
+		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(steel_pickaxe), 1, 1, 2));
+		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(steel_helmet), 1, 1, 2));
+		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(steel_chestplate), 1, 1, 2));
+		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(steel_leggings), 1, 1, 2));
+		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(steel_boots), 1, 1, 2));
+		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(bronze_sword), 1, 1, 2));
+		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(bronze_pickaxe), 1, 1, 2));
+		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(bronze_helmet), 1, 1, 2));
+		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(bronze_chestplate), 1, 1, 2));
+		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(bronze_leggings), 1, 1, 2));
+		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(bronze_boots), 1, 1, 2));
+		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.radiant_ore), 1, 1, 1));
+		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(titanium_ingot), 0, 1, 1));
+		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(soul_gem), 0, 3, 1));
 	}
 	
 	public static void registerRender(Item item)
