@@ -2,6 +2,7 @@ package minestrapteam.minestrappolation.util;
 
 import java.util.Random;
 
+import minestrapteam.minestrappolation.block.BlockSoul;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MItems;
 import minestrapteam.minestrappolation.lib.MReference;
@@ -59,6 +60,15 @@ public class MEventHandler {
 				event.world.spawnEntityInWorld(eitem);
 			}
 			
+		}
+		
+		if(event.state.getBlock() instanceof BlockSoul)
+		{
+			ItemStack stack = event.getPlayer().getHeldItem();
+			if(stack.canHarvestBlock(event.state.getBlock()))
+			{
+				stack.damageItem(200, event.getPlayer());
+			}
 		}	
 	}
 	
