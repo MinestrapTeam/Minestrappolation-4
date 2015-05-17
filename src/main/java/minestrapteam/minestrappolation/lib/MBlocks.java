@@ -7,6 +7,7 @@ import minestrapteam.minestrappolation.block.BlockBiomeBricks;
 import minestrapteam.minestrappolation.block.BlockBlazium;
 import minestrapteam.minestrappolation.block.BlockBoulder;
 import minestrapteam.minestrappolation.block.BlockCrate;
+import minestrapteam.minestrappolation.block.BlockFrostGenerator;
 import minestrapteam.minestrappolation.block.BlockGodstone;
 import minestrapteam.minestrappolation.block.BlockMDoor;
 import minestrapteam.minestrappolation.block.BlockMPane;
@@ -188,6 +189,9 @@ public class MBlocks
 	public static Block			   tiled_glass_pane;
 	public static Block			   framed_glass_pane;
 	
+	//Misc
+	public static Block			   frost_generator;
+	
 	//BLOCK ITEMS
 	public static Item			   redwood_door_item;
 	
@@ -297,6 +301,9 @@ public class MBlocks
 		tiled_glass_pane = new BlockMPane(Material.glass, false).setUnlocalizedName("tiled_pane");
 		framed_glass_pane = new BlockMPane(Material.glass, false).setUnlocalizedName("framed_pane");
 		
+		//Misc
+		frost_generator = new BlockFrostGenerator(Material.rock, MapColor.iceColor).setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("frost_generator");
+		
 		//BLOCK ITEMS
 		redwood_door_item = new ItemMDoor(redwood_door).setUnlocalizedName("redwood_door_item");
 		
@@ -381,6 +388,9 @@ public class MBlocks
 		register(bricked_glass_pane);
 		register(tiled_glass_pane);
 		register(framed_glass_pane);
+		
+		//Misc
+		register(frost_generator);
 		
 		//BLOCK ITEMS
 		GameRegistry.registerItem(redwood_door_item, redwood_door_item.getUnlocalizedName().substring(5));
@@ -485,6 +495,7 @@ public class MBlocks
 		registerRender(bricked_glass_pane);
 		registerRender(tiled_glass_pane);
 		registerRender(framed_glass_pane);
+		registerRender(frost_generator);
 	}
 	
 	private static void register(Block block)
