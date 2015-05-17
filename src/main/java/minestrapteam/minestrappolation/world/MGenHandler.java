@@ -103,9 +103,13 @@ public class MGenHandler implements IWorldGenerator
 			new WorldGenRedWoodTreeSmall().generate(world, rand, pos);
 		}
 		
-		
-		
-		
+			for (x1 = 0; x1 < 16; x1++)
+			{
+				for (z1 = 0; z1 < 16; z1++)
+				{
+					chunk.setBlockState(pos.add(chunk.xPosition + x1, 0, chunk.zPosition + z1), MBlocks.invincium.getDefaultState());
+				}
+			} 	
 	}
 	
 	public void generateNether(World world, Random rand, int x, int z)

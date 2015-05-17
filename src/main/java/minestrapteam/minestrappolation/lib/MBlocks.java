@@ -9,6 +9,7 @@ import minestrapteam.minestrappolation.block.BlockBoulder;
 import minestrapteam.minestrappolation.block.BlockCrate;
 import minestrapteam.minestrappolation.block.BlockFrostGenerator;
 import minestrapteam.minestrappolation.block.BlockGodstone;
+import minestrapteam.minestrappolation.block.BlockInvincium;
 import minestrapteam.minestrappolation.block.BlockMDoor;
 import minestrapteam.minestrappolation.block.BlockMPane;
 import minestrapteam.minestrappolation.block.BlockMelter;
@@ -79,6 +80,7 @@ import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -191,6 +193,7 @@ public class MBlocks
 	
 	//Misc
 	public static Block			   frost_generator;
+	public static Block			   invincium;
 	
 	//BLOCK ITEMS
 	public static Item			   redwood_door_item;
@@ -303,9 +306,12 @@ public class MBlocks
 		
 		//Misc
 		frost_generator = new BlockFrostGenerator(Material.rock, MapColor.iceColor).setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("frost_generator");
-		
+		invincium = new BlockInvincium(Material.rock).setUnlocalizedName("invincium").setBlockUnbreakable().setHardness(50000F);
+
 		//BLOCK ITEMS
 		redwood_door_item = new ItemMDoor(redwood_door).setUnlocalizedName("redwood_door_item");
+		
+		Blocks.bedrock.setHardness(5F);
 		
 		register();
 		registerHarvestLevels();
@@ -391,6 +397,7 @@ public class MBlocks
 		
 		//Misc
 		register(frost_generator);
+		register(invincium);
 		
 		//BLOCK ITEMS
 		GameRegistry.registerItem(redwood_door_item, redwood_door_item.getUnlocalizedName().substring(5));
@@ -496,6 +503,7 @@ public class MBlocks
 		registerRender(tiled_glass_pane);
 		registerRender(framed_glass_pane);
 		registerRender(frost_generator);
+		registerRender(invincium);
 	}
 	
 	private static void register(Block block)
