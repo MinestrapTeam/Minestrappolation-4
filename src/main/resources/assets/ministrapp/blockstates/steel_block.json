@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "ministrapp:steel_block" }
+    }
+}

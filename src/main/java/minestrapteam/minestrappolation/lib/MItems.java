@@ -33,6 +33,8 @@ public class MItems extends Item
 	public static Item							steel_ingot;
 	public static Item							blazium_ingot;
 	public static Item							titanium_ingot;
+	public static Item							plutonium;
+	public static Item							uranium;
 	public static Item							tin_plating;
 	public static Item							meurodite_plating;
 	public static Item							reinforced_stick;
@@ -168,6 +170,8 @@ public class MItems extends Item
 		blazium_ingot = new Item().setUnlocalizedName("blazium_ingot").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		titanium_ingot = new Item().setUnlocalizedName("titanium_ingot").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		sunstone_shard = new Item().setUnlocalizedName("sunstone_shard").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		plutonium = new Item().setUnlocalizedName("plutonium").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		uranium = new Item().setUnlocalizedName("uranium").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		tin_plating = new Item().setUnlocalizedName("tin_plating").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		meurodite_plating = new Item().setUnlocalizedName("meurodite_plating").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		reinforced_stick = new Item().setUnlocalizedName("reinforced_stick").setCreativeTab(Minestrappolation.tabMinistrappolation);
@@ -287,6 +291,8 @@ public class MItems extends Item
 		GameRegistry.registerItem(blazium_ingot, blazium_ingot.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(titanium_ingot, titanium_ingot.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(sunstone_shard, sunstone_shard.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(plutonium, plutonium.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(uranium, uranium.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(tin_plating, tin_plating.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(meurodite_plating, meurodite_plating.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(reinforced_stick, reinforced_stick.getUnlocalizedName().substring(5));
@@ -406,6 +412,8 @@ public class MItems extends Item
 		registerRender(blazium_ingot);
 		registerRender(titanium_ingot);
 		registerRender(sunstone_shard);
+		registerRender(plutonium);
+		registerRender(uranium);
 		registerRender(tin_plating);
 		registerRender(meurodite_plating);
 		registerRender(reinforced_stick);

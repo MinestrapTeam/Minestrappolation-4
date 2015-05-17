@@ -84,6 +84,17 @@ public class MBlocks
 	public static Block	copper_block;
 	public static Block	tin_block;
 	public static Block	sunstone_block;
+	public static Block	blazium_block;
+	public static Block	bronze_block;
+	public static Block	meurodite_block;
+	public static Block	plutonium_block;
+	public static Block	soul_gem_block;
+	public static Block	steel_block;
+	public static Block	titanium_block;
+	public static Block	torite_block;
+	public static Block	uranium_block;
+	public static Block	plutonium_insulated;
+	public static Block	uranium_insulated;
 	public static Block	slate;
 	
 	public static Block	sunstone_ore;
@@ -196,10 +207,20 @@ public class MBlocks
 		stone_refined = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_refined").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		stone_tiles = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_tiles").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		copper_block = new MBlock(Material.iron, MapColor.adobeColor).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("copper_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		tin_block = new MBlock(Material.iron, MapColor.ironColor).setHardness(5.0F).setResistance(5.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("tin_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		tin_block = new MBlock(Material.iron, MapColor.ironColor).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("tin_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		sunstone_block = new BlockSunstoneBlock(Material.glass, MapColor.sandColor).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setLightLevel(0.9F).setUnlocalizedName("sunstone_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		godstone = new BlockGodstone(Material.rock, MapColor.sandColor).setHardness(3F).setResistance(15F).setUnlocalizedName("godstone");
-		
+		bronze_block = new MBlock(Material.iron, MapColor.goldColor).setHardness(5.0F).setResistance(20.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("bronze_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		steel_block = new MBlock(Material.iron, MapColor.clayColor).setHardness(7.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("steel_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		meurodite_block = new MBlock(Material.iron, MapColor.obsidianColor).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("meurodite_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		torite_block = new MBlock(Material.iron, MapColor.limeColor).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("torite_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		plutonium_block = new MBlock(Material.iron, MapColor.purpleColor).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("plutonium_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		uranium_block = new MBlock(Material.iron, MapColor.limeColor).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("uranium_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		plutonium_insulated = new MBlock(Material.iron, MapColor.clayColor).setHardness(7.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("plutonium_insulated").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		uranium_insulated = new MBlock(Material.iron, MapColor.clayColor).setHardness(7.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("uranium_insulated").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		titanium_block = new MBlock(Material.iron, MapColor.grayColor).setHardness(10.0F).setResistance(9999.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("titanium_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		blazium_block = new MBlock(Material.iron, MapColor.redColor).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("blazium_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		soul_gem_block = new MBlock(Material.iron, MapColor.cyanColor).setHardness(10.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("soul_gem_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		
 		redwood_door = new BlockMDoor(Material.wood).setUnlocalizedName("redwood_door");
 	
@@ -287,6 +308,17 @@ public class MBlocks
 		register(tin_block);
 		register(sunstone_ore);
 		register(sunstone_block);
+		register(bronze_block);
+		register(steel_block);
+		register(meurodite_block);
+		register(torite_block);
+		register(plutonium_block);
+		register(uranium_block);
+		register(plutonium_insulated);
+		register(uranium_insulated);
+		register(titanium_block);
+		register(blazium_block);
+		register(soul_gem_block);
 		register(slate);
 		
 		register(snow_bricks);
@@ -387,6 +419,17 @@ public class MBlocks
 		registerRender(tin_block);
 		registerRender(sunstone_ore);
 		registerRender(sunstone_block);
+		registerRender(bronze_block);
+		registerRender(steel_block);
+		registerRender(meurodite_block);
+		registerRender(torite_block);
+		registerRender(plutonium_block);
+		registerRender(uranium_block);
+		registerRender(plutonium_insulated);
+		registerRender(uranium_insulated);
+		registerRender(titanium_block);
+		registerRender(blazium_block);
+		registerRender(soul_gem_block);
 		registerRender(slate);
 		
 		registerRender(snow_refined);
@@ -463,6 +506,17 @@ public class MBlocks
 		snow_bricks.setHarvestLevel("shovel", 0);
 		copper_block.setHarvestLevel("pickaxe", 0);
 		tin_block.setHarvestLevel("pickaxe", 0);
+		bronze_block.setHarvestLevel("pickaxe", 2);
+		steel_block.setHarvestLevel("pickaxe", 2);
+		meurodite_block.setHarvestLevel("pickaxe", 2);
+		torite_block.setHarvestLevel("pickaxe", 2);
+		uranium_block.setHarvestLevel("pickaxe", 2);
+		plutonium_block.setHarvestLevel("pickaxe", 2);
+		uranium_insulated.setHarvestLevel("pickaxe", 2);
+		plutonium_insulated.setHarvestLevel("pickaxe", 2);
+		titanium_block.setHarvestLevel("pickaxe", 3);
+		blazium_block.setHarvestLevel("pickaxe", 2);
+		soul_gem_block.setHarvestLevel("pickaxe", 3);
 		glass_window.setHarvestLevel("pickaxe", 0);
 		stone_boulder.setHarvestLevel("pickaxe", 1);
 		stone_lamp_glowstone.setHarvestLevel("pickaxe", 0);
