@@ -5,10 +5,12 @@ import java.util.Random;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MItems;
 import minestrapteam.minestrappolation.lib.MReference;
+import net.minecraft.block.BlockLog;
 import net.minecraft.block.BlockNetherWart;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
@@ -16,6 +18,7 @@ import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.Phase;
 import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
 import net.minecraftforge.fml.relauncher.Side;
@@ -51,7 +54,7 @@ public class MEventHandler {
 			ItemStack item = new ItemStack(MItems.soul_gem);
 			EntityItem eitem = new EntityItem(event.world, event.pos.getX(), event.pos.getY(), event.pos.getZ(), item);
 
-			if(rand.nextInt(100) < 3 && (Integer)event.state.getValue(wart.AGE) == 3 && ground.getBlock() == MBlocks.soul_ore)
+			if(rand.nextInt(100) < Config.soulGemDropChance && (Integer)event.state.getValue(wart.AGE) == 3 && ground.getBlock() == MBlocks.soul_ore)
 			{
 				event.world.spawnEntityInWorld(eitem);
 			}
@@ -59,12 +62,6 @@ public class MEventHandler {
 		}	
 	}
 	
-	@SubscribeEvent
-	public void playerTick(PlayerTickEvent event)
-	{
-		
-	}
-
 	@SubscribeEvent
 	public void playerUpdate(LivingUpdateEvent event)
 	{

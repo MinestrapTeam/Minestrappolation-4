@@ -4,6 +4,7 @@ package minestrapteam.minestrappolation.block;
 import java.util.List;
 import java.util.Random;
 
+import minestrapteam.minestrappolation.util.Config;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -37,7 +38,7 @@ public abstract class BlockRadiation extends MBlockOre
 	@Override
 	public void updateTick(World world, BlockPos pos, IBlockState state, Random rand)
 	{
-		if (!world.isRemote)
+		if (!world.isRemote && Config.radiationEffects == true)
 		{
 			world.scheduleUpdate(pos, this, effectRate);
 			
