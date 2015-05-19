@@ -4,14 +4,17 @@ import minestrapteam.minestrappolation.inventory.container.ContainerAlloy;
 import minestrapteam.minestrappolation.inventory.container.ContainerBarrel;
 import minestrapteam.minestrappolation.inventory.container.ContainerCrate;
 import minestrapteam.minestrappolation.inventory.container.ContainerMelter;
+import minestrapteam.minestrappolation.inventory.container.ContainerStoneCutter;
 import minestrapteam.minestrappolation.inventory.gui.GuiAlloy;
 import minestrapteam.minestrappolation.inventory.gui.GuiBarrel;
 import minestrapteam.minestrappolation.inventory.gui.GuiCrate;
 import minestrapteam.minestrappolation.inventory.gui.GuiMelter;
+import minestrapteam.minestrappolation.inventory.gui.GuiStoneCutter;
 import minestrapteam.minestrappolation.tileentity.TileEntityAlloy;
 import minestrapteam.minestrappolation.tileentity.TileEntityBarrel;
 import minestrapteam.minestrappolation.tileentity.TileEntityCrate;
 import minestrapteam.minestrappolation.tileentity.TileEntityMelter;
+import minestrapteam.minestrappolation.tileentity.TileEntityStoneCutter;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
@@ -23,6 +26,7 @@ public class MGuiHandler implements IGuiHandler {
 	public static final int GUIID_CRATE = 2;
 	public static final int GUIID_MELTER = 3;
 	public static final int GUIID_ALLOY = 4;
+	public static final int GUIID_STONECUTTER = 5;
 	
 	@Override
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
@@ -54,6 +58,12 @@ public class MGuiHandler implements IGuiHandler {
 			TileEntityAlloy tileEntityAlloy = (TileEntityAlloy) tileEntity;
 			return new ContainerAlloy(player, tileEntityAlloy);
 		}
+		
+		//StoneCutter
+		if (tileEntity instanceof TileEntityStoneCutter) {
+			TileEntityStoneCutter tileEntityStoneCutter = (TileEntityStoneCutter) tileEntity;
+			return new ContainerStoneCutter(player, tileEntityStoneCutter);
+		}		
 		
 		return null;
 	}
@@ -87,6 +97,12 @@ public class MGuiHandler implements IGuiHandler {
 		if (tileEntity instanceof TileEntityAlloy) {
 			TileEntityAlloy tileEntityAlloy = (TileEntityAlloy) tileEntity;
 			return new GuiAlloy(player, tileEntityAlloy);
+		}
+		
+		//StoneCutter
+		if (tileEntity instanceof TileEntityStoneCutter) {
+			TileEntityStoneCutter tileEntityStoneCutter = (TileEntityStoneCutter) tileEntity;
+			return new GuiStoneCutter(player, tileEntityStoneCutter);
 		}
 		
 		return null;
