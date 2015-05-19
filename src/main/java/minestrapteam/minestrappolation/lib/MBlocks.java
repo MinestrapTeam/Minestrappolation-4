@@ -12,6 +12,7 @@ import minestrapteam.minestrappolation.block.BlockGodstone;
 import minestrapteam.minestrappolation.block.BlockInvincium;
 import minestrapteam.minestrappolation.block.BlockMDoor;
 import minestrapteam.minestrappolation.block.BlockMPane;
+import minestrapteam.minestrappolation.block.BlockMStorage;
 import minestrapteam.minestrappolation.block.BlockMelter;
 import minestrapteam.minestrappolation.block.BlockRadationMineral;
 import minestrapteam.minestrappolation.block.BlockRadiationInsulated;
@@ -76,6 +77,7 @@ import minestrapteam.minestrappolation.item.BiomeItems.ItemBlockBiomeUranium;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.BlockFenceGate;
+import net.minecraft.block.BlockSand;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -103,6 +105,11 @@ public class MBlocks
 	public static Block	plutonium_insulated;
 	public static Block	uranium_insulated;
 	public static Block	slate;
+	public static Block flint_block;
+	public static Block sugar_block;
+	public static Block meat_block;
+	
+	public static Block cold_sand;
 	
 	public static Block	sunstone_ore;
 	public static Block	copper_ore;
@@ -232,7 +239,13 @@ public class MBlocks
 		titanium_block = new MBlock(Material.iron, MapColor.grayColor).setHardness(10.0F).setResistance(9999.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("titanium_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		blazium_block = new BlockBlazium(Material.iron, MapColor.redColor).setHardness(5.0F).setResistance(10.0F).setLightLevel(1F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("blazium_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		soul_gem_block = new BlockSoul(Material.iron, MapColor.cyanColor).setHardness(10.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("soul_gem_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		flint_block = new BlockMStorage(Material.rock).setUnlocalizedName("flint_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		sugar_block = new BlockMStorage(Material.cake).setUnlocalizedName("sugar_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		meat_block = new BlockMStorage(Material.cloth).setUnlocalizedName("meat_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		
+		cold_sand = new BlockSand().setUnlocalizedName("cold_sand").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		
+		//Door
 		redwood_door = new BlockMDoor(Material.wood).setUnlocalizedName("redwood_door");
 	
 		//WOOD
@@ -337,6 +350,11 @@ public class MBlocks
 		register(blazium_block);
 		register(soul_gem_block);
 		register(slate);
+		register(flint_block);
+		register(sugar_block);
+		register(meat_block);
+		
+		register(cold_sand);
 		
 		register(snow_bricks);
 		register(snow_refined);
@@ -452,6 +470,11 @@ public class MBlocks
 		registerRender(blazium_block);
 		registerRender(soul_gem_block);
 		registerRender(slate);
+		registerRender(flint_block);
+		registerRender(sugar_block);
+		registerRender(meat_block);
+		
+		registerRender(cold_sand);
 		
 		registerRender(snow_refined);
 		registerRender(snow_tiles);

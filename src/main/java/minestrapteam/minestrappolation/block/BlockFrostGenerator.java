@@ -3,6 +3,7 @@ package minestrapteam.minestrappolation.block;
 import java.util.HashMap;
 import java.util.Random;
 
+import minestrapteam.minestrappolation.lib.MBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -14,6 +15,8 @@ import net.minecraft.world.World;
 public class BlockFrostGenerator extends MBlock{
 	
 	public HashMap<Block, Block> canFreeze = new HashMap<Block, Block>();
+	
+	int range = 5;
 
 	public BlockFrostGenerator(Material materialIn, MapColor mapColorIn) 
 	{
@@ -31,6 +34,7 @@ public class BlockFrostGenerator extends MBlock{
 		canFreeze.put(Blocks.fire, Blocks.air);
 		canFreeze.put(Blocks.sapling, Blocks.air);
 		canFreeze.put(Blocks.cactus, Blocks.air);
+		canFreeze.put(Blocks.sand, MBlocks.cold_sand);
 	}
 
 	@Override
@@ -45,12 +49,18 @@ public class BlockFrostGenerator extends MBlock{
 		world.scheduleUpdate(pos, this, 20);
 		if(world.isBlockPowered(pos))
 		{
-			for(int x = -5; x < 5; x++)
+			for(int x = -range; x < range; x++)
 			{
-				for(int y = -5; y < 5; y++)
+				for(int y = -range; y < range; y++)
 				{
-					for(int z = -5; z < 5; z++)
+					for(int z = -range; z < range; z++)
 					{
+						int s = rand.nextInt(50);
+						if(s < 1 && world.getBlockState(pos.add(x, 0, z)) == Blocks.air.getDefaultState())
+						{
+							world.setBlockState(pos.add(x, 0, z), Blocks.snow_layer.getDefaultState(), 2);
+						}
+						
 						if(canFreeze.containsKey(world.getBlockState(pos.add(x, y, z)).getBlock()))
 						{
 							int i = rand.nextInt(5);
