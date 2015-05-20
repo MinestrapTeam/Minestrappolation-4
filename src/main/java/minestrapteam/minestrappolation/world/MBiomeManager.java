@@ -13,6 +13,7 @@ public class MBiomeManager
 	private static int			nextBiomeID	= 50;
 	
 	public static BiomeGenBase	redwood;
+	public static BiomeGenBase frost;
 	
 	public static void load()
 	{
@@ -22,7 +23,10 @@ public class MBiomeManager
 	private static void initBiomes()
 	{
 		redwood = new BiomeRedwood(nextBiomeID).setBiomeName("Redwood Forest");
+		frost = new BiomeFrost(nextBiomeID).setBiomeName("The Frost");
+		
 		registerBiomes(redwood, BiomeType.WARM, Type.FOREST, nextBiomeID());
+		registerBiomes(frost, BiomeType.ICY, Type.PLAINS, nextBiomeID());
 	}
 	
 	private static void registerBiomes(BiomeGenBase biome, BiomeType type, Type forgeType, int weight)

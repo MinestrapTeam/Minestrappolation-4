@@ -12,8 +12,10 @@ import minestrapteam.minestrappolation.block.BlockGodstone;
 import minestrapteam.minestrappolation.block.BlockInvincium;
 import minestrapteam.minestrappolation.block.BlockMDoor;
 import minestrapteam.minestrappolation.block.BlockMPane;
+import minestrapteam.minestrappolation.block.BlockMSand;
 import minestrapteam.minestrappolation.block.BlockMStorage;
 import minestrapteam.minestrappolation.block.BlockMelter;
+import minestrapteam.minestrappolation.block.BlockPermaFrost;
 import minestrapteam.minestrappolation.block.BlockRadationMineral;
 import minestrapteam.minestrappolation.block.BlockRadiationInsulated;
 import minestrapteam.minestrappolation.block.BlockSoul;
@@ -54,6 +56,7 @@ import minestrapteam.minestrappolation.block.ore.MBlockOre;
 import minestrapteam.minestrappolation.item.ItemBlockBiomeBricks;
 import minestrapteam.minestrappolation.item.ItemBlockLeaves;
 import minestrapteam.minestrappolation.item.ItemBlockLog;
+import minestrapteam.minestrappolation.item.ItemBlockPermaFrost;
 import minestrapteam.minestrappolation.item.ItemBlockPlanks;
 import minestrapteam.minestrappolation.item.ItemBlockSapling;
 import minestrapteam.minestrappolation.item.ItemMDoor;
@@ -78,7 +81,6 @@ import minestrapteam.minestrappolation.item.BiomeItems.ItemBlockBiomeUranium;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.BlockFenceGate;
-import net.minecraft.block.BlockSand;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -111,6 +113,7 @@ public class MBlocks
 	public static Block meat_block;
 	
 	public static Block cold_sand;
+	public static Block lichen_permafrost;
 	
 	public static Block	sunstone_ore;
 	public static Block	copper_ore;
@@ -245,7 +248,8 @@ public class MBlocks
 		sugar_block = new BlockMStorage(Material.cake).setUnlocalizedName("sugar_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		meat_block = new BlockMStorage(Material.cloth).setUnlocalizedName("meat_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		
-		cold_sand = new BlockSand().setUnlocalizedName("cold_sand").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		cold_sand = new BlockMSand().setUnlocalizedName("cold_sand").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		lichen_permafrost = new BlockPermaFrost().setUnlocalizedName("permafrost").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		
 		//Door
 		redwood_door = new BlockMDoor(Material.wood).setUnlocalizedName("redwood_door");
@@ -358,6 +362,7 @@ public class MBlocks
 		register(meat_block);
 		
 		register(cold_sand);
+		GameRegistry.registerBlock(lichen_permafrost, ItemBlockPermaFrost.class, lichen_permafrost.getUnlocalizedName().substring(5));
 		
 		register(snow_bricks);
 		register(snow_refined);
@@ -479,6 +484,7 @@ public class MBlocks
 		registerRender(meat_block);
 		
 		registerRender(cold_sand);
+		registerRender(lichen_permafrost);
 		
 		registerRender(snow_refined);
 		registerRender(snow_tiles);
