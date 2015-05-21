@@ -2,9 +2,8 @@
     "parent": "ministrapp:block/permafrost",
     "textures": {
         "particle": "blocks/dirt",
-        "bottom": "blocks/dirt",
-        "top": "blocks/grass_top",
-        "side": "blocks/grass_side",
-        "overlay": "blocks/grass_side_overlay"
+        "bottom": "ministrapp:blocks/permafrost",
+        "top": "ministrapp:blocks/lichen_permafrost_top",
+        "side": "ministrapp:blocks/lichen_permafrost_side"
     }
 }

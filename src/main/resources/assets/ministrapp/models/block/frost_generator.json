@@ -1,10 +1,10 @@
 {
 "__comment": "Designed by Delocuro with BDcraft Cubik PRO 0.93 Beta - http://bdcraft.net",
 "textures": {
-    "particle": "blocks/frost_generator_side",
-    "top": "blocks/frost_generator_top",
-    "side": "blocks/frost_generator_side",
-    "bottom": "blocks/frost_generator_bottom"
+    "particle": "ministrapp:blocks/frost_generator_side",
+    "top": "ministrapp:blocks/frost_generator_top",
+    "side": "ministrapp:blocks/frost_generator_side",
+    "bottom": "ministrapp:blocks/frost_generator_bottom"
 },
 "elements": [ 
 {

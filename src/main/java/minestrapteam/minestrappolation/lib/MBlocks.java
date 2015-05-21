@@ -16,6 +16,7 @@ import minestrapteam.minestrappolation.block.BlockMSand;
 import minestrapteam.minestrappolation.block.BlockMStorage;
 import minestrapteam.minestrappolation.block.BlockMelter;
 import minestrapteam.minestrappolation.block.BlockPermaFrost;
+import minestrapteam.minestrappolation.block.BlockPermaFrostDirt;
 import minestrapteam.minestrappolation.block.BlockRadationMineral;
 import minestrapteam.minestrappolation.block.BlockRadiationInsulated;
 import minestrapteam.minestrappolation.block.BlockSoul;
@@ -54,6 +55,7 @@ import minestrapteam.minestrappolation.block.ore.BlockSoulOre;
 import minestrapteam.minestrappolation.block.ore.BlockUraniumOre;
 import minestrapteam.minestrappolation.block.ore.MBlockOre;
 import minestrapteam.minestrappolation.item.ItemBlockBiomeBricks;
+import minestrapteam.minestrappolation.item.ItemBlockColdSand;
 import minestrapteam.minestrappolation.item.ItemBlockLeaves;
 import minestrapteam.minestrappolation.item.ItemBlockLog;
 import minestrapteam.minestrappolation.item.ItemBlockPermaFrost;
@@ -114,6 +116,7 @@ public class MBlocks
 	
 	public static Block cold_sand;
 	public static Block lichen_permafrost;
+	public static Block dirt_permafrost;
 	
 	public static Block	sunstone_ore;
 	public static Block	copper_ore;
@@ -250,6 +253,7 @@ public class MBlocks
 		
 		cold_sand = new BlockMSand().setUnlocalizedName("cold_sand").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		lichen_permafrost = new BlockPermaFrost().setUnlocalizedName("permafrost").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		dirt_permafrost = new BlockPermaFrostDirt(Material.ground, MapColor.iceColor).setUnlocalizedName("dirt_permafrost").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		
 		//Door
 		redwood_door = new BlockMDoor(Material.wood).setUnlocalizedName("redwood_door");
@@ -361,7 +365,8 @@ public class MBlocks
 		register(sugar_block);
 		register(meat_block);
 		
-		register(cold_sand);
+		register(dirt_permafrost);
+		GameRegistry.registerBlock(cold_sand, ItemBlockColdSand.class, cold_sand.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(lichen_permafrost, ItemBlockPermaFrost.class, lichen_permafrost.getUnlocalizedName().substring(5));
 		
 		register(snow_bricks);
@@ -485,6 +490,7 @@ public class MBlocks
 		
 		registerRender(cold_sand);
 		registerRender(lichen_permafrost);
+		registerRender(dirt_permafrost);
 		
 		registerRender(snow_refined);
 		registerRender(snow_tiles);

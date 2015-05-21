@@ -35,7 +35,7 @@ public class BlockPermaFrost extends BlockGrass{
     @SideOnly(Side.CLIENT)
     public int colorMultiplier(IBlockAccess worldIn, BlockPos pos, int renderPass)
     {
-        return 10420217;
+        return 11052399;
     }
 	
 	 public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
@@ -44,7 +44,7 @@ public class BlockPermaFrost extends BlockGrass{
 	        {
 	            if (worldIn.getLightFromNeighbors(pos.up()) < 4 && worldIn.getBlockState(pos.up()).getBlock().getLightOpacity(worldIn, pos.up()) > 2)
 	            {
-	                worldIn.setBlockState(pos, Blocks.dirt.getDefaultState());
+	                worldIn.setBlockState(pos, MBlocks.dirt_permafrost.getDefaultState());
 	            }
 	            else
 	            {
@@ -56,7 +56,7 @@ public class BlockPermaFrost extends BlockGrass{
 	                        Block block = worldIn.getBlockState(blockpos1.up()).getBlock();
 	                        IBlockState iblockstate1 = worldIn.getBlockState(blockpos1);
 
-	                        if (iblockstate1.getBlock() == Blocks.dirt && iblockstate1.getValue(BlockDirt.VARIANT) == BlockDirt.DirtType.DIRT && worldIn.getLightFromNeighbors(blockpos1.up()) >= 4 && block.getLightOpacity(worldIn, blockpos1.up()) <= 2)
+	                        if (iblockstate1.getBlock() == MBlocks.dirt_permafrost && worldIn.getLightFromNeighbors(blockpos1.up()) >= 4 && block.getLightOpacity(worldIn, blockpos1.up()) <= 2)
 	                        {
 	                            worldIn.setBlockState(blockpos1, MBlocks.lichen_permafrost.getDefaultState());
 	                        }

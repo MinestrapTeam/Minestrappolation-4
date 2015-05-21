@@ -1,6 +1,7 @@
 package minestrapteam.minestrappolation.client;
 
 import minestrapteam.minestrappolation.block.BlockBiomeBricks;
+import minestrapteam.minestrappolation.block.BlockMSand;
 import minestrapteam.minestrappolation.block.MBlockPlanks;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeCoal;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeCobble;
@@ -71,6 +72,7 @@ public abstract class CommonProxy implements IGuiHandler
 		BlockBiomeUranium.preinventoryRender();
 		BlockBiomeMeurodite.preinventoryRender();
 		MBlockPlanks.preinventoryRender();
+		BlockMSand.preinventoryRender();
 		
 		GameRegistry.registerTileEntity(TileEntityBarrel.class, "tile_entity_barrel");
 		GameRegistry.registerTileEntity(TileEntityCrate.class, "tile_entity_crate");
@@ -101,6 +103,7 @@ public abstract class CommonProxy implements IGuiHandler
 		BlockBiomeUranium.inventoryRender();
 		BlockBiomeMeurodite.inventoryRender();
 		MBlockPlanks.inventoryRender();
+		BlockMSand.inventoryRender();
 		
 		if(Config.useRainBowXp)
 		{

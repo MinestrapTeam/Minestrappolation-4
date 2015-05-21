@@ -1,7 +1,10 @@
-package minestrapteam.minestrappolation.world;
+package minestrapteam.minestrappolation.world.biomes;
 
 import java.util.Random;
 
+import minestrapteam.minestrappolation.world.MBiomeDecorator;
+import minestrapteam.minestrappolation.world.WorldGenRedWoodTree;
+import minestrapteam.minestrappolation.world.WorldGenRedWoodTreeSmall;
 import net.minecraft.block.BlockDirt;
 import net.minecraft.block.BlockTallGrass;
 import net.minecraft.init.Blocks;

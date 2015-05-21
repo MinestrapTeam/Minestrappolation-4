@@ -2,8 +2,8 @@
     "parent": "block/cube_bottom_top",
     "textures": {
         "particle": "blocks/dirt",
-        "bottom": "blocks/dirt",
-        "top": "blocks/grass_top",
-        "side": "blocks/grass_side_snowed"
+        "bottom": "ministrapp:blocks/permafrost",
+        "top": "ministrapp:blocks/lichen_permafrost_top",
+        "side": "ministrapp:blocks/snow_permafrost_side"
     }
 }

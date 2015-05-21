@@ -1,8 +1,9 @@
-package minestrapteam.minestrappolation.world;
+package minestrapteam.minestrappolation.world.biomes;
 
 import java.util.Random;
 
 import minestrapteam.minestrappolation.lib.MBlocks;
+import minestrapteam.minestrappolation.world.MBiomeDecorator;
 import net.minecraft.block.BlockDirt;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
@@ -34,7 +35,7 @@ public class BiomeFrost extends BiomeGenBase{
 	@Override
 	public void genTerrainBlocks(World worldIn, Random rand, ChunkPrimer primer, int p_180622_4_, int p_180622_5_, double noise)
 	{
-		this.fillerBlock = Blocks.dirt.getDefaultState();
+		this.fillerBlock = MBlocks.dirt_permafrost.getDefaultState();
 		this.topBlock = MBlocks.lichen_permafrost.getDefaultState();
 		
 		if (noise > 2.5D)

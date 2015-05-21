@@ -1,5 +1,7 @@
 package minestrapteam.minestrappolation.world;
 
+import minestrapteam.minestrappolation.world.biomes.BiomeFrost;
+import minestrapteam.minestrappolation.world.biomes.BiomeRedwood;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.BiomeDictionary.Type;
