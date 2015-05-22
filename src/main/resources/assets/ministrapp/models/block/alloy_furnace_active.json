@@ -1,11 +1,11 @@
 {
 "__comment": "Designed by Delocuro with BDcraft Cubik PRO 0.93 Beta - http://bdcraft.net",
 "textures": {
-    "particle": "blocks/alloy_furnace_front",
-    "texture": "blocks/alloy_furnace_front_active",
-    "alloy_furnace_side": "blocks/alloy_furnace_side",
-    "alloy_furnace_top": "blocks/alloy_furnace_top",
-    "red_rock_bricks": "blocks/red_rock_bricks"
+    "particle": "ministrapp:blocks/alloy_furnace_front",
+    "texture": "ministrapp:blocks/alloy_furnace_front_active",
+    "alloy_furnace_side": "ministrapp:blocks/alloy_furnace_side",
+    "alloy_furnace_top": "ministrapp:blocks/alloy_furnace_top",
+    "red_rock_bricks": "ministrapp:blocks/red_rock_bricks"
 },
 "elements": [ 
 {
