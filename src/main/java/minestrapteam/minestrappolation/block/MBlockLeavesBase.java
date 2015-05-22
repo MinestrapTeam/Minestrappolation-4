@@ -3,6 +3,7 @@ package minestrapteam.minestrappolation.block;
 import java.util.Random;
 
 import minestrapteam.minestrappolation.Minestrappolation;
+import minestrapteam.minestrappolation.enumtypes.MWoodType;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLeavesBase;
 import net.minecraft.block.material.Material;

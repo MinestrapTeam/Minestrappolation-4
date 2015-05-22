@@ -1,6 +1,6 @@
 package minestrapteam.minestrappolation.item.BiomeItems;
 
-import minestrapteam.minestrappolation.block.MStoneType;
+import minestrapteam.minestrappolation.enumtypes.MStoneType;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;

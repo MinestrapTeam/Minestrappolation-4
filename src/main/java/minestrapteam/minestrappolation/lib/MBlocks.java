@@ -19,6 +19,7 @@ import minestrapteam.minestrappolation.block.BlockPermaFrost;
 import minestrapteam.minestrappolation.block.BlockPermaFrostDirt;
 import minestrapteam.minestrappolation.block.BlockRadationMineral;
 import minestrapteam.minestrappolation.block.BlockRadiationInsulated;
+import minestrapteam.minestrappolation.block.BlockRoads;
 import minestrapteam.minestrappolation.block.BlockSoul;
 import minestrapteam.minestrappolation.block.BlockStoneCutter;
 import minestrapteam.minestrappolation.block.BlockSunstoneBlock;
@@ -30,8 +31,6 @@ import minestrapteam.minestrappolation.block.MBlockPlanks;
 import minestrapteam.minestrappolation.block.MBlockSapling;
 import minestrapteam.minestrappolation.block.MBlockSnow;
 import minestrapteam.minestrappolation.block.MBlockStairs;
-import minestrapteam.minestrappolation.block.MStoneType;
-import minestrapteam.minestrappolation.block.MWoodType;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeCoal;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeCobble;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeCopper;
@@ -54,12 +53,15 @@ import minestrapteam.minestrappolation.block.ore.BlockPlutoniumOre;
 import minestrapteam.minestrappolation.block.ore.BlockSoulOre;
 import minestrapteam.minestrappolation.block.ore.BlockUraniumOre;
 import minestrapteam.minestrappolation.block.ore.MBlockOre;
+import minestrapteam.minestrappolation.enumtypes.MStoneType;
+import minestrapteam.minestrappolation.enumtypes.MWoodType;
 import minestrapteam.minestrappolation.item.ItemBlockBiomeBricks;
 import minestrapteam.minestrappolation.item.ItemBlockColdSand;
 import minestrapteam.minestrappolation.item.ItemBlockLeaves;
 import minestrapteam.minestrappolation.item.ItemBlockLog;
 import minestrapteam.minestrappolation.item.ItemBlockPermaFrost;
 import minestrapteam.minestrappolation.item.ItemBlockPlanks;
+import minestrapteam.minestrappolation.item.ItemBlockRoads;
 import minestrapteam.minestrappolation.item.ItemBlockSapling;
 import minestrapteam.minestrappolation.item.ItemMDoor;
 import minestrapteam.minestrappolation.item.BiomeItems.ItemBlockBiomeCoal;
@@ -113,6 +115,8 @@ public class MBlocks
 	public static Block flint_block;
 	public static Block sugar_block;
 	public static Block meat_block;
+	
+	public static Block roads;
 	
 	public static Block cold_sand;
 	public static Block lichen_permafrost;
@@ -251,6 +255,8 @@ public class MBlocks
 		sugar_block = new BlockMStorage(Material.cake).setUnlocalizedName("sugar_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		meat_block = new BlockMStorage(Material.cloth).setUnlocalizedName("meat_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		
+		roads = new BlockRoads(Material.rock, MapColor.blackColor).setUnlocalizedName("roads").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		
 		cold_sand = new BlockMSand().setUnlocalizedName("cold_sand").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		lichen_permafrost = new BlockPermaFrost().setUnlocalizedName("permafrost").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		dirt_permafrost = new BlockPermaFrostDirt(Material.ground, MapColor.iceColor).setUnlocalizedName("dirt_permafrost").setCreativeTab(Minestrappolation.tabMinistrappolation);
@@ -364,6 +370,8 @@ public class MBlocks
 		register(flint_block);
 		register(sugar_block);
 		register(meat_block);
+		
+		GameRegistry.registerBlock(roads, ItemBlockRoads.class, roads.getUnlocalizedName().substring(5));
 		
 		register(dirt_permafrost);
 		GameRegistry.registerBlock(cold_sand, ItemBlockColdSand.class, cold_sand.getUnlocalizedName().substring(5));
@@ -487,6 +495,8 @@ public class MBlocks
 		registerRender(flint_block);
 		registerRender(sugar_block);
 		registerRender(meat_block);
+		
+		registerRender(roads);
 		
 		registerRender(cold_sand);
 		registerRender(lichen_permafrost);

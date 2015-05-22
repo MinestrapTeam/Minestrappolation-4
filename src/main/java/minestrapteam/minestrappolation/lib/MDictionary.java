@@ -1,6 +1,6 @@
 package minestrapteam.minestrappolation.lib;
 
-import minestrapteam.minestrappolation.block.MStoneType;
+import minestrapteam.minestrappolation.enumtypes.MStoneType;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;

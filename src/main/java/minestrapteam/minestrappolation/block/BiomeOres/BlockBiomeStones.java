@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 import minestrapteam.minestrappolation.Minestrappolation;
-import minestrapteam.minestrappolation.block.MStoneType;
+import minestrapteam.minestrappolation.enumtypes.MStoneType;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MReference;
 import net.minecraft.block.Block;

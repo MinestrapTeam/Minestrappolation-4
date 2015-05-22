@@ -3,8 +3,8 @@ package minestrapteam.minestrappolation.block.BiomeOres;
 import java.util.List;
 
 import minestrapteam.minestrappolation.Minestrappolation;
-import minestrapteam.minestrappolation.block.MStoneType;
 import minestrapteam.minestrappolation.block.ore.MBlockOre;
+import minestrapteam.minestrappolation.enumtypes.MStoneType;
 import minestrapteam.minestrappolation.lib.MReference;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;

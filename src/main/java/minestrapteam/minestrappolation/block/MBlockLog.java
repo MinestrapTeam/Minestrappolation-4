@@ -3,6 +3,7 @@ package minestrapteam.minestrappolation.block;
 import java.util.List;
 
 import minestrapteam.minestrappolation.Minestrappolation;
+import minestrapteam.minestrappolation.enumtypes.MWoodType;
 import net.minecraft.block.BlockLog;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;

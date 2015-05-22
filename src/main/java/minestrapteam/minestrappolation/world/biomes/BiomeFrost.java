@@ -4,12 +4,13 @@ import java.util.Random;
 
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.world.MBiomeDecorator;
-import net.minecraft.block.BlockDirt;
+import minestrapteam.minestrappolation.world.WorldGenFrostTree;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.ChunkPrimer;
+import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -28,8 +29,14 @@ public class BiomeFrost extends BiomeGenBase{
 		this.fillerBlock = Blocks.stone.getDefaultState();
 		
 		this.theBiomeDecorator.flowersPerChunk = 0;
-		this.theBiomeDecorator.treesPerChunk = 4;
+		this.theBiomeDecorator.treesPerChunk = 1;
 		this.theBiomeDecorator.grassPerChunk = 1;
+	}
+	
+	@Override
+	public WorldGenAbstractTree genBigTreeChance(Random random)
+	{
+		return random.nextInt(4) == 0 ? this.worldGeneratorTrees : new WorldGenFrostTree();
 	}
 	
 	@Override

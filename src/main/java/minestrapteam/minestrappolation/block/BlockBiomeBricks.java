@@ -3,6 +3,7 @@ package minestrapteam.minestrappolation.block;
 import java.util.List;
 
 import minestrapteam.minestrappolation.Minestrappolation;
+import minestrapteam.minestrappolation.enumtypes.MStoneType;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MReference;
 import net.minecraft.block.Block;
@@ -70,19 +71,7 @@ public class BlockBiomeBricks extends Block
 	{
 		return ((MStoneType) state.getValue(VARIANT)).getMetadata();
 	}
-	
-	/*public static void addRecipes()
-	{
-		MStoneType[] aenumtype = MStoneType.values();
-		int i = aenumtype.length;
-		
-		for (int j = 0; j < i; ++j)
-		{
-			MStoneType enumtype = aenumtype[j];
-			GameRegistry.addRecipe(new ItemStack(MBlocks.biome_bricks, 1, enumtype.getMetadata()), new Object[] { "II", "II", 'I', new ItemStack(MBlocks.biome_stones, 1, enumtype.getMetadata()) });
-		}
-	}*/
-	
+
 	public static void preinventoryRender()
 	{
 		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "biome_bricks");

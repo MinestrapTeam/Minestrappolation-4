@@ -1,14 +1,14 @@
-package minestrapteam.minestrappolation.item.BiomeItems;
+package minestrapteam.minestrappolation.item;
 
-import minestrapteam.minestrappolation.enumtypes.MStoneType;
+import minestrapteam.minestrappolation.enumtypes.MRoadType;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemBlockBiomeGold extends ItemBlock
+public class ItemBlockRoads extends ItemBlock
 {
 	
-	public ItemBlockBiomeGold(Block block)
+	public ItemBlockRoads(Block block)
 	{
 		super(block);
 		this.setHasSubtypes(true);
@@ -25,6 +25,6 @@ public class ItemBlockBiomeGold extends ItemBlock
 	@Override
 	public String getUnlocalizedName(ItemStack item)
 	{
-		return MStoneType.byMetadata(item.getItemDamage()) + "_gold";
+		return MRoadType.byMetadata(item.getItemDamage()) + "_road";
 	}
 }

@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 import minestrapteam.minestrappolation.Minestrappolation;
+import minestrapteam.minestrappolation.enumtypes.MWoodType;
 import minestrapteam.minestrappolation.world.WorldGenRedWoodTree;
 import minestrapteam.minestrappolation.world.WorldGenRedWoodTreeSmall;
 import net.minecraft.block.BlockBush;
