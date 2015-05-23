@@ -2,6 +2,8 @@ package minestrapteam.minestrappolation.tileentity;
 
 import java.util.Random;
 
+import minestrapteam.minestrappolation.lib.MBlocks;
+import minestrapteam.minestrappolation.lib.MItems;
 import minestrapteam.minestrappolation.util.AlloyRecipes;
 import minestrapteam.minestrappolation.util.CrusherRecipes;
 import net.minecraft.init.Items;
@@ -166,7 +168,7 @@ public class TileEntityCrusher extends TileEntityInventory implements ISidedInve
 		if (this.canCrush())
 		{
 			Random rand = new Random();
-			int chance = rand.nextInt(5);
+			int chance = rand.nextInt(15);
 			
 			
 			ItemStack input = this.itemStacks[0];
@@ -187,13 +189,13 @@ public class TileEntityCrusher extends TileEntityInventory implements ISidedInve
 				this.itemStacks[0] = null;
 			}
 			
-			if(chance > 1 && this.itemStacks[3] == null)
+			if(chance < 1 && this.itemStacks[3] == null)
 			{
-				this.itemStacks[3] = new ItemStack(Items.apple, 1, 0);
+				this.itemStacks[3] = CrusherRecipes.instance().getExtra(input);
 			}
-			else
+			else if(chance < 1 && this.itemStacks[3] != null)
 			{
-				if(this.itemStacks[3].isItemEqual(new ItemStack(Items.apple)))
+				if(this.itemStacks[3].isItemEqual(CrusherRecipes.instance().getExtra(input)))
 				{
 					this.itemStacks[3].stackSize += 1;
 				}

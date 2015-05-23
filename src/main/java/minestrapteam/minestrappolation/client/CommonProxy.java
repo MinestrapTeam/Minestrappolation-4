@@ -22,6 +22,7 @@ import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTin;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTitanium;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTorite;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeUranium;
+import minestrapteam.minestrappolation.item.ItemChunk;
 import minestrapteam.minestrappolation.item.RenderXpOrb;
 import minestrapteam.minestrappolation.tileentity.TileEntityAlloy;
 import minestrapteam.minestrappolation.tileentity.TileEntityBarrel;
@@ -78,6 +79,8 @@ public abstract class CommonProxy implements IGuiHandler
 		BlockMSand.preinventoryRender();
 		BlockRoads.preinventoryRender();
 		
+		ItemChunk.preinventoryRender();
+		
 		GameRegistry.registerTileEntity(TileEntityBarrel.class, "tile_entity_barrel");
 		GameRegistry.registerTileEntity(TileEntityCrate.class, "tile_entity_crate");
 		GameRegistry.registerTileEntity(TileEntityMelter.class, "tile_entity_melter");
@@ -111,6 +114,8 @@ public abstract class CommonProxy implements IGuiHandler
 		MBlockPlanks.inventoryRender();
 		BlockMSand.inventoryRender();
 		BlockRoads.inventoryRender();
+		
+		ItemChunk.inventoryRender();
 		
 		if(Config.useRainBowXp)
 		{

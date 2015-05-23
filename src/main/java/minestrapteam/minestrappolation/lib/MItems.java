@@ -1,6 +1,7 @@
 package minestrapteam.minestrappolation.lib;
 
 import minestrapteam.minestrappolation.Minestrappolation;
+import minestrapteam.minestrappolation.item.ItemChunk;
 import minestrapteam.minestrappolation.item.ItemMArmor;
 import minestrapteam.minestrappolation.item.ItemMAxe;
 import minestrapteam.minestrappolation.item.ItemMHoe;
@@ -142,6 +143,8 @@ public class MItems extends Item
 	public static Item 							desert_quartz_item;
 	public static Item 							blaze_shard;
 	
+	public static Item							chunks;
+	
 	public static final Item.ToolMaterial		COPPER			= EnumHelper.addToolMaterial("COPPER", 1, 186, 4.5F, 1.5F, 18);
 	public static final Item.ToolMaterial		BRONZE			= EnumHelper.addToolMaterial("BRONZE", 2, 1016, 5.8F, 2.0F, 16);
 	public static final Item.ToolMaterial		STEEL			= EnumHelper.addToolMaterial("STEEL", 2, 420, 7.8F, 2.5F, 20);
@@ -279,6 +282,8 @@ public class MItems extends Item
 		blaze_shard = new Item().setUnlocalizedName("blaze_shard").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		soul_gem = new ItemSoulGem().setUnlocalizedName("soul_gem").setCreativeTab(Minestrappolation.tabMinistrappolation);
 	
+		chunks = new ItemChunk().setUnlocalizedName("chunks").setCreativeTab(Minestrappolation.tabMinistrappolation);
+		
 		addItemsToChests();
 	}
 	
@@ -401,6 +406,8 @@ public class MItems extends Item
 		GameRegistry.registerItem(soul_gem, soul_gem.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(torite_ingot, torite_ingot.getUnlocalizedName().substring(5));		
 		GameRegistry.registerItem(desert_quartz_item, desert_quartz_item.getUnlocalizedName().substring(5));
+		
+		GameRegistry.registerItem(chunks, chunks.getUnlocalizedName().substring(5));
 	}
 	
 	public static void registerRenders()
