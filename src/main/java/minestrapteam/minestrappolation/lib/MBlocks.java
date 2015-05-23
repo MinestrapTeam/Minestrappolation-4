@@ -266,7 +266,7 @@ public class MBlocks
 		titanium_block = new MBlock(Material.iron, MapColor.grayColor).setHardness(10.0F).setResistance(9999.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("titanium_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		blazium_block = new BlockBlazium(Material.iron, MapColor.redColor).setHardness(5.0F).setResistance(10.0F).setLightLevel(0.5F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("blazium_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		soul_gem_block = new BlockSoul(Material.iron, MapColor.cyanColor).setHardness(10.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("soul_gem_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
-		flint_block = new BlockMStorage(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F).setStepSound(Block.soundTypePiston).setCreativeTab(Minestrappolation.tabMinistrappolation);
+		flint_block = new BlockMStorage(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("flint_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		sugar_block = new BlockMFalling(Material.sand, MapColor.snowColor).setHardness(0.5F).setStepSound(Block.soundTypeGravel).setUnlocalizedName("sugar_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		meat_block = new BlockMStorage(Material.clay, MapColor.pinkColor).setHardness(0.8F).setStepSound(Block.SLIME_SOUND).setUnlocalizedName("meat_block").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		

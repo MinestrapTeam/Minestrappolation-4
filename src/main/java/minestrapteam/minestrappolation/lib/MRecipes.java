@@ -228,7 +228,7 @@ public class MRecipes
 	
 	public static void removeRecipes()
 	{
-		RecipeHelper.removeRecipeContaining(new ItemStack(Items.bread));
+		RecipeHelper.removeRecipeContaining(new ItemStack(Items.bread, 1));
 		RecipeHelper.removeRecipeContaining(new ItemStack(Items.cookie));
 		RecipeHelper.removeRecipeContaining(new ItemStack(Items.diamond_axe));
 		RecipeHelper.removeRecipeContaining(new ItemStack(Items.diamond_hoe));
