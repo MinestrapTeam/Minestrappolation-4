@@ -314,7 +314,7 @@ public class MBlocks
 		barrel = new BlockBarrel().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("barrel").setHardness(1F).setResistance(1F);
 		crate = new BlockCrate().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("crate").setHardness(1F).setResistance(1F);
 		melter = new BlockMelter(false).setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("melter");
-		melter_active = new BlockMelter(true).setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("melter_active");
+		melter_active = new BlockMelter(true).setUnlocalizedName("melter_active");
 		alloy = new BlockAlloy().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("alloy");
 		stonecutter = new BlockStoneCutter().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("stonecutter");
 		sawmill = new BlockSawmill().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("sawmill");

@@ -20,6 +20,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.InventoryHelper;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
@@ -48,6 +49,11 @@ public class BlockMelter extends BlockContainer
 			this.setLightLevel(1F);
 		}
 	}
+	
+	public Item getItemDropped(IBlockState state, Random rand, int fortune)
+    {
+        return Item.getItemFromBlock(MBlocks.melter);
+    }
 	
 	@Override
 	public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state)
