@@ -4,8 +4,11 @@ import net.minecraft.util.IStringSerializable;
 
 public enum MRoadType implements IStringSerializable
 {
-	COBBLE(0, "cobble", 4F),
-	DEEPSTONE(1, "deepstone", 1F);
+	COBBLE(0, "cobble", 1.2D),
+	GRAVEL(1, "gravel", 1.25D),
+	SAND(2, "sand", 1.2D),
+	REDSAND(3, "red_sand", 1.25D),
+	NEHTER(4, "nether", 1.4F);
 	private static final MRoadType[]	META_LOOKUP	= new MRoadType[values().length];
 	private final int					meta;
 	private final String				name;

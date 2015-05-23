@@ -5,6 +5,7 @@ import java.util.List;
 
 import minestrapteam.minestrappolation.Minestrappolation;
 import minestrapteam.minestrappolation.block.BlockBiomeBricks;
+import minestrapteam.minestrappolation.util.RecipeHelper;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -227,54 +228,16 @@ public class MRecipes
 	
 	public static void removeRecipes()
 	{
-		List<IRecipe> recipes = CraftingManager.getInstance().getRecipeList();
-		
-		Iterator<IRecipe> remover = recipes.iterator();
-		
-		while (remover.hasNext())
-		{
-			ItemStack itemstack = remover.next().getRecipeOutput();
-			if (itemstack != null && itemstack.getItem() == Items.bread)
-			{
-				remover.remove();
-			}
-			if (itemstack != null && itemstack.getItem() == Items.cookie)
-			{
-				remover.remove();
-			}
-			if (itemstack != null && itemstack == new ItemStack(Blocks.stonebrick, 4, 0))
-			{
-				remover.remove();
-			}
-			if (itemstack != null && itemstack == new ItemStack(Blocks.stone_button, 1))
-			{
-				remover.remove();
-			}
-			if (itemstack != null && itemstack == new ItemStack(Items.diamond_axe, 1))
-			{
-				remover.remove();
-			}
-			if (itemstack != null && itemstack == new ItemStack(Items.diamond_hoe, 1))
-			{
-				remover.remove();
-			}
-			if (itemstack != null && itemstack == new ItemStack(Items.diamond_pickaxe, 1))
-			{
-				remover.remove();
-			}
-			if (itemstack != null && itemstack == new ItemStack(Items.diamond_shovel, 1))
-			{
-				remover.remove();
-			}
-			if (itemstack != null && itemstack == new ItemStack(Items.diamond_sword, 1))
-			{
-				remover.remove();
-			}
-			if (itemstack != null && itemstack == new ItemStack(Items.flint_and_steel, 1))
-			{
-				remover.remove();
-			}
-		}
+		RecipeHelper.removeRecipeContaining(Items.bread);
+		RecipeHelper.removeRecipeContaining(Items.cookie);
+		RecipeHelper.removeRecipeContaining(Items.diamond_axe);
+		RecipeHelper.removeRecipeContaining(Items.diamond_hoe);
+		RecipeHelper.removeRecipeContaining(Items.diamond_pickaxe);
+		RecipeHelper.removeRecipeContaining(Items.diamond_shovel);
+		RecipeHelper.removeRecipeContaining(Items.diamond_sword);
+		RecipeHelper.removeRecipeContaining(Items.flint_and_steel);
+		RecipeHelper.removeRecipeContaining(Blocks.stone_button);
+		RecipeHelper.removeRecipeContaining(Blocks.stonebrick);
 	}
 	
 }

@@ -27,15 +27,18 @@ public class MBiomeManager
 		redwood = new BiomeRedwood(nextBiomeID).setBiomeName("Redwood Forest");
 		frost = new BiomeFrost(nextBiomeID).setBiomeName("The Frost");
 		
-		registerBiomes(redwood, BiomeType.WARM, Type.FOREST, nextBiomeID());
-		registerBiomes(frost, BiomeType.ICY, Type.PLAINS, nextBiomeID());
+		registerBiomes(redwood, BiomeType.WARM, Type.FOREST, nextBiomeID(), true);
+		registerBiomes(frost, BiomeType.ICY, Type.PLAINS, nextBiomeID(), false);
 	}
 	
-	private static void registerBiomes(BiomeGenBase biome, BiomeType type, Type forgeType, int weight)
+	private static void registerBiomes(BiomeGenBase biome, BiomeType type, Type forgeType, int id, boolean canSpawnIn)
 	{
 		BiomeDictionary.registerBiomeType(biome, forgeType);
-		BiomeManager.addSpawnBiome(biome);
-		BiomeManager.addBiome(type, new BiomeEntry(biome, weight));
+		BiomeManager.addBiome(type, new BiomeEntry(biome, id));
+		if(canSpawnIn)
+		{
+			BiomeManager.addSpawnBiome(biome);
+		}
 	}
 	
 	/**

@@ -3,18 +3,21 @@ package minestrapteam.minestrappolation.util;
 import minestrapteam.minestrappolation.inventory.container.ContainerAlloy;
 import minestrapteam.minestrappolation.inventory.container.ContainerBarrel;
 import minestrapteam.minestrappolation.inventory.container.ContainerCrate;
+import minestrapteam.minestrappolation.inventory.container.ContainerCrusher;
 import minestrapteam.minestrappolation.inventory.container.ContainerMelter;
 import minestrapteam.minestrappolation.inventory.container.ContainerSawmill;
 import minestrapteam.minestrappolation.inventory.container.ContainerStoneCutter;
 import minestrapteam.minestrappolation.inventory.gui.GuiAlloy;
 import minestrapteam.minestrappolation.inventory.gui.GuiBarrel;
 import minestrapteam.minestrappolation.inventory.gui.GuiCrate;
+import minestrapteam.minestrappolation.inventory.gui.GuiCrusher;
 import minestrapteam.minestrappolation.inventory.gui.GuiMelter;
 import minestrapteam.minestrappolation.inventory.gui.GuiSawmill;
 import minestrapteam.minestrappolation.inventory.gui.GuiStoneCutter;
 import minestrapteam.minestrappolation.tileentity.TileEntityAlloy;
 import minestrapteam.minestrappolation.tileentity.TileEntityBarrel;
 import minestrapteam.minestrappolation.tileentity.TileEntityCrate;
+import minestrapteam.minestrappolation.tileentity.TileEntityCrusher;
 import minestrapteam.minestrappolation.tileentity.TileEntityMelter;
 import minestrapteam.minestrappolation.tileentity.TileEntitySawMill;
 import minestrapteam.minestrappolation.tileentity.TileEntityStoneCutter;
@@ -31,6 +34,7 @@ public class MGuiHandler implements IGuiHandler {
 	public static final int GUIID_ALLOY = 4;
 	public static final int GUIID_STONECUTTER = 5;
 	public static final int GUIID_SAWMILL = 6;
+	public static final int GUIID_CRUSHER = 6;
 	
 	@Override
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
@@ -73,6 +77,12 @@ public class MGuiHandler implements IGuiHandler {
 		if (tileEntity instanceof TileEntitySawMill) {
 			TileEntitySawMill tileEntitySawMill = (TileEntitySawMill) tileEntity;
 			return new ContainerSawmill(player, tileEntitySawMill);
+		}
+		
+		//Crusher
+		if (tileEntity instanceof TileEntityCrusher) {
+			TileEntityCrusher tileEntityCrusher = (TileEntityCrusher) tileEntity;
+			return new ContainerCrusher(player, tileEntityCrusher);
 		}
 				
 		return null;
@@ -119,6 +129,12 @@ public class MGuiHandler implements IGuiHandler {
 		if (tileEntity instanceof TileEntitySawMill) {
 			TileEntitySawMill tileEntitySawMill = (TileEntitySawMill) tileEntity;
 			return new GuiSawmill(player, tileEntitySawMill);
+		}
+		
+		//Crusher
+		if (tileEntity instanceof TileEntityCrusher) {
+			TileEntityCrusher tileEntityCrusher = (TileEntityCrusher) tileEntity;
+			return new GuiCrusher(player, tileEntityCrusher);
 		}
 		
 		return null;

@@ -7,6 +7,7 @@ import minestrapteam.minestrappolation.block.BlockBiomeBricks;
 import minestrapteam.minestrappolation.block.BlockBlazium;
 import minestrapteam.minestrappolation.block.BlockBoulder;
 import minestrapteam.minestrappolation.block.BlockCrate;
+import minestrapteam.minestrappolation.block.BlockCrusher;
 import minestrapteam.minestrappolation.block.BlockFrostGenerator;
 import minestrapteam.minestrappolation.block.BlockGodstone;
 import minestrapteam.minestrappolation.block.BlockInvincium;
@@ -167,6 +168,7 @@ public class MBlocks
 	public static Block alloy;
 	public static Block stonecutter;
 	public static Block sawmill;
+	public static Block crusher;
 	
 	// Biome Stones
 	public static Block			   biome_coal;
@@ -314,6 +316,7 @@ public class MBlocks
 		alloy = new BlockAlloy().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("alloy");
 		stonecutter = new BlockStoneCutter().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("stonecutter");
 		sawmill = new BlockSawmill().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("sawmill");
+		crusher = new BlockCrusher().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("crusher");
 		
 		//Stairs
 		redwood_stairs = new MBlockStairs(ministrapp_planks.getStateFromMeta(MWoodType.REDWOOD.getMetadata())).setUnlocalizedName("redwood_stairs");
@@ -416,6 +419,7 @@ public class MBlocks
 		register(alloy);
 		register(stonecutter);
 		register(sawmill);
+		register(crusher);
 		
 		//Stairs
 		register(redwood_stairs);
@@ -550,6 +554,7 @@ public class MBlocks
 		registerRender(alloy);
 		registerRender(stonecutter);
 		registerRender(sawmill);
+		registerRender(crusher);
 		registerRender(redwood_door_item);
 		registerRender(redwood_fence);
 		registerRender(redwood_fence_gate);
