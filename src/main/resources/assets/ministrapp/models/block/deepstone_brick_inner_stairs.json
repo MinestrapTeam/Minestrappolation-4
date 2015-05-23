@@ -1,0 +1,8 @@
+{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "ministrapp:blocks/deepstone_bricks",
+        "top": "ministrapp:blocks/deepstone_bricks",
+        "side": "ministrapp:blocks/deepstone_bricks"
+    }
+}

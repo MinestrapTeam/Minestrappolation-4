@@ -1,0 +1,8 @@
+{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "ministrapp:blocks/deep_cobbled_coldstone",
+        "top": "ministrapp:blocks/deep_cobbled_coldstone",
+        "side": "ministrapp:blocks/deep_cobbled_coldstone"
+    }
+}

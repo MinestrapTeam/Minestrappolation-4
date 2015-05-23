@@ -1,0 +1,8 @@
+{
+    "parent": "block/stairs",
+    "textures": {
+        "bottom": "ministrapp:blocks/glacierrock_bricks",
+        "top": "ministrapp:blocks/glacierrock_bricks",
+        "side": "ministrapp:blocks/glacierrock_bricks"
+    }
+}
