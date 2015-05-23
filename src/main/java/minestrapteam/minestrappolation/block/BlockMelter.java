@@ -175,12 +175,12 @@ public class BlockMelter extends BlockContainer
 
 	@Override
 	public boolean isOpaqueCube() {
-		return false;
+		return true;
 	}
 
 	@Override
 	public boolean isFullCube() {
-		return false;
+		return true;
 	}
 	
 	@Override
