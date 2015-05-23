@@ -23,7 +23,7 @@ public class CrusherRecipes
     private static final CrusherRecipes crusherBase = new CrusherRecipes();
     private Map meltingList = Maps.newHashMap();
     private Map experienceList = Maps.newHashMap();
-    
+    private Map chance = Maps.newHashMap();
     public HashMap<ItemStack, ItemStack> extraDropList = new HashMap<ItemStack, ItemStack>();
 
     public static CrusherRecipes instance()
@@ -34,28 +34,28 @@ public class CrusherRecipes
    
     private CrusherRecipes()
     {
-        this.addRecipe(MBlocks.biome_iron, new ItemStack(MItems.chunks, 2, 1), .2F, new ItemStack(MItems.chunks, 1, 0));
-        this.addRecipe(MBlocks.biome_gold, new ItemStack(MItems.chunks, 2, 2), .2F, new ItemStack(MItems.chunks, 1, 0));
-        this.addRecipe(MBlocks.biome_tin, new ItemStack(MItems.chunks, 2, 3), .2F, new ItemStack(MItems.chunks, 1, 0));
-        this.addRecipe(MBlocks.biome_copper, new ItemStack(MItems.chunks, 2, 4), .2F, new ItemStack(MItems.chunks, 1, 3));
+        this.addRecipe(MBlocks.biome_iron, new ItemStack(MItems.chunks, 2, 1), .2F, new ItemStack(MItems.chunks, 1, 0), 100);
+        this.addRecipe(MBlocks.biome_gold, new ItemStack(MItems.chunks, 2, 2), .2F, new ItemStack(MItems.chunks, 1, 0), 100);
+        this.addRecipe(MBlocks.biome_tin, new ItemStack(MItems.chunks, 2, 3), .2F, new ItemStack(MItems.chunks, 1, 0), 100);
+        this.addRecipe(MBlocks.biome_copper, new ItemStack(MItems.chunks, 2, 4), .2F, new ItemStack(MItems.chunks, 1, 3), 100);
     }
 
-    public void addRecipe(Block input, ItemStack stack, float experience, ItemStack extra)
+    public void addRecipe(Block input, ItemStack stack, float experience, ItemStack extra, int chance)
     {
-        this.addRecipe(Item.getItemFromBlock(input), stack, experience, extra);
+        this.addRecipe(Item.getItemFromBlock(input), stack, experience, extra, chance);
     }
 
-    public void addRecipe(Item input, ItemStack stack, float experience, ItemStack extra)
+    public void addRecipe(Item input, ItemStack stack, float experience, ItemStack extra, int chance)
     {
-        this.addRecipe(new ItemStack(input, 1, 32767), stack, experience, extra);
+        this.addRecipe(new ItemStack(input, 1, 32767), stack, experience, extra, chance);
     }
 
-    public void addRecipe(ItemStack input, ItemStack stack, float experience, ItemStack extra)
+    public void addRecipe(ItemStack input, ItemStack stack, float experience, ItemStack extra, int chance)
     {
         this.meltingList.put(input, stack);
         this.experienceList.put(stack, Float.valueOf(experience));
-        System.out.println(extra.getDisplayName() +" "+ input.getDisplayName());
         this.extraDropList.put(input , extra);
+        this.chance.put(input , chance);
     }
 
     public ItemStack getResult(ItemStack stack)
@@ -94,6 +94,25 @@ public class CrusherRecipes
         while (!this.compareItemStacks(stack, (ItemStack)entry.getKey()));
 
         return (ItemStack)entry.getValue();
+    }
+    
+    public int getChance(ItemStack stack)
+    {
+        Iterator iterator = this.chance.entrySet().iterator();
+        Entry entry;
+
+        do
+        {
+            if (!iterator.hasNext())
+            {
+                return 0;
+            }
+
+            entry = (Entry)iterator.next();
+        }
+        while (!this.compareItemStacks(stack, (ItemStack)entry.getKey()));
+
+        return (Integer)entry.getValue();
     }
 
     private boolean compareItemStacks(ItemStack stack1, ItemStack stack2)

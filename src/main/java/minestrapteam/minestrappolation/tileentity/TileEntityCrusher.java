@@ -168,10 +168,11 @@ public class TileEntityCrusher extends TileEntityInventory implements ISidedInve
 		if (this.canCrush())
 		{
 			Random rand = new Random();
-			int chance = rand.nextInt(15);
+			int chance = rand.nextInt(100);
 			
 			
 			ItemStack input = this.itemStacks[0];
+			int itemChance = CrusherRecipes.instance().getChance(input);
 			ItemStack output = CrusherRecipes.instance().getResult(input);
 			ItemStack outputSlot = this.itemStacks[2];
 			if (outputSlot == null)
@@ -189,11 +190,11 @@ public class TileEntityCrusher extends TileEntityInventory implements ISidedInve
 				this.itemStacks[0] = null;
 			}
 			
-			if(chance < 1 && this.itemStacks[3] == null)
+			if(chance < itemChance && this.itemStacks[3] == null)
 			{
 				this.itemStacks[3] = CrusherRecipes.instance().getExtra(input);
 			}
-			else if(chance < 1 && this.itemStacks[3] != null)
+			else if(chance < itemChance && this.itemStacks[3] != null)
 			{
 				if(this.itemStacks[3].isItemEqual(CrusherRecipes.instance().getExtra(input)))
 				{
