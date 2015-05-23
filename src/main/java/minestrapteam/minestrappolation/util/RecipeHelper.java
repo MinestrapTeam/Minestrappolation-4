@@ -9,11 +9,12 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
+import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.item.crafting.IRecipe;
 
 public class RecipeHelper {
 
-	public static void removeRecipeContaining(Item item)
+	public static void removeRecipeContaining(ItemStack item)
 	{
 		List<IRecipe> recipes = CraftingManager.getInstance().getRecipeList();
 		
@@ -22,13 +23,13 @@ public class RecipeHelper {
 		while (remover.hasNext())
 		{
 			ItemStack itemstack = remover.next().getRecipeOutput();
-			if (itemstack != null && itemstack.getItem() == item)
+			if (itemstack != null && itemstack == item)
 			{
 				remover.remove();
 			}
 		}
 	}
-	
+	/*
 	public static void removeRecipeContaining(Block block)
 	{
 		List<IRecipe> recipes = CraftingManager.getInstance().getRecipeList();
@@ -44,4 +45,5 @@ public class RecipeHelper {
 			}
 		}
 	}
+	*/
 }

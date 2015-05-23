@@ -228,16 +228,17 @@ public class MRecipes
 	
 	public static void removeRecipes()
 	{
-		RecipeHelper.removeRecipeContaining(Items.bread);
-		RecipeHelper.removeRecipeContaining(Items.cookie);
-		RecipeHelper.removeRecipeContaining(Items.diamond_axe);
-		RecipeHelper.removeRecipeContaining(Items.diamond_hoe);
-		RecipeHelper.removeRecipeContaining(Items.diamond_pickaxe);
-		RecipeHelper.removeRecipeContaining(Items.diamond_shovel);
-		RecipeHelper.removeRecipeContaining(Items.diamond_sword);
-		RecipeHelper.removeRecipeContaining(Items.flint_and_steel);
-		RecipeHelper.removeRecipeContaining(Blocks.stone_button);
-		RecipeHelper.removeRecipeContaining(Blocks.stonebrick);
+		RecipeHelper.removeRecipeContaining(new ItemStack(Items.bread));
+		RecipeHelper.removeRecipeContaining(new ItemStack(Items.cookie));
+		RecipeHelper.removeRecipeContaining(new ItemStack(Items.diamond_axe));
+		RecipeHelper.removeRecipeContaining(new ItemStack(Items.diamond_hoe));
+		RecipeHelper.removeRecipeContaining(new ItemStack(Items.diamond_pickaxe));
+		RecipeHelper.removeRecipeContaining(new ItemStack(Items.diamond_shovel));
+		RecipeHelper.removeRecipeContaining(new ItemStack(Items.diamond_sword));
+		RecipeHelper.removeRecipeContaining(new ItemStack(Items.flint_and_steel));
+		RecipeHelper.removeRecipeContaining(new ItemStack(Blocks.stone_button));
+		RecipeHelper.removeRecipeContaining(new ItemStack(Blocks.stonebrick, 4, 0));
+		//RecipeHelper.removeRecipeContaining(new ItemStack(Blocks.stonebrick, 1, 1));
 	}
 	
 }

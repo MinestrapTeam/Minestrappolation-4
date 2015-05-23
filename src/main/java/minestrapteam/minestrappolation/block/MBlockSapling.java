@@ -21,6 +21,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenBigTree;
 import net.minecraft.world.gen.feature.WorldGenTrees;
@@ -34,8 +35,9 @@ public class MBlockSapling extends BlockBush implements IGrowable
 	
 	private static final PropertyEnum	TYPE	= PropertyEnum.create("type", MWoodType.class);
 	public static final PropertyInteger	STAGE	= PropertyInteger.create("stage", 0, 1);
+	private int flammability;
 	
-	public MBlockSapling()
+	public MBlockSapling(int flame)
 	{
 		super(Material.plants);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, MWoodType.REDWOOD).withProperty(STAGE, Integer.valueOf(0)));
@@ -43,6 +45,7 @@ public class MBlockSapling extends BlockBush implements IGrowable
 		this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, f * 2.0F, 0.5F + f);
 		this.setCreativeTab(Minestrappolation.tabMinistrappolation);
 		this.setUnlocalizedName("ministrapp_sapling");
+		this.flammability = flame;
 	}
 	
 	@Override
@@ -200,6 +203,12 @@ public class MBlockSapling extends BlockBush implements IGrowable
 	public boolean canGrow(World worldIn, BlockPos pos, IBlockState state, boolean isClient) {
 		return true;
 	}
+	
+	@Override
+	public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face)
+    {
+        return this.flammability;
+    }
 
 	
 }

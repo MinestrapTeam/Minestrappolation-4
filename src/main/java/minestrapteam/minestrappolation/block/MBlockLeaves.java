@@ -44,9 +44,12 @@ public class MBlockLeaves extends MBlockLeavesBase
 													}
 												});
 	
-	public MBlockLeaves()
+	private int flammability;
+	
+	public MBlockLeaves(int flame)
 	{
 		this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, MWoodType.REDWOOD).withProperty(CHECK_DECAY, Boolean.valueOf(true)).withProperty(DECAYABLE, Boolean.valueOf(true)));
+		this.flammability = flame;
 	}
 	
 	@Override
@@ -176,5 +179,11 @@ public class MBlockLeaves extends MBlockLeavesBase
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	@Override
+	public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face)
+    {
+        return this.flammability;
+    }
 	
 }
