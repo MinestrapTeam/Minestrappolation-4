@@ -165,6 +165,7 @@ public class MBlocks
 	public static Block barrel;
 	public static Block crate;
 	public static Block melter;
+	public static Block melter_active;
 	public static Block alloy;
 	public static Block stonecutter;
 	public static Block sawmill;
@@ -312,7 +313,8 @@ public class MBlocks
 		
 		barrel = new BlockBarrel().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("barrel").setHardness(1F).setResistance(1F);
 		crate = new BlockCrate().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("crate").setHardness(1F).setResistance(1F);
-		melter = new BlockMelter().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("melter");
+		melter = new BlockMelter(false).setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("melter");
+		melter_active = new BlockMelter(true).setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("melter_active");
 		alloy = new BlockAlloy().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("alloy");
 		stonecutter = new BlockStoneCutter().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("stonecutter");
 		sawmill = new BlockSawmill().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("sawmill");
@@ -416,6 +418,7 @@ public class MBlocks
 		register(barrel);
 		register(crate);
 		register(melter);
+		register(melter_active);
 		register(alloy);
 		register(stonecutter);
 		register(sawmill);
@@ -540,6 +543,7 @@ public class MBlocks
 		registerRender(barrel);
 		registerRender(crate);
 		registerRender(melter);
+		registerRender(melter_active);
 		registerRender(redwood_stairs);
 		registerRender(deepstone_stairs);
 		registerRender(coldstone_stairs);

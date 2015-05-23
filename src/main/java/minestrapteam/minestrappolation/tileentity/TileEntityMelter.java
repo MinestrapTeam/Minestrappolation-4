@@ -1,11 +1,13 @@
 package minestrapteam.minestrappolation.tileentity;
 
+import minestrapteam.minestrappolation.block.BlockMelter;
 import minestrapteam.minestrappolation.util.MelterRecipes;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
 import net.minecraft.server.gui.IUpdatePlayerListBox;
 import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraft.util.BlockPos;
@@ -47,6 +49,19 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 		this.burnTime = nbt.getShort("BurnTime");
 		this.meltTime = nbt.getShort("CookTime");
 		this.maxBurnTime = getItemBurnTime(this.itemStacks[1]);
+		NBTTagList nbttaglist = nbt.getTagList("Items", 10);
+        this.itemStacks = new ItemStack[this.getSizeInventory()];
+
+        for (int i = 0; i < nbttaglist.tagCount(); ++i)
+        {
+            NBTTagCompound nbttagcompound1 = nbttaglist.getCompoundTagAt(i);
+            byte b0 = nbttagcompound1.getByte("Slot");
+
+            if (b0 >= 0 && b0 < this.itemStacks.length)
+            {
+                this.itemStacks[b0] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
+            }
+        }
 	}
 	
 	public boolean isPowered()
@@ -61,6 +76,19 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 		
 		nbt.setShort("BurnTime", (short) this.burnTime);
 		nbt.setShort("CookTime", (short) this.meltTime);
+		NBTTagList nbttaglist = new NBTTagList();
+		for (int i = 0; i < this.itemStacks.length; ++i)
+        {
+            if (this.itemStacks[i] != null)
+            {
+                NBTTagCompound nbttagcompound1 = new NBTTagCompound();
+                nbttagcompound1.setByte("Slot", (byte)i);
+                this.itemStacks[i].writeToNBT(nbttagcompound1);
+                nbttaglist.appendTag(nbttagcompound1);
+            }
+        }
+
+        nbt.setTag("Items", nbttaglist);
 	}
 	
 	public int getProgressScaled(int scalar)
@@ -157,6 +185,7 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 		{
 			this.markDirty();
 			this.validate();
+			BlockMelter.setState(this.isBurning(), this.worldObj, pos);
 		}
 	}
 	
