@@ -14,7 +14,7 @@ import net.minecraft.item.crafting.IRecipe;
 
 public class RecipeHelper {
 
-	public static void removeRecipeContaining(ItemStack item)
+	public static void removeRecipeContaining(Item item)
 	{
 		List<IRecipe> recipes = CraftingManager.getInstance().getRecipeList();
 		
@@ -23,13 +23,13 @@ public class RecipeHelper {
 		while (remover.hasNext())
 		{
 			ItemStack itemstack = remover.next().getRecipeOutput();
-			if (itemstack != null && itemstack == item)
+			if (itemstack != null && itemstack.getItem() == item)
 			{
 				remover.remove();
 			}
 		}
 	}
-	/*
+	
 	public static void removeRecipeContaining(Block block)
 	{
 		List<IRecipe> recipes = CraftingManager.getInstance().getRecipeList();
@@ -45,5 +45,4 @@ public class RecipeHelper {
 			}
 		}
 	}
-	*/
 }
