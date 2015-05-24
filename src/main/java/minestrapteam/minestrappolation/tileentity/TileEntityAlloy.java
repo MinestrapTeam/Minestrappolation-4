@@ -1,11 +1,14 @@
 package minestrapteam.minestrappolation.tileentity;
 
+import minestrapteam.minestrappolation.block.BlockAlloy;
+import minestrapteam.minestrappolation.block.BlockMelter;
 import minestrapteam.minestrappolation.util.AlloyRecipes;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
 import net.minecraft.server.gui.IUpdatePlayerListBox;
 import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraft.util.BlockPos;
@@ -45,6 +48,19 @@ public class TileEntityAlloy extends TileEntityInventory implements ISidedInvent
 		this.burnTime = nbt.getShort("BurnTime");
 		this.meltTime = nbt.getShort("CookTime");
 		this.maxBurnTime = getItemBurnTime(this.itemStacks[1]);
+		NBTTagList nbttaglist = nbt.getTagList("Items", 10);
+        this.itemStacks = new ItemStack[this.getSizeInventory()];
+
+        for (int i = 0; i < nbttaglist.tagCount(); ++i)
+        {
+            NBTTagCompound nbttagcompound1 = nbttaglist.getCompoundTagAt(i);
+            byte b0 = nbttagcompound1.getByte("Slot");
+
+            if (b0 >= 0 && b0 < this.itemStacks.length)
+            {
+                this.itemStacks[b0] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
+            }
+        }
 	}
 	
 	@Override
@@ -54,6 +70,21 @@ public class TileEntityAlloy extends TileEntityInventory implements ISidedInvent
 		
 		nbt.setShort("BurnTime", (short) this.burnTime);
 		nbt.setShort("CookTime", (short) this.meltTime);
+		nbt.setShort("BurnTime", (short) this.burnTime);
+		nbt.setShort("CookTime", (short) this.meltTime);
+		NBTTagList nbttaglist = new NBTTagList();
+		for (int i = 0; i < this.itemStacks.length; ++i)
+        {
+            if (this.itemStacks[i] != null)
+            {
+                NBTTagCompound nbttagcompound1 = new NBTTagCompound();
+                nbttagcompound1.setByte("Slot", (byte)i);
+                this.itemStacks[i].writeToNBT(nbttagcompound1);
+                nbttaglist.appendTag(nbttagcompound1);
+            }
+        }
+
+        nbt.setTag("Items", nbttaglist);
 	}
 	
 	public int getProgressScaled(int scalar)
@@ -134,6 +165,7 @@ public class TileEntityAlloy extends TileEntityInventory implements ISidedInvent
 		{
 			this.markDirty();
 			this.validate();
+			BlockAlloy.setState(this.isBurning(), this.worldObj, pos);
 		}
 	}
 	
@@ -181,13 +213,13 @@ public class TileEntityAlloy extends TileEntityInventory implements ISidedInvent
 				outputSlot.stackSize += output.stackSize;
 			}
 			
-			--input.stackSize;
+			input.stackSize -= AlloyRecipes.instance().getInputSize(input);
 			if (input.stackSize <= 0)
 			{
 				this.itemStacks[0] = null;
 			}
 			
-			--input2.stackSize;
+			input2.stackSize -= AlloyRecipes.instance().getInput2Size(input2);
 			if (input2.stackSize <= 0)
 			{
 				this.itemStacks[3] = null;

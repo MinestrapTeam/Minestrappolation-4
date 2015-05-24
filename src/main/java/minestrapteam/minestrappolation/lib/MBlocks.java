@@ -168,6 +168,7 @@ public class MBlocks
 	public static Block melter;
 	public static Block melter_active;
 	public static Block alloy;
+	public static Block alloy_active;
 	public static Block stonecutter;
 	public static Block sawmill;
 	public static Block crusher;
@@ -325,7 +326,8 @@ public class MBlocks
 		crate = new BlockCrate().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("crate").setHardness(2.5F).setStepSound(Block.soundTypeWood);
 		melter = new BlockMelter(false).setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("melter").setHardness(5F).setStepSound(Block.soundTypePiston);
 		melter_active = new BlockMelter(true).setUnlocalizedName("melter_active").setHardness(5F).setStepSound(Block.soundTypePiston);
-		alloy = new BlockAlloy().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("alloy").setHardness(4F).setStepSound(Block.soundTypePiston);
+		alloy = new BlockAlloy(false).setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("alloy").setHardness(4F).setStepSound(Block.soundTypePiston);
+		alloy_active = new BlockAlloy(true).setUnlocalizedName("alloy_active").setHardness(4F).setStepSound(Block.soundTypePiston);
 		stonecutter = new BlockStoneCutter().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("stonecutter").setHardness(3.5F).setStepSound(Block.soundTypePiston);
 		sawmill = new BlockSawmill().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("sawmill").setHardness(2.5F).setStepSound(Block.soundTypeWood);
 		crusher = new BlockCrusher().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("crusher").setHardness(7F).setResistance(100.0F).setStepSound(Block.soundTypePiston);
@@ -439,6 +441,7 @@ public class MBlocks
 		register(melter);
 		register(melter_active);
 		register(alloy);
+		register(alloy_active);
 		register(stonecutter);
 		register(sawmill);
 		register(crusher);
@@ -593,6 +596,7 @@ public class MBlocks
 		registerRender(deep_coldstone_brick_stairs);
 		registerRender(redwood_door);
 		registerRender(alloy);
+		registerRender(alloy_active);
 		registerRender(stonecutter);
 		registerRender(sawmill);
 		registerRender(crusher);

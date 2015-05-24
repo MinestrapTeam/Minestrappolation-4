@@ -238,7 +238,6 @@ public class MRecipes
 		RecipeHelper.removeRecipeContaining(Items.flint_and_steel);
 		RecipeHelper.removeRecipeContaining(Blocks.stone_button);
 		RecipeHelper.removeRecipeContaining(Blocks.stonebrick);
-		//RecipeHelper.removeRecipeContaining(new ItemStack(Blocks.stonebrick, 1, 1));
 	}
 	
 }

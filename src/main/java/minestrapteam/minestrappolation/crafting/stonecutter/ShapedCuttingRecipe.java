@@ -3,13 +3,13 @@ package minestrapteam.minestrappolation.crafting.stonecutter;
 
 import java.util.HashMap;
 
+import minestrapteam.minestrappolation.util.MStacks;
 import net.minecraft.block.Block;
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
-import net.minecraftforge.oredict.OreDictionary;
 
 public class ShapedCuttingRecipe implements ICuttingRecipes
 {
@@ -115,31 +115,10 @@ public class ShapedCuttingRecipe implements ICuttingRecipes
 		return this.recipeOutput;
 	}
 	
-	public static boolean equals(ItemStack input, ItemStack target)
-	{
-		return itemEquals(input, target);
-	}
-	
-	public static boolean itemEquals(ItemStack input, ItemStack target)
-	{
-		if (input == target)
-			return true;
-		else if (input == null)
-			return target == null;
-		else if (target == null)
-			return false;
-		return equals(input.getItem(), input.getItemDamage(), target.getItem(), target.getItemDamage());
-	}
-	
-	public static boolean equals(Item item1, int meta1, Item item2, int meta2)
-	{
-		return item1 == item2 && (meta1 == meta2 || meta1 == OreDictionary.WILDCARD_VALUE || meta2 == OreDictionary.WILDCARD_VALUE);
-	}
-	
 	@Override
 	public boolean matches(InventoryCrafting inventory, ItemStack extra, World world)
 	{
-		if (!this.equals(extraSlot, extra))
+		if (!MStacks.equals(extraSlot, extra))
 		{
 			return false;
 		}
@@ -191,7 +170,7 @@ public class ShapedCuttingRecipe implements ICuttingRecipes
 				
 				if (stack2 != null || stack1 != null)
 				{
-					if (!this.equals(stack1, stack2))
+					if (!MStacks.equals(stack1, stack2))
 					{
 						return false;
 					}

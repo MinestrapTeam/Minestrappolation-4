@@ -2,6 +2,7 @@ package minestrapteam.minestrappolation.util;
 
 import com.google.common.collect.Maps;
 
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -22,6 +23,9 @@ public class AlloyRecipes
     private Map meltingList = Maps.newHashMap();
     private Map meltingList2 = Maps.newHashMap();
     private Map experienceList = Maps.newHashMap();
+    
+    private Map stack1Size = Maps.newHashMap();
+    private Map stack2Size = Maps.newHashMap();
 
     public static AlloyRecipes instance()
     {
@@ -31,7 +35,7 @@ public class AlloyRecipes
    
     private AlloyRecipes()
     {
-        this.addRecipe(MItems.tin_ingot, MItems.copper_ingot, new ItemStack(Items.diamond), 1F);
+        this.addRecipe(new ItemStack(MItems.tin_ingot), new ItemStack(MItems.copper_ingot ,3 ,0), new ItemStack(Items.diamond), 1F);
         this.addRecipe(Items.apple, Items.arrow, new ItemStack(Items.coal), 1F);
         this.addRecipe(Items.apple, Items.bed, new ItemStack(Items.baked_potato), 1F);
     }
@@ -53,7 +57,12 @@ public class AlloyRecipes
         
         this.meltingList.put(input2, stack);
         this.meltingList2.put(input2, input);
-       
+        
+        this.stack1Size.put(input, input.stackSize);
+        this.stack2Size.put(input2, input2.stackSize);
+        this.stack1Size.put(input2, input2.stackSize);
+        this.stack2Size.put(input, input.stackSize);
+        
         this.experienceList.put(stack, Float.valueOf(experience));
     }
 
@@ -73,18 +82,9 @@ public class AlloyRecipes
             
             entry = (Entry)iterator.next();
             entry2 = (Entry)iterator2.next();
-        } while (!this.compareItemStacks(input, (ItemStack)entry.getKey()) || !this.compareItemStacks(input2, (ItemStack)entry2.getValue()));
+        } while (!MStacks.equals(input, (ItemStack)entry.getKey()) || !MStacks.equals(input2, (ItemStack)entry2.getValue()));
        
         return (ItemStack)this.meltingList.get(entry.getKey());
-    }
-
-    private boolean compareItemStacks(ItemStack stack1, ItemStack stack2)
-    {
-    	if(stack1 == null || stack2 == null)
-    	{
-    		return false;
-    	}
-        return stack2.getItem() == stack1.getItem() && (stack2.getMetadata() == 32767 || stack2.getMetadata() == stack1.getMetadata());
     }
 
     public Map getSmeltingList()
@@ -109,8 +109,46 @@ public class AlloyRecipes
 
             entry = (Entry)iterator.next();
         }
-        while (!this.compareItemStacks(stack, (ItemStack)entry.getKey()));
+        while (!MStacks.equals(stack, (ItemStack)entry.getKey()));
 
         return ((Float)entry.getValue()).floatValue();
+    }
+    
+    public int getInputSize(ItemStack stack)
+    {
+        Iterator iterator = this.stack1Size.entrySet().iterator();
+        Entry entry;
+
+        do
+        {
+            if (!iterator.hasNext())
+            {
+                return 0;
+            }
+
+            entry = (Entry)iterator.next();
+        }
+        while (!MStacks.equals(stack, (ItemStack)entry.getKey()));
+
+        return (Integer)entry.getValue();
+    }
+    
+    public int getInput2Size(ItemStack stack)
+    {
+        Iterator iterator = this.stack2Size.entrySet().iterator();
+        Entry entry;
+
+        do
+        {
+            if (!iterator.hasNext())
+            {
+                return 0;
+            }
+
+            entry = (Entry)iterator.next();
+        }
+        while (!MStacks.equals(stack, (ItemStack)entry.getKey()));
+
+        return (Integer)entry.getValue();
     }
 }
