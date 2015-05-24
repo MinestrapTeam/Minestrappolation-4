@@ -1,16 +1,21 @@
-buildscript {
-    repositories {
+buildscript
+{
+    repositories
+    {
         mavenCentral()
-        maven {
+        maven
+        {
             name = "forge"
             url = "http://files.minecraftforge.net/maven"
         }
-        maven {
+        maven
+        {
             name = "sonatype"
             url = "https://oss.sonatype.org/content/repositories/snapshots/"
         }
     }
-    dependencies {
+    dependencies
+    {
         classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
     }
 }
@@ -21,9 +26,18 @@ version = "1.8-4.0.0"
 group= "minestrapteam"
 archivesBaseName = "Minestrappolation"
 
-minecraft {
+minecraft
+{
     version = "1.8-11.14.1.1404"
-    runDir = "eclipse"
+    		
+    if (file('../run').exists())
+    {
+    	runDir = '../run/'
+    }
+    else
+    {
+    	runDir = 'eclipse/'
+    }
     
     // the mappings can be changed at any time, and must be in the following format.
     // snapshot_YYYYMMDD   snapshot are built nightly.
@@ -33,7 +47,54 @@ minecraft {
     mappings = "snapshot_20141130"
 }
 
-dependencies {
+task textureZip(type: Zip)
+textureZip
+{
+	classifier = 'avt'
+	archiveName = "${archivesBaseName}-${version}-avt.zip";
+	
+	from ('src/extra/resources')
+    {
+        include('**')
+    }
+}
+
+task devJar(type: Jar, dependsOn: 'classes')
+devJar
+{
+    classifier = 'dev'
+    archiveName = "${archivesBaseName}-${version}-dev.jar"
+    
+    from ('build/classes/main')
+    {
+        include('minestrapteam/minestrappolation/**')
+    }
+    from ('build/resources/main')
+    {
+        include('assets/**')
+    }
+}
+
+task srcJar(type: Jar)
+srcJar
+{
+    classifier = 'src'
+    archiveName = "${archivesBaseName}-${version}-src.jar"
+    
+    from ('src/main/java')
+    {
+        include('minestrapteam/minestrappolation/**')
+    }
+    from ('src/main/resources')
+    {
+        include('assets/**')
+    }
+}
+
+task buildApi(dependsOn: ['build', 'srcJar', 'devJar', 'textureZip'])
+
+dependencies
+{
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
     //compile "some.group:artifact:version:classifier"
@@ -46,7 +107,6 @@ dependencies {
     // for more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
-
 }
 
 processResources
@@ -56,15 +116,17 @@ processResources
     inputs.property "mcversion", project.minecraft.version
 
     // replace stuff in mcmod.info, nothing else
-    from(sourceSets.main.resources.srcDirs) {
+    from (sourceSets.main.resources.srcDirs)
+    {
         include 'mcmod.info'
                 
         // replace version and mcversion
-        expand 'version':project.version, 'mcversion':project.minecraft.version
+        expand 'version': project.version, 'mcversion': project.minecraft.version
     }
         
     // copy everything else, thats not the mcmod.info
-    from(sourceSets.main.resources.srcDirs) {
+    from (sourceSets.main.resources.srcDirs)
+    {
         exclude 'mcmod.info'
     }
 }
