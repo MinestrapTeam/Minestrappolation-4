@@ -1,31 +1,31 @@
 {
    "variants":{
       "type=deepstone":{
-         "model":"ministrapp:deepstone_cracked_bricks"
+         "model":"ministrapp:deepstone_bricks_cracked”
       },
       "type=red_rock":{
-         "model":"ministrapp:red_rock_cracked_bricks"
+         "model":"ministrapp:red_rock_bricks_cracked"
       },
       "type=deep_redrock":{
-         "model":"ministrapp:deep_red_rock_cracked_bricks"
+         "model":"ministrapp:deep_red_rock_bricks_cracked"
       },
       "type=coldstone":{
-         "model":"ministrapp:coldstone_cracked_bricks"
+         "model":"ministrapp:coldstone_bricks_cracked"
       },
       "type=deep_coldstone":{
-         "model":"ministrapp:deep_coldstone_cracked_bricks"
+         "model":"ministrapp:deep_coldstone_bricks_cracked"
       },
       "type=icestone":{
-         "model":"ministrapp:icestone_cracked_bricks"
+         "model":"ministrapp:icestone_bricks_cracked"
       },
       "type=glacierrock":{
-         "model":"ministrapp:glacierrock_cracked_bricks"
+         "model":"ministrapp:glacierrock_bricks_cracked"
       },
       "type=oceanstone":{
-         "model":"ministrapp:oceanstone_cracked_bricks"
+         "model":"ministrapp:oceanstone_bricks_cracked"
       },
       "type=pressurized_oceanstone":{
-         "model":"ministrapp:pressurized_oceanstone_cracked_bricks"
+         "model":"ministrapp:pressurized_oceanstone_bricks_cracked"
       }
    }
 }
