@@ -44,7 +44,7 @@ public class MBlockLeaves extends MBlockLeavesBase
 													}
 												});
 	
-	private int flammability;
+	private int							flammability;
 	
 	public MBlockLeaves(int flame)
 	{
@@ -182,8 +182,8 @@ public class MBlockLeaves extends MBlockLeavesBase
 	
 	@Override
 	public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face)
-    {
-        return this.flammability;
-    }
+	{
+		return this.flammability;
+	}
 	
 }

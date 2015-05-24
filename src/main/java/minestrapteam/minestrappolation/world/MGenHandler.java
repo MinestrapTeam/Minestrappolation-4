@@ -1,4 +1,5 @@
 package minestrapteam.minestrappolation.world;
+
 import java.util.Random;
 
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeStones;
@@ -87,29 +88,28 @@ public class MGenHandler implements IWorldGenerator
 		this.generateOre(MBlocks.slate, world, rand, x1, z1, 10, 33, 18, 0, 80, BlockHelper.forBlock(Blocks.stone));
 		this.generateBoulder(world, rand, x1, z1);
 		
-		if (biome == biome.jungle || biome == biome.jungleEdge || biome == biome.jungleHills || biome == biome.swampland || biome == biome.roofedForest)
+		if (biome == BiomeGenBase.jungle || biome == BiomeGenBase.jungleEdge || biome == BiomeGenBase.jungleHills || biome == BiomeGenBase.swampland || biome == BiomeGenBase.roofedForest)
 		{
 			this.generateOre(MBlocks.torite_ore, world, rand, x1, z1, 1, 6, 4, 1, 20, BlockHelper.forBlock(Blocks.stone));
 		}
-		if (biome == biome.desert || biome == biome.desertHills)
+		if (biome == BiomeGenBase.desert || biome == BiomeGenBase.desertHills)
 		{
 			this.generateDesertQuartz(world, rand, x1, z1);
 		}
 		
-		
 		// Redwood Trees
-		if ((biome instanceof BiomeGenHills || biome instanceof BiomeGenTaiga))
+		if (biome instanceof BiomeGenHills || biome instanceof BiomeGenTaiga)
 		{
 			new WorldGenRedWoodTreeSmall().generate(world, rand, pos);
 		}
 		
-			for (x1 = 0; x1 < 16; x1++)
+		for (x1 = 0; x1 < 16; x1++)
+		{
+			for (z1 = 0; z1 < 16; z1++)
 			{
-				for (z1 = 0; z1 < 16; z1++)
-				{
-					chunk.setBlockState(pos.add(chunk.xPosition + x1, 0, chunk.zPosition + z1), MBlocks.invincium.getDefaultState());
-				}
-			} 	
+				chunk.setBlockState(pos.add(chunk.xPosition + x1, 0, chunk.zPosition + z1), MBlocks.invincium.getDefaultState());
+			}
+		}
 	}
 	
 	public void generateNether(World world, Random rand, int x, int z)
@@ -246,24 +246,24 @@ public class MGenHandler implements IWorldGenerator
 						}
 						else
 						{
-							if(biome.temperature >= 1.0F || biome.temperature < 0.4F || biome.getTempCategory() == TempCategory.OCEAN)
+							if (biome.temperature >= 1.0F || biome.temperature < 0.4F || biome.getTempCategory() == TempCategory.OCEAN)
 							{
 								chunk.setBlockState(subpos2, stoneBlock.withProperty(BlockBiomeStones.VARIANT, sType));
 							}
 						}
 					}
-					else if (block instanceof BlockOre || (block instanceof MBlockOre && block != MBlocks.desert_quartz) || block instanceof BlockPlutoniumOre || block instanceof BlockUraniumOre || block instanceof BlockRedstoneOre)
+					else if (block instanceof BlockOre || block instanceof MBlockOre && block != MBlocks.desert_quartz || block instanceof BlockPlutoniumOre || block instanceof BlockUraniumOre || block instanceof BlockRedstoneOre)
 					{
-						Block oreToReplace = getOreToReplace(block);
+						Block oreToReplace = this.getOreToReplace(block);
 						
-						if(y < deepStoneDepth)
+						if (y < deepStoneDepth)
 						{
 							chunk.setBlockState(subpos2, oreToReplace.getStateFromMeta(deepOreMeta));
-
+							
 						}
 						else
 						{
-							if(biome.temperature >= 1.0F || biome.temperature < 0.4F || biome.getTempCategory() == TempCategory.OCEAN)
+							if (biome.temperature >= 1.0F || biome.temperature < 0.4F || biome.getTempCategory() == TempCategory.OCEAN)
 							{
 								chunk.setBlockState(subpos2, oreToReplace.getStateFromMeta(oreMeta));
 							}
@@ -276,78 +276,42 @@ public class MGenHandler implements IWorldGenerator
 	
 	public Block getOreToReplace(Block block)
 	{
-		if(block == Blocks.coal_ore)
-		{
+		if (block == Blocks.coal_ore)
 			return MBlocks.biome_coal;
-		}
-		else if(block == Blocks.iron_ore)
-		{
+		else if (block == Blocks.iron_ore)
 			return MBlocks.biome_iron;
-		}
-		else if(block == Blocks.gold_ore)
-		{
+		else if (block == Blocks.gold_ore)
 			return MBlocks.biome_gold;
-		}
-		else if(block == Blocks.redstone_ore)
-		{
+		else if (block == Blocks.redstone_ore)
 			return MBlocks.biome_redstone;
-		}
-		else if(block == Blocks.lit_redstone_ore)
-		{
+		else if (block == Blocks.lit_redstone_ore)
 			return MBlocks.biome_redstone;
-		}
-		else if(block == Blocks.diamond_ore)
-		{
+		else if (block == Blocks.diamond_ore)
 			return MBlocks.biome_diamond;
-		}
-		else if(block == Blocks.lapis_ore)
-		{
+		else if (block == Blocks.lapis_ore)
 			return MBlocks.biome_lapis;
-		}
-		else if(block == Blocks.emerald_ore)
-		{
+		else if (block == Blocks.emerald_ore)
 			return MBlocks.biome_emerald;
-		}
-		else if(block == MBlocks.sunstone_ore)
-		{
+		else if (block == MBlocks.sunstone_ore)
 			return MBlocks.biome_sunstone;
-		}
-		else if(block == MBlocks.tin_ore)
-		{
+		else if (block == MBlocks.tin_ore)
 			return MBlocks.biome_tin;
-		}
-		else if(block == MBlocks.copper_ore)
-		{
+		else if (block == MBlocks.copper_ore)
 			return MBlocks.biome_copper;
-		}
-		else if(block == MBlocks.plutonium_ore)
-		{
+		else if (block == MBlocks.plutonium_ore)
 			return MBlocks.biome_plutonium;
-		}
-		else if(block == MBlocks.uranium_ore)
-		{
+		else if (block == MBlocks.uranium_ore)
 			return MBlocks.biome_uranium;
-		}
-		else if(block == MBlocks.radiant_ore)
-		{
+		else if (block == MBlocks.radiant_ore)
 			return MBlocks.biome_radiant;
-		}
-		else if(block == MBlocks.torite_ore)
-		{
+		else if (block == MBlocks.torite_ore)
 			return MBlocks.biome_torite;
-		}
-		else if(block == MBlocks.titanium_ore)
-		{
+		else if (block == MBlocks.titanium_ore)
 			return MBlocks.biome_titanium;
-		}
-		else if(block == MBlocks.meurodite_ore)
-		{
+		else if (block == MBlocks.meurodite_ore)
 			return MBlocks.biome_meurodite;
-		}
 		else
-		{
 			return MBlocks.biome_bricks;
-		}
 	}
 	
 }

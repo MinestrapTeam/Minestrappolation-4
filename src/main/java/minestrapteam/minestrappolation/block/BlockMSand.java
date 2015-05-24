@@ -1,20 +1,19 @@
 package minestrapteam.minestrappolation.block;
 
 import minestrapteam.minestrappolation.lib.MReference;
-import net.minecraft.block.BlockFalling;
 import net.minecraft.block.BlockSand;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelBakery;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-public class BlockMSand extends BlockSand{
+public class BlockMSand extends BlockSand
+{
 	
 	public BlockMSand()
 	{
-
+		
 	}
 	
 	public static void preinventoryRender()

@@ -10,7 +10,6 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.server.gui.IUpdatePlayerListBox;
 import net.minecraft.tileentity.TileEntityFurnace;
-import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 
 public class TileEntityMelter extends TileEntityInventory implements ISidedInventory, IUpdatePlayerListBox
@@ -50,18 +49,18 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 		this.meltTime = nbt.getShort("CookTime");
 		this.maxBurnTime = getItemBurnTime(this.itemStacks[1]);
 		NBTTagList nbttaglist = nbt.getTagList("Items", 10);
-        this.itemStacks = new ItemStack[this.getSizeInventory()];
-
-        for (int i = 0; i < nbttaglist.tagCount(); ++i)
-        {
-            NBTTagCompound nbttagcompound1 = nbttaglist.getCompoundTagAt(i);
-            byte b0 = nbttagcompound1.getByte("Slot");
-
-            if (b0 >= 0 && b0 < this.itemStacks.length)
-            {
-                this.itemStacks[b0] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
-            }
-        }
+		this.itemStacks = new ItemStack[this.getSizeInventory()];
+		
+		for (int i = 0; i < nbttaglist.tagCount(); ++i)
+		{
+			NBTTagCompound nbttagcompound1 = nbttaglist.getCompoundTagAt(i);
+			byte b0 = nbttagcompound1.getByte("Slot");
+			
+			if (b0 >= 0 && b0 < this.itemStacks.length)
+			{
+				this.itemStacks[b0] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
+			}
+		}
 	}
 	
 	public boolean isPowered()
@@ -78,17 +77,17 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 		nbt.setShort("CookTime", (short) this.meltTime);
 		NBTTagList nbttaglist = new NBTTagList();
 		for (int i = 0; i < this.itemStacks.length; ++i)
-        {
-            if (this.itemStacks[i] != null)
-            {
-                NBTTagCompound nbttagcompound1 = new NBTTagCompound();
-                nbttagcompound1.setByte("Slot", (byte)i);
-                this.itemStacks[i].writeToNBT(nbttagcompound1);
-                nbttaglist.appendTag(nbttagcompound1);
-            }
-        }
-
-        nbt.setTag("Items", nbttaglist);
+		{
+			if (this.itemStacks[i] != null)
+			{
+				NBTTagCompound nbttagcompound1 = new NBTTagCompound();
+				nbttagcompound1.setByte("Slot", (byte) i);
+				this.itemStacks[i].writeToNBT(nbttagcompound1);
+				nbttaglist.appendTag(nbttagcompound1);
+			}
+		}
+		
+		nbt.setTag("Items", nbttaglist);
 	}
 	
 	public int getProgressScaled(int scalar)
@@ -114,7 +113,7 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 	@Override
 	public void update()
 	{
-		if(this.worldObj.isBlockIndirectlyGettingPowered(this.getPos()) > 0)
+		if (this.worldObj.isBlockIndirectlyGettingPowered(this.getPos()) > 0)
 		{
 			this.hasPower = true;
 		}
@@ -122,7 +121,7 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 		{
 			this.hasPower = false;
 		}
- 		
+		
 		boolean burning = this.burnTime > 0;
 		
 		if (burning)
@@ -138,9 +137,7 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 		}
 		
 		if (this.worldObj.isRemote)
-		{
 			return;
-		}
 		
 		if (this.canSmelt())
 		{
@@ -185,7 +182,7 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 		{
 			this.markDirty();
 			this.validate();
-			BlockMelter.setState(this.isBurning(), this.worldObj, pos);
+			BlockMelter.setState(this.isBurning(), this.worldObj, this.pos);
 		}
 	}
 	
@@ -196,26 +193,18 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 		{
 			ItemStack output = MelterRecipes.instance().getResult(input);
 			if (output == null)
-			{
 				return false;
-			}
 			ItemStack container = new ItemStack(Items.bucket);
 			if (container != null)
 			{
 				if (!ItemStack.areItemsEqual(container, this.itemStacks[3]))
-				{
 					return false;
-				}
 			}
 			ItemStack outputSlot = this.itemStacks[2];
 			if (outputSlot == null)
-			{
 				return true;
-			}
 			if (!outputSlot.isItemEqual(output))
-			{
 				return false;
-			}
 			int result = outputSlot.stackSize + output.stackSize;
 			return result <= output.getMaxStackSize();
 		}
@@ -264,9 +253,7 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 	public static int getItemBurnTime(ItemStack stack)
 	{
 		if (stack == null)
-		{
 			return 0;
-		}
 		
 		int i = TileEntityFurnace.getItemBurnTime(stack);
 		if (i == 0)
@@ -287,12 +274,11 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 	public boolean canExtractItem(int slotID, ItemStack stack, EnumFacing side)
 	{
 		return slotID != 1 || stack.getItem() == Items.bucket;
-	}	
-
+	}
+	
 	@Override
-	public int[] getSlotsForFace(EnumFacing side) 
+	public int[] getSlotsForFace(EnumFacing side)
 	{
 		return null;
 	}
-
 }

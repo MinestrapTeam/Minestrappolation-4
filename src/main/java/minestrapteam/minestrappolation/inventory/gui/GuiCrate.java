@@ -1,6 +1,5 @@
 package minestrapteam.minestrappolation.inventory.gui;
 
-
 import minestrapteam.minestrappolation.inventory.container.ContainerCrate;
 import minestrapteam.minestrappolation.lib.MReference;
 import minestrapteam.minestrappolation.tileentity.TileEntityCrate;
@@ -13,9 +12,8 @@ import net.minecraft.util.StatCollector;
 
 public class GuiCrate extends GuiContainer
 {
-	private static final ResourceLocation texture = new ResourceLocation(MReference.MODID, "textures/gui/crate.png");
-	
-	private TileEntityCrate			crate;
+	private static final ResourceLocation	texture	= new ResourceLocation(MReference.MODID, "textures/gui/crate.png");
+	private TileEntityCrate					crate;
 	
 	public GuiCrate(EntityPlayer player, TileEntityCrate crate)
 	{
@@ -38,6 +36,6 @@ public class GuiCrate extends GuiContainer
 		Minecraft.getMinecraft().getTextureManager().bindTexture(texture);
 		// Draw the image
 		GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-		drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
+		this.drawTexturedModalRect(this.guiLeft, this.guiTop, 0, 0, this.xSize, this.ySize);
 	}
 }

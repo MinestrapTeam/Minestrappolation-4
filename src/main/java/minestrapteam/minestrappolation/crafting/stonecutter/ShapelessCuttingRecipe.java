@@ -37,9 +37,7 @@ public class ShapelessCuttingRecipe implements ICuttingRecipes
 				list.add(new ItemStack((Block) o));
 			}
 			else
-			{
 				throw new RuntimeException("Invalid shapeless recipy!");
-			}
 		}
 		
 		this.recipeItems = list;
@@ -61,17 +59,15 @@ public class ShapelessCuttingRecipe implements ICuttingRecipes
 	}
 	
 	private boolean compareItemStacks(ItemStack stack1, ItemStack stack2)
-    {
-        return stack2.getItem() == stack1.getItem() && (stack2.getMetadata() == 32767 || stack2.getMetadata() == stack1.getMetadata());
-    }
+	{
+		return stack2.getItem() == stack1.getItem() && (stack2.getMetadata() == 32767 || stack2.getMetadata() == stack1.getMetadata());
+	}
 	
 	@Override
 	public boolean matches(InventoryCrafting inventory, ItemStack extra, World par2World)
 	{
 		if (!this.compareItemStacks(this.extraSlot, extra))
-		{
 			return false;
-		}
 		
 		ArrayList<ItemStack> list = new ArrayList(this.recipeItems);
 		
@@ -93,9 +89,7 @@ public class ShapelessCuttingRecipe implements ICuttingRecipes
 				}
 				
 				if (!flag)
-				{
 					return false;
-				}
 			}
 		}
 		

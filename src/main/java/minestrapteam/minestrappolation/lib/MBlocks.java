@@ -97,9 +97,8 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-
 public class MBlocks
-{	
+{
 	public static Block	copper_block;
 	public static Block	tin_block;
 	public static Block	sunstone_block;
@@ -115,28 +114,28 @@ public class MBlocks
 	public static Block	plutonium_insulated;
 	public static Block	uranium_insulated;
 	public static Block	slate;
-	public static Block flint_block;
-	public static Block sugar_block;
-	public static Block meat_block;
+	public static Block	flint_block;
+	public static Block	sugar_block;
+	public static Block	meat_block;
 	
-	public static Block roads;
+	public static Block	roads;
 	
-	public static Block cold_sand;
-	public static Block lichen_permafrost;
-	public static Block dirt_permafrost;
+	public static Block	cold_sand;
+	public static Block	lichen_permafrost;
+	public static Block	dirt_permafrost;
 	
 	public static Block	sunstone_ore;
 	public static Block	copper_ore;
 	public static Block	tin_ore;
-	public static Block plutonium_ore;
-	public static Block uranium_ore;
-	public static Block radiant_ore;
-	public static Block titanium_ore;
-	public static Block meurodite_ore;
-	public static Block torite_ore;
-	public static Block desert_quartz;
-	public static Block blazium_ore;
-	public static Block soul_ore;
+	public static Block	plutonium_ore;
+	public static Block	uranium_ore;
+	public static Block	radiant_ore;
+	public static Block	titanium_ore;
+	public static Block	meurodite_ore;
+	public static Block	torite_ore;
+	public static Block	desert_quartz;
+	public static Block	blazium_ore;
+	public static Block	soul_ore;
 	
 	public static Block	snow_refined;
 	public static Block	snow_bricks;
@@ -153,91 +152,91 @@ public class MBlocks
 	public static Block	stone_refined;
 	public static Block	stone_tiles;
 	
-	public static Block redwood_door;
+	public static Block	redwood_door;
 	
-	//Wood
+	// Wood
 	public static Block	ministrapp_log;
 	public static Block	ministrapp_leaves;
 	public static Block	ministrapp_sapling;
 	public static Block	ministrapp_planks;
 	
-	public static Block godstone;
+	public static Block	godstone;
 	
-	public static Block barrel;
-	public static Block crate;
-	public static Block melter;
-	public static Block melter_active;
-	public static Block alloy;
-	public static Block alloy_active;
-	public static Block stonecutter;
-	public static Block sawmill;
-	public static Block crusher;
+	public static Block	barrel;
+	public static Block	crate;
+	public static Block	melter;
+	public static Block	melter_active;
+	public static Block	alloy;
+	public static Block	alloy_active;
+	public static Block	stonecutter;
+	public static Block	sawmill;
+	public static Block	crusher;
 	
 	// Biome Stones
-	public static Block			   biome_coal;
-	public static Block			   biome_iron;
-	public static Block			   biome_gold;
-	public static Block			   biome_redstone;
-	public static Block			   biome_lapis;
-	public static Block			   biome_diamond;
-	public static Block			   biome_emerald;
-	public static Block			   biome_sunstone;
-	public static Block			   biome_tin;
-	public static Block			   biome_copper;
-	public static Block			   biome_plutonium;
-	public static Block			   biome_uranium;
-	public static Block			   biome_radiant;
-	public static Block			   biome_titanium;
-	public static Block			   biome_meurodite;
-	public static Block			   biome_torite;
+	public static Block	biome_coal;
+	public static Block	biome_iron;
+	public static Block	biome_gold;
+	public static Block	biome_redstone;
+	public static Block	biome_lapis;
+	public static Block	biome_diamond;
+	public static Block	biome_emerald;
+	public static Block	biome_sunstone;
+	public static Block	biome_tin;
+	public static Block	biome_copper;
+	public static Block	biome_plutonium;
+	public static Block	biome_uranium;
+	public static Block	biome_radiant;
+	public static Block	biome_titanium;
+	public static Block	biome_meurodite;
+	public static Block	biome_torite;
 	
-	public static Block			   biome_stones;
-	public static Block			   biome_cobble;
-	public static Block			   biome_bricks;
+	public static Block	biome_stones;
+	public static Block	biome_cobble;
+	public static Block	biome_bricks;
 	
-	//Stairs
-	public static Block			   redwood_stairs;
-	public static Block			   deepstone_stairs;
-	public static Block			   coldstone_stairs;
-	public static Block			   redrock_stairs;
-	public static Block			   oceanstone_stairs;
-	public static Block			   icestone_stairs;
-	public static Block			   poceanstone_stairs;
-	public static Block			   glacierstone_stairs;
-	public static Block			   deep_redrock_stairs;
-	public static Block			   deep_coldstone_stairs;
-	public static Block			   deepstone_brick_stairs;
-	public static Block			   coldstone_brick_stairs;
-	public static Block			   redrock_brick_stairs;
-	public static Block			   oceanstone_brick_stairs;
-	public static Block			   icestone_brick_stairs;
-	public static Block			   poceanstone_brick_stairs;
-	public static Block			   glacierstone_brick_stairs;
-	public static Block			   deep_redrock_brick_stairs;
-	public static Block			   deep_coldstone_brick_stairs;
+	// Stairs
+	public static Block	redwood_stairs;
+	public static Block	deepstone_stairs;
+	public static Block	coldstone_stairs;
+	public static Block	redrock_stairs;
+	public static Block	oceanstone_stairs;
+	public static Block	icestone_stairs;
+	public static Block	poceanstone_stairs;
+	public static Block	glacierstone_stairs;
+	public static Block	deep_redrock_stairs;
+	public static Block	deep_coldstone_stairs;
+	public static Block	deepstone_brick_stairs;
+	public static Block	coldstone_brick_stairs;
+	public static Block	redrock_brick_stairs;
+	public static Block	oceanstone_brick_stairs;
+	public static Block	icestone_brick_stairs;
+	public static Block	poceanstone_brick_stairs;
+	public static Block	glacierstone_brick_stairs;
+	public static Block	deep_redrock_brick_stairs;
+	public static Block	deep_coldstone_brick_stairs;
 	
-	//Fence
-	public static Block 		   redwood_fence;
-	public static Block 		   redwood_fence_gate;
+	// Fence
+	public static Block	redwood_fence;
+	public static Block	redwood_fence_gate;
 	
-	//Panes
-	public static Block			   refined_glass_pane;
-	public static Block			   bricked_glass_pane;
-	public static Block			   tiled_glass_pane;
-	public static Block			   framed_glass_pane;
+	// Panes
+	public static Block	refined_glass_pane;
+	public static Block	bricked_glass_pane;
+	public static Block	tiled_glass_pane;
+	public static Block	framed_glass_pane;
 	
-	//Misc
-	public static Block			   frost_generator;
-	public static Block			   invincium;
+	// Misc
+	public static Block	frost_generator;
+	public static Block	invincium;
 	
-	//BLOCK ITEMS
-	public static Item			   redwood_door_item;
+	// BLOCK ITEMS
+	public static Item	redwood_door_item;
 	
 	public static void init()
 	{
 		slate = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("slate");
-			
-		//DECOR
+		
+		// DECOR
 		snow_refined = new MBlockSnow(Material.snow, MapColor.snowColor).setHardness(0.4F).setStepSound(Block.soundTypeSnow).setUnlocalizedName("snow_refined").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		snow_bricks = new MBlockSnow(Material.snow, MapColor.snowColor).setHardness(0.6F).setStepSound(Block.soundTypeSnow).setUnlocalizedName("snow_bricks").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		snow_tiles = new MBlockSnow(Material.snow, MapColor.snowColor).setHardness(0.6F).setStepSound(Block.soundTypeSnow).setUnlocalizedName("snow_tiles").setCreativeTab(Minestrappolation.tabMinistrappolation);
@@ -277,16 +276,16 @@ public class MBlocks
 		lichen_permafrost = new BlockPermaFrost().setUnlocalizedName("permafrost").setHardness(1F).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMinistrappolation);
 		dirt_permafrost = new BlockPermaFrostDirt(Material.ground, MapColor.cyanColor).setHardness(0.9F).setStepSound(Block.soundTypeGravel).setUnlocalizedName("dirt_permafrost").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		
-		//Door
+		// Door
 		redwood_door = new BlockMDoor(Material.wood).setHardness(3.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("redwood_door");
-	
-		//WOOD
+		
+		// WOOD
 		ministrapp_log = new MBlockLog(300).setUnlocalizedName("ministrapp_log");
 		ministrapp_leaves = new MBlockLeaves(600).setUnlocalizedName("ministrapp_leaves");
 		ministrapp_sapling = new MBlockSapling(600);
-		ministrapp_planks = new MBlockPlanks(300).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("ministrapp_planks");	
+		ministrapp_planks = new MBlockPlanks(300).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("ministrapp_planks");
 		
-		//ORES
+		// ORES
 		sunstone_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.sunstone_shard, 0, 2, 5, 1, 3, "pickaxe", 2, true).setHardness(2.6F).setResistance(4.0F).setStepSound(Block.soundTypePiston).setLightLevel(0.7F).setUnlocalizedName("sunstone_ore");
 		tin_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 0, false).setHardness(3.0F).setResistance(3.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("tin_ore");
 		copper_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 0, false).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("copper_ore");
@@ -332,7 +331,7 @@ public class MBlocks
 		sawmill = new BlockSawmill().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("sawmill").setHardness(2.5F).setStepSound(Block.soundTypeWood);
 		crusher = new BlockCrusher().setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("crusher").setHardness(7F).setResistance(100.0F).setStepSound(Block.soundTypePiston);
 		
-		//Stairs
+		// Stairs
 		redwood_stairs = new MBlockStairs(ministrapp_planks.getStateFromMeta(MWoodType.REDWOOD.getMetadata())).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("redwood_stairs");
 		deepstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata())).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("deepstone_stairs");
 		coldstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.COLDSTONE.getMetadata())).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("coldstone_stairs");
@@ -353,21 +352,21 @@ public class MBlocks
 		deep_redrock_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata())).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("deep_redrock_brick_stairs");
 		deep_coldstone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata())).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("deep_coldstone_brick_stairs");
 		
-		//Fence
+		// Fence
 		redwood_fence = new BlockFence(Material.wood).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("redwood_fence");
 		redwood_fence_gate = new BlockFenceGate().setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("redwood_fence_gate");
 		
-		//Pane
+		// Pane
 		refined_glass_pane = new BlockMPane(Material.glass, false).setUnlocalizedName("refined_pane");
 		bricked_glass_pane = new BlockMPane(Material.glass, false).setUnlocalizedName("bricked_pane");
 		tiled_glass_pane = new BlockMPane(Material.glass, false).setUnlocalizedName("tiled_pane");
 		framed_glass_pane = new BlockMPane(Material.glass, false).setUnlocalizedName("framed_pane");
 		
-		//Misc
+		// Misc
 		frost_generator = new BlockFrostGenerator(Material.rock, MapColor.iceColor).setCreativeTab(Minestrappolation.tabMinistrappolation).setUnlocalizedName("frost_generator");
 		invincium = new BlockInvincium(Material.rock).setUnlocalizedName("invincium").setBlockUnbreakable().setHardness(50000F);
-
-		//BLOCK ITEMS
+		
+		// BLOCK ITEMS
 		redwood_door_item = new ItemMDoor(redwood_door).setUnlocalizedName("redwood_door_item");
 		
 		Blocks.bedrock.setHardness(5F);
@@ -425,7 +424,7 @@ public class MBlocks
 		
 		register(redwood_door);
 		
-		//Ores
+		// Ores
 		register(plutonium_ore);
 		register(uranium_ore);
 		register(radiant_ore);
@@ -446,7 +445,7 @@ public class MBlocks
 		register(sawmill);
 		register(crusher);
 		
-		//Stairs
+		// Stairs
 		register(redwood_stairs);
 		register(deepstone_stairs);
 		register(coldstone_stairs);
@@ -467,24 +466,24 @@ public class MBlocks
 		register(deep_redrock_brick_stairs);
 		register(deep_coldstone_brick_stairs);
 		
-		//Fence
+		// Fence
 		register(redwood_fence);
 		register(redwood_fence_gate);
 		
-		//Panes
+		// Panes
 		register(refined_glass_pane);
 		register(bricked_glass_pane);
 		register(tiled_glass_pane);
 		register(framed_glass_pane);
 		
-		//Misc
+		// Misc
 		register(frost_generator);
 		register(invincium);
 		
-		//BLOCK ITEMS
+		// BLOCK ITEMS
 		GameRegistry.registerItem(redwood_door_item, redwood_door_item.getUnlocalizedName().substring(5));
 		
-		//Wood stuff
+		// Wood stuff
 		GameRegistry.registerBlock(ministrapp_log, ItemBlockLog.class, ministrapp_log.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(ministrapp_leaves, ItemBlockLeaves.class, ministrapp_leaves.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(ministrapp_sapling, ItemBlockSapling.class, ministrapp_sapling.getUnlocalizedName().substring(5));
@@ -676,56 +675,56 @@ public class MBlocks
 		oceanstone_brick_stairs.setHarvestLevel("pickaxe", 0);
 		poceanstone_brick_stairs.setHarvestLevel("pickaxe", 2);
 		
-		//Coal
+		// Coal
 		biome_coal.setHarvestLevel("pickaxe", 2, biome_coal.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
 		biome_coal.setHarvestLevel("pickaxe", 2, biome_coal.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
 		biome_coal.setHarvestLevel("pickaxe", 2, biome_coal.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
 		biome_coal.setHarvestLevel("pickaxe", 2, biome_coal.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
 		biome_coal.setHarvestLevel("pickaxe", 2, biome_coal.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
 		
-		//Iron
+		// Iron
 		biome_iron.setHarvestLevel("pickaxe", 2, biome_iron.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
 		biome_iron.setHarvestLevel("pickaxe", 2, biome_iron.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
 		biome_iron.setHarvestLevel("pickaxe", 2, biome_iron.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
 		biome_iron.setHarvestLevel("pickaxe", 2, biome_iron.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
 		biome_iron.setHarvestLevel("pickaxe", 2, biome_iron.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
 		
-		//Lapis
+		// Lapis
 		biome_lapis.setHarvestLevel("pickaxe", 2, biome_lapis.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
 		biome_lapis.setHarvestLevel("pickaxe", 2, biome_lapis.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
 		biome_lapis.setHarvestLevel("pickaxe", 2, biome_lapis.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
 		biome_lapis.setHarvestLevel("pickaxe", 2, biome_lapis.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
 		biome_lapis.setHarvestLevel("pickaxe", 2, biome_lapis.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
 		
-		//Tin
+		// Tin
 		biome_tin.setHarvestLevel("pickaxe", 2, biome_tin.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
 		biome_tin.setHarvestLevel("pickaxe", 2, biome_tin.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
 		biome_tin.setHarvestLevel("pickaxe", 2, biome_tin.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
 		biome_tin.setHarvestLevel("pickaxe", 2, biome_tin.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
 		biome_tin.setHarvestLevel("pickaxe", 2, biome_tin.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
 		
-		//Copper
+		// Copper
 		biome_copper.setHarvestLevel("pickaxe", 2, biome_copper.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
 		biome_copper.setHarvestLevel("pickaxe", 2, biome_copper.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
 		biome_copper.setHarvestLevel("pickaxe", 2, biome_copper.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
 		biome_copper.setHarvestLevel("pickaxe", 2, biome_copper.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
 		biome_copper.setHarvestLevel("pickaxe", 2, biome_copper.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
 		
-		//Stones
+		// Stones
 		biome_stones.setHarvestLevel("pickaxe", 2, biome_stones.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
 		biome_stones.setHarvestLevel("pickaxe", 2, biome_stones.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
 		biome_stones.setHarvestLevel("pickaxe", 2, biome_stones.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
 		biome_stones.setHarvestLevel("pickaxe", 2, biome_stones.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
 		biome_stones.setHarvestLevel("pickaxe", 2, biome_stones.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
 		
-		//Cobble
+		// Cobble
 		biome_cobble.setHarvestLevel("pickaxe", 2, biome_cobble.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
 		biome_cobble.setHarvestLevel("pickaxe", 2, biome_cobble.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
 		biome_cobble.setHarvestLevel("pickaxe", 2, biome_cobble.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
 		biome_cobble.setHarvestLevel("pickaxe", 2, biome_cobble.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
 		biome_cobble.setHarvestLevel("pickaxe", 2, biome_cobble.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
 		
-		//Bricks
+		// Bricks
 		biome_bricks.setHarvestLevel("pickaxe", 2, biome_bricks.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
 		biome_bricks.setHarvestLevel("pickaxe", 2, biome_bricks.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
 		biome_bricks.setHarvestLevel("pickaxe", 2, biome_bricks.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));

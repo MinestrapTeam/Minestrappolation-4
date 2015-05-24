@@ -81,4 +81,3 @@ public class SlotMelter extends Slot
 		this.amountCrafted = 0;
 	}
 }
-

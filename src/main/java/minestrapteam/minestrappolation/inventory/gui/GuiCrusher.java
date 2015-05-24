@@ -1,12 +1,8 @@
 package minestrapteam.minestrappolation.inventory.gui;
 
-import minestrapteam.minestrappolation.inventory.container.ContainerAlloy;
 import minestrapteam.minestrappolation.inventory.container.ContainerCrusher;
-import minestrapteam.minestrappolation.inventory.container.ContainerMelter;
 import minestrapteam.minestrappolation.lib.MReference;
-import minestrapteam.minestrappolation.tileentity.TileEntityAlloy;
 import minestrapteam.minestrappolation.tileentity.TileEntityCrusher;
-import minestrapteam.minestrappolation.tileentity.TileEntityMelter;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
@@ -16,9 +12,9 @@ import org.lwjgl.opengl.GL11;
 
 public class GuiCrusher extends GuiContainer
 {
-	private static final ResourceLocation texture = new ResourceLocation(MReference.MODID, "textures/gui/crusher.png");
+	private static final ResourceLocation	texture	= new ResourceLocation(MReference.MODID, "textures/gui/crusher.png");
 	
-	private TileEntityCrusher		furnace;
+	private TileEntityCrusher				furnace;
 	
 	public GuiCrusher(EntityPlayer player, TileEntityCrusher tileEntityCrusher)
 	{
@@ -41,7 +37,7 @@ public class GuiCrusher extends GuiContainer
 		int j = (this.width - this.xSize) / 2;
 		int k = (this.height - this.ySize) / 2;
 		this.drawTexturedModalRect(j, k, 0, 0, this.xSize, this.ySize);
-	
+		
 		if (this.furnace.isBurning())
 		{
 			int burn = this.furnace.getBurnTimeRemainingScaled(12);

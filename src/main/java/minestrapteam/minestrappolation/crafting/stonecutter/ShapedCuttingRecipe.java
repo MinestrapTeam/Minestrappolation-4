@@ -1,6 +1,5 @@
 package minestrapteam.minestrappolation.crafting.stonecutter;
 
-
 import java.util.HashMap;
 
 import minestrapteam.minestrappolation.util.MStacks;
@@ -118,24 +117,18 @@ public class ShapedCuttingRecipe implements ICuttingRecipes
 	@Override
 	public boolean matches(InventoryCrafting inventory, ItemStack extra, World world)
 	{
-		if (!MStacks.equals(extraSlot, extra))
-		{
+		if (!MStacks.equals(this.extraSlot, extra))
 			return false;
-		}
 		
 		for (int i = 0; i <= 3 - this.recipeWidth; ++i)
 		{
 			for (int j = 0; j <= 3 - this.recipeHeight; ++j)
 			{
 				if (this.checkMatch(inventory, i, j, true))
-				{
 					return true;
-				}
 				
 				if (this.checkMatch(inventory, i, j, false))
-				{
 					return true;
-				}
 			}
 		}
 		return false;
@@ -171,9 +164,7 @@ public class ShapedCuttingRecipe implements ICuttingRecipes
 				if (stack2 != null || stack1 != null)
 				{
 					if (!MStacks.equals(stack1, stack2))
-					{
 						return false;
-					}
 				}
 			}
 		}

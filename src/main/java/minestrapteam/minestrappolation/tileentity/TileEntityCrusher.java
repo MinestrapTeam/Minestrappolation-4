@@ -2,9 +2,6 @@ package minestrapteam.minestrappolation.tileentity;
 
 import java.util.Random;
 
-import minestrapteam.minestrappolation.lib.MBlocks;
-import minestrapteam.minestrappolation.lib.MItems;
-import minestrapteam.minestrappolation.util.AlloyRecipes;
 import minestrapteam.minestrappolation.util.CrusherRecipes;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
@@ -13,14 +10,13 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.server.gui.IUpdatePlayerListBox;
 import net.minecraft.tileentity.TileEntityFurnace;
-import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 
 public class TileEntityCrusher extends TileEntityInventory implements ISidedInventory, IUpdatePlayerListBox
 {
-	public int					burnTime;
-	public int					maxCrushTime;
-	public int					crushTime;
+	public int	burnTime;
+	public int	maxCrushTime;
+	public int	crushTime;
 	
 	public TileEntityCrusher()
 	{
@@ -79,7 +75,7 @@ public class TileEntityCrusher extends TileEntityInventory implements ISidedInve
 	
 	@Override
 	public void update()
-	{	
+	{
 		boolean burning = this.burnTime > 0;
 		
 		if (burning)
@@ -88,9 +84,7 @@ public class TileEntityCrusher extends TileEntityInventory implements ISidedInve
 		}
 		
 		if (this.worldObj.isRemote)
-		{
 			return;
-		}
 		
 		if (this.canCrush())
 		{
@@ -145,18 +139,12 @@ public class TileEntityCrusher extends TileEntityInventory implements ISidedInve
 		{
 			ItemStack output = CrusherRecipes.instance().getResult(input);
 			if (output == null)
-			{
 				return false;
-			}
 			ItemStack outputSlot = this.itemStacks[2];
 			if (outputSlot == null)
-			{
 				return true;
-			}
 			if (!outputSlot.isItemEqual(output))
-			{
 				return false;
-			}
 			int result = outputSlot.stackSize + output.stackSize;
 			return result <= output.getMaxStackSize();
 		}
@@ -169,7 +157,6 @@ public class TileEntityCrusher extends TileEntityInventory implements ISidedInve
 		{
 			Random rand = new Random();
 			int chance = rand.nextInt(100);
-			
 			
 			ItemStack input = this.itemStacks[0];
 			int itemChance = CrusherRecipes.instance().getChance(input);
@@ -190,13 +177,13 @@ public class TileEntityCrusher extends TileEntityInventory implements ISidedInve
 				this.itemStacks[0] = null;
 			}
 			
-			if(chance < itemChance && this.itemStacks[3] == null)
+			if (chance < itemChance && this.itemStacks[3] == null)
 			{
 				this.itemStacks[3] = CrusherRecipes.instance().getExtra(input);
 			}
-			else if(chance < itemChance && this.itemStacks[3] != null)
+			else if (chance < itemChance && this.itemStacks[3] != null)
 			{
-				if(this.itemStacks[3].isItemEqual(CrusherRecipes.instance().getExtra(input)))
+				if (this.itemStacks[3].isItemEqual(CrusherRecipes.instance().getExtra(input)))
 				{
 					this.itemStacks[3].stackSize += 1;
 				}
@@ -212,9 +199,7 @@ public class TileEntityCrusher extends TileEntityInventory implements ISidedInve
 	public static int getItemBurnTime(ItemStack stack)
 	{
 		if (stack == null)
-		{
 			return 0;
-		}
 		
 		int i = TileEntityFurnace.getItemBurnTime(stack);
 		if (i == 0)
@@ -235,12 +220,12 @@ public class TileEntityCrusher extends TileEntityInventory implements ISidedInve
 	public boolean canExtractItem(int slotID, ItemStack stack, EnumFacing side)
 	{
 		return slotID != 1 || stack.getItem() == Items.bucket;
-	}	
-
+	}
+	
 	@Override
-	public int[] getSlotsForFace(EnumFacing side) 
+	public int[] getSlotsForFace(EnumFacing side)
 	{
 		return null;
 	}
-
+	
 }

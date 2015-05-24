@@ -4,7 +4,6 @@ import minestrapteam.minestrappolation.inventory.container.ContainerSawmill;
 import minestrapteam.minestrappolation.tileentity.TileEntitySawMill;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
 import net.minecraftforge.fml.relauncher.Side;
@@ -16,7 +15,6 @@ import org.lwjgl.opengl.GL11;
 public class GuiSawmill extends GuiContainer
 {
 	public static ResourceLocation	texture	= new ResourceLocation("textures/gui/container/crafting_table.png");
-	
 	private TileEntitySawMill		sawmill;
 	
 	public GuiSawmill(EntityPlayer inventory, TileEntitySawMill sawmill)

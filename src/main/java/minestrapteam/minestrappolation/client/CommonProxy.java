@@ -117,7 +117,7 @@ public abstract class CommonProxy implements IGuiHandler
 		
 		ItemChunk.inventoryRender();
 		
-		if(Config.useRainBowXp)
+		if (Config.useRainBowXp)
 		{
 			RenderingRegistry.registerEntityRenderingHandler(EntityXPOrb.class, new RenderXpOrb(Minecraft.getMinecraft().getRenderManager()));
 		}

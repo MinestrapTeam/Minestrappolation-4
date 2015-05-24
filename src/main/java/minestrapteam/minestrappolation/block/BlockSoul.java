@@ -12,9 +12,10 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class BlockSoul extends MBlock{
-
-	public BlockSoul(Material materialIn, MapColor mapColorIn) 
+public class BlockSoul extends MBlock
+{
+	
+	public BlockSoul(Material materialIn, MapColor mapColorIn)
 	{
 		super(materialIn, mapColorIn);
 	}
@@ -28,7 +29,7 @@ public class BlockSoul extends MBlock{
 	@Override
 	public int quantityDropped(Random random)
 	{
-		return  random.nextInt(5);
+		return random.nextInt(5);
 	}
 	
 	@Override
@@ -38,11 +39,11 @@ public class BlockSoul extends MBlock{
 		Random rand = world instanceof World ? ((World) world).rand : new Random();
 		if (this.getItemDropped(state, rand, fortune) != Item.getItemFromBlock(this))
 		{
-			int j = 0;		
+			int j = 0;
 			j = MathHelper.getRandomIntegerInRange(rand, 20, 100 + fortune);
 			return j;
 		}
 		return 0;
 	}
-
+	
 }

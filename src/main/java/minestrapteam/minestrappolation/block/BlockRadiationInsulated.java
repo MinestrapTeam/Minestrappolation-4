@@ -10,23 +10,23 @@ import net.minecraft.item.Item;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.BlockPos;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 
-public class BlockRadiationInsulated extends BlockRadiation{
-
-	public BlockRadiationInsulated(int range, int rate, Material material, MapColor mapColor, Item itemDrop, int expMin, int expMax, int dropAmount, int bonusAmount, String tool, int level, boolean silkHarvest) 
+public class BlockRadiationInsulated extends BlockRadiation
+{
+	
+	public BlockRadiationInsulated(int range, int rate, Material material, MapColor mapColor, Item itemDrop, int expMin, int expMax, int dropAmount, int bonusAmount, String tool, int level, boolean silkHarvest)
 	{
 		super(range, rate, material, mapColor, itemDrop, expMin, expMax, dropAmount, bonusAmount, tool, level, silkHarvest);
 	}
-
+	
 	@Override
 	public void addPotionEffect(EntityLivingBase living, World world, BlockPos pos)
 	{
-		if(world.isBlockPowered(pos))
+		if (world.isBlockPowered(pos))
 		{
 			this.range = world.isBlockIndirectlyGettingPowered(pos);
-			if(this == MBlocks.plutonium_insulated)
+			if (this == MBlocks.plutonium_insulated)
 			{
 				if (living instanceof EntitySkeleton)
 				{
@@ -39,7 +39,7 @@ public class BlockRadiationInsulated extends BlockRadiation{
 				}
 			}
 			
-			if(this == MBlocks.uranium_insulated)
+			if (this == MBlocks.uranium_insulated)
 			{
 				if (living instanceof EntityZombie)
 				{
@@ -51,7 +51,7 @@ public class BlockRadiationInsulated extends BlockRadiation{
 					living.addPotionEffect(new PotionEffect(Potion.poison.getId(), 20 * 10, 1, false, false));
 				}
 			}
-		}	
+		}
 	}
-
+	
 }

@@ -27,10 +27,10 @@ public class ItemBlockLeaves extends ItemBlock
 	
 	@Override
 	@SideOnly(Side.CLIENT)
-    public int getColorFromItemStack(ItemStack stack, int renderPass)
-    {
-        return MBlocks.ministrapp_leaves.getRenderColor(MBlocks.ministrapp_leaves.getStateFromMeta(stack.getMetadata()));
-    }
+	public int getColorFromItemStack(ItemStack stack, int renderPass)
+	{
+		return MBlocks.ministrapp_leaves.getRenderColor(MBlocks.ministrapp_leaves.getStateFromMeta(stack.getMetadata()));
+	}
 	
 	@Override
 	public String getUnlocalizedName(ItemStack item)

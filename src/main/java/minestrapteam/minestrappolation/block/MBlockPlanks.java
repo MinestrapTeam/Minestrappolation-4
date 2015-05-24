@@ -24,13 +24,11 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-
-
 public class MBlockPlanks extends Block
 {
 	public static final PropertyEnum	VARIANT	= PropertyEnum.create("type", MWoodType.class);
 	
-	private int flammability;
+	private int							flammability;
 	
 	public MBlockPlanks(int flame)
 	{
@@ -94,16 +92,15 @@ public class MBlockPlanks extends Block
 		for (int j = 0; j < i; ++j)
 		{
 			MWoodType enumtype = aenumtype[j];
-			ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(MReference.MODID + ":"+enumtype.getUnlocalizedName()+"_planks", "inventory");
+			ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(MReference.MODID + ":" + enumtype.getUnlocalizedName() + "_planks", "inventory");
 			Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, enumtype.getMetadata(), itemModelResourceLocation);
 		}
 	}
 	
 	@Override
 	public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face)
-    {
-        return this.flammability;
-    }
-	
+	{
+		return this.flammability;
+	}
 	
 }

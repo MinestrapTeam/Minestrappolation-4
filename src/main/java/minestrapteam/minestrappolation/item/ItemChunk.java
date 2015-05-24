@@ -3,7 +3,6 @@ package minestrapteam.minestrappolation.item;
 import java.util.List;
 
 import minestrapteam.minestrappolation.enumtypes.MItemChunkTypes;
-import minestrapteam.minestrappolation.enumtypes.MStoneType;
 import minestrapteam.minestrappolation.lib.MReference;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelBakery;
@@ -15,7 +14,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ItemChunk extends Item{
+public class ItemChunk extends Item
+{
 	
 	public ItemChunk()
 	{
@@ -43,7 +43,7 @@ public class ItemChunk extends Item{
 		for (int j = 0; j < i; ++j)
 		{
 			MItemChunkTypes enumtype = aenumtype[j];
-			ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(MReference.MODID + ":"+enumtype.getUnlocalizedName()+"_chunk", "inventory");
+			ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(MReference.MODID + ":" + enumtype.getUnlocalizedName() + "_chunk", "inventory");
 			Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, enumtype.getMetadata(), itemModelResourceLocation);
 		}
 	}
@@ -62,7 +62,6 @@ public class ItemChunk extends Item{
 		}
 		
 	}
-
 	
 	@Override
 	public String getUnlocalizedName(ItemStack item)

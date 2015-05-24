@@ -14,9 +14,10 @@ import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BiomeFrost extends BiomeGenBase{
-
-	public BiomeFrost(int id) 
+public class BiomeFrost extends BiomeGenBase
+{
+	
+	public BiomeFrost(int id)
 	{
 		super(id);
 		this.theBiomeDecorator = new MBiomeDecorator();
@@ -51,21 +52,22 @@ public class BiomeFrost extends BiomeGenBase{
 			this.fillerBlock = MBlocks.cold_sand.getDefaultState();
 		}
 		
-		this.generateBiomeTerrain(worldIn, rand, primer, p_180622_4_, p_180622_5_, noise);;
+		this.generateBiomeTerrain(worldIn, rand, primer, p_180622_4_, p_180622_5_, noise);
+		;
 	}
 	
 	@Override
 	@SideOnly(Side.CLIENT)
-    public int getGrassColorAtPos(BlockPos p_180627_1_)
-    {
-        return 10420217;
-    }
-
+	public int getGrassColorAtPos(BlockPos p_180627_1_)
+	{
+		return 10420217;
+	}
+	
 	@Override
-    @SideOnly(Side.CLIENT)
-    public int getFoliageColorAtPos(BlockPos p_180625_1_)
-    {
-        return 10420217;
-    }
-
+	@SideOnly(Side.CLIENT)
+	public int getFoliageColorAtPos(BlockPos p_180625_1_)
+	{
+		return 10420217;
+	}
+	
 }

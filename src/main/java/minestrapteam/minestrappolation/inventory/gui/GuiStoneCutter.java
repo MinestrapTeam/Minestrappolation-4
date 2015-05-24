@@ -1,6 +1,5 @@
 package minestrapteam.minestrappolation.inventory.gui;
 
-
 import minestrapteam.minestrappolation.inventory.container.ContainerStoneCutter;
 import minestrapteam.minestrappolation.lib.MReference;
 import minestrapteam.minestrappolation.tileentity.TileEntityStoneCutter;
@@ -16,9 +15,8 @@ import org.lwjgl.opengl.GL11;
 @SideOnly(Side.CLIENT)
 public class GuiStoneCutter extends GuiContainer
 {
-	private static final ResourceLocation texture = new ResourceLocation(MReference.MODID, "textures/gui/stonecutter.png");
-	
-	private TileEntityStoneCutter	stonecutter;
+	private static final ResourceLocation	texture	= new ResourceLocation(MReference.MODID, "textures/gui/stonecutter.png");
+	private TileEntityStoneCutter			stonecutter;
 	
 	public GuiStoneCutter(EntityPlayer player, TileEntityStoneCutter stonecutter)
 	{

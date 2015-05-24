@@ -1,6 +1,5 @@
 package minestrapteam.minestrappolation.inventory.gui;
 
-
 import minestrapteam.minestrappolation.inventory.container.ContainerMelter;
 import minestrapteam.minestrappolation.lib.MReference;
 import minestrapteam.minestrappolation.tileentity.TileEntityMelter;
@@ -13,9 +12,9 @@ import org.lwjgl.opengl.GL11;
 
 public class GuiMelter extends GuiContainer
 {
-	private static final ResourceLocation texture = new ResourceLocation(MReference.MODID, "textures/gui/melter.png");
+	private static final ResourceLocation	texture	= new ResourceLocation(MReference.MODID, "textures/gui/melter.png");
 	
-	private TileEntityMelter		melter;
+	private TileEntityMelter				melter;
 	
 	public GuiMelter(EntityPlayer player, TileEntityMelter melter)
 	{

@@ -1,15 +1,11 @@
 package minestrapteam.minestrappolation.block.ore;
 
-
-import java.util.Random;
-
 import minestrapteam.minestrappolation.block.BlockRadiation;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.BlockPos;
@@ -38,13 +34,11 @@ public class BlockUraniumOre extends BlockRadiation
 		}
 	}
 	
-	
 	@Override
 	public int getExpDrop(IBlockAccess world, BlockPos pos, int fortune)
 	{
 		return 5 + fortune;
 	}
-	
 	
 	@Override
 	public void onBlockDestroyedByExplosion(World world, BlockPos pos, Explosion explosion)

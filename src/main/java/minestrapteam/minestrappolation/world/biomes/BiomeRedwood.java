@@ -9,9 +9,6 @@ import net.minecraft.block.BlockDirt;
 import net.minecraft.block.BlockTallGrass;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
-import net.minecraft.util.MathHelper;
-import net.minecraft.world.ColorizerFoliage;
-import net.minecraft.world.ColorizerGrass;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.ChunkPrimer;
@@ -51,17 +48,17 @@ public class BiomeRedwood extends BiomeGenBase
 	
 	@Override
 	@SideOnly(Side.CLIENT)
-    public int getGrassColorAtPos(BlockPos p_180627_1_)
-    {
-        return 1928747;
-    }
-
+	public int getGrassColorAtPos(BlockPos p_180627_1_)
+	{
+		return 1928747;
+	}
+	
 	@Override
-    @SideOnly(Side.CLIENT)
-    public int getFoliageColorAtPos(BlockPos p_180625_1_)
-    {
-        return 1928747;
-    }
+	@SideOnly(Side.CLIENT)
+	public int getFoliageColorAtPos(BlockPos p_180625_1_)
+	{
+		return 1928747;
+	}
 	
 	@Override
 	public void genTerrainBlocks(World worldIn, Random rand, ChunkPrimer primer, int p_180622_4_, int p_180622_5_, double noise)
@@ -79,7 +76,8 @@ public class BiomeRedwood extends BiomeGenBase
 			this.topBlock = Blocks.dirt.getStateFromMeta(BlockDirt.DirtType.PODZOL.getMetadata());
 		}
 		
-		this.generateBiomeTerrain(worldIn, rand, primer, p_180622_4_, p_180622_5_, noise);;
+		this.generateBiomeTerrain(worldIn, rand, primer, p_180622_4_, p_180622_5_, noise);
+		;
 	}
 	
 	@Override

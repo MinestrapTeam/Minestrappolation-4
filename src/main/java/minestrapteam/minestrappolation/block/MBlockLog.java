@@ -36,7 +36,7 @@ public class MBlockLog extends BlockLog
 													}
 												});
 	
-	private int flammability;
+	private int							flammability;
 	
 	public MBlockLog(int flame)
 	{
@@ -121,8 +121,8 @@ public class MBlockLog extends BlockLog
 	
 	@Override
 	public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face)
-    {
-        return this.flammability;
-    }
+	{
+		return this.flammability;
+	}
 	
 }

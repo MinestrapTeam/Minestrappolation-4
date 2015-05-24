@@ -8,9 +8,7 @@ import java.util.List;
 import minestrapteam.minestrappolation.enumtypes.MStoneType;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MItems;
-import minestrapteam.minestrappolation.util.MelterRecipes;
 import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
@@ -21,13 +19,13 @@ public class StonecuttingManager
 	private static final StonecuttingManager	instance	= new StonecuttingManager();
 	
 	/** A list of all the recipes added */
-	private List<ICuttingRecipes>			recipes		= new ArrayList();
-	private boolean							listSorted;
+	private List<ICuttingRecipes>				recipes		= new ArrayList();
+	private boolean								listSorted;
 	
 	public static StonecuttingManager instance()
-    {
-        return instance;
-    }
+	{
+		return instance;
+	}
 	
 	private StonecuttingManager()
 	{
@@ -56,9 +54,7 @@ public class StonecuttingManager
 		for (ICuttingRecipes recipe : this.getRecipeList())
 		{
 			if (recipe.matches(inventory, extra, world))
-			{
 				return recipe.getCraftingResult(inventory, extra);
-			}
 		}
 		
 		return null;

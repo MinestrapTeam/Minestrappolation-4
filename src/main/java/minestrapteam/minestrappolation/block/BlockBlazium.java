@@ -13,9 +13,10 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.world.World;
 
-public class BlockBlazium extends MBlock{
-
-	public BlockBlazium(Material materialIn, MapColor mapColorIn) 
+public class BlockBlazium extends MBlock
+{
+	
+	public BlockBlazium(Material materialIn, MapColor mapColorIn)
 	{
 		super(materialIn, mapColorIn);
 		this.setTickRandomly(true);
@@ -23,10 +24,10 @@ public class BlockBlazium extends MBlock{
 	
 	@Override
 	public void onNeighborBlockChange(World worldIn, BlockPos pos, IBlockState state, Block neighborBlock)
-    {
-        this.updateTick(worldIn, pos, state, worldIn.rand);
-        worldIn.scheduleUpdate(pos, this, this.tickRate(worldIn));
-    }
+	{
+		this.updateTick(worldIn, pos, state, worldIn.rand);
+		worldIn.scheduleUpdate(pos, this, this.tickRate(worldIn));
+	}
 	
 	@Override
 	public void randomDisplayTick(World world, BlockPos pos, IBlockState state, Random random)
@@ -53,69 +54,65 @@ public class BlockBlazium extends MBlock{
 	
 	@Override
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
-    {
-		if(Config.blaziumFireEffect)
+	{
+		if (Config.blaziumFireEffect)
 		{
 			int i = rand.nextInt(3);
-            if (i > 0)
-            {
-                BlockPos blockpos1 = pos;
-
-                for (int j = 0; j < i; ++j)
-                {
-                    blockpos1 = blockpos1.add(rand.nextInt(3) - 1, 1, rand.nextInt(3) - 1);
-                    Block block = worldIn.getBlockState(blockpos1).getBlock();
-
-                    if (block.getMaterial() == Material.air)
-                    {
-                        if (this.isSurroundingBlockFlammable(worldIn, blockpos1))
-                        {
-                            worldIn.setBlockState(blockpos1, Blocks.fire.getDefaultState());
-                            return;
-                        }
-                    }
-                    else if (block.getMaterial().blocksMovement())
-                    {
-                        return;
-                    }
-                }
-            }
-            else
-            {
-                for (int k = 0; k < 3; ++k)
-                {
-                    BlockPos blockpos2 = pos.add(rand.nextInt(3) - 1, 0, rand.nextInt(3) - 1);
-
-                    if (worldIn.isAirBlock(blockpos2.up()) && this.getCanBlockBurn(worldIn, blockpos2))
-                    {
-                        worldIn.setBlockState(blockpos2.up(), Blocks.fire.getDefaultState());
-                    }
-                }
-            } 	
-		}         
-    }
+			if (i > 0)
+			{
+				BlockPos blockpos1 = pos;
+				
+				for (int j = 0; j < i; ++j)
+				{
+					blockpos1 = blockpos1.add(rand.nextInt(3) - 1, 1, rand.nextInt(3) - 1);
+					Block block = worldIn.getBlockState(blockpos1).getBlock();
+					
+					if (block.getMaterial() == Material.air)
+					{
+						if (this.isSurroundingBlockFlammable(worldIn, blockpos1))
+						{
+							worldIn.setBlockState(blockpos1, Blocks.fire.getDefaultState());
+							return;
+						}
+					}
+					else if (block.getMaterial().blocksMovement())
+						return;
+				}
+			}
+			else
+			{
+				for (int k = 0; k < 3; ++k)
+				{
+					BlockPos blockpos2 = pos.add(rand.nextInt(3) - 1, 0, rand.nextInt(3) - 1);
+					
+					if (worldIn.isAirBlock(blockpos2.up()) && this.getCanBlockBurn(worldIn, blockpos2))
+					{
+						worldIn.setBlockState(blockpos2.up(), Blocks.fire.getDefaultState());
+					}
+				}
+			}
+		}
+	}
 	
 	protected boolean isSurroundingBlockFlammable(World worldIn, BlockPos pos)
-    {
-        EnumFacing[] aenumfacing = EnumFacing.values();
-        int i = aenumfacing.length;
-
-        for (int j = 0; j < i; ++j)
-        {
-            EnumFacing enumfacing = aenumfacing[j];
-
-            if (this.getCanBlockBurn(worldIn, pos.offset(enumfacing)))
-            {
-                return true;
-            }
-        }
-
-        return false;
-    }
+	{
+		EnumFacing[] aenumfacing = EnumFacing.values();
+		int i = aenumfacing.length;
+		
+		for (int j = 0; j < i; ++j)
+		{
+			EnumFacing enumfacing = aenumfacing[j];
+			
+			if (this.getCanBlockBurn(worldIn, pos.offset(enumfacing)))
+				return true;
+		}
+		
+		return false;
+	}
 	
 	private boolean getCanBlockBurn(World worldIn, BlockPos p_176368_2_)
-    {
-        return worldIn.getBlockState(p_176368_2_).getBlock().getMaterial().getCanBurn();
-    }
-
+	{
+		return worldIn.getBlockState(p_176368_2_).getBlock().getMaterial().getCanBurn();
+	}
+	
 }

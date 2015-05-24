@@ -4,8 +4,11 @@ import minestrapteam.minestrappolation.crafting.stonecutter.StonecuttingManager;
 import minestrapteam.minestrappolation.inventory.slot.SlotStoneCutter;
 import minestrapteam.minestrappolation.tileentity.TileEntityStoneCutter;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.inventory.*;
+import net.minecraft.inventory.Container;
+import net.minecraft.inventory.IInventory;
+import net.minecraft.inventory.InventoryCraftResult;
+import net.minecraft.inventory.InventoryCrafting;
+import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
 public class ContainerStoneCutter extends Container
@@ -100,30 +103,22 @@ public class ContainerStoneCutter extends Container
 			if (slotID == 0)
 			{
 				if (!this.mergeItemStack(itemstack1, 10, 46, true))
-				{
 					return null;
-				}
 				
 				slot.onSlotChange(itemstack1, itemstack);
 			}
 			else if (slotID >= 10 && slotID < 37)
 			{
 				if (!this.mergeItemStack(itemstack1, 37, 46, false))
-				{
 					return null;
-				}
 			}
 			else if (slotID >= 37 && slotID < 46)
 			{
 				if (!this.mergeItemStack(itemstack1, 10, 37, false))
-				{
 					return null;
-				}
 			}
 			else if (!this.mergeItemStack(itemstack1, 10, 46, false))
-			{
 				return null;
-			}
 			
 			if (itemstack1.stackSize == 0)
 			{
@@ -135,9 +130,7 @@ public class ContainerStoneCutter extends Container
 			}
 			
 			if (itemstack1.stackSize == itemstack.stackSize)
-			{
 				return null;
-			}
 			
 			slot.onPickupFromSlot(player, itemstack1);
 		}

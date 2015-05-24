@@ -1,7 +1,5 @@
 package minestrapteam.minestrappolation.item;
 
-import minestrapteam.minestrappolation.enumtypes.MWoodType;
-import minestrapteam.minestrappolation.lib.MBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
@@ -27,10 +25,10 @@ public class ItemBlockPermaFrost extends ItemBlock
 	
 	@Override
 	@SideOnly(Side.CLIENT)
-    public int getColorFromItemStack(ItemStack stack, int renderPass)
-    {
-        return 10420217;
-    }
+	public int getColorFromItemStack(ItemStack stack, int renderPass)
+	{
+		return 10420217;
+	}
 	
 	@Override
 	public String getUnlocalizedName(ItemStack item)

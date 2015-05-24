@@ -1,6 +1,5 @@
 package minestrapteam.minestrappolation.world;
 
-import java.util.List;
 import java.util.Random;
 
 import net.minecraft.block.Block;
@@ -15,15 +14,15 @@ public abstract class WorldGenBaseTree extends WorldGenAbstractTree
 	protected IBlockState	wood;
 	protected IBlockState	leaves;
 	
-	public int		minHeight;
-	public int		maxHeight;
-	public int		width;
+	public int				minHeight;
+	public int				maxHeight;
+	public int				width;
 	
-	public int		topHeight;
+	public int				topHeight;
 	
-	public Block[]  canGrowOn;
+	public Block[]			canGrowOn;
 	
-	public WorldGenBaseTree(IBlockState wood, IBlockState leaves, int minHeight, int maxHeight, int width,Block...blocks)
+	public WorldGenBaseTree(IBlockState wood, IBlockState leaves, int minHeight, int maxHeight, int width, Block... blocks)
 	{
 		super(true);
 		this.wood = wood;
@@ -61,15 +60,15 @@ public abstract class WorldGenBaseTree extends WorldGenAbstractTree
 		IBlockState ground = world.getBlockState(pos.add(0, -1, 0));
 		Block groundBlock = Blocks.grass;
 		
-		for(int b = 0; b < this.canGrowOn.length; b++)
+		for (Block element : this.canGrowOn)
 		{
-			if(ground.getBlock() == this.canGrowOn[b])
+			if (ground.getBlock() == element)
 			{
 				groundBlock = ground.getBlock();
 				continue;
 			}
-		}	
-			
+		}
+		
 		return ground.getBlock() == groundBlock;
 	}
 	

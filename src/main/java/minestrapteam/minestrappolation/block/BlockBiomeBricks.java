@@ -4,7 +4,6 @@ import java.util.List;
 
 import minestrapteam.minestrappolation.Minestrappolation;
 import minestrapteam.minestrappolation.enumtypes.MStoneType;
-import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MReference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -71,7 +70,7 @@ public class BlockBiomeBricks extends Block
 	{
 		return ((MStoneType) state.getValue(VARIANT)).getMetadata();
 	}
-
+	
 	public static void preinventoryRender()
 	{
 		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "biome_bricks");
@@ -96,7 +95,7 @@ public class BlockBiomeBricks extends Block
 		for (int j = 0; j < i; ++j)
 		{
 			MStoneType enumtype = aenumtype[j];
-			ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(MReference.MODID + ":"+enumtype.getUnlocalizedName()+"_bricks", "inventory");
+			ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(MReference.MODID + ":" + enumtype.getUnlocalizedName() + "_bricks", "inventory");
 			Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, enumtype.getMetadata(), itemModelResourceLocation);
 		}
 	}

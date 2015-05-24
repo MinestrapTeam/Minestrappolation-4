@@ -2,7 +2,6 @@ package minestrapteam.minestrappolation.inventory.container;
 
 import java.util.List;
 
-import minestrapteam.minestrappolation.inventory.slot.SlotMelter;
 import minestrapteam.minestrappolation.tileentity.TileEntityAlloy;
 import minestrapteam.minestrappolation.tileentity.TileEntityMelter;
 import minestrapteam.minestrappolation.util.MelterRecipes;
@@ -14,10 +13,10 @@ import net.minecraft.item.ItemStack;
 
 public class ContainerAlloy extends MinistrappolationInventoryHandler
 {
-	private TileEntityAlloy	    furnace;
-	private int					lastSmeltTime;
-	private int					lastBurnTime;
-	private int					lastMaxBurnTime;
+	private TileEntityAlloy	furnace;
+	private int				lastSmeltTime;
+	private int				lastBurnTime;
+	private int				lastMaxBurnTime;
 	
 	public ContainerAlloy(EntityPlayer player, TileEntityAlloy furnace)
 	{
@@ -102,44 +101,32 @@ public class ContainerAlloy extends MinistrappolationInventoryHandler
 			if (slotID < 4)
 			{
 				if (!this.mergeItemStack(itemstack1, 4, 40, true))
-				{
 					return null;
-				}
 			}
 			else if (MelterRecipes.instance().getResult(itemstack1) != null)
 			{
 				if (!this.mergeItemStack(itemstack1, 1, 2, false))
-				{
 					return null;
-				}
 			}
 			else if (TileEntityMelter.isItemFuel(itemstack1))
 			{
 				if (!this.mergeItemStack(itemstack1, 0, 1, false))
-				{
 					return null;
-				}
 			}
 			else if (itemstack1.getItem().getContainerItem(itemstack1) != null)
 			{
 				if (!this.mergeItemStack(itemstack1, 3, 4, false))
-				{
 					return null;
-				}
 			}
 			else if (slotID >= 3 && slotID < 30)
 			{
 				if (!this.mergeItemStack(itemstack1, 31, 40, false))
-				{
 					return null;
-				}
 			}
 			else if (slotID >= 30 && slotID < 39)
 			{
 				if (!this.mergeItemStack(itemstack1, 4, 31, false))
-				{
 					return null;
-				}
 			}
 			
 			if (itemstack1.stackSize == 0)
@@ -152,9 +139,7 @@ public class ContainerAlloy extends MinistrappolationInventoryHandler
 			}
 			
 			if (itemstack1.stackSize == itemstack.stackSize)
-			{
 				return null;
-			}
 			
 			slot.onPickupFromSlot(player, itemstack);
 		}

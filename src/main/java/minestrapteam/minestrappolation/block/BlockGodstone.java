@@ -7,7 +7,6 @@ import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EnumCreatureAttribute;
-import net.minecraft.entity.monster.EntityEnderman;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
@@ -25,11 +24,12 @@ public class BlockGodstone extends MBlock
 		this.setLightLevel(1F);
 	}
 	
+	@Override
 	@SideOnly(Side.CLIENT)
-    public EnumWorldBlockLayer getBlockLayer()
-    {
-        return EnumWorldBlockLayer.TRANSLUCENT;
-    }
+	public EnumWorldBlockLayer getBlockLayer()
+	{
+		return EnumWorldBlockLayer.TRANSLUCENT;
+	}
 	
 	@Override
 	public void onBlockAdded(World world, BlockPos pos, IBlockState state)
@@ -43,7 +43,7 @@ public class BlockGodstone extends MBlock
 		if (!world.isRemote)
 		{
 			world.scheduleUpdate(pos, this, 5);
-			AxisAlignedBB axisalignedbb = this.getCollisionBoundingBox(world, pos,state).expand(6, 6, 6);
+			AxisAlignedBB axisalignedbb = this.getCollisionBoundingBox(world, pos, state).expand(6, 6, 6);
 			List<EntityMob> list = world.getEntitiesWithinAABB(EntityMob.class, axisalignedbb);
 			for (EntityMob mob : list)
 			{

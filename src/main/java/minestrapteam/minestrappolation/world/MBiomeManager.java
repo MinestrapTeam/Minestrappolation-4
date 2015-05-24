@@ -15,7 +15,7 @@ public class MBiomeManager
 	private static int			nextBiomeID	= 50;
 	
 	public static BiomeGenBase	redwood;
-	public static BiomeGenBase frost;
+	public static BiomeGenBase	frost;
 	
 	public static void load()
 	{
@@ -35,7 +35,7 @@ public class MBiomeManager
 	{
 		BiomeDictionary.registerBiomeType(biome, forgeType);
 		BiomeManager.addBiome(type, new BiomeEntry(biome, id));
-		if(canSpawnIn)
+		if (canSpawnIn)
 		{
 			BiomeManager.addSpawnBiome(biome);
 		}

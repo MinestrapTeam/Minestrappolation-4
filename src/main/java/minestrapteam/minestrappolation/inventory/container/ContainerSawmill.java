@@ -3,7 +3,6 @@ package minestrapteam.minestrappolation.inventory.container;
 import minestrapteam.minestrappolation.crafting.sawmill.SawingManager;
 import minestrapteam.minestrappolation.tileentity.TileEntitySawMill;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.ContainerWorkbench;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.world.World;

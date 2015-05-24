@@ -136,12 +136,12 @@ public class MItems extends Item
 	public static Item							titanium_leggings;
 	public static Item							titanium_boots;
 	
-	public static Item							radiant_quartz;	
+	public static Item							radiant_quartz;
 	public static Item							meurodite_gem;
 	public static Item							soul_gem;
 	public static Item							torite_ingot;
-	public static Item 							desert_quartz_item;
-	public static Item 							blaze_shard;
+	public static Item							desert_quartz_item;
+	public static Item							blaze_shard;
 	
 	public static Item							chunks;
 	
@@ -274,14 +274,14 @@ public class MItems extends Item
 		titanium_chestplate = new ItemMArmor(ARMOR_TITANIUM, 0, 1, titanium_ingot).setUnlocalizedName("titanium_chestplate").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		titanium_leggings = new ItemMArmor(ARMOR_TITANIUM, 0, 2, titanium_ingot).setUnlocalizedName("titanium_leggings").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		titanium_boots = new ItemMArmor(ARMOR_TITANIUM, 0, 3, titanium_ingot).setUnlocalizedName("titanium_boots").setCreativeTab(Minestrappolation.tabMinistrappolation);
-	
+		
 		radiant_quartz = new MItemFoiled().setUnlocalizedName("radiant_quartz").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		meurodite_gem = new Item().setUnlocalizedName("meurodite_gem").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		torite_ingot = new Item().setUnlocalizedName("torite_ingot").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		desert_quartz_item = new Item().setUnlocalizedName("desert_quartz_item").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		blaze_shard = new Item().setUnlocalizedName("blaze_shard").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		soul_gem = new ItemSoulGem().setUnlocalizedName("soul_gem").setCreativeTab(Minestrappolation.tabMinistrappolation);
-	
+		
 		chunks = new ItemChunk().setUnlocalizedName("chunks").setCreativeTab(Minestrappolation.tabMinistrappolation);
 		
 		addItemsToChests();
@@ -404,7 +404,7 @@ public class MItems extends Item
 		GameRegistry.registerItem(meurodite_gem, meurodite_gem.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(blaze_shard, blaze_shard.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(soul_gem, soul_gem.getUnlocalizedName().substring(5));
-		GameRegistry.registerItem(torite_ingot, torite_ingot.getUnlocalizedName().substring(5));		
+		GameRegistry.registerItem(torite_ingot, torite_ingot.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(desert_quartz_item, desert_quartz_item.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerItem(chunks, chunks.getUnlocalizedName().substring(5));

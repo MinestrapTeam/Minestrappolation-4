@@ -28,62 +28,38 @@ public class BlockBiomeRedstone extends MBlockOre
 {
 	
 	private static final PropertyEnum	VARIANT	= PropertyEnum.create("type", MStoneType.class);
-	//private final boolean isOn;
+	
+	// private final boolean isOn;
 	
 	public BlockBiomeRedstone(int range, int rate, Material material, MapColor mapColor, Item itemDrop, int meta, int expMin, int expMax, int dropAmount, int bonusAmount, String tool, int level, boolean silkHarvest)
 	{
-		super(material, mapColor, itemDrop, meta, expMin, expMax, dropAmount,bonusAmount, tool, level, silkHarvest);
+		super(material, mapColor, itemDrop, meta, expMin, expMax, dropAmount, bonusAmount, tool, level, silkHarvest);
 		this.setCreativeTab(Minestrappolation.tabMinistrappolation);
 		this.setUnlocalizedName("biome_redstone");
 		/*
-		if (isOn)
-        {
-            this.setTickRandomly(true);
-        }
-
-        this.isOn = isOn;*/
+		 * if (isOn) { this.setTickRandomly(true); } this.isOn = isOn;
+		 */
 	}
 	
-	/*public int tickRate(World worldIn)
-    {
-        return 30;
-    }
-	
-	public void onBlockClicked(World worldIn, BlockPos pos, EntityPlayer playerIn)
-    {
-        this.activate(worldIn, pos);
-        super.onBlockClicked(worldIn, pos, playerIn);
-    }
-	
-	public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, Entity entityIn)
-    {
-        this.activate(worldIn, pos);
-        super.onEntityCollidedWithBlock(worldIn, pos, entityIn);
-    }
-
-    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ)
-    {
-        this.activate(worldIn, pos);
-        return super.onBlockActivated(worldIn, pos, state, playerIn, side, hitX, hitY, hitZ);
-    }
-
-    private void activate(World worldIn, BlockPos pos)
-    {
-        this.spawnParticles(worldIn, pos);
-
-        if (this == MBlocks.biome_redstone)
-        {
-            worldIn.setBlockState(pos, MBlocks.biome_coal.getStateFromMeta(this.getMetaFromState((MStoneType))));
-        }
-    }
-
-    public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
-    {
-        if (this == Blocks.lit_redstone_ore)
-        {
-            worldIn.setBlockState(pos, Blocks.redstone_ore.getDefaultState());
-        }
-    }*/
+	/*
+	 * public int tickRate(World worldIn) { return 30; } public void
+	 * onBlockClicked(World worldIn, BlockPos pos, EntityPlayer playerIn) {
+	 * this.activate(worldIn, pos); super.onBlockClicked(worldIn, pos,
+	 * playerIn); } public void onEntityCollidedWithBlock(World worldIn,
+	 * BlockPos pos, Entity entityIn) { this.activate(worldIn, pos);
+	 * super.onEntityCollidedWithBlock(worldIn, pos, entityIn); } public boolean
+	 * onBlockActivated(World worldIn, BlockPos pos, IBlockState state,
+	 * EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float
+	 * hitZ) { this.activate(worldIn, pos); return
+	 * super.onBlockActivated(worldIn, pos, state, playerIn, side, hitX, hitY,
+	 * hitZ); } private void activate(World worldIn, BlockPos pos) {
+	 * this.spawnParticles(worldIn, pos); if (this == MBlocks.biome_redstone) {
+	 * worldIn.setBlockState(pos,
+	 * MBlocks.biome_coal.getStateFromMeta(this.getMetaFromState
+	 * ((MStoneType)))); } } public void updateTick(World worldIn, BlockPos pos,
+	 * IBlockState state, Random rand) { if (this == Blocks.lit_redstone_ore) {
+	 * worldIn.setBlockState(pos, Blocks.redstone_ore.getDefaultState()); } }
+	 */
 	
 	@Override
 	protected BlockState createBlockState()
@@ -148,23 +124,19 @@ public class BlockBiomeRedstone extends MBlockOre
 		for (int j = 0; j < i; ++j)
 		{
 			MStoneType enumtype = aenumtype[j];
-			ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(MReference.MODID + ":"+enumtype.getUnlocalizedName()+"_redstone", "inventory");
+			ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(MReference.MODID + ":" + enumtype.getUnlocalizedName() + "_redstone", "inventory");
 			Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, enumtype.getMetadata(), itemModelResourceLocation);
 		}
 	}
 	
 	@Override
 	public float getBlockHardness(World worldIn, BlockPos pos)
-    {
+	{
 		IBlockState state = worldIn.getBlockState(pos);
-		if(state == this.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()) || state == this.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()) || state == this.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()) || state == this.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()) || state == this.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()))
-		{
+		if (state == this.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()) || state == this.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()) || state == this.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()) || state == this.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()) || state == this.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()))
 			return 1.5F * this.blockHardness;
-		}
 		else
-		{
 			return this.blockHardness;
-		}
-    }
-
+	}
+	
 }

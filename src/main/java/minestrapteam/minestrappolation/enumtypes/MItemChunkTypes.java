@@ -10,9 +10,9 @@ public enum MItemChunkTypes implements IStringSerializable
 	TIN(3, "tin"),
 	COPPER(4, "copper");
 	private static final MItemChunkTypes[]	META_LOOKUP	= new MItemChunkTypes[values().length];
-	private final int					meta;
-	private final String				name;
-	private final String				unlocalizedName;
+	private final int						meta;
+	private final String					name;
+	private final String					unlocalizedName;
 	
 	private MItemChunkTypes(int meta, String name)
 	{

@@ -2,7 +2,7 @@ package minestrapteam.minestrappolation.tileentity;
 
 public class TileEntitySawMill extends TileEntityInventory
 {
-
+	
 	@Override
 	public int getSizeInventory()
 	{

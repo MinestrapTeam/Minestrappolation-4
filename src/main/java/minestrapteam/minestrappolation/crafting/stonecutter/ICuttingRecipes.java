@@ -1,6 +1,5 @@
 package minestrapteam.minestrappolation.crafting.stonecutter;
 
-
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;

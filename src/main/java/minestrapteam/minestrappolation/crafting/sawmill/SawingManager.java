@@ -5,10 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import minestrapteam.minestrappolation.lib.MBlocks;
-import minestrapteam.minestrappolation.lib.MItems;
 import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
@@ -53,9 +50,7 @@ public class SawingManager
 		for (IRecipe recipe : this.getRecipeList())
 		{
 			if (recipe.matches(inventory, world))
-			{
 				return recipe.getCraftingResult(inventory);
-			}
 		}
 		
 		return null;

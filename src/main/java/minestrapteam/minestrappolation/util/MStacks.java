@@ -4,7 +4,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
-public class MStacks {
+public class MStacks
+{
 	public static boolean equals(ItemStack input, ItemStack target)
 	{
 		return itemEquals(input, target);
@@ -23,6 +24,6 @@ public class MStacks {
 	
 	public static boolean equals(Item item1, int meta1, int amount, Item item2, int meta2, int amount2)
 	{
-		return item1 == item2 && (meta1 == meta2 || meta1 == OreDictionary.WILDCARD_VALUE || meta2 == OreDictionary.WILDCARD_VALUE) && (amount >= amount2);
+		return item1 == item2 && (meta1 == meta2 || meta1 == OreDictionary.WILDCARD_VALUE || meta2 == OreDictionary.WILDCARD_VALUE) && amount >= amount2;
 	}
 }

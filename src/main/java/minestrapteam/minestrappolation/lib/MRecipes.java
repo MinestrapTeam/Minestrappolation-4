@@ -1,18 +1,10 @@
 package minestrapteam.minestrappolation.lib;
 
-import java.util.Iterator;
-import java.util.List;
-
-import minestrapteam.minestrappolation.Minestrappolation;
-import minestrapteam.minestrappolation.block.BlockBiomeBricks;
 import minestrapteam.minestrappolation.util.RecipeHelper;
-import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.CraftingManager;
-import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class MRecipes
@@ -42,7 +34,7 @@ public class MRecipes
 		GameRegistry.addSmelting(MBlocks.sunstone_ore, new ItemStack(MItems.sunstone_shard), 1.0F);
 		GameRegistry.addSmelting(MBlocks.biome_sunstone, new ItemStack(MItems.sunstone_shard), 1.0F);
 		GameRegistry.addRecipe(new ItemStack(MBlocks.sunstone_block), new Object[] { "SS", "SS", 'S', MItems.sunstone_shard });
-		GameRegistry.addRecipe(new ItemStack(MBlocks.godstone), new Object[] { "SGS", "PEP", "SGS", 'S', MItems.sunstone_shard, 'G', Items.glowstone_dust, 'P', Items.prismarine_crystals, 'E', Blocks.end_stone});
+		GameRegistry.addRecipe(new ItemStack(MBlocks.godstone), new Object[] { "SGS", "PEP", "SGS", 'S', MItems.sunstone_shard, 'G', Items.glowstone_dust, 'P', Items.prismarine_crystals, 'E', Blocks.end_stone });
 		
 		GameRegistry.addSmelting(MBlocks.meurodite_ore, new ItemStack(MItems.meurodite_gem), 1.0F);
 		GameRegistry.addSmelting(MBlocks.biome_meurodite, new ItemStack(MItems.meurodite_gem), 1.0F);
@@ -50,11 +42,15 @@ public class MRecipes
 		GameRegistry.addSmelting(MBlocks.torite_ore, new ItemStack(MItems.torite_ingot), 1.2F);
 		GameRegistry.addSmelting(MBlocks.biome_torite, new ItemStack(MItems.torite_ingot), 1.2F);
 		
-		//GameRegistry.addSmelting(MBlocks.plutonium_ore, new ItemStack(MItems.plutonium), 1.0F);
-		//GameRegistry.addSmelting(MBlocks.biome_plutonium, new ItemStack(MItems.plutonium), 1.0F);
+		// GameRegistry.addSmelting(MBlocks.plutonium_ore, new
+		// ItemStack(MItems.plutonium), 1.0F);
+		// GameRegistry.addSmelting(MBlocks.biome_plutonium, new
+		// ItemStack(MItems.plutonium), 1.0F);
 		
-		//GameRegistry.addSmelting(MBlocks.uranium_ore, new ItemStack(MItems.uranium), 1.0F);
-		//GameRegistry.addSmelting(MBlocks.biome_uranium, new ItemStack(MItems.uranium), 1.0F);
+		// GameRegistry.addSmelting(MBlocks.uranium_ore, new
+		// ItemStack(MItems.uranium), 1.0F);
+		// GameRegistry.addSmelting(MBlocks.biome_uranium, new
+		// ItemStack(MItems.uranium), 1.0F);
 		
 		GameRegistry.addSmelting(MBlocks.desert_quartz, new ItemStack(MItems.desert_quartz_item), 0.2F);
 		
@@ -92,7 +88,7 @@ public class MRecipes
 		GameRegistry.addRecipe(new ItemStack(MBlocks.redwood_door_item, 3), new Object[] { "WW", "WW", "WW", 'W', new ItemStack(MBlocks.ministrapp_planks, 1, 0) });
 		GameRegistry.addRecipe(new ItemStack(MBlocks.redwood_stairs, 4), new Object[] { "W  ", "WW ", "WWW", 'W', new ItemStack(MBlocks.ministrapp_planks, 1, 0) });
 		
-		//Stones
+		// Stones
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.stone_brick, 4), new Object[] { new ItemStack(Blocks.stone, 1, 0) });
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.deepstone_brick, 4), new Object[] { new ItemStack(MBlocks.biome_stones, 1, 0) });
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.red_rock_brick, 4), new Object[] { new ItemStack(MBlocks.biome_stones, 1, 1) });
@@ -133,7 +129,7 @@ public class MRecipes
 		GameRegistry.addRecipe(new ItemStack(MBlocks.stone_lamp_sunstone, 4), new Object[] { " S ", "SGS", " S ", 'S', new ItemStack(Blocks.stonebrick, 1, 3), 'G', MBlocks.sunstone_block });
 		GameRegistry.addRecipe(new ItemStack(MBlocks.stone_lamp_prismarine, 4), new Object[] { " S ", "SGS", " S ", 'S', new ItemStack(Blocks.stonebrick, 1, 3), 'G', Blocks.sea_lantern });
 		
-		//Tech
+		// Tech
 		GameRegistry.addRecipe(new ItemStack(MBlocks.alloy, 1), new Object[] { "TTT", "TFT", "BBB", 'T', new ItemStack(MItems.tin_plating), 'F', new ItemStack(Blocks.furnace), 'B', new ItemStack(MBlocks.biome_bricks, 1, 1) });
 		
 		// Tools and Weapons

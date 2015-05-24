@@ -35,7 +35,7 @@ public class MBlockSapling extends BlockBush implements IGrowable
 	
 	private static final PropertyEnum	TYPE	= PropertyEnum.create("type", MWoodType.class);
 	public static final PropertyInteger	STAGE	= PropertyInteger.create("stage", 0, 1);
-	private int flammability;
+	private int							flammability;
 	
 	public MBlockSapling(int flame)
 	{
@@ -198,17 +198,17 @@ public class MBlockSapling extends BlockBush implements IGrowable
 	{
 		this.grow(worldIn, pos, state, rand);
 	}
-
+	
 	@Override
-	public boolean canGrow(World worldIn, BlockPos pos, IBlockState state, boolean isClient) {
+	public boolean canGrow(World worldIn, BlockPos pos, IBlockState state, boolean isClient)
+	{
 		return true;
 	}
 	
 	@Override
 	public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face)
-    {
-        return this.flammability;
-    }
-
+	{
+		return this.flammability;
+	}
 	
 }

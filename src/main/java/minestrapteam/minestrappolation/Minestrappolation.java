@@ -54,7 +54,6 @@ public class Minestrappolation
 		{
 			NetworkRegistry.INSTANCE.registerGuiHandler(this, new MGuiHandler());
 		}
-	
 	}
 	
 	@EventHandler
@@ -70,6 +69,5 @@ public class Minestrappolation
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event)
 	{
-		
 	}
 }

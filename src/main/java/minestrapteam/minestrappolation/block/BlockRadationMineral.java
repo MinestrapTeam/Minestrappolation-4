@@ -12,17 +12,18 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 
-public class BlockRadationMineral extends BlockRadiation{
-
-	public BlockRadationMineral(int range, int rate, Material material, MapColor mapColor, Item itemDrop, int expMin, int expMax, int dropAmount, int bonusAmount, String tool, int level, boolean silkHarvest) 
+public class BlockRadationMineral extends BlockRadiation
+{
+	
+	public BlockRadationMineral(int range, int rate, Material material, MapColor mapColor, Item itemDrop, int expMin, int expMax, int dropAmount, int bonusAmount, String tool, int level, boolean silkHarvest)
 	{
 		super(range, rate, material, mapColor, itemDrop, expMin, expMax, dropAmount, bonusAmount, tool, level, silkHarvest);
 	}
-
+	
 	@Override
 	public void addPotionEffect(EntityLivingBase living, World world, BlockPos pos)
 	{
-		if(this == MBlocks.plutonium_block)
+		if (this == MBlocks.plutonium_block)
 		{
 			if (living instanceof EntitySkeleton)
 			{
@@ -35,7 +36,7 @@ public class BlockRadationMineral extends BlockRadiation{
 			}
 		}
 		
-		if(this == MBlocks.uranium_block)
+		if (this == MBlocks.uranium_block)
 		{
 			if (living instanceof EntityZombie)
 			{
@@ -48,5 +49,5 @@ public class BlockRadationMineral extends BlockRadiation{
 			}
 		}
 	}
-
+	
 }

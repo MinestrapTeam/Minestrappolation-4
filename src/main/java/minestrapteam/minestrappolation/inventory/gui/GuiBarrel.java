@@ -1,6 +1,5 @@
 package minestrapteam.minestrappolation.inventory.gui;
 
-
 import minestrapteam.minestrappolation.inventory.container.ContainerBarrel;
 import minestrapteam.minestrappolation.lib.MReference;
 import minestrapteam.minestrappolation.tileentity.TileEntityBarrel;
@@ -13,9 +12,8 @@ import net.minecraft.util.StatCollector;
 
 public class GuiBarrel extends GuiContainer
 {
-	
- 	private static final ResourceLocation texture = new ResourceLocation(MReference.MODID, "textures/gui/barrel.png");
-	private TileEntityBarrel		barrel;
+	private static final ResourceLocation	texture	= new ResourceLocation(MReference.MODID, "textures/gui/barrel.png");
+	private TileEntityBarrel				barrel;
 	
 	public GuiBarrel(EntityPlayer player, TileEntityBarrel barrel)
 	{
@@ -32,11 +30,12 @@ public class GuiBarrel extends GuiContainer
 	}
 	
 	@Override
-	protected void drawGuiContainerBackgroundLayer(float partialTicks, int x, int y) {
+	protected void drawGuiContainerBackgroundLayer(float partialTicks, int x, int y)
+	{
 		// Bind the image texture of our custom container
 		Minecraft.getMinecraft().getTextureManager().bindTexture(texture);
 		// Draw the image
 		GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-		drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
+		this.drawTexturedModalRect(this.guiLeft, this.guiTop, 0, 0, this.xSize, this.ySize);
 	}
 }

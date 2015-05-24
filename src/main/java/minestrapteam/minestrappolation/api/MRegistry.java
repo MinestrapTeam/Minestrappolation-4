@@ -7,8 +7,9 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class MRegistry {
-
+public class MRegistry
+{
+	
 	public static void addMelterRecipe(Block block, ItemStack stack, float xp)
 	{
 		MelterRecipes.instance().addRecipe(block, stack, xp);
@@ -38,5 +39,5 @@ public class MRegistry {
 	{
 		CrusherRecipes.instance().addRecipe(item, stack, xp, extra, chance);
 	}
-
+	
 }

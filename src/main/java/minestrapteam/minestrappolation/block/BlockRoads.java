@@ -3,7 +3,6 @@ package minestrapteam.minestrappolation.block;
 import java.util.List;
 
 import minestrapteam.minestrappolation.enumtypes.MRoadType;
-import minestrapteam.minestrappolation.enumtypes.MRoadType;
 import minestrapteam.minestrappolation.lib.MReference;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -30,20 +29,20 @@ public class BlockRoads extends MBlock
 	
 	private static final PropertyEnum	VARIANT	= PropertyEnum.create("type", MRoadType.class);
 	
-	public BlockRoads(Material materialIn, MapColor mapColorIn) 
+	public BlockRoads(Material materialIn, MapColor mapColorIn)
 	{
 		super(materialIn, mapColorIn);
 	}
 	
 	@Override
 	public AxisAlignedBB getCollisionBoundingBox(World worldIn, BlockPos pos, IBlockState state)
-    {
-        float f = 0.0625F;
-        return new AxisAlignedBB((double)((float)pos.getX() + f), (double)pos.getY(), (double)((float)pos.getZ() + f), (double)((float)(pos.getX() + 1) - f), (double)((float)(pos.getY() + 1) - f), (double)((float)(pos.getZ() + 1) - f));
-    }
+	{
+		float f = 0.0625F;
+		return new AxisAlignedBB(pos.getX() + f, pos.getY(), pos.getZ() + f, pos.getX() + 1 - f, pos.getY() + 1 - f, pos.getZ() + 1 - f);
+	}
 	
 	@Override
-	public void onEntityCollidedWithBlock(World world, BlockPos pos, IBlockState state, Entity entity) 
+	public void onEntityCollidedWithBlock(World world, BlockPos pos, IBlockState state, Entity entity)
 	{
 		double speed = MRoadType.byMetadata(this.getMetaFromState(state)).getSpeed();
 		entity.motionX *= speed;
@@ -88,7 +87,7 @@ public class BlockRoads extends MBlock
 	{
 		return ((MRoadType) state.getValue(VARIANT)).getMetadata();
 	}
-
+	
 	public static void preinventoryRender()
 	{
 		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "roads");
@@ -105,10 +104,9 @@ public class BlockRoads extends MBlock
 		for (int j = 0; j < i; ++j)
 		{
 			MRoadType enumtype = aenumtype[j];
-			ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(MReference.MODID + ":"+enumtype.getUnlocalizedName()+"_road", "inventory");
+			ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(MReference.MODID + ":" + enumtype.getUnlocalizedName() + "_road", "inventory");
 			Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, enumtype.getMetadata(), itemModelResourceLocation);
 		}
 	}
 	
-
 }

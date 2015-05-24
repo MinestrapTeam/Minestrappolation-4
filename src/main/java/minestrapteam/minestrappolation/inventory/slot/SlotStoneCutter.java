@@ -25,27 +25,24 @@ public class SlotStoneCutter extends SlotCrafting
 		
 		ItemStack extraSlotItem = this.extraSlotInv.getStackInSlot(0);
 		
-		if (this.extraSlotInv.getStackInSlot(0) != null)
+		if (this.extraSlotInv.getStackInSlot(0) == null)
+			return;
+		
+		this.extraSlotInv.decrStackSize(0, 1);
+		if (!extraSlotItem.getItem().hasContainerItem(extraSlotItem))
+			return;
+		
+		ItemStack extraSlotItemContainer = new ItemStack(extraSlotItem.getItem().getContainerItem());
+		if (extraSlotItem.getItem().hasContainerItem(extraSlotItem) && this.thePlayer.inventory.addItemStackToInventory(extraSlotItemContainer))
+			return;
+		
+		if (this.extraSlotInv.getStackInSlot(0) == null)
 		{
-			this.extraSlotInv.decrStackSize(0, 1);
-			
-			if (extraSlotItem.getItem().hasContainerItem())
-			{
-				ItemStack extraSlotItemContainer = new ItemStack(extraSlotItem.getItem().getContainerItem());
-				
-				if (!extraSlotItem.getItem().hasContainerItem(extraSlotItem) || !this.thePlayer.inventory.addItemStackToInventory(extraSlotItemContainer))
-				{
-					if (this.extraSlotInv.getStackInSlot(0) == null)
-					{
-						this.extraSlotInv.setInventorySlotContents(0, extraSlotItemContainer);
-					}
-					else
-					{
-						this.thePlayer.dropPlayerItemWithRandomChoice(extraSlotItemContainer, false);
-					}
-				}
-			}
+			this.extraSlotInv.setInventorySlotContents(0, extraSlotItemContainer);
+		}
+		else
+		{
+			this.thePlayer.dropPlayerItemWithRandomChoice(extraSlotItemContainer, false);
 		}
 	}
-	
 }
