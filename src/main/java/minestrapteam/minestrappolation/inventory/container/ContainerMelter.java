@@ -7,6 +7,7 @@ import minestrapteam.minestrappolation.tileentity.TileEntityMelter;
 import minestrapteam.minestrappolation.util.MelterRecipes;
 import minestrapteam.minestrappolation.util.MinistrappolationInventoryHandler;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
@@ -105,15 +106,15 @@ public class ContainerMelter extends MinistrappolationInventoryHandler
 			}
 			else if (MelterRecipes.instance().getResult(itemstack1) != null)
 			{
-				if (!this.mergeItemStack(itemstack1, 1, 2, false))
+				if (!this.mergeItemStack(itemstack1, 0, 1, false))
 					return null;
 			}
 			else if (TileEntityMelter.isItemFuel(itemstack1))
 			{
-				if (!this.mergeItemStack(itemstack1, 0, 1, false))
+				if (!this.mergeItemStack(itemstack1, 1, 2, false))
 					return null;
 			}
-			else if (itemstack1.getItem().getContainerItem(itemstack1) != null)
+			else if (itemstack1.getItem() == Items.bucket)
 			{
 				if (!this.mergeItemStack(itemstack1, 3, 4, false))
 					return null;

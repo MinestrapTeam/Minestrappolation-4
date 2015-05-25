@@ -4,6 +4,7 @@ import java.util.List;
 
 import minestrapteam.minestrappolation.tileentity.TileEntityAlloy;
 import minestrapteam.minestrappolation.tileentity.TileEntityMelter;
+import minestrapteam.minestrappolation.util.AlloyRecipes;
 import minestrapteam.minestrappolation.util.MelterRecipes;
 import minestrapteam.minestrappolation.util.MinistrappolationInventoryHandler;
 import net.minecraft.entity.player.EntityPlayer;
@@ -97,25 +98,14 @@ public class ContainerAlloy extends MinistrappolationInventoryHandler
 		{
 			ItemStack itemstack1 = slot.getStack();
 			itemstack = itemstack1.copy();
-			
 			if (slotID < 4)
 			{
 				if (!this.mergeItemStack(itemstack1, 4, 40, true))
 					return null;
 			}
-			else if (MelterRecipes.instance().getResult(itemstack1) != null)
+			else if (TileEntityAlloy.isItemFuel(itemstack1))
 			{
 				if (!this.mergeItemStack(itemstack1, 1, 2, false))
-					return null;
-			}
-			else if (TileEntityMelter.isItemFuel(itemstack1))
-			{
-				if (!this.mergeItemStack(itemstack1, 0, 1, false))
-					return null;
-			}
-			else if (itemstack1.getItem().getContainerItem(itemstack1) != null)
-			{
-				if (!this.mergeItemStack(itemstack1, 3, 4, false))
 					return null;
 			}
 			else if (slotID >= 3 && slotID < 30)

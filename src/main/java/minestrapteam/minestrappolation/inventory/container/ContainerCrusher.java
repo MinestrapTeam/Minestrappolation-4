@@ -106,17 +106,12 @@ public class ContainerCrusher extends MinistrappolationInventoryHandler
 			}
 			else if (CrusherRecipes.instance().getResult(itemstack1) != null)
 			{
-				if (!this.mergeItemStack(itemstack1, 1, 2, false))
+				if (!this.mergeItemStack(itemstack1, 0, 1, false))
 					return null;
 			}
 			else if (TileEntityCrusher.isItemFuel(itemstack1))
 			{
-				if (!this.mergeItemStack(itemstack1, 0, 1, false))
-					return null;
-			}
-			else if (itemstack1.getItem().getContainerItem(itemstack1) != null)
-			{
-				if (!this.mergeItemStack(itemstack1, 3, 4, false))
+				if (!this.mergeItemStack(itemstack1, 1, 2, false))
 					return null;
 			}
 			else if (slotID >= 3 && slotID < 30)
