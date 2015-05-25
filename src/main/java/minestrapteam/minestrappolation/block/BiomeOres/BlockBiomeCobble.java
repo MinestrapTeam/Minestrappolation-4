@@ -30,7 +30,7 @@ public class BlockBiomeCobble extends Block
 	public BlockBiomeCobble()
 	{
 		super(Material.rock);
-		this.setCreativeTab(Minestrappolation.tabMinistrappolation);
+		this.setCreativeTab(Minestrappolation.tabMBuilding);
 		this.setUnlocalizedName("biome_cobble");
 	}
 	

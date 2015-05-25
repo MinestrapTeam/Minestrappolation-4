@@ -33,7 +33,7 @@ public class MBlockPlanks extends Block
 	public MBlockPlanks(int flame)
 	{
 		super(Material.wood);
-		this.setCreativeTab(Minestrappolation.tabMinistrappolation);
+		this.setCreativeTab(Minestrappolation.tabMBuilding);
 		this.setUnlocalizedName("ministrapp_planks");
 		this.flammability = flame;
 	}

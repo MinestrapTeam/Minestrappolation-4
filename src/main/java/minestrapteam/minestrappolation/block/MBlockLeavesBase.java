@@ -35,7 +35,7 @@ public abstract class MBlockLeavesBase extends BlockLeavesBase implements net.mi
 	{
 		super(Material.leaves, false);
 		this.setTickRandomly(true);
-		this.setCreativeTab(Minestrappolation.tabMinistrappolation);
+		this.setCreativeTab(Minestrappolation.tabMDecor);
 		this.setHardness(0.2F);
 		this.setLightOpacity(1);
 		this.setStepSound(soundTypeGrass);

@@ -8,22 +8,7 @@
     "Inside Side": "ministrapp:blocks/crusher_interior_side",
     "Inside Top": "ministrapp:blocks/crusher_interior_top",
     "Piston Head Side": "ministrapp:blocks/crusher_piston_head_side_inactive",
-    "Piston Head 1": "ministrapp:blocks/crusher_piston_shaft_side_inactive",
-    "Piston Head 2": "ministrapp:blocks/crusher_piston_shaft_side_inactive",
-    "Piston Head 3": "ministrapp:crusher_piston_shaft_side_inactive",
     "Piston Head 4": "ministrapp:blocks/crusher_piston_head_bottom_inactive",
-    "Piston Head 5": "ministrapp:blocks/crusher_piston_shaft_side_inactive",
-    "Piston Head 6": "ministrapp:blocks/crusher_piston_shaft_side_inactive",
-    "Piston Head 7": "ministrapp:blocks/crusher_piston_shaft_side_inactive",
-    "Piston Head 8": "ministrapp:blocks/crusher_piston_shaft_side_inactive",
-    "Piston Head 9": "ministrapp:blocks/crusher_piston_shaft_side_inactive",
-    "Piston Head 10": "ministrapp:blocks/crusher_piston_shaft_side_inactive",
-    "Piston Head 11": "ministrapp:blocks/crusher_piston_shaft_side_inactive",
-    "Piston Head 12": "ministrapp:blocks/crusher_piston_shaft_side_inactive",
-    "Piston Head 13": "ministrapp:blocks/crusher_piston_shaft_side_inactive",
-    "Piston Head 14": "ministrapp:blocks/crusher_piston_shaft_side_inactive",
-    "Piston Head 15": "ministrapp:blocks/crusher_piston_shaft_side_inactive",
-    "Piston Shaft Side": "ministrapp:blocks/crusher_piston_shaft_side_inactive",
     "Side": "ministrapp:blocks/crusher_side",
     "Top": "ministrapp:blocks/crusher_top",
     "Glass": "ministrapp:blocks/glass_refined"
@@ -41,16 +26,6 @@
     }
 },
 {
-    "from": [ 6, 1, 6 ],
-    "to": [ 10, 15, 10 ],
-    "faces": {
-        "north": { "uv": [ 6, 1, 10, 15 ], "texture": "#Piston Shaft Side" },
-        "south": { "uv": [ 6, 1, 10, 15 ], "texture": "#Piston Shaft Side" },
-        "west":  { "uv": [ 6, 1, 10, 15 ], "texture": "#Piston Shaft Side" },
-        "east":  { "uv": [ 6, 1, 10, 15 ], "texture": "#Piston Shaft Side" }
-    }
-},
-{
     "from": [ 0, 0, 1 ],
     "to": [ 16, 1, 16 ],
     "faces": {
@@ -62,107 +37,11 @@
     }
 },
 {
-    "from": [ 2, 13.9375, 2 ],
-    "to": [ 14, 14, 14 ],
-    "faces": {
-        "down":  { "uv": [ 14, 14, 2, 2 ], "texture": "#Piston Head 2" },
-        "up":    { "uv": [ 2, 2, 14, 14 ], "texture": "#Piston Head 2" }
-    }
-},
-{
-    "from": [ 2, 12.9375, 2 ],
-    "to": [ 14, 13, 14 ],
-    "faces": {
-        "down":  { "uv": [ 14, 14, 2, 2 ], "texture": "#Piston Head 3" },
-        "up":    { "uv": [ 2, 2, 14, 14 ], "texture": "#Piston Head 3" }
-    }
-},
-{
     "from": [ 2, 11.9375, 2 ],
     "to": [ 14, 12, 14 ],
     "faces": {
         "down":  { "uv": [ 14, 14, 2, 2 ], "texture": "#Piston Head 4" },
         "up":    { "uv": [ 2, 2, 14, 14 ], "texture": "#Piston Head 4" }
-    }
-},
-{
-    "from": [ 2, 10.9375, 2 ],
-    "to": [ 14, 11, 14 ],
-    "faces": {
-        "down":  { "uv": [ 14, 14, 2, 2 ], "texture": "#Piston Head 5" },
-        "up":    { "uv": [ 2, 2, 14, 14 ], "texture": "#Piston Head 5" }
-    }
-},
-{
-    "from": [ 2, 9.9375, 2 ],
-    "to": [ 14, 10, 14 ],
-    "faces": {
-        "down":  { "uv": [ 14, 14, 2, 2 ], "texture": "#Piston Head 6" },
-        "up":    { "uv": [ 2, 2, 14, 14 ], "texture": "#Piston Head 6" }
-    }
-},
-{
-    "from": [ 2, 8.9375, 2 ],
-    "to": [ 14, 9, 14 ],
-    "faces": {
-        "down":  { "uv": [ 14, 14, 2, 2 ], "texture": "#Piston Head 7" },
-        "up":    { "uv": [ 2, 2, 14, 14 ], "texture": "#Piston Head 7" }
-    }
-},
-{
-    "from": [ 2, 7.9375, 2 ],
-    "to": [ 14, 8, 14 ],
-    "faces": {
-        "down":  { "uv": [ 14, 14, 2, 2 ], "texture": "#Piston Head 8" },
-        "up":    { "uv": [ 2, 2, 14, 14 ], "texture": "#Piston Head 8" }
-    }
-},
-{
-    "from": [ 2, 6.9375, 2 ],
-    "to": [ 14, 7, 14 ],
-    "faces": {
-        "down":  { "uv": [ 14, 14, 2, 2 ], "texture": "#Piston Head 9" },
-        "up":    { "uv": [ 2, 2, 14, 14 ], "texture": "#Piston Head 9" }
-    }
-},
-{
-    "from": [ 2, 5.9375, 2 ],
-    "to": [ 14, 6, 14 ],
-    "faces": {
-        "down":  { "uv": [ 14, 14, 2, 2 ], "texture": "#Piston Head 10" },
-        "up":    { "uv": [ 2, 2, 14, 14 ], "texture": "#Piston Head 10" }
-    }
-},
-{
-    "from": [ 2, 4.9375, 2 ],
-    "to": [ 14, 5, 14 ],
-    "faces": {
-        "down":  { "uv": [ 14, 14, 2, 2 ], "texture": "#Piston Head 11" },
-        "up":    { "uv": [ 2, 2, 14, 14 ], "texture": "#Piston Head 11" }
-    }
-},
-{
-    "from": [ 2, 3.9375, 2 ],
-    "to": [ 14, 4, 14 ],
-    "faces": {
-        "down":  { "uv": [ 14, 14, 2, 2 ], "texture": "#Piston Head 12" },
-        "up":    { "uv": [ 2, 2, 14, 14 ], "texture": "#Piston Head 12" }
-    }
-},
-{
-    "from": [ 2, 2.9375, 2 ],
-    "to": [ 14, 3, 14 ],
-    "faces": {
-        "down":  { "uv": [ 14, 14, 2, 2 ], "texture": "#Piston Head 13" },
-        "up":    { "uv": [ 2, 2, 14, 14 ], "texture": "#Piston Head 13" }
-    }
-},
-{
-    "from": [ 2, 1.9375, 2 ],
-    "to": [ 14, 2, 14 ],
-    "faces": {
-        "down":  { "uv": [ 14, 14, 2, 2 ], "texture": "#Piston Head 14" },
-        "up":    { "uv": [ 2, 2, 14, 14 ], "texture": "#Piston Head 14" }
     }
 },
 {

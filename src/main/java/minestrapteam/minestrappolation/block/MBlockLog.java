@@ -41,7 +41,7 @@ public class MBlockLog extends BlockLog
 	public MBlockLog(int flame)
 	{
 		this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, MWoodType.REDWOOD).withProperty(LOG_AXIS, BlockLog.EnumAxis.Y));
-		this.setCreativeTab(Minestrappolation.tabMinistrappolation);
+		this.setCreativeTab(Minestrappolation.tabMBuilding);
 		this.flammability = flame;
 	}
 	

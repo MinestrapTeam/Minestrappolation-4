@@ -14,7 +14,7 @@ public class MBlock extends Block
 	{
 		super(materialIn);
 		this.mapColor = mapColorIn;
-		this.setCreativeTab(Minestrappolation.tabMinistrappolation);
+		this.setCreativeTab(Minestrappolation.tabMBuilding);
 	}
 	
 	@Override

@@ -30,7 +30,7 @@ public class BlockStoneDecor extends MBlock
 	{
 		super(Material.rock, MapColor.stoneColor);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, BlockStoneDecor.EnumType.REFINED));
-		this.setCreativeTab(Minestrappolation.tabMinistrappolation);
+		this.setCreativeTab(Minestrappolation.tabMBuilding);
 	}
 	
 	/**

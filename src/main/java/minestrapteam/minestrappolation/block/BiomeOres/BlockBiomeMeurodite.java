@@ -32,7 +32,7 @@ public class BlockBiomeMeurodite extends MBlockOre
 	public BlockBiomeMeurodite(int range, int rate, Material material, MapColor mapColor, Item itemDrop, int meta, int expMin, int expMax, int dropAmount, int bonusAmount, String tool, int level, boolean silkHarvest)
 	{
 		super(material, mapColor, itemDrop, meta, expMin, expMax, dropAmount, bonusAmount, tool, level, silkHarvest);
-		this.setCreativeTab(Minestrappolation.tabMinistrappolation);
+		this.setCreativeTab(Minestrappolation.tabMBuilding);
 		this.setUnlocalizedName("biome_meurodite");
 	}
 	

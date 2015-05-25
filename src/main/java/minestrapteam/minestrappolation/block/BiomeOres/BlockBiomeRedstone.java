@@ -34,7 +34,7 @@ public class BlockBiomeRedstone extends MBlockOre
 	public BlockBiomeRedstone(int range, int rate, Material material, MapColor mapColor, Item itemDrop, int meta, int expMin, int expMax, int dropAmount, int bonusAmount, String tool, int level, boolean silkHarvest)
 	{
 		super(material, mapColor, itemDrop, meta, expMin, expMax, dropAmount, bonusAmount, tool, level, silkHarvest);
-		this.setCreativeTab(Minestrappolation.tabMinistrappolation);
+		this.setCreativeTab(Minestrappolation.tabMBuilding);
 		this.setUnlocalizedName("biome_redstone");
 		/*
 		 * if (isOn) { this.setTickRandomly(true); } this.isOn = isOn;

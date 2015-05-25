@@ -33,7 +33,13 @@ public class Minestrappolation
 	@SidedProxy(clientSide = MReference.CLIENT_PROXY_CLASS, serverSide = MReference.SERVER_PROXY_CLASS)
 	public static CommonProxy		proxy;
 	
-	public static final MTab		tabMinistrappolation	= new MTab("tabMinistrappolation");
+	public static final MTab		tabMBuilding	= new MTab("tabMBuilding");
+	public static final MTab		tabMDecor	= new MTab("tabMDecor");
+	public static final MTab		tabMTech	= new MTab("tabMTech");
+	public static final MTab		tabMMaterials	= new MTab("tabMMaterials");
+	public static final MTab		tabMFood	= new MTab("tabMFood");
+	public static final MTab		tabMTools	= new MTab("tabMTools");
+	public static final MTab		tabMCombat	= new MTab("tabMCombat");
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)

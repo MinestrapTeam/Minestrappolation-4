@@ -28,7 +28,7 @@ public class BlockBiomeBricks extends Block
 	public BlockBiomeBricks()
 	{
 		super(Material.rock);
-		this.setCreativeTab(Minestrappolation.tabMinistrappolation);
+		this.setCreativeTab(Minestrappolation.tabMBuilding);
 		this.setUnlocalizedName("biome_bricks");
 	}
 	

@@ -1,31 +1,58 @@
 {
    "variants":{
-      "variant=deepstone":{
-         "model":"ministrapp:deepstone"
-      },
-      "variant=red_rock":{
-         "model":"ministrapp:red_rock"
-      },
-      "variant=deep_redrock":{
-         "model":"ministrapp:deep_red_rock"
-      },
-      "variant=coldstone":{
-         "model":"ministrapp:coldstone"
-      },
-      "variant=deep_coldstone":{
-         "model":"ministrapp:deep_coldstone"
-      },
-      "variant=icestone":{
-         "model":"ministrapp:icestone"
-      },
-      "variant=glacierrock":{
-         "model":"ministrapp:glacierrock"
-      },
-      "variant=oceanstone":{
-         "model":"ministrapp:oceanstone"
-      },
-      "variant=pressurized_oceanstone":{
-         "model":"ministrapp:pressurized_oceanstone"
-      }
+      "variant=deepstone":[
+         { "model": "ministrapp:deepstone" },
+         { "model": "ministrapp:deepstone_mirrored" },
+         { "model": "ministrapp:deepstone", "y": 180 },
+         { "model": "ministrapp:deepstone_mirrored", "y": 180 }
+      ],
+      "variant=red_rock":[
+         { "model": "ministrapp:red_rock" },
+         { "model": "ministrapp:red_rock_mirrored" },
+         { "model": "ministrapp:red_rock", "y": 180 },
+         { "model": "ministrapp:red_rock_mirrored", "y": 180 }
+      ],
+      "variant=deep_redrock":[
+         { "model": "ministrapp:deep_red_rock" },
+         { "model": "ministrapp:deep_red_rock_mirrored" },
+         { "model": "ministrapp:deep_red_rock", "y": 180 },
+         { "model": "ministrapp:deep_red_rock_mirrored", "y": 180 }
+      ],
+      "variant=coldstone":[
+         { "model": "ministrapp:coldstone" },
+         { "model": "ministrapp:coldstone_mirrored" },
+         { "model": "ministrapp:coldstone", "y": 180 },
+         { "model": "ministrapp:coldstone_mirrored", "y": 180 }
+      ],
+      "variant=deep_coldstone":[
+         { "model": "ministrapp:deep_coldstone" },
+         { "model": "ministrapp:deep_coldstone_mirrored" },
+         { "model": "ministrapp:deep_coldstone", "y": 180 },
+         { "model": "ministrapp:deep_coldstone_mirrored", "y": 180 }
+      ],
+      "variant=icestone":[
+         { "model": "ministrapp:icestone" },
+         { "model": "ministrapp:icestone_mirrored" },
+         { "model": "ministrapp:icestone", "y": 180 },
+         { "model": "ministrapp:icestone_mirrored", "y": 180 }
+      ],
+      "variant=glacierrock":[
+         { "model": "ministrapp:glacierrock" },
+         { "model": "ministrapp:glacierrock_mirrored" },
+         { "model": "ministrapp:glacierrock", "y": 180 },
+         { "model": "ministrapp:glacierrock_mirrored", "y": 180 }
+      ],
+      "variant=oceanstone":[
+         { "model": "ministrapp:oceanstone" },
+         { "model": "ministrapp:oceanstone_mirrored" },
+         { "model": "ministrapp:oceanstone", "y": 180 },
+         { "model": "ministrapp:oceanstone_mirrored", "y": 180 }
+      ],
+      "variant=pressurized_oceanstone":[
+         { "model": "ministrapp:pressurized_oceanstone" },
+         { "model": "ministrapp:pressurized_oceanstone_mirrored" },
+         { "model": "ministrapp:pressurized_oceanstone", "y": 180 },
+         { "model": "ministrapp:pressurized_oceanstone_mirrored", "y": 180 }
+      ]
    }
 }

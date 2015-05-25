@@ -14,7 +14,7 @@ public class BlockInvincium extends MBlock
 	public BlockInvincium(Material material)
 	{
 		super(material, MapColor.redColor);
-		this.setCreativeTab(Minestrappolation.tabMinistrappolation);
+		this.setCreativeTab(Minestrappolation.tabMBuilding);
 	}
 	
 	@Override

@@ -43,7 +43,7 @@ public class MBlockSapling extends BlockBush implements IGrowable
 		this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, MWoodType.REDWOOD).withProperty(STAGE, Integer.valueOf(0)));
 		float f = 0.4F;
 		this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, f * 2.0F, 0.5F + f);
-		this.setCreativeTab(Minestrappolation.tabMinistrappolation);
+		this.setCreativeTab(Minestrappolation.tabMDecor);
 		this.setUnlocalizedName("ministrapp_sapling");
 		this.flammability = flame;
 	}

@@ -10,7 +10,7 @@ public class ItemMDoor extends ItemDoor
 	public ItemMDoor(Block block)
 	{
 		super(block);
-		this.setCreativeTab(Minestrappolation.tabMinistrappolation);
+		this.setCreativeTab(Minestrappolation.tabMDecor);
 	}
 	
 }

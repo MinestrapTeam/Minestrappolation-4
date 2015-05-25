@@ -10,7 +10,7 @@ public class BlockMPane extends BlockPane
 	public BlockMPane(Material materialIn, boolean canDrop)
 	{
 		super(materialIn, canDrop);
-		this.setCreativeTab(Minestrappolation.tabMinistrappolation);
+		this.setCreativeTab(Minestrappolation.tabMDecor);
 	}
 	
 }

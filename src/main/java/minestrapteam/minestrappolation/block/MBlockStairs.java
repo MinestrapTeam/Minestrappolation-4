@@ -11,7 +11,7 @@ public class MBlockStairs extends BlockStairs
 	{
 		super(modelState);
 		this.useNeighborBrightness = true;
-		this.setCreativeTab(Minestrappolation.tabMinistrappolation);
+		this.setCreativeTab(Minestrappolation.tabMBuilding);
 	}
 	
 }

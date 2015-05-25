@@ -33,7 +33,7 @@ public class BlockBiomeStones extends Block
 	{
 		super(Material.rock);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, MStoneType.DEEPSTONE));
-		this.setCreativeTab(Minestrappolation.tabMinistrappolation);
+		this.setCreativeTab(Minestrappolation.tabMBuilding);
 	}
 	
 	@Override
