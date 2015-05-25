@@ -42,12 +42,12 @@ public class VersionChecker implements Runnable
 					if (version.equals(versiontocheck))
 					{
 						upToDate = true;
-						uptoDate = new ChatComponentText("ï¿½aMinestrappolation is the current version");
+						uptoDate = new ChatComponentText("§2Minestrappolation is the current version");
 					}
 					else
 					{
 						upToDate = false;
-						uptoDate = new ChatComponentText("ï¿½cA newer version of Minestrappolation is available: " + version);
+						uptoDate = new ChatComponentText("§cA newer version of Minestrappolation is available: " + version);
 					}
 				}
 				if (str.contains("motd="))
@@ -60,8 +60,8 @@ public class VersionChecker implements Runnable
 		catch (IOException e)
 		{
 			System.err.println("Version file not found at: " + urlToCheck);
-			uptoDate = new ChatComponentText("ï¿½4Minestrappolation cannont find the latest version.");
-			motd = new ChatComponentText("ï¿½4Are you connected to the internet?");
+			uptoDate = new ChatComponentText("§cMinestrappolation cannont find the latest version.");
+			motd = new ChatComponentText("§cAre you connected to the internet?");
 		}
 		return upToDate;
 	}

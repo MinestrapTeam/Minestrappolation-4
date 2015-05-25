@@ -6,6 +6,7 @@ import minestrapteam.minestrappolation.block.BlockBarrel;
 import minestrapteam.minestrappolation.block.BlockBiomeBricks;
 import minestrapteam.minestrappolation.block.BlockBlazium;
 import minestrapteam.minestrappolation.block.BlockBoulder;
+import minestrapteam.minestrappolation.block.BlockChiseled;
 import minestrapteam.minestrappolation.block.BlockCrate;
 import minestrapteam.minestrappolation.block.BlockCrusher;
 import minestrapteam.minestrappolation.block.BlockFrostGenerator;
@@ -59,6 +60,7 @@ import minestrapteam.minestrappolation.block.ore.MBlockOre;
 import minestrapteam.minestrappolation.enumtypes.MStoneType;
 import minestrapteam.minestrappolation.enumtypes.MWoodType;
 import minestrapteam.minestrappolation.item.ItemBlockBiomeBricks;
+import minestrapteam.minestrappolation.item.ItemBlockChiseled;
 import minestrapteam.minestrappolation.item.ItemBlockColdSand;
 import minestrapteam.minestrappolation.item.ItemBlockLeaves;
 import minestrapteam.minestrappolation.item.ItemBlockLog;
@@ -119,6 +121,7 @@ public class MBlocks
 	public static Block	meat_block;
 	
 	public static Block	roads;
+	public static Block chiseled;
 	
 	public static Block	cold_sand;
 	public static Block	lichen_permafrost;
@@ -271,6 +274,7 @@ public class MBlocks
 		meat_block = new BlockMStorage(Material.clay, MapColor.pinkColor).setHardness(0.8F).setStepSound(Block.SLIME_SOUND).setUnlocalizedName("meat_block").setCreativeTab(Minestrappolation.tabMFood);
 		
 		roads = new BlockRoads(Material.rock, MapColor.blackColor).setUnlocalizedName("roads").setCreativeTab(Minestrappolation.tabMBuilding);
+		chiseled = new BlockChiseled(Material.rock, MapColor.grayColor).setUnlocalizedName("biome_chiseled");
 		
 		cold_sand = new BlockMSand().setUnlocalizedName("cold_sand").setHardness(0.7F).setStepSound(Block.soundTypeSand).setCreativeTab(Minestrappolation.tabMBuilding);
 		lichen_permafrost = new BlockPermaFrost().setUnlocalizedName("permafrost").setHardness(1F).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMBuilding);
@@ -395,6 +399,7 @@ public class MBlocks
 		
 		register(slate);
 		GameRegistry.registerBlock(roads, ItemBlockRoads.class, roads.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(chiseled, ItemBlockChiseled.class, chiseled.getUnlocalizedName().substring(5));
 		register(stone_pattern_bricks);
 		register(stone_refined);
 		register(stone_tiles);
@@ -523,6 +528,7 @@ public class MBlocks
 		registerRender(meat_block);
 		
 		registerRender(roads);
+		registerRender(chiseled);
 		
 		registerRender(cold_sand);
 		registerRender(lichen_permafrost);
