@@ -113,9 +113,7 @@ public class MEventHandler
 					player.addPotionEffect(new PotionEffect(Potion.resistance.id, 2, 1, true, false));
 				}
 			}
-			BlockPos pos = new BlockPos(player.getPosition());
-			Chunk c = event.entity.worldObj.getChunkFromBlockCoords(pos);
-			if(c.getBiome(pos, event.entity.worldObj.getWorldChunkManager()).biomeName.equals(MBiomeManager.frost.biomeName))
+			if(ChunkHelper.getChunkBiomeForEntity(player).equals(MBiomeManager.frost.biomeName))
 			{
 				if(helmet == null || chest == null || pants == null || boots == null)
 				{
@@ -127,9 +125,7 @@ public class MEventHandler
 		}
 		else
 		{
-			BlockPos pos = new BlockPos(event.entity.getPosition());
-			Chunk c = event.entity.worldObj.getChunkFromBlockCoords(pos);
-			if(c.getBiome(pos, event.entity.worldObj.getWorldChunkManager()).biomeName.equals(MBiomeManager.frost.biomeName))
+			if(ChunkHelper.getChunkBiomeForEntity(event.entity).equals(MBiomeManager.frost) && Config.frostSpeedEffect)
 			{	
 					event.entity.motionX *= .75;
 					event.entity.motionZ *= .75;	

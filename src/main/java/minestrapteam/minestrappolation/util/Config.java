@@ -10,6 +10,7 @@ public class Config
 	public static Boolean	useRainBowXp;
 	public static Boolean	radiationEffects;
 	public static Boolean	blaziumFireEffect;
+	public static Boolean   frostSpeedEffect;
 	
 	// Integers
 	public static int		soulGemDropChance;
@@ -23,6 +24,7 @@ public class Config
 		useRainBowXp = config.get("Visuals", "RainbowXP", true).getBoolean();
 		radiationEffects = config.get("Mechanics", "RadiationEffects", true).getBoolean();
 		blaziumFireEffect = config.get("Mechanics", "BlaziumFireEffect", true).getBoolean();
+		frostSpeedEffect = config.get("Mechanics", "TheFrostSpeedEffect", true).getBoolean();
 		
 		soulGemDropChance = config.get("Mechanics", "SoulGemDropChance", 3).getInt();
 		soulBlockDamage = config.get("Mechanics", "SoulBlockDamage", 200).getInt();
