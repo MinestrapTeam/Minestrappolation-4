@@ -1,5 +1,5 @@
 {
-  "parent":"ministrapp:block/deep_coldstone_tiles”,
+  "parent":"ministrapp:block/deep_coldstone_tiles",
   "display": {
     "thirdperson": {
       "rotation": [ 10, -45, 170 ],

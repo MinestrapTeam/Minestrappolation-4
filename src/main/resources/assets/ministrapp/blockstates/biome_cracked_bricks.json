@@ -1,7 +1,7 @@
 {
    "variants":{
       "type=deepstone":{
-         "model":"ministrapp:deepstone_bricks_cracked”
+         "model":"ministrapp:deepstone_bricks_cracked"
       },
       "type=red_rock":{
          "model":"ministrapp:red_rock_bricks_cracked"

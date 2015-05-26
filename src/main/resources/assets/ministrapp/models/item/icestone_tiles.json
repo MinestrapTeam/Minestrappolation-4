@@ -1,5 +1,5 @@
 {
-  "parent":"ministrapp:block/icestone_tiles”,
+  "parent":"ministrapp:block/icestone_tiles",
   "display": {
     "thirdperson": {
       "rotation": [ 10, -45, 170 ],

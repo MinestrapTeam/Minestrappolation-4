@@ -1,5 +1,5 @@
 {
-  "parent":"ministrapp:block/red_rock_mossy”,
+  "parent":"ministrapp:block/red_rock_mossy",
   "display": {
     "thirdperson": {
       "rotation": [ 10, -45, 170 ],

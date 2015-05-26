@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "ministrapp:blocks/icestone_lamp_sunstone”
+        "all": "ministrapp:blocks/icestone_lamp_sunstone"
     }
 }

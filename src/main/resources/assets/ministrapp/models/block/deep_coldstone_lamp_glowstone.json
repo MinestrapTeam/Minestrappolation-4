@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "ministrapp:blocks/deepcoldstone_lamp_glowstone”
+        "all": "ministrapp:blocks/deepcoldstone_lamp_glowstone"
     }
 }

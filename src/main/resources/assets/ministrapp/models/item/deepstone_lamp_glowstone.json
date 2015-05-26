@@ -1,5 +1,5 @@
 {
-  "parent":"ministrapp:block/deepstone_lamp_glowstone”,
+  "parent":"ministrapp:block/deepstone_lamp_glowstone",
   "display": {
     "thirdperson": {
       "rotation": [ 10, -45, 170 ],

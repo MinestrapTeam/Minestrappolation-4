@@ -1,5 +1,5 @@
 {
-  "parent":"ministrapp:block/deep_coldstone_pattern_bricks”,
+  "parent":"ministrapp:block/deep_coldstone_pattern_bricks",
   "display": {
     "thirdperson": {
       "rotation": [ 10, -45, 170 ],

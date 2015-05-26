@@ -1,5 +1,5 @@
 {
-  "parent":"ministrapp:block/coldstone_lamp_sunstone”,
+  "parent":"ministrapp:block/coldstone_lamp_sunstone",
   "display": {
     "thirdperson": {
       "rotation": [ 10, -45, 170 ],

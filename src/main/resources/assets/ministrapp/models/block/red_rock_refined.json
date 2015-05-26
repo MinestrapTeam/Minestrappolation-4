@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "ministrapp:blocks/redrock_refined”
+        "all": "ministrapp:blocks/redrock_refined"
     }
 }

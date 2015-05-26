@@ -1,5 +1,5 @@
 {
-  "parent":"ministrapp:block/coldstone_refined”,
+  "parent":"ministrapp:block/coldstone_refined",
   "display": {
     "thirdperson": {
       "rotation": [ 10, -45, 170 ],

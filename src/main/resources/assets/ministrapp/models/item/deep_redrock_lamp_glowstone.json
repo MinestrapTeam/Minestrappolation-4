@@ -1,5 +1,5 @@
 {
-  "parent":"ministrapp:block/deep_red_rock_refined”,
+  "parent":"ministrapp:block/deep_red_rock_lamp_glowstone",
   "display": {
     "thirdperson": {
       "rotation": [ 10, -45, 170 ],

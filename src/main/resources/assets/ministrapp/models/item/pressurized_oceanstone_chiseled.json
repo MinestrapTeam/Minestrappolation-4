@@ -1,5 +1,5 @@
 {
-  "parent":"ministrapp:block/pressurized_oceanstone_chiseled”,
+  "parent":"ministrapp:block/pressurized_oceanstone_chiseled",
   "display": {
     "thirdperson": {
       "rotation": [ 10, -45, 170 ],

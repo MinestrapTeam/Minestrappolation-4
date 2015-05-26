@@ -1,5 +1,5 @@
 {
-  "parent":"ministrapp:block/deep_red_rock_chiseled”,
+  "parent":"ministrapp:block/deep_red_rock_chiseled",
   "display": {
     "thirdperson": {
       "rotation": [ 10, -45, 170 ],
