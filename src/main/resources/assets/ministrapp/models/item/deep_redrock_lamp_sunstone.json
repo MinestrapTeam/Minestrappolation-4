@@ -1,5 +1,5 @@
 {
-  "parent":"ministrapp:block/deep_red_rock_pattern_bricks”,
+  "parent":"ministrapp:block/deep_red_rock_lamp_sunstone",
   "display": {
     "thirdperson": {
       "rotation": [ 10, -45, 170 ],

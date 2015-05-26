@@ -1,5 +1,5 @@
 {
-  "parent":"ministrapp:block/icestone_chiseled”,
+  "parent":"ministrapp:block/icestone_chiseled",
   "display": {
     "thirdperson": {
       "rotation": [ 10, -45, 170 ],

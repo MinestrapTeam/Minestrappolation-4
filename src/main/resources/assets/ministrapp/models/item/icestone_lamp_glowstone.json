@@ -1,5 +1,5 @@
 {
-  "parent":"ministrapp:block/icestone_lamp_glowstone”,
+  "parent":"ministrapp:block/icestone_lamp_glowstone",
   "display": {
     "thirdperson": {
       "rotation": [ 10, -45, 170 ],

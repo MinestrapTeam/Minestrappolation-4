@@ -1,5 +1,5 @@
 {
-  "parent":"ministrapp:block/pressurized_oceanstone_lamp_prismarine”,
+  "parent":"ministrapp:block/pressurized_oceanstone_lamp_prismarine",
   "display": {
     "thirdperson": {
       "rotation": [ 10, -45, 170 ],

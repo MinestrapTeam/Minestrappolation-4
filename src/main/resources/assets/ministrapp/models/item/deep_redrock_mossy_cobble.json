@@ -1,5 +1,5 @@
 {
-  "parent":"ministrapp:block/deep_red_rock_bricks_cracked”,
+  "parent":"ministrapp:block/deep_red_rock_mossy",
   "display": {
     "thirdperson": {
       "rotation": [ 10, -45, 170 ],

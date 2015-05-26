@@ -1,5 +1,5 @@
 {
-  "parent":"ministrapp:block/glacierrock_chiseled”,
+  "parent":"ministrapp:block/glacierrock_chiseled",
   "display": {
     "thirdperson": {
       "rotation": [ 10, -45, 170 ],

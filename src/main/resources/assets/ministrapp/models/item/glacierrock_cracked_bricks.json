@@ -1,5 +1,5 @@
 {
-  "parent":"ministrapp:block/glacierrock_bricks_cracked”,
+  "parent":"ministrapp:block/glacierrock_bricks_cracked",
   "display": {
     "thirdperson": {
       "rotation": [ 10, -45, 170 ],

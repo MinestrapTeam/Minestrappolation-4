@@ -1,5 +1,5 @@
 {
-  "parent":"ministrapp:block/deepstone_mossy”,
+  "parent":"ministrapp:block/deepstone_mossy",
   "display": {
     "thirdperson": {
       "rotation": [ 10, -45, 170 ],

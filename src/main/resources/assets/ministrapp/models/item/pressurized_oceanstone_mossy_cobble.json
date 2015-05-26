@@ -1,5 +1,5 @@
 {
-  "parent":"ministrapp:block/pressurized_oceanstone_mossy”,
+  "parent":"ministrapp:block/pressurized_oceanstone_mossy",
   "display": {
     "thirdperson": {
       "rotation": [ 10, -45, 170 ],

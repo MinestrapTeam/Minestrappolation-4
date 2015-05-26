@@ -1,5 +1,5 @@
 {
-  "parent":"ministrapp:block/glacierrock_mossy”,
+  "parent":"ministrapp:block/glacierrock_mossy",
   "display": {
     "thirdperson": {
       "rotation": [ 10, -45, 170 ],
