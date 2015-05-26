@@ -12,19 +12,21 @@ public class VersionChecker implements Runnable
 	
 	private String					versionToCheck;
 	private String					urlToCheck;
+	private  String					name;
 	
 	public static boolean			hasChecked	= false;
 	
 	public static ChatComponentText	uptoDate;
 	public static ChatComponentText	motd;
 	
-	public VersionChecker(String versionToCheck, String url)
+	public VersionChecker(String versionToCheck, String url, String name)
 	{
 		this.versionToCheck = versionToCheck;
 		this.urlToCheck = url;
+		this.name = name;
 	}
 	
-	private static boolean checkIfCurrent(String versiontocheck, String urlToCheck)
+	private  boolean checkIfCurrent(String versiontocheck, String urlToCheck)
 	{
 		boolean upToDate = false;
 		try
@@ -42,12 +44,12 @@ public class VersionChecker implements Runnable
 					if (version.equals(versiontocheck))
 					{
 						upToDate = true;
-						uptoDate = new ChatComponentText("§2Minestrappolation is the current version");
+						uptoDate = new ChatComponentText("§2"+ name + " is the current version");
 					}
 					else
 					{
 						upToDate = false;
-						uptoDate = new ChatComponentText("§cA newer version of Minestrappolation is available: " + version);
+						uptoDate = new ChatComponentText("§cA newer version of " + name +" is available: " + version);
 					}
 				}
 				if (str.contains("motd="))
@@ -60,7 +62,7 @@ public class VersionChecker implements Runnable
 		catch (IOException e)
 		{
 			System.err.println("Version file not found at: " + urlToCheck);
-			uptoDate = new ChatComponentText("§cMinestrappolation cannont find the latest version.");
+			uptoDate = new ChatComponentText("§c"+ name +" cannont find the latest version.");
 			motd = new ChatComponentText("§cAre you connected to the internet?");
 		}
 		return upToDate;
@@ -69,6 +71,6 @@ public class VersionChecker implements Runnable
 	@Override
 	public void run()
 	{
-		VersionChecker.checkIfCurrent(this.versionToCheck, this.urlToCheck);
+		checkIfCurrent(this.versionToCheck, this.urlToCheck);
 	}
 }

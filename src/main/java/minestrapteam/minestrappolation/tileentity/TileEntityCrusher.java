@@ -2,12 +2,14 @@ package minestrapteam.minestrappolation.tileentity;
 
 import java.util.Random;
 
+import minestrapteam.minestrappolation.block.BlockCrusher;
 import minestrapteam.minestrappolation.util.CrusherRecipes;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
 import net.minecraft.server.gui.IUpdatePlayerListBox;
 import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraft.util.EnumFacing;
@@ -42,6 +44,19 @@ public class TileEntityCrusher extends TileEntityInventory implements ISidedInve
 		this.burnTime = nbt.getShort("BurnTime");
 		this.crushTime = nbt.getShort("CookTime");
 		this.maxCrushTime = getItemBurnTime(this.itemStacks[1]);
+		NBTTagList nbttaglist = nbt.getTagList("Items", 10);
+		this.itemStacks = new ItemStack[this.getSizeInventory()];
+		
+		for (int i = 0; i < nbttaglist.tagCount(); ++i)
+		{
+			NBTTagCompound nbttagcompound1 = nbttaglist.getCompoundTagAt(i);
+			byte b0 = nbttagcompound1.getByte("Slot");
+			
+			if (b0 >= 0 && b0 < this.itemStacks.length)
+			{
+				this.itemStacks[b0] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
+			}
+		}
 	}
 	
 	@Override
@@ -51,6 +66,19 @@ public class TileEntityCrusher extends TileEntityInventory implements ISidedInve
 		
 		nbt.setShort("BurnTime", (short) this.burnTime);
 		nbt.setShort("CookTime", (short) this.crushTime);
+		NBTTagList nbttaglist = new NBTTagList();
+		for (int i = 0; i < this.itemStacks.length; ++i)
+		{
+			if (this.itemStacks[i] != null)
+			{
+				NBTTagCompound nbttagcompound1 = new NBTTagCompound();
+				nbttagcompound1.setByte("Slot", (byte) i);
+				this.itemStacks[i].writeToNBT(nbttagcompound1);
+				nbttaglist.appendTag(nbttagcompound1);
+			}
+		}
+		
+		nbt.setTag("Items", nbttaglist);
 	}
 	
 	public int getProgressScaled(int scalar)
@@ -129,6 +157,7 @@ public class TileEntityCrusher extends TileEntityInventory implements ISidedInve
 		{
 			this.markDirty();
 			this.validate();
+			BlockCrusher.setState(this.isBurning(), this.worldObj, this.pos);
 		}
 	}
 	

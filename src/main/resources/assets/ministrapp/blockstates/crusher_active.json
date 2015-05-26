@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=south": { "model": "ministrapp:crusher_active", "y": 180 },
+		"facing=north": { "model": "ministrapp:crusher_active", "y": 0 },
+		"facing=west": { "model": "ministrapp:crusher_active", "y": 270 },
+		"facing=east": { "model": "ministrapp:crusher_active", "y": 90 }
+    }
+}

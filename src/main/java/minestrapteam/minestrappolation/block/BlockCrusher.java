@@ -1,7 +1,9 @@
 package minestrapteam.minestrappolation.block;
 
 import minestrapteam.minestrappolation.Minestrappolation;
+import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.tileentity.TileEntityCrusher;
+import minestrapteam.minestrappolation.tileentity.TileEntityMelter;
 import minestrapteam.minestrappolation.util.MGuiHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
@@ -14,6 +16,7 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
+import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
@@ -29,10 +32,16 @@ public class BlockCrusher extends BlockDirectional
 	
 	private static boolean					keepInventory	= false;
 	public final boolean					isBurning		= false;
+	public boolean							isActive		= false;
 	
-	public BlockCrusher()
+	public BlockCrusher(boolean active)
 	{
 		super(Material.rock);
+		this.isActive = active;
+		if (active)
+		{
+			this.setLightLevel(1F);
+		}
 	}
 	
 	@Override
@@ -49,51 +58,47 @@ public class BlockCrusher extends BlockDirectional
 	}
 	
 	@Override
-	public void breakBlock(World world, BlockPos pos, IBlockState state)
+	public void breakBlock(World worldIn, BlockPos pos, IBlockState state)
 	{
-		TileEntity te = world.getTileEntity(pos);
-		
-		if (te instanceof IInventory)
+		if (!keepInventory)
 		{
-			IInventory inventory = (IInventory) te;
-			for (int i1 = 0; i1 < inventory.getSizeInventory(); ++i1)
+			TileEntity tileentity = worldIn.getTileEntity(pos);
+			
+			if (tileentity instanceof TileEntityMelter)
 			{
-				ItemStack itemstack = inventory.getStackInSlot(i1);
-				
-				if (itemstack != null)
-				{
-					float f = world.rand.nextFloat() * 0.8F + 0.1F;
-					float f1 = world.rand.nextFloat() * 0.8F + 0.1F;
-					EntityItem entityitem;
-					
-					for (float f2 = world.rand.nextFloat() * 0.8F + 0.1F; itemstack.stackSize > 0; world.spawnEntityInWorld(entityitem))
-					{
-						int j1 = world.rand.nextInt(21) + 10;
-						
-						if (j1 > itemstack.stackSize)
-						{
-							j1 = itemstack.stackSize;
-						}
-						
-						itemstack.stackSize -= j1;
-						entityitem = new EntityItem(world, pos.getX() + f, pos.getY() + f1, pos.getZ() + f2, new ItemStack(itemstack.getItem(), j1, itemstack.getItemDamage()));
-						entityitem.motionX = world.rand.nextGaussian() * 0.05F;
-						entityitem.motionY = world.rand.nextGaussian() * 0.05F + 0.2F;
-						entityitem.motionZ = world.rand.nextGaussian() * 0.05F;
-						
-						if (itemstack.hasTagCompound())
-						{
-							entityitem.getEntityItem().setTagCompound((NBTTagCompound) itemstack.getTagCompound().copy());
-						}
-					}
-				}
+				InventoryHelper.dropInventoryItems(worldIn, pos, (TileEntityMelter) tileentity);
+				worldIn.updateComparatorOutputLevel(pos, this);
 			}
 		}
 		
-		super.breakBlock(world, pos, state);
+		super.breakBlock(worldIn, pos, state);
 	}
 	
-
+	public static void setState(boolean active, World worldIn, BlockPos pos)
+	{
+		IBlockState iblockstate = worldIn.getBlockState(pos);
+		TileEntity tileentity = worldIn.getTileEntity(pos);
+		keepInventory = true;
+		
+		if (active)
+		{
+			worldIn.setBlockState(pos, MBlocks.crusher_active.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+			worldIn.setBlockState(pos, MBlocks.crusher_active.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+		}
+		else
+		{
+			worldIn.setBlockState(pos, MBlocks.crusher.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+			worldIn.setBlockState(pos, MBlocks.crusher.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+		}
+		
+		keepInventory = false;
+		
+		if (tileentity != null)
+		{
+			tileentity.validate();
+			worldIn.setTileEntity(pos, tileentity);
+		}
+	}
 	
 	@Override
 	public boolean isOpaqueCube()

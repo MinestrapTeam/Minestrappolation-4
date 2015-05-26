@@ -174,6 +174,7 @@ public class MBlocks
 	public static Block	stonecutter;
 	public static Block	sawmill;
 	public static Block	crusher;
+	public static Block	crusher_active;
 	
 	// Biome Stones
 	public static Block	biome_coal;
@@ -333,7 +334,8 @@ public class MBlocks
 		alloy_active = new BlockAlloy(true).setUnlocalizedName("alloy_active").setHardness(4F).setStepSound(Block.soundTypePiston);
 		stonecutter = new BlockStoneCutter().setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("stonecutter").setHardness(3.5F).setStepSound(Block.soundTypePiston);
 		sawmill = new BlockSawmill().setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("sawmill").setHardness(2.5F).setStepSound(Block.soundTypeWood);
-		crusher = new BlockCrusher().setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("crusher").setHardness(7F).setResistance(100.0F).setStepSound(Block.soundTypePiston);
+		crusher = new BlockCrusher(false).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("crusher").setHardness(7F).setResistance(100.0F).setStepSound(Block.soundTypePiston);
+		crusher_active = new BlockCrusher(true).setUnlocalizedName("crusher_active").setHardness(7F).setResistance(100.0F).setStepSound(Block.soundTypePiston);
 		
 		// Stairs
 		redwood_stairs = new MBlockStairs(ministrapp_planks.getStateFromMeta(MWoodType.REDWOOD.getMetadata())).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("redwood_stairs");
@@ -499,6 +501,7 @@ public class MBlocks
 		register(melter_active);
 		register(frost_generator);
 		register(crusher);
+		register(crusher_active);
 		
 		register(meat_block);
 	}
@@ -590,6 +593,7 @@ public class MBlocks
 		registerRender(stonecutter);
 		registerRender(sawmill);
 		registerRender(crusher);
+		registerRender(crusher_active);
 		registerRender(redwood_door_item);
 		registerRender(redwood_fence);
 		registerRender(redwood_fence_gate);
