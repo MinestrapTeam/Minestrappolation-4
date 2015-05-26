@@ -5,10 +5,16 @@ import net.minecraft.util.IStringSerializable;
 public enum MItemChunkTypes implements IStringSerializable
 {
 	STONE(0, "stone"),
-	IRON(1, "iron"),
-	GOLD(2, "gold"),
-	TIN(3, "tin"),
-	COPPER(4, "copper");
+	RED_ROCK(1, "red_rock"),
+	COLDSTONE(2, "coldstone"),
+	ICESTONE(3, "icestone"),
+	OCEANSTONE(4, "oceanstone"),
+	COPPER(5, "copper"),
+	TIN(6, "tin"),
+	IRON(7, "iron"),
+	GOLD(8, "gold"),
+	TORITE(9, "torite"),
+	TITANIUM(10, "titanium");
 	private static final MItemChunkTypes[]	META_LOOKUP	= new MItemChunkTypes[values().length];
 	private final int						meta;
 	private final String					name;

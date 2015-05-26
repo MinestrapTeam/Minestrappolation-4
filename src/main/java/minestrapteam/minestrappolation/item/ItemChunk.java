@@ -28,10 +28,16 @@ public class ItemChunk extends Item
 		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "chunks");
 		
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:stone_chunk");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:red_rock_chunk");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:coldstone_chunk");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:icestone_chunk");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:oceanstone_chunk");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:copper_chunk");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:gold_chunk");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:tin_chunk");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:iron_chunk");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:torite_chunk");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:titanium_chunk");
 	}
 	
 	public static void inventoryRender()

@@ -148,6 +148,10 @@ public class MBlocks
 	public static Block	glass_tiles;
 	public static Block	glass_window;
 	public static Block	stone_boulder;
+	public static Block	red_rock_boulder;
+	public static Block	coldstone_boulder;
+	public static Block	icestone_boulder;
+	public static Block	oceanstone_boulder;
 	public static Block	stone_lamp_glowstone;
 	public static Block	stone_lamp_prismarine;
 	public static Block	stone_lamp_sunstone;
@@ -249,6 +253,10 @@ public class MBlocks
 		glass_tiles = new BlockTransparent(Material.glass, MapColor.airColor, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setLightOpacity(1).setUnlocalizedName("glass_tiles").setCreativeTab(Minestrappolation.tabMBuilding);
 		glass_window = new BlockTransparent(Material.iron, MapColor.airColor, false).setHardness(0.8F).setResistance(2.0F).setStepSound(Block.soundTypeGlass).setLightOpacity(2).setUnlocalizedName("glass_window").setCreativeTab(Minestrappolation.tabMBuilding);
 		stone_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
+		red_rock_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("red_rock_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
+		coldstone_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("coldstone_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
+		icestone_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("icestone_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
+		oceanstone_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("oceanstone_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
 		stone_lamp_glowstone = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setLightLevel(1.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_lamp_glowstone").setCreativeTab(Minestrappolation.tabMBuilding);
 		stone_lamp_prismarine = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setLightLevel(1.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_lamp_prismarine").setCreativeTab(Minestrappolation.tabMBuilding);
 		stone_lamp_sunstone = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setLightLevel(0.9F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_lamp_sunstone").setCreativeTab(Minestrappolation.tabMBuilding);
@@ -447,6 +455,10 @@ public class MBlocks
 		register(godstone);
 		
 		register(stone_boulder);
+		register(red_rock_boulder);
+		register(coldstone_boulder);
+		register(icestone_boulder);
+		register(oceanstone_boulder);
 		
 		register(desert_quartz);
 		GameRegistry.registerBlock(biome_coal, ItemBlockBiomeCoal.class, biome_coal.getUnlocalizedName().substring(5));
@@ -545,6 +557,10 @@ public class MBlocks
 		registerRender(glass_tiles);
 		registerRender(glass_window);
 		registerRender(stone_boulder);
+		registerRender(red_rock_boulder);
+		registerRender(coldstone_boulder);
+		registerRender(icestone_boulder);
+		registerRender(oceanstone_boulder);
 		registerRender(stone_lamp_glowstone);
 		registerRender(stone_lamp_prismarine);
 		registerRender(stone_lamp_sunstone);
@@ -642,6 +658,10 @@ public class MBlocks
 		soul_gem_block.setHarvestLevel("pickaxe", 3);
 		glass_window.setHarvestLevel("pickaxe", 0);
 		stone_boulder.setHarvestLevel("pickaxe", 1);
+		red_rock_boulder.setHarvestLevel("pickaxe", 1);
+		coldstone_boulder.setHarvestLevel("pickaxe", 1);
+		icestone_boulder.setHarvestLevel("pickaxe", 1);
+		oceanstone_boulder.setHarvestLevel("pickaxe", 1);
 		stone_lamp_glowstone.setHarvestLevel("pickaxe", 0);
 		stone_lamp_prismarine.setHarvestLevel("pickaxe", 0);
 		stone_lamp_sunstone.setHarvestLevel("pickaxe", 0);
