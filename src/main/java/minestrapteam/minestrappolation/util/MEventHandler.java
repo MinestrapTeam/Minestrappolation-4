@@ -7,6 +7,7 @@ import minestrapteam.minestrappolation.enumtypes.MRoadType;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MItems;
 import minestrapteam.minestrappolation.lib.MReference;
+import minestrapteam.minestrappolation.world.MBiomeManager;
 import net.minecraft.block.BlockNetherWart;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityItem;
@@ -15,8 +16,10 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.BlockPos;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.WorldChunkManager;
+import net.minecraft.world.chunk.Chunk;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 import net.minecraftforge.event.terraingen.BiomeEvent;
@@ -110,8 +113,29 @@ public class MEventHandler
 					player.addPotionEffect(new PotionEffect(Potion.resistance.id, 2, 1, true, false));
 				}
 			}
-			
+			BlockPos pos = new BlockPos(player.getPosition());
+			Chunk c = event.entity.worldObj.getChunkFromBlockCoords(pos);
+			if(c.getBiome(pos, event.entity.worldObj.getWorldChunkManager()).biomeName.equals(MBiomeManager.frost.biomeName))
+			{
+				if(helmet == null || chest == null || pants == null || boots == null)
+				{
+					player.motionX *= .75;
+					player.motionZ *= .75;
+				}
+				
+			}
 		}
+		else
+		{
+			BlockPos pos = new BlockPos(event.entity.getPosition());
+			Chunk c = event.entity.worldObj.getChunkFromBlockCoords(pos);
+			if(c.getBiome(pos, event.entity.worldObj.getWorldChunkManager()).biomeName.equals(MBiomeManager.frost.biomeName))
+			{	
+					event.entity.motionX *= .75;
+					event.entity.motionZ *= .75;	
+			}
+		}
+		
 		
 	}
 	
