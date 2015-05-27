@@ -113,7 +113,7 @@ public class MEventHandler
 					player.addPotionEffect(new PotionEffect(Potion.resistance.id, 2, 1, true, false));
 				}
 			}
-			if(ChunkHelper.getChunkBiomeForEntity(player).equals(MBiomeManager.frost.biomeName))
+			if(ChunkHelper.getChunkBiomeForEntity(player).equals(MBiomeManager.frost.biomeName) && Config.frostSpeedEffect && !player.capabilities.isCreativeMode)
 			{
 				if(helmet == null || chest == null || pants == null || boots == null)
 				{
