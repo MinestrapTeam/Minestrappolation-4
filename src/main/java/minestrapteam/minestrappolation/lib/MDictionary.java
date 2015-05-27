@@ -25,10 +25,12 @@ public class MDictionary
 		OreDictionary.registerOre("ingotBlazium", MItems.blazium_ingot);
 		OreDictionary.registerOre("ingotTitanium", MItems.titanium_ingot);
 		OreDictionary.registerOre("dustSunstone", MItems.sunstone_shard);
-		// OreDictionary.registerOre("ingotPlutonium", MItems.plutonium);
-		// OreDictionary.registerOre("ingotUtanium", MItems.uranium);
+		OreDictionary.registerOre("ingotPlutonium", MItems.plutonium);
+		OreDictionary.registerOre("ingotUtanium", MItems.uranium);
 		OreDictionary.registerOre("gemDesertQuartz", MItems.desert_quartz_item);
 		OreDictionary.registerOre("gemRadiantQuartz", MItems.radiant_quartz);
+		OreDictionary.registerOre("gemQuartzAny", MItems.desert_quartz_item);
+		OreDictionary.registerOre("gemQuartzAny", MItems.radiant_quartz);
 		OreDictionary.registerOre("gemSoul", MItems.soul_gem);
 		
 		OreDictionary.registerOre("ingotBrickStone", MItems.stone_brick);
@@ -94,23 +96,36 @@ public class MDictionary
 		OreDictionary.registerOre("paneGlass", new ItemStack(MBlocks.tiled_glass_pane));
 		OreDictionary.registerOre("paneGlass", new ItemStack(MBlocks.framed_glass_pane));
 		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.redwood_fence, 3), new Object[] { "WSW", "WSW", 'W', new ItemStack(MBlocks.ministrapp_planks, 1, 0), 'S', "stickWood" }));
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.redwood_fence_gate, 1), new Object[] { "SWS", "SWS", 'W', new ItemStack(MBlocks.ministrapp_planks, 1, 0), 'S', "stickWood" }));
+		//Minerals
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.copper_block), new Object[] { "III", "III", "III", 'I', "ingotCopper" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.tin_block), new Object[] { "III", "III", "III", 'I', "ingotTin" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.bronze_block), new Object[] { "III", "III", "III", 'I', "ingotBronze" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.steel_block), new Object[] { "III", "III", "III", 'I', "ingotSteel" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.meurodite_block), new Object[] { "III", "III", "III", 'I', "gemMeurodite" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.torite_block), new Object[] { "III", "III", "III", 'I', "ingotTorite" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.plutonium_block), new Object[] { "III", "III", "III", 'I', "ingotPlutonium" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.uranium_block), new Object[] { "III", "III", "III", 'I', "ingotUranium" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.titanium_block), new Object[] { "III", "III", "III", 'I', "ingotTitanium" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.blazium_block), new Object[] { "III", "III", "III", 'I', "ingotBlazium" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.soul_gem_block), new Object[] { "III", "III", "III", 'I', "gemSoul" }));
 		
+		//Tech
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.crate, 1), new Object[] { "WWW", "SSS", "WWW", 'W', "plankWood", 'S', "stickWood" }));
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.barrel, 1), new Object[] { "WTW", "W W", "WTW", 'W', "plankWood", 'T', "ingotTin" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.plutonium_insulated), new Object[] { "SSS", "GBG", "SSS", 'S', "ingotSteel", 'G', MBlocks.framed_glass_pane, 'B', MBlocks.plutonium_block }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.uranium_insulated), new Object[] { "SSS", "GBG", "SSS", 'S', "ingotSteel", 'G', MBlocks.framed_glass_pane, 'B', MBlocks.uranium_block }));
 		// GameRegistry.addRecipe(new ShapedOreRecipe(new
 		// ItemStack(MBlocks.melter, 1), new Object[] { "MMM", "MFM", "IBI",
 		// 'M', new ItemStack(MItems.meurodite_plating), 'F', new
 		// ItemStack(Blocks.furnace), 'I', new ItemStack(Blocks.iron_bars), 'B',
 		// "blockBlazium" }));
 		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MItems.tin_plating, 1), new Object[] { "TTT", "TTT", 'T', "ingotTin" }));
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MItems.meurodite_plating, 1), new Object[] { "TTT", "TTT", 'T', "gemMeurodite" }));
+		//Materials
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MItems.reinforced_stick, 8), new Object[] { "SSS", "STS", "SSS", 'S', "stickWood", 'T', new ItemStack(MItems.tin_plating) }));
 		
-		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Blocks.stone_button, 1), new Object[] { "ingotBrickStone" }));
+		//Vanilla
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.flint_and_steel), new Object[] { "S ", " F", 'S', "ingotSteel", 'F', new ItemStack(Items.flint) }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.daylight_detector), new Object[] { "GGG", "QQQ", "WWW", 'G', "blockGlassColorless", 'Q', "gemQuartzAny", 'W', "slabWood"}));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.anvil, 1, 0), new Object[] { "III", " S ", "SSS", 'I', "blockIron", 'S', "ingotSteel" }));
 	}
 	
 }

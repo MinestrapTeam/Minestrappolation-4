@@ -37,7 +37,7 @@ public class RecipeHelper
 		while (remover.hasNext())
 		{
 			ItemStack itemstack = remover.next().getRecipeOutput();
-			if (itemstack != null && itemstack == new ItemStack(block))
+			if (itemstack != null && itemstack.getItem() == Item.getItemFromBlock(block))
 			{
 				remover.remove();
 			}

@@ -8,6 +8,8 @@ import java.util.Map.Entry;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MItems;
 import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
@@ -28,10 +30,108 @@ public class CrusherRecipes
 	
 	private CrusherRecipes()
 	{
-		this.addRecipe(MBlocks.biome_iron, new ItemStack(MItems.chunks, 2, 1), .2F, new ItemStack(MItems.chunks, 1, 0), 100);
-		this.addRecipe(MBlocks.biome_gold, new ItemStack(MItems.chunks, 2, 2), .2F, new ItemStack(MItems.chunks, 1, 0), 100);
+		//Stones
+		this.addRecipe(new ItemStack(Blocks.stone, 1, 0), new ItemStack(Blocks.cobblestone, 1), 0.05F, null, 0);
+		this.addRecipe(new ItemStack(MBlocks.biome_stones, 1, 0), new ItemStack(MBlocks.biome_cobble, 1, 0), 0.05F, null, 0);
+		this.addRecipe(new ItemStack(MBlocks.biome_stones, 1, 1), new ItemStack(MBlocks.biome_cobble, 1, 1), 0.05F, null, 0);
+		this.addRecipe(new ItemStack(MBlocks.biome_stones, 1, 2), new ItemStack(MBlocks.biome_cobble, 1, 2), 0.05F, null, 0);
+		this.addRecipe(new ItemStack(MBlocks.biome_stones, 1, 3), new ItemStack(MBlocks.biome_cobble, 1, 3), 0.05F, null, 0);
+		this.addRecipe(new ItemStack(MBlocks.biome_stones, 1, 4), new ItemStack(MBlocks.biome_cobble, 1, 4), 0.05F, null, 0);
+		this.addRecipe(new ItemStack(MBlocks.biome_stones, 1, 5), new ItemStack(MBlocks.biome_cobble, 1, 5), 0.05F, null, 0);
+		this.addRecipe(new ItemStack(MBlocks.biome_stones, 1, 6), new ItemStack(MBlocks.biome_cobble, 1, 6), 0.05F, null, 0);
+		this.addRecipe(new ItemStack(MBlocks.biome_stones, 1, 7), new ItemStack(MBlocks.biome_cobble, 1, 7), 0.05F, null, 0);
+		this.addRecipe(new ItemStack(MBlocks.biome_stones, 1, 8), new ItemStack(MBlocks.biome_cobble, 1, 8), 0.05F, null, 0);
+		this.addRecipe(new ItemStack(Blocks.cobblestone, 1, 0), new ItemStack(Blocks.gravel, 1), 0.05F, new ItemStack(MItems.chunks, 1, 0), 5);
+		this.addRecipe(new ItemStack(MBlocks.biome_cobble, 1, 0), new ItemStack(Blocks.gravel, 1), 0.05F, new ItemStack(MItems.chunks, 1, 0), 5);
+		this.addRecipe(new ItemStack(MBlocks.biome_cobble, 1, 1), new ItemStack(Blocks.gravel, 1), 0.05F, new ItemStack(MItems.chunks, 1, 1), 5);
+		this.addRecipe(new ItemStack(MBlocks.biome_cobble, 1, 2), new ItemStack(Blocks.gravel, 1), 0.05F, new ItemStack(MItems.chunks, 1, 1), 5);
+		this.addRecipe(new ItemStack(MBlocks.biome_cobble, 1, 3), new ItemStack(Blocks.gravel, 1), 0.05F, new ItemStack(MItems.chunks, 1, 2), 5);
+		this.addRecipe(new ItemStack(MBlocks.biome_cobble, 1, 4), new ItemStack(Blocks.gravel, 1), 0.05F, new ItemStack(MItems.chunks, 1, 2), 5);
+		this.addRecipe(new ItemStack(MBlocks.biome_cobble, 1, 5), new ItemStack(Blocks.gravel, 1), 0.05F, new ItemStack(MItems.chunks, 1, 3), 5);
+		this.addRecipe(new ItemStack(MBlocks.biome_cobble, 1, 6), new ItemStack(Blocks.gravel, 1), 0.05F, new ItemStack(MItems.chunks, 1, 3), 5);
+		this.addRecipe(new ItemStack(MBlocks.biome_cobble, 1, 7), new ItemStack(Blocks.gravel, 1), 0.05F, new ItemStack(MItems.chunks, 1, 4), 5);
+		this.addRecipe(new ItemStack(MBlocks.biome_cobble, 1, 8), new ItemStack(Blocks.gravel, 1), 0.05F, new ItemStack(MItems.chunks, 1, 4), 5);
+		this.addRecipe(new ItemStack(Blocks.stone, 1, 3), new ItemStack(MItems.desert_quartz_item, 2, 0), 0.1F, new ItemStack(MItems.chunks, 1, 0), 80);
+		this.addRecipe(new ItemStack(Blocks.stone, 1, 1), new ItemStack(Blocks.stone, 1, 3), 0.1F, new ItemStack(MItems.desert_quartz_item, 1, 0), 80);
+		this.addRecipe(new ItemStack(Blocks.stone, 1, 5), new ItemStack(Blocks.stone, 1, 3), 0.1F, new ItemStack(MItems.chunks, 1, 0), 80);
+		this.addRecipe(new ItemStack(MBlocks.slate, 1, 0), new ItemStack(Items.clay_ball, 2, 0), 0.1F, new ItemStack(MItems.desert_quartz_item, 1, 0), 80);
+		this.addRecipe(Blocks.sandstone, new ItemStack(Blocks.sand, 3, 0), 0.5F, new ItemStack(MItems.desert_quartz_item), 2);
+		this.addRecipe(Blocks.red_sandstone, new ItemStack(Blocks.sand, 3, 1), 0.5F, new ItemStack(MItems.desert_quartz_item), 2);
+		this.addRecipe(Blocks.hardened_clay, new ItemStack(Blocks.sand, 1, 1), 0.2F, null, 0);
+		this.addRecipe(new ItemStack(Blocks.stained_hardened_clay, 1, 0), new ItemStack(Blocks.sand, 1, 1), 0.2F, new ItemStack(Items.dye, 1, 15), 5);
+		this.addRecipe(new ItemStack(Blocks.stained_hardened_clay, 1, 1), new ItemStack(Blocks.sand, 1, 1), 0.2F, new ItemStack(Items.dye, 1, 14), 5);
+		this.addRecipe(new ItemStack(Blocks.stained_hardened_clay, 1, 2), new ItemStack(Blocks.sand, 1, 1), 0.2F, new ItemStack(Items.dye, 1, 13), 5);
+		this.addRecipe(new ItemStack(Blocks.stained_hardened_clay, 1, 3), new ItemStack(Blocks.sand, 1, 1), 0.2F, new ItemStack(Items.dye, 1, 12), 5);
+		this.addRecipe(new ItemStack(Blocks.stained_hardened_clay, 1, 4), new ItemStack(Blocks.sand, 1, 1), 0.2F, new ItemStack(Items.dye, 1, 11), 5);
+		this.addRecipe(new ItemStack(Blocks.stained_hardened_clay, 1, 5), new ItemStack(Blocks.sand, 1, 1), 0.2F, new ItemStack(Items.dye, 1, 10), 5);
+		this.addRecipe(new ItemStack(Blocks.stained_hardened_clay, 1, 6), new ItemStack(Blocks.sand, 1, 1), 0.2F, new ItemStack(Items.dye, 1, 9), 5);
+		this.addRecipe(new ItemStack(Blocks.stained_hardened_clay, 1, 7), new ItemStack(Blocks.sand, 1, 1), 0.2F, new ItemStack(Items.dye, 1, 8), 5);
+		this.addRecipe(new ItemStack(Blocks.stained_hardened_clay, 1, 8), new ItemStack(Blocks.sand, 1, 1), 0.2F, new ItemStack(Items.dye, 1, 7), 5);
+		this.addRecipe(new ItemStack(Blocks.stained_hardened_clay, 1, 9), new ItemStack(Blocks.sand, 1, 1), 0.2F, new ItemStack(Items.dye, 1, 6), 5);
+		this.addRecipe(new ItemStack(Blocks.stained_hardened_clay, 1, 10), new ItemStack(Blocks.sand, 1, 1), 0.2F, new ItemStack(Items.dye, 1, 5), 5);
+		this.addRecipe(new ItemStack(Blocks.stained_hardened_clay, 1, 11), new ItemStack(Blocks.sand, 1, 1), 0.2F, new ItemStack(Items.dye, 1, 4), 5);
+		this.addRecipe(new ItemStack(Blocks.stained_hardened_clay, 1, 12), new ItemStack(Blocks.sand, 1, 1), 0.2F, new ItemStack(Items.dye, 1, 3), 5);
+		this.addRecipe(new ItemStack(Blocks.stained_hardened_clay, 1, 13), new ItemStack(Blocks.sand, 1, 1), 0.2F, new ItemStack(Items.dye, 1, 2), 5);
+		this.addRecipe(new ItemStack(Blocks.stained_hardened_clay, 1, 14), new ItemStack(Blocks.sand, 1, 1), 0.2F, new ItemStack(Items.dye, 1, 1), 5);
+		this.addRecipe(new ItemStack(Blocks.stained_hardened_clay, 1, 15), new ItemStack(Blocks.sand, 1, 1), 0.2F, new ItemStack(Items.dye, 1, 0), 5);
+		this.addRecipe(new ItemStack(Blocks.prismarine, 1, 0), new ItemStack(Items.prismarine_shard, 3, 0), 0.3F, new ItemStack(Items.prismarine_crystals, 1, 0), 3);
+		this.addRecipe(new ItemStack(Items.prismarine_shard, 1, 0), new ItemStack(MItems.chunks, 1, 3), 0.1F, new ItemStack(MItems.radiant_quartz, 1, 0), 1);
+		
+		//Ores
+		this.addRecipe(Blocks.coal_ore, new ItemStack(Items.coal, 3, 0), 0.05F, new ItemStack(MItems.chunks, 1, 0), 20);
+		this.addRecipe(new ItemStack(MBlocks.biome_coal, 1, 0), new ItemStack(Items.coal, 3, 0), 0.05F, new ItemStack(MItems.chunks, 1, 0), 20);
+		this.addRecipe(new ItemStack(MBlocks.biome_coal, 1, 1), new ItemStack(Items.coal, 3, 0), 0.05F, new ItemStack(MItems.chunks, 1, 1), 20);
+		this.addRecipe(new ItemStack(MBlocks.biome_coal, 1, 2), new ItemStack(Items.coal, 3, 0), 0.05F, new ItemStack(MItems.chunks, 1, 1), 20);
+		this.addRecipe(new ItemStack(MBlocks.biome_coal, 1, 3), new ItemStack(Items.coal, 3, 0), 0.05F, new ItemStack(MItems.chunks, 1, 2), 20);
+		this.addRecipe(new ItemStack(MBlocks.biome_coal, 1, 4), new ItemStack(Items.coal, 3, 0), 0.05F, new ItemStack(MItems.chunks, 1, 2), 20);
+		this.addRecipe(new ItemStack(MBlocks.biome_coal, 1, 5), new ItemStack(Items.coal, 3, 0), 0.05F, new ItemStack(MItems.chunks, 1, 3), 20);
+		this.addRecipe(new ItemStack(MBlocks.biome_coal, 1, 6), new ItemStack(Items.coal, 3, 0), 0.05F, new ItemStack(MItems.chunks, 1, 3), 20);
+		this.addRecipe(new ItemStack(MBlocks.biome_coal, 1, 7), new ItemStack(Items.coal, 3, 0), 0.05F, new ItemStack(MItems.chunks, 1, 4), 20);
+		this.addRecipe(new ItemStack(MBlocks.biome_coal, 1, 8), new ItemStack(Items.coal, 3, 0), 0.05F, new ItemStack(MItems.chunks, 1, 4), 20);
+		
+		this.addRecipe(Blocks.iron_ore, new ItemStack(MItems.chunks, 2, 7), 0.35F, new ItemStack(MItems.chunks, 1, 0), 20);
+		this.addRecipe(new ItemStack(MBlocks.biome_iron, 1, 0), new ItemStack(MItems.chunks, 2, 7), 0.35F, new ItemStack(MItems.chunks, 1, 0), 20);
+		this.addRecipe(new ItemStack(MBlocks.biome_iron, 1, 1), new ItemStack(MItems.chunks, 2, 7), 0.35F, new ItemStack(MItems.chunks, 1, 1), 20);
+		this.addRecipe(new ItemStack(MBlocks.biome_iron, 1, 2), new ItemStack(MItems.chunks, 2, 7), 0.35F, new ItemStack(MItems.chunks, 1, 1), 20);
+		this.addRecipe(new ItemStack(MBlocks.biome_iron, 1, 3), new ItemStack(MItems.chunks, 2, 7), 0.35F, new ItemStack(MItems.chunks, 1, 2), 20);
+		this.addRecipe(new ItemStack(MBlocks.biome_iron, 1, 4), new ItemStack(MItems.chunks, 2, 7), 0.35F, new ItemStack(MItems.chunks, 1, 2), 20);
+		this.addRecipe(new ItemStack(MBlocks.biome_iron, 1, 5), new ItemStack(MItems.chunks, 2, 7), 0.35F, new ItemStack(MItems.chunks, 1, 3), 20);
+		this.addRecipe(new ItemStack(MBlocks.biome_iron, 1, 6), new ItemStack(MItems.chunks, 2, 7), 0.35F, new ItemStack(MItems.chunks, 1, 3), 20);
+		this.addRecipe(new ItemStack(MBlocks.biome_iron, 1, 7), new ItemStack(MItems.chunks, 2, 7), 0.35F, new ItemStack(MItems.chunks, 1, 4), 20);
+		this.addRecipe(new ItemStack(MBlocks.biome_iron, 1, 8), new ItemStack(MItems.chunks, 2, 7), 0.35F, new ItemStack(MItems.chunks, 1, 4), 20);
+		
+		this.addRecipe(Blocks.gold_ore, new ItemStack(MItems.chunks, 2, 8), 0.5F, new ItemStack(MItems.chunks, 1, 0), 20);
+		this.addRecipe(new ItemStack(MBlocks.biome_gold, 1, 0), new ItemStack(MItems.chunks, 2, 8), 0.5F, new ItemStack(MItems.chunks, 1, 0), 20);
+		this.addRecipe(new ItemStack(MBlocks.biome_gold, 1, 1), new ItemStack(MItems.chunks, 2, 8), 0.5F, new ItemStack(MItems.chunks, 1, 1), 20);
+		this.addRecipe(new ItemStack(MBlocks.biome_gold, 1, 2), new ItemStack(MItems.chunks, 2, 8), 0.5F, new ItemStack(MItems.chunks, 1, 1), 20);
+		this.addRecipe(new ItemStack(MBlocks.biome_gold, 1, 3), new ItemStack(MItems.chunks, 2, 8), 0.5F, new ItemStack(MItems.chunks, 1, 2), 20);
+		this.addRecipe(new ItemStack(MBlocks.biome_gold, 1, 4), new ItemStack(MItems.chunks, 2, 8), 0.5F, new ItemStack(MItems.chunks, 1, 2), 20);
+		this.addRecipe(new ItemStack(MBlocks.biome_gold, 1, 5), new ItemStack(MItems.chunks, 2, 8), 0.5F, new ItemStack(MItems.chunks, 1, 3), 20);
+		this.addRecipe(new ItemStack(MBlocks.biome_gold, 1, 6), new ItemStack(MItems.chunks, 2, 8), 0.5F, new ItemStack(MItems.chunks, 1, 3), 20);
+		this.addRecipe(new ItemStack(MBlocks.biome_gold, 1, 7), new ItemStack(MItems.chunks, 2, 8), 0.5F, new ItemStack(MItems.chunks, 1, 4), 20);
+		this.addRecipe(new ItemStack(MBlocks.biome_gold, 1, 8), new ItemStack(MItems.chunks, 2, 8), 0.5F, new ItemStack(MItems.chunks, 1, 4), 20);
+		
+		this.addRecipe(Blocks.redstone_ore, new ItemStack(Items.redstone, 9, 0), 0.35F, new ItemStack(Items.glowstone_dust), 20);
+		this.addRecipe(new ItemStack(MBlocks.biome_redstone, 1, 0), new ItemStack(Items.redstone, 9, 0), 0.35F, new ItemStack(Items.glowstone_dust), 5);
+		this.addRecipe(new ItemStack(MBlocks.biome_redstone, 1, 1), new ItemStack(Items.redstone, 9, 0), 0.35F, new ItemStack(Items.glowstone_dust), 5);
+		this.addRecipe(new ItemStack(MBlocks.biome_redstone, 1, 2), new ItemStack(Items.redstone, 9, 0), 0.35F, new ItemStack(Items.glowstone_dust), 5);
+		this.addRecipe(new ItemStack(MBlocks.biome_redstone, 1, 3), new ItemStack(Items.redstone, 9, 0), 0.35F, new ItemStack(Items.glowstone_dust), 5);
+		this.addRecipe(new ItemStack(MBlocks.biome_redstone, 1, 4), new ItemStack(Items.redstone, 9, 0), 0.35F, new ItemStack(Items.glowstone_dust), 5);
+		this.addRecipe(new ItemStack(MBlocks.biome_redstone, 1, 5), new ItemStack(Items.redstone, 9, 0), 0.35F, new ItemStack(Items.glowstone_dust), 5);
+		this.addRecipe(new ItemStack(MBlocks.biome_redstone, 1, 6), new ItemStack(Items.redstone, 9, 0), 0.35F, new ItemStack(Items.glowstone_dust), 5);
+		this.addRecipe(new ItemStack(MBlocks.biome_redstone, 1, 7), new ItemStack(Items.redstone, 9, 0), 0.35F, new ItemStack(Items.glowstone_dust), 5);
+		this.addRecipe(new ItemStack(MBlocks.biome_redstone, 1, 8), new ItemStack(Items.redstone, 9, 0), 0.35F, new ItemStack(Items.glowstone_dust), 5);
+		
 		this.addRecipe(MBlocks.biome_tin, new ItemStack(MItems.chunks, 2, 3), .2F, new ItemStack(MItems.chunks, 1, 0), 100);
 		this.addRecipe(MBlocks.biome_copper, new ItemStack(MItems.chunks, 2, 4), .2F, new ItemStack(MItems.chunks, 1, 3), 100);
+		
+		//Misc
+		this.addRecipe(Blocks.clay, new ItemStack(Blocks.sand, 1, 0), 0.1F, new ItemStack(Items.clay_ball, 2, 0), 50);
+		this.addRecipe(Blocks.gravel, new ItemStack(Blocks.sand, 1, 0), 0.05F, new ItemStack(Items.flint, 1, 0), 30);
+		this.addRecipe(new ItemStack(Blocks.dirt, 1, 1), new ItemStack(Blocks.dirt, 1, 0), 0.05F, new ItemStack(Items.flint, 1, 0), 10);
+		this.addRecipe(Blocks.bookshelf, new ItemStack(Items.book, 3), 0.05F, new ItemStack(Items.paper, 1), 5);
+		this.addRecipe(Blocks.web, new ItemStack(Items.string, 4), .2F, new ItemStack(Items.spider_eye, 1, 0), 20);
+		this.addRecipe(Blocks.ladder, new ItemStack(Items.stick, 1), 0.05F, new ItemStack(Items.stick, 1), 50);
 	}
 	
 	public void addRecipe(Block input, ItemStack stack, float experience, ItemStack extra, int chance)
