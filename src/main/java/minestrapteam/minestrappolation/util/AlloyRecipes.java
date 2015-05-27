@@ -4,8 +4,10 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MItems;
 import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -29,9 +31,20 @@ public class AlloyRecipes
 	
 	private AlloyRecipes()
 	{
-		this.addRecipe(new ItemStack(MItems.tin_ingot), new ItemStack(MItems.copper_ingot, 3, 0), new ItemStack(Items.diamond), 1F);
-		this.addRecipe(Items.apple, Items.arrow, new ItemStack(Items.coal), 1F);
-		this.addRecipe(Items.apple, Items.bed, new ItemStack(Items.baked_potato), 1F);
+		//Stones
+		this.addRecipe(new ItemStack(Blocks.cobblestone, 4, 0), new ItemStack(Blocks.quartz_block, 1, 0), new ItemStack(Blocks.stone, 4, 3), 0.3F);
+		this.addRecipe(new ItemStack(Blocks.stone, 2, 3), new ItemStack(Blocks.cobblestone, 2, 0), new ItemStack(Blocks.stone, 4, 5), 0.3F);
+		this.addRecipe(new ItemStack(Blocks.stone, 4, 3), new ItemStack(Blocks.quartz_block, 1, 0), new ItemStack(Blocks.stone, 4, 1), 0.3F);
+		this.addRecipe(new ItemStack(Blocks.clay, 4, 0), new ItemStack(Blocks.quartz_block, 1, 0), new ItemStack(MBlocks.slate, 4, 0), 0.3F);
+		
+		//Minerals
+		this.addRecipe(new ItemStack(MItems.tin_ingot, 3, 0), new ItemStack(MItems.copper_ingot, 3, 0), new ItemStack(MItems.bronze_ingot), 1F);
+		this.addRecipe(new ItemStack(Items.iron_ingot, 1, 0), new ItemStack(Items.coal, 6, 0), new ItemStack(MItems.steel_ingot), 1F);
+		this.addRecipe(new ItemStack(Items.prismarine_shard, 1), new ItemStack(MItems.sunstone_shard, 1), new ItemStack(Items.prismarine_crystals), 1F);
+		this.addRecipe(new ItemStack(MItems.chunks, 8, 3), new ItemStack(MItems.radiant_quartz, 1), new ItemStack(Items.prismarine_shard, 8), 1.5F);
+		
+		//Misc
+		this.addRecipe(new ItemStack(Blocks.sand, 1), new ItemStack(Blocks.sand, 1), new ItemStack(MBlocks.glass_refined, 2), 0.3F);
 	}
 	
 	public void addRecipe(Block input, Block input2, ItemStack stack, float experience)
