@@ -408,17 +408,17 @@ public class MBlocks
 		register(redwood_stairs);
 		
 		register(slate);
-		GameRegistry.registerBlock(roads, ItemBlockRoads.class, roads.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(chiseled, ItemBlockChiseled.class, chiseled.getUnlocalizedName().substring(5));
 		register(stone_pattern_bricks);
 		register(stone_refined);
 		register(stone_tiles);
 		register(stone_lamp_glowstone);
 		register(stone_lamp_prismarine);
 		register(stone_lamp_sunstone);
+		GameRegistry.registerBlock(roads, ItemBlockRoads.class, roads.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(biome_stones, ItemBlockBiomeStones.class, biome_stones.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(biome_cobble, ItemBlockBiomeCobble.class, biome_cobble.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(biome_bricks, ItemBlockBiomeBricks.class, biome_bricks.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(chiseled, ItemBlockChiseled.class, chiseled.getUnlocalizedName().substring(5));
 		register(deepstone_stairs);
 		register(coldstone_stairs);
 		register(redrock_stairs);

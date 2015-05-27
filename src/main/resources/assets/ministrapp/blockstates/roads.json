@@ -1,0 +1,22 @@
+{
+   "variants":{
+      "type=red_sand":{
+         "model":"ministrapp:red_rock_cobbled_road"
+      },
+      "type=cobble":{
+         "model":"ministrapp:stone_cobbled_road"
+      },
+      "type=gravel":{
+         "model":"ministrapp:coldstone_cobbled_road"
+      },
+      "type=permafrost":{
+         "model":"ministrapp:icestone_cobbled_road"
+      },
+      "type=nether":{
+         "model":"ministrapp:netherrack_cobbled_road"
+      },
+      "type=sand":{
+         "model":"ministrapp:oceanstone_cobbled_road"
+      }
+   }
+}

@@ -1,0 +1,8 @@
+{
+    "parent": "block/cube_bottom_top",
+    "textures": {
+        "bottom": "ministrapp:blocks/netherrack_cobbled_road_bottom",
+        "top": "ministrapp:blocks/netherrack_cobbled_road_top",
+        "side": "ministrapp:blocks/netherrack_cobbled_road_side"
+    }
+}
