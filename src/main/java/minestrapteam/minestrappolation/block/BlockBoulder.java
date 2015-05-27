@@ -66,6 +66,7 @@ public class BlockBoulder extends BlockFalling
 					return Items.redstone;
 				}
 				else
+					dropID = 4;
 					return MItems.sunstone_shard;
 			}
 			else if (rand.nextInt(100 - fortune * 10) == 11)
@@ -120,6 +121,7 @@ public class BlockBoulder extends BlockFalling
 					return Items.redstone;
 				}
 				else
+					dropID = 4;
 					return MItems.sunstone_shard;
 			}
 			else if (rand.nextInt(100 - fortune * 10) == 11)
@@ -174,6 +176,7 @@ public class BlockBoulder extends BlockFalling
 					return Items.redstone;
 				}
 				else
+					dropID = 4;
 					return MItems.sunstone_shard;
 			}
 			else if (rand.nextInt(100 - fortune * 10) == 11)
@@ -228,6 +231,7 @@ public class BlockBoulder extends BlockFalling
 					return Item.getItemFromBlock(Blocks.packed_ice);
 				}
 				else
+					dropID = 4;
 					return MItems.sunstone_shard;
 			}
 			else if (rand.nextInt(100 - fortune * 10) == 11)
@@ -282,6 +286,7 @@ public class BlockBoulder extends BlockFalling
 					return Items.redstone;
 				}
 				else
+					dropID = 4;
 					return Items.prismarine_crystals;
 			}
 			else if (rand.nextInt(100 - fortune * 10) == 11)
@@ -312,9 +317,76 @@ public class BlockBoulder extends BlockFalling
     {
         //TODO: ADD CORRECT METADATA VALUES FOR EACH OUTCOME.
 		if (dropID == 0)
-        	return 0;
-        else
-        	return 0;
+		{
+			if (this == MBlocks.red_rock_boulder)
+				return 1;
+			else if (this == MBlocks.coldstone_boulder)
+				return 2;
+			else if (this == MBlocks.icestone_boulder)
+				return 3;
+			else if (this == MBlocks.oceanstone_boulder)
+				return 4;
+			else
+				return 0;
+		}
+		else if (dropID == 1)
+		{
+			if (this == MBlocks.oceanstone_boulder)
+				return 2;
+			else
+				return 0;
+		}
+		else if (dropID == 2)
+		{
+			if(this == MBlocks.coldstone_boulder)
+				return 4;
+			else
+				return 0;
+		}
+		else if (dropID == 3)
+		{
+			if (this == MBlocks.stone_boulder)
+				return 9;
+			else if (this == MBlocks.red_rock_boulder)
+				return 5;
+			else if (this == MBlocks.coldstone_boulder)
+				return 6;
+			else if (this == MBlocks.icestone_boulder)
+				return 8;
+			else if (this == MBlocks.oceanstone_boulder)
+				return 7;
+			else
+				return 0;
+		}
+		else if (dropID == 4)
+		{
+			return 0;
+		}
+		else if (dropID == 5)
+		{
+			return 0;
+		}
+		else if (dropID == 6)
+		{
+			return 0;
+		}
+		else if (dropID == 7)
+		{
+			if (this == MBlocks.red_rock_boulder)
+				return 1;
+			else if (this == MBlocks.coldstone_boulder)
+				return 3;
+			else if (this == MBlocks.icestone_boulder)
+				return 5;
+			else if (this == MBlocks.oceanstone_boulder)
+				return 7;
+			else
+				return 0;
+		}
+		else
+		{
+			return 0;
+		}
     }
 	
 	@Override
