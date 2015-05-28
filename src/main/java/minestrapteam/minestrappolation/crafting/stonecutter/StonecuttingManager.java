@@ -31,6 +31,13 @@ public class StonecuttingManager
 	
 	private StonecuttingManager()
 	{
+		//Chunk Items
+		this.addShapelessRecipe(new ItemStack(MItems.chunks, 4, 0), null, new Object[] { new ItemStack(Blocks.cobblestone, 1, 0) });
+		this.addShapelessRecipe(new ItemStack(MItems.chunks, 4, 1), null, new Object[] { new ItemStack(MBlocks.biome_cobble, 1, 1) });
+		this.addShapelessRecipe(new ItemStack(MItems.chunks, 4, 2), null, new Object[] { new ItemStack(MBlocks.biome_cobble, 1, 3) });
+		this.addShapelessRecipe(new ItemStack(MItems.chunks, 4, 3), null, new Object[] { new ItemStack(MBlocks.biome_cobble, 1, 5) });
+		this.addShapelessRecipe(new ItemStack(MItems.chunks, 4, 4), null, new Object[] { new ItemStack(MBlocks.biome_cobble, 1, 7) });
+		
 		//Brick Items
 		this.addShapelessRecipe(new ItemStack(MItems.stone_brick, 4), null, new Object[] { new ItemStack(Blocks.stone, 1, 0) });
 		this.addShapelessRecipe(new ItemStack(MItems.deepstone_brick, 4), null, new Object[] { new ItemStack(MBlocks.biome_stones, 1, 0) });
