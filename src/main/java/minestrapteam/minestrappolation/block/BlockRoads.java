@@ -93,6 +93,11 @@ public class BlockRoads extends MBlock
 		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "roads");
 		
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:cobble_road");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:red_sand_road");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:gravel_road");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:permafrost_road");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:sand_road");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:nether_road");
 	}
 	
 	public static void inventoryRender()
