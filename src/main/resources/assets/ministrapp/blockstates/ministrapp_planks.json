@@ -2,6 +2,10 @@
    "variants":{
       "type=redwood":{
          "model":"ministrapp:redwood_planks"
+      },
+	 "type=frozen_oak":{
+         "model":"ministrapp:frozen_oak_planks"
       }
+
     }
 }

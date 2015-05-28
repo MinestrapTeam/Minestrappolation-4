@@ -4,7 +4,8 @@ import net.minecraft.util.IStringSerializable;
 
 public enum MWoodType implements IStringSerializable
 {
-	REDWOOD(0, "redwood");
+	REDWOOD(0, "redwood"),
+	FROZEN(1, "frozen_oak");
 	private static final MWoodType[]	META_LOOKUP	= new MWoodType[values().length];
 	private final int					meta;
 	private final String				name;

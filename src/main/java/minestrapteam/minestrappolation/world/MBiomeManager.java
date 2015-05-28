@@ -28,7 +28,7 @@ public class MBiomeManager
 		frost = new BiomeFrost(nextBiomeID).setBiomeName("The Frost");
 		
 		registerBiomes(redwood, BiomeType.WARM, Type.FOREST, nextBiomeID(), true);
-		registerBiomes(frost, BiomeType.ICY, Type.PLAINS, nextBiomeID(), false);
+		registerBiomes(frost, BiomeType.ICY, Type.COLD, nextBiomeID(), false);
 	}
 	
 	private static void registerBiomes(BiomeGenBase biome, BiomeType type, Type forgeType, int id, boolean canSpawnIn)

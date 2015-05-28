@@ -81,6 +81,7 @@ public class MBlockPlanks extends Block
 		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "ministrapp_planks");
 		
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:redwood_planks");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:frozen_oak_planks");
 	}
 	
 	public static void inventoryRender()
