@@ -6,6 +6,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.ShapedOreRecipe;
 
 public class MRecipes
 {
@@ -66,6 +67,7 @@ public class MRecipes
 		
 		GameRegistry.addSmelting(MBlocks.blazium_ore, new ItemStack(MItems.blaze_shard), 1.0F);
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.blazium_ingot, 9), new Object[] { MBlocks.blazium_block });
+		GameRegistry.addRecipe(new ItemStack(MItems.blazium_ingot, 1), new Object[] { "BB", "BB", 'B', MItems.blaze_shard });
 		
 		GameRegistry.addSmelting(MBlocks.soul_ore, new ItemStack(MItems.soul_gem), 1.0F);
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.soul_gem, 9), new Object[] { MBlocks.soul_gem_block });
@@ -94,9 +96,18 @@ public class MRecipes
 		GameRegistry.addRecipe(new ItemStack(MBlocks.tiled_glass_pane, 16), new Object[] { "GGG", "GGG", 'G', MBlocks.glass_tiles });
 		GameRegistry.addRecipe(new ItemStack(MBlocks.framed_glass_pane, 16), new Object[] { "GGG", "GGG", 'G', MBlocks.glass_window });
 		
+		GameRegistry.addRecipe(new ItemStack(MBlocks.flint_block, 1), new Object[] { "FF", "FF", 'F', Items.flint});
+		GameRegistry.addRecipe(new ItemStack(MBlocks.sugar_block, 1), new Object[] { "SSS", "SSS", "SSS", 'S', Items.sugar});
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.sugar, 9), new Object[] { MBlocks.sugar_block });
+		
+		GameRegistry.addSmelting(new ItemStack(MBlocks.cold_sand, 1, 0), new ItemStack(Blocks.sand, 1, 0), 0.1F);
+		GameRegistry.addSmelting(new ItemStack(MBlocks.cold_sand, 1, 1), new ItemStack(Blocks.sand, 1, 1), 0.1F);
+		GameRegistry.addSmelting(new ItemStack(MBlocks.dirt_permafrost, 1, 0), new ItemStack(Blocks.dirt, 1, 0), 0.1F);
+		
 		// Wood
 		GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.ministrapp_planks, 4, 0), new Object[] { new ItemStack(MBlocks.ministrapp_log, 1, 0) });
 		GameRegistry.addRecipe(new ItemStack(MBlocks.redwood_stairs, 4), new Object[] { "W  ", "WW ", "WWW", 'W', new ItemStack(MBlocks.ministrapp_planks, 1, 0) });
+		GameRegistry.addSmelting(new ItemStack(MBlocks.ministrapp_log), new ItemStack(Items.coal, 1, 1), 0.15F);
 		
 		//Stone
 		GameRegistry.addSmelting(new ItemStack(MBlocks.biome_cobble, 1, 0), new ItemStack(MBlocks.biome_stones, 1, 0), .1F);
@@ -115,8 +126,17 @@ public class MRecipes
 		GameRegistry.addRecipe(new ItemStack(MBlocks.biome_cobble, 1, 5), new Object[] { "CC", "CC", 'C', new ItemStack(MItems.chunks, 1, 3)});
 		GameRegistry.addRecipe(new ItemStack(MBlocks.biome_cobble, 1, 7), new Object[] { "CC", "CC", 'C', new ItemStack(MItems.chunks, 1, 4)});
 		
+		GameRegistry.addRecipe(new ItemStack(MBlocks.roads, 3, 0), new Object[] { "CCC", "CCC", "DDD", 'C', new ItemStack(MItems.chunks, 1, 0), 'D', new ItemStack(Blocks.dirt, 1, 0)});
+		GameRegistry.addRecipe(new ItemStack(MBlocks.roads, 3, 1), new Object[] { "CCC", "CCC", "DDD", 'C', new ItemStack(MItems.chunks, 1, 1), 'D', new ItemStack(Blocks.sand, 1, 1)});
+		GameRegistry.addRecipe(new ItemStack(MBlocks.roads, 3, 2), new Object[] { "CCC", "CCC", "DDD", 'C', new ItemStack(MItems.chunks, 1, 2), 'D', new ItemStack(Blocks.gravel, 1, 0)});
+		GameRegistry.addRecipe(new ItemStack(MBlocks.roads, 3, 3), new Object[] { "CCC", "CCC", "DDD", 'C', new ItemStack(MItems.chunks, 1, 3), 'D', new ItemStack(MBlocks.dirt_permafrost, 1, 0)});
+		GameRegistry.addRecipe(new ItemStack(MBlocks.roads, 3, 4), new Object[] { "CCC", "CCC", "DDD", 'C', new ItemStack(MItems.chunks, 1, 4), 'D', new ItemStack(Blocks.sand, 1, 0)});
+		GameRegistry.addRecipe(new ItemStack(MBlocks.roads, 6, 5), new Object[] { "CCC", "CCC", "DDD", 'C', new ItemStack(Blocks.netherrack), 'D', new ItemStack(Blocks.soul_sand, 1, 0)});
+		
 		// Tech
 		GameRegistry.addRecipe(new ItemStack(MBlocks.alloy, 1), new Object[] { "TTT", "TFT", "BBB", 'T', new ItemStack(MItems.tin_plating), 'F', new ItemStack(Blocks.furnace), 'B', new ItemStack(MBlocks.biome_bricks, 1, 1) });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.melter, 1), new Object[] { "MMM", "MFM", "IBI", 'M', new ItemStack(MItems.meurodite_plating), 'F', new ItemStack(Blocks.furnace), 'I', new ItemStack(Blocks.iron_bars), 'B', MBlocks.blazium_block });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.frost_generator, 1), new Object[] { "IPI", "QPQ", "GRG", 'I', new ItemStack(MBlocks.biome_cobble, 1, 5), 'G', new ItemStack(MBlocks.biome_stones, 1, 6), 'P', new ItemStack(Blocks.packed_ice), 'R', Blocks.redstone_block, 'Q', MItems.radiant_quartz });
 		
 		// Tools and Weapons
 		GameRegistry.addRecipe(new ItemStack(MItems.copper_pickaxe), new Object[] { "III", " S ", " S ", 'I', MItems.copper_ingot, 'S', Items.stick });
@@ -211,6 +231,7 @@ public class MRecipes
 		GameRegistry.addRecipe(new ItemStack(Blocks.sandstone, 1, 0), new Object[] { "SS", "SS", 'S', new ItemStack(Blocks.sand, 1, 0)});
 		GameRegistry.addRecipe(new ItemStack(Blocks.red_sandstone, 1, 0), new Object[] { "SS", "SS", 'S', new ItemStack(Blocks.sand, 1, 1)});
 		GameRegistry.addRecipe(new ItemStack(Blocks.prismarine, 1, 0), new Object[] { "PP", "PP", 'P', Items.prismarine_shard});
+		GameRegistry.addRecipe(new ItemStack(Blocks.redstone_lamp, 1, 0), new Object[] { " R ", "RSR", " R ", 'R', Items.redstone, 'S', MBlocks.sunstone_block});
 	}
 	
 	public static void removeRecipes()
@@ -254,7 +275,20 @@ public class MRecipes
 		RecipeHelper.removeRecipeContaining(Blocks.jungle_fence_gate);
 		RecipeHelper.removeRecipeContaining(Blocks.acacia_fence_gate);
 		RecipeHelper.removeRecipeContaining(Blocks.dark_oak_fence_gate);
+		RecipeHelper.removeRecipeContaining(Blocks.oak_door);
+		RecipeHelper.removeRecipeContaining(Blocks.birch_door);
+		RecipeHelper.removeRecipeContaining(Blocks.spruce_door);
+		RecipeHelper.removeRecipeContaining(Blocks.jungle_door);
+		RecipeHelper.removeRecipeContaining(Blocks.acacia_door);
+		RecipeHelper.removeRecipeContaining(Blocks.dark_oak_door);
 		RecipeHelper.removeRecipeContaining(Blocks.anvil);
+		RecipeHelper.removeRecipeContaining(Blocks.chest);
+		RecipeHelper.removeRecipeContaining(Blocks.jukebox);
+		RecipeHelper.removeRecipeContaining(Blocks.noteblock);
+		RecipeHelper.removeRecipeContaining(Blocks.trapdoor);
+		RecipeHelper.removeRecipeContaining(Blocks.nether_brick);
+		RecipeHelper.removeRecipeContaining(Blocks.nether_brick_fence);
+		RecipeHelper.removeRecipeContaining(Items.ender_eye);
 	}
 	
 }

@@ -40,18 +40,66 @@ public class MelterRecipes
 		this.addRecipe(Blocks.sandstone_stairs, new ItemStack(Items.lava_bucket), 0.4F);
 		this.addRecipe(Blocks.red_sandstone, new ItemStack(Items.lava_bucket), 0.6F);
 		this.addRecipe(Blocks.red_sandstone_stairs, new ItemStack(Items.lava_bucket), 0.6F);
+		this.addRecipe(Blocks.furnace, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(Blocks.dropper, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(Blocks.dispenser, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(Blocks.netherrack, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(Blocks.nether_brick, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(Blocks.nether_brick_stairs, new ItemStack(Items.lava_bucket), 0.5F);
 		
 		// Vanilla Water
 		this.addRecipe(Blocks.snow, new ItemStack(Items.water_bucket), 0.4F);
 		this.addRecipe(Blocks.ice, new ItemStack(Items.water_bucket), 0.7F);
 		this.addRecipe(Blocks.packed_ice, new ItemStack(Items.water_bucket), 0.9F);
 		this.addRecipe(Blocks.prismarine, new ItemStack(Items.water_bucket), 0.5F);
+		this.addRecipe(Blocks.cactus, new ItemStack(Items.water_bucket), 0.3F);
 		
-		// Minestrappolation lava
+		//Vanilla Milk
+		this.addRecipe(Items.cake, new ItemStack(Items.milk_bucket), 0.4F);
+		
+		//Minestrappolation Water
+		this.addRecipe(MBlocks.snow_bricks, new ItemStack(Items.water_bucket), 0.4F);
+		this.addRecipe(MBlocks.snow_refined, new ItemStack(Items.water_bucket), 0.4F);
+		this.addRecipe(MBlocks.snow_tiles, new ItemStack(Items.water_bucket), 0.4F);
+		
+		// Minestrappolation Lava
 		this.addRecipe(MBlocks.biome_stones, new ItemStack(Items.lava_bucket), 0.5F);
 		this.addRecipe(MBlocks.biome_cobble, new ItemStack(Items.lava_bucket), 0.4F);
 		this.addRecipe(MBlocks.biome_bricks, new ItemStack(Items.lava_bucket), 0.5F);
 		this.addRecipe(MBlocks.chiseled, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.slate, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.flint_block, new ItemStack(Items.lava_bucket), 0.7F);
+		this.addRecipe(MBlocks.stonecutter, new ItemStack(Items.lava_bucket), 0.6F);
+		this.addRecipe(MBlocks.roads, new ItemStack(Items.lava_bucket), 0.4F);
+		this.addRecipe(MBlocks.stone_boulder, new ItemStack(Items.lava_bucket), 0.6F);
+		this.addRecipe(MBlocks.red_rock_boulder, new ItemStack(Items.lava_bucket), 0.6F);
+		this.addRecipe(MBlocks.coldstone_boulder, new ItemStack(Items.lava_bucket), 0.6F);
+		this.addRecipe(MBlocks.icestone_boulder, new ItemStack(Items.lava_bucket), 0.6F);
+		this.addRecipe(MBlocks.oceanstone_boulder, new ItemStack(Items.lava_bucket), 0.6F);
+		this.addRecipe(MBlocks.stone_lamp_glowstone, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.stone_lamp_sunstone, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.stone_lamp_prismarine, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.stone_pattern_bricks, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.stone_refined, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.stone_tiles, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.deepstone_stairs, new ItemStack(Items.lava_bucket), 0.4F);
+		this.addRecipe(MBlocks.redrock_stairs, new ItemStack(Items.lava_bucket), 0.4F);
+		this.addRecipe(MBlocks.deep_redrock_stairs, new ItemStack(Items.lava_bucket), 0.4F);
+		this.addRecipe(MBlocks.coldstone_stairs, new ItemStack(Items.lava_bucket), 0.4F);
+		this.addRecipe(MBlocks.deep_coldstone_stairs, new ItemStack(Items.lava_bucket), 0.4F);
+		this.addRecipe(MBlocks.icestone_stairs, new ItemStack(Items.lava_bucket), 0.4F);
+		this.addRecipe(MBlocks.glacierstone_stairs, new ItemStack(Items.lava_bucket), 0.4F);
+		this.addRecipe(MBlocks.oceanstone_stairs, new ItemStack(Items.lava_bucket), 0.4F);
+		this.addRecipe(MBlocks.poceanstone_stairs, new ItemStack(Items.lava_bucket), 0.4F);
+		this.addRecipe(MBlocks.deepstone_brick_stairs, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.redrock_brick_stairs, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.deep_redrock_brick_stairs, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.coldstone_brick_stairs, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.deep_coldstone_brick_stairs, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.icestone_brick_stairs, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.glacierstone_brick_stairs, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.oceanstone_brick_stairs, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.poceanstone_brick_stairs, new ItemStack(Items.lava_bucket), 0.5F);
 		
 		//Misc
 		this.addRecipe(MBlocks.titanium_ore, new ItemStack(MItems.titanium_ingot), 2.0F);

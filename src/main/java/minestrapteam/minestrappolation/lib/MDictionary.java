@@ -96,6 +96,14 @@ public class MDictionary
 		OreDictionary.registerOre("paneGlass", new ItemStack(MBlocks.tiled_glass_pane));
 		OreDictionary.registerOre("paneGlass", new ItemStack(MBlocks.framed_glass_pane));
 		
+		OreDictionary.registerOre("meatRaw", new ItemStack(Items.fish));
+		OreDictionary.registerOre("meatRaw", new ItemStack(Items.beef));
+		OreDictionary.registerOre("meatRaw", new ItemStack(Items.chicken));
+		OreDictionary.registerOre("meatRaw", new ItemStack(Items.mutton));
+		OreDictionary.registerOre("meatRaw", new ItemStack(Items.porkchop));
+		OreDictionary.registerOre("meatRaw", new ItemStack(Items.rabbit));
+		OreDictionary.registerOre("meatRaw", new ItemStack(Items.rotten_flesh));
+		
 		//Minerals
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.copper_block), new Object[] { "III", "III", "III", 'I', "ingotCopper" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.tin_block), new Object[] { "III", "III", "III", 'I', "ingotTin" }));
@@ -111,16 +119,18 @@ public class MDictionary
 		
 		//Tech
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.crate, 1), new Object[] { "WWW", "SSS", "WWW", 'W', "plankWood", 'S', "stickWood" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.sawmill, 1), new Object[] { "CC", "WW", "WW", 'C', "ingotCopper", 'W', "plankWood" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.stonecutter, 1), new Object[] { "II", "CC", "CC", 'I', "ingotIron", 'C', "cobblestone" }));
+		//TODO: Replace Obsidian with Obsidian Bricks in Crusher recipe.
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.crusher, 1), new Object[] { "BPB", "BTB", "OOO", 'B', MBlocks.bronze_block, 'P', Blocks.piston, 'T', "ingotTitanium", 'O', Blocks.obsidian }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.plutonium_insulated), new Object[] { "SSS", "GBG", "SSS", 'S', "ingotSteel", 'G', MBlocks.framed_glass_pane, 'B', MBlocks.plutonium_block }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.uranium_insulated), new Object[] { "SSS", "GBG", "SSS", 'S', "ingotSteel", 'G', MBlocks.framed_glass_pane, 'B', MBlocks.uranium_block }));
-		// GameRegistry.addRecipe(new ShapedOreRecipe(new
-		// ItemStack(MBlocks.melter, 1), new Object[] { "MMM", "MFM", "IBI",
-		// 'M', new ItemStack(MItems.meurodite_plating), 'F', new
-		// ItemStack(Blocks.furnace), 'I', new ItemStack(Blocks.iron_bars), 'B',
-		// "blockBlazium" }));
 		
 		//Materials
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MItems.reinforced_stick, 8), new Object[] { "SSS", "STS", "SSS", 'S', "stickWood", 'T', new ItemStack(MItems.tin_plating) }));
+		
+		//Decor
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.meat_block, 1), new Object[] { "MMM", "MMM", "MMM", 'M', "meatRaw" }));
 		
 		//Vanilla
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.flint_and_steel), new Object[] { "S ", " F", 'S', "ingotSteel", 'F', new ItemStack(Items.flint) }));

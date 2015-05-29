@@ -31,7 +31,8 @@ public class SawingManager
 	private SawingManager()
 	{
 		//Vanilla Alternate Recipes
-		this.addRecipe(new ItemStack(Blocks.chest, 1), new Object[] { "WWW", "W W", "WWW", 'W', "plankWood" });
+		this.addRecipe(new ItemStack(Blocks.crafting_table, 1, 0), new Object[] { "WW", "WW", 'W', "plankWood" });
+		this.addRecipe(new ItemStack(Items.sign, 3, 0), new Object[] { "WWW", "WWW", " S ", 'W', "plankWood", 'S', "stickWood" });
 		this.addRecipe(new ItemStack(Blocks.planks, 6, 0), new Object[] { "L", 'L', new ItemStack(Blocks.log, 1, 0) });
 		this.addRecipe(new ItemStack(Blocks.planks, 6, 1), new Object[] { "L", 'L', new ItemStack(Blocks.log, 1, 1) });
 		this.addRecipe(new ItemStack(Blocks.planks, 6, 2), new Object[] { "L", 'L', new ItemStack(Blocks.log, 1, 2) });
@@ -76,6 +77,10 @@ public class SawingManager
 		this.addRecipe(new ItemStack(Items.acacia_door, 3), new Object[] { "WW", "WW", "WW", 'W', new ItemStack(Blocks.planks, 1, 4) });
 		this.addRecipe(new ItemStack(Items.dark_oak_door, 3), new Object[] { "WW", "WW", "WW", 'W', new ItemStack(Blocks.planks, 1, 5) });
 		this.addRecipe(new ItemStack(MBlocks.redwood_door_item, 3), new Object[] { "WW", "WW", "WW", 'W', new ItemStack(MBlocks.ministrapp_planks, 1, 0) });
+		this.addRecipe(new ItemStack(Blocks.trapdoor, 2), new Object[] { "WWW", "WWW", 'W', "plankWood" });
+		this.addRecipe(new ItemStack(Blocks.chest, 1), new Object[] { "WWW", "W W", "WWW", 'W', "plankWood" });
+		this.addRecipe(new ItemStack(Blocks.jukebox, 1), new Object[] { "WWW", "WDW", "WWW", 'W', "plankWood", 'D', Items.diamond});
+		this.addRecipe(new ItemStack(Blocks.noteblock, 1), new Object[] { "WWW", "WRW", "WWW", 'W', "plankWood", 'R', Items.redstone});
 		
 		//Minestrapp Alternate Recipes
 		this.addRecipe(new ItemStack(MBlocks.crate, 1), new Object[] { "WWW", "SSS", "WWW", 'W', "plankWood", 'S', "stickWood" });

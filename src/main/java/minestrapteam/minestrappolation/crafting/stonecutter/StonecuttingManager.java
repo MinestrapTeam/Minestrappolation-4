@@ -30,13 +30,19 @@ public class StonecuttingManager
 	}
 	
 	private StonecuttingManager()
-	{
+	{		
 		//Chunk Items
 		this.addShapelessRecipe(new ItemStack(MItems.chunks, 4, 0), null, new Object[] { new ItemStack(Blocks.cobblestone, 1, 0) });
 		this.addShapelessRecipe(new ItemStack(MItems.chunks, 4, 1), null, new Object[] { new ItemStack(MBlocks.biome_cobble, 1, 1) });
 		this.addShapelessRecipe(new ItemStack(MItems.chunks, 4, 2), null, new Object[] { new ItemStack(MBlocks.biome_cobble, 1, 3) });
 		this.addShapelessRecipe(new ItemStack(MItems.chunks, 4, 3), null, new Object[] { new ItemStack(MBlocks.biome_cobble, 1, 5) });
 		this.addShapelessRecipe(new ItemStack(MItems.chunks, 4, 4), null, new Object[] { new ItemStack(MBlocks.biome_cobble, 1, 7) });
+		
+		GameRegistry.addRecipe(new ItemStack(Blocks.cobblestone, 1), new Object[] { "CC", "CC", 'C', new ItemStack(MItems.chunks, 1, 0)});
+		GameRegistry.addRecipe(new ItemStack(MBlocks.biome_cobble, 1, 1), new Object[] { "CC", "CC", 'C', new ItemStack(MItems.chunks, 1, 1)});
+		GameRegistry.addRecipe(new ItemStack(MBlocks.biome_cobble, 1, 3), new Object[] { "CC", "CC", 'C', new ItemStack(MItems.chunks, 1, 2)});
+		GameRegistry.addRecipe(new ItemStack(MBlocks.biome_cobble, 1, 5), new Object[] { "CC", "CC", 'C', new ItemStack(MItems.chunks, 1, 3)});
+		GameRegistry.addRecipe(new ItemStack(MBlocks.biome_cobble, 1, 7), new Object[] { "CC", "CC", 'C', new ItemStack(MItems.chunks, 1, 4)});
 		
 		//Brick Items
 		this.addShapelessRecipe(new ItemStack(MItems.stone_brick, 4), null, new Object[] { new ItemStack(Blocks.stone, 1, 0) });
@@ -65,6 +71,7 @@ public class StonecuttingManager
 		this.addRecipe(new ItemStack(MBlocks.biome_bricks, 1, 8), null, new Object[] { "BB", "BB", 'B', MItems.pressurized_oceanstone_brick });
 		this.addRecipe(new ItemStack(Blocks.prismarine, 1, 1), null, new Object[] { "BB", "BB", 'B', Items.prismarine_shard});
 		this.addRecipe(new ItemStack(Blocks.brick_block, 1, 0), null, new Object[] { "BB", "BB", 'B', Items.brick});
+		this.addRecipe(new ItemStack(Blocks.nether_brick, 1, 0), null, new Object[] { "BB", "BB", 'B', Items.netherbrick});
 		
 		//Mossy Brick Blocks
 		this.addRecipe(new ItemStack(Blocks.stonebrick, 9, 1), new ItemStack(Blocks.vine), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(Blocks.stonebrick, 1, 0)});
@@ -115,10 +122,29 @@ public class StonecuttingManager
 		this.addRecipe(new ItemStack(Blocks.sandstone_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(Blocks.sandstone, 1, 0)});
 		this.addRecipe(new ItemStack(Blocks.quartz_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(Blocks.quartz_block, 1, 0)});
 		this.addRecipe(new ItemStack(Blocks.red_sandstone_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(Blocks.red_sandstone, 1, 0)});
+		this.addRecipe(new ItemStack(MBlocks.deepstone_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(MBlocks.biome_cobble, 1, 0)});
+		this.addRecipe(new ItemStack(MBlocks.coldstone_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(MBlocks.biome_cobble, 1, 3)});
+		this.addRecipe(new ItemStack(MBlocks.deep_coldstone_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(MBlocks.biome_cobble, 1, 4)});
+		this.addRecipe(new ItemStack(MBlocks.redrock_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(MBlocks.biome_cobble, 1, 1)});
+		this.addRecipe(new ItemStack(MBlocks.deep_redrock_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(MBlocks.biome_cobble, 1, 2)});
+		this.addRecipe(new ItemStack(MBlocks.icestone_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(MBlocks.biome_cobble, 1, 5)});
+		this.addRecipe(new ItemStack(MBlocks.glacierstone_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(MBlocks.biome_cobble, 1, 6)});
+		this.addRecipe(new ItemStack(MBlocks.oceanstone_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(MBlocks.biome_cobble, 1, 7)});
+		this.addRecipe(new ItemStack(MBlocks.poceanstone_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(MBlocks.biome_cobble, 1, 8)});
+		this.addRecipe(new ItemStack(MBlocks.deepstone_brick_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(MBlocks.biome_bricks, 1, 0)});
+		this.addRecipe(new ItemStack(MBlocks.coldstone_brick_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(MBlocks.biome_bricks, 1, 3)});
+		this.addRecipe(new ItemStack(MBlocks.deep_coldstone_brick_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(MBlocks.biome_bricks, 1, 4)});
+		this.addRecipe(new ItemStack(MBlocks.redrock_brick_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(MBlocks.biome_bricks, 1, 1)});
+		this.addRecipe(new ItemStack(MBlocks.deep_redrock_brick_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(MBlocks.biome_bricks, 1, 2)});
+		this.addRecipe(new ItemStack(MBlocks.icestone_brick_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(MBlocks.biome_bricks, 1, 5)});
+		this.addRecipe(new ItemStack(MBlocks.glacierstone_brick_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(MBlocks.biome_bricks, 1, 6)});
+		this.addRecipe(new ItemStack(MBlocks.oceanstone_brick_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(MBlocks.biome_bricks, 1, 7)});
+		this.addRecipe(new ItemStack(MBlocks.poceanstone_brick_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(MBlocks.biome_bricks, 1, 8)});
 		
 		//Walls, Fences, etc
 		this.addRecipe(new ItemStack(Blocks.cobblestone_wall, 2, 0), null, new Object[] { "CCC", "CCC", 'C', new ItemStack(MItems.chunks, 1, 0)});
 		this.addRecipe(new ItemStack(Blocks.cobblestone_wall, 2, 0), new ItemStack(Blocks.vine), new Object[] { "CCC", "CCC", 'C', new ItemStack(MItems.chunks, 1, 0)});
+		this.addRecipe(new ItemStack(Blocks.nether_brick_fence, 2, 0), null, new Object[] { "BBB", "BBB", 'B', new ItemStack(Items.netherbrick, 1)});
 		
 		//Dying
 		this.addRecipe(new ItemStack(Blocks.stained_hardened_clay, 9, 0), new ItemStack(Items.dye, 1, 15), new Object[] { "SSS", "SSS", "SSS", 'S', new ItemStack(Blocks.hardened_clay, 1, 0)});
