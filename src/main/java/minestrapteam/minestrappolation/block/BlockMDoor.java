@@ -23,8 +23,17 @@ public class BlockMDoor extends BlockDoor
 	}
 	
 	private Item getItem()
-	{
-		return MBlocks.redwood_door_item;
+	{ 
+		if(this == MBlocks.redwood_door)
+		{
+			return MBlocks.redwood_door_item;
+		}
+		else if(this == MBlocks.redwood_door)
+		{
+			return MBlocks.redwood_door_item;
+		}
+		return null;
+		
 	}
 	
 }

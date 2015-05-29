@@ -29,6 +29,10 @@ public class ItemBlockLeaves extends ItemBlock
 	@SideOnly(Side.CLIENT)
 	public int getColorFromItemStack(ItemStack stack, int renderPass)
 	{
+		if(stack.getItemDamage() == MWoodType.FROZEN.getMetadata())
+		{
+			return 10420217;
+		}
 		return MBlocks.ministrapp_leaves.getRenderColor(MBlocks.ministrapp_leaves.getStateFromMeta(stack.getMetadata()));
 	}
 	

@@ -5,6 +5,7 @@ import java.util.Random;
 
 import minestrapteam.minestrappolation.Minestrappolation;
 import minestrapteam.minestrappolation.enumtypes.MWoodType;
+import minestrapteam.minestrappolation.world.WorldGenFrostTree;
 import minestrapteam.minestrappolation.world.WorldGenRedWoodTree;
 import minestrapteam.minestrappolation.world.WorldGenRedWoodTreeSmall;
 import net.minecraft.block.BlockBush;
@@ -112,6 +113,13 @@ public class MBlockSapling extends BlockBush implements IGrowable
 				j = 0;
 				i = 0;
 				object = new WorldGenRedWoodTreeSmall();
+			}
+		case FROZEN:
+			if (!flag)
+			{
+				j = 0;
+				i = 0;
+				object = new WorldGenFrostTree();
 			}
 		}
 		

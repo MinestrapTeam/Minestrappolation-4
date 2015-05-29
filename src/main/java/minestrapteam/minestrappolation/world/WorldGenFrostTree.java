@@ -2,6 +2,7 @@ package minestrapteam.minestrappolation.world;
 
 import java.util.Random;
 
+import minestrapteam.minestrappolation.enumtypes.MWoodType;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
@@ -15,7 +16,7 @@ public class WorldGenFrostTree extends WorldGenBaseTree
 	
 	public WorldGenFrostTree()
 	{
-		super(Blocks.log.getDefaultState(), Blocks.leaves.getDefaultState(), 5, 7, 1, MBlocks.lichen_permafrost, MBlocks.dirt_permafrost, Blocks.snow_layer);
+		super(MBlocks.ministrapp_log.getStateFromMeta(MWoodType.FROZEN.getMetadata()), MBlocks.ministrapp_leaves.getStateFromMeta(MWoodType.FROZEN.getMetadata()), 5, 7, 1, MBlocks.lichen_permafrost, MBlocks.dirt_permafrost, Blocks.snow_layer);
 	}
 	
 	@Override

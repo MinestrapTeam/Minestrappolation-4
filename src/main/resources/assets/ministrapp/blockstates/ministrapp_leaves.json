@@ -1,8 +1,29 @@
 {
-    "variants": {
-        "check_decay=true,decayable=true,variant=redwood": { "model": "ministrapp:redwood_leaves" },
-		"check_decay=true,decayable=false,variant=redwood": { "model": "ministrapp:redwood_leaves" },
-		"check_decay=false,decayable=true,variant=redwood": { "model": "ministrapp:redwood_leaves" },
-		"check_decay=false,decayable=false,variant=redwood": { "model": "ministrapp:redwood_leaves" }
-    }
+   "variants":{
+      "check_decay=true,decayable=true,variant=redwood":{
+         "model":"ministrapp:redwood_leaves"
+      },
+      "check_decay=true,decayable=false,variant=redwood":{
+         "model":"ministrapp:redwood_leaves"
+      },
+      "check_decay=false,decayable=true,variant=redwood":{
+         "model":"ministrapp:redwood_leaves"
+      },
+      "check_decay=false,decayable=false,variant=redwood":{
+         "model":"ministrapp:redwood_leaves"
+      },
+      "check_decay=true,decayable=true,variant=frozen_oak":{
+         "model":"ministrapp:frozen_leaves"
+      },
+      "check_decay=true,decayable=false,variant=frozen_oak":{
+         "model":"ministrapp:frozen_leaves"
+      },
+      "check_decay=false,decayable=true,variant=frozen_oak":{
+         "model":"ministrapp:frozen_leaves"
+      },
+      "check_decay=false,decayable=false,variant=frozen_oak":{
+         "model":"ministrapp:frozen_leaves"
+      }
+
+   }
 }

@@ -5,12 +5,15 @@ import java.util.Random;
 
 import minestrapteam.minestrappolation.enumtypes.MWoodType;
 import minestrapteam.minestrappolation.lib.MBlocks;
+import minestrapteam.minestrappolation.lib.MReference;
 import net.minecraft.block.Block;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.model.ModelBakery;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
@@ -23,6 +26,7 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumWorldBlockLayer;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -170,7 +174,7 @@ public class MBlockLeaves extends MBlockLeavesBase
 	@SideOnly(Side.CLIENT)
 	public EnumWorldBlockLayer getBlockLayer()
 	{
-		return Minecraft.isFancyGraphicsEnabled() ? EnumWorldBlockLayer.CUTOUT_MIPPED : EnumWorldBlockLayer.SOLID;
+		return Minecraft.isFancyGraphicsEnabled() ? EnumWorldBlockLayer.TRANSLUCENT : EnumWorldBlockLayer.SOLID;
 	}
 	
 	@Override
@@ -184,6 +188,28 @@ public class MBlockLeaves extends MBlockLeavesBase
 	public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face)
 	{
 		return this.flammability;
+	}
+	
+	public static void preinventoryRender()
+	{
+		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "ministrapp_leaves");
+		
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:redwood_leaves");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:frozen_oak_leaves");
+	}
+	
+	public static void inventoryRender()
+	{
+		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "ministrapp_leaves");
+		MWoodType[] aenumtype = MWoodType.values();
+		int i = aenumtype.length;
+		
+		for (int j = 0; j < i; ++j)
+		{
+			MWoodType enumtype = aenumtype[j];
+			ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(MReference.MODID + ":" + enumtype.getUnlocalizedName() + "_leaves", "inventory");
+			Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, enumtype.getMetadata(), itemModelResourceLocation);
+		}
 	}
 	
 }

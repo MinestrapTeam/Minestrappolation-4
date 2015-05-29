@@ -38,10 +38,6 @@ public class BlockCrusher extends BlockDirectional
 	{
 		super(Material.rock);
 		this.isActive = active;
-		if (active)
-		{
-			this.setLightLevel(1F);
-		}
 	}
 	
 	@Override

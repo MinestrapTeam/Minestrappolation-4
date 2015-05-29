@@ -54,7 +54,15 @@ public class MBlockLog extends BlockLog
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item itemIn, CreativeTabs tab, List list)
 	{
-		list.add(new ItemStack(itemIn, 1, MWoodType.REDWOOD.getMetadata()));
+		MWoodType[] aenumtype = MWoodType.values();
+		int i = aenumtype.length;
+		
+		for (int j = 0; j < i; ++j)
+		{
+			MWoodType enumtype = aenumtype[j];
+			list.add(new ItemStack(itemIn, 1, enumtype.getMetadata()));
+		}
+		
 	}
 	
 	@Override

@@ -97,6 +97,7 @@ import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class MBlocks
@@ -160,6 +161,7 @@ public class MBlocks
 	public static Block	stone_tiles;
 	
 	public static Block	redwood_door;
+	public static Block	frozen_door;
 	
 	// Wood
 	public static Block	ministrapp_log;
@@ -239,6 +241,7 @@ public class MBlocks
 	
 	// BLOCK ITEMS
 	public static Item	redwood_door_item;
+	public static Item  frozen_door_item;
 	
 	public static void init()
 	{
@@ -291,6 +294,7 @@ public class MBlocks
 		
 		// Door
 		redwood_door = new BlockMDoor(Material.wood).setHardness(3.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("redwood_door");
+		frozen_door = new BlockMDoor(Material.wood).setHardness(3.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("frozen_oak_door");
 		
 		// WOOD
 		ministrapp_log = new MBlockLog(300).setUnlocalizedName("ministrapp_log");
@@ -382,6 +386,7 @@ public class MBlocks
 		
 		// BLOCK ITEMS
 		redwood_door_item = new ItemMDoor(redwood_door).setUnlocalizedName("redwood_door_item");
+		frozen_door_item = new ItemMDoor(frozen_door).setUnlocalizedName("frozen_oak_door_item");
 		
 		Blocks.bedrock.setHardness(5F);
 		
@@ -392,8 +397,8 @@ public class MBlocks
 	private static void register()
 	{
 		register(dirt_permafrost);
-		GameRegistry.registerBlock(lichen_permafrost, ItemBlockPermaFrost.class, lichen_permafrost.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(cold_sand, ItemBlockColdSand.class, cold_sand.getUnlocalizedName().substring(5));
+		register(lichen_permafrost, ItemBlockPermaFrost.class);
+		register(cold_sand, ItemBlockColdSand.class);
 		
 		register(snow_bricks);
 		register(snow_refined);
@@ -403,8 +408,8 @@ public class MBlocks
 		register(glass_tiles);
 		register(glass_window);
 		
-		GameRegistry.registerBlock(ministrapp_log, ItemBlockLog.class, ministrapp_log.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(ministrapp_planks, ItemBlockPlanks.class, ministrapp_planks.getUnlocalizedName().substring(5));
+		register(ministrapp_log, ItemBlockLog.class);
+		register(ministrapp_planks, ItemBlockPlanks.class);
 		register(redwood_stairs);
 		
 		register(slate);
@@ -414,11 +419,11 @@ public class MBlocks
 		register(stone_lamp_glowstone);
 		register(stone_lamp_prismarine);
 		register(stone_lamp_sunstone);
-		GameRegistry.registerBlock(roads, ItemBlockRoads.class, roads.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(biome_stones, ItemBlockBiomeStones.class, biome_stones.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(biome_cobble, ItemBlockBiomeCobble.class, biome_cobble.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(biome_bricks, ItemBlockBiomeBricks.class, biome_bricks.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(chiseled, ItemBlockChiseled.class, chiseled.getUnlocalizedName().substring(5));
+		register(roads, ItemBlockRoads.class);
+		register(biome_stones, ItemBlockBiomeStones.class);
+		register(biome_cobble, ItemBlockBiomeCobble.class);
+		register(biome_bricks, ItemBlockBiomeBricks.class);
+		register(chiseled, ItemBlockChiseled.class);
 		register(deepstone_stairs);
 		register(coldstone_stairs);
 		register(redrock_stairs);
@@ -461,37 +466,37 @@ public class MBlocks
 		register(oceanstone_boulder);
 		
 		register(desert_quartz);
-		GameRegistry.registerBlock(biome_coal, ItemBlockBiomeCoal.class, biome_coal.getUnlocalizedName().substring(5));
+		register(biome_coal, ItemBlockBiomeCoal.class);
 		register(copper_ore);
-		GameRegistry.registerBlock(biome_copper, ItemBlockBiomeCopper.class, biome_copper.getUnlocalizedName().substring(5));
+		register(biome_copper, ItemBlockBiomeCopper.class);
 		register(tin_ore);
-		GameRegistry.registerBlock(biome_tin, ItemBlockBiomeTin.class, biome_tin.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(biome_iron, ItemBlockBiomeIron.class, biome_iron.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(biome_gold, ItemBlockBiomeGold.class, biome_gold.getUnlocalizedName().substring(5));
+		register(biome_tin, ItemBlockBiomeTin.class);
+		register(biome_iron, ItemBlockBiomeIron.class);
+		register(biome_gold, ItemBlockBiomeGold.class);
 		register(meurodite_ore);
-		GameRegistry.registerBlock(biome_meurodite, ItemBlockBiomeMeurodite.class, biome_meurodite.getUnlocalizedName().substring(5));
+		register(biome_meurodite, ItemBlockBiomeMeurodite.class);
 		register(torite_ore);
-		GameRegistry.registerBlock(biome_torite, ItemBlockBiomeTorite.class, biome_torite.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(biome_lapis, ItemBlockBiomeLapis.class, biome_lapis.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(biome_redstone, ItemBlockBiomeRedstone.class, biome_redstone.getUnlocalizedName().substring(5));
+		register(biome_torite, ItemBlockBiomeTorite.class);
+		register(biome_lapis, ItemBlockBiomeLapis.class);
+		register(biome_redstone, ItemBlockBiomeRedstone.class);
 		register(sunstone_ore);
-		GameRegistry.registerBlock(biome_sunstone, ItemBlockBiomeSunstone.class, biome_sunstone.getUnlocalizedName().substring(5));
+		register(biome_sunstone, ItemBlockBiomeSunstone.class);
 		register(plutonium_ore);
-		GameRegistry.registerBlock(biome_plutonium, ItemBlockBiomePlutonium.class, biome_plutonium.getUnlocalizedName().substring(5));
+		register(biome_plutonium, ItemBlockBiomePlutonium.class);
 		register(uranium_ore);
-		GameRegistry.registerBlock(biome_uranium, ItemBlockBiomeUranium.class, biome_uranium.getUnlocalizedName().substring(5));
+		register(biome_uranium, ItemBlockBiomeUranium.class);
 		register(radiant_ore);
-		GameRegistry.registerBlock(biome_radiant, ItemBlockBiomeRadiant.class, biome_radiant.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(biome_emerald, ItemBlockBiomeEmerald.class, biome_emerald.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(biome_diamond, ItemBlockBiomeDiamond.class, biome_diamond.getUnlocalizedName().substring(5));
+		register(biome_radiant, ItemBlockBiomeRadiant.class);
+		register(biome_emerald, ItemBlockBiomeEmerald.class);
+		register(biome_diamond, ItemBlockBiomeDiamond.class);
 		register(titanium_ore);
-		GameRegistry.registerBlock(biome_titanium, ItemBlockBiomeTitanium.class, biome_titanium.getUnlocalizedName().substring(5));
+		register(biome_titanium, ItemBlockBiomeTitanium.class);
 		register(blazium_ore);
 		register(soul_ore);
 		register(invincium);
 		
-		GameRegistry.registerBlock(ministrapp_sapling, ItemBlockSapling.class, ministrapp_sapling.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(ministrapp_leaves, ItemBlockLeaves.class, ministrapp_leaves.getUnlocalizedName().substring(5));
+		register(ministrapp_sapling, ItemBlockSapling.class);
+		register(ministrapp_leaves, ItemBlockLeaves.class);
 		register(redwood_fence);
 		register(refined_glass_pane);
 		register(bricked_glass_pane);
@@ -499,7 +504,9 @@ public class MBlocks
 		register(framed_glass_pane);
 		register(redwood_fence_gate);
 		register(redwood_door);
+		register(frozen_door);
 		GameRegistry.registerItem(redwood_door_item, redwood_door_item.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(frozen_door_item, frozen_door_item.getUnlocalizedName().substring(5));
 		register(crate);
 		register(barrel);
 		
@@ -604,6 +611,7 @@ public class MBlocks
 		registerRender(deep_redrock_brick_stairs);
 		registerRender(deep_coldstone_brick_stairs);
 		registerRender(redwood_door);
+		registerRender(frozen_door);
 		registerRender(alloy);
 		registerRender(alloy_active);
 		registerRender(stonecutter);
@@ -624,6 +632,11 @@ public class MBlocks
 	private static void register(Block block)
 	{
 		GameRegistry.registerBlock(block, block.getUnlocalizedName().substring(5));
+	}
+	
+	private static void register(Block block, Class<? extends ItemBlock> itemclass)
+	{
+		GameRegistry.registerBlock(block, itemclass, block.getUnlocalizedName().substring(5));
 	}
 	
 	private static void registerRender(Block block)
