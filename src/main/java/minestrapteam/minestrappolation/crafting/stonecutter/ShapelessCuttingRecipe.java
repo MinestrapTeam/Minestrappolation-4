@@ -3,6 +3,7 @@ package minestrapteam.minestrappolation.crafting.stonecutter;
 import java.util.ArrayList;
 import java.util.List;
 
+import minestrapteam.minestrappolation.util.MStacks;
 import net.minecraft.block.Block;
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.Item;
@@ -57,16 +58,11 @@ public class ShapelessCuttingRecipe implements ICuttingRecipes
 	{
 		return this.recipeOutput;
 	}
-	
-	private boolean compareItemStacks(ItemStack stack1, ItemStack stack2)
-	{
-		return stack2.getItem() == stack1.getItem() && (stack2.getMetadata() == 32767 || stack2.getMetadata() == stack1.getMetadata());
-	}
-	
+
 	@Override
 	public boolean matches(InventoryCrafting inventory, ItemStack extra, World par2World)
 	{
-		if (!this.compareItemStacks(this.extraSlot, extra))
+		if (!MStacks.equals(this.extraSlot, extra))
 			return false;
 		
 		ArrayList<ItemStack> list = new ArrayList(this.recipeItems);
@@ -80,7 +76,7 @@ public class ShapelessCuttingRecipe implements ICuttingRecipes
 				boolean flag = false;
 				for (ItemStack stack1 : list)
 				{
-					if (this.compareItemStacks(stack, stack1))
+					if (MStacks.equals(stack, stack1))
 					{
 						flag = true;
 						list.remove(stack1);
