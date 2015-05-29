@@ -8,6 +8,7 @@ import minestrapteam.minestrappolation.item.ItemMHoe;
 import minestrapteam.minestrappolation.item.ItemMPickaxe;
 import minestrapteam.minestrappolation.item.ItemMShovel;
 import minestrapteam.minestrappolation.item.ItemMSword;
+import minestrapteam.minestrappolation.item.ItemSifter;
 import minestrapteam.minestrappolation.item.ItemSoulGem;
 import minestrapteam.minestrappolation.item.MItemFoiled;
 import net.minecraft.client.Minecraft;
@@ -144,6 +145,8 @@ public class MItems extends Item
 	public static Item							blaze_shard;
 	
 	public static Item							chunks;
+	
+	public static Item							sifter;
 	
 	public static final Item.ToolMaterial		COPPER			= EnumHelper.addToolMaterial("COPPER", 1, 186, 4.5F, 1.5F, 18);
 	public static final Item.ToolMaterial		BRONZE			= EnumHelper.addToolMaterial("BRONZE", 2, 1016, 5.8F, 2.0F, 16);
@@ -284,6 +287,8 @@ public class MItems extends Item
 		
 		chunks = new ItemChunk().setUnlocalizedName("chunks").setCreativeTab(Minestrappolation.tabMMaterials);
 		
+		sifter = new ItemSifter().setUnlocalizedName("sifter");
+		
 		addItemsToChests();
 	}
 	
@@ -408,6 +413,8 @@ public class MItems extends Item
 		GameRegistry.registerItem(bedrock_axe, bedrock_axe.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(bedrock_shovel, bedrock_shovel.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(bedrock_hoe, bedrock_hoe.getUnlocalizedName().substring(5));
+		
+		GameRegistry.registerItem(sifter, sifter.getUnlocalizedName().substring(5));
 	}
 	
 	public static void registerRenders()
@@ -529,6 +536,8 @@ public class MItems extends Item
 		registerRender(blaze_shard);
 		registerRender(soul_gem);
 		registerRender(torite_ingot);
+		
+		registerRender(sifter);
 	}
 	
 	public static void addItemsToChests()

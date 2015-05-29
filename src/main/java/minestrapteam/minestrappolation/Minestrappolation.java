@@ -11,6 +11,7 @@ import minestrapteam.minestrappolation.util.Config;
 import minestrapteam.minestrappolation.util.MEventHandler;
 import minestrapteam.minestrappolation.util.MFuelHandler;
 import minestrapteam.minestrappolation.util.MGuiHandler;
+import minestrapteam.minestrappolation.util.Tables;
 import minestrapteam.minestrappolation.world.MBiomeManager;
 import minestrapteam.minestrappolation.world.MGenHandler;
 import net.minecraftforge.common.MinecraftForge;
@@ -54,6 +55,8 @@ public class Minestrappolation
 		
 		MDictionary.load();
 		MBiomeManager.load();
+		
+		Tables.loadTables();
 		MinecraftForge.EVENT_BUS.register(new MEventHandler());
 		proxy.preInit(event);
 		if (Minestrappolation.proxy != null)
