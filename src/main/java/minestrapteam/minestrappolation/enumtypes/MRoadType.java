@@ -9,7 +9,7 @@ public enum MRoadType implements IStringSerializable
 	GRAVEL(2, "gravel", 1.25D),
 	PERMAFROST(3, "permafrost", 1.25D),
 	SAND(4, "sand", 1.2D),
-	NEHTER(5, "nether", 1.4F);
+	NETHER(5, "nether", 1.4F);
 	private static final MRoadType[]	META_LOOKUP	= new MRoadType[values().length];
 	private final int					meta;
 	private final String				name;
