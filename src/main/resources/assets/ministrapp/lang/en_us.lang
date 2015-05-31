@@ -423,7 +423,7 @@ item.titanium_chestplate.name=Titanium Chestplate
 item.titanium_leggings.name=Titanium Leggings
 item.titanium_boots.name=Titanium Boots
 
-itemGroup.tabMBuilding=Minestrapp Builing Blocks
+itemGroup.tabMBuilding=Minestrapp Building Blocks
 itemGroup.tabMDecor=Minestrapp Decoration Blocks
 itemGroup.tabMTech=Minestrapp Tech Blocks
 itemGroup.tabMMaterials=Minestrapp Materials
