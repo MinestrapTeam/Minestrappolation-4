@@ -174,13 +174,7 @@ public class MRecipes
 		GameRegistry.addRecipe(new ItemStack(MItems.fire_shovel), new Object[] { "I", "S", "S", 'I', MItems.blazium_ingot, 'S', Items.blaze_rod });
 		GameRegistry.addRecipe(new ItemStack(MItems.fire_hoe), new Object[] { "II", " S", " S", 'I', MItems.blazium_ingot, 'S', Items.blaze_rod });
 		GameRegistry.addRecipe(new ItemStack(MItems.fire_sword), new Object[] { "I", "I", "S", 'I', MItems.blazium_ingot, 'S', Items.blaze_rod });
-		
-		GameRegistry.addRecipe(new ItemStack(Items.diamond_pickaxe), new Object[] { "III", " S ", " S ", 'I', Items.diamond, 'S', MItems.reinforced_stick });
-		GameRegistry.addRecipe(new ItemStack(Items.diamond_axe), new Object[] { "II", "IS", " S", 'I', Items.diamond, 'S', MItems.reinforced_stick });
-		GameRegistry.addRecipe(new ItemStack(Items.diamond_shovel), new Object[] { "I", "S", "S", 'I', Items.diamond, 'S', MItems.reinforced_stick });
-		GameRegistry.addRecipe(new ItemStack(Items.diamond_hoe), new Object[] { "II", " S", " S", 'I', Items.diamond, 'S', MItems.reinforced_stick });
-		GameRegistry.addRecipe(new ItemStack(Items.diamond_sword), new Object[] { "I", "I", "S", 'I', Items.diamond, 'S', MItems.reinforced_stick });
-		
+	
 		GameRegistry.addRecipe(new ItemStack(MItems.titanium_pickaxe), new Object[] { "III", " S ", " S ", 'I', MItems.titanium_ingot, 'S', MItems.reinforced_stick });
 		GameRegistry.addRecipe(new ItemStack(MItems.titanium_axe), new Object[] { "II", "IS", " S", 'I', MItems.titanium_ingot, 'S', MItems.reinforced_stick });
 		GameRegistry.addRecipe(new ItemStack(MItems.titanium_shovel), new Object[] { "I", "S", "S", 'I', MItems.titanium_ingot, 'S', MItems.reinforced_stick });

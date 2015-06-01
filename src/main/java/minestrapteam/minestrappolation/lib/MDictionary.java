@@ -96,7 +96,10 @@ public class MDictionary
 		OreDictionary.registerOre("paneGlass", new ItemStack(MBlocks.tiled_glass_pane));
 		OreDictionary.registerOre("paneGlass", new ItemStack(MBlocks.framed_glass_pane));
 		
-		OreDictionary.registerOre("meatRaw", new ItemStack(Items.fish));
+		OreDictionary.registerOre("meatRaw", new ItemStack(Items.fish, 1, 0));
+		OreDictionary.registerOre("meatRaw", new ItemStack(Items.fish, 1, 1));
+		OreDictionary.registerOre("meatRaw", new ItemStack(Items.fish, 1, 2));
+		OreDictionary.registerOre("meatRaw", new ItemStack(Items.fish, 1, 3));
 		OreDictionary.registerOre("meatRaw", new ItemStack(Items.beef));
 		OreDictionary.registerOre("meatRaw", new ItemStack(Items.chicken));
 		OreDictionary.registerOre("meatRaw", new ItemStack(Items.mutton));
@@ -136,6 +139,11 @@ public class MDictionary
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.flint_and_steel), new Object[] { "S ", " F", 'S', "ingotSteel", 'F', new ItemStack(Items.flint) }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.daylight_detector), new Object[] { "GGG", "QQQ", "WWW", 'G', "blockGlassColorless", 'Q', "gemQuartzAny", 'W', "slabWood"}));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.anvil, 1, 0), new Object[] { "III", " S ", "SSS", 'I', "blockIron", 'S', "ingotSteel" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.diamond_pickaxe), new Object[] { "III", " S ", " S ", 'I', Items.diamond, 'S', MItems.reinforced_stick }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.diamond_axe), new Object[] { "II", "IS", " S", 'I', Items.diamond, 'S', MItems.reinforced_stick }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.diamond_shovel), new Object[] { "I", "S", "S", 'I', Items.diamond, 'S', MItems.reinforced_stick }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.diamond_hoe), new Object[] { "II", " S", " S", 'I', Items.diamond, 'S', MItems.reinforced_stick }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.diamond_sword), new Object[] { "I", "I", "S", 'I', Items.diamond, 'S', MItems.reinforced_stick }));
 	}
 	
 }

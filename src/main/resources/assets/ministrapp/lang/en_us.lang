@@ -1,4 +1,8 @@
 tile.stone_boulder.name=Stone Boulder
+tile.red_rock_boulder.name=Red Rock Boulder
+tile.coldstone_boulder.name=Coldstone Boulder
+tile.icestone_boulder.name=Icestone Boulder
+tile.oceanstone_boulder.name=Oceanstone Boulder
 
 deepstone_coal.name=Coal Ore
 red_rock_coal.name=Coal Ore
@@ -189,7 +193,7 @@ tile.blazium_block.name=Block of Blazium
 tile.soul_gem_block.name=Soul Gem Block
 tile.godstone.name=Godstone
 
-redwood_log.name=Redwood Log
+redwood_log.name=Redwood
 redwood_leaves.name=Redwood Leaves
 redwood_sapling.name=Redwood Sapling
 redwood_planks.name=Redwood Planks
@@ -197,6 +201,11 @@ tile.redwood_stairs.name=Redwood Plank Stairs
 tile.redwood_fence_gate.name=Redwood Fence Gate
 tile.redwood_fence.name=Redwood Fence
 item.redwood_door_item.name=Redwood Door
+frozen_oak_log.name=Frozen Oak Wood
+frozen_oak_leaves.name=Frozen Oak Leaves
+frozen_oak_sapling.name=Frozen Oak Sapling
+frozen_oak_planks.name=Frozen Oak Wood Planks
+item.frozen_oak_door_item.name=Frozen Oak Door
 
 tile.stone_pattern_bricks.name=Patterned Stone Bricks
 tile.stone_refined.name=Polished Stone
@@ -208,61 +217,71 @@ tile.stone_lamp_sunstone.name=Stone Sunstone Lamp
 deepstone_rock.name=Deepstone
 deepstone_cobble.name=Cobbled Deepstone
 deepstone_bricks.name=Deepstone Bricks
+deepstone_chiseled.name=Chiseled Deepstone
 tile.deepstone_stairs.name=Cobbled Deepstone Stairs
 tile.deepstone_brick_stairs.name=Deepstone Brick Stairs
 
 red_rock_rock.name=Red Rock
 red_rock_cobble.name=Cobbled Red Rock
 red_rock_bricks.name=Red Rock Bricks
+red_rock_chiseled.name=Chiseled Red Rock
 tile.redrock_stairs.name=Cobbled Red Rock Stairs
 tile.redrock_brick_stairs.name=Red Rock Brick Stairs
 
 deep_redrock_rock.name=Deep Red Rock
 deep_redrock_cobble.name=Cobbled Deep Red Rock
 deep_redrock_bricks.name=Deep Red Rock Bricks
+deep_redrock_chiseled.name=Chiseled Deep Red Rock
 tile.deep_redrock_stairs.name=Cobbled Deep Red Rock Stairs
 tile.deep_redrock_brick_stairs.name=Deep Red Rock Brick Stairs
 
 coldstone_rock.name=Coldstone
 coldstone_cobble.name=Cobbled Coldstone
 coldstone_bricks.name=Coldstone Bricks
+coldstone_chiseled.name=Chiseled Coldstone
 tile.coldstone_stairs.name=Cobbled Coldstone Stairs
 tile.coldstone_brick_stairs.name=Coldstone Brick Stairs
 
 deep_coldstone_rock.name=Deep Coldstone
 deep_coldstone_cobble.name=Cobbled Deep Coldstone
 deep_coldstone_bricks.name=Deep Coldstone Bricks
+deep_coldstone_chiseled.name=Chiseled Deep Coldstone
 tile.deep_coldstone_stairs.name=Cobbled Deep Coldstone Stairs
 tile.deep_coldstone_brick_stairs.name=Deep Coldstone Brick Stairs
 
 icestone_rock.name=Icestone
 icestone_cobble.name=Cracked Icestone
 icestone_bricks.name=Icestone Bricks
+icestone_chiseled.name=Chiseled Icestone
 tile.icestone_stairs.name=Cracked Icestone Stairs
 tile.icestone_brick_stairs.name=Icestone Brick Stairs
 
 glacierrock_rock.name=Glacierrock
 glacierrock_cobble.name=Cracked Glacierrock
 glacierrock_bricks.name=Glacierrock Bricks
+glacierrock_chiseled.name=Chiseled Glacierrock
 tile.glacierstone_stairs.name=Cracked Glacierrock Stairs
 tile.glacierstone_brick_stairs.name=Glacierrock Brick Stairs
 
 oceanstone_rock.name=Oceanstone
 oceanstone_cobble.name=Cobbled Oceanstone
 oceanstone_bricks.name=Oceanstone Bricks
+oceanstone_chiseled.name=Chiseled Oceanstone
 tile.oceanstone_stairs.name=Cobbled Oceanstone Stairs
 tile.oceanstone_brick_stairs.name=Oceanstone Brick Stairs
 
 pressurized_oceanstone_rock.name=Pressurized Oceanstone
 pressurized_oceanstone_cobble.name=Cracked Pressurized Oceanstone
 pressurized_oceanstone_bricks.name=Pressurized Oceanstone Bricks
+pressurized_oceanstone_chiseled.name=Chiseled Pressurized Oceanstone
 tile.poceanstone_stairs.name=Cracked Pressurized Oceanstone Stairs
 tile.poceanstone_brick_stairs.name=Pressurized Oceanstone Brick Stairs
 
 cobble_road.name=Cobblestone Road
-gravel_road.name=Coldstone Road
-sand_road.name=Oceanstone Road
-red_sand_road.name=Red Rock Road
+gravel_road.name=Cobbled Coldstone Road
+sand_road.name=Cobbled Oceanstone Road
+red_sand_road.name=Cobbled Red Rock Road
+permafrost_road.name=Cracked Icestone Road
 nether_road.name=Netherrack Road
 
 tile.slate.name=Slate
@@ -319,11 +338,17 @@ item.titanium_ingot.name=Titanium Ingot
 item.plutonium.name=Plutonium
 item.uranium.name=Uranium
 
-item.stone_chunk.name=Stone Chunk
-item.iron_chunk.name=Iron Ore Chunk
-item.gold_chunk.name=Gold Ore Chunk
-item.tin_chunk.name=Tin Ore Chunk
-item.copper_chunk.name=Copper Ore Chunk
+stone_chunk.name=Stone Chunk
+red_rock_chunk.name=Red Rock Chunk
+coldstone_chunk.name=Coldstone Chunk
+icestone_chunk.name=Icestone Chunk
+oceanstone_chunk.name=Oceanstone Chunk
+copper_chunk.name=Copper Ore Chunk
+tin_chunk.name=Tin Ore Chunk
+iron_chunk.name=Iron Ore Chunk
+gold_chunk.name=Gold Ore Chunk
+torite_chunk.name=Torite Ore Chunk
+titanium_chunk.name=Titanium Ore Chunk
 
 item.tin_plating.name=Tin Plating
 item.meurodite_plating.name=Meurodite Plating
@@ -422,6 +447,8 @@ item.titanium_helmet.name=Titanium Helmet
 item.titanium_chestplate.name=Titanium Chestplate
 item.titanium_leggings.name=Titanium Leggings
 item.titanium_boots.name=Titanium Boots
+
+item.sifter.name=Sifter
 
 itemGroup.tabMBuilding=Minestrapp Building Blocks
 itemGroup.tabMDecor=Minestrapp Decoration Blocks
