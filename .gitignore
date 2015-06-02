@@ -5,13 +5,9 @@
 .project
 backups
 bin
-build
 eclipse
-gradle
 build.bat
 CREDITS-fml.txt
-gradlew
-gradlew.bat
 LICENSE-fml.txt
 MinecraftForge-Credits.txt
 MinecraftForge-License.txt
@@ -46,8 +42,7 @@ $RECYCLE.BIN/
 .LSOverride
 
 # Icon must end with two \r
-Icon
-
+Icon
 # Thumbnails
 ._*
 
