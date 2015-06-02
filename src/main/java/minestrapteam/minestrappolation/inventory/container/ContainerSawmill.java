@@ -1,22 +1,75 @@
 package minestrapteam.minestrappolation.inventory.container;
 
 import minestrapteam.minestrappolation.crafting.sawmill.SawingManager;
+import minestrapteam.minestrappolation.inventory.slot.SlotSawmill;
 import minestrapteam.minestrappolation.tileentity.TileEntitySawMill;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.Container;
 import net.minecraft.inventory.ContainerWorkbench;
 import net.minecraft.inventory.IInventory;
+import net.minecraft.inventory.InventoryCraftResult;
+import net.minecraft.inventory.InventoryCrafting;
+import net.minecraft.inventory.Slot;
+import net.minecraft.inventory.SlotCrafting;
+import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class ContainerSawmill extends ContainerWorkbench
+public class ContainerSawmill extends Container
 {
+	public InventoryCrafting		craftMatrix	= new InventoryCrafting(this, 3, 3);
+	public IInventory				craftResult	= new InventoryCraftResult();
 	public World				worldObj;
 	public TileEntitySawMill	sawmill;
 	
 	public ContainerSawmill(EntityPlayer player, TileEntitySawMill sawmill)
 	{
-		super(player.inventory, sawmill.getWorld(), sawmill.getPos());
 		this.worldObj = sawmill.getWorld();
 		this.sawmill = sawmill;
+		this.addSlotToContainer(new SlotSawmill(player, this.craftMatrix, this.craftResult, 0, 124, 35));
+        int i;
+        int j;
+
+        for (i = 0; i < 3; ++i)
+        {
+            for (j = 0; j < 3; ++j)
+            {
+                this.addSlotToContainer(new Slot(this.craftMatrix, j + i * 3, 30 + j * 18, 17 + i * 18));
+            }
+        }
+
+        for (i = 0; i < 3; ++i)
+        {
+            for (j = 0; j < 9; ++j)
+            {
+                this.addSlotToContainer(new Slot(player.inventory, j + i * 9 + 9, 8 + j * 18, 84 + i * 18));
+            }
+        }
+
+        for (i = 0; i < 9; ++i)
+        {
+            this.addSlotToContainer(new Slot(player.inventory, i, 8 + i * 18, 142));
+        }
+
+        this.onCraftMatrixChanged(this.craftMatrix);
+	}
+	
+	@Override
+	public void onContainerClosed(EntityPlayer player)
+	{
+		super.onContainerClosed(player);
+		
+		if (!this.sawmill.getWorld().isRemote)
+		{
+			for (int i = 0; i < 9; ++i)
+			{
+				ItemStack itemstack = this.craftMatrix.getStackInSlotOnClosing(i);
+				
+				if (itemstack != null)
+				{
+					player.dropPlayerItemWithRandomChoice(itemstack, true);
+				}
+			}
+		}
 	}
 	
 	@Override

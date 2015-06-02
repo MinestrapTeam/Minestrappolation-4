@@ -19,8 +19,6 @@ public class SlotStoneCutter extends SlotCrafting
 	private IInventory		extraSlotInv;
 	private EntityPlayer	thePlayer;
 	private final InventoryCrafting craftMatrix;
-	private int amountCrafted;
-	
 	public SlotStoneCutter(EntityPlayer player, InventoryCrafting craftingInventory, IInventory p_i45790_3_, IInventory extra, int slot, int x, int y)
 	{
 		super(player, craftingInventory, p_i45790_3_, slot, x, y);
