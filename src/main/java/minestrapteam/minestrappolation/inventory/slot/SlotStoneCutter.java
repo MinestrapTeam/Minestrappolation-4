@@ -1,27 +1,47 @@
 package minestrapteam.minestrappolation.inventory.slot;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.inventory.SlotCrafting;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemHoe;
+import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemSword;
+import net.minecraft.item.crafting.CraftingManager;
+import net.minecraft.stats.AchievementList;
 
 public class SlotStoneCutter extends SlotCrafting
 {
 	private IInventory		extraSlotInv;
 	private EntityPlayer	thePlayer;
+	private final InventoryCrafting craftMatrix;
+	private int amountCrafted;
 	
 	public SlotStoneCutter(EntityPlayer player, InventoryCrafting craftingInventory, IInventory p_i45790_3_, IInventory extra, int slot, int x, int y)
 	{
 		super(player, craftingInventory, p_i45790_3_, slot, x, y);
 		this.extraSlotInv = extra;
 		this.thePlayer = player;
+		this.craftMatrix = craftingInventory;
 	}
 	
 	@Override
 	public void onPickupFromSlot(EntityPlayer player, ItemStack stack)
 	{
-		super.onPickupFromSlot(player, stack);
+		net.minecraftforge.fml.common.FMLCommonHandler.instance().firePlayerCraftingEvent(player, stack, craftMatrix);
+        this.onCrafting(stack);
+        net.minecraftforge.common.ForgeHooks.setCraftingPlayer(player);
+        ItemStack[] aitemstack = CraftingManager.getInstance().func_180303_b(this.craftMatrix, player.worldObj);
+        net.minecraftforge.common.ForgeHooks.setCraftingPlayer(null);
+
+        for (int i = 0; i < aitemstack.length; ++i)
+        {
+            this.craftMatrix.decrStackSize(i, 1);
+        }
 		
 		ItemStack extraSlotItem = this.extraSlotInv.getStackInSlot(0);
 		

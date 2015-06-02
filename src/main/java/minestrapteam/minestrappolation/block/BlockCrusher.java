@@ -3,7 +3,6 @@ package minestrapteam.minestrappolation.block;
 import minestrapteam.minestrappolation.Minestrappolation;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.tileentity.TileEntityCrusher;
-import minestrapteam.minestrappolation.tileentity.TileEntityMelter;
 import minestrapteam.minestrappolation.util.MGuiHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
@@ -15,6 +14,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.ItemStack;
@@ -60,9 +60,9 @@ public class BlockCrusher extends BlockDirectional
 		{
 			TileEntity tileentity = worldIn.getTileEntity(pos);
 			
-			if (tileentity instanceof TileEntityMelter)
+			if (tileentity instanceof TileEntityCrusher)
 			{
-				InventoryHelper.dropInventoryItems(worldIn, pos, (TileEntityMelter) tileentity);
+				InventoryHelper.dropInventoryItems(worldIn, pos, (TileEntityCrusher) tileentity);
 				worldIn.updateComparatorOutputLevel(pos, this);
 			}
 		}

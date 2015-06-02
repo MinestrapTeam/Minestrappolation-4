@@ -117,7 +117,7 @@ public class ShapedCuttingRecipe implements ICuttingRecipes
 	@Override
 	public boolean matches(InventoryCrafting inventory, ItemStack extra, World world)
 	{
-		if (!MStacks.equals(this.extraSlot, extra))
+		if (!MStacks.equals(extra, this.extraSlot))
 			return false;
 		
 		for (int i = 0; i <= 3 - this.recipeWidth; ++i)
@@ -163,7 +163,7 @@ public class ShapedCuttingRecipe implements ICuttingRecipes
 				
 				if (stack2 != null || stack1 != null)
 				{
-					if (!MStacks.equals(stack1, stack2))
+					if (!MStacks.equals(stack2, stack1))
 						return false;
 				}
 			}

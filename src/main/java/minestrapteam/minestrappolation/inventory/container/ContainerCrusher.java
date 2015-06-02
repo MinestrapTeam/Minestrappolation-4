@@ -103,6 +103,7 @@ public class ContainerCrusher extends MinistrappolationInventoryHandler
 			{
 				if (!this.mergeItemStack(itemstack1, 4, 40, true))
 					return null;
+				slot.onSlotChange(itemstack1, itemstack);
 			}
 			else if (CrusherRecipes.instance().getResult(itemstack1) != null)
 			{
@@ -127,7 +128,7 @@ public class ContainerCrusher extends MinistrappolationInventoryHandler
 			
 			if (itemstack1.stackSize == 0)
 			{
-				slot.putStack(null);
+				slot.putStack((ItemStack)null);
 			}
 			else
 			{

@@ -6,6 +6,7 @@ import minestrapteam.minestrappolation.block.BlockCrusher;
 import minestrapteam.minestrappolation.util.CrusherRecipes;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
+import net.minecraft.inventory.SlotFurnaceFuel;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -14,8 +15,11 @@ import net.minecraft.server.gui.IUpdatePlayerListBox;
 import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraft.util.EnumFacing;
 
-public class TileEntityCrusher extends TileEntityInventory implements ISidedInventory, IUpdatePlayerListBox
+public class TileEntityCrusher extends TileEntityInventory implements IUpdatePlayerListBox, ISidedInventory
 {
+	private static final int[] slotsTop = new int[] {0};
+    private static final int[] slotsBottom = new int[] {2, 1};
+    private static final int[] slotsSides = new int[] {1};
 	public int	burnTime;
 	public int	maxCrushTime;
 	public int	crushTime;
@@ -240,21 +244,35 @@ public class TileEntityCrusher extends TileEntityInventory implements ISidedInve
 	}
 	
 	@Override
-	public boolean canInsertItem(int slotID, ItemStack stack, EnumFacing side)
-	{
-		return this.isItemValidForSlot(slotID, stack);
-	}
-	
+	public boolean isItemValidForSlot(int index, ItemStack stack)
+    {
+		return index == 2 ? false : (index != 1 ? true : isItemFuel(stack) || SlotFurnaceFuel.isBucket(stack));
+    }
+
 	@Override
-	public boolean canExtractItem(int slotID, ItemStack stack, EnumFacing side)
-	{
-		return slotID != 1 || stack.getItem() == Items.bucket;
+	public int[] getSlotsForFace(EnumFacing side) {
+		return side == EnumFacing.DOWN ? slotsBottom : (side == EnumFacing.UP ? slotsTop : slotsSides);
 	}
-	
-	@Override
-	public int[] getSlotsForFace(EnumFacing side)
-	{
-		return null;
-	}
+
+	 public boolean canInsertItem(int index, ItemStack itemStackIn, EnumFacing direction)
+	    {
+	        return this.isItemValidForSlot(index, itemStackIn);
+	    }
+
+
+	    public boolean canExtractItem(int index, ItemStack stack, EnumFacing direction)
+	    {
+	        if (direction == EnumFacing.DOWN && index == 1)
+	        {
+	            Item item = stack.getItem();
+
+	            if (item != Items.water_bucket && item != Items.bucket)
+	            {
+	                return false;
+	            }
+	        }
+
+	        return true;
+	    }
 	
 }
