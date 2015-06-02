@@ -23,6 +23,10 @@ buildscript
 apply plugin: 'forge'
 
 version = "1.8-4.0.0"
+def ENV = System.getenv()
+if (ENV.DRONE_BUILD_NUMBER) {
+    version += ".nightly_" + ENV.DRONE_BUILD_NUMBER
+}
 group= "minestrapteam"
 archivesBaseName = "Minestrappolation"
 
