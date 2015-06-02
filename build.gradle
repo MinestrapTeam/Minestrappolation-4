@@ -134,3 +134,8 @@ processResources
         exclude 'mcmod.info'
     }
 }
+
+artifacts {
+    archives srcJar
+    archives devJar
+}
