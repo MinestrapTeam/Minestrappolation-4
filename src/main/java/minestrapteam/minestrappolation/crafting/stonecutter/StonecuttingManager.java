@@ -38,11 +38,11 @@ public class StonecuttingManager
 		this.addShapelessRecipe(new ItemStack(MItems.chunks, 4, 3), null, new Object[] { new ItemStack(MBlocks.biome_cobble, 1, 5) });
 		this.addShapelessRecipe(new ItemStack(MItems.chunks, 4, 4), null, new Object[] { new ItemStack(MBlocks.biome_cobble, 1, 7) });
 		
-		GameRegistry.addRecipe(new ItemStack(Blocks.cobblestone, 1), new Object[] { "CC", "CC", 'C', new ItemStack(MItems.chunks, 1, 0)});
-		GameRegistry.addRecipe(new ItemStack(MBlocks.biome_cobble, 1, 1), new Object[] { "CC", "CC", 'C', new ItemStack(MItems.chunks, 1, 1)});
-		GameRegistry.addRecipe(new ItemStack(MBlocks.biome_cobble, 1, 3), new Object[] { "CC", "CC", 'C', new ItemStack(MItems.chunks, 1, 2)});
-		GameRegistry.addRecipe(new ItemStack(MBlocks.biome_cobble, 1, 5), new Object[] { "CC", "CC", 'C', new ItemStack(MItems.chunks, 1, 3)});
-		GameRegistry.addRecipe(new ItemStack(MBlocks.biome_cobble, 1, 7), new Object[] { "CC", "CC", 'C', new ItemStack(MItems.chunks, 1, 4)});
+		this.addRecipe(new ItemStack(Blocks.cobblestone, 1), null, new Object[] { "CC", "CC", 'C', new ItemStack(MItems.chunks, 1, 0)});
+		this.addRecipe(new ItemStack(MBlocks.biome_cobble, 1, 1), null, new Object[] { "CC", "CC", 'C', new ItemStack(MItems.chunks, 1, 1)});
+		this.addRecipe(new ItemStack(MBlocks.biome_cobble, 1, 3), null, new Object[] { "CC", "CC", 'C', new ItemStack(MItems.chunks, 1, 2)});
+		this.addRecipe(new ItemStack(MBlocks.biome_cobble, 1, 5), null, new Object[] { "CC", "CC", 'C', new ItemStack(MItems.chunks, 1, 3)});
+		this.addRecipe(new ItemStack(MBlocks.biome_cobble, 1, 7), null, new Object[] { "CC", "CC", 'C', new ItemStack(MItems.chunks, 1, 4)});
 		
 		//Brick Items
 		this.addShapelessRecipe(new ItemStack(MItems.stone_brick, 4), null, new Object[] { new ItemStack(Blocks.stone, 1, 0) });
@@ -143,7 +143,7 @@ public class StonecuttingManager
 		
 		//Walls, Fences, etc
 		this.addRecipe(new ItemStack(Blocks.cobblestone_wall, 2, 0), null, new Object[] { "CCC", "CCC", 'C', new ItemStack(MItems.chunks, 1, 0)});
-		this.addRecipe(new ItemStack(Blocks.cobblestone_wall, 2, 0), new ItemStack(Blocks.vine), new Object[] { "CCC", "CCC", 'C', new ItemStack(MItems.chunks, 1, 0)});
+		this.addRecipe(new ItemStack(Blocks.cobblestone_wall, 2, 1), new ItemStack(Blocks.vine), new Object[] { "CCC", "CCC", 'C', new ItemStack(MItems.chunks, 1, 0)});
 		this.addRecipe(new ItemStack(Blocks.nether_brick_fence, 2, 0), null, new Object[] { "BBB", "BBB", 'B', new ItemStack(Items.netherbrick, 1)});
 		
 		//Dying
