@@ -5,9 +5,11 @@ import java.util.Random;
 
 import minestrapteam.minestrappolation.Minestrappolation;
 import minestrapteam.minestrappolation.enumtypes.MWoodType;
+import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.world.WorldGenFrostTree;
 import minestrapteam.minestrappolation.world.WorldGenRedWoodTree;
 import minestrapteam.minestrappolation.world.WorldGenRedWoodTreeSmall;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.IGrowable;
 import net.minecraft.block.material.Material;
@@ -114,12 +116,16 @@ public class MBlockSapling extends BlockBush implements IGrowable
 				i = 0;
 				object = new WorldGenRedWoodTreeSmall();
 			}
+			break;
 		case FROZEN:
 			if (!flag)
 			{
 				j = 0;
 				i = 0;
-				object = new WorldGenFrostTree();
+				if(world.getBlockState(pos.add(0, -1, 0)).getBlock() == MBlocks.lichen_permafrost || world.getBlockState(pos.add(0, -1, 0)).getBlock() == MBlocks.dirt_permafrost)
+				{
+					object = new WorldGenFrostTree();
+				}			
 			}
 		}
 		
@@ -219,4 +225,9 @@ public class MBlockSapling extends BlockBush implements IGrowable
 		return this.flammability;
 	}
 	
+	@Override
+	protected boolean canPlaceBlockOn(Block ground)
+    {
+        return ground == Blocks.grass || ground == Blocks.dirt || ground == Blocks.farmland || ground == MBlocks.dirt_permafrost || ground == MBlocks.lichen_permafrost;
+    }
 }
