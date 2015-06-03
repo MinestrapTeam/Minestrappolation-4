@@ -1,5 +1,5 @@
 {
-    "parent": "ministrapp:block/slate_1",
+    "parent": "ministrapp:block/slate_refined",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

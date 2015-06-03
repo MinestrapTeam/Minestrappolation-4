@@ -65,6 +65,7 @@ public class SawingManager
 		this.addRecipe(new ItemStack(Blocks.acacia_fence, 4), new Object[] { "WSW", "WSW", 'W', new ItemStack(Blocks.planks, 1, 4), 'S', "stickWood" });
 		this.addRecipe(new ItemStack(Blocks.dark_oak_fence, 4), new Object[] { "WSW", "WSW", 'W', new ItemStack(Blocks.planks, 1, 5), 'S', "stickWood" });
 		this.addRecipe(new ItemStack(MBlocks.redwood_fence, 4), new Object[] { "WSW", "WSW", 'W', new ItemStack(MBlocks.ministrapp_planks, 1, 0), 'S', "stickWood" });
+		this.addRecipe(new ItemStack(MBlocks.frozen_oak_fence, 4), new Object[] { "WSW", "WSW", 'W', new ItemStack(MBlocks.ministrapp_planks, 1, 1), 'S', "stickWood" });
 		this.addRecipe(new ItemStack(Blocks.oak_fence_gate, 1), new Object[] { "SWS", "SWS", 'W', new ItemStack(Blocks.planks, 1, 0), 'S', "stickWood" });
 		this.addRecipe(new ItemStack(Blocks.spruce_fence_gate, 1), new Object[] { "SWS", "SWS", 'W', new ItemStack(Blocks.planks, 1, 1), 'S', "stickWood" });
 		this.addRecipe(new ItemStack(Blocks.birch_fence_gate, 1), new Object[] { "SWS", "SWS", 'W', new ItemStack(Blocks.planks, 1, 2), 'S', "stickWood" });
@@ -72,6 +73,7 @@ public class SawingManager
 		this.addRecipe(new ItemStack(Blocks.acacia_fence_gate, 1), new Object[] { "SWS", "SWS", 'W', new ItemStack(Blocks.planks, 1, 4), 'S', "stickWood" });
 		this.addRecipe(new ItemStack(Blocks.dark_oak_fence_gate, 1), new Object[] { "SWS", "SWS", 'W', new ItemStack(Blocks.planks, 1, 5), 'S', "stickWood" });
 		this.addRecipe(new ItemStack(MBlocks.redwood_fence_gate, 1), new Object[] { "SWS", "SWS", 'W', new ItemStack(MBlocks.ministrapp_planks, 1, 0), 'S', "stickWood" });
+		this.addRecipe(new ItemStack(MBlocks.frozen_oak_fence_gate, 1), new Object[] { "SWS", "SWS", 'W', new ItemStack(MBlocks.ministrapp_planks, 1, 1), 'S', "stickWood" });
 		this.addRecipe(new ItemStack(Items.oak_door, 3), new Object[] { "WW", "WW", "WW", 'W', new ItemStack(Blocks.planks, 1, 0) });
 		this.addRecipe(new ItemStack(Items.spruce_door, 3), new Object[] { "WW", "WW", "WW", 'W', new ItemStack(Blocks.planks, 1, 1) });
 		this.addRecipe(new ItemStack(Items.birch_door, 3), new Object[] { "WW", "WW", "WW", 'W', new ItemStack(Blocks.planks, 1, 2) });

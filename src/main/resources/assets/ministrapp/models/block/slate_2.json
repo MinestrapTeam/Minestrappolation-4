@@ -1,0 +1,8 @@
+{
+    "parent": "block/cube_bottom_top",
+    "textures": {
+        "bottom": "ministrapp:blocks/slate_top_2",
+        "top": "ministrapp:blocks/slate_top_2",
+        "side": "ministrapp:blocks/slate_side"
+    }
+}

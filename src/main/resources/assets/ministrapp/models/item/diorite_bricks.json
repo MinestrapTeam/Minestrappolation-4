@@ -1,5 +1,5 @@
 {
-    "parent": "ministrapp:block/slate_1",
+    "parent": "ministrapp:block/diorite_bricks",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

@@ -116,10 +116,20 @@ public class MBlocks
 	public static Block	uranium_block;
 	public static Block	plutonium_insulated;
 	public static Block	uranium_insulated;
-	public static Block	slate;
 	public static Block	flint_block;
 	public static Block	sugar_block;
 	public static Block	meat_block;
+	
+	public static Block	slate;
+	public static Block	slate_bricks;
+	public static Block	slate_pattern_bricks;
+	public static Block	slate_refined;
+	public static Block	granite_bricks;
+	public static Block	granite_pattern_bricks;
+	public static Block	diorite_bricks;
+	public static Block	diorite_pattern_bricks;
+	public static Block	andesite_bricks;
+	public static Block	andesite_pattern_bricks;
 	
 	public static Block	roads;
 	public static Block chiseled;
@@ -237,6 +247,7 @@ public class MBlocks
 	public static Block	bricked_glass_pane;
 	public static Block	tiled_glass_pane;
 	public static Block	framed_glass_pane;
+	public static Block	steel_mesh;
 	
 	// Misc
 	public static Block	frost_generator;
@@ -249,6 +260,15 @@ public class MBlocks
 	public static void init()
 	{
 		slate = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("slate");
+		slate_refined = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("slate_refined");
+		slate_bricks = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("slate_bricks");
+		slate_pattern_bricks = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("slate_pattern_bricks");
+		diorite_bricks = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("diorite_bricks");
+		diorite_pattern_bricks = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("diorite_pattern_bricks");
+		granite_bricks = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("granite_bricks");
+		granite_pattern_bricks = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("granite_pattern_bricks");
+		andesite_bricks = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("andesite_bricks");
+		andesite_pattern_bricks = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("andesite_pattern_bricks");
 		
 		// DECOR
 		snow_refined = new MBlockSnow(Material.snow, MapColor.snowColor).setHardness(0.4F).setStepSound(Block.soundTypeSnow).setUnlocalizedName("snow_refined").setCreativeTab(Minestrappolation.tabMBuilding);
@@ -257,7 +277,7 @@ public class MBlocks
 		glass_bricks = new BlockTransparent(Material.glass, MapColor.airColor, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setLightOpacity(1).setUnlocalizedName("glass_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
 		glass_refined = new BlockTransparent(Material.glass, MapColor.airColor, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setUnlocalizedName("glass_refined").setCreativeTab(Minestrappolation.tabMBuilding);
 		glass_tiles = new BlockTransparent(Material.glass, MapColor.airColor, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setLightOpacity(1).setUnlocalizedName("glass_tiles").setCreativeTab(Minestrappolation.tabMBuilding);
-		glass_window = new BlockTransparent(Material.iron, MapColor.airColor, false).setHardness(0.8F).setResistance(2.0F).setStepSound(Block.soundTypeGlass).setLightOpacity(2).setUnlocalizedName("glass_window").setCreativeTab(Minestrappolation.tabMBuilding);
+		glass_window = new BlockTransparent(Material.iron, MapColor.airColor, true).setHardness(0.8F).setResistance(2.0F).setStepSound(Block.soundTypeGlass).setLightOpacity(2).setUnlocalizedName("glass_window").setCreativeTab(Minestrappolation.tabMBuilding);
 		stone_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
 		red_rock_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("red_rock_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
 		coldstone_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("coldstone_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
@@ -384,7 +404,8 @@ public class MBlocks
 		refined_glass_pane = new BlockMPane(Material.glass, false).setUnlocalizedName("refined_pane");
 		bricked_glass_pane = new BlockMPane(Material.glass, false).setUnlocalizedName("bricked_pane");
 		tiled_glass_pane = new BlockMPane(Material.glass, false).setUnlocalizedName("tiled_pane");
-		framed_glass_pane = new BlockMPane(Material.glass, false).setUnlocalizedName("framed_pane");
+		framed_glass_pane = new BlockMPane(Material.iron, true).setUnlocalizedName("framed_pane");
+		steel_mesh = new BlockMPane(Material.iron, true).setUnlocalizedName("steel_mesh");
 		
 		// Misc
 		frost_generator = new BlockFrostGenerator(Material.rock, MapColor.iceColor).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("frost_generator");
@@ -420,6 +441,15 @@ public class MBlocks
 		register(frozen_oak_stairs);
 		
 		register(slate);
+		register(slate_bricks);
+		register(slate_pattern_bricks);
+		register(slate_refined);
+		register(granite_bricks);
+		register(granite_pattern_bricks);
+		register(diorite_bricks);
+		register(diorite_pattern_bricks);
+		register(andesite_bricks);
+		register(andesite_pattern_bricks);
 		register(stone_pattern_bricks);
 		register(stone_refined);
 		register(stone_tiles);
@@ -510,6 +540,7 @@ public class MBlocks
 		register(bricked_glass_pane);
 		register(tiled_glass_pane);
 		register(framed_glass_pane);
+		register(steel_mesh);
 		register(redwood_fence_gate);
 		register(frozen_oak_fence_gate);
 		register(redwood_door);
@@ -554,6 +585,15 @@ public class MBlocks
 		registerRender(blazium_block);
 		registerRender(soul_gem_block);
 		registerRender(slate);
+		registerRender(slate_bricks);
+		registerRender(slate_pattern_bricks);
+		registerRender(slate_refined);
+		registerRender(granite_bricks);
+		registerRender(granite_pattern_bricks);
+		registerRender(diorite_bricks);
+		registerRender(diorite_pattern_bricks);
+		registerRender(andesite_bricks);
+		registerRender(andesite_pattern_bricks);
 		registerRender(flint_block);
 		registerRender(sugar_block);
 		registerRender(meat_block);
@@ -629,12 +669,16 @@ public class MBlocks
 		registerRender(crusher);
 		registerRender(crusher_active);
 		registerRender(redwood_door_item);
+		registerRender(frozen_door_item);
 		registerRender(redwood_fence);
 		registerRender(redwood_fence_gate);
+		registerRender(frozen_oak_fence);
+		registerRender(frozen_oak_fence_gate);
 		registerRender(refined_glass_pane);
 		registerRender(bricked_glass_pane);
 		registerRender(tiled_glass_pane);
 		registerRender(framed_glass_pane);
+		registerRender(steel_mesh);
 		registerRender(frost_generator);
 		registerRender(invincium);
 	}
@@ -663,6 +707,15 @@ public class MBlocks
 	private static void registerHarvestLevels()
 	{
 		slate.setHarvestLevel("pickaxe", 0);
+		slate_bricks.setHarvestLevel("pickaxe", 0);
+		slate_pattern_bricks.setHarvestLevel("pickaxe", 0);
+		granite_bricks.setHarvestLevel("pickaxe", 0);
+		granite_pattern_bricks.setHarvestLevel("pickaxe", 0);
+		diorite_bricks.setHarvestLevel("pickaxe", 0);
+		diorite_pattern_bricks.setHarvestLevel("pickaxe", 0);
+		andesite_bricks.setHarvestLevel("pickaxe", 0);
+		andesite_pattern_bricks.setHarvestLevel("pickaxe", 0);
+		slate_refined.setHarvestLevel("pickaxe", 0);
 		snow_refined.setHarvestLevel("shovel", 0);
 		snow_tiles.setHarvestLevel("shovel", 0);
 		snow_bricks.setHarvestLevel("shovel", 0);
@@ -680,6 +733,8 @@ public class MBlocks
 		blazium_block.setHarvestLevel("pickaxe", 2);
 		soul_gem_block.setHarvestLevel("pickaxe", 3);
 		glass_window.setHarvestLevel("pickaxe", 0);
+		framed_glass_pane.setHarvestLevel("pickaxe", 0);
+		steel_mesh.setHarvestLevel("pickaxe", 0);
 		stone_boulder.setHarvestLevel("pickaxe", 1);
 		red_rock_boulder.setHarvestLevel("pickaxe", 1);
 		coldstone_boulder.setHarvestLevel("pickaxe", 1);
