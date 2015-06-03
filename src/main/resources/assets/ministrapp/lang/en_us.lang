@@ -205,6 +205,9 @@ frozen_oak_log.name=Frozen Oak Wood
 frozen_oak_leaves.name=Frozen Oak Leaves
 frozen_oak_sapling.name=Frozen Oak Sapling
 frozen_oak_planks.name=Frozen Oak Wood Planks
+tile.frozen_oak_stairs.name=Frozen Oak Plank Stairs
+tile.frozen_oak_fence_gate.name=Frozen Oak Fence Gate
+tile.frozen_oak_fence.name=Frozen Oak Fence
 item.frozen_oak_door_item.name=Frozen Oak Door
 
 tile.stone_pattern_bricks.name=Patterned Stone Bricks
@@ -285,6 +288,16 @@ permafrost_road.name=Cracked Icestone Road
 nether_road.name=Netherrack Road
 
 tile.slate.name=Slate
+tile.slate_bricks.name=Slate Bricks
+tile.slate_pattern_bricks.name=Patterned Slate Bricks
+tile.slate_refined.name=Polished Slate
+tile.granite_bricks.name=Granite Bricks
+tile.granite_pattern_bricks.name=Patterned Granite Bricks
+tile.diorite_bricks.name=Diorite Bricks
+tile.diorite_pattern_bricks.name=Patterned Diorite Bricks
+tile.andesite_bricks.name=Andesite Bricks
+tile.andesite_pattern_bricks.name=Patterned Andesite Bricks
+
 tile.flint_block.name=Block of Flint
 tile.sugar_block.name=Block of Sugar
 tile.meat_block.name=Meat Block
@@ -298,6 +311,8 @@ tile.glass_tiles.name=Tiled Glass
 tile.tiled_pane.name=Tiled Glass Pane
 tile.glass_window.name=Framed Glass
 tile.framed_pane.name=Framed Glass Pane
+
+tile.steel_mesh.name=Steel Mesh
 
 tile.snow_bricks.name=Snow Bricks
 tile.snow_refined.name=Packed Snow
@@ -365,6 +380,9 @@ item.glacierrock_brick.name=Glacierrock Brick
 item.oceanstone_brick.name=Oceanstone Brick
 item.pressurized_oceanstone_brick.name=Pressurized Oceanstone Brick
 item.slate_brick.name=Slate Brick
+item.granite_brick.name=Granite Brick
+item.diorite_brick.name=Diorite Brick
+item.andesite_brick.name=Andesite Brick
 
 item.copper_pickaxe.name=Copper Pickaxe
 item.copper_axe.name=Copper Axe
@@ -448,7 +466,7 @@ item.titanium_chestplate.name=Titanium Chestplate
 item.titanium_leggings.name=Titanium Leggings
 item.titanium_boots.name=Titanium Boots
 
-item.sifter.name=Sifter
+item.sifter.name=Mining Sieve
 
 itemGroup.tabMBuilding=Minestrapp Building Blocks
 itemGroup.tabMDecor=Minestrapp Decoration Blocks
