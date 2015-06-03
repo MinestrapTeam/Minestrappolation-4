@@ -47,6 +47,7 @@ public class MDictionary
 		OreDictionary.registerOre("logWood", new ItemStack(MBlocks.ministrapp_log, 1, WILDCARD_VALUE));
 		OreDictionary.registerOre("plankWood", new ItemStack(MBlocks.ministrapp_planks, 1, WILDCARD_VALUE));
 		OreDictionary.registerOre("stairWood", new ItemStack(MBlocks.redwood_stairs, 1, WILDCARD_VALUE));
+		OreDictionary.registerOre("stairWood", new ItemStack(MBlocks.frozen_oak_stairs, 1, WILDCARD_VALUE));
 		OreDictionary.registerOre("treeSapling", new ItemStack(MBlocks.ministrapp_sapling, 1, WILDCARD_VALUE));
 		OreDictionary.registerOre("treeLeaves", new ItemStack(MBlocks.ministrapp_leaves, 1, WILDCARD_VALUE));
 		

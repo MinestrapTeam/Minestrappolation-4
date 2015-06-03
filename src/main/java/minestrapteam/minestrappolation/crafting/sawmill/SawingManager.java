@@ -40,6 +40,7 @@ public class SawingManager
 		this.addRecipe(new ItemStack(Blocks.planks, 6, 4), new Object[] { "L", 'L', new ItemStack(Blocks.log2, 1, 0) });
 		this.addRecipe(new ItemStack(Blocks.planks, 6, 5), new Object[] { "L", 'L', new ItemStack(Blocks.log2, 1, 1) });
 		this.addRecipe(new ItemStack(MBlocks.ministrapp_planks, 6, 0), new Object[] { "L", 'L', new ItemStack(MBlocks.ministrapp_log, 1, 0) });
+		this.addRecipe(new ItemStack(MBlocks.ministrapp_planks, 6, 1), new Object[] { "L", 'L', new ItemStack(MBlocks.ministrapp_log, 1, 1) });
 		this.addRecipe(new ItemStack(Blocks.wooden_slab, 6, 0), new Object[] { "WWW", 'W', new ItemStack(Blocks.planks, 1, 0) });
 		this.addRecipe(new ItemStack(Blocks.wooden_slab, 6, 1), new Object[] { "WWW", 'W', new ItemStack(Blocks.planks, 1, 1) });
 		this.addRecipe(new ItemStack(Blocks.wooden_slab, 6, 2), new Object[] { "WWW", 'W', new ItemStack(Blocks.planks, 1, 2) });
@@ -53,6 +54,7 @@ public class SawingManager
 		this.addRecipe(new ItemStack(Blocks.acacia_stairs, 4, 0), new Object[] { "  W", " WW", "WWW", 'W', new ItemStack(Blocks.planks, 1, 4) });
 		this.addRecipe(new ItemStack(Blocks.dark_oak_stairs, 4, 0), new Object[] { "  W", " WW", "WWW", 'W', new ItemStack(Blocks.planks, 1, 5) });
 		this.addRecipe(new ItemStack(MBlocks.redwood_stairs, 4, 0), new Object[] { "  W", " WW", "WWW", 'W', new ItemStack(MBlocks.ministrapp_planks, 1, 0) });
+		this.addRecipe(new ItemStack(MBlocks.frozen_oak_stairs, 4, 0), new Object[] { "  W", " WW", "WWW", 'W', new ItemStack(MBlocks.ministrapp_planks, 1, 1) });
 		
 		//Vanilla Replacement Recipes
 		this.addRecipe(new ItemStack(Blocks.bookshelf, 1), new Object[] { "WWW", "BBB", "WWW", 'W', "plankWood", 'B', Items.book });
@@ -77,6 +79,7 @@ public class SawingManager
 		this.addRecipe(new ItemStack(Items.acacia_door, 3), new Object[] { "WW", "WW", "WW", 'W', new ItemStack(Blocks.planks, 1, 4) });
 		this.addRecipe(new ItemStack(Items.dark_oak_door, 3), new Object[] { "WW", "WW", "WW", 'W', new ItemStack(Blocks.planks, 1, 5) });
 		this.addRecipe(new ItemStack(MBlocks.redwood_door_item, 3), new Object[] { "WW", "WW", "WW", 'W', new ItemStack(MBlocks.ministrapp_planks, 1, 0) });
+		this.addRecipe(new ItemStack(MBlocks.frozen_door_item, 3), new Object[] { "WW", "WW", "WW", 'W', new ItemStack(MBlocks.ministrapp_planks, 1, 1) });
 		this.addRecipe(new ItemStack(Blocks.trapdoor, 2), new Object[] { "WWW", "WWW", 'W', "plankWood" });
 		this.addRecipe(new ItemStack(Blocks.chest, 1, 0), new Object[] { "WWW", "W W", "WWW", 'W', "plankWood" });
 		this.addRecipe(new ItemStack(Blocks.jukebox, 1), new Object[] { "WWW", "WDW", "WWW", 'W', "plankWood", 'D', Items.diamond});

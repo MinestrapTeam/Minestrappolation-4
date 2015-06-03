@@ -206,6 +206,7 @@ public class MBlocks
 	
 	// Stairs
 	public static Block	redwood_stairs;
+	public static Block	frozen_oak_stairs;
 	public static Block	deepstone_stairs;
 	public static Block	coldstone_stairs;
 	public static Block	redrock_stairs;
@@ -228,6 +229,8 @@ public class MBlocks
 	// Fence
 	public static Block	redwood_fence;
 	public static Block	redwood_fence_gate;
+	public static Block	frozen_oak_fence;
+	public static Block	frozen_oak_fence_gate;
 	
 	// Panes
 	public static Block	refined_glass_pane;
@@ -351,6 +354,7 @@ public class MBlocks
 		
 		// Stairs
 		redwood_stairs = new MBlockStairs(ministrapp_planks.getStateFromMeta(MWoodType.REDWOOD.getMetadata())).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("redwood_stairs");
+		frozen_oak_stairs = new MBlockStairs(ministrapp_planks.getStateFromMeta(MWoodType.FROZEN.getMetadata())).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("frozen_oak_stairs");
 		deepstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata())).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("deepstone_stairs");
 		coldstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.COLDSTONE.getMetadata())).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("coldstone_stairs");
 		redrock_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.REDROCK.getMetadata())).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("redrock_stairs");
@@ -373,6 +377,8 @@ public class MBlocks
 		// Fence
 		redwood_fence = new BlockFence(Material.wood).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("redwood_fence");
 		redwood_fence_gate = new BlockFenceGate().setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("redwood_fence_gate");
+		frozen_oak_fence = new BlockFence(Material.wood).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("frozen_oak_fence");
+		frozen_oak_fence_gate = new BlockFenceGate().setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("frozen_oak_fence_gate");
 		
 		// Pane
 		refined_glass_pane = new BlockMPane(Material.glass, false).setUnlocalizedName("refined_pane");
@@ -411,6 +417,7 @@ public class MBlocks
 		register(ministrapp_log, ItemBlockLog.class);
 		register(ministrapp_planks, ItemBlockPlanks.class);
 		register(redwood_stairs);
+		register(frozen_oak_stairs);
 		
 		register(slate);
 		register(stone_pattern_bricks);
@@ -498,11 +505,13 @@ public class MBlocks
 		register(ministrapp_sapling, ItemBlockSapling.class);
 		register(ministrapp_leaves, ItemBlockLeaves.class);
 		register(redwood_fence);
+		register(frozen_oak_fence);
 		register(refined_glass_pane);
 		register(bricked_glass_pane);
 		register(tiled_glass_pane);
 		register(framed_glass_pane);
 		register(redwood_fence_gate);
+		register(frozen_oak_fence_gate);
 		register(redwood_door);
 		register(frozen_door);
 		GameRegistry.registerItem(redwood_door_item, redwood_door_item.getUnlocalizedName().substring(5));
@@ -592,6 +601,7 @@ public class MBlocks
 		registerRender(melter);
 		registerRender(melter_active);
 		registerRender(redwood_stairs);
+		registerRender(frozen_oak_stairs);
 		registerRender(deepstone_stairs);
 		registerRender(coldstone_stairs);
 		registerRender(redrock_stairs);
