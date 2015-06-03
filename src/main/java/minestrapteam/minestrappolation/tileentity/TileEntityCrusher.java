@@ -254,25 +254,25 @@ public class TileEntityCrusher extends TileEntityInventory implements IUpdatePla
 		return side == EnumFacing.DOWN ? slotsBottom : (side == EnumFacing.UP ? slotsTop : slotsSides);
 	}
 
-	 public boolean canInsertItem(int index, ItemStack itemStackIn, EnumFacing direction)
-	    {
-	        return this.isItemValidForSlot(index, itemStackIn);
-	    }
+	public boolean canInsertItem(int index, ItemStack itemStackIn, EnumFacing direction)
+	{
+	    return this.isItemValidForSlot(index, itemStackIn);
+	}
 
 
-	    public boolean canExtractItem(int index, ItemStack stack, EnumFacing direction)
+	public boolean canExtractItem(int index, ItemStack stack, EnumFacing direction)
+	{
+	    if (direction == EnumFacing.DOWN && index == 1)
 	    {
-	        if (direction == EnumFacing.DOWN && index == 1)
-	        {
 	            Item item = stack.getItem();
 
-	            if (item != Items.water_bucket && item != Items.bucket)
-	            {
-	                return false;
-	            }
+	        if (item != Items.water_bucket && item != Items.bucket)
+	        {
+	            return false;
 	        }
-
-	        return true;
 	    }
+
+	    return true;
+	}
 	
 }

@@ -97,6 +97,7 @@ public class BlockAlloy extends BlockDirectional
 		}
 	}
 	
+	@SuppressWarnings("incomplete-switch")
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void randomDisplayTick(World worldIn, BlockPos pos, IBlockState state, Random rand)

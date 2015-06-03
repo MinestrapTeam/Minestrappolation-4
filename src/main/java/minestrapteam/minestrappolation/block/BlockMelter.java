@@ -97,6 +97,7 @@ public class BlockMelter extends BlockDirectional
 		super.breakBlock(worldIn, pos, state);
 	}
 	
+	@SuppressWarnings("incomplete-switch")
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void randomDisplayTick(World worldIn, BlockPos pos, IBlockState state, Random rand)

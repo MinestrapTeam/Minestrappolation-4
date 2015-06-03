@@ -4,6 +4,7 @@ import minestrapteam.minestrappolation.block.BlockAlloy;
 import minestrapteam.minestrappolation.util.AlloyRecipes;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
+import net.minecraft.inventory.SlotFurnaceFuel;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -18,8 +19,8 @@ public class TileEntityAlloy extends TileEntityInventory implements ISidedInvent
 	public int					maxBurnTime;
 	public int					meltTime;
 	
-	private static final int[]	topInputSlot	= new int[] { 0 };
-	private static final int[]	outputSlots		= new int[] { 2, 1 };
+	private static final int[]	topInputSlot	= new int[] { 0, 3 };
+	private static final int[]	outputSlots		= new int[] { 2};
 	private static final int[]	inputSlots		= new int[] { 1 };
 	
 	public TileEntityAlloy()
@@ -237,20 +238,34 @@ public class TileEntityAlloy extends TileEntityInventory implements ISidedInvent
 	}
 	
 	@Override
-	public boolean canInsertItem(int slotID, ItemStack stack, EnumFacing side)
-	{
-		return this.isItemValidForSlot(slotID, stack);
-	}
-	
+	public boolean isItemValidForSlot(int index, ItemStack stack)
+    {
+		return index == 2 ? false : (index != 1 ? true : isItemFuel(stack) || SlotFurnaceFuel.isBucket(stack));
+    }
+
 	@Override
-	public boolean canExtractItem(int slotID, ItemStack stack, EnumFacing side)
-	{
-		return slotID != 1 || stack.getItem() == Items.bucket;
+	public int[] getSlotsForFace(EnumFacing side) {
+		return side == EnumFacing.DOWN ? outputSlots : (side == EnumFacing.UP ? topInputSlot : inputSlots);
 	}
-	
-	@Override
-	public int[] getSlotsForFace(EnumFacing side)
+
+	public boolean canInsertItem(int index, ItemStack itemStackIn, EnumFacing direction)
 	{
-		return null;
+	    return this.isItemValidForSlot(index, itemStackIn);
+	}
+
+
+	public boolean canExtractItem(int index, ItemStack stack, EnumFacing direction)
+	{
+	    if (direction == EnumFacing.DOWN && index == 1)
+	    {
+	            Item item = stack.getItem();
+
+	        if (item != Items.water_bucket && item != Items.bucket)
+	        {
+	            return false;
+	        }
+	    }
+
+	    return true;
 	}
 }
