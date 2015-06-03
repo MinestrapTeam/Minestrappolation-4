@@ -2,6 +2,7 @@ package minestrapteam.minestrappolation.block;
 
 import minestrapteam.minestrappolation.Minestrappolation;
 import minestrapteam.minestrappolation.handlers.MGuiHandler;
+import minestrapteam.minestrappolation.lib.MAchievements;
 import minestrapteam.minestrappolation.tileentity.TileEntityStoneCutter;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
@@ -111,6 +112,7 @@ public class BlockStoneCutter extends BlockContainer
 			return true;
 		
 		playerIn.openGui(Minestrappolation.instance, MGuiHandler.GUIID_STONECUTTER, worldIn, pos.getX(), pos.getY(), pos.getZ());
+		playerIn.addStat(MAchievements.stonecutter, 1);
 		return true;
 	}
 	

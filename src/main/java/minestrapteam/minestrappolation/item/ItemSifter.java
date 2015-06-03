@@ -3,6 +3,7 @@ package minestrapteam.minestrappolation.item;
 import java.util.ArrayList;
 
 import minestrapteam.minestrappolation.Minestrappolation;
+import minestrapteam.minestrappolation.lib.MAchievements;
 import minestrapteam.minestrappolation.lib.MItems;
 import minestrapteam.minestrappolation.util.Chance;
 import net.minecraft.block.Block;
@@ -44,6 +45,7 @@ public class ItemSifter extends Item{
                     }
                 }  	
                 stack.damageItem(1, playerIn); 
+                playerIn.addStat(MAchievements.sifter, 1);
             }     
             return true;
     }

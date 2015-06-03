@@ -28,6 +28,7 @@ import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTorite;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeUranium;
 import minestrapteam.minestrappolation.item.ItemChunk;
 import minestrapteam.minestrappolation.item.RenderXpOrb;
+import minestrapteam.minestrappolation.lib.MAchievements;
 import minestrapteam.minestrappolation.tileentity.TileEntityAlloy;
 import minestrapteam.minestrappolation.tileentity.TileEntityBarrel;
 import minestrapteam.minestrappolation.tileentity.TileEntityCrate;
@@ -94,6 +95,8 @@ public abstract class CommonProxy implements IGuiHandler
 		GameRegistry.registerTileEntity(TileEntityStoneCutter.class, "tile_entity_stonecutter");
 		GameRegistry.registerTileEntity(TileEntitySawMill.class, "tile_entity_sawmill");
 		GameRegistry.registerTileEntity(TileEntityCrusher.class, "tile_entity_crusher");
+		
+		MAchievements.preInit();
 	}
 	
 	public void init(FMLInitializationEvent event)

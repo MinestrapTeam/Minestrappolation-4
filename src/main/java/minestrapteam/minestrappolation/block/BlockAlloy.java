@@ -4,6 +4,7 @@ import java.util.Random;
 
 import minestrapteam.minestrappolation.Minestrappolation;
 import minestrapteam.minestrappolation.handlers.MGuiHandler;
+import minestrapteam.minestrappolation.lib.MAchievements;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.tileentity.TileEntityAlloy;
 import net.minecraft.block.Block;
@@ -164,6 +165,7 @@ public class BlockAlloy extends BlockDirectional
 			return true;
 		
 		playerIn.openGui(Minestrappolation.instance, MGuiHandler.GUIID_ALLOY, worldIn, pos.getX(), pos.getY(), pos.getZ());
+		playerIn.addStat(MAchievements.alloy, 1);
 		return true;
 	}
 	

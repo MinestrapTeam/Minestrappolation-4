@@ -2,6 +2,7 @@ package minestrapteam.minestrappolation.block;
 
 import minestrapteam.minestrappolation.Minestrappolation;
 import minestrapteam.minestrappolation.handlers.MGuiHandler;
+import minestrapteam.minestrappolation.lib.MAchievements;
 import minestrapteam.minestrappolation.tileentity.TileEntitySawMill;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
@@ -110,6 +111,7 @@ public class BlockSawmill extends BlockContainer
 			return true;
 		
 		playerIn.openGui(Minestrappolation.instance, MGuiHandler.GUIID_SAWMILL, worldIn, pos.getX(), pos.getY(), pos.getZ());
+		playerIn.addStat(MAchievements.sawmill, 1);
 		return true;
 	}
 	

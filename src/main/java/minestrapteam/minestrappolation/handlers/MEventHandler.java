@@ -5,6 +5,7 @@ import java.util.Random;
 import minestrapteam.minestrappolation.Config;
 import minestrapteam.minestrappolation.block.BlockSoul;
 import minestrapteam.minestrappolation.enumtypes.MRoadType;
+import minestrapteam.minestrappolation.lib.MAchievements;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MItems;
 import minestrapteam.minestrappolation.lib.MReference;
@@ -43,12 +44,14 @@ public class MEventHandler
 		VersionChecker check = new VersionChecker(MReference.VERSION, "https://raw.githubusercontent.com/MinestrapTeam/Minestrappolation-4/master/version.txt", MReference.NAME);
 		if (event.entity instanceof EntityPlayer)
 		{
+			EntityPlayer player = (EntityPlayer) event.entity;
 			if (event.world.isRemote == false)
 			{
 				check.run();
 				event.entity.addChatMessage(VersionChecker.uptoDate);
 				event.entity.addChatMessage(VersionChecker.motd);
 			}
+			player.addStat(MAchievements.minestrapp, 1);
 		}
 	}
 	
@@ -87,6 +90,8 @@ public class MEventHandler
 			{
 				stack.damageItem(2000, event.getPlayer());
 			}
+			EntityPlayer player = (EntityPlayer)event.getPlayer();
+			player.addStat(MAchievements.bedrock, 1);
 		}
 	}
 	
@@ -118,6 +123,7 @@ public class MEventHandler
 			}
 			if(ChunkHelper.getChunkBiomeForEntity(player).equals(MBiomeManager.frost.biomeName) && Config.frostSpeedEffect && !player.capabilities.isCreativeMode)
 			{
+				player.addStat(MAchievements.frost, 1);
 				if(helmet == null || chest == null || pants == null || boots == null)
 				{
 					player.motionX *= .75;

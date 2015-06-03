@@ -4,6 +4,7 @@ import java.util.Random;
 
 import minestrapteam.minestrappolation.Minestrappolation;
 import minestrapteam.minestrappolation.handlers.MGuiHandler;
+import minestrapteam.minestrappolation.lib.MAchievements;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.tileentity.TileEntityMelter;
 import net.minecraft.block.Block;
@@ -164,6 +165,7 @@ public class BlockMelter extends BlockDirectional
 			return true;
 		
 		playerIn.openGui(Minestrappolation.instance, MGuiHandler.GUIID_MELTER, worldIn, pos.getX(), pos.getY(), pos.getZ());
+		playerIn.addStat(MAchievements.melter, 1);
 		return true;
 	}
 }

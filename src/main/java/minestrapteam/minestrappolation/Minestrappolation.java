@@ -5,6 +5,7 @@ import minestrapteam.minestrappolation.creativetab.MTab;
 import minestrapteam.minestrappolation.handlers.MEventHandler;
 import minestrapteam.minestrappolation.handlers.MFuelHandler;
 import minestrapteam.minestrappolation.handlers.MGuiHandler;
+import minestrapteam.minestrappolation.lib.MAchievements;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MDictionary;
 import minestrapteam.minestrappolation.lib.MItems;
@@ -56,6 +57,9 @@ public class Minestrappolation
 		MBiomeManager.load();
 		
 		Tables.loadTables();
+		
+		MAchievements.load();
+
 		MinecraftForge.EVENT_BUS.register(new MEventHandler());
 		proxy.preInit(event);
 		if (Minestrappolation.proxy != null)
