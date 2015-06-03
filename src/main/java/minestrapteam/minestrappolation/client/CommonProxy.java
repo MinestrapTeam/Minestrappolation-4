@@ -1,5 +1,6 @@
 package minestrapteam.minestrappolation.client;
 
+import minestrapteam.minestrappolation.Config;
 import minestrapteam.minestrappolation.block.BlockBiomeBricks;
 import minestrapteam.minestrappolation.block.BlockChiseled;
 import minestrapteam.minestrappolation.block.BlockMSand;
@@ -34,7 +35,6 @@ import minestrapteam.minestrappolation.tileentity.TileEntityCrusher;
 import minestrapteam.minestrappolation.tileentity.TileEntityMelter;
 import minestrapteam.minestrappolation.tileentity.TileEntitySawMill;
 import minestrapteam.minestrappolation.tileentity.TileEntityStoneCutter;
-import minestrapteam.minestrappolation.util.Config;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;

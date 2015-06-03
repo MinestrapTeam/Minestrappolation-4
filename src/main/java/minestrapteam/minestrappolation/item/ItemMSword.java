@@ -1,5 +1,6 @@
 package minestrapteam.minestrappolation.item;
 
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -26,6 +27,17 @@ public class ItemMSword extends ItemSword
 	{
 		return repair.getItem() == this.repairItem;
 	}
+	
+	@Override
+	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
+    {
+		if(this.ignites)
+		{
+			target.setFire(5);
+		}
+        stack.damageItem(1, attacker);
+        return true;
+    }
 	
 	@Override
 	public boolean onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ)

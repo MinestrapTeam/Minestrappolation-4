@@ -1,7 +1,7 @@
 package minestrapteam.minestrappolation.tileentity;
 
 import minestrapteam.minestrappolation.block.BlockAlloy;
-import minestrapteam.minestrappolation.util.AlloyRecipes;
+import minestrapteam.minestrappolation.crafting.recipes.AlloyRecipes;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.inventory.SlotFurnaceFuel;

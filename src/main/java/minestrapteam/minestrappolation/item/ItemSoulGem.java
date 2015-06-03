@@ -1,6 +1,6 @@
 package minestrapteam.minestrappolation.item;
 
-import minestrapteam.minestrappolation.util.Config;
+import minestrapteam.minestrappolation.Config;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;

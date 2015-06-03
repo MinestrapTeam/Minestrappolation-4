@@ -1,6 +1,6 @@
 package minestrapteam.minestrappolation.inventory.slot;
 
-import minestrapteam.minestrappolation.util.MelterRecipes;
+import minestrapteam.minestrappolation.crafting.recipes.MelterRecipes;
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;

@@ -2,8 +2,8 @@ package minestrapteam.minestrappolation.inventory.container;
 
 import java.util.List;
 
+import minestrapteam.minestrappolation.crafting.recipes.CrusherRecipes;
 import minestrapteam.minestrappolation.tileentity.TileEntityCrusher;
-import minestrapteam.minestrappolation.util.CrusherRecipes;
 import minestrapteam.minestrappolation.util.MinistrappolationInventoryHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.ICrafting;

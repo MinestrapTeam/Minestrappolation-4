@@ -1,12 +1,15 @@
-package minestrapteam.minestrappolation.util;
+package minestrapteam.minestrappolation.handlers;
 
 import java.util.Random;
 
+import minestrapteam.minestrappolation.Config;
 import minestrapteam.minestrappolation.block.BlockSoul;
 import minestrapteam.minestrappolation.enumtypes.MRoadType;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MItems;
 import minestrapteam.minestrappolation.lib.MReference;
+import minestrapteam.minestrappolation.util.ChunkHelper;
+import minestrapteam.minestrappolation.util.VersionChecker;
 import minestrapteam.minestrappolation.world.MBiomeManager;
 import net.minecraft.block.BlockNetherWart;
 import net.minecraft.block.state.IBlockState;

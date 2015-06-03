@@ -1,4 +1,4 @@
-package minestrapteam.minestrappolation.util;
+package minestrapteam.minestrappolation.handlers;
 
 import minestrapteam.minestrappolation.inventory.container.ContainerAlloy;
 import minestrapteam.minestrappolation.inventory.container.ContainerBarrel;

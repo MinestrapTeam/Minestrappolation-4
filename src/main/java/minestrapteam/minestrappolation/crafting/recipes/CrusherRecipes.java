@@ -1,4 +1,4 @@
-package minestrapteam.minestrappolation.util;
+package minestrapteam.minestrappolation.crafting.recipes;
 
 import java.util.HashMap;
 import java.util.Iterator;

@@ -1,4 +1,4 @@
-package minestrapteam.minestrappolation.util;
+package minestrapteam.minestrappolation.crafting.recipes;
 
 import java.util.Iterator;
 import java.util.Map;
@@ -6,6 +6,7 @@ import java.util.Map.Entry;
 
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MItems;
+import minestrapteam.minestrappolation.util.MStacks;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;

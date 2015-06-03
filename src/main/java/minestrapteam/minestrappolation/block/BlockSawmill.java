@@ -1,8 +1,8 @@
 package minestrapteam.minestrappolation.block;
 
 import minestrapteam.minestrappolation.Minestrappolation;
+import minestrapteam.minestrappolation.handlers.MGuiHandler;
 import minestrapteam.minestrappolation.tileentity.TileEntitySawMill;
-import minestrapteam.minestrappolation.util.MGuiHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;

@@ -3,7 +3,7 @@ package minestrapteam.minestrappolation.tileentity;
 import java.util.Random;
 
 import minestrapteam.minestrappolation.block.BlockCrusher;
-import minestrapteam.minestrappolation.util.CrusherRecipes;
+import minestrapteam.minestrappolation.crafting.recipes.CrusherRecipes;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.inventory.SlotFurnaceFuel;

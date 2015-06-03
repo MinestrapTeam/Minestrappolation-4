@@ -1,7 +1,7 @@
 package minestrapteam.minestrappolation.tileentity;
 
 import minestrapteam.minestrappolation.block.BlockMelter;
-import minestrapteam.minestrappolation.util.MelterRecipes;
+import minestrapteam.minestrappolation.crafting.recipes.MelterRecipes;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.Item;

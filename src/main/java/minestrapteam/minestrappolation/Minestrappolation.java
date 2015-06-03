@@ -2,15 +2,14 @@ package minestrapteam.minestrappolation;
 
 import minestrapteam.minestrappolation.client.CommonProxy;
 import minestrapteam.minestrappolation.creativetab.MTab;
+import minestrapteam.minestrappolation.handlers.MEventHandler;
+import minestrapteam.minestrappolation.handlers.MFuelHandler;
+import minestrapteam.minestrappolation.handlers.MGuiHandler;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MDictionary;
 import minestrapteam.minestrappolation.lib.MItems;
 import minestrapteam.minestrappolation.lib.MRecipes;
 import minestrapteam.minestrappolation.lib.MReference;
-import minestrapteam.minestrappolation.util.Config;
-import minestrapteam.minestrappolation.util.MEventHandler;
-import minestrapteam.minestrappolation.util.MFuelHandler;
-import minestrapteam.minestrappolation.util.MGuiHandler;
 import minestrapteam.minestrappolation.util.Tables;
 import minestrapteam.minestrappolation.world.MBiomeManager;
 import minestrapteam.minestrappolation.world.MGenHandler;

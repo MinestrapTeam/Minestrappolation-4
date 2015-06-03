@@ -1,8 +1,8 @@
 package minestrapteam.minestrappolation.block;
 
 import minestrapteam.minestrappolation.Minestrappolation;
+import minestrapteam.minestrappolation.handlers.MGuiHandler;
 import minestrapteam.minestrappolation.tileentity.TileEntityCrate;
-import minestrapteam.minestrappolation.util.MGuiHandler;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;

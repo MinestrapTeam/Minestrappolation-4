@@ -3,8 +3,8 @@ package minestrapteam.minestrappolation.block;
 import java.util.List;
 import java.util.Random;
 
+import minestrapteam.minestrappolation.Config;
 import minestrapteam.minestrappolation.block.ore.MBlockOre;
-import minestrapteam.minestrappolation.util.Config;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;

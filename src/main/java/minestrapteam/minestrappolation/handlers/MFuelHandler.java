@@ -1,4 +1,4 @@
-package minestrapteam.minestrappolation.util;
+package minestrapteam.minestrappolation.handlers;
 
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MItems;

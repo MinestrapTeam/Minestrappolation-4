@@ -1,8 +1,8 @@
 package minestrapteam.minestrappolation.api;
 
-import minestrapteam.minestrappolation.util.AlloyRecipes;
-import minestrapteam.minestrappolation.util.CrusherRecipes;
-import minestrapteam.minestrappolation.util.MelterRecipes;
+import minestrapteam.minestrappolation.crafting.recipes.AlloyRecipes;
+import minestrapteam.minestrappolation.crafting.recipes.CrusherRecipes;
+import minestrapteam.minestrappolation.crafting.recipes.MelterRecipes;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
