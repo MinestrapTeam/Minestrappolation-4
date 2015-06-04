@@ -2,6 +2,7 @@ package minestrapteam.minestrappolation.block;
 
 import minestrapteam.minestrappolation.Minestrappolation;
 import minestrapteam.minestrappolation.handlers.MGuiHandler;
+import minestrapteam.minestrappolation.lib.MAchievements;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.tileentity.TileEntityCrusher;
 import net.minecraft.block.Block;
@@ -121,6 +122,7 @@ public class BlockCrusher extends BlockDirectional
 			return true;
 		
 		playerIn.openGui(Minestrappolation.instance, MGuiHandler.GUIID_ALLOY, worldIn, pos.getX(), pos.getY(), pos.getZ());
+		MAchievements.addAchievement(playerIn, MAchievements.crusher);
 		return true;
 	}
 	
