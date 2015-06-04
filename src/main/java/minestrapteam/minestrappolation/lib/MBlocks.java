@@ -9,6 +9,7 @@ import minestrapteam.minestrappolation.block.BlockBoulder;
 import minestrapteam.minestrappolation.block.BlockChiseled;
 import minestrapteam.minestrappolation.block.BlockCrate;
 import minestrapteam.minestrappolation.block.BlockCrusher;
+import minestrapteam.minestrappolation.block.BlockDeadBranch;
 import minestrapteam.minestrappolation.block.BlockFrostGenerator;
 import minestrapteam.minestrappolation.block.BlockGodstone;
 import minestrapteam.minestrappolation.block.BlockInvincium;
@@ -178,6 +179,7 @@ public class MBlocks
 	public static Block	ministrapp_leaves;
 	public static Block	ministrapp_sapling;
 	public static Block	ministrapp_planks;
+	public static Block dead_branch;
 	
 	public static Block	godstone;
 	
@@ -324,6 +326,7 @@ public class MBlocks
 		ministrapp_leaves = new MBlockLeaves(600).setUnlocalizedName("ministrapp_leaves");
 		ministrapp_sapling = new MBlockSapling(600);
 		ministrapp_planks = new MBlockPlanks(300).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("ministrapp_planks");
+		dead_branch = new BlockDeadBranch(Material.vine, MapColor.woodColor).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("dead_branch");
 		
 		// ORES
 		sunstone_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.sunstone_shard, 0, 2, 5, 1, 3, "pickaxe", 2, true).setHardness(2.6F).setResistance(4.0F).setStepSound(Block.soundTypePiston).setLightLevel(0.7F).setUnlocalizedName("sunstone_ore").setCreativeTab(Minestrappolation.tabMBuilding);
@@ -534,6 +537,7 @@ public class MBlocks
 		
 		register(ministrapp_sapling, ItemBlockSapling.class);
 		register(ministrapp_leaves, ItemBlockLeaves.class);
+		register(dead_branch);
 		register(redwood_fence);
 		register(frozen_oak_fence);
 		register(refined_glass_pane);
@@ -680,6 +684,7 @@ public class MBlocks
 		registerRender(framed_glass_pane);
 		registerRender(steel_mesh);
 		registerRender(frost_generator);
+		registerRender(dead_branch);
 		registerRender(invincium);
 	}
 	

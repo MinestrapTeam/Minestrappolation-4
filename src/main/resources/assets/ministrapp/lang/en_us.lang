@@ -209,6 +209,7 @@ tile.frozen_oak_stairs.name=Frozen Oak Plank Stairs
 tile.frozen_oak_fence_gate.name=Frozen Oak Fence Gate
 tile.frozen_oak_fence.name=Frozen Oak Fence
 item.frozen_oak_door_item.name=Frozen Oak Door
+tile.dead_branch.name=Dead Branches
 
 tile.stone_pattern_bricks.name=Patterned Stone Bricks
 tile.stone_refined.name=Polished Stone

@@ -1,0 +1,37 @@
+{
+"__comment": "Designed by Delocuro with BDcraft Cubik PRO 0.93 Beta - http://bdcraft.net",
+"textures": {
+    "particle": "ministrapp:blocks/dead_branch_1",
+    "texture_1": "ministrapp:blocks/dead_branch_1",
+	"texture_2": "ministrapp:blocks/dead_branch_2",
+	"texture_3": "ministrapp:blocks/dead_branch_3"
+},
+"elements": [ 
+{
+    "from": [ 0, 0, 0 ],
+    "to": [ 0.0625, 16, 22.8125 ],
+    "rotation": { "origin": [ 0, 0, 0 ], "axis": "y", "angle": 45 },
+    "faces": {
+        "west":  { "uv": [ 0, 0, 16, 16 ], "texture": "#texture_1" },
+        "east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#texture_1" }
+    }
+},
+{
+    "from": [ 16, 0, 0 ],
+    "to": [ 16.0625, 16, 23 ],
+    "rotation": { "origin": [ 16, 0, 0 ], "axis": "y", "angle": -45 },
+    "faces": {
+        "west":  { "uv": [ 0, 0, 16, 16 ], "texture": "#texture_2" },
+        "east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#texture_2" }
+    }
+},
+{
+    "from": [ 0, 7.9375, 0 ],
+    "to": [ 16, 8, 16 ],
+    "faces": {
+        "down":  { "uv": [ 16, 16, 0, 0 ], "texture": "#texture_3" },
+        "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#texture_3" }
+    }
+}
+]
+}

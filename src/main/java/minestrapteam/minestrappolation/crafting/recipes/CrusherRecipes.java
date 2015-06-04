@@ -201,6 +201,7 @@ public class CrusherRecipes
 		this.addRecipe(Blocks.bookshelf, new ItemStack(Items.book, 3), 0.05F, new ItemStack(Items.paper, 1), 5);
 		this.addRecipe(Blocks.web, new ItemStack(Items.string, 4), .2F, new ItemStack(Items.spider_eye, 1, 0), 20);
 		this.addRecipe(Blocks.ladder, new ItemStack(Items.stick, 1), 0.05F, new ItemStack(Items.stick, 1), 50);
+		this.addRecipe(MBlocks.dead_branch, new ItemStack(Items.stick, 12), 0.05F, new ItemStack(Items.stick, 4), 10);
 		this.addRecipe(Blocks.anvil, new ItemStack(Blocks.iron_block, 1), 1.0F, new ItemStack(MItems.steel_ingot, 1), 10);
 		this.addRecipe(Blocks.beacon, new ItemStack(Items.nether_star, 1), 0.2F, new ItemStack(Blocks.obsidian, 1), 50);
 		this.addRecipe(Blocks.cauldron, new ItemStack(Items.iron_ingot, 4), 0.2F, new ItemStack(Items.iron_ingot, 1), 70);
