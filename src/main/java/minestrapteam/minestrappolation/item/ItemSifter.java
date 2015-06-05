@@ -21,7 +21,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemSifter extends Item{
-
+	
 	public ItemSifter()
     {
         this.maxStackSize = 1;
@@ -33,156 +33,52 @@ public class ItemSifter extends Item{
 	@Override
     public boolean onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ)
     {
+			
 			if (worldIn.getBlockState(pos) == Blocks.sand.getStateFromMeta(0))
             {
-                worldIn.destroyBlock(pos, false);       
-                if(!worldIn.isRemote)
-                {
-                	ItemStack drop = new ItemStack((Item)Chance.getRandomFromTable("sifter_sand"), 1);
-                    EntityItem eitem = new EntityItem(worldIn, pos.getX(), pos.getY(), pos.getZ(), drop);
-                    if(drop != null)
-                    {
-                    	worldIn.spawnEntityInWorld(eitem);		
-                    }
-                }  	
-                stack.damageItem(1, playerIn); 
+                this.spawnDropFrom(stack, playerIn, worldIn, pos, "sifter_sand");
                 playerIn.addStat(MAchievements.sifter, 1);
             }
 			else if (worldIn.getBlockState(pos) == Blocks.sand.getStateFromMeta(1))
             {
-                worldIn.destroyBlock(pos, false);       
-                if(!worldIn.isRemote)
-                {
-                	ItemStack drop = new ItemStack((Item)Chance.getRandomFromTable("sifter_red_sand"), 1);
-                    EntityItem eitem = new EntityItem(worldIn, pos.getX(), pos.getY(), pos.getZ(), drop);
-                    if(drop != null)
-                    {
-                    	worldIn.spawnEntityInWorld(eitem);		
-                    }
-                }  	
-                stack.damageItem(1, playerIn); 
-                playerIn.addStat(MAchievements.sifter, 1);
+				this.spawnDropFrom(stack, playerIn, worldIn, pos, "sifter_red_sand"); 
             }
 			else if (worldIn.getBlockState(pos).getBlock() == Blocks.gravel)
             {
-                worldIn.destroyBlock(pos, false);       
-                if(!worldIn.isRemote)
-                {
-                	ItemStack drop = new ItemStack((Item)Chance.getRandomFromTable("sifter_gravel"), 1);
-                    EntityItem eitem = new EntityItem(worldIn, pos.getX(), pos.getY(), pos.getZ(), drop);
-                    if(drop != null)
-                    {
-                    	worldIn.spawnEntityInWorld(eitem);		
-                    }
-                }  	
-                stack.damageItem(1, playerIn); 
-                playerIn.addStat(MAchievements.sifter, 1);
+				this.spawnDropFrom(stack, playerIn, worldIn, pos, "sifter_gravel");
             }
-			else if (worldIn.getBlockState(pos).getBlock() == Blocks.dirt)
+			else if (worldIn.getBlockState(pos).getBlock() == Blocks.dirt || worldIn.getBlockState(pos).getBlock() == Blocks.grass)
             {
-                worldIn.destroyBlock(pos, false);       
-                if(!worldIn.isRemote)
-                {
-                	ItemStack drop = new ItemStack((Item)Chance.getRandomFromTable("sifter_dirt"), 1);
-                    EntityItem eitem = new EntityItem(worldIn, pos.getX(), pos.getY(), pos.getZ(), drop);
-                    if(drop != null)
-                    {
-                    	worldIn.spawnEntityInWorld(eitem);		
-                    }
-                }  	
-                stack.damageItem(1, playerIn); 
-                playerIn.addStat(MAchievements.sifter, 1);
-            }
-			else if (worldIn.getBlockState(pos).getBlock() == Blocks.grass)
-            {
-                worldIn.destroyBlock(pos, false);       
-                if(!worldIn.isRemote)
-                {
-                	ItemStack drop = new ItemStack((Item)Chance.getRandomFromTable("sifter_dirt"), 1);
-                    EntityItem eitem = new EntityItem(worldIn, pos.getX(), pos.getY(), pos.getZ(), drop);
-                    if(drop != null)
-                    {
-                    	worldIn.spawnEntityInWorld(eitem);		
-                    }
-                }  	
-                stack.damageItem(1, playerIn); 
-                playerIn.addStat(MAchievements.sifter, 1);
+				this.spawnDropFrom(stack, playerIn, worldIn, pos, "sifter_dirt");
             }
 			else if (worldIn.getBlockState(pos).getBlock() == Blocks.mycelium)
             {
-                worldIn.destroyBlock(pos, false);       
-                if(!worldIn.isRemote)
-                {
-                	ItemStack drop = new ItemStack((Item)Chance.getRandomFromTable("sifter_mycelium"), 1);
-                    EntityItem eitem = new EntityItem(worldIn, pos.getX(), pos.getY(), pos.getZ(), drop);
-                    if(drop != null)
-                    {
-                    	worldIn.spawnEntityInWorld(eitem);		
-                    }
-                }  	
-                stack.damageItem(1, playerIn); 
-                playerIn.addStat(MAchievements.sifter, 1);
+				this.spawnDropFrom(stack, playerIn, worldIn, pos, "sifter_mycelium");
             }
-			else if (worldIn.getBlockState(pos).getBlock() == MBlocks.dirt_permafrost)
+			else if (worldIn.getBlockState(pos).getBlock() == MBlocks.dirt_permafrost || worldIn.getBlockState(pos).getBlock() == MBlocks.lichen_permafrost)
             {
-                worldIn.destroyBlock(pos, false);       
-                if(!worldIn.isRemote)
-                {
-                	ItemStack drop = new ItemStack((Item)Chance.getRandomFromTable("sifter_permafrost"), 1);
-                    EntityItem eitem = new EntityItem(worldIn, pos.getX(), pos.getY(), pos.getZ(), drop);
-                    if(drop != null)
-                    {
-                    	worldIn.spawnEntityInWorld(eitem);		
-                    }
-                }  	
-                stack.damageItem(1, playerIn); 
-                playerIn.addStat(MAchievements.sifter, 1);
-            }
-			else if (worldIn.getBlockState(pos).getBlock() == MBlocks.lichen_permafrost)
-            {
-                worldIn.destroyBlock(pos, false);       
-                if(!worldIn.isRemote)
-                {
-                	ItemStack drop = new ItemStack((Item)Chance.getRandomFromTable("sifter_permafrost"), 1);
-                    EntityItem eitem = new EntityItem(worldIn, pos.getX(), pos.getY(), pos.getZ(), drop);
-                    if(drop != null)
-                    {
-                    	worldIn.spawnEntityInWorld(eitem);		
-                    }
-                }  	
-                stack.damageItem(1, playerIn); 
-                playerIn.addStat(MAchievements.sifter, 1);
+				this.spawnDropFrom(stack, playerIn, worldIn, pos, "sifter_permafrost");
             }
 			else if (worldIn.getBlockState(pos).getBlock() == MBlocks.cold_sand)
             {
-                worldIn.destroyBlock(pos, false);       
-                if(!worldIn.isRemote)
-                {
-                	ItemStack drop = new ItemStack((Item)Chance.getRandomFromTable("sifter_cold_sand"), 1);
-                    EntityItem eitem = new EntityItem(worldIn, pos.getX(), pos.getY(), pos.getZ(), drop);
-                    if(drop != null)
-                    {
-                    	worldIn.spawnEntityInWorld(eitem);		
-                    }
-                }  	
-                stack.damageItem(1, playerIn); 
-                playerIn.addStat(MAchievements.sifter, 1);
+				this.spawnDropFrom(stack, playerIn, worldIn, pos, "sifter_cold_sand");
             }
 			else if (worldIn.getBlockState(pos).getBlock() == Blocks.soul_sand)
             {
-                worldIn.destroyBlock(pos, false);       
-                if(!worldIn.isRemote)
-                {
-                	ItemStack drop = new ItemStack((Item)Chance.getRandomFromTable("sifter_soul_sand"), 1);
-                    EntityItem eitem = new EntityItem(worldIn, pos.getX(), pos.getY(), pos.getZ(), drop);
-                    if(drop != null)
-                    {
-                    	worldIn.spawnEntityInWorld(eitem);		
-                    }
-                }  	
-                stack.damageItem(1, playerIn); 
-                playerIn.addStat(MAchievements.sifter, 1);
+				this.spawnDropFrom(stack, playerIn, worldIn, pos, "sifter_soul_sand");
             }
             return true;
     }
+	
+	private void spawnDropFrom(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, String table)
+	{
+		 worldIn.destroyBlock(pos, false);       
+         ItemStack drop = (ItemStack)Chance.getRandomFromTable(table);
+         if(drop != null)
+         {
+        	 drop.stackSize = 1;
+             playerIn.inventory.addItemStackToInventory(drop);	
+         }	
+         stack.damageItem(1, playerIn); 
+	}
 }

@@ -17,14 +17,14 @@ public class Tables {
 
 	private static void createTables()
 	{
-		Chance.createChanceTable("sifter_sand", new ArrayList<Item>());
-		Chance.createChanceTable("sifter_red_sand", new ArrayList<Item>());
+		Chance.createChanceTable("sifter_sand", new ArrayList<ItemStack>());
+		Chance.createChanceTable("sifter_red_sand", new ArrayList<ItemStack>());
 		Chance.createChanceTable("sifter_gravel", new ArrayList<Item>());
-		Chance.createChanceTable("sifter_dirt", new ArrayList<Item>());
-		Chance.createChanceTable("sifter_mycelium", new ArrayList<Item>());
-		Chance.createChanceTable("sifter_permafrost", new ArrayList<Item>());
-		Chance.createChanceTable("sifter_cold_sand", new ArrayList<Item>());
-		Chance.createChanceTable("sifter_soul_sand", new ArrayList<Item>());
+		Chance.createChanceTable("sifter_dirt", new ArrayList<ItemStack>());
+		Chance.createChanceTable("sifter_mycelium", new ArrayList<ItemStack>());
+		Chance.createChanceTable("sifter_permafrost", new ArrayList<ItemStack>());
+		Chance.createChanceTable("sifter_cold_sand", new ArrayList<ItemStack>());
+		Chance.createChanceTable("sifter_soul_sand", new ArrayList<ItemStack>());
 	}
 	
 	private static void populateTables()
@@ -33,7 +33,7 @@ public class Tables {
 		Chance.addToChanceTable("sifter_sand", null, 25);
     	Chance.addToChanceTable("sifter_sand", new ItemStack(MItems.chunks, 1, 4), 20);
     	Chance.addToChanceTable("sifter_sand", new ItemStack(MItems.chunks, 1, 1), 5);
-    	Chance.addToChanceTable("sifter_sand", Items.clay_ball, 20);
+    	Chance.addToChanceTable("sifter_sand", new ItemStack(Items.clay_ball, 1, 0), 20);
     	Chance.addToChanceTable("sifter_sand", new ItemStack(MItems.chunks, 1, 6), 2);
     	//Sifter - Red Sand
     	Chance.addToChanceTable("sifter_red_sand", null, 25);
