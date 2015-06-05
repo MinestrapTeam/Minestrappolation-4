@@ -19,6 +19,7 @@ import minestrapteam.minestrappolation.block.BlockMPane;
 import minestrapteam.minestrappolation.block.BlockMSand;
 import minestrapteam.minestrappolation.block.BlockMStorage;
 import minestrapteam.minestrappolation.block.BlockMelter;
+import minestrapteam.minestrappolation.block.BlockMossyCobble;
 import minestrapteam.minestrappolation.block.BlockPermaFrost;
 import minestrapteam.minestrappolation.block.BlockPermaFrostDirt;
 import minestrapteam.minestrappolation.block.BlockRadationMineral;
@@ -65,6 +66,7 @@ import minestrapteam.minestrappolation.item.ItemBlockChiseled;
 import minestrapteam.minestrappolation.item.ItemBlockColdSand;
 import minestrapteam.minestrappolation.item.ItemBlockLeaves;
 import minestrapteam.minestrappolation.item.ItemBlockLog;
+import minestrapteam.minestrappolation.item.ItemBlockMossyCobble;
 import minestrapteam.minestrappolation.item.ItemBlockPermaFrost;
 import minestrapteam.minestrappolation.item.ItemBlockPlanks;
 import minestrapteam.minestrappolation.item.ItemBlockRoads;
@@ -134,6 +136,7 @@ public class MBlocks
 	
 	public static Block	roads;
 	public static Block chiseled;
+	public static Block mossy;
 	
 	public static Block	cold_sand;
 	public static Block	lichen_permafrost;
@@ -311,7 +314,8 @@ public class MBlocks
 		meat_block = new BlockMStorage(Material.clay, MapColor.pinkColor).setHardness(0.8F).setStepSound(Block.SLIME_SOUND).setUnlocalizedName("meat_block").setCreativeTab(Minestrappolation.tabMFood);
 		
 		roads = new BlockRoads(Material.rock, MapColor.blackColor).setUnlocalizedName("roads").setCreativeTab(Minestrappolation.tabMBuilding);
-		chiseled = new BlockChiseled(Material.rock, MapColor.grayColor).setUnlocalizedName("biome_chiseled");
+		chiseled = new BlockChiseled(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_chiseled");
+		mossy = new BlockMossyCobble(Material.rock, MapColor.grayColor).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_mossy");
 		
 		cold_sand = new BlockMSand().setUnlocalizedName("cold_sand").setHardness(0.7F).setStepSound(Block.soundTypeSand).setCreativeTab(Minestrappolation.tabMBuilding);
 		lichen_permafrost = new BlockPermaFrost().setUnlocalizedName("permafrost").setHardness(1F).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMBuilding);
@@ -464,6 +468,7 @@ public class MBlocks
 		register(biome_cobble, ItemBlockBiomeCobble.class);
 		register(biome_bricks, ItemBlockBiomeBricks.class);
 		register(chiseled, ItemBlockChiseled.class);
+		register(mossy, ItemBlockMossyCobble.class);
 		register(deepstone_stairs);
 		register(coldstone_stairs);
 		register(redrock_stairs);
@@ -604,6 +609,7 @@ public class MBlocks
 		
 		registerRender(roads);
 		registerRender(chiseled);
+		registerRender(mossy);
 		
 		registerRender(cold_sand);
 		registerRender(lichen_permafrost);
@@ -828,5 +834,19 @@ public class MBlocks
 		biome_bricks.setHarvestLevel("pickaxe", 2, biome_bricks.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
 		biome_bricks.setHarvestLevel("pickaxe", 2, biome_bricks.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
 		biome_bricks.setHarvestLevel("pickaxe", 2, biome_bricks.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
+		
+		// Chiseled
+		chiseled.setHarvestLevel("pickaxe", 2, chiseled.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
+		chiseled.setHarvestLevel("pickaxe", 2, chiseled.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
+		chiseled.setHarvestLevel("pickaxe", 2, chiseled.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
+		chiseled.setHarvestLevel("pickaxe", 2, chiseled.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
+		chiseled.setHarvestLevel("pickaxe", 2, chiseled.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
+				
+		// Mossy Cobble
+		mossy.setHarvestLevel("pickaxe", 2, mossy.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
+		mossy.setHarvestLevel("pickaxe", 2, mossy.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
+		mossy.setHarvestLevel("pickaxe", 2, mossy.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
+		mossy.setHarvestLevel("pickaxe", 2, mossy.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
+		mossy.setHarvestLevel("pickaxe", 2, mossy.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
 	}
 }

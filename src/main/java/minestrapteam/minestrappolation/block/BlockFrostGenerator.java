@@ -114,7 +114,7 @@ public class BlockFrostGenerator extends MBlock
 	@Override
 	public void updateTick(World world, BlockPos pos, IBlockState state, Random rand)
 	{
-		world.scheduleUpdate(pos, this, 20);
+		world.scheduleUpdate(pos, this, 100);
 		if (world.isBlockPowered(pos))
 		{
 			for (int x = -this.range; x < this.range; x++)
@@ -123,7 +123,7 @@ public class BlockFrostGenerator extends MBlock
 				{
 					for (int z = -this.range; z < this.range; z++)
 					{
-						int s = rand.nextInt(300);
+						int s = rand.nextInt(500);
 						if (s < 1 && world.getBlockState(pos.add(x, 0, z)) == Blocks.air.getDefaultState() && world.getBlockState(pos.add(x, -1, z)) != Blocks.air.getDefaultState())
 						{
 							world.setBlockState(pos.add(x, 0, z), Blocks.snow_layer.getDefaultState(), 2);

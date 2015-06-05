@@ -92,6 +92,13 @@ public class StonecuttingManager
 		
 		//Mossy Cobblestone
 		this.addRecipe(new ItemStack(Blocks.mossy_cobblestone, 9), new ItemStack(Blocks.vine), new Object[] { "BBB", "BBB", "BBB", 'B', Blocks.cobblestone});
+		this.addRecipe(new ItemStack(MBlocks.mossy, 9, 0), new ItemStack(Blocks.vine), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_cobble, 1, 0)});
+		this.addRecipe(new ItemStack(MBlocks.mossy, 9, 1), new ItemStack(Blocks.vine), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_cobble, 1, 1)});
+		this.addRecipe(new ItemStack(MBlocks.mossy, 9, 2), new ItemStack(Blocks.vine), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_cobble, 1, 2)});
+		this.addRecipe(new ItemStack(MBlocks.mossy, 9, 3), new ItemStack(Blocks.vine), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_cobble, 1, 3)});
+		this.addRecipe(new ItemStack(MBlocks.mossy, 9, 4), new ItemStack(Blocks.vine), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_cobble, 1, 4)});
+		this.addRecipe(new ItemStack(MBlocks.mossy, 9, 7), new ItemStack(Blocks.vine), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_cobble, 1, 7)});
+		this.addRecipe(new ItemStack(MBlocks.mossy, 9, 8), new ItemStack(Blocks.vine), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_cobble, 1, 8)});
 		
 		//Refined Blocks
 		this.addRecipe(new ItemStack(MBlocks.stone_refined, 9), null, new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(Blocks.stone, 1, 0) });

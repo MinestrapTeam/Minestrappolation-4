@@ -269,6 +269,36 @@ public class MGenHandler implements IWorldGenerator
 							}
 						}
 					}
+					else if (block == Blocks.cobblestone)
+					{
+						if (y < deepStoneDepth)
+						{
+							chunk.setBlockState(subpos2, MBlocks.biome_cobble.getStateFromMeta(deepOreMeta));
+							
+						}
+						else
+						{
+							if (biome.temperature >= 1.0F || biome.temperature < 0.4F || biome.getTempCategory() == TempCategory.OCEAN)
+							{
+								chunk.setBlockState(subpos2, MBlocks.biome_cobble.getStateFromMeta(oreMeta));
+							}
+						}
+					}
+					else if (block == Blocks.mossy_cobblestone)
+					{
+						if (y < deepStoneDepth)
+						{
+							chunk.setBlockState(subpos2, MBlocks.mossy.getStateFromMeta(deepOreMeta));
+							
+						}
+						else
+						{
+							if (biome.temperature >= 1.0F || biome.temperature < 0.4F || biome.getTempCategory() == TempCategory.OCEAN)
+							{
+								chunk.setBlockState(subpos2, MBlocks.mossy.getStateFromMeta(oreMeta));
+							}
+						}
+					}
 				}
 			}
 		}
