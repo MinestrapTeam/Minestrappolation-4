@@ -46,7 +46,7 @@ public class BlockAlloy extends BlockDirectional
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
 	{
-		return Item.getItemFromBlock(MBlocks.melter);
+		return Item.getItemFromBlock(MBlocks.alloy);
 	}
 	
 	@Override
