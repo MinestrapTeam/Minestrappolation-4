@@ -66,6 +66,7 @@ public class MBlockOre extends MBlock
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
 	{
+		System.out.println(this.meta);
 		if (this.itemStack != null)
 			return this.itemStack;
 		return Item.getItemFromBlock(this);

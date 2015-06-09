@@ -25,6 +25,7 @@ public abstract class BlockRadiation extends MBlockOre
 		super(material, mapColor, itemDrop, expMin, expMax, dropAmount, bonusAmount, tool, level, silkHarvest);
 		this.range = range;
 		this.effectRate = rate;
+		this.setTickRandomly(true);
 	}
 	
 	@Override
@@ -39,7 +40,6 @@ public abstract class BlockRadiation extends MBlockOre
 		if (!world.isRemote && Config.radiationEffects == true)
 		{
 			world.scheduleUpdate(pos, this, this.effectRate);
-			
 			AxisAlignedBB axisalignedbb = this.getCollisionBoundingBox(world, pos, state).expand(this.range, this.range, this.range);
 			List<EntityLivingBase> list = world.getEntitiesWithinAABB(EntityLivingBase.class, axisalignedbb);
 			

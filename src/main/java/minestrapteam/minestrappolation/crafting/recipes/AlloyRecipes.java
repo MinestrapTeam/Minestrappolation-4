@@ -12,6 +12,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.OreDictionary;
 
 import com.google.common.collect.Maps;
 
@@ -52,8 +53,8 @@ public class AlloyRecipes
 		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(Blocks.log, 2), new ItemStack(Items.leather, 1), 0.3F);
 		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(Blocks.log2, 2), new ItemStack(Items.leather, 1), 0.3F);
 		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(MBlocks.ministrapp_log, 2), new ItemStack(Items.leather, 1), 0.3F);
-		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(Blocks.leaves, 12), new ItemStack(Items.leather, 1), 0.3F);
-		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(Blocks.leaves2, 12), new ItemStack(Items.leather, 1), 0.3F);
+		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(Blocks.leaves, 12, OreDictionary.WILDCARD_VALUE), new ItemStack(Items.leather, 1), 0.3F);
+		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(Blocks.leaves2, 12, OreDictionary.WILDCARD_VALUE), new ItemStack(Items.leather, 1), 0.3F);
 		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(MBlocks.ministrapp_leaves, 12), new ItemStack(Items.leather, 1), 0.3F);
 		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(Items.apple, 1), new ItemStack(Items.leather, 1), 0.3F);
 		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(Items.carrot, 3), new ItemStack(Items.leather, 1), 0.3F);
