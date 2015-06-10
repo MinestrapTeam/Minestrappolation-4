@@ -6,6 +6,7 @@ import java.util.Random;
 import minestrapteam.minestrappolation.Minestrappolation;
 import minestrapteam.minestrappolation.enumtypes.MWoodType;
 import minestrapteam.minestrappolation.lib.MBlocks;
+import minestrapteam.minestrappolation.lib.MReference;
 import minestrapteam.minestrappolation.world.WorldGenFrostTree;
 import minestrapteam.minestrappolation.world.WorldGenRedWoodTree;
 import minestrapteam.minestrappolation.world.WorldGenRedWoodTreeSmall;
@@ -18,6 +19,9 @@ import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.model.ModelBakery;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -30,6 +34,7 @@ import net.minecraft.world.gen.feature.WorldGenBigTree;
 import net.minecraft.world.gen.feature.WorldGenTrees;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.event.terraingen.TerrainGen;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -230,4 +235,26 @@ public class MBlockSapling extends BlockBush implements IGrowable
     {
         return ground == Blocks.grass || ground == Blocks.dirt || ground == Blocks.farmland || ground == MBlocks.dirt_permafrost || ground == MBlocks.lichen_permafrost;
     }
+	
+	public static void preinventoryRender()
+	{
+		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "ministrapp_sapling");
+		
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:redwood_sapling");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:frozen_oak_sapling");
+	}
+	
+	public static void inventoryRender()
+	{
+		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "ministrapp_sapling");
+		MWoodType[] aenumtype = MWoodType.values();
+		int i = aenumtype.length;
+		
+		for (int j = 0; j < i; ++j)
+		{
+			MWoodType enumtype = aenumtype[j];
+			ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(MReference.MODID + ":" + enumtype.getUnlocalizedName() + "_sapling", "inventory");
+			Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, enumtype.getMetadata(), itemModelResourceLocation);
+		}
+	}
 }

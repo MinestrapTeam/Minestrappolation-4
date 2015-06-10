@@ -9,6 +9,7 @@ import minestrapteam.minestrappolation.block.BlockRoads;
 import minestrapteam.minestrappolation.block.MBlockLeaves;
 import minestrapteam.minestrappolation.block.MBlockLog;
 import minestrapteam.minestrappolation.block.MBlockPlanks;
+import minestrapteam.minestrappolation.block.MBlockSapling;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeCoal;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeCobble;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeCopper;
@@ -87,6 +88,7 @@ public abstract class CommonProxy implements IGuiHandler
 		BlockChiseled.preinventoryRender();
 		BlockMossyCobble.preinventoryRender();
 		MBlockLeaves.preinventoryRender();
+		MBlockSapling.preinventoryRender();
 		
 		ItemChunk.preinventoryRender();
 		
@@ -129,6 +131,7 @@ public abstract class CommonProxy implements IGuiHandler
 		BlockChiseled.inventoryRender();
 		BlockMossyCobble.inventoryRender();
 		MBlockLeaves.inventoryRender();
+		MBlockSapling.inventoryRender();
 		
 		ItemChunk.inventoryRender();
 		

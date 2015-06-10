@@ -356,8 +356,8 @@ public class MBlocks
 		biome_sunstone = new BlockBiomeSunstone(0, 0, Material.rock, MapColor.stoneColor, MItems.sunstone_shard, 0, 2, 5, 1, 3, "pickaxe", 2, true).setHardness(2.6F).setResistance(4.0F).setStepSound(Block.soundTypePiston).setLightLevel(0.7F).setUnlocalizedName("biome_sunstone").setCreativeTab(Minestrappolation.tabMBuilding);
 		biome_tin = new BlockBiomeTin(0, 0, Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 0, false).setHardness(3.0F).setResistance(3.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_tin").setCreativeTab(Minestrappolation.tabMBuilding);
 		biome_copper = new BlockBiomeCopper(0, 0, Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 0, false).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_copper").setCreativeTab(Minestrappolation.tabMBuilding);
-		biome_plutonium = new BlockBiomePlutonium(2, 20, Material.rock, MapColor.stoneColor, null, 1, 2, 1, 0, "pickaxe", 2, true).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_plutonium").setCreativeTab(Minestrappolation.tabMBuilding);
-		biome_uranium = new BlockBiomeUranium(2, 20, Material.rock, MapColor.stoneColor, null, 1, 2, 1, 0, "pickaxe", 2, true).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_uranium").setCreativeTab(Minestrappolation.tabMBuilding);
+		biome_plutonium = new BlockBiomePlutonium(2, 20, Material.rock, MapColor.stoneColor, MItems.plutonium, 1, 2, 1, 0, "pickaxe", 2, true).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_plutonium").setCreativeTab(Minestrappolation.tabMBuilding);
+		biome_uranium = new BlockBiomeUranium(2, 20, Material.rock, MapColor.stoneColor, MItems.uranium, 1, 2, 1, 0, "pickaxe", 2, true).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_uranium").setCreativeTab(Minestrappolation.tabMBuilding);
 		biome_radiant = new BlockBiomeRadiant(0, 0, Material.rock, MapColor.stoneColor, MItems.radiant_quartz, 0, 1, 5, 1, 2, "pickaxe", 3, true).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_radiant").setCreativeTab(Minestrappolation.tabMBuilding);
 		biome_titanium = new BlockBiomeTitanium(0, 0, Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 3, false).setHardness(5.0F).setResistance(100.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_titanium").setCreativeTab(Minestrappolation.tabMBuilding);
 		biome_meurodite = new BlockBiomeMeurodite(0, 0, Material.rock, MapColor.stoneColor, MItems.meurodite_gem, 0, 1, 2, 1, 0, "pickaxe", 2, true).setHardness(3.0F).setStepSound(Block.soundTypePiston).setResistance(5.0F).setUnlocalizedName("biome_meurodite").setCreativeTab(Minestrappolation.tabMBuilding);
@@ -422,7 +422,7 @@ public class MBlocks
 		redwood_door_item = new ItemMDoor(redwood_door).setUnlocalizedName("redwood_door_item");
 		frozen_door_item = new ItemMDoor(frozen_door).setUnlocalizedName("frozen_oak_door_item");
 		
-		Blocks.bedrock.setHardness(5F);
+		Blocks.bedrock.setHardness(10F);
 		
 		register();
 		registerHarvestLevels();
@@ -778,6 +778,8 @@ public class MBlocks
 		glacierstone_brick_stairs.setHarvestLevel("pickaxe", 2);
 		oceanstone_brick_stairs.setHarvestLevel("pickaxe", 0);
 		poceanstone_brick_stairs.setHarvestLevel("pickaxe", 2);
+		
+		Blocks.bedrock.setHarvestLevel("pickaxe", 4);
 		
 		// Coal
 		biome_coal.setHarvestLevel("pickaxe", 2, biome_coal.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
