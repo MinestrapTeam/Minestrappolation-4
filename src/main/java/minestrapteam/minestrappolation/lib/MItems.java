@@ -58,6 +58,8 @@ public class MItems extends Item
 	public static Item							granite_brick;
 	public static Item							diorite_brick;
 	public static Item							andesite_brick;
+	public static Item							flint_brick;
+	public static Item							obsidian_brick;
 	
 	public static Item							copper_pickaxe;
 	public static Item							copper_axe;
@@ -202,6 +204,8 @@ public class MItems extends Item
 		granite_brick = new Item().setUnlocalizedName("granite_brick").setCreativeTab(Minestrappolation.tabMMaterials);
 		diorite_brick = new Item().setUnlocalizedName("diorite_brick").setCreativeTab(Minestrappolation.tabMMaterials);
 		andesite_brick = new Item().setUnlocalizedName("andesite_brick").setCreativeTab(Minestrappolation.tabMMaterials);
+		flint_brick = new Item().setUnlocalizedName("flint_brick").setCreativeTab(Minestrappolation.tabMMaterials);
+		obsidian_brick = new Item().setUnlocalizedName("obsidian_brick").setCreativeTab(Minestrappolation.tabMMaterials);
 		
 		copper_pickaxe = new ItemMPickaxe(COPPER, copper_ingot, false).setUnlocalizedName("copper_pickaxe").setCreativeTab(Minestrappolation.tabMTools);
 		copper_axe = new ItemMAxe(COPPER, copper_ingot, false).setUnlocalizedName("copper_axe").setCreativeTab(Minestrappolation.tabMTools);
@@ -316,6 +320,8 @@ public class MItems extends Item
 		GameRegistry.registerItem(granite_brick, granite_brick.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(diorite_brick, diorite_brick.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(andesite_brick, andesite_brick.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(flint_brick, flint_brick.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(obsidian_brick, obsidian_brick.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerItem(chunks, chunks.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(desert_quartz_item, desert_quartz_item.getUnlocalizedName().substring(5));
@@ -459,6 +465,8 @@ public class MItems extends Item
 		registerRender(granite_brick);
 		registerRender(diorite_brick);
 		registerRender(andesite_brick);
+		registerRender(flint_brick);
+		registerRender(obsidian_brick);
 		registerRender(desert_quartz_item);
 		
 		registerRender(copper_pickaxe);

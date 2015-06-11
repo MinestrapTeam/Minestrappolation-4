@@ -133,7 +133,6 @@ public class MBlocks
 	public static Block	uranium_block;
 	public static Block	plutonium_insulated;
 	public static Block	uranium_insulated;
-	public static Block	flint_block;
 	public static Block	sugar_block;
 	public static Block	meat_block;
 	
@@ -147,6 +146,15 @@ public class MBlocks
 	public static Block	diorite_pattern_bricks;
 	public static Block	andesite_bricks;
 	public static Block	andesite_pattern_bricks;
+	public static Block	flint_block;
+	public static Block	flint_bricks;
+	public static Block	flint_pattern_bricks;
+	public static Block	flint_refined;
+	public static Block	flint_tiles;
+	public static Block	flint_chiseled;
+	public static Block	flint_lamp_sunstone;
+	public static Block	flint_lamp_glowstone;
+	public static Block	flint_lamp_prismarine;
 	
 	public static Block	roads;
 	public static Block chiseled;
@@ -286,16 +294,24 @@ public class MBlocks
 	
 	public static void init()
 	{
-		slate = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("slate");
-		slate_refined = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("slate_refined");
-		slate_bricks = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("slate_bricks");
-		slate_pattern_bricks = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("slate_pattern_bricks");
-		diorite_bricks = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("diorite_bricks");
-		diorite_pattern_bricks = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("diorite_pattern_bricks");
-		granite_bricks = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("granite_bricks");
-		granite_pattern_bricks = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("granite_pattern_bricks");
-		andesite_bricks = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("andesite_bricks");
-		andesite_pattern_bricks = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("andesite_pattern_bricks");
+		slate = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("slate").setCreativeTab(Minestrappolation.tabMBuilding);;
+		slate_refined = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("slate_refined").setCreativeTab(Minestrappolation.tabMBuilding);;
+		slate_bricks = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("slate_bricks").setCreativeTab(Minestrappolation.tabMBuilding);;
+		slate_pattern_bricks = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("slate_pattern_bricks").setCreativeTab(Minestrappolation.tabMBuilding);;
+		diorite_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("diorite_bricks").setCreativeTab(Minestrappolation.tabMBuilding);;
+		diorite_pattern_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("diorite_pattern_bricks").setCreativeTab(Minestrappolation.tabMBuilding);;
+		granite_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("granite_bricks").setCreativeTab(Minestrappolation.tabMBuilding);;
+		granite_pattern_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("granite_pattern_bricks").setCreativeTab(Minestrappolation.tabMBuilding);;
+		andesite_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("andesite_bricks").setCreativeTab(Minestrappolation.tabMBuilding);;
+		andesite_pattern_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("andesite_pattern_bricks").setCreativeTab(Minestrappolation.tabMBuilding);;
+		flint_bricks = new MBlock(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("flint_bricks").setCreativeTab(Minestrappolation.tabMBuilding);;
+		flint_pattern_bricks = new MBlock(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("flint_pattern_bricks").setCreativeTab(Minestrappolation.tabMBuilding);;
+		flint_refined = new MBlock(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("flint_refined").setCreativeTab(Minestrappolation.tabMBuilding);;
+		flint_tiles = new MBlock(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("flint_tiles").setCreativeTab(Minestrappolation.tabMBuilding);;
+		flint_chiseled = new MBlock(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("flint_chiseled").setCreativeTab(Minestrappolation.tabMBuilding);;
+		flint_lamp_sunstone = new MBlock(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F).setLightLevel(0.7F).setStepSound(Block.soundTypePiston).setUnlocalizedName("flint_lamp_sunstone").setCreativeTab(Minestrappolation.tabMBuilding);;
+		flint_lamp_glowstone = new MBlock(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F).setLightLevel(0.8F).setStepSound(Block.soundTypePiston).setUnlocalizedName("flint_lamp_glowstone").setCreativeTab(Minestrappolation.tabMBuilding);;
+		flint_lamp_prismarine = new MBlock(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F).setLightLevel(0.8F).setStepSound(Block.soundTypePiston).setUnlocalizedName("flint_lamp_prismarine").setCreativeTab(Minestrappolation.tabMBuilding);;
 		
 		// DECOR
 		snow_refined = new MBlockSnow(Material.snow, MapColor.snowColor).setHardness(0.4F).setStepSound(Block.soundTypeSnow).setUnlocalizedName("snow_refined").setCreativeTab(Minestrappolation.tabMBuilding);
@@ -487,12 +503,21 @@ public class MBlocks
 		register(diorite_pattern_bricks);
 		register(andesite_bricks);
 		register(andesite_pattern_bricks);
+		register(flint_block);
+		register(flint_bricks);
+		register(flint_pattern_bricks);
+		register(flint_refined);
+		register(flint_tiles);
+		register(flint_chiseled);
+		register(flint_lamp_sunstone);
+		register(flint_lamp_glowstone);
+		register(flint_lamp_prismarine);
 		register(stone_pattern_bricks);
 		register(stone_refined);
 		register(stone_tiles);
+		register(stone_lamp_sunstone);
 		register(stone_lamp_glowstone);
 		register(stone_lamp_prismarine);
-		register(stone_lamp_sunstone);
 		register(roads, ItemBlockRoads.class);
 		register(biome_stones, ItemBlockBiomeStones.class);
 		register(biome_cobble, ItemBlockBiomeCobble.class);
@@ -527,7 +552,6 @@ public class MBlocks
 		register(deep_coldstone_brick_stairs);
 		
 		register(sugar_block);
-		register(flint_block);
 		register(copper_block);
 		register(tin_block);
 		register(bronze_block);
@@ -642,6 +666,14 @@ public class MBlocks
 		registerRender(andesite_bricks);
 		registerRender(andesite_pattern_bricks);
 		registerRender(flint_block);
+		registerRender(flint_bricks);
+		registerRender(flint_pattern_bricks);
+		registerRender(flint_refined);
+		registerRender(flint_tiles);
+		registerRender(flint_chiseled);
+		registerRender(flint_lamp_sunstone);
+		registerRender(flint_lamp_glowstone);
+		registerRender(flint_lamp_prismarine);
 		registerRender(sugar_block);
 		registerRender(meat_block);
 		
@@ -773,6 +805,15 @@ public class MBlocks
 		andesite_bricks.setHarvestLevel("pickaxe", 0);
 		andesite_pattern_bricks.setHarvestLevel("pickaxe", 0);
 		slate_refined.setHarvestLevel("pickaxe", 0);
+		flint_block.setHarvestLevel("pickaxe", 0);
+		flint_bricks.setHarvestLevel("pickaxe", 0);
+		flint_pattern_bricks.setHarvestLevel("pickaxe", 0);
+		flint_refined.setHarvestLevel("pickaxe", 0);
+		flint_tiles.setHarvestLevel("pickaxe", 0);
+		flint_chiseled.setHarvestLevel("pickaxe", 0);
+		flint_lamp_sunstone.setHarvestLevel("pickaxe", 0);
+		flint_lamp_glowstone.setHarvestLevel("pickaxe", 0);
+		flint_lamp_prismarine.setHarvestLevel("pickaxe", 0);
 		snow_refined.setHarvestLevel("shovel", 0);
 		snow_tiles.setHarvestLevel("shovel", 0);
 		snow_bricks.setHarvestLevel("shovel", 0);
