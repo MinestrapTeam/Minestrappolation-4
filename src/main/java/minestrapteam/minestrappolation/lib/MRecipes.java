@@ -21,6 +21,7 @@ public class MRecipes
 		GameRegistry.addSmelting(new ItemStack(MItems.sugar_dough), new ItemStack(MItems.sugar_cookie, 6), 0.2F);
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.chocolate_dough, 2), new Object[] { MItems.dough, new ItemStack(Items.dye, 1, 3) });
 		GameRegistry.addSmelting(new ItemStack(MItems.chocolate_dough), new ItemStack(Items.cookie, 6), 0.2F);
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.pie_crust, 1), new Object[] {MItems.sugar_dough, Items.egg, Items.bowl});
 		
 		// Minerals
 		GameRegistry.addSmelting(MBlocks.copper_ore, new ItemStack(MItems.copper_ingot), 0.5F);
@@ -244,6 +245,7 @@ public class MRecipes
 	public static void removeRecipes()
 	{
 		RecipeHelper.removeRecipeContaining(Items.bread);
+		RecipeHelper.removeRecipeContaining(Items.pumpkin_pie);
 		RecipeHelper.removeRecipeContaining(Items.cookie);
 		RecipeHelper.removeRecipeContaining(Items.diamond_axe);
 		RecipeHelper.removeRecipeContaining(Items.diamond_hoe);

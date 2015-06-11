@@ -49,6 +49,8 @@ public class AlloyRecipes
 		this.addRecipe(new ItemStack(MItems.blaze_shard, 2), new ItemStack(Items.gold_ingot, 1), new ItemStack(MItems.blazium_ingot), 1F);
 		
 		//Misc
+		this.addRecipe(new ItemStack(Blocks.pumpkin, 1), new ItemStack(MItems.pie_crust, 2), new ItemStack(Items.pumpkin_pie, 2), 0.3F);
+		this.addRecipe(new ItemStack(Items.apple, 1), new ItemStack(MItems.pie_crust, 1), new ItemStack(MItems.apple_pie, 1), 0.3F);
 		this.addRecipe(new ItemStack(Blocks.sand, 1), new ItemStack(Blocks.sand, 1), new ItemStack(MBlocks.glass_refined, 2), 0.3F);
 		this.addRecipe(new ItemStack(Items.blaze_powder, 1), new ItemStack(Items.ender_pearl, 1), new ItemStack(Items.ender_eye, 1), 1.0F);
 		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(Blocks.log, 2, OreDictionary.WILDCARD_VALUE), new ItemStack(Items.leather, 1), 0.3F);
