@@ -22,6 +22,7 @@ import net.minecraft.util.EnumWorldBlockLayer;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.oredict.OreDictionary;
 
 public class BlockFrostGenerator extends MBlock
 {
@@ -39,39 +40,44 @@ public class BlockFrostGenerator extends MBlock
 	
 	public void createFreezeMap()
 	{
-		this.canFreeze.put(Blocks.water.getDefaultState(), Blocks.snow.getDefaultState());
+		this.canFreeze.put(Blocks.water.getDefaultState(), Blocks.ice.getDefaultState());
 		this.canFreeze.put(Blocks.snow.getDefaultState(), MBlocks.snow_refined.getDefaultState());
 		this.canFreeze.put(MBlocks.snow_bricks.getDefaultState(), MBlocks.snow_tiles.getDefaultState());
 		this.canFreeze.put(MBlocks.snow_refined.getDefaultState(), Blocks.ice.getDefaultState());
 		this.canFreeze.put(MBlocks.snow_tiles.getDefaultState(), Blocks.ice.getDefaultState());
 		this.canFreeze.put(Blocks.ice.getDefaultState(), Blocks.packed_ice.getDefaultState());
+		for(int i = 0 ; i < 16 ; i++)
+		{
+			if (i < 14)
+				this.canFreeze.put(Blocks.snow_layer.getStateFromMeta(i), Blocks.snow_layer.getStateFromMeta(i + 1));
+			else
+				this.canFreeze.put(Blocks.snow_layer.getStateFromMeta(15), Blocks.snow.getDefaultState());
+		}
 		
 		this.canFreeze.put(Blocks.fire.getDefaultState(), Blocks.air.getDefaultState());
 		this.canFreeze.put(Blocks.lava.getDefaultState(), Blocks.obsidian.getDefaultState());
 		
-		this.canFreeze.put(Blocks.tallgrass.getStateFromMeta(BlockTallGrass.EnumType.GRASS.getMeta()), Blocks.deadbush.getDefaultState());
-		this.canFreeze.put(Blocks.tallgrass.getStateFromMeta(BlockTallGrass.EnumType.FERN.getMeta()), Blocks.deadbush.getDefaultState());
-		this.canFreeze.put(Blocks.tallgrass.getStateFromMeta(BlockTallGrass.EnumType.DEAD_BUSH.getMeta()), Blocks.deadbush.getDefaultState());
+		for(int i = 0 ; i < 16 ; i++)
+		{
+			this.canFreeze.put(Blocks.tallgrass.getStateFromMeta(i), Blocks.deadbush.getDefaultState());
+		}
 		this.canFreeze.put(Blocks.deadbush.getDefaultState(), Blocks.air.getDefaultState());
-		this.canFreeze.put(Blocks.red_flower.getStateFromMeta(BlockFlower.EnumFlowerType.ALLIUM.getMeta()), Blocks.deadbush.getDefaultState());
-		this.canFreeze.put(Blocks.red_flower.getStateFromMeta(BlockFlower.EnumFlowerType.BLUE_ORCHID.getMeta()), Blocks.deadbush.getDefaultState());
-		this.canFreeze.put(Blocks.red_flower.getStateFromMeta(BlockFlower.EnumFlowerType.HOUSTONIA.getMeta()), Blocks.deadbush.getDefaultState());
-		this.canFreeze.put(Blocks.red_flower.getStateFromMeta(BlockFlower.EnumFlowerType.ORANGE_TULIP.getMeta()), Blocks.deadbush.getDefaultState());
-		this.canFreeze.put(Blocks.red_flower.getStateFromMeta(BlockFlower.EnumFlowerType.OXEYE_DAISY.getMeta()), Blocks.deadbush.getDefaultState());
-		this.canFreeze.put(Blocks.red_flower.getStateFromMeta(BlockFlower.EnumFlowerType.PINK_TULIP.getMeta()), Blocks.deadbush.getDefaultState());
-		this.canFreeze.put(Blocks.red_flower.getStateFromMeta(BlockFlower.EnumFlowerType.POPPY.getMeta()), Blocks.deadbush.getDefaultState());
-		this.canFreeze.put(Blocks.red_flower.getStateFromMeta(BlockFlower.EnumFlowerType.WHITE_TULIP.getMeta()), Blocks.deadbush.getDefaultState());
-		this.canFreeze.put(Blocks.double_plant.getStateFromMeta(BlockDoublePlant.EnumPlantType.FERN.getMeta()), Blocks.deadbush.getDefaultState());
-		this.canFreeze.put(Blocks.double_plant.getStateFromMeta(BlockDoublePlant.EnumPlantType.GRASS.getMeta()), Blocks.deadbush.getDefaultState());
-		this.canFreeze.put(Blocks.double_plant.getStateFromMeta(BlockDoublePlant.EnumPlantType.PAEONIA.getMeta()), Blocks.deadbush.getDefaultState());
-		this.canFreeze.put(Blocks.double_plant.getStateFromMeta(BlockDoublePlant.EnumPlantType.ROSE.getMeta()), Blocks.deadbush.getDefaultState());
-		this.canFreeze.put(Blocks.double_plant.getStateFromMeta(BlockDoublePlant.EnumPlantType.SUNFLOWER.getMeta()), Blocks.deadbush.getDefaultState());
-		this.canFreeze.put(Blocks.double_plant.getStateFromMeta(BlockDoublePlant.EnumPlantType.SYRINGA.getMeta()), Blocks.deadbush.getDefaultState());
+		for(int i = 0 ; i < 16 ; i++)
+		{
+			this.canFreeze.put(Blocks.red_flower.getStateFromMeta(i), Blocks.deadbush.getDefaultState());
+		}
+		for(int i = 0 ; i < 16 ; i++)
+		{
+			this.canFreeze.put(Blocks.double_plant.getStateFromMeta(i), Blocks.deadbush.getDefaultState());
+		}
 		this.canFreeze.put(Blocks.yellow_flower.getDefaultState(), Blocks.deadbush.getDefaultState());
 		this.canFreeze.put(Blocks.red_mushroom.getDefaultState(), Blocks.air.getDefaultState());
 		this.canFreeze.put(Blocks.brown_mushroom.getDefaultState(), Blocks.air.getDefaultState());
 		this.canFreeze.put(Blocks.reeds.getDefaultState(), Blocks.air.getDefaultState());
-		this.canFreeze.put(Blocks.vine.getDefaultState(), Blocks.air.getDefaultState());
+		for(int i = 0 ; i < 16 ; i++)
+		{
+			this.canFreeze.put(Blocks.vine.getStateFromMeta(i), Blocks.air.getDefaultState());
+		}
 		this.canFreeze.put(Blocks.sapling.getStateFromMeta(BlockPlanks.EnumType.ACACIA.getMetadata()), Blocks.deadbush.getDefaultState());
 		this.canFreeze.put(Blocks.sapling.getStateFromMeta(BlockPlanks.EnumType.OAK.getMetadata()), MBlocks.ministrapp_sapling.getStateFromMeta(MWoodType.FROZEN.getMetadata()));
 		this.canFreeze.put(Blocks.sapling.getStateFromMeta(BlockPlanks.EnumType.DARK_OAK.getMetadata()), MBlocks.ministrapp_sapling.getStateFromMeta(MWoodType.FROZEN.getMetadata()));
@@ -79,8 +85,14 @@ public class BlockFrostGenerator extends MBlock
 		this.canFreeze.put(Blocks.sapling.getStateFromMeta(BlockPlanks.EnumType.JUNGLE.getMetadata()), Blocks.deadbush.getDefaultState());
 		this.canFreeze.put(Blocks.sapling.getStateFromMeta(BlockPlanks.EnumType.BIRCH.getMetadata()), Blocks.deadbush.getDefaultState());
 		this.canFreeze.put(Blocks.cactus.getDefaultState(), Blocks.snow.getDefaultState());
-		this.canFreeze.put(Blocks.lit_pumpkin.getDefaultState(), Blocks.pumpkin.getDefaultState());
-		this.canFreeze.put(Blocks.pumpkin.getDefaultState(), Blocks.snow.getDefaultState());
+		this.canFreeze.put(Blocks.lit_pumpkin.getStateFromMeta(0), Blocks.pumpkin.getStateFromMeta(0));
+		this.canFreeze.put(Blocks.lit_pumpkin.getStateFromMeta(1), Blocks.pumpkin.getStateFromMeta(1));
+		this.canFreeze.put(Blocks.lit_pumpkin.getStateFromMeta(2), Blocks.pumpkin.getStateFromMeta(2));
+		this.canFreeze.put(Blocks.lit_pumpkin.getStateFromMeta(3), Blocks.pumpkin.getStateFromMeta(3));
+		for(int i = 0 ; i < 16 ; i++)
+		{
+			this.canFreeze.put(Blocks.pumpkin.getStateFromMeta(i), Blocks.snow.getDefaultState());
+		}
 		this.canFreeze.put(Blocks.melon_block.getDefaultState(), Blocks.snow.getDefaultState());
 		
 		this.canFreeze.put(Blocks.log.getStateFromMeta(BlockPlanks.EnumType.OAK.getMetadata()), MBlocks.ministrapp_log.getStateFromMeta(MWoodType.FROZEN.getMetadata()));
@@ -90,8 +102,14 @@ public class BlockFrostGenerator extends MBlock
 		this.canFreeze.put(Blocks.leaves.getStateFromMeta(BlockPlanks.EnumType.JUNGLE.getMetadata()), MBlocks.dead_branch.getDefaultState());
 		this.canFreeze.put(Blocks.leaves2.getStateFromMeta(BlockPlanks.EnumType.OAK.getMetadata()), MBlocks.dead_branch.getDefaultState());
 		this.canFreeze.put(Blocks.leaves2.getStateFromMeta(BlockPlanks.EnumType.SPRUCE.getMetadata()), MBlocks.ministrapp_leaves.getStateFromMeta(MWoodType.FROZEN.getMetadata()));
-		this.canFreeze.put(Blocks.red_mushroom_block.getDefaultState(), Blocks.snow.getDefaultState());
-		this.canFreeze.put(Blocks.brown_mushroom_block.getDefaultState(), Blocks.snow.getDefaultState());
+		for(int i = 0 ; i < 16 ; i++)
+		{
+			this.canFreeze.put(Blocks.red_mushroom_block.getStateFromMeta(i), Blocks.snow.getDefaultState());
+		}
+		for(int i = 0 ; i < 16 ; i++)
+		{
+			this.canFreeze.put(Blocks.brown_mushroom_block.getStateFromMeta(i), Blocks.snow.getDefaultState());
+		}
 		
 		this.canFreeze.put(Blocks.sand.getDefaultState(), MBlocks.cold_sand.getDefaultState());
 		this.canFreeze.put(Blocks.sand.getStateFromMeta(BlockSand.EnumType.RED_SAND.getMetadata()), MBlocks.cold_sand.getStateFromMeta(BlockSand.EnumType.RED_SAND.getMetadata()));
@@ -100,7 +118,10 @@ public class BlockFrostGenerator extends MBlock
 		this.canFreeze.put(Blocks.dirt.getStateFromMeta(BlockDirt.DirtType.DIRT.getMetadata()), MBlocks.dirt_permafrost.getDefaultState());
 		this.canFreeze.put(Blocks.dirt.getStateFromMeta(BlockDirt.DirtType.COARSE_DIRT.getMetadata()), MBlocks.dirt_permafrost.getDefaultState());
 		this.canFreeze.put(Blocks.dirt.getStateFromMeta(BlockDirt.DirtType.PODZOL.getMetadata()), MBlocks.lichen_permafrost.getDefaultState());
-		this.canFreeze.put(Blocks.farmland.getDefaultState(), MBlocks.dirt_permafrost.getDefaultState());
+		for(int i = 0 ; i < 16 ; i++)
+		{
+			this.canFreeze.put(Blocks.farmland.getStateFromMeta(i), MBlocks.dirt_permafrost.getDefaultState());
+		}
 		
 		this.canFreeze.put(Blocks.sponge.getStateFromMeta(1), Blocks.snow.getDefaultState());
 	}
@@ -121,12 +142,15 @@ public class BlockFrostGenerator extends MBlock
 			{
 				for (int y = -this.range; y < this.range; y++)
 				{
-					for (int z = -this.range; z < this.range; z++)
+					for (int z = (int) (-this.range - (this.range - (Math.sqrt((this.range * this.range) - ((this.range - Math.abs(x)) * (this.range - Math.abs(x))))))); z < (int) (this.range + (this.range - (Math.sqrt((this.range * this.range) - ((this.range - Math.abs(x)) * (this.range - Math.abs(x))))))); z++)
 					{
 						int s = rand.nextInt(500);
-						if (s < 1 && world.getBlockState(pos.add(x, 0, z)) == Blocks.air.getDefaultState() && world.getBlockState(pos.add(x, -1, z)) != Blocks.air.getDefaultState())
+						for (int i = -this.range ; i < this.range ; i++)
 						{
-							world.setBlockState(pos.add(x, 0, z), Blocks.snow_layer.getDefaultState(), 2);
+							if (s < 1 && world.getBlockState(pos.add(x, i, z)) == Blocks.air.getDefaultState() && world.getBlockState(pos.add(x,i-1, z)) != Blocks.air.getDefaultState() && world.getBlockState(pos.add(x,i-1,z)) != Blocks.snow_layer.getStateFromMeta(0) && world.getBlockState(pos.add(x,i-1,z)) != Blocks.snow_layer.getStateFromMeta(1) && world.getBlockState(pos.add(x,i-1,z)) != Blocks.snow_layer.getStateFromMeta(2) && world.getBlockState(pos.add(x,i-1,z)) != Blocks.snow_layer.getStateFromMeta(3) && world.getBlockState(pos.add(x,i-1,z)) != Blocks.snow_layer.getStateFromMeta(4) && world.getBlockState(pos.add(x,i-1,z)) != Blocks.snow_layer.getStateFromMeta(5) && world.getBlockState(pos.add(x,i-1,z)) != Blocks.snow_layer.getStateFromMeta(6) && world.getBlockState(pos.add(x,i-1,z)) != Blocks.snow_layer.getStateFromMeta(7) && world.getBlockState(pos.add(x,i-1,z)) != Blocks.snow_layer.getStateFromMeta(8) && world.getBlockState(pos.add(x,i-1,z)) != Blocks.snow_layer.getStateFromMeta(9) && world.getBlockState(pos.add(x,i-1,z)) != Blocks.snow_layer.getStateFromMeta(10) && world.getBlockState(pos.add(x,i-1,z)) != Blocks.snow_layer.getStateFromMeta(11) && world.getBlockState(pos.add(x,i-1,z)) != Blocks.snow_layer.getStateFromMeta(12) && world.getBlockState(pos.add(x,i-1,z)) != Blocks.snow_layer.getStateFromMeta(13) && world.getBlockState(pos.add(x,i-1,z)) != Blocks.snow_layer.getStateFromMeta(14) && world.getBlockState(pos.add(x,i-1,z)) != Blocks.snow_layer.getStateFromMeta(15))
+							{
+								world.setBlockState(pos.add(x, i, z), Blocks.snow_layer.getDefaultState(), 2);
+							}
 						}
 						
 						if (this.canFreeze.containsKey(world.getBlockState(pos.add(x, y, z))))

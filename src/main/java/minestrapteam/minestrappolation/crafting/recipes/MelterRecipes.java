@@ -71,6 +71,11 @@ public class MelterRecipes
 		this.addRecipe(MBlocks.mossy_bricks, new ItemStack(Items.lava_bucket), 0.5F);
 		this.addRecipe(MBlocks.cracked_bricks, new ItemStack(Items.lava_bucket), 0.5F);
 		this.addRecipe(MBlocks.pattern_bricks, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.refined, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.tiles, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.lamp_glowstone, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.lamp_prismarine, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.lamp_sunstone, new ItemStack(Items.lava_bucket), 0.5F);
 		this.addRecipe(MBlocks.slate, new ItemStack(Items.lava_bucket), 0.5F);
 		this.addRecipe(MBlocks.flint_block, new ItemStack(Items.lava_bucket), 0.7F);
 		this.addRecipe(MBlocks.stonecutter, new ItemStack(Items.lava_bucket), 0.6F);
