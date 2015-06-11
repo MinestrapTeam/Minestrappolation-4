@@ -77,14 +77,14 @@ public class MGenHandler implements IWorldGenerator
 		BiomeGenBase biome = chunk.getBiome(pos, chunkManager);
 		
 		this.generateOre(MBlocks.copper_ore, world, rand, x1, z1, 3, 12, 20, 15, 100, BlockHelper.forBlock(Blocks.stone));
-		this.generateOre(MBlocks.tin_ore, world, rand, x1, z1, 3, 12, 20, 15, 100, BlockHelper.forBlock(Blocks.stone));
+		this.generateOre(MBlocks.tin_ore, world, rand, x1, z1, 3, 12, 24, 15, 100, BlockHelper.forBlock(Blocks.stone));
 		this.generateOre(MBlocks.meurodite_ore, world, rand, x1, z1, 1, 9, 10, 1, 32, BlockHelper.forBlock(Blocks.stone));
 		this.generateOre(MBlocks.sunstone_ore, world, rand, x1, z1, 2, 4, 20, 1, 200, BlockHelper.forBlock(Blocks.stone));
 		
 		this.generateOre(MBlocks.plutonium_ore, world, rand, x1, z1, 1, 4, 15, 1, 32, BlockHelper.forBlock(Blocks.stone));
 		this.generateOre(MBlocks.uranium_ore, world, rand, x1, z1, 1, 4, 15, 1, 32, BlockHelper.forBlock(Blocks.stone));
 		this.generateOre(MBlocks.radiant_ore, world, rand, x1, z1, 1, 4, 10, 15, 128, BlockHelper.forBlock(Blocks.stone));
-		this.generateOre(MBlocks.titanium_ore, world, rand, x1, z1, 1, 3, 8, 1, 10, BlockHelper.forBlock(Blocks.stone));
+		this.generateOre(MBlocks.titanium_ore, world, rand, x1, z1, 1, 4, 12, 1, 10, BlockHelper.forBlock(Blocks.stone));
 		this.generateOre(MBlocks.slate, world, rand, x1, z1, 10, 33, 18, 0, 80, BlockHelper.forBlock(Blocks.stone));
 		this.generateBoulder(world, rand, x1, z1);
 		
@@ -296,6 +296,51 @@ public class MGenHandler implements IWorldGenerator
 							if (biome.temperature >= 1.0F || biome.temperature < 0.4F || biome.getTempCategory() == TempCategory.OCEAN)
 							{
 								chunk.setBlockState(subpos2, MBlocks.mossy.getStateFromMeta(oreMeta));
+							}
+						}
+					}
+					else if (block == Blocks.stonebrick.getStateFromMeta(0))
+					{
+						if (y < deepStoneDepth)
+						{
+							chunk.setBlockState(subpos2, MBlocks.biome_bricks.getStateFromMeta(deepOreMeta));
+							
+						}
+						else
+						{
+							if (biome.temperature >= 1.0F || biome.temperature < 0.4F || biome.getTempCategory() == TempCategory.OCEAN)
+							{
+								chunk.setBlockState(subpos2, MBlocks.biome_bricks.getStateFromMeta(oreMeta));
+							}
+						}
+					}
+					else if (block == Blocks.stonebrick.getStateFromMeta(1))
+					{
+						if (y < deepStoneDepth)
+						{
+							chunk.setBlockState(subpos2, MBlocks.cracked_bricks.getStateFromMeta(deepOreMeta));
+							
+						}
+						else
+						{
+							if (biome.temperature >= 1.0F || biome.temperature < 0.4F || biome.getTempCategory() == TempCategory.OCEAN)
+							{
+								chunk.setBlockState(subpos2, MBlocks.cracked_bricks.getStateFromMeta(oreMeta));
+							}
+						}
+					}
+					else if (block == Blocks.stonebrick.getStateFromMeta(2))
+					{
+						if (y < deepStoneDepth)
+						{
+							chunk.setBlockState(subpos2, MBlocks.mossy_bricks.getStateFromMeta(deepOreMeta));
+							
+						}
+						else
+						{
+							if (biome.temperature >= 1.0F || biome.temperature < 0.4F || biome.getTempCategory() == TempCategory.OCEAN)
+							{
+								chunk.setBlockState(subpos2, MBlocks.mossy_bricks.getStateFromMeta(oreMeta));
 							}
 						}
 					}

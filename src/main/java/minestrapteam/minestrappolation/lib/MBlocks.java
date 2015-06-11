@@ -7,28 +7,34 @@ import minestrapteam.minestrappolation.block.BlockBiomeBricks;
 import minestrapteam.minestrappolation.block.BlockBlazium;
 import minestrapteam.minestrappolation.block.BlockBoulder;
 import minestrapteam.minestrappolation.block.BlockChiseled;
+import minestrapteam.minestrappolation.block.BlockCrackedBricks;
 import minestrapteam.minestrappolation.block.BlockCrate;
 import minestrapteam.minestrappolation.block.BlockCrusher;
 import minestrapteam.minestrappolation.block.BlockDeadBranch;
 import minestrapteam.minestrappolation.block.BlockFrostGenerator;
 import minestrapteam.minestrappolation.block.BlockGodstone;
 import minestrapteam.minestrappolation.block.BlockInvincium;
+import minestrapteam.minestrappolation.block.BlockLamp;
 import minestrapteam.minestrappolation.block.BlockMDoor;
 import minestrapteam.minestrappolation.block.BlockMFalling;
 import minestrapteam.minestrappolation.block.BlockMPane;
 import minestrapteam.minestrappolation.block.BlockMSand;
 import minestrapteam.minestrappolation.block.BlockMStorage;
 import minestrapteam.minestrappolation.block.BlockMelter;
+import minestrapteam.minestrappolation.block.BlockMossyBricks;
 import minestrapteam.minestrappolation.block.BlockMossyCobble;
+import minestrapteam.minestrappolation.block.BlockPatternBricks;
 import minestrapteam.minestrappolation.block.BlockPermaFrost;
 import minestrapteam.minestrappolation.block.BlockPermaFrostDirt;
 import minestrapteam.minestrappolation.block.BlockRadationMineral;
 import minestrapteam.minestrappolation.block.BlockRadiationInsulated;
+import minestrapteam.minestrappolation.block.BlockRefined;
 import minestrapteam.minestrappolation.block.BlockRoads;
 import minestrapteam.minestrappolation.block.BlockSawmill;
 import minestrapteam.minestrappolation.block.BlockSoul;
 import minestrapteam.minestrappolation.block.BlockStoneCutter;
 import minestrapteam.minestrappolation.block.BlockSunstoneBlock;
+import minestrapteam.minestrappolation.block.BlockTiles;
 import minestrapteam.minestrappolation.block.BlockTransparent;
 import minestrapteam.minestrappolation.block.MBlock;
 import minestrapteam.minestrappolation.block.MBlockLeaves;
@@ -64,13 +70,21 @@ import minestrapteam.minestrappolation.enumtypes.MWoodType;
 import minestrapteam.minestrappolation.item.ItemBlockBiomeBricks;
 import minestrapteam.minestrappolation.item.ItemBlockChiseled;
 import minestrapteam.minestrappolation.item.ItemBlockColdSand;
+import minestrapteam.minestrappolation.item.ItemBlockCrackedBricks;
+import minestrapteam.minestrappolation.item.ItemBlockLampGlowstone;
+import minestrapteam.minestrappolation.item.ItemBlockLampPrismarine;
+import minestrapteam.minestrappolation.item.ItemBlockLampSunstone;
 import minestrapteam.minestrappolation.item.ItemBlockLeaves;
 import minestrapteam.minestrappolation.item.ItemBlockLog;
+import minestrapteam.minestrappolation.item.ItemBlockMossyBricks;
 import minestrapteam.minestrappolation.item.ItemBlockMossyCobble;
+import minestrapteam.minestrappolation.item.ItemBlockPatternBricks;
 import minestrapteam.minestrappolation.item.ItemBlockPermaFrost;
 import minestrapteam.minestrappolation.item.ItemBlockPlanks;
+import minestrapteam.minestrappolation.item.ItemBlockRefined;
 import minestrapteam.minestrappolation.item.ItemBlockRoads;
 import minestrapteam.minestrappolation.item.ItemBlockSapling;
+import minestrapteam.minestrappolation.item.ItemBlockTiles;
 import minestrapteam.minestrappolation.item.ItemMDoor;
 import minestrapteam.minestrappolation.item.BiomeItems.ItemBlockBiomeCoal;
 import minestrapteam.minestrappolation.item.BiomeItems.ItemBlockBiomeCobble;
@@ -137,6 +151,14 @@ public class MBlocks
 	public static Block	roads;
 	public static Block chiseled;
 	public static Block mossy;
+	public static Block mossy_bricks;
+	public static Block cracked_bricks;
+	public static Block pattern_bricks;
+	public static Block refined;
+	public static Block tiles;
+	public static Block lamp_sunstone;
+	public static Block lamp_glowstone;
+	public static Block lamp_prismarine;
 	
 	public static Block	cold_sand;
 	public static Block	lichen_permafrost;
@@ -314,8 +336,16 @@ public class MBlocks
 		meat_block = new BlockMStorage(Material.clay, MapColor.pinkColor).setHardness(0.8F).setStepSound(Block.SLIME_SOUND).setUnlocalizedName("meat_block").setCreativeTab(Minestrappolation.tabMFood);
 		
 		roads = new BlockRoads(Material.rock, MapColor.blackColor).setUnlocalizedName("roads").setCreativeTab(Minestrappolation.tabMBuilding);
-		chiseled = new BlockChiseled(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_chiseled");
-		mossy = new BlockMossyCobble(Material.rock, MapColor.grayColor).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_mossy");
+		chiseled = new BlockChiseled(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_chiseled");
+		mossy = new BlockMossyCobble(Material.rock, MapColor.stoneColor).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_mossy");
+		mossy_bricks = new BlockMossyBricks(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_mossy_bricks");
+		cracked_bricks = new BlockCrackedBricks(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_cracked_bricks");
+		pattern_bricks = new BlockPatternBricks(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_pattern_bricks");
+		refined = new BlockRefined(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_refined");
+		tiles = new BlockTiles(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_tiles");
+		lamp_sunstone = new BlockLamp(Material.rock, MapColor.stoneColor, "sunstone").setHardness(1.5F).setResistance(10.0F).setLightLevel(0.9F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_lamp_sunstone");
+		lamp_glowstone = new BlockLamp(Material.rock, MapColor.stoneColor, "glowstone").setHardness(1.5F).setResistance(10.0F).setLightLevel(1.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_lamp_glowstone");
+		lamp_prismarine = new BlockLamp(Material.rock, MapColor.stoneColor, "prismarine").setHardness(1.5F).setResistance(10.0F).setLightLevel(1.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_lamp_prismarine");
 		
 		cold_sand = new BlockMSand().setUnlocalizedName("cold_sand").setHardness(0.7F).setStepSound(Block.soundTypeSand).setCreativeTab(Minestrappolation.tabMBuilding);
 		lichen_permafrost = new BlockPermaFrost().setUnlocalizedName("permafrost").setHardness(1F).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMBuilding);
@@ -422,7 +452,7 @@ public class MBlocks
 		redwood_door_item = new ItemMDoor(redwood_door).setUnlocalizedName("redwood_door_item");
 		frozen_door_item = new ItemMDoor(frozen_door).setUnlocalizedName("frozen_oak_door_item");
 		
-		Blocks.bedrock.setHardness(10F);
+		Blocks.bedrock.setHardness(70F);
 		
 		register();
 		registerHarvestLevels();
@@ -469,6 +499,14 @@ public class MBlocks
 		register(biome_bricks, ItemBlockBiomeBricks.class);
 		register(chiseled, ItemBlockChiseled.class);
 		register(mossy, ItemBlockMossyCobble.class);
+		register(mossy_bricks, ItemBlockMossyBricks.class);
+		register(cracked_bricks, ItemBlockCrackedBricks.class);
+		register(pattern_bricks, ItemBlockPatternBricks.class);
+		register(refined, ItemBlockRefined.class);
+		register(tiles, ItemBlockTiles.class);
+		register(lamp_sunstone, ItemBlockLampSunstone.class);
+		register(lamp_glowstone, ItemBlockLampGlowstone.class);
+		register(lamp_prismarine, ItemBlockLampPrismarine.class);
 		register(deepstone_stairs);
 		register(coldstone_stairs);
 		register(redrock_stairs);
@@ -610,6 +648,14 @@ public class MBlocks
 		registerRender(roads);
 		registerRender(chiseled);
 		registerRender(mossy);
+		registerRender(mossy_bricks);
+		registerRender(cracked_bricks);
+		registerRender(pattern_bricks);
+		registerRender(refined);
+		registerRender(tiles);
+		registerRender(lamp_sunstone);
+		registerRender(lamp_glowstone);
+		registerRender(lamp_prismarine);
 		
 		registerRender(cold_sand);
 		registerRender(lichen_permafrost);
@@ -850,5 +896,54 @@ public class MBlocks
 		mossy.setHarvestLevel("pickaxe", 2, mossy.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
 		mossy.setHarvestLevel("pickaxe", 2, mossy.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
 		mossy.setHarvestLevel("pickaxe", 2, mossy.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
+		
+		// Mossy Bricks
+		mossy_bricks.setHarvestLevel("pickaxe", 2, mossy_bricks.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
+		mossy_bricks.setHarvestLevel("pickaxe", 2, mossy_bricks.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
+		mossy_bricks.setHarvestLevel("pickaxe", 2, mossy_bricks.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
+		mossy_bricks.setHarvestLevel("pickaxe", 2, mossy_bricks.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
+		mossy_bricks.setHarvestLevel("pickaxe", 2, mossy_bricks.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
+		
+		// Cracked Bricks
+		cracked_bricks.setHarvestLevel("pickaxe", 2, cracked_bricks.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
+		cracked_bricks.setHarvestLevel("pickaxe", 2, cracked_bricks.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
+		cracked_bricks.setHarvestLevel("pickaxe", 2, cracked_bricks.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
+		cracked_bricks.setHarvestLevel("pickaxe", 2, cracked_bricks.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
+		cracked_bricks.setHarvestLevel("pickaxe", 2, cracked_bricks.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
+		
+		// Refined
+		refined.setHarvestLevel("pickaxe", 2, refined.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
+		refined.setHarvestLevel("pickaxe", 2, refined.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
+		refined.setHarvestLevel("pickaxe", 2, refined.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
+		refined.setHarvestLevel("pickaxe", 2, refined.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
+		refined.setHarvestLevel("pickaxe", 2, refined.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
+		
+		// Tiles
+		tiles.setHarvestLevel("pickaxe", 2, tiles.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
+		tiles.setHarvestLevel("pickaxe", 2, tiles.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
+		tiles.setHarvestLevel("pickaxe", 2, tiles.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
+		tiles.setHarvestLevel("pickaxe", 2, tiles.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
+		tiles.setHarvestLevel("pickaxe", 2, tiles.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
+		
+		// Sunstone Lamp
+		lamp_sunstone.setHarvestLevel("pickaxe", 2, lamp_sunstone.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
+		lamp_sunstone.setHarvestLevel("pickaxe", 2, lamp_sunstone.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
+		lamp_sunstone.setHarvestLevel("pickaxe", 2, lamp_sunstone.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
+		lamp_sunstone.setHarvestLevel("pickaxe", 2, lamp_sunstone.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
+		lamp_sunstone.setHarvestLevel("pickaxe", 2, lamp_sunstone.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
+		
+		// Glowstone Lamp
+		lamp_glowstone.setHarvestLevel("pickaxe", 2, lamp_glowstone.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
+		lamp_glowstone.setHarvestLevel("pickaxe", 2, lamp_glowstone.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
+		lamp_glowstone.setHarvestLevel("pickaxe", 2, lamp_glowstone.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
+		lamp_glowstone.setHarvestLevel("pickaxe", 2, lamp_glowstone.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
+		lamp_glowstone.setHarvestLevel("pickaxe", 2, lamp_glowstone.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
+		
+		// Prismarine Lamp
+		lamp_prismarine.setHarvestLevel("pickaxe", 2, lamp_prismarine.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
+		lamp_prismarine.setHarvestLevel("pickaxe", 2, lamp_prismarine.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
+		lamp_prismarine.setHarvestLevel("pickaxe", 2, lamp_prismarine.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
+		lamp_prismarine.setHarvestLevel("pickaxe", 2, lamp_prismarine.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
+		lamp_prismarine.setHarvestLevel("pickaxe", 2, lamp_prismarine.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
 	}
 }

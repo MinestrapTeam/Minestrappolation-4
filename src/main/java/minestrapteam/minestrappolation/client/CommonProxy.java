@@ -3,9 +3,15 @@ package minestrapteam.minestrappolation.client;
 import minestrapteam.minestrappolation.Config;
 import minestrapteam.minestrappolation.block.BlockBiomeBricks;
 import minestrapteam.minestrappolation.block.BlockChiseled;
+import minestrapteam.minestrappolation.block.BlockCrackedBricks;
+import minestrapteam.minestrappolation.block.BlockLamp;
 import minestrapteam.minestrappolation.block.BlockMSand;
+import minestrapteam.minestrappolation.block.BlockMossyBricks;
 import minestrapteam.minestrappolation.block.BlockMossyCobble;
+import minestrapteam.minestrappolation.block.BlockPatternBricks;
+import minestrapteam.minestrappolation.block.BlockRefined;
 import minestrapteam.minestrappolation.block.BlockRoads;
+import minestrapteam.minestrappolation.block.BlockTiles;
 import minestrapteam.minestrappolation.block.MBlockLeaves;
 import minestrapteam.minestrappolation.block.MBlockLog;
 import minestrapteam.minestrappolation.block.MBlockPlanks;
@@ -87,6 +93,14 @@ public abstract class CommonProxy implements IGuiHandler
 		BlockRoads.preinventoryRender();
 		BlockChiseled.preinventoryRender();
 		BlockMossyCobble.preinventoryRender();
+		BlockMossyBricks.preinventoryRender();
+		BlockCrackedBricks.preinventoryRender();
+		BlockPatternBricks.preinventoryRender();
+		BlockRefined.preinventoryRender();
+		BlockTiles.preinventoryRender();
+		BlockLamp.preinventoryRender("sunstone");
+		BlockLamp.preinventoryRender("glowstone");
+		BlockLamp.preinventoryRender("prismarine");
 		MBlockLeaves.preinventoryRender();
 		MBlockSapling.preinventoryRender();
 		
@@ -130,6 +144,14 @@ public abstract class CommonProxy implements IGuiHandler
 		BlockRoads.inventoryRender();
 		BlockChiseled.inventoryRender();
 		BlockMossyCobble.inventoryRender();
+		BlockMossyBricks.inventoryRender();
+		BlockCrackedBricks.inventoryRender();
+		BlockPatternBricks.inventoryRender();
+		BlockRefined.inventoryRender();
+		BlockTiles.inventoryRender();
+		BlockLamp.inventoryRender("sunstone");
+		BlockLamp.inventoryRender("glowstone");
+		BlockLamp.inventoryRender("prismarine");
 		MBlockLeaves.inventoryRender();
 		MBlockSapling.inventoryRender();
 		

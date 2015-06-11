@@ -123,6 +123,16 @@ public class MRecipes
 		GameRegistry.addSmelting(new ItemStack(MBlocks.biome_cobble, 1, 7), new ItemStack(MBlocks.biome_stones, 1, 7), .1F);
 		GameRegistry.addSmelting(new ItemStack(MBlocks.biome_cobble, 1, 8), new ItemStack(MBlocks.biome_stones, 1, 8), .1F);
 		
+		GameRegistry.addSmelting(new ItemStack(MBlocks.biome_bricks, 1, 0), new ItemStack(MBlocks.cracked_bricks, 1, 0), .1F);
+		GameRegistry.addSmelting(new ItemStack(MBlocks.biome_bricks, 1, 1), new ItemStack(MBlocks.cracked_bricks, 1, 1), .1F);
+		GameRegistry.addSmelting(new ItemStack(MBlocks.biome_bricks, 1, 2), new ItemStack(MBlocks.cracked_bricks, 1, 2), .1F);
+		GameRegistry.addSmelting(new ItemStack(MBlocks.biome_bricks, 1, 3), new ItemStack(MBlocks.cracked_bricks, 1, 3), .1F);
+		GameRegistry.addSmelting(new ItemStack(MBlocks.biome_bricks, 1, 4), new ItemStack(MBlocks.cracked_bricks, 1, 4), .1F);
+		GameRegistry.addSmelting(new ItemStack(MBlocks.biome_bricks, 1, 5), new ItemStack(MBlocks.cracked_bricks, 1, 5), .1F);
+		GameRegistry.addSmelting(new ItemStack(MBlocks.biome_bricks, 1, 6), new ItemStack(MBlocks.cracked_bricks, 1, 6), .1F);
+		GameRegistry.addSmelting(new ItemStack(MBlocks.biome_bricks, 1, 7), new ItemStack(MBlocks.cracked_bricks, 1, 7), .1F);
+		GameRegistry.addSmelting(new ItemStack(MBlocks.biome_bricks, 1, 8), new ItemStack(MBlocks.cracked_bricks, 1, 8), .1F);
+		
 		GameRegistry.addRecipe(new ItemStack(Blocks.cobblestone, 1), new Object[] { "CC", "CC", 'C', new ItemStack(MItems.chunks, 1, 0)});
 		GameRegistry.addRecipe(new ItemStack(MBlocks.biome_cobble, 1, 1), new Object[] { "CC", "CC", 'C', new ItemStack(MItems.chunks, 1, 1)});
 		GameRegistry.addRecipe(new ItemStack(MBlocks.biome_cobble, 1, 3), new Object[] { "CC", "CC", 'C', new ItemStack(MItems.chunks, 1, 2)});

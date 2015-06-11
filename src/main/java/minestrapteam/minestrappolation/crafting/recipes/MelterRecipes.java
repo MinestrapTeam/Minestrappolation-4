@@ -67,6 +67,10 @@ public class MelterRecipes
 		this.addRecipe(MBlocks.biome_cobble, new ItemStack(Items.lava_bucket), 0.4F);
 		this.addRecipe(MBlocks.biome_bricks, new ItemStack(Items.lava_bucket), 0.5F);
 		this.addRecipe(MBlocks.chiseled, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.mossy, new ItemStack(Items.lava_bucket), 0.6F);
+		this.addRecipe(MBlocks.mossy_bricks, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.cracked_bricks, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.pattern_bricks, new ItemStack(Items.lava_bucket), 0.5F);
 		this.addRecipe(MBlocks.slate, new ItemStack(Items.lava_bucket), 0.5F);
 		this.addRecipe(MBlocks.flint_block, new ItemStack(Items.lava_bucket), 0.7F);
 		this.addRecipe(MBlocks.stonecutter, new ItemStack(Items.lava_bucket), 0.6F);
