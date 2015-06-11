@@ -29,7 +29,7 @@ public class BlockFrostGenerator extends MBlock
 	
 	public HashMap<IBlockState, IBlockState>	canFreeze	= new HashMap<IBlockState, IBlockState>();
 	
-	int											range		= 5;
+	int											range		= 8;
 	
 	public BlockFrostGenerator(Material materialIn, MapColor mapColorIn)
 	{
@@ -140,9 +140,9 @@ public class BlockFrostGenerator extends MBlock
 		{
 			for (int x = -this.range; x < this.range; x++)
 			{
-				for (int y = -this.range; y < this.range; y++)
+				for (int y = (int)(-this.range + (Math.abs(this.range) - Math.sqrt((this.range * this.range) - (x * x)))); y <= (int)(this.range - (Math.abs(this.range) - Math.sqrt((this.range * this.range) - (x * x)))); y++)
 				{
-					for (int z = (int) (-this.range - (this.range - (Math.sqrt((this.range * this.range) - ((this.range - Math.abs(x)) * (this.range - Math.abs(x))))))); z < (int) (this.range + (this.range - (Math.sqrt((this.range * this.range) - ((this.range - Math.abs(x)) * (this.range - Math.abs(x))))))); z++)
+					for (int z = (int)(-this.range + (Math.abs(this.range) - Math.sqrt((this.range * this.range) - (x * x)))); z <= (int)(this.range - (Math.abs(this.range) - Math.sqrt((this.range * this.range) - (x * x)))); z++)
 					{
 						int s = rand.nextInt(500);
 						for (int i = -this.range ; i < this.range ; i++)
