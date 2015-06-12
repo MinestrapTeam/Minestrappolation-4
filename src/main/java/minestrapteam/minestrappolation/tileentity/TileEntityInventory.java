@@ -1,6 +1,6 @@
 package minestrapteam.minestrappolation.tileentity;
 
-import minestrapteam.minestrappolation.util.MinistrappolationStackHandler;
+import minestrapteam.minestrappolation.util.MStacks;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
@@ -29,7 +29,7 @@ public abstract class TileEntityInventory extends TileEntity implements IInvento
 	
 	public boolean mergeStack(ItemStack stack, int start, int end)
 	{
-		int slotID = MinistrappolationStackHandler.mergeItemStack(this.itemStacks, start, end, stack);
+		int slotID = MStacks.mergeItemStack(this.itemStacks, start, end, stack);
 		if (slotID != -1)
 		{
 			this.onSlotChanged(slotID);
