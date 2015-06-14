@@ -16,9 +16,11 @@ import minestrapteam.minestrappolation.block.BlockGodstone;
 import minestrapteam.minestrappolation.block.BlockInvincium;
 import minestrapteam.minestrappolation.block.BlockLamp;
 import minestrapteam.minestrappolation.block.BlockMDoor;
+import minestrapteam.minestrappolation.block.BlockMDoubleSlab;
 import minestrapteam.minestrappolation.block.BlockMFalling;
 import minestrapteam.minestrappolation.block.BlockMPane;
 import minestrapteam.minestrappolation.block.BlockMSand;
+import minestrapteam.minestrappolation.block.BlockMSlab;
 import minestrapteam.minestrappolation.block.BlockMStorage;
 import minestrapteam.minestrappolation.block.BlockMelter;
 import minestrapteam.minestrappolation.block.BlockMossyBricks;
@@ -76,6 +78,7 @@ import minestrapteam.minestrappolation.item.ItemBlockLampPrismarine;
 import minestrapteam.minestrappolation.item.ItemBlockLampSunstone;
 import minestrapteam.minestrappolation.item.ItemBlockLeaves;
 import minestrapteam.minestrappolation.item.ItemBlockLog;
+import minestrapteam.minestrappolation.item.ItemBlockMSlab;
 import minestrapteam.minestrappolation.item.ItemBlockMossyBricks;
 import minestrapteam.minestrappolation.item.ItemBlockMossyCobble;
 import minestrapteam.minestrappolation.item.ItemBlockPatternBricks;
@@ -270,6 +273,9 @@ public class MBlocks
 	public static Block	glacierstone_brick_stairs;
 	public static Block	deep_redrock_brick_stairs;
 	public static Block	deep_coldstone_brick_stairs;
+	
+	public static BlockMSlab       redwood_slab;
+	public static BlockMDoubleSlab redwood_double_slab;
 	
 	// Fence
 	public static Block	redwood_fence;
@@ -466,6 +472,9 @@ public class MBlocks
 		// Misc
 		invincium = new BlockInvincium(Material.rock).setUnlocalizedName("invincium").setBlockUnbreakable().setHardness(50000F).setCreativeTab(Minestrappolation.tabMBuilding);
 		
+		redwood_slab = new BlockMSlab(Material.wood, "redwood_slab", 1, 1);
+		redwood_double_slab = new BlockMDoubleSlab(Material.wood, "redwood_double_slab", 1, 1);
+		
 		// BLOCK ITEMS
 		redwood_door_item = new ItemMDoor(redwood_door).setUnlocalizedName("redwood_door_item");
 		frozen_door_item = new ItemMDoor(frozen_door).setUnlocalizedName("frozen_oak_door_item");
@@ -636,6 +645,8 @@ public class MBlocks
 		register(crusher_active);
 		
 		register(meat_block);
+		
+		registerSlab("redwood_slab", "redwood_double_slab", redwood_slab, redwood_double_slab);
 	}
 	
 	public static void registerRenders()
@@ -988,5 +999,11 @@ public class MBlocks
 		lamp_prismarine.setHarvestLevel("pickaxe", 2, lamp_prismarine.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
 		lamp_prismarine.setHarvestLevel("pickaxe", 2, lamp_prismarine.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
 		lamp_prismarine.setHarvestLevel("pickaxe", 2, lamp_prismarine.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
+	}
+	
+	public static void registerSlab(String name, String name2, BlockMSlab one, BlockMDoubleSlab two)
+	{
+		GameRegistry.registerBlock(two, ItemBlockMSlab.class, name2, new Object[]{one, two});
+		GameRegistry.registerBlock(one, ItemBlockMSlab.class, name, new Object[]{one, two});
 	}
 }
