@@ -276,6 +276,62 @@ public class MBlocks
 	
 	public static BlockMSlab       redwood_slab;
 	public static BlockMDoubleSlab redwood_double_slab;
+	public static BlockMSlab       frozen_oak_slab;
+	public static BlockMDoubleSlab frozen_oak_double_slab;
+	public static BlockMSlab       deepstone_slab;
+	public static BlockMDoubleSlab deepstone_double_slab;
+	public static BlockMSlab       red_rock_slab;
+	public static BlockMDoubleSlab red_rock_double_slab;
+	public static BlockMSlab       deep_red_rock_slab;
+	public static BlockMDoubleSlab deep_red_rock_double_slab;
+	public static BlockMSlab       coldstone_slab;
+	public static BlockMDoubleSlab coldstone_double_slab;
+	public static BlockMSlab       deep_coldstone_slab;
+	public static BlockMDoubleSlab deep_coldstone_double_slab;
+	public static BlockMSlab       icestone_slab;
+	public static BlockMDoubleSlab icestone_double_slab;
+	public static BlockMSlab       glacierrock_slab;
+	public static BlockMDoubleSlab glacierrock_double_slab;
+	public static BlockMSlab       oceanstone_slab;
+	public static BlockMDoubleSlab oceanstone_double_slab;
+	public static BlockMSlab       poceanstone_slab;
+	public static BlockMDoubleSlab poceanstone_double_slab;
+	public static BlockMSlab       deepstone_cobble_slab;
+	public static BlockMDoubleSlab deepstone_cobble_double_slab;
+	public static BlockMSlab       red_rock_cobble_slab;
+	public static BlockMDoubleSlab red_rock_cobble_double_slab;
+	public static BlockMSlab       deep_red_rock_cobble_slab;
+	public static BlockMDoubleSlab deep_red_rock_cobble_double_slab;
+	public static BlockMSlab       coldstone_cobble_slab;
+	public static BlockMDoubleSlab coldstone_cobble_double_slab;
+	public static BlockMSlab       deep_coldstone_cobble_slab;
+	public static BlockMDoubleSlab deep_coldstone_cobble_double_slab;
+	public static BlockMSlab       icestone_cobble_slab;
+	public static BlockMDoubleSlab icestone_cobble_double_slab;
+	public static BlockMSlab       glacierrock_cobble_slab;
+	public static BlockMDoubleSlab glacierrock_cobble_double_slab;
+	public static BlockMSlab       oceanstone_cobble_slab;
+	public static BlockMDoubleSlab oceanstone_cobble_double_slab;
+	public static BlockMSlab       poceanstone_cobble_slab;
+	public static BlockMDoubleSlab poceanstone_cobble_double_slab;
+	public static BlockMSlab       deepstone_brick_slab;
+	public static BlockMDoubleSlab deepstone_brick_double_slab;
+	public static BlockMSlab       red_rock_brick_slab;
+	public static BlockMDoubleSlab red_rock_brick_double_slab;
+	public static BlockMSlab       deep_red_rock_brick_slab;
+	public static BlockMDoubleSlab deep_red_rock_brick_double_slab;
+	public static BlockMSlab       coldstone_brick_slab;
+	public static BlockMDoubleSlab coldstone_brick_double_slab;
+	public static BlockMSlab       deep_coldstone_brick_slab;
+	public static BlockMDoubleSlab deep_coldstone_brick_double_slab;
+	public static BlockMSlab       icestone_brick_slab;
+	public static BlockMDoubleSlab icestone_brick_double_slab;
+	public static BlockMSlab       glacierrock_brick_slab;
+	public static BlockMDoubleSlab glacierrock_brick_double_slab;
+	public static BlockMSlab       oceanstone_brick_slab;
+	public static BlockMDoubleSlab oceanstone_brick_double_slab;
+	public static BlockMSlab       poceanstone_brick_slab;
+	public static BlockMDoubleSlab poceanstone_brick_double_slab;
 	
 	// Fence
 	public static Block	redwood_fence;
@@ -435,26 +491,26 @@ public class MBlocks
 		frost_generator = new BlockFrostGenerator(Material.rock, MapColor.iceColor).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("frost_generator");
 		
 		// Stairs
-		redwood_stairs = new MBlockStairs(ministrapp_planks.getStateFromMeta(MWoodType.REDWOOD.getMetadata())).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("redwood_stairs");
-		frozen_oak_stairs = new MBlockStairs(ministrapp_planks.getStateFromMeta(MWoodType.FROZEN.getMetadata())).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("frozen_oak_stairs");
-		deepstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata())).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("deepstone_stairs");
-		coldstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.COLDSTONE.getMetadata())).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("coldstone_stairs");
-		redrock_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.REDROCK.getMetadata())).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("redrock_stairs");
-		oceanstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.OCEANSTONE.getMetadata())).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("oceanstone_stairs");
-		icestone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.ICESTONE.getMetadata())).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("icestone_stairs");
-		poceanstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata())).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("poceanstone_stairs");
-		glacierstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata())).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("glacierstone_stairs");
-		deep_redrock_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata())).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("deep_redrock_stairs");
-		deep_coldstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata())).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("deep_coldstone_stairs");
-		deepstone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata())).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("deepstone_brick_stairs");
-		coldstone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.COLDSTONE.getMetadata())).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("coldstone_brick_stairs");
-		redrock_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.REDROCK.getMetadata())).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("redrock_brick_stairs");
-		oceanstone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.OCEANSTONE.getMetadata())).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("oceanstone_brick_stairs");
-		icestone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.ICESTONE.getMetadata())).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("icestone_brick_stairs");
-		poceanstone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata())).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("poceanstone_brick_stairs");
-		glacierstone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata())).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("glacierstone_brick_stairs");
-		deep_redrock_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata())).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("deep_redrock_brick_stairs");
-		deep_coldstone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata())).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("deep_coldstone_brick_stairs");
+		redwood_stairs = new MBlockStairs(ministrapp_planks.getStateFromMeta(MWoodType.REDWOOD.getMetadata()), 300).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("redwood_stairs");
+		frozen_oak_stairs = new MBlockStairs(ministrapp_planks.getStateFromMeta(MWoodType.FROZEN.getMetadata()), 300).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("frozen_oak_stairs");
+		deepstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()), 0).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("deepstone_stairs");
+		coldstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.COLDSTONE.getMetadata()), 0).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("coldstone_stairs");
+		redrock_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.REDROCK.getMetadata()), 0).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("redrock_stairs");
+		oceanstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.OCEANSTONE.getMetadata()), 0).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("oceanstone_stairs");
+		icestone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.ICESTONE.getMetadata()), 0).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("icestone_stairs");
+		poceanstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()), 0).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("poceanstone_stairs");
+		glacierstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()), 0).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("glacierstone_stairs");
+		deep_redrock_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()), 0).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("deep_redrock_stairs");
+		deep_coldstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()), 0).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("deep_coldstone_stairs");
+		deepstone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("deepstone_brick_stairs");
+		coldstone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.COLDSTONE.getMetadata()), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("coldstone_brick_stairs");
+		redrock_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.REDROCK.getMetadata()), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("redrock_brick_stairs");
+		oceanstone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.OCEANSTONE.getMetadata()), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("oceanstone_brick_stairs");
+		icestone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.ICESTONE.getMetadata()), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("icestone_brick_stairs");
+		poceanstone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("poceanstone_brick_stairs");
+		glacierstone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("glacierstone_brick_stairs");
+		deep_redrock_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("deep_redrock_brick_stairs");
+		deep_coldstone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("deep_coldstone_brick_stairs");
 		
 		// Fence
 		redwood_fence = new BlockFence(Material.wood).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("redwood_fence");
@@ -463,17 +519,78 @@ public class MBlocks
 		frozen_oak_fence_gate = new BlockFenceGate().setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("frozen_oak_fence_gate");
 		
 		// Pane
-		refined_glass_pane = new BlockMPane(Material.glass, false).setUnlocalizedName("refined_pane");
-		bricked_glass_pane = new BlockMPane(Material.glass, false).setUnlocalizedName("bricked_pane");
-		tiled_glass_pane = new BlockMPane(Material.glass, false).setUnlocalizedName("tiled_pane");
-		framed_glass_pane = new BlockMPane(Material.iron, true).setUnlocalizedName("framed_pane");
-		steel_mesh = new BlockMPane(Material.iron, true).setUnlocalizedName("steel_mesh");
+		refined_glass_pane = new BlockMPane(Material.glass, false).setHardness(0.3F).setUnlocalizedName("refined_pane");
+		bricked_glass_pane = new BlockMPane(Material.glass, false).setHardness(0.3F).setUnlocalizedName("bricked_pane");
+		tiled_glass_pane = new BlockMPane(Material.glass, false).setHardness(0.3F).setUnlocalizedName("tiled_pane");
+		framed_glass_pane = new BlockMPane(Material.iron, true).setHardness(3.0F).setUnlocalizedName("framed_pane");
+		steel_mesh = new BlockMPane(Material.iron, true).setHardness(5.0F).setUnlocalizedName("steel_mesh");
 		
 		// Misc
 		invincium = new BlockInvincium(Material.rock).setUnlocalizedName("invincium").setBlockUnbreakable().setHardness(50000F).setCreativeTab(Minestrappolation.tabMBuilding);
 		
-		redwood_slab = new BlockMSlab(Material.wood, "redwood_slab", 1, 1);
-		redwood_double_slab = new BlockMDoubleSlab(Material.wood, "redwood_double_slab", 1, 1);
+		//Wood Slabs
+		redwood_slab = new BlockMSlab(Material.wood, "redwood_slab", 2F, 5F, "axe", 0, 300);
+		redwood_double_slab = new BlockMDoubleSlab(Material.wood, "redwood_double_slab", 2F, 5F, "axe", 0, 300);
+		frozen_oak_slab = new BlockMSlab(Material.wood, "frozen_oak_slab", 2F, 5F, "axe", 0, 300);
+		frozen_oak_double_slab = new BlockMDoubleSlab(Material.wood, "frozen_oak_double_slab", 2F, 5F, "axe", 0, 300);
+		
+		//Stone Slabs
+		deepstone_slab = new BlockMSlab(Material.rock, "deepstone_slab", 2F, 10F, "pickaxe", 2, 0);
+		deepstone_double_slab = new BlockMDoubleSlab(Material.rock, "deepstone_double_slab", 2F, 10F, "pickaxe", 2, 0);
+		red_rock_slab = new BlockMSlab(Material.rock, "red_rock_slab", 2F, 10F, "pickaxe", 0, 0);
+		red_rock_double_slab = new BlockMDoubleSlab(Material.rock, "red_rock_double_slab", 2F, 10F, "pickaxe", 0, 0);
+		deep_red_rock_slab = new BlockMSlab(Material.rock, "deep_red_rock_slab", 2F, 10F, "pickaxe", 2, 0);
+		deep_red_rock_double_slab = new BlockMDoubleSlab(Material.rock, "deep_red_rock_double_slab", 2F, 10F, "pickaxe", 2, 0);
+		coldstone_slab = new BlockMSlab(Material.rock, "coldstone_slab", 2F, 10F, "pickaxe", 0, 0);
+		coldstone_double_slab = new BlockMDoubleSlab(Material.rock, "coldstone_double_slab", 2F, 10F, "pickaxe", 0, 0);
+		deep_coldstone_slab = new BlockMSlab(Material.rock, "deep_coldstone_slab", 2F, 10F, "pickaxe", 2, 0);
+		deep_coldstone_double_slab = new BlockMDoubleSlab(Material.rock, "deep_coldstone_double_slab", 2F, 10F, "pickaxe", 2, 0);
+		icestone_slab = new BlockMSlab(Material.rock, "icestone_slab", 2F, 10F, "pickaxe", 0, 0);
+		icestone_double_slab = new BlockMDoubleSlab(Material.rock, "icestone_double_slab", 2F, 10F, "pickaxe", 0, 0);
+		glacierrock_slab = new BlockMSlab(Material.rock, "glacierrock_slab", 2F, 10F, "pickaxe", 2, 0);
+		glacierrock_double_slab = new BlockMDoubleSlab(Material.rock, "glacierrock_double_slab", 2F, 10F, "pickaxe", 2, 0);
+		oceanstone_slab = new BlockMSlab(Material.rock, "oceanstone_slab", 2F, 10F, "pickaxe", 0, 0);
+		oceanstone_double_slab = new BlockMDoubleSlab(Material.rock, "oceanstone_double_slab", 2F, 10F, "pickaxe", 0, 0);
+		poceanstone_slab = new BlockMSlab(Material.rock, "poceanstone_slab", 2F, 10F, "pickaxe", 2, 0);
+		poceanstone_double_slab = new BlockMDoubleSlab(Material.rock, "poceanstone_double_slab", 2F, 10F, "pickaxe", 2, 0);
+		
+		deepstone_cobble_slab = new BlockMSlab(Material.rock, "deepstone_cobble_slab", 2F, 10F, "pickaxe", 2, 0);
+		deepstone_cobble_double_slab = new BlockMDoubleSlab(Material.rock, "deepstone_cobble_double_slab", 2F, 10F, "pickaxe", 2, 0);
+		red_rock_cobble_slab = new BlockMSlab(Material.rock, "red_rock_cobble_slab", 2F, 10F, "pickaxe", 0, 0);
+		red_rock_cobble_double_slab = new BlockMDoubleSlab(Material.rock, "red_rock_cobble_double_slab", 2F, 10F, "pickaxe", 0, 0);
+		deep_red_rock_cobble_slab = new BlockMSlab(Material.rock, "deep_red_rock_cobble_slab", 2F, 10F, "pickaxe", 2, 0);
+		deep_red_rock_cobble_double_slab = new BlockMDoubleSlab(Material.rock, "deep_red_rock_cobble_double_slab", 2F, 10F, "pickaxe", 2, 0);
+		coldstone_cobble_slab = new BlockMSlab(Material.rock, "coldstone_cobble_slab", 2F, 10F, "pickaxe", 0, 0);
+		coldstone_cobble_double_slab = new BlockMDoubleSlab(Material.rock, "coldstone_cobble_double_slab", 2F, 10F, "pickaxe", 0, 0);
+		deep_coldstone_cobble_slab = new BlockMSlab(Material.rock, "deep_coldstone_cobble_slab", 2F, 10F, "pickaxe", 2, 0);
+		deep_coldstone_cobble_double_slab = new BlockMDoubleSlab(Material.rock, "deep_coldstone_cobble_double_slab", 2F, 10F, "pickaxe", 2, 0);
+		icestone_cobble_slab = new BlockMSlab(Material.rock, "icestone_cobble_slab", 2F, 10F, "pickaxe", 0, 0);
+		icestone_cobble_double_slab = new BlockMDoubleSlab(Material.rock, "icestone_cobble_double_slab", 2F, 10F, "pickaxe", 0, 0);
+		glacierrock_cobble_slab = new BlockMSlab(Material.rock, "glacierrock_cobble_slab", 2F, 10F, "pickaxe", 2, 0);
+		glacierrock_cobble_double_slab = new BlockMDoubleSlab(Material.rock, "glacierrock_cobble_double_slab", 2F, 10F, "pickaxe", 2, 0);
+		oceanstone_cobble_slab = new BlockMSlab(Material.rock, "oceanstone_cobble_slab", 2F, 10F, "pickaxe", 0, 0);
+		oceanstone_cobble_double_slab = new BlockMDoubleSlab(Material.rock, "oceanstone_cobble_double_slab", 2F, 10F, "pickaxe", 0, 0);
+		poceanstone_cobble_slab = new BlockMSlab(Material.rock, "poceanstone_cobble_slab", 2F, 10F, "pickaxe", 2, 0);
+		poceanstone_cobble_double_slab = new BlockMDoubleSlab(Material.rock, "poceanstone_cobble_double_slab", 2F, 10F, "pickaxe", 2, 0);
+		
+		deepstone_brick_slab = new BlockMSlab(Material.rock, "deepstone_brick_slab", 2F, 10F, "pickaxe", 2, 0);
+		deepstone_brick_double_slab = new BlockMDoubleSlab(Material.rock, "deepstone_brick_double_slab", 2F, 10F, "pickaxe", 2, 0);
+		red_rock_brick_slab = new BlockMSlab(Material.rock, "red_rock_brick_slab", 2F, 10F, "pickaxe", 0, 0);
+		red_rock_brick_double_slab = new BlockMDoubleSlab(Material.rock, "red_rock_brick_double_slab", 2F, 10F, "pickaxe", 0, 0);
+		deep_red_rock_brick_slab = new BlockMSlab(Material.rock, "deep_red_rock_brick_slab", 2F, 10F, "pickaxe", 2, 0);
+		deep_red_rock_brick_double_slab = new BlockMDoubleSlab(Material.rock, "deep_red_rock_brick_double_slab", 2F, 10F, "pickaxe", 2, 0);
+		coldstone_brick_slab = new BlockMSlab(Material.rock, "coldstone_brick_slab", 2F, 10F, "pickaxe", 0, 0);
+		coldstone_brick_double_slab = new BlockMDoubleSlab(Material.rock, "coldstone_brick_double_slab", 2F, 10F, "pickaxe", 0, 0);
+		deep_coldstone_brick_slab = new BlockMSlab(Material.rock, "deep_coldstone_brick_slab", 2F, 10F, "pickaxe", 2, 0);
+		deep_coldstone_brick_double_slab = new BlockMDoubleSlab(Material.rock, "deep_coldstone_brick_double_slab", 2F, 10F, "pickaxe", 2, 0);
+		icestone_brick_slab = new BlockMSlab(Material.rock, "icestone_brick_slab", 2F, 10F, "pickaxe", 0, 0);
+		icestone_brick_double_slab = new BlockMDoubleSlab(Material.rock, "icestone_brick_double_slab", 2F, 10F, "pickaxe", 0, 0);
+		glacierrock_brick_slab = new BlockMSlab(Material.rock, "glacierrock_brick_slab", 2F, 10F, "pickaxe", 2, 0);
+		glacierrock_brick_double_slab = new BlockMDoubleSlab(Material.rock, "glacierrock_brick_double_slab", 2F, 10F, "pickaxe", 2, 0);
+		oceanstone_brick_slab = new BlockMSlab(Material.rock, "oceanstone_brick_slab", 2F, 10F, "pickaxe", 0, 0);
+		oceanstone_brick_double_slab = new BlockMDoubleSlab(Material.rock, "oceanstone_brick_double_slab", 2F, 10F, "pickaxe", 0, 0);
+		poceanstone_brick_slab = new BlockMSlab(Material.rock, "poceanstone_brick_slab", 2F, 10F, "pickaxe", 2, 0);
+		poceanstone_brick_double_slab = new BlockMDoubleSlab(Material.rock, "poceanstone_brick_double_slab", 2F, 10F, "pickaxe", 2, 0);
 		
 		// BLOCK ITEMS
 		redwood_door_item = new ItemMDoor(redwood_door).setUnlocalizedName("redwood_door_item");
@@ -647,6 +764,37 @@ public class MBlocks
 		register(meat_block);
 		
 		registerSlab("redwood_slab", "redwood_double_slab", redwood_slab, redwood_double_slab);
+		registerSlab("frozen_oak_slab", "frozen_oak_double_slab", frozen_oak_slab, frozen_oak_double_slab);
+		
+		registerSlab("deepstone_slab", "deepstone_double_slab", deepstone_slab, deepstone_double_slab);
+		registerSlab("red_rock_slab", "red_rock_double_slab", red_rock_slab, red_rock_double_slab);
+		registerSlab("deep_red_rock_slab", "deep_red_rock_double_slab", deep_red_rock_slab, deep_red_rock_double_slab);
+		registerSlab("coldstone_slab", "coldstone_double_slab", coldstone_slab, coldstone_double_slab);
+		registerSlab("deep_coldstone_slab", "deep_coldstone_double_slab", deep_coldstone_slab, deep_coldstone_double_slab);
+		registerSlab("icestone_slab", "icestone_double_slab", icestone_slab, icestone_double_slab);
+		registerSlab("glacierrock_slab", "glacierrock_double_slab", glacierrock_slab, glacierrock_double_slab);
+		registerSlab("oceanstone_slab", "oceanstone_double_slab", oceanstone_slab, oceanstone_double_slab);
+		registerSlab("poceanstone_slab", "poceanstone_double_slab", poceanstone_slab, poceanstone_double_slab);
+		
+		registerSlab("deepstone_cobble_slab", "deepstone_cobble_double_slab", deepstone_cobble_slab, deepstone_cobble_double_slab);
+		registerSlab("red_rock_cobble_slab", "red_rock_cobble_double_slab", red_rock_cobble_slab, red_rock_cobble_double_slab);
+		registerSlab("deep_red_rock_cobble_slab", "deep_red_rock_cobble_double_slab", deep_red_rock_cobble_slab, deep_red_rock_cobble_double_slab);
+		registerSlab("coldstone_cobble_slab", "coldstone_cobble_double_slab", coldstone_cobble_slab, coldstone_cobble_double_slab);
+		registerSlab("deep_coldstone_cobble_slab", "deep_coldstone_cobble_double_slab", deep_coldstone_cobble_slab, deep_coldstone_cobble_double_slab);
+		registerSlab("icestone_cobble_slab", "icestone_cobble_double_slab", icestone_cobble_slab, icestone_cobble_double_slab);
+		registerSlab("glacierrock_cobble_slab", "glacierrock_cobble_double_slab", glacierrock_cobble_slab, glacierrock_cobble_double_slab);
+		registerSlab("oceanstone_cobble_slab", "oceanstone_cobble_double_slab", oceanstone_cobble_slab, oceanstone_cobble_double_slab);
+		registerSlab("poceanstone_cobble_slab", "poceanstone_cobble_double_slab", poceanstone_cobble_slab, poceanstone_cobble_double_slab);
+		
+		registerSlab("deepstone_brick_slab", "deepstone_brick_double_slab", deepstone_brick_slab, deepstone_brick_double_slab);
+		registerSlab("red_rock_brick_slab", "red_rock_brick_double_slab", red_rock_brick_slab, red_rock_brick_double_slab);
+		registerSlab("deep_red_rock_brick_slab", "deep_red_rock_brick_double_slab", deep_red_rock_brick_slab, deep_red_rock_brick_double_slab);
+		registerSlab("coldstone_brick_slab", "coldstone_brick_double_slab", coldstone_brick_slab, coldstone_brick_double_slab);
+		registerSlab("deep_coldstone_brick_slab", "deep_coldstone_brick_double_slab", deep_coldstone_brick_slab, deep_coldstone_brick_double_slab);
+		registerSlab("icestone_brick_slab", "icestone_brick_double_slab", icestone_brick_slab, icestone_brick_double_slab);
+		registerSlab("glacierrock_brick_slab", "glacierrock_brick_double_slab", glacierrock_brick_slab, glacierrock_brick_double_slab);
+		registerSlab("oceanstone_brick_slab", "oceanstone_brick_double_slab", oceanstone_brick_slab, oceanstone_brick_double_slab);
+		registerSlab("poceanstone_brick_slab", "poceanstone_brick_double_slab", poceanstone_brick_slab, poceanstone_brick_double_slab);
 	}
 	
 	public static void registerRenders()

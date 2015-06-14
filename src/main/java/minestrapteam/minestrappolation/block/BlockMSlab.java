@@ -1,5 +1,7 @@
 package minestrapteam.minestrappolation.block;
 
+import minestrapteam.minestrappolation.Minestrappolation;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -7,18 +9,29 @@ import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.world.IBlockAccess;
 
 public class BlockMSlab extends BlockSlab
 {
-    public BlockMSlab(Material mat, String name, float hardness, float resistance)
+    private int flammability;
+	
+	public BlockMSlab(Material mat, String name, float hardness, float resistance, String tool, int harvestLevel, int flame)
     {
         super(mat);
         IBlockState iblockstate = this.blockState.getBaseState();
         setUnlocalizedName(name);
-        setCreativeTab(CreativeTabs.tabBlock);
+        setCreativeTab(Minestrappolation.tabMBuilding);
         setHardness(hardness);
         setResistance(resistance);
+        setHarvestLevel(tool, harvestLevel);
         this.useNeighborBrightness = true;
+        this.flammability = flame;
+        if(mat == Material.wood)
+        	setStepSound(Block.soundTypeWood);
+        else if(mat == Material.rock)
+        	setStepSound(Block.soundTypePiston);
     }
 
     @Override
@@ -78,5 +91,11 @@ public class BlockMSlab extends BlockSlab
 	public Object getVariant(ItemStack stack)
 	{
 		return null;
+	}
+	
+	@Override
+	public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face)
+	{
+		return this.flammability;
 	}
 }
