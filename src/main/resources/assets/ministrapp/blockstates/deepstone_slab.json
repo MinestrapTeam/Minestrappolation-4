@@ -1,0 +1,10 @@
+{
+   "variants":{
+      "half=top":{
+         "model":"ministrapp:upper_slab_deepstone"
+      },
+      "half=bottom":{
+         "model":"ministrapp:half_slab_deepstone"
+      }
+   }
+}

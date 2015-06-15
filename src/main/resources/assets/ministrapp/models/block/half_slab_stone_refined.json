@@ -1,8 +1,0 @@
-{
-    "parent": "block/half_slab",
-    "textures": {
-        "bottom": "ministrapp:blocks/stone_refined",
-        "top": "ministrapp:blocks/stone_refined",
-        "side": "ministrapp:blocks/stone_refined_slab_side"
-    }
-}

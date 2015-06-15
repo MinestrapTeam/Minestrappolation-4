@@ -1,0 +1,8 @@
+{
+    "parent": "block/half_slab",
+    "textures": {
+        "bottom": "ministrapp:blocks/icestone_slab_top",
+        "top": "ministrapp:blocks/icestone_slab_top",
+        "side": "ministrapp:blocks/icestone_slab_side"
+    }
+}
