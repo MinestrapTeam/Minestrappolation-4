@@ -1,5 +1,7 @@
 package minestrapteam.minestrappolation.lib;
 
+import java.util.ArrayList;
+
 import minestrapteam.minestrappolation.Minestrappolation;
 import minestrapteam.minestrappolation.block.BlockAlloy;
 import minestrapteam.minestrappolation.block.BlockBarrel;
@@ -122,6 +124,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class MBlocks
 {
+	public static ArrayList<Block> blockList = new ArrayList<Block>();
+	
 	public static Block	copper_block;
 	public static Block	tin_block;
 	public static Block	sunstone_block;
@@ -799,148 +803,22 @@ public class MBlocks
 	
 	public static void registerRenders()
 	{
-		registerRender(copper_ore);
-		registerRender(copper_block);
-		registerRender(tin_ore);
-		registerRender(tin_block);
-		registerRender(sunstone_ore);
-		registerRender(sunstone_block);
-		registerRender(bronze_block);
-		registerRender(steel_block);
-		registerRender(meurodite_block);
-		registerRender(torite_block);
-		registerRender(plutonium_block);
-		registerRender(uranium_block);
-		registerRender(plutonium_insulated);
-		registerRender(uranium_insulated);
-		registerRender(titanium_block);
-		registerRender(blazium_block);
-		registerRender(soul_gem_block);
-		registerRender(slate);
-		registerRender(slate_bricks);
-		registerRender(slate_pattern_bricks);
-		registerRender(slate_refined);
-		registerRender(granite_bricks);
-		registerRender(granite_pattern_bricks);
-		registerRender(diorite_bricks);
-		registerRender(diorite_pattern_bricks);
-		registerRender(andesite_bricks);
-		registerRender(andesite_pattern_bricks);
-		registerRender(flint_block);
-		registerRender(flint_bricks);
-		registerRender(flint_pattern_bricks);
-		registerRender(flint_refined);
-		registerRender(flint_tiles);
-		registerRender(flint_chiseled);
-		registerRender(flint_lamp_sunstone);
-		registerRender(flint_lamp_glowstone);
-		registerRender(flint_lamp_prismarine);
-		registerRender(sugar_block);
-		registerRender(meat_block);
-		
-		registerRender(roads);
-		registerRender(chiseled);
-		registerRender(mossy);
-		registerRender(mossy_bricks);
-		registerRender(cracked_bricks);
-		registerRender(pattern_bricks);
-		registerRender(refined);
-		registerRender(tiles);
-		registerRender(lamp_sunstone);
-		registerRender(lamp_glowstone);
-		registerRender(lamp_prismarine);
-		
-		registerRender(cold_sand);
-		registerRender(lichen_permafrost);
-		registerRender(dirt_permafrost);
-		
-		registerRender(snow_refined);
-		registerRender(snow_tiles);
-		registerRender(snow_bricks);
-		registerRender(glass_bricks);
-		registerRender(glass_refined);
-		registerRender(glass_tiles);
-		registerRender(glass_window);
-		registerRender(stone_boulder);
-		registerRender(red_rock_boulder);
-		registerRender(coldstone_boulder);
-		registerRender(icestone_boulder);
-		registerRender(oceanstone_boulder);
-		registerRender(stone_lamp_glowstone);
-		registerRender(stone_lamp_prismarine);
-		registerRender(stone_lamp_sunstone);
-		registerRender(stone_pattern_bricks);
-		registerRender(stone_refined);
-		registerRender(stone_tiles);
-		registerRender(ministrapp_log);
-		registerRender(ministrapp_leaves);
-		registerRender(ministrapp_sapling);
-		registerRender(godstone);
-		registerRender(plutonium_ore);
-		registerRender(uranium_ore);
-		registerRender(titanium_ore);
-		registerRender(radiant_ore);
-		registerRender(meurodite_ore);
-		registerRender(torite_ore);
-		registerRender(desert_quartz);
-		registerRender(blazium_ore);
-		registerRender(soul_ore);
-		registerRender(barrel);
-		registerRender(crate);
-		registerRender(melter);
-		registerRender(melter_active);
-		registerRender(redwood_stairs);
-		registerRender(frozen_oak_stairs);
-		registerRender(deepstone_stairs);
-		registerRender(coldstone_stairs);
-		registerRender(redrock_stairs);
-		registerRender(oceanstone_stairs);
-		registerRender(icestone_stairs);
-		registerRender(poceanstone_stairs);
-		registerRender(glacierstone_stairs);
-		registerRender(deep_redrock_stairs);
-		registerRender(deep_coldstone_stairs);
-		registerRender(deepstone_brick_stairs);
-		registerRender(coldstone_brick_stairs);
-		registerRender(redrock_brick_stairs);
-		registerRender(oceanstone_brick_stairs);
-		registerRender(icestone_brick_stairs);
-		registerRender(poceanstone_brick_stairs);
-		registerRender(glacierstone_brick_stairs);
-		registerRender(deep_redrock_brick_stairs);
-		registerRender(deep_coldstone_brick_stairs);
-		registerRender(redwood_door);
-		registerRender(frozen_door);
-		registerRender(alloy);
-		registerRender(alloy_active);
-		registerRender(stonecutter);
-		registerRender(sawmill);
-		registerRender(crusher);
-		registerRender(crusher_active);
-		registerRender(redwood_door_item);
-		registerRender(frozen_door_item);
-		registerRender(redwood_fence);
-		registerRender(redwood_fence_gate);
-		registerRender(frozen_oak_fence);
-		registerRender(frozen_oak_fence_gate);
-		registerRender(refined_glass_pane);
-		registerRender(bricked_glass_pane);
-		registerRender(tiled_glass_pane);
-		registerRender(framed_glass_pane);
-		registerRender(steel_mesh);
-		registerRender(frost_generator);
-		registerRender(dead_branch);
-		registerRender(invincium);
+		for(Block block: blockList)
+		{
+			registerRender(block);
+		}
 	}
 	
 	private static void register(Block block)
 	{
 		GameRegistry.registerBlock(block, block.getUnlocalizedName().substring(5));
+		blockList.add(block);
 	}
 	
 	private static void register(Block block, Class<? extends ItemBlock> itemclass)
 	{
 		GameRegistry.registerBlock(block, itemclass, block.getUnlocalizedName().substring(5));
+		blockList.add(block);
 	}
 	
 	private static void registerRender(Block block)
@@ -1153,5 +1031,7 @@ public class MBlocks
 	{
 		GameRegistry.registerBlock(two, ItemBlockMSlab.class, name2, new Object[]{one, two});
 		GameRegistry.registerBlock(one, ItemBlockMSlab.class, name, new Object[]{one, two});
+		blockList.add(one);
+		blockList.add(two);
 	}
 }
