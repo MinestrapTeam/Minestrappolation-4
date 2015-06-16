@@ -38,8 +38,8 @@ public class AlloyRecipes
 		this.addRecipe(new ItemStack(MBlocks.biome_cobble, 4, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.quartz_block, 1, 0), new ItemStack(Blocks.stone, 4, 3), 0.3F);
 		this.addRecipe(new ItemStack(Blocks.cobblestone, 4, 0), new ItemStack(MBlocks.desert_quartz_block, 1, 0), new ItemStack(Blocks.stone, 4, 3), 0.3F);
 		this.addRecipe(new ItemStack(MBlocks.biome_cobble, 4, OreDictionary.WILDCARD_VALUE), new ItemStack(MBlocks.desert_quartz_block, 1, 0), new ItemStack(Blocks.stone, 4, 3), 0.3F);
-		this.addRecipe(new ItemStack(Blocks.stone, 2, 3), new ItemStack(Blocks.cobblestone, 2, 0), new ItemStack(Blocks.stone, 4, 5), 0.3F);
-		this.addRecipe(new ItemStack(Blocks.stone, 2, 3), new ItemStack(MBlocks.biome_cobble, 2, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.stone, 4, 5), 0.3F);
+		this.addRecipe(new ItemStack(Blocks.stone, 4, 3), new ItemStack(Blocks.cobblestone, 4, 0), new ItemStack(Blocks.stone, 6, 5), 0.3F);
+		this.addRecipe(new ItemStack(Blocks.stone, 4, 3), new ItemStack(MBlocks.biome_cobble, 4, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.stone, 6, 5), 0.3F);
 		this.addRecipe(new ItemStack(Blocks.stone, 4, 3), new ItemStack(Blocks.quartz_block, 1, 0), new ItemStack(Blocks.stone, 4, 1), 0.3F);
 		this.addRecipe(new ItemStack(Blocks.stone, 4, 3), new ItemStack(MBlocks.desert_quartz_block, 1, 0), new ItemStack(Blocks.stone, 4, 1), 0.3F);
 		this.addRecipe(new ItemStack(Blocks.clay, 4, 0), new ItemStack(Blocks.quartz_block, 1, 0), new ItemStack(MBlocks.slate, 4, 0), 0.3F);
@@ -52,11 +52,12 @@ public class AlloyRecipes
 		this.addRecipe(new ItemStack(MItems.chunks, 8, 3), new ItemStack(MItems.radiant_quartz, 1), new ItemStack(Items.prismarine_shard, 8), 1.5F);
 		this.addRecipe(new ItemStack(Items.blaze_powder, 1), new ItemStack(MItems.sunstone_shard, 1), new ItemStack(MItems.blaze_shard), 1F);
 		this.addRecipe(new ItemStack(Items.bone, 1), new ItemStack(MItems.blaze_shard, 4), new ItemStack(Items.blaze_rod), 1F);
-		this.addRecipe(new ItemStack(MItems.blaze_shard, 3), new ItemStack(Items.gold_ingot, 1), new ItemStack(MItems.blazium_ingot), 1F);
+		this.addRecipe(new ItemStack(MItems.blaze_shard, 4), new ItemStack(Items.gold_ingot, 1), new ItemStack(MItems.blazium_ingot), 1F);
 		
 		//Misc
 		this.addRecipe(new ItemStack(Blocks.pumpkin, 1), new ItemStack(MItems.pie_crust, 2), new ItemStack(Items.pumpkin_pie, 2), 0.3F);
-		this.addRecipe(new ItemStack(Items.apple, 1), new ItemStack(MItems.pie_crust, 1), new ItemStack(MItems.apple_pie, 1), 0.3F);
+		this.addRecipe(new ItemStack(Items.apple, 2), new ItemStack(MItems.pie_crust, 2), new ItemStack(MItems.apple_pie, 2), 0.3F);
+		this.addRecipe(new ItemStack(Items.egg, 1), new ItemStack(Items.bowl, 1), new ItemStack(MItems.fried_egg, 1), 0.3F);
 		this.addRecipe(new ItemStack(Blocks.sand, 1), new ItemStack(Blocks.sand, 1), new ItemStack(MBlocks.glass_refined, 2), 0.3F);
 		this.addRecipe(new ItemStack(Items.blaze_powder, 1), new ItemStack(Items.ender_pearl, 1), new ItemStack(Items.ender_eye, 1), 1.0F);
 		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(Blocks.log, 2, OreDictionary.WILDCARD_VALUE), new ItemStack(Items.leather, 1), 0.3F);
@@ -65,7 +66,7 @@ public class AlloyRecipes
 		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(Blocks.leaves, 12, OreDictionary.WILDCARD_VALUE), new ItemStack(Items.leather, 1), 0.3F);
 		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(Blocks.leaves2, 12, OreDictionary.WILDCARD_VALUE), new ItemStack(Items.leather, 1), 0.3F);
 		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(MBlocks.ministrapp_leaves, 12, OreDictionary.WILDCARD_VALUE), new ItemStack(Items.leather, 1), 0.3F);
-		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(Items.apple, 1), new ItemStack(Items.leather, 1), 0.3F);
+		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(Items.apple, 2), new ItemStack(Items.leather, 2), 0.3F);
 		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(Items.carrot, 3), new ItemStack(Items.leather, 1), 0.3F);
 		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(Items.potato, 3), new ItemStack(Items.leather, 1), 0.3F);
 		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(Items.poisonous_potato, 1), new ItemStack(Items.leather, 2), 0.3F);
