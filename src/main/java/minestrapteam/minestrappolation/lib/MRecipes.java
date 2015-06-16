@@ -61,6 +61,7 @@ public class MRecipes
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.uranium, 9), new Object[] { MBlocks.uranium_block });
 		
 		GameRegistry.addSmelting(MBlocks.desert_quartz, new ItemStack(MItems.desert_quartz_item), 0.2F);
+		GameRegistry.addRecipe(new ItemStack(MBlocks.desert_quartz_block, 1), new Object[] { "QQ", "QQ", 'Q', MItems.desert_quartz_item});
 		
 		GameRegistry.addSmelting(MBlocks.radiant_ore, new ItemStack(MItems.radiant_quartz), 1.2F);
 		GameRegistry.addSmelting(MBlocks.biome_radiant, new ItemStack(MItems.radiant_quartz), 1.2F);

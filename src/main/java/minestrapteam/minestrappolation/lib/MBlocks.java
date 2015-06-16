@@ -162,6 +162,8 @@ public class MBlocks
 	public static Block	flint_lamp_sunstone;
 	public static Block	flint_lamp_glowstone;
 	public static Block	flint_lamp_prismarine;
+	public static Block	desert_quartz_block;
+	public static Block	desert_quartz_chiseled;
 	
 	public static Block	roads;
 	public static Block chiseled;
@@ -259,6 +261,7 @@ public class MBlocks
 	// Stairs
 	public static Block	redwood_stairs;
 	public static Block	frozen_oak_stairs;
+	public static Block	desert_quartz_stairs;
 	public static Block	deepstone_stairs;
 	public static Block	coldstone_stairs;
 	public static Block	redrock_stairs;
@@ -282,6 +285,8 @@ public class MBlocks
 	public static BlockMDoubleSlab redwood_double_slab;
 	public static BlockMSlab       frozen_oak_slab;
 	public static BlockMDoubleSlab frozen_oak_double_slab;
+	public static BlockMSlab	   desert_quartz_slab;
+	public static BlockMDoubleSlab desert_quartz_double_slab;
 	public static BlockMSlab       deepstone_slab;
 	public static BlockMDoubleSlab deepstone_double_slab;
 	public static BlockMSlab       red_rock_slab;
@@ -378,6 +383,8 @@ public class MBlocks
 		flint_lamp_sunstone = new MBlock(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F).setLightLevel(0.7F).setStepSound(Block.soundTypePiston).setUnlocalizedName("flint_lamp_sunstone").setCreativeTab(Minestrappolation.tabMBuilding);;
 		flint_lamp_glowstone = new MBlock(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F).setLightLevel(0.8F).setStepSound(Block.soundTypePiston).setUnlocalizedName("flint_lamp_glowstone").setCreativeTab(Minestrappolation.tabMBuilding);;
 		flint_lamp_prismarine = new MBlock(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F).setLightLevel(0.8F).setStepSound(Block.soundTypePiston).setUnlocalizedName("flint_lamp_prismarine").setCreativeTab(Minestrappolation.tabMBuilding);;
+		desert_quartz_block = new MBlock(Material.rock, MapColor.adobeColor).setHardness(1.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("desert_quartz_block").setCreativeTab(Minestrappolation.tabMBuilding);
+		desert_quartz_chiseled = new MBlock(Material.rock, MapColor.adobeColor).setHardness(1.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("desert_quartz_chiseled").setCreativeTab(Minestrappolation.tabMBuilding);
 		
 		// DECOR
 		snow_refined = new MBlockSnow(Material.snow, MapColor.snowColor).setHardness(0.4F).setStepSound(Block.soundTypeSnow).setUnlocalizedName("snow_refined").setCreativeTab(Minestrappolation.tabMBuilding);
@@ -497,6 +504,7 @@ public class MBlocks
 		// Stairs
 		redwood_stairs = new MBlockStairs(ministrapp_planks.getStateFromMeta(MWoodType.REDWOOD.getMetadata()), 300).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("redwood_stairs");
 		frozen_oak_stairs = new MBlockStairs(ministrapp_planks.getStateFromMeta(MWoodType.FROZEN.getMetadata()), 300).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("frozen_oak_stairs");
+		desert_quartz_stairs = new MBlockStairs(desert_quartz_block.getDefaultState(), 0).setHardness(1.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("desert_quartz_stairs");
 		deepstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()), 0).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("deepstone_stairs");
 		coldstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.COLDSTONE.getMetadata()), 0).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("coldstone_stairs");
 		redrock_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.REDROCK.getMetadata()), 0).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("redrock_stairs");
@@ -539,6 +547,9 @@ public class MBlocks
 		frozen_oak_double_slab = new BlockMDoubleSlab(Material.wood, "frozen_oak_double_slab", 2F, 5F, "axe", 0, 300);
 		
 		//Stone Slabs
+		desert_quartz_slab = new BlockMSlab(Material.rock, "desert_quartz_slab", 1F, 4F, "pickaxe", 1, 0);
+		desert_quartz_double_slab = new BlockMDoubleSlab(Material.rock, "desert_quartz_double_slab", 1F, 4F, "pickaxe", 0, 0);
+		
 		deepstone_slab = new BlockMSlab(Material.rock, "deepstone_slab", 2F, 10F, "pickaxe", 2, 0);
 		deepstone_double_slab = new BlockMDoubleSlab(Material.rock, "deepstone_double_slab", 2F, 10F, "pickaxe", 2, 0);
 		red_rock_slab = new BlockMSlab(Material.rock, "red_rock_slab", 2F, 10F, "pickaxe", 0, 0);
@@ -622,6 +633,8 @@ public class MBlocks
 		
 		register(ministrapp_log, ItemBlockLog.class);
 		register(ministrapp_planks, ItemBlockPlanks.class);
+		registerSlab("redwood_slab", "redwood_double_slab", redwood_slab, redwood_double_slab);
+		registerSlab("frozen_oak_slab", "frozen_oak_double_slab", frozen_oak_slab, frozen_oak_double_slab);
 		register(redwood_stairs);
 		register(frozen_oak_stairs);
 		
@@ -644,6 +657,10 @@ public class MBlocks
 		register(flint_lamp_sunstone);
 		register(flint_lamp_glowstone);
 		register(flint_lamp_prismarine);
+		register(desert_quartz_block);
+		register(desert_quartz_chiseled);
+		registerSlab("desert_quartz_slab", "desert_quartz_double_slab", desert_quartz_slab, desert_quartz_double_slab);
+		register(desert_quartz_stairs);
 		register(stone_pattern_bricks);
 		register(stone_refined);
 		register(stone_tiles);
@@ -767,9 +784,6 @@ public class MBlocks
 		
 		register(meat_block);
 		
-		registerSlab("redwood_slab", "redwood_double_slab", redwood_slab, redwood_double_slab);
-		registerSlab("frozen_oak_slab", "frozen_oak_double_slab", frozen_oak_slab, frozen_oak_double_slab);
-		
 		registerSlab("deepstone_slab", "deepstone_double_slab", deepstone_slab, deepstone_double_slab);
 		registerSlab("red_rock_slab", "red_rock_double_slab", red_rock_slab, red_rock_double_slab);
 		registerSlab("deep_red_rock_slab", "deep_red_rock_double_slab", deep_red_rock_slab, deep_red_rock_double_slab);
@@ -853,6 +867,9 @@ public class MBlocks
 		flint_lamp_sunstone.setHarvestLevel("pickaxe", 0);
 		flint_lamp_glowstone.setHarvestLevel("pickaxe", 0);
 		flint_lamp_prismarine.setHarvestLevel("pickaxe", 0);
+		desert_quartz_block.setHarvestLevel("pickaxe", 0);
+		desert_quartz_chiseled.setHarvestLevel("pickaxe", 0);
+		desert_quartz_stairs.setHarvestLevel("pickaxe", 0);
 		snow_refined.setHarvestLevel("shovel", 0);
 		snow_tiles.setHarvestLevel("shovel", 0);
 		snow_bricks.setHarvestLevel("shovel", 0);

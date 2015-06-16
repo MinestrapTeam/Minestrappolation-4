@@ -85,7 +85,8 @@ public class CrusherRecipes
 		this.addRecipe(new ItemStack(Items.prismarine_shard, 1, 0), new ItemStack(MItems.chunks, 1, 3), 0.1F, new ItemStack(MItems.radiant_quartz, 1, 0), 1);
 		
 		this.addRecipe(new ItemStack(MBlocks.flint_block, 1), new ItemStack(Items.flint, 3, 0), 0.1F, new ItemStack(Items.flint, 1, 0), 30);
-		this.addRecipe(new ItemStack(Blocks.quartz_block, 1), new ItemStack(Items.quartz, 3, 0), 0.1F, new ItemStack(Items.quartz, 1, 0), 10);
+		this.addRecipe(new ItemStack(MBlocks.desert_quartz_block, 1), new ItemStack(MItems.desert_quartz_item, 3), 0.1F, new ItemStack(MItems.desert_quartz_item, 1), 10);
+		this.addRecipe(new ItemStack(Blocks.quartz_block, 1, 0), new ItemStack(Items.quartz, 3, 0), 0.1F, new ItemStack(Items.quartz, 1, 0), 10);
 		
 		//Ores
 		this.addRecipe(Blocks.coal_ore, new ItemStack(Items.coal, 3, 0), 0.05F, new ItemStack(MItems.chunks, 1, 0), 20);

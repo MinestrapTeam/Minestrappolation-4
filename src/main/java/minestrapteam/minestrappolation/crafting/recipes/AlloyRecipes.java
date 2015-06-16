@@ -36,10 +36,14 @@ public class AlloyRecipes
 		//Stones
 		this.addRecipe(new ItemStack(Blocks.cobblestone, 4, 0), new ItemStack(Blocks.quartz_block, 1, 0), new ItemStack(Blocks.stone, 4, 3), 0.3F);
 		this.addRecipe(new ItemStack(MBlocks.biome_cobble, 4, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.quartz_block, 1, 0), new ItemStack(Blocks.stone, 4, 3), 0.3F);
+		this.addRecipe(new ItemStack(Blocks.cobblestone, 4, 0), new ItemStack(MBlocks.desert_quartz_block, 1, 0), new ItemStack(Blocks.stone, 4, 3), 0.3F);
+		this.addRecipe(new ItemStack(MBlocks.biome_cobble, 4, OreDictionary.WILDCARD_VALUE), new ItemStack(MBlocks.desert_quartz_block, 1, 0), new ItemStack(Blocks.stone, 4, 3), 0.3F);
 		this.addRecipe(new ItemStack(Blocks.stone, 2, 3), new ItemStack(Blocks.cobblestone, 2, 0), new ItemStack(Blocks.stone, 4, 5), 0.3F);
 		this.addRecipe(new ItemStack(Blocks.stone, 2, 3), new ItemStack(MBlocks.biome_cobble, 2, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.stone, 4, 5), 0.3F);
 		this.addRecipe(new ItemStack(Blocks.stone, 4, 3), new ItemStack(Blocks.quartz_block, 1, 0), new ItemStack(Blocks.stone, 4, 1), 0.3F);
+		this.addRecipe(new ItemStack(Blocks.stone, 4, 3), new ItemStack(MBlocks.desert_quartz_block, 1, 0), new ItemStack(Blocks.stone, 4, 1), 0.3F);
 		this.addRecipe(new ItemStack(Blocks.clay, 4, 0), new ItemStack(Blocks.quartz_block, 1, 0), new ItemStack(MBlocks.slate, 4, 0), 0.3F);
+		this.addRecipe(new ItemStack(Blocks.clay, 4, 0), new ItemStack(MBlocks.desert_quartz_block, 1, 0), new ItemStack(MBlocks.slate, 4, 0), 0.3F);
 		
 		//Minerals
 		this.addRecipe(new ItemStack(MItems.tin_ingot, 3, 0), new ItemStack(MItems.copper_ingot, 3, 0), new ItemStack(MItems.bronze_ingot), 1F);

@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": [
+			{ "model": "ministrapp:desert_quartz_chiseled_1" },
+			{ "model": "ministrapp:desert_quartz_chiseled_2" },
+			{ "model": "ministrapp:desert_quartz_chiseled_3" },
+			{ "model": "ministrapp:desert_quartz_chiseled_4" }
+		]
+    }
+}
