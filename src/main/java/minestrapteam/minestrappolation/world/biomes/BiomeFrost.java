@@ -53,7 +53,6 @@ public class BiomeFrost extends BiomeGenBase
 		}
 		
 		this.generateBiomeTerrain(worldIn, rand, primer, p_180622_4_, p_180622_5_, noise);
-		;
 	}
 	
 	@Override

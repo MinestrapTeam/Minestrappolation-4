@@ -43,6 +43,7 @@ import minestrapteam.minestrappolation.block.BlockTransparent;
 import minestrapteam.minestrappolation.block.MBlock;
 import minestrapteam.minestrappolation.block.MBlockLeaves;
 import minestrapteam.minestrappolation.block.MBlockLog;
+import minestrapteam.minestrappolation.block.MBlockPillar;
 import minestrapteam.minestrappolation.block.MBlockPlanks;
 import minestrapteam.minestrappolation.block.MBlockSapling;
 import minestrapteam.minestrappolation.block.MBlockSnow;
@@ -164,6 +165,8 @@ public class MBlocks
 	public static Block	flint_lamp_prismarine;
 	public static Block	desert_quartz_block;
 	public static Block	desert_quartz_chiseled;
+	public static Block	radiant_block;
+	public static Block	radiant_chiseled;
 	
 	public static Block	roads;
 	public static Block chiseled;
@@ -262,6 +265,7 @@ public class MBlocks
 	public static Block	redwood_stairs;
 	public static Block	frozen_oak_stairs;
 	public static Block	desert_quartz_stairs;
+	public static Block radiant_stairs;
 	public static Block	deepstone_stairs;
 	public static Block	coldstone_stairs;
 	public static Block	redrock_stairs;
@@ -287,6 +291,8 @@ public class MBlocks
 	public static BlockMDoubleSlab frozen_oak_double_slab;
 	public static BlockMSlab	   desert_quartz_slab;
 	public static BlockMDoubleSlab desert_quartz_double_slab;
+	public static BlockMSlab	   radiant_slab;
+	public static BlockMDoubleSlab radiant_double_slab;
 	public static BlockMSlab       deepstone_slab;
 	public static BlockMDoubleSlab deepstone_double_slab;
 	public static BlockMSlab       red_rock_slab;
@@ -359,6 +365,10 @@ public class MBlocks
 	public static Block	frost_generator;
 	public static Block	invincium;
 	
+	//Pillars
+	public static Block desert_pillar;
+	public static Block radiant_pillar;
+	
 	// BLOCK ITEMS
 	public static Item	redwood_door_item;
 	public static Item  frozen_door_item;
@@ -385,6 +395,8 @@ public class MBlocks
 		flint_lamp_prismarine = new MBlock(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F).setLightLevel(0.8F).setStepSound(Block.soundTypePiston).setUnlocalizedName("flint_lamp_prismarine").setCreativeTab(Minestrappolation.tabMBuilding);;
 		desert_quartz_block = new MBlock(Material.rock, MapColor.adobeColor).setHardness(1.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("desert_quartz_block").setCreativeTab(Minestrappolation.tabMBuilding);
 		desert_quartz_chiseled = new MBlock(Material.rock, MapColor.adobeColor).setHardness(1.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("desert_quartz_chiseled").setCreativeTab(Minestrappolation.tabMBuilding);
+		radiant_block = new MBlock(Material.rock, MapColor.pinkColor).setHardness(1.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("radiant_quartz_block").setCreativeTab(Minestrappolation.tabMBuilding);
+		radiant_chiseled = new MBlock(Material.rock, MapColor.pinkColor).setHardness(1.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("radiant_quartz_chiseled").setCreativeTab(Minestrappolation.tabMBuilding);
 		
 		// DECOR
 		snow_refined = new MBlockSnow(Material.snow, MapColor.snowColor).setHardness(0.4F).setStepSound(Block.soundTypeSnow).setUnlocalizedName("snow_refined").setCreativeTab(Minestrappolation.tabMBuilding);
@@ -505,6 +517,7 @@ public class MBlocks
 		redwood_stairs = new MBlockStairs(ministrapp_planks.getStateFromMeta(MWoodType.REDWOOD.getMetadata()), 300).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("redwood_stairs");
 		frozen_oak_stairs = new MBlockStairs(ministrapp_planks.getStateFromMeta(MWoodType.FROZEN.getMetadata()), 300).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("frozen_oak_stairs");
 		desert_quartz_stairs = new MBlockStairs(desert_quartz_block.getDefaultState(), 0).setHardness(1.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("desert_quartz_stairs");
+		radiant_stairs = new MBlockStairs(radiant_block.getDefaultState(), 0).setHardness(1.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("radiant_quartz_stairs");
 		deepstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()), 0).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("deepstone_stairs");
 		coldstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.COLDSTONE.getMetadata()), 0).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("coldstone_stairs");
 		redrock_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.REDROCK.getMetadata()), 0).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("redrock_stairs");
@@ -549,6 +562,8 @@ public class MBlocks
 		//Stone Slabs
 		desert_quartz_slab = new BlockMSlab(Material.rock, "desert_quartz_slab", 1F, 4F, "pickaxe", 1, 0);
 		desert_quartz_double_slab = new BlockMDoubleSlab(Material.rock, "desert_quartz_double_slab", 1F, 4F, "pickaxe", 0, 0);
+		radiant_slab = new BlockMSlab(Material.rock, "radiant_quartz_slab", 1F, 4F, "pickaxe", 1, 0);
+		radiant_double_slab = new BlockMDoubleSlab(Material.rock, "radiant_quartz_double_slab", 1F, 4F, "pickaxe", 0, 0);
 		
 		deepstone_slab = new BlockMSlab(Material.rock, "deepstone_slab", 2F, 10F, "pickaxe", 2, 0);
 		deepstone_double_slab = new BlockMDoubleSlab(Material.rock, "deepstone_double_slab", 2F, 10F, "pickaxe", 2, 0);
@@ -607,6 +622,10 @@ public class MBlocks
 		poceanstone_brick_slab = new BlockMSlab(Material.rock, "poceanstone_brick_slab", 2F, 10F, "pickaxe", 2, 0);
 		poceanstone_brick_double_slab = new BlockMDoubleSlab(Material.rock, "poceanstone_brick_double_slab", 2F, 10F, "pickaxe", 2, 0);
 		
+		//Pillars
+		desert_pillar = new MBlockPillar(Material.rock).setUnlocalizedName("desert_pillar").setHardness(1F).setResistance(4F);
+		radiant_pillar = new MBlockPillar(Material.rock).setUnlocalizedName("radiant_pillar").setHardness(1F).setResistance(4F);
+		
 		// BLOCK ITEMS
 		redwood_door_item = new ItemMDoor(redwood_door).setUnlocalizedName("redwood_door_item");
 		frozen_door_item = new ItemMDoor(frozen_door).setUnlocalizedName("frozen_oak_door_item");
@@ -659,8 +678,12 @@ public class MBlocks
 		register(flint_lamp_prismarine);
 		register(desert_quartz_block);
 		register(desert_quartz_chiseled);
-		registerSlab("desert_quartz_slab", "desert_quartz_double_slab", desert_quartz_slab, desert_quartz_double_slab);
 		register(desert_quartz_stairs);
+		registerSlab("desert_quartz_slab", "desert_quartz_double_slab", desert_quartz_slab, desert_quartz_double_slab);
+		register(radiant_block);
+		register(radiant_chiseled);
+		registerSlab("radiant_quartz_slab", "radiant_quartz_double_slab", radiant_slab, radiant_double_slab);
+		register(radiant_stairs);
 		register(stone_pattern_bricks);
 		register(stone_refined);
 		register(stone_tiles);
@@ -781,6 +804,9 @@ public class MBlocks
 		register(frost_generator);
 		register(crusher);
 		register(crusher_active);
+		
+		register(desert_pillar);
+		register(radiant_pillar);
 		
 		register(meat_block);
 		
