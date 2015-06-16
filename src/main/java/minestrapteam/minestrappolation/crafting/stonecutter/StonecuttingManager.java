@@ -146,6 +146,15 @@ public class StonecuttingManager
 		this.addRecipe(new ItemStack(Blocks.sandstone, 1, 1), null, new Object[] { "S", "S", 'S', new ItemStack(Blocks.stone_slab, 1, 1)});
 		this.addRecipe(new ItemStack(Blocks.quartz_block, 1, 1), null, new Object[] { "S", "S", 'S', new ItemStack(Blocks.stone_slab, 1, 7)});
 		this.addRecipe(new ItemStack(Blocks.red_sandstone, 1, 1), null, new Object[] { "S", "S", 'S', new ItemStack(Blocks.stone_slab2, 1, 0)});
+		this.addRecipe(new ItemStack(MBlocks.chiseled, 1, 0), null, new Object[] { "S", "S", 'S', new ItemStack(MBlocks.deepstone_slab, 1)});
+		this.addRecipe(new ItemStack(MBlocks.chiseled, 1, 1), null, new Object[] { "S", "S", 'S', new ItemStack(MBlocks.red_rock_slab, 1)});
+		this.addRecipe(new ItemStack(MBlocks.chiseled, 1, 2), null, new Object[] { "S", "S", 'S', new ItemStack(MBlocks.deep_red_rock_slab, 1)});
+		this.addRecipe(new ItemStack(MBlocks.chiseled, 1, 3), null, new Object[] { "S", "S", 'S', new ItemStack(MBlocks.coldstone_slab, 1)});
+		this.addRecipe(new ItemStack(MBlocks.chiseled, 1, 4), null, new Object[] { "S", "S", 'S', new ItemStack(MBlocks.deep_coldstone_slab, 1)});
+		this.addRecipe(new ItemStack(MBlocks.chiseled, 1, 5), null, new Object[] { "S", "S", 'S', new ItemStack(MBlocks.icestone_slab, 1)});
+		this.addRecipe(new ItemStack(MBlocks.chiseled, 1, 6), null, new Object[] { "S", "S", 'S', new ItemStack(MBlocks.glacierrock_slab, 1)});
+		this.addRecipe(new ItemStack(MBlocks.chiseled, 1, 7), null, new Object[] { "S", "S", 'S', new ItemStack(MBlocks.oceanstone_slab, 1)});
+		this.addRecipe(new ItemStack(MBlocks.chiseled, 1, 8), null, new Object[] { "S", "S", 'S', new ItemStack(MBlocks.poceanstone_slab, 1)});
 		
 		//Tiles
 		this.addRecipe(new ItemStack(MBlocks.stone_tiles, 4), null, new Object[] { "BB", "BB", 'B', MBlocks.stone_refined });
@@ -159,6 +168,9 @@ public class StonecuttingManager
 		this.addRecipe(new ItemStack(MBlocks.tiles, 4, 7), null, new Object[] { "BB", "BB", 'B', new ItemStack(MBlocks.refined, 1, 7) });
 		this.addRecipe(new ItemStack(MBlocks.tiles, 4, 8), null, new Object[] { "BB", "BB", 'B', new ItemStack(MBlocks.refined, 1, 8) });
 		this.addRecipe(new ItemStack(MBlocks.flint_tiles, 4, 0), null, new Object[] { "BB", "BB", 'B', new ItemStack(MBlocks.flint_refined, 1, 0) });
+		
+		//Pillars
+		this.addRecipe(new ItemStack(Blocks.quartz_block, 1, 2), null, new Object[] { "S", "S", 'S', new ItemStack(Blocks.quartz_block, 1, 0)});
 		
 		//Lamps
 		this.addRecipe(new ItemStack(MBlocks.stone_lamp_glowstone, 4), null, new Object[] { " S ", "SGS", " S ", 'S', new ItemStack(Blocks.stonebrick, 1, 3), 'G', Blocks.glowstone });
@@ -204,6 +216,36 @@ public class StonecuttingManager
 		this.addRecipe(new ItemStack(Blocks.stone_slab, 6, 6), null, new Object[] { "SSS", 'S', new ItemStack(Blocks.nether_brick, 1, 0)});
 		this.addRecipe(new ItemStack(Blocks.stone_slab, 6, 7), null, new Object[] { "SSS", 'S', new ItemStack(Blocks.quartz_block, 1, 0)});
 		this.addRecipe(new ItemStack(Blocks.stone_slab2, 6, 0), null, new Object[] { "SSS", 'S', new ItemStack(Blocks.red_sandstone, 1, 0)});
+		
+		this.addRecipe(new ItemStack(MBlocks.deepstone_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.biome_stones, 1, 0)});
+		this.addRecipe(new ItemStack(MBlocks.red_rock_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.biome_stones, 1, 1)});
+		this.addRecipe(new ItemStack(MBlocks.deep_red_rock_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.biome_stones, 1, 2)});
+		this.addRecipe(new ItemStack(MBlocks.coldstone_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.biome_stones, 1, 3)});
+		this.addRecipe(new ItemStack(MBlocks.deep_coldstone_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.biome_stones, 1, 4)});
+		this.addRecipe(new ItemStack(MBlocks.icestone_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.biome_stones, 1, 5)});
+		this.addRecipe(new ItemStack(MBlocks.glacierrock_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.biome_stones, 1, 6)});
+		this.addRecipe(new ItemStack(MBlocks.oceanstone_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.biome_stones, 1, 7)});
+		this.addRecipe(new ItemStack(MBlocks.poceanstone_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.biome_stones, 1, 8)});
+		
+		this.addRecipe(new ItemStack(MBlocks.deepstone_cobble_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.biome_cobble, 1, 0)});
+		this.addRecipe(new ItemStack(MBlocks.red_rock_cobble_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.biome_cobble, 1, 1)});
+		this.addRecipe(new ItemStack(MBlocks.deep_red_rock_cobble_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.biome_cobble, 1, 2)});
+		this.addRecipe(new ItemStack(MBlocks.coldstone_cobble_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.biome_cobble, 1, 3)});
+		this.addRecipe(new ItemStack(MBlocks.deep_coldstone_cobble_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.biome_cobble, 1, 4)});
+		this.addRecipe(new ItemStack(MBlocks.icestone_cobble_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.biome_cobble, 1, 5)});
+		this.addRecipe(new ItemStack(MBlocks.glacierrock_cobble_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.biome_cobble, 1, 6)});
+		this.addRecipe(new ItemStack(MBlocks.oceanstone_cobble_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.biome_cobble, 1, 7)});
+		this.addRecipe(new ItemStack(MBlocks.poceanstone_cobble_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.biome_cobble, 1, 8)});
+		
+		this.addRecipe(new ItemStack(MBlocks.deepstone_brick_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.biome_bricks, 1, 0)});
+		this.addRecipe(new ItemStack(MBlocks.red_rock_brick_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.biome_bricks, 1, 1)});
+		this.addRecipe(new ItemStack(MBlocks.deep_red_rock_brick_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.biome_bricks, 1, 2)});
+		this.addRecipe(new ItemStack(MBlocks.coldstone_brick_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.biome_bricks, 1, 3)});
+		this.addRecipe(new ItemStack(MBlocks.deep_coldstone_brick_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.biome_bricks, 1, 4)});
+		this.addRecipe(new ItemStack(MBlocks.icestone_brick_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.biome_bricks, 1, 5)});
+		this.addRecipe(new ItemStack(MBlocks.glacierrock_brick_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.biome_bricks, 1, 6)});
+		this.addRecipe(new ItemStack(MBlocks.oceanstone_brick_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.biome_bricks, 1, 7)});
+		this.addRecipe(new ItemStack(MBlocks.poceanstone_brick_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.biome_bricks, 1, 8)});
 		
 		//Stairs
 		this.addRecipe(new ItemStack(Blocks.stone_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(Blocks.cobblestone, 1, 0)});

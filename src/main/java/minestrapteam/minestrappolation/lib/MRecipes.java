@@ -109,6 +109,8 @@ public class MRecipes
 		// Wood
 		GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.ministrapp_planks, 4, 0), new Object[] { new ItemStack(MBlocks.ministrapp_log, 1, 0) });
 		GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.ministrapp_planks, 4, 1), new Object[] { new ItemStack(MBlocks.ministrapp_log, 1, 1) });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.redwood_slab, 6), new Object[] { "WWW", 'W', new ItemStack(MBlocks.ministrapp_planks, 1, 0)});
+		GameRegistry.addRecipe(new ItemStack(MBlocks.frozen_oak_slab, 6), new Object[] { "WWW", 'W', new ItemStack(MBlocks.ministrapp_planks, 1, 1)});
 		GameRegistry.addRecipe(new ItemStack(MBlocks.redwood_stairs, 4), new Object[] { "W  ", "WW ", "WWW", 'W', new ItemStack(MBlocks.ministrapp_planks, 1, 0) });
 		GameRegistry.addRecipe(new ItemStack(MBlocks.frozen_oak_stairs, 4), new Object[] { "W  ", "WW ", "WWW", 'W', new ItemStack(MBlocks.ministrapp_planks, 1, 1) });
 		GameRegistry.addSmelting(new ItemStack(MBlocks.ministrapp_log), new ItemStack(Items.coal, 1, 1), 0.15F);
@@ -236,9 +238,6 @@ public class MRecipes
 		GameRegistry.addRecipe(new ItemStack(MItems.titanium_boots), new Object[] { "I I", "I I", 'I', MItems.titanium_ingot });
 		
 		//Vanilla
-		GameRegistry.addRecipe(new ItemStack(Blocks.sandstone, 1, 0), new Object[] { "SS", "SS", 'S', new ItemStack(Blocks.sand, 1, 0)});
-		GameRegistry.addRecipe(new ItemStack(Blocks.red_sandstone, 1, 0), new Object[] { "SS", "SS", 'S', new ItemStack(Blocks.sand, 1, 1)});
-		GameRegistry.addRecipe(new ItemStack(Blocks.prismarine, 1, 0), new Object[] { "PP", "PP", 'P', Items.prismarine_shard});
 		GameRegistry.addRecipe(new ItemStack(Blocks.redstone_lamp, 1, 0), new Object[] { " R ", "RSR", " R ", 'R', Items.redstone, 'S', MBlocks.sunstone_block});
 	}
 	
@@ -297,6 +296,7 @@ public class MRecipes
 		RecipeHelper.removeRecipeContaining(Blocks.trapdoor);
 		RecipeHelper.removeRecipeContaining(Blocks.nether_brick);
 		RecipeHelper.removeRecipeContaining(Blocks.nether_brick_fence);
+		RecipeHelper.removeRecipeContaining(Blocks.quartz_block);
 		RecipeHelper.removeRecipeContaining(Items.ender_eye);
 	}
 	

@@ -29,9 +29,23 @@ public class MDictionary
 		OreDictionary.registerOre("ingotUtanium", MItems.uranium);
 		OreDictionary.registerOre("gemDesertQuartz", MItems.desert_quartz_item);
 		OreDictionary.registerOre("gemRadiantQuartz", MItems.radiant_quartz);
+		OreDictionary.registerOre("gemQuartzAny", Items.quartz);
 		OreDictionary.registerOre("gemQuartzAny", MItems.desert_quartz_item);
 		OreDictionary.registerOre("gemQuartzAny", MItems.radiant_quartz);
 		OreDictionary.registerOre("gemSoul", MItems.soul_gem);
+		
+		OreDictionary.registerOre("blockCopper", MBlocks.copper_block);
+		OreDictionary.registerOre("blockTin", MBlocks.tin_block);
+		OreDictionary.registerOre("blockBronze", MBlocks.bronze_block);
+		OreDictionary.registerOre("blockSteel", MBlocks.steel_block);
+		OreDictionary.registerOre("blockMeurodite", MBlocks.meurodite_block);
+		OreDictionary.registerOre("blockTorite", MBlocks.torite_block);
+		OreDictionary.registerOre("blockBlazium", MBlocks.blazium_block);
+		OreDictionary.registerOre("blockTitanium", MBlocks.titanium_block);
+		OreDictionary.registerOre("sunstone", MBlocks.sunstone_block);
+		OreDictionary.registerOre("blockPlutonium", MBlocks.plutonium_block);
+		OreDictionary.registerOre("blockUranium", MBlocks.uranium_block);
+		OreDictionary.registerOre("blockSoulGem", MBlocks.soul_gem_block);
 		
 		OreDictionary.registerOre("ingotBrickStone", MItems.stone_brick);
 		OreDictionary.registerOre("ingotBrickStone", MItems.deepstone_brick);
@@ -46,6 +60,8 @@ public class MDictionary
 		
 		OreDictionary.registerOre("logWood", new ItemStack(MBlocks.ministrapp_log, 1, WILDCARD_VALUE));
 		OreDictionary.registerOre("plankWood", new ItemStack(MBlocks.ministrapp_planks, 1, WILDCARD_VALUE));
+		OreDictionary.registerOre("slabWood", new ItemStack(MBlocks.redwood_slab, 1, WILDCARD_VALUE));
+		OreDictionary.registerOre("slabWood", new ItemStack(MBlocks.frozen_oak_slab, 1, WILDCARD_VALUE));
 		OreDictionary.registerOre("stairWood", new ItemStack(MBlocks.redwood_stairs, 1, WILDCARD_VALUE));
 		OreDictionary.registerOre("stairWood", new ItemStack(MBlocks.frozen_oak_stairs, 1, WILDCARD_VALUE));
 		OreDictionary.registerOre("treeSapling", new ItemStack(MBlocks.ministrapp_sapling, 1, WILDCARD_VALUE));
@@ -126,9 +142,9 @@ public class MDictionary
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.sawmill, 1), new Object[] { "CC", "WW", "WW", 'C', "ingotCopper", 'W', "plankWood" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.stonecutter, 1), new Object[] { "II", "CC", "CC", 'I', "ingotIron", 'C', "cobblestone" }));
 		//TODO: Replace Obsidian with Obsidian Bricks in Crusher recipe.
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.crusher, 1), new Object[] { "BPB", "BTB", "OOO", 'B', MBlocks.bronze_block, 'P', Blocks.piston, 'T', "ingotTitanium", 'O', Blocks.obsidian }));
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.plutonium_insulated), new Object[] { "SSS", "GBG", "SSS", 'S', "ingotSteel", 'G', MBlocks.framed_glass_pane, 'B', MBlocks.plutonium_block }));
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.uranium_insulated), new Object[] { "SSS", "GBG", "SSS", 'S', "ingotSteel", 'G', MBlocks.framed_glass_pane, 'B', MBlocks.uranium_block }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.crusher, 1), new Object[] { "BPB", "BTB", "OOO", 'B', "blockBronze", 'P', Blocks.piston, 'T', "ingotTitanium", 'O', Blocks.obsidian }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.plutonium_insulated), new Object[] { "SSS", "GBG", "SSS", 'S', "ingotSteel", 'G', MBlocks.framed_glass_pane, 'B', "blockPlutonium" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.uranium_insulated), new Object[] { "SSS", "GBG", "SSS", 'S', "ingotSteel", 'G', MBlocks.framed_glass_pane, 'B', "blockUranium" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MItems.sifter, 1), new Object[] { " C ", "CMC", " S ", 'C', "ingotCopper", 'M', MBlocks.steel_mesh, 'S', MItems.reinforced_stick }));
 		
 		//Materials
@@ -147,6 +163,10 @@ public class MDictionary
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.diamond_shovel), new Object[] { "I", "S", "S", 'I', Items.diamond, 'S', MItems.reinforced_stick }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.diamond_hoe), new Object[] { "II", " S", " S", 'I', Items.diamond, 'S', MItems.reinforced_stick }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.diamond_sword), new Object[] { "I", "I", "S", 'I', Items.diamond, 'S', MItems.reinforced_stick }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.quartz_block, 1, 0), new Object[] { "QQ", "QQ", 'Q', Items.quartz}));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.sandstone, 1, 0), new Object[] { "SS", "SS", 'S', new ItemStack(Blocks.sand, 1, 0)}));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.red_sandstone, 1, 0), new Object[] { "SS", "SS", 'S', new ItemStack(Blocks.sand, 1, 1)}));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.prismarine, 1, 0), new Object[] { "PP", "PP", 'P', Items.prismarine_shard}));
 	}
 	
 }

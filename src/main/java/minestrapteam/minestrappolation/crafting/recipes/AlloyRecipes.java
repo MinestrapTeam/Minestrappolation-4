@@ -35,7 +35,9 @@ public class AlloyRecipes
 	{
 		//Stones
 		this.addRecipe(new ItemStack(Blocks.cobblestone, 4, 0), new ItemStack(Blocks.quartz_block, 1, 0), new ItemStack(Blocks.stone, 4, 3), 0.3F);
+		this.addRecipe(new ItemStack(MBlocks.biome_cobble, 4, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.quartz_block, 1, 0), new ItemStack(Blocks.stone, 4, 3), 0.3F);
 		this.addRecipe(new ItemStack(Blocks.stone, 2, 3), new ItemStack(Blocks.cobblestone, 2, 0), new ItemStack(Blocks.stone, 4, 5), 0.3F);
+		this.addRecipe(new ItemStack(Blocks.stone, 2, 3), new ItemStack(MBlocks.biome_cobble, 2, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.stone, 4, 5), 0.3F);
 		this.addRecipe(new ItemStack(Blocks.stone, 4, 3), new ItemStack(Blocks.quartz_block, 1, 0), new ItemStack(Blocks.stone, 4, 1), 0.3F);
 		this.addRecipe(new ItemStack(Blocks.clay, 4, 0), new ItemStack(Blocks.quartz_block, 1, 0), new ItemStack(MBlocks.slate, 4, 0), 0.3F);
 		
@@ -46,7 +48,7 @@ public class AlloyRecipes
 		this.addRecipe(new ItemStack(MItems.chunks, 8, 3), new ItemStack(MItems.radiant_quartz, 1), new ItemStack(Items.prismarine_shard, 8), 1.5F);
 		this.addRecipe(new ItemStack(Items.blaze_powder, 1), new ItemStack(MItems.sunstone_shard, 1), new ItemStack(MItems.blaze_shard), 1F);
 		this.addRecipe(new ItemStack(Items.bone, 1), new ItemStack(MItems.blaze_shard, 4), new ItemStack(Items.blaze_rod), 1F);
-		this.addRecipe(new ItemStack(MItems.blaze_shard, 2), new ItemStack(Items.gold_ingot, 1), new ItemStack(MItems.blazium_ingot), 1F);
+		this.addRecipe(new ItemStack(MItems.blaze_shard, 3), new ItemStack(Items.gold_ingot, 1), new ItemStack(MItems.blazium_ingot), 1F);
 		
 		//Misc
 		this.addRecipe(new ItemStack(Blocks.pumpkin, 1), new ItemStack(MItems.pie_crust, 2), new ItemStack(Items.pumpkin_pie, 2), 0.3F);
