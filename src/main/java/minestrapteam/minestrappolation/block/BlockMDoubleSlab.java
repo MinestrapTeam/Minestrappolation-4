@@ -1,5 +1,6 @@
 package minestrapteam.minestrappolation.block;
 
+import minestrapteam.minestrappolation.lib.MBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.Block.SoundType;
 import net.minecraft.block.material.Material;
@@ -25,6 +26,8 @@ public class BlockMDoubleSlab extends BlockMSlab{
         	setStepSound(Block.soundTypeWood);
         else if(mat == Material.rock)
         	setStepSound(Block.soundTypePiston);
+		if(this == MBlocks.radiant_double_slab)
+        	this.setLightLevel(0.6F);
 	}
 
 	@Override
@@ -37,5 +40,14 @@ public class BlockMDoubleSlab extends BlockMSlab{
 	public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face)
 	{
 		return this.flammability;
+	}
+	
+	@Override
+	public boolean isBeaconBase(IBlockAccess worldObj, BlockPos pos, BlockPos beacon)
+	{
+		if (this == MBlocks.radiant_double_slab)
+			return true;
+		else
+			return false;
 	}
 }

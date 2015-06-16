@@ -1,6 +1,7 @@
 package minestrapteam.minestrappolation.block;
 
 import minestrapteam.minestrappolation.Minestrappolation;
+import minestrapteam.minestrappolation.lib.MBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;
@@ -32,6 +33,8 @@ public class BlockMSlab extends BlockSlab
         	setStepSound(Block.soundTypeWood);
         else if(mat == Material.rock)
         	setStepSound(Block.soundTypePiston);
+        if(this == MBlocks.radiant_slab)
+        	this.setLightLevel(0.6F);
     }
 
     @Override

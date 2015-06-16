@@ -1,0 +1,8 @@
+{
+    "parent": "block/cube_bottom_top",
+    "textures": {
+        "bottom": "ministrapp:blocks/radiant_quartz_chiseled",
+        "top": "ministrapp:blocks/radiant_quartz_chiseled",
+        "side": "ministrapp:blocks/radiant_quartz_chiseled"
+    }
+}

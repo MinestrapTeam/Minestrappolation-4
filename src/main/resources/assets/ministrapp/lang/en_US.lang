@@ -420,6 +420,12 @@ tile.desert_quartz_block.name=Block of Desert Quartz
 tile.desert_quartz_chiseled.name=Chiseled Desert Quartz
 tile.desert_quartz_slab.name=Desert Quartz Slab
 tile.desert_quartz_stairs.name=Desert Quartz Stairs
+tile.radiant_quartz_block.name=Block of Radiant Quartz
+tile.radiant_quartz_chiseled.name=Chiseled Radiant Quartz
+tile.radiant_quartz_slab.name=Radiant Quartz Slab
+tile.radiant_quartz_stairs.name=Radiant Quartz Stairs
+tile.desert_pillar.name=Desert Quartz Pillar
+tile.radiant_pillar.name=Radiant Quartz Pillar
 
 tile.flint_block.name=Block of Flint
 tile.sugar_block.name=Block of Sugar
