@@ -4,8 +4,11 @@ import java.util.Random;
 
 import minestrapteam.minestrappolation.lib.MBlocks;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockDirt;
 import net.minecraft.block.BlockGrass;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -63,5 +66,11 @@ public class BlockPermaFrost extends BlockGrass
 			}
 		}
 	}
+	
+	@Override
+	public Item getItemDropped(IBlockState state, Random rand, int fortune)
+    {
+        return MBlocks.dirt_permafrost.getItemDropped(MBlocks.dirt_permafrost.getDefaultState(), rand, fortune);
+    }
 	
 }

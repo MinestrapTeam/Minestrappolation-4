@@ -65,6 +65,7 @@ public class MRecipes
 		
 		GameRegistry.addSmelting(MBlocks.radiant_ore, new ItemStack(MItems.radiant_quartz), 1.2F);
 		GameRegistry.addSmelting(MBlocks.biome_radiant, new ItemStack(MItems.radiant_quartz), 1.2F);
+		GameRegistry.addRecipe(new ItemStack(MBlocks.radiant_block, 1), new Object[] { "QQ", "QQ", 'Q', MItems.radiant_quartz});
 		
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.titanium_ingot, 9), new Object[] { MBlocks.titanium_block });
 		

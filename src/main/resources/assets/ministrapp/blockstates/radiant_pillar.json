@@ -1,5 +1,7 @@
 {
-   "variants":{
-      "normal": { "model": "ministrapp:radiant_quartz_pillar" }
+   "variants": {
+        "axis=y": { "model": "ministrapp:radiant_quartz_pillar" },
+        "axis=z": { "model": "ministrapp:radiant_quartz_pillar_side" },
+        "axis=x": { "model": "ministrapp:radiant_quartz_pillar_side", "y": 90 }
    }
 }

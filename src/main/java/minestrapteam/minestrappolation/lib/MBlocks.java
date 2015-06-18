@@ -847,6 +847,8 @@ public class MBlocks
 		{
 			registerRender(block);
 		}
+		registerRender(redwood_door_item);
+		registerRender(frozen_door_item);
 	}
 	
 	private static void register(Block block)
@@ -915,11 +917,11 @@ public class MBlocks
 		glass_window.setHarvestLevel("pickaxe", 0);
 		framed_glass_pane.setHarvestLevel("pickaxe", 0);
 		steel_mesh.setHarvestLevel("pickaxe", 0);
-		stone_boulder.setHarvestLevel("pickaxe", 1);
-		red_rock_boulder.setHarvestLevel("pickaxe", 1);
-		coldstone_boulder.setHarvestLevel("pickaxe", 1);
-		icestone_boulder.setHarvestLevel("pickaxe", 1);
-		oceanstone_boulder.setHarvestLevel("pickaxe", 1);
+		stone_boulder.setHarvestLevel("pickaxe", 2);
+		red_rock_boulder.setHarvestLevel("pickaxe", 2);
+		coldstone_boulder.setHarvestLevel("pickaxe", 2);
+		icestone_boulder.setHarvestLevel("pickaxe", 2);
+		oceanstone_boulder.setHarvestLevel("pickaxe", 2);
 		stone_lamp_glowstone.setHarvestLevel("pickaxe", 0);
 		stone_lamp_prismarine.setHarvestLevel("pickaxe", 0);
 		stone_lamp_sunstone.setHarvestLevel("pickaxe", 0);

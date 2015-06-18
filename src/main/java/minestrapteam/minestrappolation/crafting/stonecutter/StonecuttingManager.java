@@ -147,6 +147,7 @@ public class StonecuttingManager
 		this.addRecipe(new ItemStack(Blocks.quartz_block, 1, 1), null, new Object[] { "S", "S", 'S', new ItemStack(Blocks.stone_slab, 1, 7)});
 		this.addRecipe(new ItemStack(Blocks.red_sandstone, 1, 1), null, new Object[] { "S", "S", 'S', new ItemStack(Blocks.stone_slab2, 1, 0)});
 		this.addRecipe(new ItemStack(MBlocks.desert_quartz_chiseled, 1), null, new Object[] { "S", "S", 'S', new ItemStack(MBlocks.desert_quartz_slab, 1)});
+		this.addRecipe(new ItemStack(MBlocks.radiant_chiseled, 1), null, new Object[] { "S", "S", 'S', new ItemStack(MBlocks.radiant_slab, 1)});
 		this.addRecipe(new ItemStack(MBlocks.chiseled, 1, 0), null, new Object[] { "S", "S", 'S', new ItemStack(MBlocks.deepstone_slab, 1)});
 		this.addRecipe(new ItemStack(MBlocks.chiseled, 1, 1), null, new Object[] { "S", "S", 'S', new ItemStack(MBlocks.red_rock_slab, 1)});
 		this.addRecipe(new ItemStack(MBlocks.chiseled, 1, 2), null, new Object[] { "S", "S", 'S', new ItemStack(MBlocks.deep_red_rock_slab, 1)});
@@ -171,7 +172,9 @@ public class StonecuttingManager
 		this.addRecipe(new ItemStack(MBlocks.flint_tiles, 4, 0), null, new Object[] { "BB", "BB", 'B', new ItemStack(MBlocks.flint_refined, 1, 0) });
 		
 		//Pillars
-		this.addRecipe(new ItemStack(Blocks.quartz_block, 1, 2), null, new Object[] { "S", "S", 'S', new ItemStack(Blocks.quartz_block, 1, 0)});
+		this.addRecipe(new ItemStack(Blocks.quartz_block, 2, 2), null, new Object[] { "S", "S", 'S', new ItemStack(Blocks.quartz_block, 1, 0)});
+		this.addRecipe(new ItemStack(MBlocks.desert_quartz_block, 2), null, new Object[] { "S", "S", 'S', new ItemStack(MBlocks.desert_quartz_block, 1)});
+		this.addRecipe(new ItemStack(MBlocks.radiant_pillar, 2), null, new Object[] { "S", "S", 'S', new ItemStack(MBlocks.radiant_block, 1)});
 		
 		//Lamps
 		this.addRecipe(new ItemStack(MBlocks.stone_lamp_glowstone, 4), null, new Object[] { " S ", "SGS", " S ", 'S', new ItemStack(Blocks.stonebrick, 1, 3), 'G', Blocks.glowstone });
@@ -219,6 +222,7 @@ public class StonecuttingManager
 		this.addRecipe(new ItemStack(Blocks.stone_slab2, 6, 0), null, new Object[] { "SSS", 'S', new ItemStack(Blocks.red_sandstone, 1, 0)});
 		
 		this.addRecipe(new ItemStack(MBlocks.desert_quartz_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.desert_quartz_block, 1)});
+		this.addRecipe(new ItemStack(MBlocks.radiant_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.radiant_block, 1)});
 		
 		this.addRecipe(new ItemStack(MBlocks.deepstone_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.biome_stones, 1, 0)});
 		this.addRecipe(new ItemStack(MBlocks.red_rock_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.biome_stones, 1, 1)});
@@ -259,6 +263,7 @@ public class StonecuttingManager
 		this.addRecipe(new ItemStack(Blocks.quartz_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(Blocks.quartz_block, 1, 0)});
 		this.addRecipe(new ItemStack(Blocks.red_sandstone_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(Blocks.red_sandstone, 1, 0)});
 		this.addRecipe(new ItemStack(MBlocks.desert_quartz_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(MBlocks.desert_quartz_block, 1)});
+		this.addRecipe(new ItemStack(MBlocks.radiant_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(MBlocks.radiant_block, 1)});
 		this.addRecipe(new ItemStack(MBlocks.deepstone_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(MBlocks.biome_cobble, 1, 0)});
 		this.addRecipe(new ItemStack(MBlocks.coldstone_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(MBlocks.biome_cobble, 1, 3)});
 		this.addRecipe(new ItemStack(MBlocks.deep_coldstone_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(MBlocks.biome_cobble, 1, 4)});

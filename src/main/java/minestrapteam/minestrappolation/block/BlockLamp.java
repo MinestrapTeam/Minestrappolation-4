@@ -39,6 +39,12 @@ public class BlockLamp extends MBlock{
 	}
 	
 	@Override
+	public int damageDropped(IBlockState state)
+	{
+		return ((MStoneType) state.getValue(VARIANT)).getMetadata();
+	}
+	
+	@Override
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item itemIn, CreativeTabs tab, List list)
 	{
