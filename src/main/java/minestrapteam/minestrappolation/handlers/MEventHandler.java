@@ -11,6 +11,7 @@ import minestrapteam.minestrappolation.lib.MReference;
 import minestrapteam.minestrappolation.util.ChunkHelper;
 import minestrapteam.minestrappolation.util.VersionChecker;
 import minestrapteam.minestrappolation.world.MBiomeManager;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockNetherWart;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityItem;
@@ -21,7 +22,9 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
+import net.minecraftforge.event.entity.player.FillBucketEvent;
 import net.minecraftforge.event.world.BlockEvent;
+import net.minecraftforge.fml.common.eventhandler.Event.Result;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -134,6 +137,18 @@ public class MEventHandler
 		}
 		
 		
+	}
+	
+	@SubscribeEvent
+	public void onBucketFill(FillBucketEvent event)
+	{
+		IBlockState block = event.world.getBlockState(event.target.getBlockPos());
+		if (block.getBlock() == MBlocks.magma)
+		{
+			event.result = new ItemStack(MBlocks.magmaBucket);
+			event.world.setBlockToAir(event.target.getBlockPos());
+			event.setResult(Result.ALLOW);
+		}
 	}
 	
 }

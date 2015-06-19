@@ -24,6 +24,7 @@ import minestrapteam.minestrappolation.block.BlockMPane;
 import minestrapteam.minestrappolation.block.BlockMSand;
 import minestrapteam.minestrappolation.block.BlockMSlab;
 import minestrapteam.minestrappolation.block.BlockMStorage;
+import minestrapteam.minestrappolation.block.BlockMagma;
 import minestrapteam.minestrappolation.block.BlockMelter;
 import minestrapteam.minestrappolation.block.BlockMossyBricks;
 import minestrapteam.minestrappolation.block.BlockMossyCobble;
@@ -121,6 +122,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemBucket;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class MBlocks
@@ -348,6 +350,9 @@ public class MBlocks
 	public static BlockMSlab       poceanstone_brick_slab;
 	public static BlockMDoubleSlab poceanstone_brick_double_slab;
 	
+	//Fluid
+	public static Block magma;
+	
 	// Fence
 	public static Block	redwood_fence;
 	public static Block	redwood_fence_gate;
@@ -372,6 +377,8 @@ public class MBlocks
 	// BLOCK ITEMS
 	public static Item	redwood_door_item;
 	public static Item  frozen_door_item;
+	
+	public static Item	magmaBucket;
 	
 	public static void init()
 	{
@@ -630,6 +637,9 @@ public class MBlocks
 		redwood_door_item = new ItemMDoor(redwood_door).setUnlocalizedName("redwood_door_item");
 		frozen_door_item = new ItemMDoor(frozen_door).setUnlocalizedName("frozen_oak_door_item");
 		
+		magma = new BlockMagma().setUnlocalizedName("magma");
+		magmaBucket = new ItemBucket(magma).setUnlocalizedName("magma_bucket").setCreativeTab(Minestrappolation.tabMBuilding);
+		
 		Blocks.bedrock.setHardness(70F);
 		
 		register();
@@ -839,6 +849,9 @@ public class MBlocks
 		registerSlab("glacierrock_brick_slab", "glacierrock_brick_double_slab", glacierrock_brick_slab, glacierrock_brick_double_slab);
 		registerSlab("oceanstone_brick_slab", "oceanstone_brick_double_slab", oceanstone_brick_slab, oceanstone_brick_double_slab);
 		registerSlab("poceanstone_brick_slab", "poceanstone_brick_double_slab", poceanstone_brick_slab, poceanstone_brick_double_slab);
+		
+		GameRegistry.registerBlock(magma, magma.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(magmaBucket, magmaBucket.getUnlocalizedName().substring(5));
 	}
 	
 	public static void registerRenders()

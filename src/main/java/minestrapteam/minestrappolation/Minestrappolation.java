@@ -9,12 +9,21 @@ import minestrapteam.minestrappolation.handlers.MGuiHandler;
 import minestrapteam.minestrappolation.lib.MAchievements;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MDictionary;
+import minestrapteam.minestrappolation.lib.MFluid;
 import minestrapteam.minestrappolation.lib.MItems;
 import minestrapteam.minestrappolation.lib.MRecipes;
 import minestrapteam.minestrappolation.lib.MReference;
 import minestrapteam.minestrappolation.util.Tables;
 import minestrapteam.minestrappolation.world.MBiomeManager;
 import minestrapteam.minestrappolation.world.MGenHandler;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.renderer.ItemMeshDefinition;
+import net.minecraft.client.renderer.block.statemap.StateMapperBase;
+import net.minecraft.client.resources.model.ModelBakery;
+import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
@@ -46,8 +55,9 @@ public class Minestrappolation
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
-	{
+	{	
 		Config.configInit(event);
+		MFluid.init();
 		MItems.init();
 		MBlocks.init();
 		
@@ -61,6 +71,9 @@ public class Minestrappolation
 		Tables.loadTables();
 		
 		MAchievements.load();
+		MFluid.load();
+		
+		MFluid.buildRenderFor(MBlocks.magma, "magma");
 
 		MinecraftForge.EVENT_BUS.register(new MEventHandler());
 		FMLCommonHandler.instance().bus().register(new MFMLEventHandler());
