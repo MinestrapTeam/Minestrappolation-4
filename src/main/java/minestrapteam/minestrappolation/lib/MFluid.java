@@ -20,7 +20,7 @@ public class MFluid
 	
 	public static void init()
 	{
-		MAGMA = new Fluid("magma", new ResourceLocation("blocks/water_still"), new ResourceLocation("blocks/water_flow")).setLuminosity(10).setViscosity(6500).setDensity(4000).setTemperature(1500);
+		MAGMA = new Fluid("magma", getResource("magma_still"), getResource("magma_flowing")).setLuminosity(10).setViscosity(6500).setDensity(4000).setTemperature(1500);
 		FluidRegistry.registerFluid(MAGMA);
 	}
 	
@@ -31,7 +31,7 @@ public class MFluid
 	
 	public static ResourceLocation getResource(String name)
 	{
-		return new ResourceLocation(MReference.MODID, "textures/fluid/" + name + ".png");
+		return new ResourceLocation(MReference.MODID, "fluid/" + name);
 	}
 	
 	public static void buildRenderFor(Block block, String name)
