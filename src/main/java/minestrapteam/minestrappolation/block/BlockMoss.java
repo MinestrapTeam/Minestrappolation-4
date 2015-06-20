@@ -9,6 +9,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.BlockDirt;
 import net.minecraft.block.IGrowable;
+import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
@@ -23,14 +24,22 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockMoss extends BlockBush implements IGrowable
 {
-
-	public BlockMoss() 
+	private final MapColor mapColor;
+	
+	public BlockMoss(MapColor mapColor) 
 	{
 		super(Material.snow);
+		this.mapColor = mapColor;
 		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.0625F, 1.0F);
         this.setTickRandomly(true);
         this.setCreativeTab(Minestrappolation.tabMDecor);
         this.setBlockBoundsFromMeta(0);
+	}
+	
+	@Override
+	public MapColor getMapColor(IBlockState state)
+	{
+		return this.mapColor;
 	}
 	
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)

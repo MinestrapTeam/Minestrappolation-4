@@ -88,15 +88,18 @@ public class MGenHandler implements IWorldGenerator
 		this.generateOre(MBlocks.slate, world, rand, x1, z1, 10, 33, 18, 0, 80, BlockHelper.forBlock(Blocks.stone));
 		this.generateBoulder(world, rand, x1, z1);
 		
-		if (biome == BiomeGenBase.jungle || biome == BiomeGenBase.jungleEdge || biome == BiomeGenBase.jungleHills || biome == BiomeGenBase.swampland || biome == BiomeGenBase.roofedForest)
+		if (biome == BiomeGenBase.jungle || biome == BiomeGenBase.jungleEdge || biome == BiomeGenBase.jungleHills || biome == BiomeGenBase.swampland || biome == BiomeGenBase.roofedForest || biome == MBiomeManager.redwood)
 		{
 			this.generateOre(MBlocks.torite_ore, world, rand, x1, z1, 1, 6, 4, 1, 20, BlockHelper.forBlock(Blocks.stone));
 		}
-		if (biome == BiomeGenBase.desert || biome == BiomeGenBase.desertHills)
+		if (biome == BiomeGenBase.desert || biome == BiomeGenBase.desertHills || biome == MBiomeManager.redwood)
 		{
 			this.generateDesertQuartz(world, rand, x1, z1);
 		}
-		
+		if (biome == BiomeGenBase.forest || biome == BiomeGenBase.megaTaiga || biome == BiomeGenBase.megaTaigaHills || biome == BiomeGenBase.swampland || biome == MBiomeManager.redwood)
+		{
+			this.generateMoss(world, rand, x1, z1);
+		}
 		// Redwood Trees
 		if (biome instanceof BiomeGenHills || biome instanceof BiomeGenTaiga)
 		{
@@ -156,6 +159,19 @@ public class MGenHandler implements IWorldGenerator
 		{
 			int xRand = chunkX * 16 + rand.nextInt(16);
 			int yRand = rand.nextInt(100);
+			int zRand = chunkZ * 16 + rand.nextInt(16);
+			BlockPos position = new BlockPos(xRand, yRand, zRand);
+			gen.generate(world, rand, position);
+		}
+	}
+	
+	private void generateMoss(World world, Random rand, int chunkX, int chunkZ)
+	{
+		WorldGenMoss gen = new WorldGenMoss();
+		for (int i = 0; i < 5; i++)
+		{
+			int xRand = chunkX * 16 + rand.nextInt(16);
+			int yRand = rand.nextInt(256);
 			int zRand = chunkZ * 16 + rand.nextInt(16);
 			BlockPos position = new BlockPos(xRand, yRand, zRand);
 			gen.generate(world, rand, position);

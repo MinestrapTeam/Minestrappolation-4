@@ -642,7 +642,7 @@ public class MBlocks
 		frozen_door_item = new ItemMDoor(frozen_door).setUnlocalizedName("frozen_oak_door_item");
 		
 		//Plants
-		moss = new BlockMoss().setUnlocalizedName("moss").setCreativeTab(Minestrappolation.tabMDecor);
+		moss = new BlockMoss(MapColor.greenColor).setHardness(0.3F).setStepSound(Block.soundTypeCloth).setUnlocalizedName("moss").setCreativeTab(Minestrappolation.tabMDecor);
 		
 		//Liquids
 		magma = new BlockMagma().setUnlocalizedName("magma");
@@ -899,6 +899,8 @@ public class MBlocks
 	
 	private static void registerHarvestLevels()
 	{
+		moss.setHarvestLevel("shovel", 0);
+		
 		slate.setHarvestLevel("pickaxe", 0);
 		slate_bricks.setHarvestLevel("pickaxe", 0);
 		slate_pattern_bricks.setHarvestLevel("pickaxe", 0);
