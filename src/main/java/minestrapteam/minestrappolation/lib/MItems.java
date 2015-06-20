@@ -45,6 +45,7 @@ public class MItems extends Item
 	public static Item							plutonium;
 	public static Item							uranium;
 	public static Item							tin_plating;
+	public static Item							steel_plating;
 	public static Item							meurodite_plating;
 	public static Item							reinforced_stick;
 	
@@ -194,6 +195,7 @@ public class MItems extends Item
 		plutonium = new Item().setUnlocalizedName("plutonium").setCreativeTab(Minestrappolation.tabMMaterials);
 		uranium = new Item().setUnlocalizedName("uranium").setCreativeTab(Minestrappolation.tabMMaterials);
 		tin_plating = new Item().setUnlocalizedName("tin_plating").setCreativeTab(Minestrappolation.tabMMaterials);
+		steel_plating = new Item().setUnlocalizedName("steel_plating").setCreativeTab(Minestrappolation.tabMMaterials);
 		meurodite_plating = new Item().setUnlocalizedName("meurodite_plating").setCreativeTab(Minestrappolation.tabMMaterials);
 		reinforced_stick = new Item().setUnlocalizedName("reinforced_stick").setCreativeTab(Minestrappolation.tabMMaterials);
 		
@@ -347,6 +349,7 @@ public class MItems extends Item
 		GameRegistry.registerItem(blazium_ingot, blazium_ingot.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(soul_gem, soul_gem.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(tin_plating, tin_plating.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(steel_plating, steel_plating.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(meurodite_plating, meurodite_plating.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerItem(dough, dough.getUnlocalizedName().substring(5));
@@ -461,6 +464,7 @@ public class MItems extends Item
 		registerRender(plutonium);
 		registerRender(uranium);
 		registerRender(tin_plating);
+		registerRender(steel_plating);
 		registerRender(meurodite_plating);
 		registerRender(reinforced_stick);
 		

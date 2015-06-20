@@ -17,6 +17,9 @@
       },
       "type=sand":{
          "model":"ministrapp:oceanstone_cobbled_road"
-      }
+      },
+	  "type=soul":{
+		 "model":"ministrapp:soul_steel_road"
+	  }
    }
 }

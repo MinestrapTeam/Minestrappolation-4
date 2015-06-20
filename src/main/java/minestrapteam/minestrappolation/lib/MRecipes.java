@@ -144,13 +144,6 @@ public class MRecipes
 		GameRegistry.addRecipe(new ItemStack(MBlocks.biome_cobble, 1, 5), new Object[] { "CC", "CC", 'C', new ItemStack(MItems.chunks, 1, 3)});
 		GameRegistry.addRecipe(new ItemStack(MBlocks.biome_cobble, 1, 7), new Object[] { "CC", "CC", 'C', new ItemStack(MItems.chunks, 1, 4)});
 		
-		GameRegistry.addRecipe(new ItemStack(MBlocks.roads, 3, 0), new Object[] { "CCC", "CCC", "DDD", 'C', new ItemStack(MItems.chunks, 1, 0), 'D', new ItemStack(Blocks.dirt, 1, 0)});
-		GameRegistry.addRecipe(new ItemStack(MBlocks.roads, 3, 1), new Object[] { "CCC", "CCC", "DDD", 'C', new ItemStack(MItems.chunks, 1, 1), 'D', new ItemStack(Blocks.sand, 1, 1)});
-		GameRegistry.addRecipe(new ItemStack(MBlocks.roads, 3, 2), new Object[] { "CCC", "CCC", "DDD", 'C', new ItemStack(MItems.chunks, 1, 2), 'D', new ItemStack(Blocks.gravel, 1, 0)});
-		GameRegistry.addRecipe(new ItemStack(MBlocks.roads, 3, 3), new Object[] { "CCC", "CCC", "DDD", 'C', new ItemStack(MItems.chunks, 1, 3), 'D', new ItemStack(MBlocks.dirt_permafrost, 1, 0)});
-		GameRegistry.addRecipe(new ItemStack(MBlocks.roads, 3, 4), new Object[] { "CCC", "CCC", "DDD", 'C', new ItemStack(MItems.chunks, 1, 4), 'D', new ItemStack(Blocks.sand, 1, 0)});
-		GameRegistry.addRecipe(new ItemStack(MBlocks.roads, 6, 5), new Object[] { "CCC", "CCC", "DDD", 'C', new ItemStack(Blocks.netherrack), 'D', new ItemStack(Blocks.soul_sand, 1, 0)});
-		
 		// Tech
 		GameRegistry.addRecipe(new ItemStack(MBlocks.alloy, 1), new Object[] { "TTT", "TFT", "BBB", 'T', new ItemStack(MItems.tin_plating), 'F', new ItemStack(Blocks.furnace), 'B', new ItemStack(MBlocks.biome_bricks, 1, 1) });
 		GameRegistry.addRecipe(new ItemStack(MBlocks.melter, 1), new Object[] { "MMM", "MFM", "IBI", 'M', new ItemStack(MItems.meurodite_plating), 'F', new ItemStack(Blocks.furnace), 'I', new ItemStack(Blocks.iron_bars), 'B', MBlocks.blazium_block });

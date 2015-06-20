@@ -397,6 +397,7 @@ sand_road.name=Cobbled Oceanstone Road
 red_sand_road.name=Cobbled Red Rock Road
 permafrost_road.name=Cracked Icestone Road
 nether_road.name=Netherrack Road
+soul_road.name=Soul Steel Road
 
 tile.slate.name=Slate
 tile.slate_bricks.name=Slate Bricks
@@ -500,6 +501,7 @@ torite_chunk.name=Torite Ore Chunk
 titanium_chunk.name=Titanium Ore Chunk
 
 item.tin_plating.name=Tin Plating
+item.steel_plating.name=Steel Plating
 item.meurodite_plating.name=Meurodite Plating
 item.reinforced_stick.name=Reinforced Stick
 

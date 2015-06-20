@@ -47,6 +47,10 @@ public class BlockRoads extends MBlock
 		double speed = MRoadType.byMetadata(this.getMetaFromState(state)).getSpeed();
 		entity.motionX *= speed;
 		entity.motionZ *= speed;
+		if(state.getValue(VARIANT) == MRoadType.SOUL)
+		{
+			entity.setFire(20);
+		}
 	}
 	
 	@Override
@@ -98,6 +102,7 @@ public class BlockRoads extends MBlock
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:permafrost_road");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:sand_road");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:nether_road");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:soul_road");
 	}
 	
 	public static void inventoryRender()

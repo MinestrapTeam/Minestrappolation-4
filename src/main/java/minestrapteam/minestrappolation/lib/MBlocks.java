@@ -72,6 +72,7 @@ import minestrapteam.minestrappolation.block.ore.BlockPlutoniumOre;
 import minestrapteam.minestrappolation.block.ore.BlockSoulOre;
 import minestrapteam.minestrappolation.block.ore.BlockUraniumOre;
 import minestrapteam.minestrappolation.block.ore.MBlockOre;
+import minestrapteam.minestrappolation.enumtypes.MRoadType;
 import minestrapteam.minestrappolation.enumtypes.MStoneType;
 import minestrapteam.minestrappolation.enumtypes.MWoodType;
 import minestrapteam.minestrappolation.item.ItemBlockBiomeBricks;
@@ -447,7 +448,7 @@ public class MBlocks
 		sugar_block = new BlockMFalling(Material.sand, MapColor.snowColor).setHardness(0.5F).setStepSound(Block.soundTypeGravel).setUnlocalizedName("sugar_block").setCreativeTab(Minestrappolation.tabMBuilding);
 		meat_block = new BlockMStorage(Material.clay, MapColor.pinkColor).setHardness(0.8F).setStepSound(Block.SLIME_SOUND).setUnlocalizedName("meat_block").setCreativeTab(Minestrappolation.tabMFood);
 		
-		roads = new BlockRoads(Material.rock, MapColor.blackColor).setUnlocalizedName("roads").setCreativeTab(Minestrappolation.tabMBuilding);
+		roads = new BlockRoads(Material.rock, MapColor.blackColor).setHardness(3.0F).setResistance(10.0F).setUnlocalizedName("roads").setCreativeTab(Minestrappolation.tabMBuilding);
 		chiseled = new BlockChiseled(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_chiseled");
 		mossy = new BlockMossyCobble(Material.rock, MapColor.stoneColor).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_mossy");
 		mossy_bricks = new BlockMossyBricks(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_mossy_bricks");
@@ -571,10 +572,10 @@ public class MBlocks
 		frozen_oak_double_slab = new BlockMDoubleSlab(Material.wood, "frozen_oak_double_slab", 2F, 5F, "axe", 0, 300);
 		
 		//Stone Slabs
-		desert_quartz_slab = new BlockMSlab(Material.rock, "desert_quartz_slab", 1F, 4F, "pickaxe", 1, 0);
+		desert_quartz_slab = new BlockMSlab(Material.rock, "desert_quartz_slab", 1F, 4F, "pickaxe", 0, 0);
 		desert_quartz_double_slab = new BlockMDoubleSlab(Material.rock, "desert_quartz_double_slab", 1F, 4F, "pickaxe", 0, 0);
-		radiant_slab = new BlockMSlab(Material.rock, "radiant_quartz_slab", 1F, 4F, "pickaxe", 1, 0);
-		radiant_double_slab = new BlockMDoubleSlab(Material.rock, "radiant_quartz_double_slab", 1F, 4F, "pickaxe", 0, 0);
+		radiant_slab = new BlockMSlab(Material.rock, "radiant_quartz_slab", 1F, 4F, "pickaxe", 3, 0);
+		radiant_double_slab = new BlockMDoubleSlab(Material.rock, "radiant_quartz_double_slab", 1F, 4F, "pickaxe", 3, 0);
 		
 		deepstone_slab = new BlockMSlab(Material.rock, "deepstone_slab", 2F, 10F, "pickaxe", 2, 0);
 		deepstone_double_slab = new BlockMDoubleSlab(Material.rock, "deepstone_double_slab", 2F, 10F, "pickaxe", 2, 0);
@@ -911,18 +912,23 @@ public class MBlocks
 		andesite_bricks.setHarvestLevel("pickaxe", 0);
 		andesite_pattern_bricks.setHarvestLevel("pickaxe", 0);
 		slate_refined.setHarvestLevel("pickaxe", 0);
-		flint_block.setHarvestLevel("pickaxe", 0);
-		flint_bricks.setHarvestLevel("pickaxe", 0);
-		flint_pattern_bricks.setHarvestLevel("pickaxe", 0);
-		flint_refined.setHarvestLevel("pickaxe", 0);
-		flint_tiles.setHarvestLevel("pickaxe", 0);
-		flint_chiseled.setHarvestLevel("pickaxe", 0);
-		flint_lamp_sunstone.setHarvestLevel("pickaxe", 0);
-		flint_lamp_glowstone.setHarvestLevel("pickaxe", 0);
-		flint_lamp_prismarine.setHarvestLevel("pickaxe", 0);
+		flint_block.setHarvestLevel("pickaxe", 1);
+		flint_bricks.setHarvestLevel("pickaxe", 1);
+		flint_pattern_bricks.setHarvestLevel("pickaxe", 1);
+		flint_refined.setHarvestLevel("pickaxe", 1);
+		flint_tiles.setHarvestLevel("pickaxe", 1);
+		flint_chiseled.setHarvestLevel("pickaxe", 1);
+		flint_lamp_sunstone.setHarvestLevel("pickaxe", 1);
+		flint_lamp_glowstone.setHarvestLevel("pickaxe", 1);
+		flint_lamp_prismarine.setHarvestLevel("pickaxe", 1);
 		desert_quartz_block.setHarvestLevel("pickaxe", 0);
 		desert_quartz_chiseled.setHarvestLevel("pickaxe", 0);
+		desert_pillar.setHarvestLevel("pickaxe", 0);
 		desert_quartz_stairs.setHarvestLevel("pickaxe", 0);
+		radiant_block.setHarvestLevel("pickaxe", 3);
+		radiant_chiseled.setHarvestLevel("pickaxe", 3);
+		radiant_pillar.setHarvestLevel("pickaxe", 3);
+		radiant_stairs.setHarvestLevel("pickaxe", 3);
 		snow_refined.setHarvestLevel("shovel", 0);
 		snow_tiles.setHarvestLevel("shovel", 0);
 		snow_bricks.setHarvestLevel("shovel", 0);
@@ -1095,6 +1101,14 @@ public class MBlocks
 		lamp_prismarine.setHarvestLevel("pickaxe", 2, lamp_prismarine.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
 		lamp_prismarine.setHarvestLevel("pickaxe", 2, lamp_prismarine.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
 		lamp_prismarine.setHarvestLevel("pickaxe", 2, lamp_prismarine.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
+		
+		// Roads
+		roads.setHarvestLevel("pickaxe", 0, roads.getStateFromMeta(MRoadType.COBBLE.getMetadata()));
+		roads.setHarvestLevel("pickaxe", 0, roads.getStateFromMeta(MRoadType.SAND.getMetadata()));
+		roads.setHarvestLevel("pickaxe", 0, roads.getStateFromMeta(MRoadType.REDSAND.getMetadata()));
+		roads.setHarvestLevel("pickaxe", 0, roads.getStateFromMeta(MRoadType.GRAVEL.getMetadata()));
+		roads.setHarvestLevel("pickaxe", 1, roads.getStateFromMeta(MRoadType.NETHER.getMetadata()));
+		roads.setHarvestLevel("pickaxe", 3, roads.getStateFromMeta(MRoadType.SOUL.getMetadata()));
 	}
 	
 	public static void registerSlab(String name, String name2, BlockMSlab one, BlockMDoubleSlab two)

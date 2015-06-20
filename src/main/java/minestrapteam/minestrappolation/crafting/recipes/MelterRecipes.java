@@ -57,6 +57,10 @@ public class MelterRecipes
 		//Vanilla Milk
 		this.addRecipe(Items.cake, new ItemStack(Items.milk_bucket), 0.4F);
 		
+		//Vanilla Magma
+		this.addRecipe(Blocks.bedrock, new ItemStack(MBlocks.magmaBucket), 2.0F);
+		this.addRecipe(Blocks.obsidian, new ItemStack(MBlocks.magmaBucket), 1.0F);
+		
 		//Minestrappolation Water
 		this.addRecipe(MBlocks.snow_bricks, new ItemStack(Items.water_bucket), 0.4F);
 		this.addRecipe(MBlocks.snow_refined, new ItemStack(Items.water_bucket), 0.4F);
@@ -77,9 +81,26 @@ public class MelterRecipes
 		this.addRecipe(MBlocks.lamp_prismarine, new ItemStack(Items.lava_bucket), 0.5F);
 		this.addRecipe(MBlocks.lamp_sunstone, new ItemStack(Items.lava_bucket), 0.5F);
 		this.addRecipe(MBlocks.slate, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.slate_bricks, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.slate_pattern_bricks, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.slate_refined, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.andesite_bricks, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.andesite_pattern_bricks, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.granite_bricks, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.granite_pattern_bricks, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.diorite_bricks, new ItemStack(Items.lava_bucket), 0.5F);
+		this.addRecipe(MBlocks.diorite_pattern_bricks, new ItemStack(Items.lava_bucket), 0.5F);
 		this.addRecipe(MBlocks.flint_block, new ItemStack(Items.lava_bucket), 0.7F);
+		this.addRecipe(MBlocks.flint_bricks, new ItemStack(Items.lava_bucket), 0.7F);
+		this.addRecipe(MBlocks.flint_pattern_bricks, new ItemStack(Items.lava_bucket), 0.7F);
+		this.addRecipe(MBlocks.flint_refined, new ItemStack(Items.lava_bucket), 0.7F);
+		this.addRecipe(MBlocks.flint_tiles, new ItemStack(Items.lava_bucket), 0.7F);
+		this.addRecipe(MBlocks.flint_chiseled, new ItemStack(Items.lava_bucket), 0.7F);
+		this.addRecipe(MBlocks.flint_lamp_glowstone, new ItemStack(Items.lava_bucket), 0.7F);
+		this.addRecipe(MBlocks.flint_lamp_sunstone, new ItemStack(Items.lava_bucket), 0.7F);
+		this.addRecipe(MBlocks.flint_lamp_prismarine, new ItemStack(Items.lava_bucket), 0.7F);
 		this.addRecipe(MBlocks.stonecutter, new ItemStack(Items.lava_bucket), 0.6F);
-		this.addRecipe(MBlocks.roads, new ItemStack(Items.lava_bucket), 0.4F);
+		this.addRecipe(MBlocks.roads, new ItemStack(Items.lava_bucket), 0.5F);
 		this.addRecipe(MBlocks.stone_boulder, new ItemStack(Items.lava_bucket), 0.6F);
 		this.addRecipe(MBlocks.red_rock_boulder, new ItemStack(Items.lava_bucket), 0.6F);
 		this.addRecipe(MBlocks.coldstone_boulder, new ItemStack(Items.lava_bucket), 0.6F);
