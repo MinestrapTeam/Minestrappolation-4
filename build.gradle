@@ -32,7 +32,7 @@ archivesBaseName = "Minestrappolation"
 
 minecraft
 {
-    version = "1.8-11.14.3.1446"
+    version = "1.8-11.14.3.1467"
     		
     if (file('../run').exists())
     {
