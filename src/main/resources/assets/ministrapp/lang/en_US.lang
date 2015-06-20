@@ -461,6 +461,8 @@ tile.sawmill.name=Carpenter's Bench
 tile.crusher.name=Crusher
 tile.frost_generator.name=Frost Generator
 
+tile.moss.name=Moss Lump
+
 item.dough.name=Dough
 item.sugar_dough.name=Sugar Dough
 item.chocolate_dough.name=Chocolate Dough
@@ -601,6 +603,7 @@ item.titanium_leggings.name=Titanium Leggings
 item.titanium_boots.name=Titanium Boots
 
 item.sifter.name=Mining Sieve
+item.magma_bucket.name=Bucket of Magma
 
 itemGroup.tabMBuilding=Minestrapp Building Blocks
 itemGroup.tabMDecor=Minestrapp Decoration Blocks

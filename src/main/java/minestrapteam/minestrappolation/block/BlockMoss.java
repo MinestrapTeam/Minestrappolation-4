@@ -24,7 +24,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class BlockMoss extends BlockBush implements IGrowable
 {
 
-	protected BlockMoss() 
+	public BlockMoss() 
 	{
 		super(Material.snow);
 		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.0625F, 1.0F);
@@ -37,7 +37,7 @@ public class BlockMoss extends BlockBush implements IGrowable
     {
         if (rand.nextInt(25) == 0)
         {
-            int i = 5;
+            int i = 12;
             boolean flag = true;
             Iterator iterator = BlockPos.getAllInBoxMutable(pos.add(-4, -1, -4), pos.add(4, 1, 4)).iterator();
 
@@ -100,7 +100,7 @@ public class BlockMoss extends BlockBush implements IGrowable
 	
 	public boolean canGrow(World worldIn, BlockPos pos, IBlockState state, boolean isClient)
     {
-        return false;
+        return true;
     }
 
 	public boolean isOpaqueCube()
@@ -113,9 +113,6 @@ public class BlockMoss extends BlockBush implements IGrowable
         return false;
     }
 
-    /**
-     * Sets the block's bounds for rendering it as an item
-     */
     public void setBlockBoundsForItemRender()
     {
         this.setBlockBoundsFromMeta(0);
@@ -161,11 +158,46 @@ public class BlockMoss extends BlockBush implements IGrowable
 	@Override
 	public boolean canUseBonemeal(World worldIn, Random rand, BlockPos pos, IBlockState state) 
 	{
-		return false;
+		return true;
 	}
 
 	@Override
 	public void grow(World worldIn, Random rand, BlockPos pos, IBlockState state) 
 	{
+		    int i = 12;
+            boolean flag = true;
+            Iterator iterator = BlockPos.getAllInBoxMutable(pos.add(-4, -1, -4), pos.add(4, 1, 4)).iterator();
+
+            while (iterator.hasNext())
+            {
+                BlockPos blockpos1 = (BlockPos)iterator.next();
+
+                if (worldIn.getBlockState(blockpos1).getBlock() == this)
+                {
+                    --i;
+
+                    if (i <= 0)
+                    {
+                        return;
+                    }
+                }
+            }
+
+            BlockPos blockpos2 = pos.add(rand.nextInt(3) - 1, rand.nextInt(2) - rand.nextInt(2), rand.nextInt(3) - 1);
+
+            for (int j = 0; j < 4; ++j)
+            {
+                if (worldIn.isAirBlock(blockpos2) && this.canBlockStay(worldIn, blockpos2, this.getDefaultState()))
+                {
+                    pos = blockpos2;
+                }
+
+                blockpos2 = pos.add(rand.nextInt(3) - 1, rand.nextInt(2) - rand.nextInt(2), rand.nextInt(3) - 1);
+            }
+
+            if (worldIn.isAirBlock(blockpos2) && this.canBlockStay(worldIn, blockpos2, this.getDefaultState()))
+            {
+                worldIn.setBlockState(blockpos2, this.getDefaultState(), 2);
+            }
 	}
 }

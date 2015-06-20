@@ -1,0 +1,7 @@
+{
+    "parent": "block/carpet",
+    "textures": {
+        "particle": "ministrapp:blocks/moss",
+        "wool": "ministrapp:blocks/moss"
+    }
+}

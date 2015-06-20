@@ -26,6 +26,7 @@ import minestrapteam.minestrappolation.block.BlockMSlab;
 import minestrapteam.minestrappolation.block.BlockMStorage;
 import minestrapteam.minestrappolation.block.BlockMagma;
 import minestrapteam.minestrappolation.block.BlockMelter;
+import minestrapteam.minestrappolation.block.BlockMoss;
 import minestrapteam.minestrappolation.block.BlockMossyBricks;
 import minestrapteam.minestrappolation.block.BlockMossyCobble;
 import minestrapteam.minestrappolation.block.BlockPatternBricks;
@@ -350,6 +351,9 @@ public class MBlocks
 	public static BlockMSlab       poceanstone_brick_slab;
 	public static BlockMDoubleSlab poceanstone_brick_double_slab;
 	
+	//Plants
+	public static Block moss;
+	
 	//Fluid
 	public static Block magma;
 	
@@ -637,8 +641,12 @@ public class MBlocks
 		redwood_door_item = new ItemMDoor(redwood_door).setUnlocalizedName("redwood_door_item");
 		frozen_door_item = new ItemMDoor(frozen_door).setUnlocalizedName("frozen_oak_door_item");
 		
+		//Plants
+		moss = new BlockMoss().setUnlocalizedName("moss").setCreativeTab(Minestrappolation.tabMDecor);
+		
+		//Liquids
 		magma = new BlockMagma().setUnlocalizedName("magma");
-		magmaBucket = new ItemBucket(magma).setUnlocalizedName("magma_bucket").setCreativeTab(Minestrappolation.tabMBuilding);
+		magmaBucket = new ItemBucket(magma).setUnlocalizedName("magma_bucket").setCreativeTab(Minestrappolation.tabMTools);
 		
 		Blocks.bedrock.setHardness(70F);
 		
@@ -784,6 +792,7 @@ public class MBlocks
 		register(soul_ore);
 		register(invincium);
 		
+		register(moss);
 		register(ministrapp_sapling, ItemBlockSapling.class);
 		register(ministrapp_leaves, ItemBlockLeaves.class);
 		register(dead_branch);
@@ -862,6 +871,7 @@ public class MBlocks
 		}
 		registerRender(redwood_door_item);
 		registerRender(frozen_door_item);
+		registerRender(magmaBucket);
 	}
 	
 	private static void register(Block block)
