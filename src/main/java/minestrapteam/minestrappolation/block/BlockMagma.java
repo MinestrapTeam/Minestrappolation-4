@@ -3,6 +3,7 @@ package minestrapteam.minestrappolation.block;
 import minestrapteam.minestrappolation.enumtypes.MStoneType;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MFluid;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -39,34 +40,56 @@ public class BlockMagma extends BlockFluidClassic
     {
         if (this.blockMaterial == Material.lava)
         {
-            boolean flag = false;
+            String flag = "none";
             EnumFacing[] aenumfacing = EnumFacing.values();
             int i = aenumfacing.length;
+            Block block;
 
             for (int j = 0; j < i; ++j)
             {
                 EnumFacing enumfacing = aenumfacing[j];
 
-                if (enumfacing != EnumFacing.DOWN && worldIn.getBlockState(pos.offset(enumfacing)).getBlock().getMaterial() == Material.water)
+                if (enumfacing != EnumFacing.DOWN && worldIn.getBlockState(pos.offset(enumfacing)).getBlock() == Blocks.flowing_lava)
                 {
-                    flag = true;
+                	block = worldIn.getBlockState(pos.offset(enumfacing)).getBlock();
+                    flag = "lava";
+                    break;
+                }
+                if (enumfacing != EnumFacing.DOWN && worldIn.getBlockState(pos.offset(enumfacing)).getBlock() == Blocks.flowing_water)
+                {
+                    flag = "water_flowing";
                     break;
                 }
             }
 
-            if (flag)
+            if (flag.equals("water_flowing"))
             {
                 Integer integer = (Integer)state.getValue(LEVEL);
 
                 if (integer.intValue() == 0)
                 {
-                    worldIn.setBlockState(pos, MBlocks.biome_stones.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
+                    worldIn.setBlockState(pos, Blocks.bedrock.getDefaultState());
                     return true;
                 }
 
                 if (integer.intValue() <= 4)
                 {
-                    worldIn.setBlockState(pos, MBlocks.biome_cobble.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
+                    worldIn.setBlockState(pos, Blocks.obsidian.getDefaultState());
+                    return true;
+                }
+            }
+            if (flag.equals("lava"))
+            {
+            	Integer integer = (Integer)state.getValue(LEVEL);
+            	if (integer.intValue() == 0)
+                {
+                    worldIn.setBlockState(pos, Blocks.flowing_lava.getStateFromMeta(integer));
+                    return true;
+                }
+            	
+            	if (integer.intValue() <= 4)
+                {
+                    worldIn.setBlockState(pos, Blocks.flowing_lava.getStateFromMeta(integer));
                     return true;
                 }
             }
