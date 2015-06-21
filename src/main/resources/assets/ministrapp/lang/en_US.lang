@@ -213,6 +213,8 @@ tile.frozen_oak_fence.name=Frozen Oak Fence
 item.frozen_oak_door_item.name=Frozen Oak Door
 tile.dead_branch.name=Dead Branches
 
+item.glass_door_item.name=Glass Door
+
 tile.stone_pattern_bricks.name=Patterned Stone Bricks
 tile.stone_refined.name=Polished Stone
 tile.stone_tiles.name=Stone Tiles
@@ -427,6 +429,7 @@ tile.radiant_quartz_slab.name=Radiant Quartz Slab
 tile.radiant_quartz_stairs.name=Radiant Quartz Stairs
 tile.desert_pillar.name=Desert Quartz Pillar
 tile.radiant_pillar.name=Radiant Quartz Pillar
+tile.obsidian_bricks.name=Obsidian Bricks
 
 tile.flint_block.name=Block of Flint
 tile.sugar_block.name=Block of Sugar
@@ -441,6 +444,8 @@ tile.glass_tiles.name=Tiled Glass
 tile.tiled_pane.name=Tiled Glass Pane
 tile.glass_window.name=Framed Glass
 tile.framed_pane.name=Framed Glass Pane
+tile.glow_glass.name=Glow Glass
+tile.glow_glass_pane.name=Glow Glass Pane
 
 tile.steel_mesh.name=Steel Mesh
 

@@ -82,6 +82,7 @@ public class StonecuttingManager
 		this.addRecipe(new ItemStack(Blocks.prismarine, 1, 1), null, new Object[] { "BB", "BB", 'B', Items.prismarine_shard});
 		this.addRecipe(new ItemStack(Blocks.brick_block, 1, 0), null, new Object[] { "BB", "BB", 'B', Items.brick});
 		this.addRecipe(new ItemStack(Blocks.nether_brick, 1, 0), null, new Object[] { "BB", "BB", 'B', Items.netherbrick});
+		this.addRecipe(new ItemStack(MBlocks.obsidian_bricks, 1), null, new Object[] { "BB", "BB", 'B', MItems.obsidian_brick});
 		
 		//Mossy Brick Blocks
 		this.addRecipe(new ItemStack(Blocks.stonebrick, 9, 1), new ItemStack(MBlocks.moss), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(Blocks.stonebrick, 1, 0)});

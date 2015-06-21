@@ -45,7 +45,7 @@ public class BlockTransparent extends MBlock
 		IBlockState iblockstate = worldIn.getBlockState(pos);
 		Block block = iblockstate.getBlock();
 		
-		if (this == MBlocks.glass_bricks || this == MBlocks.glass_refined || this == MBlocks.glass_tiles || this == MBlocks.glass_window)
+		if (this == MBlocks.glass_bricks || this == MBlocks.glass_refined || this == MBlocks.glass_tiles || this == MBlocks.glass_window || this == MBlocks.glow_glass)
 		{
 			if (worldIn.getBlockState(pos.offset(side.getOpposite())) != iblockstate)
 				return true;

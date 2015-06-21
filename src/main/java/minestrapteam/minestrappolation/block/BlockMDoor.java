@@ -32,6 +32,10 @@ public class BlockMDoor extends BlockDoor
 		{
 			return MBlocks.redwood_door_item;
 		}
+		else if(this == MBlocks.glass_door)
+		{
+			return MBlocks.glass_door_item;
+		}
 		return null;
 		
 	}

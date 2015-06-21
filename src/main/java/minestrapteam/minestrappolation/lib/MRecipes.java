@@ -99,6 +99,7 @@ public class MRecipes
 		GameRegistry.addRecipe(new ItemStack(MBlocks.refined_glass_pane, 16), new Object[] { "GGG", "GGG", 'G', MBlocks.glass_refined });
 		GameRegistry.addRecipe(new ItemStack(MBlocks.tiled_glass_pane, 16), new Object[] { "GGG", "GGG", 'G', MBlocks.glass_tiles });
 		GameRegistry.addRecipe(new ItemStack(MBlocks.framed_glass_pane, 16), new Object[] { "GGG", "GGG", 'G', MBlocks.glass_window });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.glow_glass_pane, 16), new Object[] { "GGG", "GGG", 'G', MBlocks.glow_glass });
 		
 		GameRegistry.addRecipe(new ItemStack(MBlocks.flint_block, 1), new Object[] { "FF", "FF", 'F', Items.flint});
 		GameRegistry.addRecipe(new ItemStack(MBlocks.sugar_block, 1), new Object[] { "SSS", "SSS", "SSS", 'S', Items.sugar});

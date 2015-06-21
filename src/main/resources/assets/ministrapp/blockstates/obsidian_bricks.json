@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "ministrapp:obsidian_bricks" }
+    }
+}

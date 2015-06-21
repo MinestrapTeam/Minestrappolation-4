@@ -1,0 +1,7 @@
+{
+    "parent": "block/pane_ns",
+    "textures": {
+        "edge": "ministrapp:blocks/glow_glass",
+        "pane": "ministrapp:blocks/glow_glass"
+    }
+}

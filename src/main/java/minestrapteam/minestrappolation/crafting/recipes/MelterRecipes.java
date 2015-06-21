@@ -131,7 +131,11 @@ public class MelterRecipes
 		this.addRecipe(MBlocks.oceanstone_brick_stairs, new ItemStack(Items.lava_bucket), 0.5F);
 		this.addRecipe(MBlocks.poceanstone_brick_stairs, new ItemStack(Items.lava_bucket), 0.5F);
 		
+		//Minestrappolation Magma
+		this.addRecipe(MBlocks.obsidian_bricks, new ItemStack(MBlocks.magmaBucket), 1.0F);
+		
 		//Misc
+		this.addRecipe(Blocks.glowstone, new ItemStack(MBlocks.glow_glass), 1.0F);
 		this.addRecipe(MBlocks.titanium_ore, new ItemStack(MItems.titanium_ingot), 2.0F);
 		this.addRecipe(MBlocks.biome_titanium, new ItemStack(MItems.titanium_ingot), 2.0F);
 		this.addRecipe(new ItemStack(MItems.chunks, 1, 10), new ItemStack(MItems.titanium_ingot), 2.0F);

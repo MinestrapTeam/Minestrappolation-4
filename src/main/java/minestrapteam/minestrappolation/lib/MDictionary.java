@@ -141,8 +141,7 @@ public class MDictionary
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.crate, 1), new Object[] { "WWW", "SSS", "WWW", 'W', "plankWood", 'S', "stickWood" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.sawmill, 1), new Object[] { "CC", "WW", "WW", 'C', "ingotCopper", 'W', "plankWood" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.stonecutter, 1), new Object[] { "II", "CC", "CC", 'I', "ingotIron", 'C', "cobblestone" }));
-		//TODO: Replace Obsidian with Obsidian Bricks in Crusher recipe.
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.crusher, 1), new Object[] { "BPB", "BTB", "OOO", 'B', "blockBronze", 'P', Blocks.piston, 'T', "ingotTitanium", 'O', Blocks.obsidian }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.crusher, 1), new Object[] { "BPB", "BTB", "OOO", 'B', "blockBronze", 'P', Blocks.piston, 'T', "ingotTitanium", 'O', MBlocks.obsidian_bricks }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.plutonium_insulated), new Object[] { "SSS", "GBG", "SSS", 'S', "ingotSteel", 'G', MBlocks.framed_glass_pane, 'B', "blockPlutonium" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.uranium_insulated), new Object[] { "SSS", "GBG", "SSS", 'S', "ingotSteel", 'G', MBlocks.framed_glass_pane, 'B', "blockUranium" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MItems.sifter, 1), new Object[] { " C ", "CMC", " S ", 'C', "ingotCopper", 'M', MBlocks.steel_mesh, 'S', MItems.reinforced_stick }));
@@ -152,6 +151,7 @@ public class MDictionary
 		
 		//Decor
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.meat_block, 1), new Object[] { "MMM", "MMM", "MMM", 'M', "meatRaw" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.glass_door_item, 3), new Object[] { "II", "GG", "II", 'I', Blocks.iron_bars, 'G', "paneGlassColorless"}));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.steel_mesh, 16), new Object[] { "SSS", "SSS", 'S', "ingotSteel" }));
 		
 		//Vanilla
