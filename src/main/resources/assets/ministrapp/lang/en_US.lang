@@ -452,6 +452,7 @@ tile.steel_mesh.name=Steel Mesh
 tile.snow_bricks.name=Snow Bricks
 tile.snow_refined.name=Packed Snow
 tile.snow_tiles.name=Snow Tiles
+tile.melon_bricks.name=Melon Bricks
 
 tile.dirt_permafrost.name=Permafrost
 cold_sand.name=Cold Sand
