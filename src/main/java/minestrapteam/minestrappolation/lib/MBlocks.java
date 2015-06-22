@@ -9,6 +9,7 @@ import minestrapteam.minestrappolation.block.BlockBiomeBricks;
 import minestrapteam.minestrappolation.block.BlockBlazium;
 import minestrapteam.minestrappolation.block.BlockBoulder;
 import minestrapteam.minestrappolation.block.BlockChiseled;
+import minestrapteam.minestrappolation.block.BlockColdCobweb;
 import minestrapteam.minestrappolation.block.BlockCrackedBricks;
 import minestrapteam.minestrappolation.block.BlockCrate;
 import minestrapteam.minestrappolation.block.BlockCrusher;
@@ -150,6 +151,7 @@ public class MBlocks
 	public static Block	uranium_insulated;
 	public static Block	sugar_block;
 	public static Block	meat_block;
+	public static Block cold_cobweb;
 	
 	public static Block	slate;
 	public static Block	slate_bricks;
@@ -475,6 +477,7 @@ public class MBlocks
 		cold_sand = new BlockMSand().setUnlocalizedName("cold_sand").setHardness(0.7F).setStepSound(Block.soundTypeSand).setCreativeTab(Minestrappolation.tabMBuilding);
 		lichen_permafrost = new BlockPermaFrost().setUnlocalizedName("permafrost").setHardness(1F).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMBuilding);
 		dirt_permafrost = new BlockPermaFrostDirt(Material.ground, MapColor.cyanColor).setHardness(0.9F).setStepSound(Block.soundTypeGravel).setUnlocalizedName("dirt_permafrost").setCreativeTab(Minestrappolation.tabMBuilding);
+		cold_cobweb = new BlockColdCobweb().setLightOpacity(1).setHardness(5.0F).setUnlocalizedName("cold_cobweb");
 		
 		// Door
 		redwood_door = new BlockMDoor(Material.wood).setHardness(3.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("redwood_door");
@@ -815,6 +818,7 @@ public class MBlocks
 		register(ministrapp_sapling, ItemBlockSapling.class);
 		register(ministrapp_leaves, ItemBlockLeaves.class);
 		register(dead_branch);
+		register(cold_cobweb);
 		register(redwood_fence);
 		register(frozen_oak_fence);
 		register(refined_glass_pane);

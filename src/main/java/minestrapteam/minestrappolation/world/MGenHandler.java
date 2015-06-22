@@ -101,7 +101,7 @@ public class MGenHandler implements IWorldGenerator
 			this.generateMoss(world, rand, x1, z1);
 		}
 		// Redwood Trees
-		if (biome instanceof BiomeGenHills || biome instanceof BiomeGenTaiga)
+		if (biome == BiomeGenBase.extremeHills || biome == BiomeGenBase.taigaHills)
 		{
 			new WorldGenRedWoodTreeSmall().generate(world, rand, pos);
 		}

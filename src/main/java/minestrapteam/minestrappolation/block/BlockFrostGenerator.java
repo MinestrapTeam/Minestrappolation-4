@@ -124,6 +124,7 @@ public class BlockFrostGenerator extends MBlock
 		}
 		
 		this.canFreeze.put(Blocks.sponge.getStateFromMeta(1), Blocks.snow.getDefaultState());
+		this.canFreeze.put(Blocks.web.getDefaultState(), MBlocks.cold_cobweb.getDefaultState());
 	}
 	
 	@Override

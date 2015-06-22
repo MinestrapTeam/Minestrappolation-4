@@ -458,6 +458,7 @@ tile.dirt_permafrost.name=Permafrost
 cold_sand.name=Cold Sand
 cold_red_sand.name=Cold Red Sand
 permafrost.name=Lichen-Coated Permafrost
+tile.cold_cobweb.name=Frozen Cobweb
 
 tile.crate.name=Crate
 tile.barrel.name=Barrel
