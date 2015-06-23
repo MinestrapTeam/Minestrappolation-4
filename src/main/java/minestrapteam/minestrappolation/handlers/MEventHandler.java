@@ -40,7 +40,7 @@ public class MEventHandler
 		if (event.entity instanceof EntityPlayer)
 		{
 			EntityPlayer player = (EntityPlayer) event.entity;
-			if (event.world.isRemote == false)
+			if (event.world.isRemote == false && Config.checkForUpdates)
 			{
 				check.run();
 				event.entity.addChatMessage(VersionChecker.uptoDate);

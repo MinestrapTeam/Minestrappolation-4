@@ -6,6 +6,7 @@ import minestrapteam.minestrappolation.inventory.container.ContainerCrate;
 import minestrapteam.minestrappolation.inventory.container.ContainerCrusher;
 import minestrapteam.minestrappolation.inventory.container.ContainerMelter;
 import minestrapteam.minestrappolation.inventory.container.ContainerSawmill;
+import minestrapteam.minestrappolation.inventory.container.ContainerSplitter;
 import minestrapteam.minestrappolation.inventory.container.ContainerStoneCutter;
 import minestrapteam.minestrappolation.inventory.gui.GuiAlloy;
 import minestrapteam.minestrappolation.inventory.gui.GuiBarrel;
@@ -13,6 +14,7 @@ import minestrapteam.minestrappolation.inventory.gui.GuiCrate;
 import minestrapteam.minestrappolation.inventory.gui.GuiCrusher;
 import minestrapteam.minestrappolation.inventory.gui.GuiMelter;
 import minestrapteam.minestrappolation.inventory.gui.GuiSawmill;
+import minestrapteam.minestrappolation.inventory.gui.GuiSplitter;
 import minestrapteam.minestrappolation.inventory.gui.GuiStoneCutter;
 import minestrapteam.minestrappolation.tileentity.TileEntityAlloy;
 import minestrapteam.minestrappolation.tileentity.TileEntityBarrel;
@@ -20,6 +22,7 @@ import minestrapteam.minestrappolation.tileentity.TileEntityCrate;
 import minestrapteam.minestrappolation.tileentity.TileEntityCrusher;
 import minestrapteam.minestrappolation.tileentity.TileEntityMelter;
 import minestrapteam.minestrappolation.tileentity.TileEntitySawMill;
+import minestrapteam.minestrappolation.tileentity.TileEntitySplitter;
 import minestrapteam.minestrappolation.tileentity.TileEntityStoneCutter;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
@@ -36,6 +39,7 @@ public class MGuiHandler implements IGuiHandler
 	public static final int	GUIID_STONECUTTER	= 5;
 	public static final int	GUIID_SAWMILL		= 6;
 	public static final int	GUIID_CRUSHER		= 6;
+	public static final int	GUIID_SPLITTER		= 7;
 	
 	@Override
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
@@ -92,6 +96,13 @@ public class MGuiHandler implements IGuiHandler
 		{
 			TileEntityCrusher tileEntityCrusher = (TileEntityCrusher) tileEntity;
 			return new ContainerCrusher(player, tileEntityCrusher);
+		}
+		
+		// Splitter
+		if (tileEntity instanceof TileEntitySplitter)
+		{
+			TileEntitySplitter tileEntityCrusher = (TileEntitySplitter) tileEntity;
+			return new ContainerSplitter(player, tileEntityCrusher);
 		}
 		
 		return null;
@@ -152,6 +163,13 @@ public class MGuiHandler implements IGuiHandler
 		{
 			TileEntityCrusher tileEntityCrusher = (TileEntityCrusher) tileEntity;
 			return new GuiCrusher(player, tileEntityCrusher);
+		}
+		
+		// Splitter
+		if (tileEntity instanceof TileEntitySplitter)
+		{
+			TileEntitySplitter tileEntitySplitter = (TileEntitySplitter) tileEntity;
+			return new GuiSplitter(player, tileEntitySplitter);
 		}
 		
 		return null;

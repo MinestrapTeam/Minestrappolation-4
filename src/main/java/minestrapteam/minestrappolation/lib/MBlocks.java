@@ -40,6 +40,7 @@ import minestrapteam.minestrappolation.block.BlockRefined;
 import minestrapteam.minestrappolation.block.BlockRoads;
 import minestrapteam.minestrappolation.block.BlockSawmill;
 import minestrapteam.minestrappolation.block.BlockSoul;
+import minestrapteam.minestrappolation.block.BlockSplitter;
 import minestrapteam.minestrappolation.block.BlockStoneCutter;
 import minestrapteam.minestrappolation.block.BlockSunstoneBlock;
 import minestrapteam.minestrappolation.block.BlockTiles;
@@ -251,6 +252,8 @@ public class MBlocks
 	public static Block	sawmill;
 	public static Block	crusher;
 	public static Block	crusher_active;
+	public static Block splitter;
+	public static Block splitter_active;
 	
 	// Biome Stones
 	public static Block	biome_coal;
@@ -540,6 +543,8 @@ public class MBlocks
 		crusher = new BlockCrusher(false).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("crusher").setHardness(7F).setResistance(100.0F).setStepSound(Block.soundTypePiston);
 		crusher_active = new BlockCrusher(true).setUnlocalizedName("crusher_active").setHardness(7F).setResistance(100.0F).setStepSound(Block.soundTypePiston);
 		frost_generator = new BlockFrostGenerator(Material.rock, MapColor.iceColor).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("frost_generator");
+		splitter = new BlockSplitter(false).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("splitter");
+		splitter_active = new BlockSplitter(true).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("splitter_active");
 		
 		// Stairs
 		redwood_stairs = new MBlockStairs(ministrapp_planks.getStateFromMeta(MWoodType.REDWOOD.getMetadata()), 300).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("redwood_stairs");
@@ -849,6 +854,8 @@ public class MBlocks
 		register(frost_generator);
 		register(crusher);
 		register(crusher_active);
+		register(splitter);
+		register(splitter_active);
 		
 		register(desert_pillar);
 		register(radiant_pillar);

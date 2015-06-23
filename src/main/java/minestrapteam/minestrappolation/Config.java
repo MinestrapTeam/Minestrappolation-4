@@ -12,6 +12,8 @@ public class Config
 	public static Boolean	blaziumFireEffect;
 	public static Boolean   frostSpeedEffect;
 	
+	public static Boolean checkForUpdates;
+	
 	// Integers
 	public static int		soulGemDropChance;
 	public static int		soulBlockDamage;
@@ -25,6 +27,8 @@ public class Config
 		radiationEffects = config.get("Mechanics", "RadiationEffects", true).getBoolean();
 		blaziumFireEffect = config.get("Mechanics", "BlaziumFireEffect", true).getBoolean();
 		frostSpeedEffect = config.get("Mechanics", "TheFrostSpeedEffect", true).getBoolean();
+		
+		checkForUpdates = config.get("Mechanics", "CheckForUpdates", true).getBoolean();
 		
 		soulGemDropChance = config.get("Mechanics", "SoulGemDropChance", 3).getInt();
 		soulBlockDamage = config.get("Mechanics", "SoulBlockDamage", 200).getInt();

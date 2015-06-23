@@ -43,6 +43,7 @@ import minestrapteam.minestrappolation.tileentity.TileEntityCrate;
 import minestrapteam.minestrappolation.tileentity.TileEntityCrusher;
 import minestrapteam.minestrappolation.tileentity.TileEntityMelter;
 import minestrapteam.minestrappolation.tileentity.TileEntitySawMill;
+import minestrapteam.minestrappolation.tileentity.TileEntitySplitter;
 import minestrapteam.minestrappolation.tileentity.TileEntityStoneCutter;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.item.EntityXPOrb;
@@ -113,6 +114,7 @@ public abstract class CommonProxy implements IGuiHandler
 		GameRegistry.registerTileEntity(TileEntityStoneCutter.class, "tile_entity_stonecutter");
 		GameRegistry.registerTileEntity(TileEntitySawMill.class, "tile_entity_sawmill");
 		GameRegistry.registerTileEntity(TileEntityCrusher.class, "tile_entity_crusher");
+		GameRegistry.registerTileEntity(TileEntitySplitter.class, "tile_entity_splitter");
 		
 		MAchievements.preInit();
 	}
