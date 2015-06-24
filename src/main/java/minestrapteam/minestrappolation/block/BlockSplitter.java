@@ -102,13 +102,13 @@ public class BlockSplitter extends BlockDirectional
 	@Override
 	public boolean isOpaqueCube()
 	{
-		return true;
+		return false;
 	}
 	
 	@Override
 	public boolean isFullCube()
 	{
-		return true;
+		return false;
 	}
 	
 	@Override

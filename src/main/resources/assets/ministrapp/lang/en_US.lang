@@ -468,6 +468,7 @@ tile.stonecutter.name=Stonecutter
 tile.sawmill.name=Carpenter's Bench
 tile.crusher.name=Crusher
 tile.frost_generator.name=Frost Generator
+tile.splitter.name=Alchemical Splitter
 
 tile.moss.name=Moss Lump
 

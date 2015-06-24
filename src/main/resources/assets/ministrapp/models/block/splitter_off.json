@@ -1,9 +1,9 @@
 {
 "__comment": "Designed by - with BDcraft Cubik PRO 0.93 Beta - http://bdcraft.net",
 "textures": {
-    "particle": "blocks/splitter_base_off",
-    "Base": "blocks/splitter_base_off",
-    "Gem": "blocks/splitter_gem_off"
+    "particle": "ministrapp:blocks/splitter_base_off",
+    "Base": "ministrapp:blocks/splitter_base_off",
+    "Gem": "ministrapp:blocks/splitter_gem_off"
 },
 "elements": [ 
 {

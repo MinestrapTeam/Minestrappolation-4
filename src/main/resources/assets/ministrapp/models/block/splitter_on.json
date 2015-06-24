@@ -1,13 +1,13 @@
 {
 "__comment": "Designed by - with BDcraft Cubik PRO 0.93 Beta - http://bdcraft.net",
 "textures": {
-    "particle": "blocks/radiant_quartz_chiseled",
-    "Base": "blocks/radiant_quartz_chiseled",
-    "Gem": "blocks/splitter_gem_on",
-    "Inside": "blocks/torite_block",
-    "Core": "blocks/sunstone_block",
-    "Aura1": "blocks/godstone_layer_1",
-    "Aura2": "blocks/godstone_layer_2"
+    "particle": "ministrapp:blocks/radiant_quartz_chiseled",
+    "Base": "ministrapp:blocks/radiant_quartz_chiseled",
+    "Gem": "ministrapp:blocks/splitter_gem_on",
+    "Inside": "ministrapp:blocks/torite_block",
+    "Core": "ministrapp:blocks/sunstone_block",
+    "Aura1": "ministrapp:blocks/godstone_layer_1",
+    "Aura2": "ministrapp:blocks/godstone_layer_2"
 },
 "elements": [ 
 {
@@ -480,30 +480,6 @@
         "south": { "uv": [ 6, 6, 10, 10 ], "texture": "#Core" },
         "west":  { "uv": [ 6, 6, 10, 10 ], "texture": "#Core" },
         "east":  { "uv": [ 6, 6, 10, 10 ], "texture": "#Core" }
-    }
-},
-{
-    "from": [ 5.5, 9.5, 5.5 ],
-    "to": [ 10.5, 14.5, 10.5 ],
-    "faces": {
-        "down":  { "uv": [ 10.5, 10.5, 5.5, 5.5 ], "texture": "#Aura1" },
-        "up":    { "uv": [ 5.5, 5.5, 10.5, 10.5 ], "texture": "#Aura1" },
-        "north": { "uv": [ 5.5, 5.5, 10.5, 10.5 ], "texture": "#Aura1" },
-        "south": { "uv": [ 5.5, 5.5, 10.5, 10.5 ], "texture": "#Aura1" },
-        "west":  { "uv": [ 5.5, 5.5, 10.5, 10.5 ], "texture": "#Aura1" },
-        "east":  { "uv": [ 5.5, 5.5, 10.5, 10.5 ], "texture": "#Aura1" }
-    }
-},
-{
-    "from": [ 5, 9, 5 ],
-    "to": [ 11, 15, 11 ],
-    "faces": {
-        "down":  { "uv": [ 11, 11, 5, 5 ], "texture": "#Aura2" },
-        "up":    { "uv": [ 5, 5, 11, 11 ], "texture": "#Aura2" },
-        "north": { "uv": [ 5, 5, 11, 11 ], "texture": "#Aura2" },
-        "south": { "uv": [ 5, 5, 11, 11 ], "texture": "#Aura2" },
-        "west":  { "uv": [ 5, 5, 11, 11 ], "texture": "#Aura2" },
-        "east":  { "uv": [ 5, 5, 11, 11 ], "texture": "#Aura2" }
     }
 },
 {
