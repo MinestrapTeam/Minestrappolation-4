@@ -40,6 +40,7 @@ public class BlockSplitter extends BlockDirectional
 		if (active)
 		{
 			this.setLightLevel(1F);
+			this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.05F, 1.45F, 1.05F);
 		}
 	}
 	
@@ -57,13 +58,13 @@ public class BlockSplitter extends BlockDirectional
 		
 		if (active)
 		{
-			worldIn.setBlockState(pos, MBlocks.splitter.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
-			worldIn.setBlockState(pos, MBlocks.splitter.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+			worldIn.setBlockState(pos, MBlocks.splitter_active.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+			worldIn.setBlockState(pos, MBlocks.splitter_active.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
 		}
 		else
 		{
-			worldIn.setBlockState(pos, MBlocks.splitter_active.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
-			worldIn.setBlockState(pos, MBlocks.splitter_active.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+			worldIn.setBlockState(pos, MBlocks.splitter.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+			worldIn.setBlockState(pos, MBlocks.splitter.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
 		}
 		
 		keepInventory = false;

@@ -3,6 +3,7 @@ package minestrapteam.minestrappolation.tileentity;
 import minestrapteam.minestrappolation.block.BlockMelter;
 import minestrapteam.minestrappolation.block.BlockSplitter;
 import minestrapteam.minestrappolation.crafting.recipes.SplitterRecipes;
+import minestrapteam.minestrappolation.lib.MItems;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.inventory.SlotFurnaceFuel;
@@ -31,7 +32,7 @@ public class TileEntitySplitter extends TileEntityInventory implements ISidedInv
 	
 	public final int getMaxSplitTime()
 	{
-		return 100;
+		return 200;
 	}
 	
 	@Override
@@ -237,16 +238,13 @@ public class TileEntitySplitter extends TileEntityInventory implements ISidedInv
 	
 	public static int getItemBurnTime(ItemStack stack)
 	{
-		if (stack == null)
-			return 0;
-		
-		int i = TileEntityFurnace.getItemBurnTime(stack);
-		if (i == 0)
+		Item item = null;
+		if(stack != null)
 		{
-			Item item = stack.getItem();
+			item = stack.getItem();
 		}
-		
-		return i;
+		if(item == MItems.soul_gem) return 1600;
+		return 0;
 	}
 	
 	@Override
