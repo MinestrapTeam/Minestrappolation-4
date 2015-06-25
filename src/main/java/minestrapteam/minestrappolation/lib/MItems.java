@@ -37,6 +37,10 @@ public class MItems extends Item
 	public static Item							pie_crust;
 	public static Item							apple_pie;
 	public static Item							fried_egg;
+	public static Item							blueberry;
+	public static Item							blackberry;
+	public static Item							raspberry;
+	
 	public static Item							copper_ingot;
 	public static Item							tin_ingot;
 	public static Item							sunstone_shard;
@@ -187,6 +191,10 @@ public class MItems extends Item
 		pie_crust = new ItemFood(2, 0.2F, false).setUnlocalizedName("pie_crust").setCreativeTab(Minestrappolation.tabMFood);
 		apple_pie = new ItemFood(6, 0.7F, false).setUnlocalizedName("apple_pie").setCreativeTab(Minestrappolation.tabMFood);
 		fried_egg = new ItemMSoup(6, 0.4F).setUnlocalizedName("fried_egg").setCreativeTab(Minestrappolation.tabMFood);
+		blueberry = new ItemFood(1, 0.3F, false).setUnlocalizedName("blueberry").setCreativeTab(Minestrappolation.tabMFood);
+		blackberry = new ItemFood(1, 0.3F, false).setUnlocalizedName("blackberry").setCreativeTab(Minestrappolation.tabMFood);
+		raspberry = new ItemFood(1, 0.3F, false).setUnlocalizedName("raspberry").setCreativeTab(Minestrappolation.tabMFood);
+		
 		copper_ingot = new Item().setUnlocalizedName("copper_ingot").setCreativeTab(Minestrappolation.tabMMaterials);
 		tin_ingot = new Item().setUnlocalizedName("tin_ingot").setCreativeTab(Minestrappolation.tabMMaterials);
 		bronze_ingot = new Item().setUnlocalizedName("bronze_ingot").setCreativeTab(Minestrappolation.tabMMaterials);
@@ -361,6 +369,9 @@ public class MItems extends Item
 		GameRegistry.registerItem(pie_crust, pie_crust.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(apple_pie, apple_pie.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(fried_egg, fried_egg.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(blueberry, blueberry.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(blackberry, blackberry.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(raspberry, raspberry.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerItem(copper_pickaxe, copper_pickaxe.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(copper_axe, copper_axe.getUnlocalizedName().substring(5));
@@ -456,6 +467,10 @@ public class MItems extends Item
 		registerRender(pie_crust);
 		registerRender(apple_pie);
 		registerRender(fried_egg);
+		registerRender(blueberry);
+		registerRender(blackberry);
+		registerRender(raspberry);
+		
 		registerRender(copper_ingot);
 		registerRender(tin_ingot);
 		registerRender(bronze_ingot);
