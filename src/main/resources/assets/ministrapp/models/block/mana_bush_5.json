@@ -1,0 +1,8 @@
+{
+    "parent": "ministrapp:block/bush_base_5_alt",
+    "textures": {
+        "cross": "ministrapp:blocks/mana_stem",
+		"leaves": "ministrapp:blocks/mana_leaves",
+		"layer": "ministrapp:blocks/mana_aura"
+    }
+}

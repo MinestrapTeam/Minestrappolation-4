@@ -1,10 +1,10 @@
 {
     "variants": {
-       "age=0": { "model": "ministrapp:bush" },
-	  "age=1": { "model": "ministrapp:bush" },
-       "age=2": { "model": "ministrapp:bush" },
-       "age=3": { "model": "ministrapp:bush" },
-       "age=4": { "model": "ministrapp:bush" },
-       "age=5": { "model": "ministrapp:blueberry" }
+       "age=0": { "model": "ministrapp:blueberry_bush_0" },
+	  "age=1": { "model": "ministrapp:blueberry_bush_1" },
+       "age=2": { "model": "ministrapp:blueberry_bush_2" },
+       "age=3": { "model": "ministrapp:blueberry_bush_3" },
+       "age=4": { "model": "ministrapp:blueberry_bush_4" },
+       "age=5": { "model": "ministrapp:blueberry_bush_5" }
     }
 }
