@@ -1,0 +1,10 @@
+{
+    "variants": {
+       "age=0": { "model": "ministrapp:bush" },
+	  "age=1": { "model": "ministrapp:bush" },
+       "age=2": { "model": "ministrapp:bush" },
+       "age=3": { "model": "ministrapp:bush" },
+       "age=4": { "model": "ministrapp:bush" },
+       "age=5": { "model": "ministrapp:blueberry" }
+    }
+}

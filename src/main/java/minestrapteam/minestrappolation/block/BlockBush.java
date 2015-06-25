@@ -1,6 +1,8 @@
 package minestrapteam.minestrappolation.block;
 
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Random;
 
 import minestrapteam.minestrappolation.Minestrappolation;
@@ -24,49 +26,40 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumWorldBlockLayer;
+import net.minecraft.world.ColorizerFoliage;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.BiomeColorHelper;
 import net.minecraftforge.common.EnumPlantType;
 import net.minecraftforge.common.IPlantable;
+import net.minecraftforge.common.IShearable;
 import net.minecraftforge.common.util.FakePlayer;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockBush extends MBlock implements IPlantable{
+public class BlockBush extends MBlock implements IPlantable, IShearable{
 
 	public static final PropertyInteger AGE = PropertyInteger.create("age", 0, 5);
     public Item item;
 	
     public BlockBush(Item item)
     {
-        super(Material.plants, MapColor.greenColor);
+        super(Material.leaves, MapColor.greenColor);
         this.setDefaultState(this.blockState.getBaseState().withProperty(AGE, Integer.valueOf(0)));
+        this.setLightOpacity(1);
         this.setTickRandomly(true);
         this.item = item;
     }
 
     public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
     {
-    	System.out.println("ticked");
         if (worldIn.getBlockState(pos.down()).getBlock() == this || this.checkForDrop(worldIn, pos, state))
-        {
-           
-                int i;
-
-                for (i = 1; worldIn.getBlockState(pos.down(i)).getBlock() == this; ++i)
-                {
-                    
-                }
-
-                if (i < 3)
-                {
+        {                   
                     int j = ((Integer)state.getValue(AGE)).intValue();
                     if(j < 5)
                     {
-                    	worldIn.setBlockState(pos, state.withProperty(AGE, Integer.valueOf(j + 1)), 4);
-                    }
-                    System.out.println(j);
-               }     
+                    	worldIn.setBlockState(pos, state.withProperty(AGE, Integer.valueOf(j + 1)), 2);
+                    }  
         }
     }
     
@@ -77,7 +70,7 @@ public class BlockBush extends MBlock implements IPlantable{
     		{
     			if(worldIn.isRemote)
     				return true;
-    			worldIn.setBlockState(pos, this.getDefaultState(), 4);
+    			worldIn.setBlockState(pos, this.getDefaultState(), 2);
     			EntityItem ei = new EntityItem(worldIn, playerIn.posX, playerIn.posY, playerIn.posZ, new ItemStack(item));
     			worldIn.spawnEntityInWorld(ei);
     			if(playerIn instanceof FakePlayer)
@@ -132,15 +125,6 @@ public class BlockBush extends MBlock implements IPlantable{
         return null;
     }
 
-    @SideOnly(Side.CLIENT)
-    public int colorMultiplier(IBlockAccess worldIn, BlockPos pos, int renderPass)
-    {
-        return worldIn.getBiomeGenForCoords(pos).getGrassColorAtPos(pos);
-    }
-
-    /**
-     * Convert the given metadata into a BlockState for this Block
-     */
     public IBlockState getStateFromMeta(int meta)
     {
         return this.getDefaultState().withProperty(AGE, Integer.valueOf(meta));
@@ -152,9 +136,6 @@ public class BlockBush extends MBlock implements IPlantable{
         return EnumWorldBlockLayer.CUTOUT;
     }
 
-    /**
-     * Convert the BlockState into the correct metadata value
-     */
     public int getMetaFromState(IBlockState state)
     {
         return ((Integer)state.getValue(AGE)).intValue();
@@ -175,5 +156,30 @@ public class BlockBush extends MBlock implements IPlantable{
     {
         return this.getDefaultState();
     }
+    
+    @Override
+	public boolean isOpaqueCube()
+	{
+		return false;
+	}
+    
+    @Override
+	public boolean isVisuallyOpaque()
+	{
+		return false;
+	}
 
+    @Override
+	public boolean isShearable(ItemStack item, IBlockAccess world, BlockPos pos)
+	{
+		return true;
+	}
+
+	@Override
+	public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune) {
+		ArrayList<ItemStack> list = new ArrayList();
+		list.add(new ItemStack(this, 1, 0));
+		return list;
+	}
+	
 }
