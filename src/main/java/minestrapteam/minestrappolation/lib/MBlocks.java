@@ -8,6 +8,7 @@ import minestrapteam.minestrappolation.block.BlockBarrel;
 import minestrapteam.minestrappolation.block.BlockBiomeBricks;
 import minestrapteam.minestrappolation.block.BlockBlazium;
 import minestrapteam.minestrappolation.block.BlockBoulder;
+import minestrapteam.minestrappolation.block.BlockBush;
 import minestrapteam.minestrappolation.block.BlockChiseled;
 import minestrapteam.minestrappolation.block.BlockColdCobweb;
 import minestrapteam.minestrappolation.block.BlockCrackedBricks;
@@ -120,7 +121,6 @@ import minestrapteam.minestrappolation.item.BiomeItems.ItemBlockBiomeUranium;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.BlockFenceGate;
-import net.minecraft.block.BlockMelon;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -387,6 +387,9 @@ public class MBlocks
 	// Misc
 	public static Block	frost_generator;
 	public static Block	invincium;
+	
+	//Plants
+	public static Block chem_bush;
 	
 	//Pillars
 	public static Block desert_pillar;
@@ -672,6 +675,8 @@ public class MBlocks
 		magma = new BlockMagma().setUnlocalizedName("magma");
 		magmaBucket = new ItemBucket(magma).setUnlocalizedName("magma_bucket").setCreativeTab(Minestrappolation.tabMTools);
 		
+		chem_bush = new BlockBush(MItems.soul_gem).setCreativeTab(Minestrappolation.tabMFood).setUnlocalizedName("chem_bush");
+		
 		Blocks.bedrock.setHardness(70F);
 		
 		register();
@@ -891,6 +896,8 @@ public class MBlocks
 		registerSlab("glacierrock_brick_slab", "glacierrock_brick_double_slab", glacierrock_brick_slab, glacierrock_brick_double_slab);
 		registerSlab("oceanstone_brick_slab", "oceanstone_brick_double_slab", oceanstone_brick_slab, oceanstone_brick_double_slab);
 		registerSlab("poceanstone_brick_slab", "poceanstone_brick_double_slab", poceanstone_brick_slab, poceanstone_brick_double_slab);
+		
+		register(chem_bush);
 		
 		GameRegistry.registerBlock(magma, magma.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(magmaBucket, magmaBucket.getUnlocalizedName().substring(5));
