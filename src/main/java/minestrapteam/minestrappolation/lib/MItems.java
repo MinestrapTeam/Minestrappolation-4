@@ -191,9 +191,9 @@ public class MItems extends Item
 		pie_crust = new ItemFood(2, 0.2F, false).setUnlocalizedName("pie_crust").setCreativeTab(Minestrappolation.tabMFood);
 		apple_pie = new ItemFood(6, 0.7F, false).setUnlocalizedName("apple_pie").setCreativeTab(Minestrappolation.tabMFood);
 		fried_egg = new ItemMSoup(6, 0.4F).setUnlocalizedName("fried_egg").setCreativeTab(Minestrappolation.tabMFood);
-		blueberry = new ItemFood(1, 0.3F, false).setUnlocalizedName("blueberry").setCreativeTab(Minestrappolation.tabMFood);
-		blackberry = new ItemFood(1, 0.3F, false).setUnlocalizedName("blackberry").setCreativeTab(Minestrappolation.tabMFood);
-		raspberry = new ItemFood(1, 0.3F, false).setUnlocalizedName("raspberry").setCreativeTab(Minestrappolation.tabMFood);
+		blueberry = new ItemFood(0, 1.0F, false).setPotionEffect(Potion.healthBoost.id, 10, 0, 0.3F).setUnlocalizedName("blueberry").setCreativeTab(Minestrappolation.tabMFood);
+		blackberry = new ItemFood(1, 0.4F, false).setPotionEffect(Potion.digSpeed.id, 10, 0, 0.3F).setUnlocalizedName("blackberry").setCreativeTab(Minestrappolation.tabMFood);
+		raspberry = new ItemFood(1, 0.0F, false).setPotionEffect(Potion.heal.id, 1, 0, 0.3F).setUnlocalizedName("raspberry").setCreativeTab(Minestrappolation.tabMFood);
 		
 		copper_ingot = new Item().setUnlocalizedName("copper_ingot").setCreativeTab(Minestrappolation.tabMMaterials);
 		tin_ingot = new Item().setUnlocalizedName("tin_ingot").setCreativeTab(Minestrappolation.tabMMaterials);

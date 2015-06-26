@@ -471,6 +471,9 @@ tile.frost_generator.name=Frost Generator
 tile.splitter.name=Alchemical Splitter
 
 tile.moss.name=Moss Lump
+tile.blueberry_bush.name=Blueberry Bush
+tile.raspberry_bush.name=Raspberry Bush
+tile.blackberry_bush.name=Blackberry Bush
 
 item.dough.name=Dough
 item.sugar_dough.name=Sugar Dough
@@ -479,6 +482,9 @@ item.sugar_cookie.name=Sugar Cookie
 item.pie_crust.name=Pie Crust
 item.apple_pie.name=Apple Pie
 item.fried_egg.name=Fried Egg
+item.blueberry.name=Blueberries
+item.raspberry.name=Raspberries
+item.blackberry.name=Blackberries
 
 item.copper_ingot.name=Copper Ingot
 item.tin_ingot.name=Tin Ingot
