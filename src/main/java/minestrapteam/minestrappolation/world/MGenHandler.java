@@ -117,6 +117,10 @@ public class MGenHandler implements IWorldGenerator
 		{
 			this.generateBerries(world, rand, x1, z1, new WorldGenRaspberry());
 		}
+		if(biome == BiomeGenBase.mushroomIsland || biome == BiomeGenBase.mushroomIslandShore || biome == BiomeGenBase.deepOcean || biome == BiomeGenBase.ocean)
+		{
+			this.generateBerries(world, rand, x1, z1, new WorldGenMana());
+		}
 		
 		
 		// Redwood Trees

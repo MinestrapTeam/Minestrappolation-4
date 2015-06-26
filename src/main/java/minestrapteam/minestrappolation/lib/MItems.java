@@ -41,6 +41,7 @@ public class MItems extends Item
 	public static Item							blueberry;
 	public static Item							blackberry;
 	public static Item							raspberry;
+	public static Item							mana_leaf;
 	
 	public static Item							copper_ingot;
 	public static Item							tin_ingot;
@@ -196,6 +197,7 @@ public class MItems extends Item
 		blueberry = new ItemFood(0, 1.0F, false).setPotionEffect(Potion.healthBoost.id, 10, 0, 0.3F).setUnlocalizedName("blueberry").setCreativeTab(Minestrappolation.tabMFood);
 		blackberry = new ItemFood(1, 0.4F, false).setPotionEffect(Potion.digSpeed.id, 10, 0, 0.3F).setUnlocalizedName("blackberry").setCreativeTab(Minestrappolation.tabMFood);
 		raspberry = new ItemFood(1, 0.0F, false).setPotionEffect(Potion.heal.id, 1, 0, 0.3F).setUnlocalizedName("raspberry").setCreativeTab(Minestrappolation.tabMFood);
+		mana_leaf = new Item().setUnlocalizedName("mana_leaf").setCreativeTab(Minestrappolation.tabMMaterials);
 		
 		copper_ingot = new Item().setUnlocalizedName("copper_ingot").setCreativeTab(Minestrappolation.tabMMaterials);
 		tin_ingot = new Item().setUnlocalizedName("tin_ingot").setCreativeTab(Minestrappolation.tabMMaterials);
@@ -327,6 +329,7 @@ public class MItems extends Item
 	public static void register()
 	{
 		GameRegistry.registerItem(reinforced_stick, reinforced_stick.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(mana_leaf, mana_leaf.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerItem(stone_brick, stone_brick.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(deepstone_brick, deepstone_brick.getUnlocalizedName().substring(5));
@@ -474,6 +477,7 @@ public class MItems extends Item
 		registerRender(blueberry);
 		registerRender(blackberry);
 		registerRender(raspberry);
+		registerRender(mana_leaf);
 		
 		registerRender(copper_ingot);
 		registerRender(tin_ingot);

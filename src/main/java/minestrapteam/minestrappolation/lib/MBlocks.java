@@ -366,6 +366,10 @@ public class MBlocks
 	
 	//Plants
 	public static Block moss;
+	public static Block blueberry_bush;
+	public static Block blackberry_bush;
+	public static Block raspberry_bush;
+	public static Block mana_bush;
 	
 	//Fluid
 	public static Block magma;
@@ -387,11 +391,6 @@ public class MBlocks
 	// Misc
 	public static Block	frost_generator;
 	public static Block	invincium;
-	
-	//Plants
-	public static Block blueberry_bush;
-	public static Block blackberry_bush;
-	public static Block raspberry_bush;
 	
 	//Pillars
 	public static Block desert_pillar;
@@ -677,9 +676,10 @@ public class MBlocks
 		magma = new BlockMagma().setUnlocalizedName("magma");
 		magmaBucket = new ItemBucket(magma).setUnlocalizedName("magma_bucket").setCreativeTab(Minestrappolation.tabMTools);
 		
-		blueberry_bush = new BlockBush(MItems.blueberry).setCreativeTab(Minestrappolation.tabMFood).setUnlocalizedName("blueberry_bush");
-		blackberry_bush = new BlockBush(MItems.blackberry).setCreativeTab(Minestrappolation.tabMFood).setUnlocalizedName("blackberry_bush");
-		raspberry_bush = new BlockBush(MItems.raspberry).setCreativeTab(Minestrappolation.tabMFood).setUnlocalizedName("raspberry_bush");
+		blueberry_bush = new BlockBush(MItems.blueberry).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("blueberry_bush");
+		blackberry_bush = new BlockBush(MItems.blackberry).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("blackberry_bush");
+		raspberry_bush = new BlockBush(MItems.raspberry).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("raspberry_bush");
+		mana_bush = new BlockBush(MItems.mana_leaf).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("mana_bush");
 		
 		Blocks.bedrock.setHardness(70F);
 		
@@ -829,6 +829,10 @@ public class MBlocks
 		register(invincium);
 		
 		register(moss);
+		register(blueberry_bush);
+		register(blackberry_bush);
+		register(raspberry_bush);
+		register(mana_bush);
 		register(ministrapp_sapling, ItemBlockSapling.class);
 		register(ministrapp_leaves, ItemBlockLeaves.class);
 		register(dead_branch);
@@ -900,11 +904,7 @@ public class MBlocks
 		registerSlab("glacierrock_brick_slab", "glacierrock_brick_double_slab", glacierrock_brick_slab, glacierrock_brick_double_slab);
 		registerSlab("oceanstone_brick_slab", "oceanstone_brick_double_slab", oceanstone_brick_slab, oceanstone_brick_double_slab);
 		registerSlab("poceanstone_brick_slab", "poceanstone_brick_double_slab", poceanstone_brick_slab, poceanstone_brick_double_slab);
-		
-		register(blueberry_bush);
-		register(blackberry_bush);
-		register(raspberry_bush);
-		
+				
 		GameRegistry.registerBlock(magma, magma.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(magmaBucket, magmaBucket.getUnlocalizedName().substring(5));
 	}

@@ -474,6 +474,7 @@ tile.moss.name=Moss Lump
 tile.blueberry_bush.name=Blueberry Bush
 tile.raspberry_bush.name=Raspberry Bush
 tile.blackberry_bush.name=Blackberry Bush
+tile.mana_bush.name=Mana Bush
 
 item.dough.name=Dough
 item.sugar_dough.name=Sugar Dough
@@ -485,6 +486,7 @@ item.fried_egg.name=Fried Egg
 item.blueberry.name=Blueberries
 item.raspberry.name=Raspberries
 item.blackberry.name=Blackberries
+item.mana_leaf.name=Mana Leaf
 
 item.copper_ingot.name=Copper Ingot
 item.tin_ingot.name=Tin Ingot

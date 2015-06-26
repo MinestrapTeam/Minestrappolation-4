@@ -3,7 +3,9 @@ package minestrapteam.minestrappolation.tileentity;
 import minestrapteam.minestrappolation.block.BlockMelter;
 import minestrapteam.minestrappolation.block.BlockSplitter;
 import minestrapteam.minestrappolation.crafting.recipes.SplitterRecipes;
+import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MItems;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.inventory.SlotFurnaceFuel;
@@ -243,7 +245,15 @@ public class TileEntitySplitter extends TileEntityInventory implements ISidedInv
 		{
 			item = stack.getItem();
 		}
-		if(item == MItems.soul_gem) return 1600;
+		if(item == MItems.mana_leaf) return 800;
+		if(item == Items.gold_nugget) return 960;
+		if(item == Items.dye && item.getMetadata(stack) == 4) return 3200;
+		if(item == Items.gold_ingot) return 6400;
+		if(item == MItems.soul_gem) return 9600;
+		if(item == MItems.radiant_quartz) return 12800;
+		if(item == Item.getItemFromBlock(Blocks.lapis_block))return 32000;
+		if(item == Item.getItemFromBlock(Blocks.gold_block) || item == Item.getItemFromBlock(MBlocks.radiant_block) || item == Item.getItemFromBlock(MBlocks.radiant_chiseled) || item == Item.getItemFromBlock(MBlocks.radiant_pillar))return 64000;
+		if(item == Item.getItemFromBlock(MBlocks.soul_gem_block)) return 96000;
 		return 0;
 	}
 	

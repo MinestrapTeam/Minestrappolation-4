@@ -329,6 +329,25 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MBlocks.slate_pattern_bricks, 1), new ItemStack(MItems.slate_brick, 2), new ItemStack(MItems.slate_brick, 2), 0.1F);
 		this.addRecipe(new ItemStack(MBlocks.flint_pattern_bricks, 1), new ItemStack(MItems.flint_brick, 2), new ItemStack(MItems.flint_brick, 2), 0.1F);
 		
+		this.addRecipe(new ItemStack(Blocks.stonebrick, 1, 3), new ItemStack(Blocks.stone_slab, 1), new ItemStack(Blocks.stone_slab, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.chiseled, 1, 0), new ItemStack(MBlocks.deepstone_slab, 1), new ItemStack(MBlocks.deepstone_slab, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.chiseled, 1, 1), new ItemStack(MBlocks.red_rock_slab, 1), new ItemStack(MBlocks.red_rock_slab, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.chiseled, 1, 2), new ItemStack(MBlocks.deep_red_rock_slab, 1), new ItemStack(MBlocks.deep_red_rock_slab, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.chiseled, 1, 3), new ItemStack(MBlocks.coldstone_slab, 1), new ItemStack(MBlocks.coldstone_slab, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.chiseled, 1, 4), new ItemStack(MBlocks.deep_coldstone_slab, 1), new ItemStack(MBlocks.deep_coldstone_slab, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.chiseled, 1, 5), new ItemStack(MBlocks.icestone_slab, 1), new ItemStack(MBlocks.icestone_slab, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.chiseled, 1, 6), new ItemStack(MBlocks.glacierrock_slab, 1), new ItemStack(MBlocks.glacierrock_slab, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.chiseled, 1, 7), new ItemStack(MBlocks.oceanstone_slab, 1), new ItemStack(MBlocks.oceanstone_slab, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.chiseled, 1, 8), new ItemStack(MBlocks.poceanstone_slab, 1), new ItemStack(MBlocks.poceanstone_slab, 1), 0.1F);
+		this.addRecipe(new ItemStack(Blocks.sandstone, 1, 1), new ItemStack(Blocks.stone_slab, 1, 1), new ItemStack(Blocks.stone_slab, 1, 1), 0.1F);
+		this.addRecipe(new ItemStack(Blocks.red_sandstone, 1, 1), new ItemStack(Blocks.stone_slab2, 1, 0), new ItemStack(Blocks.stone_slab2, 1, 0), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.desert_quartz_chiseled, 1), new ItemStack(MBlocks.desert_quartz_slab), new ItemStack(MBlocks.desert_quartz_slab), 0.1F);
+		this.addRecipe(new ItemStack(Blocks.quartz_block, 1, 1), new ItemStack(Blocks.stone_slab, 1, 7), new ItemStack(Blocks.stone_slab, 1, 7), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.radiant_chiseled, 1), new ItemStack(MBlocks.radiant_slab, 1), new ItemStack(MBlocks.radiant_slab, 1), 0.1F);
+		
+		this.addRecipe(new ItemStack(Blocks.cobblestone_wall, 1), new ItemStack(MItems.chunks, 2, 0), new ItemStack(MItems.chunks, 1, 0), 0.1F);
+		this.addRecipe(new ItemStack(Blocks.nether_brick_fence, 1), new ItemStack(Items.netherbrick, 2), new ItemStack(Items.netherbrick, 1), 0.1F);
+		
 		//Minestrapp Tech Blocks
 		this.addRecipe(new ItemStack(MBlocks.alloy, 1), new ItemStack(MItems.tin_plating, 5), new ItemStack(MBlocks.biome_bricks, 3, 1), 0.1F);
 		this.addRecipe(new ItemStack(MBlocks.melter, 1), new ItemStack(MItems.meurodite_plating, 5), new ItemStack(MBlocks.blazium_block, 1), 0.1F);

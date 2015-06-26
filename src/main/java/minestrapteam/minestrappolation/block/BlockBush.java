@@ -8,6 +8,7 @@ import java.util.Random;
 import minestrapteam.minestrappolation.Minestrappolation;
 import minestrapteam.minestrappolation.handlers.MGuiHandler;
 import minestrapteam.minestrappolation.lib.MAchievements;
+import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
@@ -110,7 +111,10 @@ public class BlockBush extends MBlock implements IPlantable, IShearable{
         }
         else if (block != Blocks.grass && block != Blocks.dirt && block != Blocks.sand)
         {
-            return false;
+        	if(block == Blocks.mycelium && this == MBlocks.mana_bush)
+        		return true;
+        	else
+        		return false;
         }
         return false;
     }
@@ -152,7 +156,10 @@ public class BlockBush extends MBlock implements IPlantable, IShearable{
     @SideOnly(Side.CLIENT)
     public EnumWorldBlockLayer getBlockLayer()
     {
-        return EnumWorldBlockLayer.CUTOUT;
+        if(this == MBlocks.mana_bush)
+        	return EnumWorldBlockLayer.TRANSLUCENT;
+        else
+        	return EnumWorldBlockLayer.CUTOUT;
     }
 
     public int getMetaFromState(IBlockState state)
