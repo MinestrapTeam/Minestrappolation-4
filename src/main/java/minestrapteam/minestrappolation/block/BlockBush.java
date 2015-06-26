@@ -55,12 +55,18 @@ public class BlockBush extends MBlock implements IPlantable, IShearable{
     {
         if (worldIn.getBlockState(pos.down()).getBlock() == this || this.checkForDrop(worldIn, pos, state))
         {                   
-                    int j = ((Integer)state.getValue(AGE)).intValue();
+                	int j = ((Integer)state.getValue(AGE)).intValue();
                     if(j < 5)
                     {
-                    	worldIn.setBlockState(pos, state.withProperty(AGE, Integer.valueOf(j + 1)), 2);
+                    	int chance = rand.nextInt(2);
+                    	if(chance == 1)
+                    	{
+                    		worldIn.setBlockState(pos, state.withProperty(AGE, Integer.valueOf(j + 1)), 2);
+                    	}
                     }  
         }
+        	              
+		
     }
     
     @Override
@@ -79,6 +85,19 @@ public class BlockBush extends MBlock implements IPlantable, IShearable{
     		}
 		return false;
 	}
+    
+    @Override
+    public void setBlockBoundsBasedOnState(IBlockAccess worldIn, BlockPos pos) 
+    {
+    	if((Integer)worldIn.getBlockState(pos).getValue(AGE) <= 4)
+    	{
+    		this.setBlockBounds(0.0F, 0.0F, 0.0F, .9F, .9F, .9F);
+    	}
+    	if((Integer)worldIn.getBlockState(pos).getValue(AGE) == 5)
+    	{
+    		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1F, 1F, 1F);
+    	}
+    }
 
     public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
     {
