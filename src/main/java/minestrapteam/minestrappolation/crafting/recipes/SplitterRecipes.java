@@ -197,6 +197,10 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(Items.furnace_minecart, 1), new ItemStack(Items.minecart, 1), new ItemStack(Blocks.furnace, 1), 0.1F);
 		this.addRecipe(new ItemStack(Items.tnt_minecart, 1), new ItemStack(Items.minecart, 1), new ItemStack(Blocks.tnt, 1), 0.1F);
 		this.addRecipe(new ItemStack(Items.hopper_minecart, 1), new ItemStack(Items.minecart, 1), new ItemStack(Blocks.hopper, 1), 0.1F);
+		this.addRecipe(new ItemStack(Items.iron_horse_armor, 1), new ItemStack(Items.iron_ingot, 6), new ItemStack(Blocks.wool, 1, 15), 0.1F);
+		this.addRecipe(new ItemStack(Items.golden_horse_armor, 1), new ItemStack(Items.gold_ingot, 6), new ItemStack(Blocks.wool, 1, 14), 0.1F);
+		this.addRecipe(new ItemStack(Items.diamond_horse_armor, 1), new ItemStack(Items.diamond, 6), new ItemStack(Blocks.wool, 1, 4), 0.1F);
+		this.addRecipe(new ItemStack(Items.saddle, 1), new ItemStack(Items.leather, 5), new ItemStack(Items.iron_ingot, 1, 3), 0.1F);
 		
 		//Vanilla Tools
 		this.addRecipe(new ItemStack(Items.carrot_on_a_stick, 1, 0), new ItemStack(Items.fishing_rod, 1), new ItemStack(Items.carrot, 1), 0.1F);

@@ -2,6 +2,7 @@ package minestrapteam.minestrappolation.lib;
 
 import minestrapteam.minestrappolation.Minestrappolation;
 import minestrapteam.minestrappolation.item.ItemChunk;
+import minestrapteam.minestrappolation.item.ItemHeartContainer;
 import minestrapteam.minestrappolation.item.ItemMArmor;
 import minestrapteam.minestrappolation.item.ItemMAxe;
 import minestrapteam.minestrappolation.item.ItemMHoe;
@@ -164,6 +165,7 @@ public class MItems extends Item
 	public static Item							chunks;
 	
 	public static Item							sifter;
+	public static Item							heart_container;
 	
 	public static final Item.ToolMaterial		COPPER			= EnumHelper.addToolMaterial("COPPER", 1, 186, 4.5F, 1.5F, 18);
 	public static final Item.ToolMaterial		BRONZE			= EnumHelper.addToolMaterial("BRONZE", 2, 1016, 5.8F, 2.0F, 16);
@@ -318,6 +320,7 @@ public class MItems extends Item
 		chunks = new ItemChunk().setUnlocalizedName("chunks").setCreativeTab(Minestrappolation.tabMMaterials);
 		
 		sifter = new ItemSifter().setUnlocalizedName("sifter");
+		heart_container = new ItemHeartContainer().setUnlocalizedName("heart_container");
 		addItemsToChests();
 	}
 	
@@ -456,6 +459,7 @@ public class MItems extends Item
 		GameRegistry.registerItem(bedrock_hoe, bedrock_hoe.getUnlocalizedName().substring(5));
 		
 		GameRegistry.registerItem(sifter, sifter.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(heart_container, heart_container.getUnlocalizedName().substring(5));
 	}
 	
 	public static void registerRenders()
@@ -592,6 +596,7 @@ public class MItems extends Item
 		registerRender(torite_ingot);
 		
 		registerRender(sifter);
+		registerRender(heart_container);
 	}
 	
 	public static void addItemsToChests()
