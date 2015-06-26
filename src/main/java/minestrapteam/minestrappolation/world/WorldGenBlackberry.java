@@ -30,7 +30,7 @@ public class WorldGenBlackberry extends WorldGenerator
 
             if (worldIn.isAirBlock(blockpos1) && ((BlockBush) MBlocks.blackberry_bush).canBlockStay(worldIn, blockpos1))
             {
-                worldIn.setBlockState(blockpos1, MBlocks.blackberry_bush.getDefaultState(), 2);
+                worldIn.setBlockState(blockpos1, MBlocks.blackberry_bush.getDefaultState().withProperty(BlockBush.AGE, 5), 2);
             }
         }
 

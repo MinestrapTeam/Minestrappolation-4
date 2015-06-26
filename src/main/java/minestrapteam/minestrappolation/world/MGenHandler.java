@@ -28,6 +28,7 @@ import net.minecraft.world.gen.ChunkProviderEnd;
 import net.minecraft.world.gen.ChunkProviderGenerate;
 import net.minecraft.world.gen.ChunkProviderHell;
 import net.minecraft.world.gen.feature.WorldGenMinable;
+import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -88,7 +89,6 @@ public class MGenHandler implements IWorldGenerator
 		this.generateOre(MBlocks.titanium_ore, world, rand, x1, z1, 1, 4, 12, 1, 10, BlockHelper.forBlock(Blocks.stone));
 		this.generateOre(MBlocks.slate, world, rand, x1, z1, 10, 33, 18, 0, 80, BlockHelper.forBlock(Blocks.stone));
 		this.generateBoulder(world, rand, x1, z1);
-		this.generateBerries(world, rand, x1, z1);
 		
 		if (biome == BiomeGenBase.jungle || biome == BiomeGenBase.jungleEdge || biome == BiomeGenBase.jungleHills || biome == BiomeGenBase.swampland || biome == BiomeGenBase.roofedForest || biome == MBiomeManager.redwood)
 		{
@@ -102,18 +102,23 @@ public class MGenHandler implements IWorldGenerator
 		{
 			this.generateMoss(world, rand, x1, z1);
 		}
+	
+		
+		//Berries
 		if(biome == BiomeGenBase.forest || biome == BiomeGenBase.forestHills || biome == BiomeGenBase.birchForest || biome == BiomeGenBase.birchForestHills || biome == BiomeGenBase.roofedForest || biome == BiomeGenBase.swampland)
 		{
-			this.generateBlueberry(world, rand, x1, z1);
+			this.generateBerries(world, rand, x1, z1, new WorldGenBlueberry());
 		}
 		if(biome == BiomeGenBase.extremeHills || biome == BiomeGenBase.extremeHillsEdge || biome == BiomeGenBase.extremeHillsPlus || biome == BiomeGenBase.taiga || biome == BiomeGenBase.taigaHills || biome == BiomeGenBase.megaTaiga || biome == BiomeGenBase.megaTaigaHills)
 		{
-			this.generateBlackberry(world, rand, x1, z1);
+			this.generateBerries(world, rand, x1, z1, new WorldGenBlackberry());
 		}
 		if(biome == BiomeGenBase.savanna || biome == BiomeGenBase.savannaPlateau || biome == BiomeGenBase.mesa || biome == BiomeGenBase.mesaPlateau || biome == BiomeGenBase.mesaPlateau_F || biome== MBiomeManager.redwood)
 		{
-			this.generateRaspberry(world, rand, x1, z1);
+			this.generateBerries(world, rand, x1, z1, new WorldGenRaspberry());
 		}
+		
+		
 		// Redwood Trees
 		if (biome == BiomeGenBase.extremeHills || biome == BiomeGenBase.taigaHills)
 		{
@@ -166,19 +171,6 @@ public class MGenHandler implements IWorldGenerator
 		}
 	}
 	
-	private void generateBerries(World world, Random rand, int chunkX, int chunkZ)
-	{
-		WorldGenBerries gen = new WorldGenBerries();
-		for (int i = 0; i < 1; i++)
-		{
-			int xRand = chunkX * 16 + rand.nextInt(16);
-			int yRand = rand.nextInt(100);
-			int zRand = chunkZ * 16 + rand.nextInt(16);
-			BlockPos position = new BlockPos(xRand, yRand, zRand);
-			gen.generate(world, rand, position);
-		}
-	}
-	
 	private void generateDesertQuartz(World world, Random rand, int chunkX, int chunkZ)
 	{
 		WorldGenSpire gen = new WorldGenSpire(MBlocks.desert_quartz, Blocks.sand);
@@ -205,9 +197,9 @@ public class MGenHandler implements IWorldGenerator
 		}
 	}
 	
-	private void generateBlueberry(World world, Random rand, int chunkX, int chunkZ)
+	private void generateBerries(World world, Random rand, int chunkX, int chunkZ, WorldGenerator berry)
 	{
-		WorldGenBlueberry gen = new WorldGenBlueberry();
+		WorldGenerator gen = berry;
 		for (int i = 0; i < 2; i++)
 		{
 			int xRand = chunkX * 16 + rand.nextInt(16);
@@ -217,33 +209,7 @@ public class MGenHandler implements IWorldGenerator
 			gen.generate(world, rand, position);
 		}
 	}
-	
-	private void generateRaspberry(World world, Random rand, int chunkX, int chunkZ)
-	{
-		WorldGenRaspberry gen = new WorldGenRaspberry();
-		for (int i = 0; i < 2; i++)
-		{
-			int xRand = chunkX * 16 + rand.nextInt(16);
-			int yRand = rand.nextInt(256);
-			int zRand = chunkZ * 16 + rand.nextInt(16);
-			BlockPos position = new BlockPos(xRand, yRand, zRand);
-			gen.generate(world, rand, position);
-		}
-	}
-	
-	private void generateBlackberry(World world, Random rand, int chunkX, int chunkZ)
-	{
-		WorldGenBlackberry gen = new WorldGenBlackberry();
-		for (int i = 0; i < 2; i++)
-		{
-			int xRand = chunkX * 16 + rand.nextInt(16);
-			int yRand = rand.nextInt(256);
-			int zRand = chunkZ * 16 + rand.nextInt(16);
-			BlockPos position = new BlockPos(xRand, yRand, zRand);
-			gen.generate(world, rand, position);
-		}
-	}
-	
+
 	public void genBiomeStone(World world, int chunkX, int chunkZ, Random random)
 	{
 		BlockPos pos = new BlockPos(chunkX * 16, 0, chunkZ * 16);
