@@ -73,6 +73,7 @@ import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTin;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTitanium;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTorite;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeUranium;
+import minestrapteam.minestrappolation.block.crops.BlockRice;
 import minestrapteam.minestrappolation.block.ore.BlockPlutoniumOre;
 import minestrapteam.minestrappolation.block.ore.BlockSoulOre;
 import minestrapteam.minestrappolation.block.ore.BlockUraniumOre;
@@ -130,6 +131,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemBucket;
+import net.minecraft.item.ItemSeedFood;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class MBlocks
@@ -370,6 +372,8 @@ public class MBlocks
 	public static Block blackberry_bush;
 	public static Block raspberry_bush;
 	public static Block mana_bush;
+	public static Block rice_crop;
+	public static Item	rice;
 	
 	//Fluid
 	public static Block magma;
@@ -671,15 +675,18 @@ public class MBlocks
 		
 		//Plants
 		moss = new BlockMoss(MapColor.greenColor).setHardness(0.3F).setStepSound(Block.soundTypeCloth).setUnlocalizedName("moss").setCreativeTab(Minestrappolation.tabMDecor);
-		
-		//Liquids
-		magma = new BlockMagma().setUnlocalizedName("magma");
-		magmaBucket = new ItemBucket(magma).setUnlocalizedName("magma_bucket").setCreativeTab(Minestrappolation.tabMTools);
-		
 		blueberry_bush = new BlockBush(MItems.blueberry).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("blueberry_bush");
 		blackberry_bush = new BlockBush(MItems.blackberry).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("blackberry_bush");
 		raspberry_bush = new BlockBush(MItems.raspberry).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("raspberry_bush");
 		mana_bush = new BlockBush(MItems.mana_leaf).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("mana_bush");
+		rice_crop = new BlockRice().setUnlocalizedName("rice_crop");
+		rice = new ItemSeedFood(1, 0.3F, MBlocks.rice_crop, Blocks.farmland).setUnlocalizedName("rice").setCreativeTab(Minestrappolation.tabMFood);
+		
+		//Liquids
+		magma = new BlockMagma().setUnlocalizedName("magma");
+		magmaBucket = new ItemBucket(magma).setUnlocalizedName("magma_bucket").setCreativeTab(Minestrappolation.tabMTools);
+	
+		
 		
 		Blocks.bedrock.setHardness(70F);
 		
@@ -833,8 +840,13 @@ public class MBlocks
 		register(blackberry_bush);
 		register(raspberry_bush);
 		register(mana_bush);
+		register(rice_crop);
+		GameRegistry.registerItem(rice, rice.getUnlocalizedName().substring(5));
+		
 		register(ministrapp_sapling, ItemBlockSapling.class);
 		register(ministrapp_leaves, ItemBlockLeaves.class);
+		
+		
 		register(dead_branch);
 		register(cold_cobweb);
 		register(redwood_fence);
@@ -919,6 +931,8 @@ public class MBlocks
 		registerRender(frozen_door_item);
 		registerRender(glass_door_item);
 		registerRender(magmaBucket);
+		
+		registerRender(rice);
 	}
 	
 	private static void register(Block block)
