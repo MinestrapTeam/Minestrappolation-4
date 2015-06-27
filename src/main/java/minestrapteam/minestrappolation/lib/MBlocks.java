@@ -73,6 +73,8 @@ import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTin;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTitanium;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTorite;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeUranium;
+import minestrapteam.minestrappolation.block.crops.BlockPeanuts;
+import minestrapteam.minestrappolation.block.crops.BlockPepper;
 import minestrapteam.minestrappolation.block.crops.BlockRice;
 import minestrapteam.minestrappolation.block.ore.BlockPlutoniumOre;
 import minestrapteam.minestrappolation.block.ore.BlockSoulOre;
@@ -688,9 +690,9 @@ public class MBlocks
 		mana_bush = new BlockBush(MItems.mana_leaf).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("mana_bush");
 		rice_crop = new BlockRice().setUnlocalizedName("rice_crop");
 		rice_seed = new ItemSeeds(rice_crop, Blocks.farmland).setUnlocalizedName("rice_seeds").setCreativeTab(Minestrappolation.tabMFood);
-		pepper_crop = new BlockRice().setUnlocalizedName("pepper_crop");
+		pepper_crop = new BlockPepper().setUnlocalizedName("pepper_crop");
 		pepper_seed = new ItemSeeds(pepper_crop, Blocks.farmland).setUnlocalizedName("pepper_seeds").setCreativeTab(Minestrappolation.tabMFood);
-		peanut_crop = new BlockRice().setUnlocalizedName("peanut_crop");
+		peanut_crop = new BlockPeanuts().setUnlocalizedName("peanut_crop");
 		peanuts = new ItemSeedFood(1, 0.3F, peanut_crop, Blocks.farmland).setUnlocalizedName("peanuts").setCreativeTab(Minestrappolation.tabMFood);
 		
 		

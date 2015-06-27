@@ -16,6 +16,6 @@ public class BlockPepper extends BlockCrops
 	@Override
     protected Item getCrop()
     {
-        return MItems.rice;
+        return MItems.pepper;
     }
 }

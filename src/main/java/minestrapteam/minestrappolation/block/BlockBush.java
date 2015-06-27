@@ -59,7 +59,7 @@ public class BlockBush extends MBlock implements IPlantable, IShearable{
                 	int j = ((Integer)state.getValue(AGE)).intValue();
                     if(j < 5)
                     {
-                    	int chance = rand.nextInt(2);
+                    	int chance = rand.nextInt(32);
                     	if(chance == 1)
                     	{
                     		worldIn.setBlockState(pos, state.withProperty(AGE, Integer.valueOf(j + 1)), 2);
