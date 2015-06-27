@@ -282,40 +282,40 @@ public class MItems extends Item
 		bedrock_shovel = new ItemMShovel(BEDROCK, Item.getItemFromBlock(Blocks.bedrock), false).setUnlocalizedName("bedrock_shovel").setCreativeTab(Minestrappolation.tabMTools);
 		bedrock_hoe = new ItemMHoe(BEDROCK, Item.getItemFromBlock(Blocks.bedrock), false).setUnlocalizedName("bedrock_hoe").setCreativeTab(Minestrappolation.tabMTools);
 		
-		tin_helmet = new ItemMArmor(ARMOR_TIN, 0, 0, tin_ingot).setUnlocalizedName("tin_helmet").setCreativeTab(Minestrappolation.tabMCombat);
-		tin_chestplate = new ItemMArmor(ARMOR_TIN, 0, 1, tin_ingot).setUnlocalizedName("tin_chestplate").setCreativeTab(Minestrappolation.tabMCombat);
-		tin_leggings = new ItemMArmor(ARMOR_TIN, 0, 2, tin_ingot).setUnlocalizedName("tin_leggings").setCreativeTab(Minestrappolation.tabMCombat);
-		tin_boots = new ItemMArmor(ARMOR_TIN, 0, 3, tin_ingot).setUnlocalizedName("tin_boots").setCreativeTab(Minestrappolation.tabMCombat);
+		tin_helmet = new ItemMArmor(ARMOR_TIN, 0, 0, tin_ingot, "tin").setUnlocalizedName("tin_helmet").setCreativeTab(Minestrappolation.tabMCombat);
+		tin_chestplate = new ItemMArmor(ARMOR_TIN, 0, 1, tin_ingot, "tin").setUnlocalizedName("tin_chestplate").setCreativeTab(Minestrappolation.tabMCombat);
+		tin_leggings = new ItemMArmor(ARMOR_TIN, 0, 2, tin_ingot, "tin").setUnlocalizedName("tin_leggings").setCreativeTab(Minestrappolation.tabMCombat);
+		tin_boots = new ItemMArmor(ARMOR_TIN, 0, 3, tin_ingot, "tin").setUnlocalizedName("tin_boots").setCreativeTab(Minestrappolation.tabMCombat);
 		
-		bronze_helmet = new ItemMArmor(ARMOR_BRONZE, 0, 0, bronze_ingot).setUnlocalizedName("bronze_helmet").setCreativeTab(Minestrappolation.tabMCombat);
-		bronze_chestplate = new ItemMArmor(ARMOR_BRONZE, 0, 1, bronze_ingot).setUnlocalizedName("bronze_chestplate").setCreativeTab(Minestrappolation.tabMCombat);
-		bronze_leggings = new ItemMArmor(ARMOR_BRONZE, 0, 2, bronze_ingot).setUnlocalizedName("bronze_leggings").setCreativeTab(Minestrappolation.tabMCombat);
-		bronze_boots = new ItemMArmor(ARMOR_BRONZE, 0, 3, bronze_ingot).setUnlocalizedName("bronze_boots").setCreativeTab(Minestrappolation.tabMCombat);
+		bronze_helmet = new ItemMArmor(ARMOR_BRONZE, 0, 0, bronze_ingot, "bronze").setUnlocalizedName("bronze_helmet").setCreativeTab(Minestrappolation.tabMCombat);
+		bronze_chestplate = new ItemMArmor(ARMOR_BRONZE, 0, 1, bronze_ingot, "bronze").setUnlocalizedName("bronze_chestplate").setCreativeTab(Minestrappolation.tabMCombat);
+		bronze_leggings = new ItemMArmor(ARMOR_BRONZE, 0, 2, bronze_ingot, "bronze").setUnlocalizedName("bronze_leggings").setCreativeTab(Minestrappolation.tabMCombat);
+		bronze_boots = new ItemMArmor(ARMOR_BRONZE, 0, 3, bronze_ingot, "bronze").setUnlocalizedName("bronze_boots").setCreativeTab(Minestrappolation.tabMCombat);
 		
-		steel_helmet = new ItemMArmor(ARMOR_STEEL, 0, 0, steel_ingot).setUnlocalizedName("steel_helmet").setCreativeTab(Minestrappolation.tabMCombat);
-		steel_chestplate = new ItemMArmor(ARMOR_STEEL, 0, 1, steel_ingot).setUnlocalizedName("steel_chestplate").setCreativeTab(Minestrappolation.tabMCombat);
-		steel_leggings = new ItemMArmor(ARMOR_STEEL, 0, 2, steel_ingot).setUnlocalizedName("steel_leggings").setCreativeTab(Minestrappolation.tabMCombat);
-		steel_boots = new ItemMArmor(ARMOR_STEEL, 0, 3, steel_ingot).setUnlocalizedName("steel_boots").setCreativeTab(Minestrappolation.tabMCombat);
+		steel_helmet = new ItemMArmor(ARMOR_STEEL, 0, 0, steel_ingot, "steel").setUnlocalizedName("steel_helmet").setCreativeTab(Minestrappolation.tabMCombat);
+		steel_chestplate = new ItemMArmor(ARMOR_STEEL, 0, 1, steel_ingot, "steel").setUnlocalizedName("steel_chestplate").setCreativeTab(Minestrappolation.tabMCombat);
+		steel_leggings = new ItemMArmor(ARMOR_STEEL, 0, 2, steel_ingot, "steel").setUnlocalizedName("steel_leggings").setCreativeTab(Minestrappolation.tabMCombat);
+		steel_boots = new ItemMArmor(ARMOR_STEEL, 0, 3, steel_ingot, "steel").setUnlocalizedName("steel_boots").setCreativeTab(Minestrappolation.tabMCombat);
 		
-		meurodite_helmet = new ItemMArmor(ARMOR_MEURODITE, 0, 0, meurodite_gem).setUnlocalizedName("meurodite_helmet").setCreativeTab(Minestrappolation.tabMCombat);
-		meurodite_chestplate = new ItemMArmor(ARMOR_MEURODITE, 0, 1, meurodite_gem).setUnlocalizedName("meurodite_chestplate").setCreativeTab(Minestrappolation.tabMCombat);
-		meurodite_leggings = new ItemMArmor(ARMOR_MEURODITE, 0, 2, meurodite_gem).setUnlocalizedName("meurodite_leggings").setCreativeTab(Minestrappolation.tabMCombat);
-		meurodite_boots = new ItemMArmor(ARMOR_MEURODITE, 0, 3, meurodite_gem).setUnlocalizedName("meurodite_boots").setCreativeTab(Minestrappolation.tabMCombat);
+		meurodite_helmet = new ItemMArmor(ARMOR_MEURODITE, 0, 0, meurodite_gem, "meurodite").setUnlocalizedName("meurodite_helmet").setCreativeTab(Minestrappolation.tabMCombat);
+		meurodite_chestplate = new ItemMArmor(ARMOR_MEURODITE, 0, 1, meurodite_gem, "meurodite").setUnlocalizedName("meurodite_chestplate").setCreativeTab(Minestrappolation.tabMCombat);
+		meurodite_leggings = new ItemMArmor(ARMOR_MEURODITE, 0, 2, meurodite_gem, "meurodite").setUnlocalizedName("meurodite_leggings").setCreativeTab(Minestrappolation.tabMCombat);
+		meurodite_boots = new ItemMArmor(ARMOR_MEURODITE, 0, 3, meurodite_gem, "meurodite").setUnlocalizedName("meurodite_boots").setCreativeTab(Minestrappolation.tabMCombat);
 		
-		torite_helmet = new ItemMArmor(ARMOR_TORITE, 0, 0, torite_ingot).setUnlocalizedName("torite_helmet").setCreativeTab(Minestrappolation.tabMCombat);
-		torite_chestplate = new ItemMArmor(ARMOR_TORITE, 0, 1, torite_ingot).setUnlocalizedName("torite_chestplate").setCreativeTab(Minestrappolation.tabMCombat);
-		torite_leggings = new ItemMArmor(ARMOR_TORITE, 0, 2, torite_ingot).setUnlocalizedName("torite_leggings").setCreativeTab(Minestrappolation.tabMCombat);
-		torite_boots = new ItemMArmor(ARMOR_TORITE, 0, 3, torite_ingot).setUnlocalizedName("torite_boots").setCreativeTab(Minestrappolation.tabMCombat);
+		torite_helmet = new ItemMArmor(ARMOR_TORITE, 0, 0, torite_ingot, "tortite").setUnlocalizedName("torite_helmet").setCreativeTab(Minestrappolation.tabMCombat);
+		torite_chestplate = new ItemMArmor(ARMOR_TORITE, 0, 1, torite_ingot, "tortite").setUnlocalizedName("torite_chestplate").setCreativeTab(Minestrappolation.tabMCombat);
+		torite_leggings = new ItemMArmor(ARMOR_TORITE, 0, 2, torite_ingot, "tortite").setUnlocalizedName("torite_leggings").setCreativeTab(Minestrappolation.tabMCombat);
+		torite_boots = new ItemMArmor(ARMOR_TORITE, 0, 3, torite_ingot, "tortite").setUnlocalizedName("torite_boots").setCreativeTab(Minestrappolation.tabMCombat);
 		
-		blazium_helmet = new ItemMArmor(ARMOR_BLAZIUM, 0, 0, blazium_ingot).setUnlocalizedName("blazium_helmet").setCreativeTab(Minestrappolation.tabMCombat);
-		blazium_chestplate = new ItemMArmor(ARMOR_BLAZIUM, 0, 1, blazium_ingot).setUnlocalizedName("blazium_chestplate").setCreativeTab(Minestrappolation.tabMCombat);
-		blazium_leggings = new ItemMArmor(ARMOR_BLAZIUM, 0, 2, blazium_ingot).setUnlocalizedName("blazium_leggings").setCreativeTab(Minestrappolation.tabMCombat);
-		blazium_boots = new ItemMArmor(ARMOR_BLAZIUM, 0, 3, blazium_ingot).setUnlocalizedName("blazium_boots").setCreativeTab(Minestrappolation.tabMCombat);
+		blazium_helmet = new ItemMArmor(ARMOR_BLAZIUM, 0, 0, blazium_ingot, "blazium").setUnlocalizedName("blazium_helmet").setCreativeTab(Minestrappolation.tabMCombat);
+		blazium_chestplate = new ItemMArmor(ARMOR_BLAZIUM, 0, 1, blazium_ingot, "blazium").setUnlocalizedName("blazium_chestplate").setCreativeTab(Minestrappolation.tabMCombat);
+		blazium_leggings = new ItemMArmor(ARMOR_BLAZIUM, 0, 2, blazium_ingot, "blazium").setUnlocalizedName("blazium_leggings").setCreativeTab(Minestrappolation.tabMCombat);
+		blazium_boots = new ItemMArmor(ARMOR_BLAZIUM, 0, 3, blazium_ingot, "blazium").setUnlocalizedName("blazium_boots").setCreativeTab(Minestrappolation.tabMCombat);
 		
-		titanium_helmet = new ItemMArmor(ARMOR_TITANIUM, 0, 0, titanium_ingot).setUnlocalizedName("titanium_helmet").setCreativeTab(Minestrappolation.tabMCombat);
-		titanium_chestplate = new ItemMArmor(ARMOR_TITANIUM, 0, 1, titanium_ingot).setUnlocalizedName("titanium_chestplate").setCreativeTab(Minestrappolation.tabMCombat);
-		titanium_leggings = new ItemMArmor(ARMOR_TITANIUM, 0, 2, titanium_ingot).setUnlocalizedName("titanium_leggings").setCreativeTab(Minestrappolation.tabMCombat);
-		titanium_boots = new ItemMArmor(ARMOR_TITANIUM, 0, 3, titanium_ingot).setUnlocalizedName("titanium_boots").setCreativeTab(Minestrappolation.tabMCombat);
+		titanium_helmet = new ItemMArmor(ARMOR_TITANIUM, 0, 0, titanium_ingot, "titanium").setUnlocalizedName("titanium_helmet").setCreativeTab(Minestrappolation.tabMCombat);
+		titanium_chestplate = new ItemMArmor(ARMOR_TITANIUM, 0, 1, titanium_ingot, "titanium").setUnlocalizedName("titanium_chestplate").setCreativeTab(Minestrappolation.tabMCombat);
+		titanium_leggings = new ItemMArmor(ARMOR_TITANIUM, 0, 2, titanium_ingot, "titanium").setUnlocalizedName("titanium_leggings").setCreativeTab(Minestrappolation.tabMCombat);
+		titanium_boots = new ItemMArmor(ARMOR_TITANIUM, 0, 3, titanium_ingot, "titanium").setUnlocalizedName("titanium_boots").setCreativeTab(Minestrappolation.tabMCombat);
 		
 		radiant_quartz = new MItemFoiled().setUnlocalizedName("radiant_quartz").setCreativeTab(Minestrappolation.tabMMaterials);
 		meurodite_gem = new Item().setUnlocalizedName("meurodite_gem").setCreativeTab(Minestrappolation.tabMMaterials);

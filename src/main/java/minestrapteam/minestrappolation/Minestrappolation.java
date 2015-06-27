@@ -73,7 +73,6 @@ public class Minestrappolation
 		MAchievements.load();
 		MFluid.load();
 		
-		MFluid.buildRenderFor(MBlocks.magma, "magma");
 
 		MinecraftForge.EVENT_BUS.register(new MEventHandler());
 		FMLCommonHandler.instance().bus().register(new MFMLEventHandler());

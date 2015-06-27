@@ -1,6 +1,5 @@
 package minestrapteam.minestrappolation.client;
 
-import minestrapteam.minestrappolation.Config;
 import minestrapteam.minestrappolation.block.BlockBiomeBricks;
 import minestrapteam.minestrappolation.block.BlockChiseled;
 import minestrapteam.minestrappolation.block.BlockCrackedBricks;
@@ -35,8 +34,9 @@ import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTitanium;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTorite;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeUranium;
 import minestrapteam.minestrappolation.item.ItemChunk;
-import minestrapteam.minestrappolation.item.RenderXpOrb;
 import minestrapteam.minestrappolation.lib.MAchievements;
+import minestrapteam.minestrappolation.lib.MBlocks;
+import minestrapteam.minestrappolation.lib.MFluid;
 import minestrapteam.minestrappolation.tileentity.TileEntityAlloy;
 import minestrapteam.minestrappolation.tileentity.TileEntityBarrel;
 import minestrapteam.minestrappolation.tileentity.TileEntityCrate;
@@ -45,67 +45,20 @@ import minestrapteam.minestrappolation.tileentity.TileEntityMelter;
 import minestrapteam.minestrappolation.tileentity.TileEntitySawMill;
 import minestrapteam.minestrappolation.tileentity.TileEntitySplitter;
 import minestrapteam.minestrappolation.tileentity.TileEntityStoneCutter;
-import net.minecraft.client.Minecraft;
-import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.IGuiHandler;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-public abstract class CommonProxy implements IGuiHandler
+public class CommonProxy
 {
-	@Override
-	public abstract Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z);
-	
-	@Override
-	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
-	{
-		return null;
-	}
-	
+
 	public void preInit(FMLPreInitializationEvent event)
 	{
-		BlockBiomeStones.preinventoryRender();
-		BlockBiomeBricks.preinventoryRender();
-		BlockBiomeCobble.preinventoryRender();
-		BlockBiomeDiamond.preinventoryRender();
-		BlockBiomeIron.preinventoryRender();
-		BlockBiomeGold.preinventoryRender();
-		BlockBiomeCoal.preinventoryRender();
-		BlockBiomeLapis.preinventoryRender();
-		BlockBiomeRedstone.preinventoryRender();
-		BlockBiomeTin.preinventoryRender();
-		BlockBiomeCopper.preinventoryRender();
-		BlockBiomeEmerald.preinventoryRender();
-		BlockBiomeSunstone.preinventoryRender();
-		BlockBiomeTorite.preinventoryRender();
-		BlockBiomeTitanium.preinventoryRender();
-		BlockBiomeRadiant.preinventoryRender();
-		BlockBiomePlutonium.preinventoryRender();
-		BlockBiomeUranium.preinventoryRender();
-		BlockBiomeMeurodite.preinventoryRender();
-		MBlockPlanks.preinventoryRender();
-		MBlockLog.preinventoryRender();
-		BlockMSand.preinventoryRender();
-		BlockRoads.preinventoryRender();
-		BlockChiseled.preinventoryRender();
-		BlockMossyCobble.preinventoryRender();
-		BlockMossyBricks.preinventoryRender();
-		BlockCrackedBricks.preinventoryRender();
-		BlockPatternBricks.preinventoryRender();
-		BlockRefined.preinventoryRender();
-		BlockTiles.preinventoryRender();
-		BlockLamp.preinventoryRender("sunstone");
-		BlockLamp.preinventoryRender("glowstone");
-		BlockLamp.preinventoryRender("prismarine");
-		MBlockLeaves.preinventoryRender();
-		MBlockSapling.preinventoryRender();
 		
-		ItemChunk.preinventoryRender();
 		
 		GameRegistry.registerTileEntity(TileEntityBarrel.class, "tile_entity_barrel");
 		GameRegistry.registerTileEntity(TileEntityCrate.class, "tile_entity_crate");
@@ -121,48 +74,9 @@ public abstract class CommonProxy implements IGuiHandler
 	
 	public void init(FMLInitializationEvent event)
 	{
-		BlockBiomeStones.inventoryRender();
-		BlockBiomeBricks.inventoryRender();
-		BlockBiomeCobble.inventoryRender();
-		BlockBiomeDiamond.inventoryRender();
-		BlockBiomeIron.inventoryRender();
-		BlockBiomeGold.inventoryRender();
-		BlockBiomeCoal.inventoryRender();
-		BlockBiomeLapis.inventoryRender();
-		BlockBiomeRedstone.inventoryRender();
-		BlockBiomeTin.inventoryRender();
-		BlockBiomeCopper.inventoryRender();
-		BlockBiomeEmerald.inventoryRender();
-		BlockBiomeSunstone.inventoryRender();
-		BlockBiomeTorite.inventoryRender();
-		BlockBiomeTitanium.inventoryRender();
-		BlockBiomeRadiant.inventoryRender();
-		BlockBiomePlutonium.inventoryRender();
-		BlockBiomeUranium.inventoryRender();
-		BlockBiomeMeurodite.inventoryRender();
-		MBlockPlanks.inventoryRender();
-		MBlockLog.inventoryRender();
-		BlockMSand.inventoryRender();
-		BlockRoads.inventoryRender();
-		BlockChiseled.inventoryRender();
-		BlockMossyCobble.inventoryRender();
-		BlockMossyBricks.inventoryRender();
-		BlockCrackedBricks.inventoryRender();
-		BlockPatternBricks.inventoryRender();
-		BlockRefined.inventoryRender();
-		BlockTiles.inventoryRender();
-		BlockLamp.inventoryRender("sunstone");
-		BlockLamp.inventoryRender("glowstone");
-		BlockLamp.inventoryRender("prismarine");
-		MBlockLeaves.inventoryRender();
-		MBlockSapling.inventoryRender();
 		
-		ItemChunk.inventoryRender();
 		
-		if (Config.useRainBowXp)
-		{
-			RenderingRegistry.registerEntityRenderingHandler(EntityXPOrb.class, new RenderXpOrb(Minecraft.getMinecraft().getRenderManager()));
-		}
+
 	}
 	
 	public void postInit(FMLPostInitializationEvent event)

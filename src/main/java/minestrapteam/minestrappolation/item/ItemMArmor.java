@@ -12,12 +12,12 @@ public class ItemMArmor extends ItemArmor
 	ArmorMaterial	materialType;
 	String			textureName;
 	
-	public ItemMArmor(ArmorMaterial material, int renderIndex, int armorType, Item repair)
+	public ItemMArmor(ArmorMaterial material, int renderIndex, int armorType, Item repair, String texture)
 	{
 		super(material, renderIndex, armorType);
 		this.repairItem = repair;
 		this.materialType = material;
-		this.textureName = material.getName();
+		this.textureName = texture;
 	}
 	
 	@Override

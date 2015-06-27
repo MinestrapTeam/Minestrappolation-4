@@ -13,6 +13,8 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidContainerRegistry;
 import net.minecraftforge.fluids.FluidRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class MFluid
 {
@@ -34,6 +36,7 @@ public class MFluid
 		return new ResourceLocation(MReference.MODID, "fluid/" + name);
 	}
 	
+	@SideOnly(Side.CLIENT)
 	public static void buildRenderFor(Block block, String name)
 	{
 		final ModelResourceLocation fluidLocation = new ModelResourceLocation(MReference.MODID + ":" + name, "fluid");

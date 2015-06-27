@@ -7,7 +7,6 @@ public class Config
 {
 	
 	// Booleans
-	public static Boolean	useRainBowXp;
 	public static Boolean	radiationEffects;
 	public static Boolean	blaziumFireEffect;
 	public static Boolean   frostSpeedEffect;
@@ -23,7 +22,6 @@ public class Config
 	{
 		Configuration config = new Configuration(event.getSuggestedConfigurationFile());
 		config.load();
-		useRainBowXp = config.get("Visuals", "RainbowXP", true).getBoolean();
 		radiationEffects = config.get("Mechanics", "RadiationEffects", true).getBoolean();
 		blaziumFireEffect = config.get("Mechanics", "BlaziumFireEffect", true).getBoolean();
 		frostSpeedEffect = config.get("Mechanics", "TheFrostSpeedEffect", true).getBoolean();

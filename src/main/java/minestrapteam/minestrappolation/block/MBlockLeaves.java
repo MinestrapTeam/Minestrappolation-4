@@ -167,7 +167,7 @@ public class MBlockLeaves extends MBlockLeavesBase
 	@Override
 	public boolean isOpaqueCube()
 	{
-		return !Minecraft.isFancyGraphicsEnabled();
+		return this.fancyGraphics;
 	}
 	
 	@Override
