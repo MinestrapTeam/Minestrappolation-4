@@ -88,6 +88,7 @@ public class MEventHandler
 			EntityPlayer player = (EntityPlayer)event.getPlayer();
 			player.addStat(MAchievements.bedrock, 1);
 		}
+		
 	}
 	
 	@SubscribeEvent

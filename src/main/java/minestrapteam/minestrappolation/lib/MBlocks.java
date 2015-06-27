@@ -133,6 +133,8 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemBucket;
 import net.minecraft.item.ItemSeedFood;
 import net.minecraft.item.ItemSeeds;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class MBlocks
@@ -702,6 +704,10 @@ public class MBlocks
 		
 		register();
 		registerHarvestLevels();
+		
+		MinecraftForge.addGrassSeed(new ItemStack(pepper_seed), 10);
+		MinecraftForge.addGrassSeed(new ItemStack(rice_seed), 10);
+		MinecraftForge.addGrassSeed(new ItemStack(peanuts), 10);
 	}
 	
 	private static void register()
