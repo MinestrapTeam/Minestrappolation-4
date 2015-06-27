@@ -132,6 +132,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemBucket;
 import net.minecraft.item.ItemSeedFood;
+import net.minecraft.item.ItemSeeds;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class MBlocks
@@ -373,7 +374,11 @@ public class MBlocks
 	public static Block raspberry_bush;
 	public static Block mana_bush;
 	public static Block rice_crop;
-	public static Item	rice;
+	public static Item	rice_seed;
+	public static Block pepper_crop;
+	public static Item	pepper_seed;
+	public static Block peanut_crop;
+	public static Item	peanuts;
 	
 	//Fluid
 	public static Block magma;
@@ -680,7 +685,12 @@ public class MBlocks
 		raspberry_bush = new BlockBush(MItems.raspberry).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("raspberry_bush");
 		mana_bush = new BlockBush(MItems.mana_leaf).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("mana_bush");
 		rice_crop = new BlockRice().setUnlocalizedName("rice_crop");
-		rice = new ItemSeedFood(1, 0.3F, MBlocks.rice_crop, Blocks.farmland).setUnlocalizedName("rice").setCreativeTab(Minestrappolation.tabMFood);
+		rice_seed = new ItemSeeds(rice_crop, Blocks.farmland).setUnlocalizedName("rice_seeds").setCreativeTab(Minestrappolation.tabMFood);
+		pepper_crop = new BlockRice().setUnlocalizedName("pepper_crop");
+		pepper_seed = new ItemSeeds(pepper_crop, Blocks.farmland).setUnlocalizedName("pepper_seeds").setCreativeTab(Minestrappolation.tabMFood);
+		peanut_crop = new BlockRice().setUnlocalizedName("peanut_crop");
+		peanuts = new ItemSeedFood(1, 0.3F, peanut_crop, Blocks.farmland).setUnlocalizedName("peanuts").setCreativeTab(Minestrappolation.tabMFood);
+		
 		
 		//Liquids
 		magma = new BlockMagma().setUnlocalizedName("magma");
@@ -841,7 +851,11 @@ public class MBlocks
 		register(raspberry_bush);
 		register(mana_bush);
 		register(rice_crop);
-		GameRegistry.registerItem(rice, rice.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(rice_seed, rice_seed.getUnlocalizedName().substring(5));
+		register(pepper_crop);
+		GameRegistry.registerItem(pepper_seed, pepper_seed.getUnlocalizedName().substring(5));
+		register(peanut_crop);
+		GameRegistry.registerItem(peanuts, peanuts.getUnlocalizedName().substring(5));
 		
 		register(ministrapp_sapling, ItemBlockSapling.class);
 		register(ministrapp_leaves, ItemBlockLeaves.class);
@@ -932,7 +946,9 @@ public class MBlocks
 		registerRender(glass_door_item);
 		registerRender(magmaBucket);
 		
-		registerRender(rice);
+		registerRender(rice_seed);
+		registerRender(pepper_seed);
+		registerRender(peanuts);
 	}
 	
 	private static void register(Block block)

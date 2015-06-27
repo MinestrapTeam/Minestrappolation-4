@@ -5,17 +5,17 @@ import minestrapteam.minestrappolation.lib.MItems;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.item.Item;
 
-public class BlockRice extends BlockCrops
+public class BlockPeanuts extends BlockCrops
 {
 	@Override
 	protected Item getSeed()
     {
-        return MBlocks.rice_seed;
+        return MBlocks.peanuts;
     }
 
 	@Override
     protected Item getCrop()
     {
-        return MItems.rice;
+        return MBlocks.peanuts;
     }
 }

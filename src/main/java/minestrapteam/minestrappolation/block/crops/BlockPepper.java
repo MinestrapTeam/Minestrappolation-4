@@ -5,12 +5,12 @@ import minestrapteam.minestrappolation.lib.MItems;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.item.Item;
 
-public class BlockRice extends BlockCrops
+public class BlockPepper extends BlockCrops
 {
 	@Override
 	protected Item getSeed()
     {
-        return MBlocks.rice_seed;
+        return MBlocks.pepper_seed;
     }
 
 	@Override
