@@ -73,6 +73,8 @@ import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTin;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTitanium;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTorite;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeUranium;
+import minestrapteam.minestrappolation.block.crops.BlockCabbage;
+import minestrapteam.minestrappolation.block.crops.BlockOnion;
 import minestrapteam.minestrappolation.block.crops.BlockPeanuts;
 import minestrapteam.minestrappolation.block.crops.BlockPepper;
 import minestrapteam.minestrappolation.block.crops.BlockRice;
@@ -377,12 +379,18 @@ public class MBlocks
 	public static Block blackberry_bush;
 	public static Block raspberry_bush;
 	public static Block mana_bush;
+	
+	//Crops
 	public static Block rice_crop;
 	public static Item	rice_seed;
 	public static Block pepper_crop;
 	public static Item	pepper_seed;
 	public static Block peanut_crop;
 	public static Item	peanuts;
+	public static Block cabbage_crop;
+	public static Item	cabbage_seed;
+	public static Block onion_crop;
+	public static Item	onion_seed;
 	
 	//Fluid
 	public static Block magma;
@@ -688,12 +696,18 @@ public class MBlocks
 		blackberry_bush = new BlockBush(MItems.blackberry).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("blackberry_bush");
 		raspberry_bush = new BlockBush(MItems.raspberry).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("raspberry_bush");
 		mana_bush = new BlockBush(MItems.mana_leaf).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("mana_bush");
+		
+		//Crops
 		rice_crop = new BlockRice().setUnlocalizedName("rice_crop");
 		rice_seed = new ItemSeeds(rice_crop, Blocks.farmland).setUnlocalizedName("rice_seeds").setCreativeTab(Minestrappolation.tabMFood);
 		pepper_crop = new BlockPepper().setUnlocalizedName("pepper_crop");
 		pepper_seed = new ItemSeeds(pepper_crop, Blocks.farmland).setUnlocalizedName("pepper_seeds").setCreativeTab(Minestrappolation.tabMFood);
 		peanut_crop = new BlockPeanuts().setUnlocalizedName("peanut_crop");
 		peanuts = new ItemSeedFood(1, 0.3F, peanut_crop, Blocks.farmland).setUnlocalizedName("peanuts").setCreativeTab(Minestrappolation.tabMFood);
+		cabbage_crop = new BlockCabbage().setUnlocalizedName("cabbage_crop");
+		cabbage_seed = new ItemSeeds(cabbage_crop, Blocks.farmland).setUnlocalizedName("cabbage_seeds").setCreativeTab(Minestrappolation.tabMFood);
+		onion_crop = new BlockOnion().setUnlocalizedName("onion_crop");
+		onion_seed = new ItemSeedFood(1, 0.3F, onion_crop, Blocks.farmland).setUnlocalizedName("onion_seeds").setCreativeTab(Minestrappolation.tabMFood);
 		
 		
 		//Liquids
@@ -710,6 +724,8 @@ public class MBlocks
 		MinecraftForge.addGrassSeed(new ItemStack(pepper_seed), 10);
 		MinecraftForge.addGrassSeed(new ItemStack(rice_seed), 10);
 		MinecraftForge.addGrassSeed(new ItemStack(peanuts), 10);
+		MinecraftForge.addGrassSeed(new ItemStack(cabbage_seed), 10);
+		MinecraftForge.addGrassSeed(new ItemStack(onion_seed), 10);
 	}
 	
 	private static void register()
@@ -864,6 +880,10 @@ public class MBlocks
 		GameRegistry.registerItem(pepper_seed, pepper_seed.getUnlocalizedName().substring(5));
 		register(peanut_crop);
 		GameRegistry.registerItem(peanuts, peanuts.getUnlocalizedName().substring(5));
+		register(cabbage_crop);
+		GameRegistry.registerItem(cabbage_seed, cabbage_seed.getUnlocalizedName().substring(5));
+		register(onion_crop);
+		GameRegistry.registerItem(onion_seed, onion_seed.getUnlocalizedName().substring(5));
 		
 		register(ministrapp_sapling, ItemBlockSapling.class);
 		register(ministrapp_leaves, ItemBlockLeaves.class);
@@ -957,6 +977,8 @@ public class MBlocks
 		registerRender(rice_seed);
 		registerRender(pepper_seed);
 		registerRender(peanuts);
+		registerRender(onion_seed);
+		registerRender(cabbage_seed);
 	}
 	
 	private static void register(Block block)

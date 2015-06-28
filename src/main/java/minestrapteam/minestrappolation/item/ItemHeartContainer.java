@@ -23,8 +23,11 @@ public class ItemHeartContainer extends Item
 	
 	public ItemStack onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn)
     {
-        //TODO: Find some way of making it permanently increase the player's maximum health by 1 heart. I think this can be done via nbt data, but I can't figure out how the hell that stuff works...
-        --itemStackIn.stackSize;
+		if(playerIn.getMaxHealth() < 40D)
+		{
+			playerIn.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(playerIn.getMaxHealth() + 1D);
+	        --itemStackIn.stackSize;
+		}
         return itemStackIn;
     }
 }

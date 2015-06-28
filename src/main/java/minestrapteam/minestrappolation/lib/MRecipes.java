@@ -14,6 +14,8 @@ public class MRecipes
 	
 	public static void register()
 	{
+		GameRegistry.addRecipe(new ItemStack(MItems.heart_container, 1), new Object[] { "W", 'W', Items.wheat });
+		
 		// Food
 		GameRegistry.addRecipe(new ItemStack(MItems.dough, 2), new Object[] { "WW", "WW", 'W', Items.wheat });
 		GameRegistry.addSmelting(new ItemStack(MItems.dough), new ItemStack(Items.bread), 0.3F);
