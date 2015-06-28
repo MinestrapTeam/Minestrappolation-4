@@ -17,6 +17,7 @@ public class Config
 	public static int		soulGemDropChance;
 	public static int		soulBlockDamage;
 	public static int		soulGemXPGain;
+	public static int		bushGrowChance;
 	
 	public static void configInit(FMLPreInitializationEvent event)
 	{
@@ -31,6 +32,7 @@ public class Config
 		soulGemDropChance = config.get("Mechanics", "SoulGemDropChance", 3).getInt();
 		soulBlockDamage = config.get("Mechanics", "SoulBlockDamage", 200).getInt();
 		soulGemXPGain = config.get("Mechanics", "SoulGemXPGain", 20).getInt();
+		bushGrowChance = config.get("Mechanics", "BushGrowthchance", 4).getInt();
 		config.save();
 	}
 	

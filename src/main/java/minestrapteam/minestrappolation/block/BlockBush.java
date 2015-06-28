@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
+import minestrapteam.minestrappolation.Config;
 import minestrapteam.minestrappolation.Minestrappolation;
 import minestrapteam.minestrappolation.handlers.MGuiHandler;
 import minestrapteam.minestrappolation.lib.MAchievements;
@@ -59,7 +60,7 @@ public class BlockBush extends MBlock implements IPlantable, IShearable{
                 	int j = ((Integer)state.getValue(AGE)).intValue();
                     if(j < 5)
                     {
-                    	int chance = rand.nextInt(4);
+                    	int chance = rand.nextInt(Config.bushGrowChance);
                     	if(chance == 1)
                     	{
                     		worldIn.setBlockState(pos, state.withProperty(AGE, Integer.valueOf(j + 1)), 2);
