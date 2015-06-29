@@ -13,6 +13,7 @@ import minestrapteam.minestrappolation.item.ItemMShovel;
 import minestrapteam.minestrappolation.item.ItemMSoup;
 import minestrapteam.minestrappolation.item.ItemMSword;
 import minestrapteam.minestrappolation.item.ItemSifter;
+import minestrapteam.minestrappolation.item.ItemSoulBottle;
 import minestrapteam.minestrappolation.item.ItemSoulGem;
 import minestrapteam.minestrappolation.item.MItemFoiled;
 import net.minecraft.client.Minecraft;
@@ -172,6 +173,7 @@ public class MItems extends Item
 	
 	public static Item							sifter;
 	public static Item							heart_container;
+	public static Item							soulbottle;
 	
 	public static final Item.ToolMaterial		COPPER			= EnumHelper.addToolMaterial("COPPER", 1, 186, 4.5F, 1.5F, 18);
 	public static final Item.ToolMaterial		BRONZE			= EnumHelper.addToolMaterial("BRONZE", 2, 1016, 5.8F, 2.0F, 16);
@@ -332,6 +334,8 @@ public class MItems extends Item
 		
 		sifter = new ItemSifter().setUnlocalizedName("sifter");
 		heart_container = new ItemHeartContainer().setUnlocalizedName("heart_container");
+		soulbottle = new ItemSoulBottle().setUnlocalizedName("soul_bottle").setCreativeTab(Minestrappolation.tabMTools);
+		
 		addItemsToChests();
 	}
 	
@@ -476,6 +480,7 @@ public class MItems extends Item
 		
 		register(sifter);
 		register(heart_container);
+		register(soulbottle);
 	}
 	
 	public static void register(Item item)
