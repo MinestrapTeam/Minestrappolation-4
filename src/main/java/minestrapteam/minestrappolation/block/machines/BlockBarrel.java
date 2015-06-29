@@ -1,4 +1,4 @@
-package minestrapteam.minestrappolation.block;
+package minestrapteam.minestrappolation.block.machines;
 
 import minestrapteam.minestrappolation.Minestrappolation;
 import minestrapteam.minestrappolation.handlers.MGuiHandler;

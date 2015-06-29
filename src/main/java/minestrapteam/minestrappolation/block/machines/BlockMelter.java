@@ -1,12 +1,13 @@
-package minestrapteam.minestrappolation.block;
+package minestrapteam.minestrappolation.block.machines;
 
 import java.util.Random;
 
 import minestrapteam.minestrappolation.Minestrappolation;
+import minestrapteam.minestrappolation.block.BlockDirectional;
 import minestrapteam.minestrappolation.handlers.MGuiHandler;
 import minestrapteam.minestrappolation.lib.MAchievements;
 import minestrapteam.minestrappolation.lib.MBlocks;
-import minestrapteam.minestrappolation.tileentity.TileEntitySplitter;
+import minestrapteam.minestrappolation.tileentity.TileEntityMelter;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -27,27 +28,32 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockSplitter extends BlockDirectional
+public class BlockMelter extends BlockDirectional
 {
 	private static boolean					keepInventory	= false;
 	public final boolean					isBurning		= false;
 	public boolean							isActive		= false;
 	
-	public BlockSplitter(boolean active)
+	public BlockMelter(boolean active)
 	{
 		super(Material.rock);
 		this.isActive = active;
 		if (active)
 		{
 			this.setLightLevel(1F);
-			this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.05F, 1.45F, 1.05F);
 		}
+	}
+	
+	@Override
+	public Item getItemDropped(IBlockState state, Random rand, int fortune)
+	{
+		return Item.getItemFromBlock(MBlocks.melter);
 	}
 	
 	@Override
 	public TileEntity createNewTileEntity(World world, int metadata)
 	{
-		return new TileEntitySplitter();
+		return new TileEntityMelter();
 	}
 	
 	public static void setState(boolean active, World worldIn, BlockPos pos)
@@ -58,13 +64,13 @@ public class BlockSplitter extends BlockDirectional
 		
 		if (active)
 		{
-			worldIn.setBlockState(pos, MBlocks.splitter_active.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
-			worldIn.setBlockState(pos, MBlocks.splitter_active.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+			worldIn.setBlockState(pos, MBlocks.melter_active.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+			worldIn.setBlockState(pos, MBlocks.melter_active.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
 		}
 		else
 		{
-			worldIn.setBlockState(pos, MBlocks.splitter.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
-			worldIn.setBlockState(pos, MBlocks.splitter.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+			worldIn.setBlockState(pos, MBlocks.melter.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+			worldIn.setBlockState(pos, MBlocks.melter.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
 		}
 		
 		keepInventory = false;
@@ -83,14 +89,49 @@ public class BlockSplitter extends BlockDirectional
 		{
 			TileEntity tileentity = worldIn.getTileEntity(pos);
 			
-			if (tileentity instanceof TileEntitySplitter)
+			if (tileentity instanceof TileEntityMelter)
 			{
-				InventoryHelper.dropInventoryItems(worldIn, pos, (TileEntitySplitter) tileentity);
+				InventoryHelper.dropInventoryItems(worldIn, pos, (TileEntityMelter) tileentity);
 				worldIn.updateComparatorOutputLevel(pos, this);
 			}
 		}
 		
 		super.breakBlock(worldIn, pos, state);
+	}
+	
+	@SuppressWarnings("incomplete-switch")
+	@SideOnly(Side.CLIENT)
+	@Override
+	public void randomDisplayTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
+	{
+		if (this.isActive)
+		{
+			EnumFacing enumfacing = (EnumFacing) state.getValue(FACING);
+			double d0 = pos.getX() + 0.5D;
+			double d1 = pos.getY() + rand.nextDouble() * 6.0D / 16.0D;
+			double d2 = pos.getZ() + 0.5D;
+			double d3 = 0.52D;
+			double d4 = rand.nextDouble() * 0.6D - 0.3D;
+			
+			switch (enumfacing)
+			{
+			case WEST:
+				worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0 - d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D, new int[0]);
+				worldIn.spawnParticle(EnumParticleTypes.FLAME, d0 - d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D, new int[0]);
+				break;
+			case EAST:
+				worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0 + d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D, new int[0]);
+				worldIn.spawnParticle(EnumParticleTypes.FLAME, d0 + d3, d1, d2 + d4, 0.0D, 0.0D, 0.0D, new int[0]);
+				break;
+			case NORTH:
+				worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0 + d4, d1, d2 - d3, 0.0D, 0.0D, 0.0D, new int[0]);
+				worldIn.spawnParticle(EnumParticleTypes.FLAME, d0 + d4, d1, d2 - d3, 0.0D, 0.0D, 0.0D, new int[0]);
+				break;
+			case SOUTH:
+				worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0 + d4, d1, d2 + d3, 0.0D, 0.0D, 0.0D, new int[0]);
+				worldIn.spawnParticle(EnumParticleTypes.FLAME, d0 + d4, d1, d2 + d3, 0.0D, 0.0D, 0.0D, new int[0]);
+			}
+		}
 	}
 	
 	@Override
@@ -103,13 +144,13 @@ public class BlockSplitter extends BlockDirectional
 	@Override
 	public boolean isOpaqueCube()
 	{
-		return false;
+		return true;
 	}
 	
 	@Override
 	public boolean isFullCube()
 	{
-		return false;
+		return true;
 	}
 	
 	@Override
@@ -125,6 +166,7 @@ public class BlockSplitter extends BlockDirectional
 			return true;
 		
 		playerIn.openGui(Minestrappolation.instance, MGuiHandler.GUIID_MELTER, worldIn, pos.getX(), pos.getY(), pos.getZ());
+		playerIn.addStat(MAchievements.melter, 1);
 		return true;
 	}
 }

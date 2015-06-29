@@ -1,7 +1,7 @@
 package minestrapteam.minestrappolation.tileentity;
 
-import minestrapteam.minestrappolation.block.BlockMelter;
-import minestrapteam.minestrappolation.block.BlockSplitter;
+import minestrapteam.minestrappolation.block.machines.BlockMelter;
+import minestrapteam.minestrappolation.block.machines.BlockSplitter;
 import minestrapteam.minestrappolation.crafting.recipes.SplitterRecipes;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MItems;

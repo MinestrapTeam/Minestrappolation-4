@@ -1,14 +1,14 @@
-package minestrapteam.minestrappolation.item;
+package minestrapteam.minestrappolation.item.blocks;
 
+import minestrapteam.minestrappolation.enumtypes.MStoneType;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockSand;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemBlockColdSand extends ItemBlock
+public class ItemBlockMossyBricks extends ItemBlock
 {
 	
-	public ItemBlockColdSand(Block block)
+	public ItemBlockMossyBricks(Block block)
 	{
 		super(block);
 		this.setHasSubtypes(true);
@@ -25,7 +25,6 @@ public class ItemBlockColdSand extends ItemBlock
 	@Override
 	public String getUnlocalizedName(ItemStack item)
 	{
-		return "cold_" + BlockSand.EnumType.byMetadata(item.getItemDamage());
+		return MStoneType.byMetadata(item.getItemDamage()) + "_mossy_bricks";
 	}
-	
 }

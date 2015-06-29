@@ -1,8 +1,9 @@
-package minestrapteam.minestrappolation.block;
+package minestrapteam.minestrappolation.block.machines;
 
 import java.util.HashMap;
 import java.util.Random;
 
+import minestrapteam.minestrappolation.block.MBlock;
 import minestrapteam.minestrappolation.enumtypes.MWoodType;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import net.minecraft.block.BlockDirt;

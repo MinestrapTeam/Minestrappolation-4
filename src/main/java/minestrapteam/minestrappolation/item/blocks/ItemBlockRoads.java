@@ -1,14 +1,14 @@
-package minestrapteam.minestrappolation.item;
+package minestrapteam.minestrappolation.item.blocks;
 
-import minestrapteam.minestrappolation.enumtypes.MStoneType;
+import minestrapteam.minestrappolation.enumtypes.MRoadType;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemBlockLampGlowstone extends ItemBlock
+public class ItemBlockRoads extends ItemBlock
 {
 	
-	public ItemBlockLampGlowstone(Block block)
+	public ItemBlockRoads(Block block)
 	{
 		super(block);
 		this.setHasSubtypes(true);
@@ -25,6 +25,6 @@ public class ItemBlockLampGlowstone extends ItemBlock
 	@Override
 	public String getUnlocalizedName(ItemStack item)
 	{
-		return MStoneType.byMetadata(item.getItemDamage()) + "_lamp_glowstone";
+		return MRoadType.byMetadata(item.getItemDamage()) + "_road";
 	}
 }

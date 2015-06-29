@@ -1,4 +1,4 @@
-package minestrapteam.minestrappolation.item;
+package minestrapteam.minestrappolation.item.blocks;
 
 import minestrapteam.minestrappolation.enumtypes.MWoodType;
 import minestrapteam.minestrappolation.lib.MBlocks;

@@ -1,18 +1,19 @@
-package minestrapteam.minestrappolation.item;
+package minestrapteam.minestrappolation.item.blocks;
 
-import minestrapteam.minestrappolation.enumtypes.MWoodType;
+import minestrapteam.minestrappolation.enumtypes.MStoneType;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemBlockPlanks extends ItemBlock
+public class ItemBlockPatternBricks extends ItemBlock
 {
 	
-	public ItemBlockPlanks(Block block)
+	public ItemBlockPatternBricks(Block block)
 	{
 		super(block);
 		this.setHasSubtypes(true);
 		this.setMaxDamage(0);
+		
 	}
 	
 	@Override
@@ -24,7 +25,6 @@ public class ItemBlockPlanks extends ItemBlock
 	@Override
 	public String getUnlocalizedName(ItemStack item)
 	{
-		return MWoodType.byMetadata(item.getItemDamage()) + "_planks";
+		return MStoneType.byMetadata(item.getItemDamage()) + "_pattern_bricks";
 	}
-	
 }

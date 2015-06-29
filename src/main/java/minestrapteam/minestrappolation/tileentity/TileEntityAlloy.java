@@ -1,6 +1,6 @@
 package minestrapteam.minestrappolation.tileentity;
 
-import minestrapteam.minestrappolation.block.BlockAlloy;
+import minestrapteam.minestrappolation.block.machines.BlockAlloy;
 import minestrapteam.minestrappolation.crafting.recipes.AlloyRecipes;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;

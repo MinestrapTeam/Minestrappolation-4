@@ -107,19 +107,19 @@ public class MGenHandler implements IWorldGenerator
 		//Berries
 		if(biome == BiomeGenBase.forest || biome == BiomeGenBase.forestHills || biome == BiomeGenBase.birchForest || biome == BiomeGenBase.birchForestHills || biome == BiomeGenBase.roofedForest || biome == BiomeGenBase.swampland)
 		{
-			this.generateBerries(world, rand, x1, z1, new WorldGenBlueberry());
+			this.generateBerries(world, rand, x1, z1, new WorldGenBush(MBlocks.blueberry_bush));
 		}
 		if(biome == BiomeGenBase.extremeHills || biome == BiomeGenBase.extremeHillsEdge || biome == BiomeGenBase.extremeHillsPlus || biome == BiomeGenBase.taiga || biome == BiomeGenBase.taigaHills || biome == BiomeGenBase.megaTaiga || biome == BiomeGenBase.megaTaigaHills)
 		{
-			this.generateBerries(world, rand, x1, z1, new WorldGenBlackberry());
+			this.generateBerries(world, rand, x1, z1, new WorldGenBush(MBlocks.blackberry_bush));
 		}
 		if(biome == BiomeGenBase.savanna || biome == BiomeGenBase.savannaPlateau || biome == BiomeGenBase.mesa || biome == BiomeGenBase.mesaPlateau || biome == BiomeGenBase.mesaPlateau_F || biome== MBiomeManager.redwood)
 		{
-			this.generateBerries(world, rand, x1, z1, new WorldGenRaspberry());
+			this.generateBerries(world, rand, x1, z1, new WorldGenBush(MBlocks.raspberry_bush));
 		}
 		if(biome == BiomeGenBase.mushroomIsland || biome == BiomeGenBase.mushroomIslandShore || biome == BiomeGenBase.deepOcean || biome == BiomeGenBase.ocean)
 		{
-			this.generateBerries(world, rand, x1, z1, new WorldGenMana());
+			this.generateBerries(world, rand, x1, z1, new WorldGenBush(MBlocks.mana_bush));
 		}
 		
 		

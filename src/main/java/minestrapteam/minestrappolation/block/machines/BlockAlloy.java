@@ -1,12 +1,13 @@
-package minestrapteam.minestrappolation.block;
+package minestrapteam.minestrappolation.block.machines;
 
 import java.util.Random;
 
 import minestrapteam.minestrappolation.Minestrappolation;
+import minestrapteam.minestrappolation.block.BlockDirectional;
 import minestrapteam.minestrappolation.handlers.MGuiHandler;
 import minestrapteam.minestrappolation.lib.MAchievements;
 import minestrapteam.minestrappolation.lib.MBlocks;
-import minestrapteam.minestrappolation.tileentity.TileEntityMelter;
+import minestrapteam.minestrappolation.tileentity.TileEntityAlloy;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -27,13 +28,13 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockMelter extends BlockDirectional
+public class BlockAlloy extends BlockDirectional
 {
 	private static boolean					keepInventory	= false;
 	public final boolean					isBurning		= false;
 	public boolean							isActive		= false;
 	
-	public BlockMelter(boolean active)
+	public BlockAlloy(boolean active)
 	{
 		super(Material.rock);
 		this.isActive = active;
@@ -46,13 +47,30 @@ public class BlockMelter extends BlockDirectional
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
 	{
-		return Item.getItemFromBlock(MBlocks.melter);
+		return Item.getItemFromBlock(MBlocks.alloy);
 	}
 	
 	@Override
 	public TileEntity createNewTileEntity(World world, int metadata)
 	{
-		return new TileEntityMelter();
+		return new TileEntityAlloy();
+	}
+	
+	@Override
+	public void breakBlock(World worldIn, BlockPos pos, IBlockState state)
+	{
+		if (!keepInventory)
+		{
+			TileEntity tileentity = worldIn.getTileEntity(pos);
+			
+			if (tileentity instanceof TileEntityAlloy)
+			{
+				InventoryHelper.dropInventoryItems(worldIn, pos, (TileEntityAlloy) tileentity);
+				worldIn.updateComparatorOutputLevel(pos, this);
+			}
+		}
+		
+		super.breakBlock(worldIn, pos, state);
 	}
 	
 	public static void setState(boolean active, World worldIn, BlockPos pos)
@@ -63,13 +81,13 @@ public class BlockMelter extends BlockDirectional
 		
 		if (active)
 		{
-			worldIn.setBlockState(pos, MBlocks.melter_active.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
-			worldIn.setBlockState(pos, MBlocks.melter_active.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+			worldIn.setBlockState(pos, MBlocks.alloy_active.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+			worldIn.setBlockState(pos, MBlocks.alloy_active.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
 		}
 		else
 		{
-			worldIn.setBlockState(pos, MBlocks.melter.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
-			worldIn.setBlockState(pos, MBlocks.melter.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+			worldIn.setBlockState(pos, MBlocks.alloy.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+			worldIn.setBlockState(pos, MBlocks.alloy.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
 		}
 		
 		keepInventory = false;
@@ -79,23 +97,6 @@ public class BlockMelter extends BlockDirectional
 			tileentity.validate();
 			worldIn.setTileEntity(pos, tileentity);
 		}
-	}
-	
-	@Override
-	public void breakBlock(World worldIn, BlockPos pos, IBlockState state)
-	{
-		if (!keepInventory)
-		{
-			TileEntity tileentity = worldIn.getTileEntity(pos);
-			
-			if (tileentity instanceof TileEntityMelter)
-			{
-				InventoryHelper.dropInventoryItems(worldIn, pos, (TileEntityMelter) tileentity);
-				worldIn.updateComparatorOutputLevel(pos, this);
-			}
-		}
-		
-		super.breakBlock(worldIn, pos, state);
 	}
 	
 	@SuppressWarnings("incomplete-switch")
@@ -132,7 +133,7 @@ public class BlockMelter extends BlockDirectional
 			}
 		}
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public EnumWorldBlockLayer getBlockLayer()
@@ -164,8 +165,9 @@ public class BlockMelter extends BlockDirectional
 		if (worldIn.isRemote)
 			return true;
 		
-		playerIn.openGui(Minestrappolation.instance, MGuiHandler.GUIID_MELTER, worldIn, pos.getX(), pos.getY(), pos.getZ());
-		playerIn.addStat(MAchievements.melter, 1);
+		playerIn.openGui(Minestrappolation.instance, MGuiHandler.GUIID_ALLOY, worldIn, pos.getX(), pos.getY(), pos.getZ());
+		playerIn.addStat(MAchievements.alloy, 1);
 		return true;
 	}
+	
 }

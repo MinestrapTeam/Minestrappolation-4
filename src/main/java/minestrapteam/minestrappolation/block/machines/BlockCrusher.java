@@ -1,6 +1,7 @@
-package minestrapteam.minestrappolation.block;
+package minestrapteam.minestrappolation.block.machines;
 
 import minestrapteam.minestrappolation.Minestrappolation;
+import minestrapteam.minestrappolation.block.BlockDirectional;
 import minestrapteam.minestrappolation.handlers.MGuiHandler;
 import minestrapteam.minestrappolation.lib.MAchievements;
 import minestrapteam.minestrappolation.lib.MBlocks;

@@ -11,8 +11,15 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
-public class WorldGenMana extends WorldGenerator
+public class WorldGenBush extends WorldGenerator
 {
+	public Block bush;
+	
+	public WorldGenBush(Block bush)
+	{
+		this.bush = bush;
+	}
+	
    	public boolean generate(World worldIn, Random rand, BlockPos pos)
     {
         Block block;
@@ -28,9 +35,9 @@ public class WorldGenMana extends WorldGenerator
         {
             BlockPos blockpos1 = pos.add(rand.nextInt(8) - rand.nextInt(8), rand.nextInt(4) - rand.nextInt(4), rand.nextInt(8) - rand.nextInt(8));
 
-            if (worldIn.isAirBlock(blockpos1) && ((BlockBush) MBlocks.mana_bush).canBlockStay(worldIn, blockpos1))
+            if (worldIn.isAirBlock(blockpos1) && ((BlockBush) bush).canBlockStay(worldIn, blockpos1))
             {
-                worldIn.setBlockState(blockpos1, MBlocks.mana_bush.getDefaultState().withProperty(BlockBush.AGE, 5), 2);
+                worldIn.setBlockState(blockpos1, bush.getDefaultState().withProperty(BlockBush.AGE, 5), 2);
             }
         }
 

@@ -1,14 +1,14 @@
-package minestrapteam.minestrappolation.item;
+package minestrapteam.minestrappolation.item.blocks;
 
 import minestrapteam.minestrappolation.enumtypes.MStoneType;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemBlockRefined extends ItemBlock
+public class ItemBlockLampSunstone extends ItemBlock
 {
 	
-	public ItemBlockRefined(Block block)
+	public ItemBlockLampSunstone(Block block)
 	{
 		super(block);
 		this.setHasSubtypes(true);
@@ -25,6 +25,6 @@ public class ItemBlockRefined extends ItemBlock
 	@Override
 	public String getUnlocalizedName(ItemStack item)
 	{
-		return MStoneType.byMetadata(item.getItemDamage()) + "_refined";
+		return MStoneType.byMetadata(item.getItemDamage()) + "_lamp_sunstone";
 	}
 }
