@@ -2,6 +2,7 @@ package minestrapteam.minestrappolation.lib;
 
 import java.util.ArrayList;
 
+import minestrapteam.minestrappolation.Config;
 import minestrapteam.minestrappolation.Minestrappolation;
 import minestrapteam.minestrappolation.block.BlockBiomeBricks;
 import minestrapteam.minestrappolation.block.BlockBlazium;
@@ -377,6 +378,7 @@ public class MBlocks
 	public static Block moss;
 	public static Block blueberry_bush;
 	public static Block blackberry_bush;
+	public static Block strawberry_bush;
 	public static Block raspberry_bush;
 	public static Block mana_bush;
 	
@@ -695,6 +697,7 @@ public class MBlocks
 		blueberry_bush = new BlockBush(MItems.blueberry).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("blueberry_bush");
 		blackberry_bush = new BlockBush(MItems.blackberry).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("blackberry_bush");
 		raspberry_bush = new BlockBush(MItems.raspberry).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("raspberry_bush");
+		strawberry_bush = new BlockBush(MItems.strawberry).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("strawberry_bush");
 		mana_bush = new BlockBush(MItems.mana_leaf).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("mana_bush");
 		
 		//Crops
@@ -721,11 +724,11 @@ public class MBlocks
 		register();
 		registerHarvestLevels();
 		
-		MinecraftForge.addGrassSeed(new ItemStack(pepper_seed), 10);
-		MinecraftForge.addGrassSeed(new ItemStack(rice_seed), 10);
-		MinecraftForge.addGrassSeed(new ItemStack(peanuts), 10);
-		MinecraftForge.addGrassSeed(new ItemStack(cabbage_seed), 10);
-		MinecraftForge.addGrassSeed(new ItemStack(onion_seed), 10);
+		MinecraftForge.addGrassSeed(new ItemStack(pepper_seed), Config.pepperSeedChance);
+		MinecraftForge.addGrassSeed(new ItemStack(rice_seed), Config.riceSeedChance);
+		MinecraftForge.addGrassSeed(new ItemStack(peanuts), Config.peanutChance);
+		MinecraftForge.addGrassSeed(new ItemStack(cabbage_seed), Config.cabbageSeedChance);
+		MinecraftForge.addGrassSeed(new ItemStack(onion_seed), Config.onionSeedChance);
 	}
 	
 	private static void register()
@@ -873,6 +876,7 @@ public class MBlocks
 		register(blueberry_bush);
 		register(blackberry_bush);
 		register(raspberry_bush);
+		register(strawberry_bush);
 		register(mana_bush);
 		register(rice_crop);
 		GameRegistry.registerItem(rice_seed, rice_seed.getUnlocalizedName().substring(5));

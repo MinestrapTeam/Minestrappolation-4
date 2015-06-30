@@ -43,6 +43,7 @@ public class MItems extends Item
 	public static Item							blueberry;
 	public static Item							blackberry;
 	public static Item							raspberry;
+	public static Item							strawberry;
 	public static Item							rice;
 	public static Item							pepper;
 	public static Item							onion;
@@ -204,6 +205,7 @@ public class MItems extends Item
 		blueberry = new ItemFood(0, 1.0F, false).setPotionEffect(Potion.healthBoost.id, 10, 0, 0.3F).setUnlocalizedName("blueberry").setCreativeTab(Minestrappolation.tabMFood);
 		blackberry = new ItemFood(1, 0.4F, false).setPotionEffect(Potion.digSpeed.id, 10, 0, 0.3F).setUnlocalizedName("blackberry").setCreativeTab(Minestrappolation.tabMFood);
 		raspberry = new ItemFood(1, 0.0F, false).setPotionEffect(Potion.heal.id, 1, 0, 0.3F).setUnlocalizedName("raspberry").setCreativeTab(Minestrappolation.tabMFood);
+		strawberry = new ItemFood(1, 0.0F, false).setPotionEffect(Potion.heal.id, 1, 0, 0.3F).setUnlocalizedName("strawberry").setCreativeTab(Minestrappolation.tabMFood);
 		rice = new ItemFood(1, 0.3F, false).setUnlocalizedName("rice").setCreativeTab(Minestrappolation.tabMFood);
 		pepper = new ItemFood(1, 0.3F, false).setUnlocalizedName("pepper").setCreativeTab(Minestrappolation.tabMFood);
 		onion = new ItemFood(1, 0.3F, false).setUnlocalizedName("onion").setCreativeTab(Minestrappolation.tabMFood);
@@ -333,7 +335,7 @@ public class MItems extends Item
 		chunks = new ItemChunk().setUnlocalizedName("chunks").setCreativeTab(Minestrappolation.tabMMaterials);
 		
 		sifter = new ItemSifter().setUnlocalizedName("sifter");
-		heart_container = new ItemHeartContainer().setUnlocalizedName("heart_container");
+		heart_container = new ItemHeartContainer().setUnlocalizedName("heart_container").setCreativeTab(Minestrappolation.tabMTools);
 		soulbottle = new ItemSoulBottle().setUnlocalizedName("soul_bottle").setCreativeTab(Minestrappolation.tabMTools);
 		
 		addItemsToChests();
@@ -390,6 +392,7 @@ public class MItems extends Item
 		register(fried_egg);
 		register(blueberry);
 		register(blackberry);
+		register(strawberry);
 		register(raspberry);
 		register(rice);
 		register(pepper);

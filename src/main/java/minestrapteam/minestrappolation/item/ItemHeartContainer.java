@@ -1,5 +1,6 @@
 package minestrapteam.minestrappolation.item;
 
+import minestrapteam.minestrappolation.Config;
 import minestrapteam.minestrappolation.Minestrappolation;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.IAttribute;
@@ -23,7 +24,7 @@ public class ItemHeartContainer extends Item
 	
 	public ItemStack onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn)
     {
-		if(playerIn.getMaxHealth() < 40D)
+		if(playerIn.getMaxHealth() < Config.healthIncreaseMax)
 		{
 			playerIn.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(playerIn.getMaxHealth() + 1D);
 	        --itemStackIn.stackSize;

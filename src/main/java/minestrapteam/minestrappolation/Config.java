@@ -1,28 +1,42 @@
 package minestrapteam.minestrappolation;
 
+import java.io.File;
+
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 public class Config
 {
 	
-	// Booleans
+	// ********** Booleans **********
 	public static Boolean	radiationEffects;
 	public static Boolean	blaziumFireEffect;
 	public static Boolean   frostSpeedEffect;
 	
 	public static Boolean checkForUpdates;
 	
-	// Integers
+	// ********* Integers **********
+	//Misc
 	public static int		soulGemDropChance;
 	public static int		soulBlockDamage;
 	public static int		soulGemXPGain;
 	public static int		soulBottleStorage;
+	
+	//Plants
 	public static int		bushGrowChance;
+	public static int		pepperSeedChance;
+	public static int		onionSeedChance;
+	public static int		cabbageSeedChance;
+	public static int		peanutChance;
+	public static int		riceSeedChance;
+	
+	
+	// ********* Doubles **********
+	public static double    healthIncreaseMax;
 	
 	public static void configInit(FMLPreInitializationEvent event)
 	{
-		Configuration config = new Configuration(event.getSuggestedConfigurationFile());
+		Configuration config = new Configuration(new File("config/Minestrapp.CFG"));
 		config.load();
 		radiationEffects = config.get("Mechanics", "RadiationEffects", true).getBoolean();
 		blaziumFireEffect = config.get("Mechanics", "BlaziumFireEffect", true).getBoolean();
@@ -34,7 +48,15 @@ public class Config
 		soulBlockDamage = config.get("Mechanics", "SoulBlockDamage", 200).getInt();
 		soulGemXPGain = config.get("Mechanics", "SoulGemXPGain", 20).getInt();
 		soulBottleStorage = config.get("Mechanics", "SoulBottleStorage", 10).getInt();
-		bushGrowChance = config.get("Mechanics", "BushGrowthchance", 4).getInt();
+		
+		healthIncreaseMax = config.get("Mechanics", "MaxHealthIncrease", 40D).getDouble();
+		
+		bushGrowChance = config.get("Plants", "BushGrowthChance", 4).getInt();
+		pepperSeedChance = config.get("Plants", "PepperSeedChance", 10).getInt();
+		onionSeedChance = config.get("Plants", "OnionSeedChance", 10).getInt();
+		cabbageSeedChance = config.get("Plants", "CabbageSeedChance", 10).getInt();
+		peanutChance = config.get("Plants", "PeanutSeedChance", 10).getInt();
+		riceSeedChance = config.get("Plants", "RiceSeedChance", 10).getInt();
 		config.save();
 	}
 	
