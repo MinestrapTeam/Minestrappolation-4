@@ -67,6 +67,8 @@ import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTitanium;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTorite;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeUranium;
 import minestrapteam.minestrappolation.block.crops.BlockCabbage;
+import minestrapteam.minestrappolation.block.crops.BlockCelery;
+import minestrapteam.minestrappolation.block.crops.BlockLettuce;
 import minestrapteam.minestrappolation.block.crops.BlockOnion;
 import minestrapteam.minestrappolation.block.crops.BlockPeanuts;
 import minestrapteam.minestrappolation.block.crops.BlockPepper;
@@ -393,6 +395,10 @@ public class MBlocks
 	public static Item	cabbage_seed;
 	public static Block onion_crop;
 	public static Item	onion_seed;
+	public static Block lettuce_crop;
+	public static Item	lettuce_seed;
+	public static Block celery_crop;
+	public static Item	celery_seed;
 	
 	//Fluid
 	public static Block magma;
@@ -711,6 +717,10 @@ public class MBlocks
 		cabbage_seed = new ItemSeeds(cabbage_crop, Blocks.farmland).setUnlocalizedName("cabbage_seeds").setCreativeTab(Minestrappolation.tabMFood);
 		onion_crop = new BlockOnion().setUnlocalizedName("onion_crop");
 		onion_seed = new ItemSeedFood(1, 0.3F, onion_crop, Blocks.farmland).setUnlocalizedName("onion_seeds").setCreativeTab(Minestrappolation.tabMFood);
+		lettuce_crop = new BlockLettuce().setUnlocalizedName("lettuce_crop");
+		lettuce_seed = new ItemSeedFood(1, 0.3F, lettuce_crop, Blocks.farmland).setUnlocalizedName("lettuce_seeds").setCreativeTab(Minestrappolation.tabMFood);
+		celery_crop = new BlockCelery().setUnlocalizedName("celery_crop");
+		celery_seed = new ItemSeedFood(1, 0.3F, celery_crop, Blocks.farmland).setUnlocalizedName("celery_seeds").setCreativeTab(Minestrappolation.tabMFood);
 		
 		
 		//Liquids
@@ -888,6 +898,10 @@ public class MBlocks
 		GameRegistry.registerItem(cabbage_seed, cabbage_seed.getUnlocalizedName().substring(5));
 		register(onion_crop);
 		GameRegistry.registerItem(onion_seed, onion_seed.getUnlocalizedName().substring(5));
+		register(lettuce_crop);
+		GameRegistry.registerItem(lettuce_seed, lettuce_seed.getUnlocalizedName().substring(5));
+		register(celery_crop);
+		GameRegistry.registerItem(celery_seed, celery_seed.getUnlocalizedName().substring(5));
 		
 		register(ministrapp_sapling, ItemBlockSapling.class);
 		register(ministrapp_leaves, ItemBlockLeaves.class);

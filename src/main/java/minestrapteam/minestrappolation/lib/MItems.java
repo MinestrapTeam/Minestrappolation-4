@@ -48,6 +48,8 @@ public class MItems extends Item
 	public static Item							pepper;
 	public static Item							onion;
 	public static Item							cabbage;
+	public static Item							lettuce;
+	public static Item							celery;
 	public static Item							mana_leaf;
 	
 	public static Item							copper_ingot;
@@ -210,6 +212,8 @@ public class MItems extends Item
 		pepper = new ItemFood(1, 0.3F, false).setUnlocalizedName("pepper").setCreativeTab(Minestrappolation.tabMFood);
 		onion = new ItemFood(1, 0.3F, false).setUnlocalizedName("onion").setCreativeTab(Minestrappolation.tabMFood);
 		cabbage = new ItemFood(1, 0.3F, false).setUnlocalizedName("cabbage").setCreativeTab(Minestrappolation.tabMFood);
+		lettuce = new ItemFood(1, 0.3F, false).setUnlocalizedName("lettuce").setCreativeTab(Minestrappolation.tabMFood);
+		celery = new ItemFood(1, 0.3F, false).setUnlocalizedName("celery").setCreativeTab(Minestrappolation.tabMFood);
 		mana_leaf = new Item().setUnlocalizedName("mana_leaf").setCreativeTab(Minestrappolation.tabMMaterials);
 		
 		copper_ingot = new Item().setUnlocalizedName("copper_ingot").setCreativeTab(Minestrappolation.tabMMaterials);
@@ -398,6 +402,8 @@ public class MItems extends Item
 		register(pepper);
 		register(onion);
 		register(cabbage);
+		register(lettuce);
+		register(celery);
 		
 		register(copper_pickaxe);
 		register(copper_axe);
