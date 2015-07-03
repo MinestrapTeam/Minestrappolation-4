@@ -37,11 +37,20 @@ import minestrapteam.minestrappolation.item.ItemChunk;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MFluid;
 import minestrapteam.minestrappolation.lib.MItems;
+import minestrapteam.minestrappolation.tileentity.TileEntityAlloy;
+import minestrapteam.minestrappolation.tileentity.TileEntityBarrel;
+import minestrapteam.minestrappolation.tileentity.TileEntityCrate;
+import minestrapteam.minestrappolation.tileentity.TileEntityCrusher;
+import minestrapteam.minestrappolation.tileentity.TileEntityMelter;
+import minestrapteam.minestrappolation.tileentity.TileEntitySawMill;
+import minestrapteam.minestrappolation.tileentity.TileEntitySplitter;
+import minestrapteam.minestrappolation.tileentity.TileEntityStoneCutter;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ClientProxy extends CommonProxy
 {
@@ -132,7 +141,14 @@ public class ClientProxy extends CommonProxy
 		
 		ItemChunk.inventoryRender();
 		
-		
+		GameRegistry.registerTileEntity(TileEntityBarrel.class, "tile_entity_barrel");
+		GameRegistry.registerTileEntity(TileEntityCrate.class, "tile_entity_crate");
+		GameRegistry.registerTileEntity(TileEntityMelter.class, "tile_entity_melter");
+		GameRegistry.registerTileEntity(TileEntityAlloy.class, "tile_entity_alloy");
+		GameRegistry.registerTileEntity(TileEntityStoneCutter.class, "tile_entity_stonecutter");
+		GameRegistry.registerTileEntity(TileEntitySawMill.class, "tile_entity_sawmill");
+		GameRegistry.registerTileEntity(TileEntityCrusher.class, "tile_entity_crusher");
+		GameRegistry.registerTileEntity(TileEntitySplitter.class, "tile_entity_splitter");
 	}
 
 	

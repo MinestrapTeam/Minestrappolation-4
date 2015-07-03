@@ -59,16 +59,6 @@ public class CommonProxy
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		
-		
-		GameRegistry.registerTileEntity(TileEntityBarrel.class, "tile_entity_barrel");
-		GameRegistry.registerTileEntity(TileEntityCrate.class, "tile_entity_crate");
-		GameRegistry.registerTileEntity(TileEntityMelter.class, "tile_entity_melter");
-		GameRegistry.registerTileEntity(TileEntityAlloy.class, "tile_entity_alloy");
-		GameRegistry.registerTileEntity(TileEntityStoneCutter.class, "tile_entity_stonecutter");
-		GameRegistry.registerTileEntity(TileEntitySawMill.class, "tile_entity_sawmill");
-		GameRegistry.registerTileEntity(TileEntityCrusher.class, "tile_entity_crusher");
-		GameRegistry.registerTileEntity(TileEntitySplitter.class, "tile_entity_splitter");
-		
 		MAchievements.preInit();
 	}
 	
