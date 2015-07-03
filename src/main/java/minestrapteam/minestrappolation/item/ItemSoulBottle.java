@@ -33,7 +33,6 @@ public class ItemSoulBottle extends Item{
 			stack.getTagCompound().setInteger("xp", 0);
 		}
 	}
-
 	
 	@Override
 	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player)

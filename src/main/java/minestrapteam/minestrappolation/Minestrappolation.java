@@ -3,7 +3,6 @@ package minestrapteam.minestrappolation;
 import minestrapteam.minestrappolation.client.CommonProxy;
 import minestrapteam.minestrappolation.creativetab.MTab;
 import minestrapteam.minestrappolation.handlers.MEventHandler;
-import minestrapteam.minestrappolation.handlers.MFMLEventHandler;
 import minestrapteam.minestrappolation.handlers.MFuelHandler;
 import minestrapteam.minestrappolation.handlers.MGuiHandler;
 import minestrapteam.minestrappolation.lib.MAchievements;
@@ -16,16 +15,7 @@ import minestrapteam.minestrappolation.lib.MReference;
 import minestrapteam.minestrappolation.util.Tables;
 import minestrapteam.minestrappolation.world.MBiomeManager;
 import minestrapteam.minestrappolation.world.MGenHandler;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.renderer.ItemMeshDefinition;
-import net.minecraft.client.renderer.block.statemap.StateMapperBase;
-import net.minecraft.client.resources.model.ModelBakery;
-import net.minecraft.client.resources.model.ModelResourceLocation;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -73,10 +63,7 @@ public class Minestrappolation
 		MAchievements.load();
 		MFluid.load();
 		
-		
-
 		MinecraftForge.EVENT_BUS.register(new MEventHandler());
-		FMLCommonHandler.instance().bus().register(new MFMLEventHandler());
 		proxy.preInit(event);
 		if (Minestrappolation.proxy != null)
 		{
