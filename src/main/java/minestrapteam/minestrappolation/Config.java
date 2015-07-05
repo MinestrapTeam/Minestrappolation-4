@@ -19,6 +19,7 @@ public class Config
 	//Misc
 	public static int		soulGemDropChance;
 	public static int		soulBlockDamage;
+	public static int		bedrockBlockDamage;
 	public static int		soulGemXPGain;
 	public static int		soulBottleStorage;
 	
@@ -46,6 +47,7 @@ public class Config
 		
 		soulGemDropChance = config.get("Mechanics", "SoulGemDropChance", 3).getInt();
 		soulBlockDamage = config.get("Mechanics", "SoulBlockDamage", 200).getInt();
+		bedrockBlockDamage = config.get("Mechanics", "BedRockBlockDamage", 2000).getInt();
 		soulGemXPGain = config.get("Mechanics", "SoulGemXPGain", 20).getInt();
 		soulBottleStorage = config.get("Mechanics", "SoulBottleStorage", 10).getInt();
 		

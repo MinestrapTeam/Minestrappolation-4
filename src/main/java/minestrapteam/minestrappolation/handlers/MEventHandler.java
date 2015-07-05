@@ -85,7 +85,7 @@ public class MEventHandler
 			ItemStack stack = event.getPlayer().getHeldItem();
 			if (stack.canHarvestBlock(event.state.getBlock()))
 			{
-				stack.damageItem(2000, event.getPlayer());
+				stack.damageItem(Config.bedrockBlockDamage, event.getPlayer());
 			}
 			EntityPlayer player = (EntityPlayer)event.getPlayer();
 			player.addStat(MAchievements.bedrock, 1);

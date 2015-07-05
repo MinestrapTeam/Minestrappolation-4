@@ -69,6 +69,7 @@ public class BlockDirectional extends BlockContainer{
 	@Override
 	public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
 	{
+		super.onBlockPlaced(worldIn, pos, facing, hitX, hitY, hitZ, meta, placer);
 		return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite());
 	}
 	
