@@ -9,12 +9,12 @@ public class BlockCabbage extends BlockCrops{
 	@Override
 	protected Item getSeed()
     {
-        return MBlocks.cabbage_seed;
+        return MBlocks.cabbage;
     }
 
 	@Override
     protected Item getCrop()
     {
-        return MItems.cabbage;
+        return MBlocks.cabbage;
     }
 }

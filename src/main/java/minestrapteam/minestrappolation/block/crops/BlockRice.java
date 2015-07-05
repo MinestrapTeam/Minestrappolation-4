@@ -10,12 +10,12 @@ public class BlockRice extends BlockCrops
 	@Override
 	protected Item getSeed()
     {
-        return MBlocks.rice_seed;
+        return MBlocks.rice;
     }
 
 	@Override
     protected Item getCrop()
     {
-        return MItems.rice;
+        return MBlocks.rice;
     }
 }

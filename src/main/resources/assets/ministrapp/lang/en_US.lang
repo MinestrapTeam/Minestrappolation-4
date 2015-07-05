@@ -474,6 +474,7 @@ tile.moss.name=Moss Lump
 tile.blueberry_bush.name=Blueberry Bush
 tile.raspberry_bush.name=Raspberry Bush
 tile.blackberry_bush.name=Blackberry Bush
+tile.strawberry_bush.name=Strawberry Bush
 tile.mana_bush.name=Mana Bush
 
 item.dough.name=Dough

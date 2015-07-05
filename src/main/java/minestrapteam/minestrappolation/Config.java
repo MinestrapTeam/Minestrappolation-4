@@ -30,6 +30,7 @@ public class Config
 	public static int		cabbageSeedChance;
 	public static int		peanutChance;
 	public static int		riceSeedChance;
+	public static int		celerySeedChance;
 	
 	
 	// ********* Doubles **********
@@ -59,6 +60,7 @@ public class Config
 		cabbageSeedChance = config.get("Plants", "CabbageSeedChance", 10).getInt();
 		peanutChance = config.get("Plants", "PeanutSeedChance", 10).getInt();
 		riceSeedChance = config.get("Plants", "RiceSeedChance", 10).getInt();
+		celerySeedChance = config.get("Plants", "CelerySeedChance", 10).getInt();
 		config.save();
 	}
 	

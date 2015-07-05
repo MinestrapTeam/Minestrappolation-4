@@ -44,11 +44,7 @@ public class MItems extends Item
 	public static Item							blackberry;
 	public static Item							raspberry;
 	public static Item							strawberry;
-	public static Item							rice;
 	public static Item							pepper;
-	public static Item							onion;
-	public static Item							cabbage;
-	public static Item							lettuce;
 	public static Item							celery;
 	public static Item							mana_leaf;
 	
@@ -208,11 +204,7 @@ public class MItems extends Item
 		blackberry = new ItemFood(1, 0.4F, false).setPotionEffect(Potion.digSpeed.id, 10, 0, 0.3F).setUnlocalizedName("blackberry").setCreativeTab(Minestrappolation.tabMFood);
 		raspberry = new ItemFood(1, 0.0F, false).setPotionEffect(Potion.heal.id, 1, 0, 0.3F).setUnlocalizedName("raspberry").setCreativeTab(Minestrappolation.tabMFood);
 		strawberry = new ItemFood(1, 0.0F, false).setPotionEffect(Potion.heal.id, 1, 0, 0.3F).setUnlocalizedName("strawberry").setCreativeTab(Minestrappolation.tabMFood);
-		rice = new ItemFood(1, 0.3F, false).setUnlocalizedName("rice").setCreativeTab(Minestrappolation.tabMFood);
 		pepper = new ItemFood(1, 0.3F, false).setUnlocalizedName("pepper").setCreativeTab(Minestrappolation.tabMFood);
-		onion = new ItemFood(1, 0.3F, false).setUnlocalizedName("onion").setCreativeTab(Minestrappolation.tabMFood);
-		cabbage = new ItemFood(1, 0.3F, false).setUnlocalizedName("cabbage").setCreativeTab(Minestrappolation.tabMFood);
-		lettuce = new ItemFood(1, 0.3F, false).setUnlocalizedName("lettuce").setCreativeTab(Minestrappolation.tabMFood);
 		celery = new ItemFood(1, 0.3F, false).setUnlocalizedName("celery").setCreativeTab(Minestrappolation.tabMFood);
 		mana_leaf = new Item().setUnlocalizedName("mana_leaf").setCreativeTab(Minestrappolation.tabMMaterials);
 		
@@ -398,11 +390,7 @@ public class MItems extends Item
 		register(blackberry);
 		register(strawberry);
 		register(raspberry);
-		register(rice);
 		register(pepper);
-		register(onion);
-		register(cabbage);
-		register(lettuce);
 		register(celery);
 		
 		register(copper_pickaxe);
@@ -554,6 +542,8 @@ public class MItems extends Item
 		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.godstone), 0, 1, 1));
 		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(soul_gem), 1, 2, 1));
 		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(radiant_quartz), 1, 2, 2));
+		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.lettuce), 1, 3, 50));
+		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.cabbage), 1, 3, 50));
 		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(copper_ingot), 1, 5, 15));
 		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(tin_ingot), 1, 5, 15));
 		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(sunstone_shard), 1, 6, 20));
@@ -563,10 +553,12 @@ public class MItems extends Item
 		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(bronze_pickaxe), 0, 1, 2));
 		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(steel_pickaxe), 0, 1, 2));
 		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(meurodite_pickaxe), 0, 1, 2));
+		strongholdLibrary.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.peanuts), 1, 3, 20));
 		strongholdLibrary.addItem(new WeightedRandomChestContent(new ItemStack(desert_quartz_item), 1, 3, 15));
 		strongholdLibrary.addItem(new WeightedRandomChestContent(new ItemStack(radiant_quartz), 1, 3, 8));
 		strongholdLibrary.addItem(new WeightedRandomChestContent(new ItemStack(soul_gem), 1, 2, 3));
 		strongholdLibrary.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.radiant_ore), 1, 1, 2));
+		jungleChest.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.peanuts), 1, 3, 20));
 		jungleChest.addItem(new WeightedRandomChestContent(new ItemStack(copper_ingot), 1, 4, 30));
 		jungleChest.addItem(new WeightedRandomChestContent(new ItemStack(tin_ingot), 1, 4, 30));
 		jungleChest.addItem(new WeightedRandomChestContent(new ItemStack(bronze_ingot), 1, 4, 25));
@@ -575,6 +567,7 @@ public class MItems extends Item
 		jungleChest.addItem(new WeightedRandomChestContent(new ItemStack(radiant_quartz), 1, 2, 6));
 		jungleChest.addItem(new WeightedRandomChestContent(new ItemStack(steel_ingot), 1, 3, 8));
 		jungleChest.addItem(new WeightedRandomChestContent(new ItemStack(soul_gem), 0, 3, 1));
+		desertChest.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.peanuts), 1, 3, 20));
 		desertChest.addItem(new WeightedRandomChestContent(new ItemStack(copper_ingot), 1, 4, 30));
 		desertChest.addItem(new WeightedRandomChestContent(new ItemStack(tin_ingot), 1, 4, 30));
 		desertChest.addItem(new WeightedRandomChestContent(new ItemStack(bronze_ingot), 1, 4, 25));
@@ -583,6 +576,8 @@ public class MItems extends Item
 		desertChest.addItem(new WeightedRandomChestContent(new ItemStack(radiant_quartz), 1, 4, 6));
 		desertChest.addItem(new WeightedRandomChestContent(new ItemStack(steel_ingot), 1, 3, 8));
 		desertChest.addItem(new WeightedRandomChestContent(new ItemStack(soul_gem), 0, 3, 1));
+		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.lettuce), 1, 3, 30));
+		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.cabbage), 1, 3, 30));
 		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(copper_ingot), 1, 5, 30));
 		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(tin_ingot), 1, 5, 30));
 		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(bronze_ingot), 1, 3, 25));

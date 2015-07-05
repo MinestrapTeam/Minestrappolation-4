@@ -105,9 +105,12 @@ public class MGenHandler implements IWorldGenerator
 	
 		
 		//Berries
-		if(biome == BiomeGenBase.forest || biome == BiomeGenBase.forestHills || biome == BiomeGenBase.birchForest || biome == BiomeGenBase.birchForestHills || biome == BiomeGenBase.roofedForest || biome == BiomeGenBase.swampland)
+		if(biome == BiomeGenBase.forest || biome == BiomeGenBase.forestHills || biome == BiomeGenBase.birchForest || biome == BiomeGenBase.birchForestHills)
 		{
 			this.generateBerries(world, rand, x1, z1, new WorldGenBush(MBlocks.blueberry_bush));
+		}
+		if(biome == BiomeGenBase.roofedForest || biome == BiomeGenBase.swampland)
+		{
 			this.generateBerries(world, rand, x1, z1, new WorldGenBush(MBlocks.strawberry_bush));
 		}
 		if(biome == BiomeGenBase.extremeHills || biome == BiomeGenBase.extremeHillsEdge || biome == BiomeGenBase.extremeHillsPlus || biome == BiomeGenBase.taiga || biome == BiomeGenBase.taigaHills || biome == BiomeGenBase.megaTaiga || biome == BiomeGenBase.megaTaigaHills)

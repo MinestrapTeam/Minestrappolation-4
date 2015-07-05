@@ -80,6 +80,16 @@ public class MEventHandler
 			}
 		}
 		
+		if(event.state == Blocks.red_flower.getStateFromMeta(2))
+		{
+			ItemStack item = new ItemStack(MBlocks.onion);
+			EntityItem eitem = new EntityItem(event.world, event.pos.getX(), event.pos.getY(), event.pos.getZ(), item);
+			if (rand.nextInt(100) < Config.onionSeedChance)
+			{
+				event.world.spawnEntityInWorld(eitem);
+			}
+		}
+		
 		if (event.state.getBlock() == Blocks.bedrock)
 		{
 			ItemStack stack = event.getPlayer().getHeldItem();

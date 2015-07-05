@@ -9,12 +9,12 @@ public class BlockOnion extends BlockCrops{
 	@Override
 	protected Item getSeed()
     {
-        return MBlocks.onion_seed;
+        return MBlocks.onion;
     }
 
 	@Override
     protected Item getCrop()
     {
-        return MItems.onion;
+        return MBlocks.onion;
     }
 }

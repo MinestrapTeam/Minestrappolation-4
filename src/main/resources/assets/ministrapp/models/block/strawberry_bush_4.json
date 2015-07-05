@@ -1,0 +1,7 @@
+{
+    "parent": "ministrapp:block/bush_base_4",
+    "textures": {
+        "cross": "ministrapp:blocks/strawberry_stem",
+		"leaves": "ministrapp:blocks/strawberry_leaves"
+    }
+}

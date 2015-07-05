@@ -9,12 +9,12 @@ public class BlockLettuce extends BlockCrops{
 	@Override
 	protected Item getSeed()
     {
-        return MBlocks.lettuce_seed;
+        return MBlocks.lettuce;
     }
 
 	@Override
     protected Item getCrop()
     {
-        return MItems.lettuce;
+        return MBlocks.lettuce;
     }
 }

@@ -386,17 +386,17 @@ public class MBlocks
 	
 	//Crops
 	public static Block rice_crop;
-	public static Item	rice_seed;
+	public static Item	rice;
 	public static Block pepper_crop;
 	public static Item	pepper_seed;
 	public static Block peanut_crop;
 	public static Item	peanuts;
 	public static Block cabbage_crop;
-	public static Item	cabbage_seed;
+	public static Item	cabbage;
 	public static Block onion_crop;
-	public static Item	onion_seed;
+	public static Item	onion;
 	public static Block lettuce_crop;
-	public static Item	lettuce_seed;
+	public static Item	lettuce;
 	public static Block celery_crop;
 	public static Item	celery_seed;
 	
@@ -708,17 +708,17 @@ public class MBlocks
 		
 		//Crops
 		rice_crop = new BlockRice().setUnlocalizedName("rice_crop");
-		rice_seed = new ItemSeeds(rice_crop, Blocks.farmland).setUnlocalizedName("rice_seeds").setCreativeTab(Minestrappolation.tabMFood);
+		rice = new ItemSeeds(rice_crop, Blocks.farmland).setUnlocalizedName("rice").setCreativeTab(Minestrappolation.tabMFood);
 		pepper_crop = new BlockPepper().setUnlocalizedName("pepper_crop");
 		pepper_seed = new ItemSeeds(pepper_crop, Blocks.farmland).setUnlocalizedName("pepper_seeds").setCreativeTab(Minestrappolation.tabMFood);
 		peanut_crop = new BlockPeanuts().setUnlocalizedName("peanut_crop");
 		peanuts = new ItemSeedFood(1, 0.3F, peanut_crop, Blocks.farmland).setUnlocalizedName("peanuts").setCreativeTab(Minestrappolation.tabMFood);
 		cabbage_crop = new BlockCabbage().setUnlocalizedName("cabbage_crop");
-		cabbage_seed = new ItemSeeds(cabbage_crop, Blocks.farmland).setUnlocalizedName("cabbage_seeds").setCreativeTab(Minestrappolation.tabMFood);
+		cabbage = new ItemSeeds(cabbage_crop, Blocks.farmland).setUnlocalizedName("cabbage").setCreativeTab(Minestrappolation.tabMFood);
 		onion_crop = new BlockOnion().setUnlocalizedName("onion_crop");
-		onion_seed = new ItemSeedFood(1, 0.3F, onion_crop, Blocks.farmland).setUnlocalizedName("onion_seeds").setCreativeTab(Minestrappolation.tabMFood);
+		onion = new ItemSeedFood(1, 0.3F, onion_crop, Blocks.farmland).setUnlocalizedName("onion").setCreativeTab(Minestrappolation.tabMFood);
 		lettuce_crop = new BlockLettuce().setUnlocalizedName("lettuce_crop");
-		lettuce_seed = new ItemSeedFood(1, 0.3F, lettuce_crop, Blocks.farmland).setUnlocalizedName("lettuce_seeds").setCreativeTab(Minestrappolation.tabMFood);
+		lettuce = new ItemSeedFood(1, 0.3F, lettuce_crop, Blocks.farmland).setUnlocalizedName("lettuce").setCreativeTab(Minestrappolation.tabMFood);
 		celery_crop = new BlockCelery().setUnlocalizedName("celery_crop");
 		celery_seed = new ItemSeedFood(1, 0.3F, celery_crop, Blocks.farmland).setUnlocalizedName("celery_seeds").setCreativeTab(Minestrappolation.tabMFood);
 		
@@ -735,10 +735,8 @@ public class MBlocks
 		registerHarvestLevels();
 		
 		MinecraftForge.addGrassSeed(new ItemStack(pepper_seed), Config.pepperSeedChance);
-		MinecraftForge.addGrassSeed(new ItemStack(rice_seed), Config.riceSeedChance);
-		MinecraftForge.addGrassSeed(new ItemStack(peanuts), Config.peanutChance);
-		MinecraftForge.addGrassSeed(new ItemStack(cabbage_seed), Config.cabbageSeedChance);
-		MinecraftForge.addGrassSeed(new ItemStack(onion_seed), Config.onionSeedChance);
+		MinecraftForge.addGrassSeed(new ItemStack(rice), Config.riceSeedChance);
+		MinecraftForge.addGrassSeed(new ItemStack(celery_seed), Config.celerySeedChance);
 	}
 	
 	private static void register()
@@ -889,17 +887,17 @@ public class MBlocks
 		register(strawberry_bush);
 		register(mana_bush);
 		register(rice_crop);
-		GameRegistry.registerItem(rice_seed, rice_seed.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(rice, rice.getUnlocalizedName().substring(5));
 		register(pepper_crop);
 		GameRegistry.registerItem(pepper_seed, pepper_seed.getUnlocalizedName().substring(5));
 		register(peanut_crop);
 		GameRegistry.registerItem(peanuts, peanuts.getUnlocalizedName().substring(5));
 		register(cabbage_crop);
-		GameRegistry.registerItem(cabbage_seed, cabbage_seed.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(cabbage, cabbage.getUnlocalizedName().substring(5));
 		register(onion_crop);
-		GameRegistry.registerItem(onion_seed, onion_seed.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(onion, onion.getUnlocalizedName().substring(5));
 		register(lettuce_crop);
-		GameRegistry.registerItem(lettuce_seed, lettuce_seed.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(lettuce, lettuce.getUnlocalizedName().substring(5));
 		register(celery_crop);
 		GameRegistry.registerItem(celery_seed, celery_seed.getUnlocalizedName().substring(5));
 		
@@ -992,11 +990,13 @@ public class MBlocks
 		registerRender(glass_door_item);
 		registerRender(magmaBucket);
 		
-		registerRender(rice_seed);
+		registerRender(rice);
 		registerRender(pepper_seed);
 		registerRender(peanuts);
-		registerRender(onion_seed);
-		registerRender(cabbage_seed);
+		registerRender(onion);
+		registerRender(cabbage);
+		registerRender(lettuce);
+		registerRender(celery_seed);
 	}
 	
 	private static void register(Block block)

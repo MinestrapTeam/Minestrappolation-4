@@ -26,7 +26,7 @@ public class ItemHeartContainer extends Item
     {
 		if(playerIn.getMaxHealth() < Config.healthIncreaseMax)
 		{
-			playerIn.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(playerIn.getMaxHealth() + 1D);
+			playerIn.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(playerIn.getMaxHealth() + 2D);
 	        --itemStackIn.stackSize;
 		}
         return itemStackIn;
