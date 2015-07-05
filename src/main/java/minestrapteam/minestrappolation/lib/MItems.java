@@ -19,6 +19,7 @@ import minestrapteam.minestrappolation.item.MItemFoiled;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemFood;
@@ -171,6 +172,7 @@ public class MItems extends Item
 	public static Item							chunks;
 	
 	public static Item							sifter;
+	public static Item							heart_piece;
 	public static Item							heart_container;
 	public static Item							soulbottle;
 	
@@ -331,6 +333,7 @@ public class MItems extends Item
 		chunks = new ItemChunk().setUnlocalizedName("chunks").setCreativeTab(Minestrappolation.tabMMaterials);
 		
 		sifter = new ItemSifter().setUnlocalizedName("sifter");
+		heart_piece = new Item().setUnlocalizedName("heart_piece").setCreativeTab(Minestrappolation.tabMTools);
 		heart_container = new ItemHeartContainer().setUnlocalizedName("heart_container").setCreativeTab(Minestrappolation.tabMTools);
 		soulbottle = new ItemSoulBottle().setUnlocalizedName("soul_bottle").setCreativeTab(Minestrappolation.tabMTools);
 		
@@ -476,6 +479,7 @@ public class MItems extends Item
 		register(bedrock_hoe);
 		
 		register(sifter);
+		register(heart_piece);
 		register(heart_container);
 		register(soulbottle);
 	}
@@ -502,10 +506,13 @@ public class MItems extends Item
 		ChestGenHooks strongholdCorridor = ChestGenHooks.getInfo(ChestGenHooks.STRONGHOLD_CORRIDOR);
 		ChestGenHooks strongholdCrossing = ChestGenHooks.getInfo(ChestGenHooks.STRONGHOLD_CROSSING);
 		ChestGenHooks jungleChest = ChestGenHooks.getInfo(ChestGenHooks.PYRAMID_JUNGLE_CHEST);
+		ChestGenHooks jungleDispenser = ChestGenHooks.getInfo(ChestGenHooks.PYRAMID_JUNGLE_DISPENSER);
 		ChestGenHooks desertChest = ChestGenHooks.getInfo(ChestGenHooks.PYRAMID_DESERT_CHEST);
 		ChestGenHooks blacksmithChest = ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH);
 		ChestGenHooks strongholdLibrary = ChestGenHooks.getInfo(ChestGenHooks.STRONGHOLD_LIBRARY);
+		ChestGenHooks netherFortress = ChestGenHooks.getInfo(ChestGenHooks.NETHER_FORTRESS);
 		
+		//Dungeon
 		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(copper_ingot), 1, 4, 20));
 		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(tin_ingot), 1, 4, 20));
 		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(sunstone_shard), 1, 4, 25));
@@ -513,6 +520,9 @@ public class MItems extends Item
 		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(bronze_ingot), 1, 3, 10));
 		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(meurodite_gem), 1, 1, 5));
 		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(radiant_quartz), 1, 2, 4));
+		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(heart_piece), 0, 1, 2));
+		
+		//Abandoned Mineshaft
 		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(copper_ingot), 1, 5, 30));
 		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(tin_ingot), 1, 5, 30));
 		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(sunstone_shard), 4, 8, 30));
@@ -525,6 +535,9 @@ public class MItems extends Item
 		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(uranium), 0, 2, 2));
 		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(plutonium), 0, 2, 2));
 		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(radiant_quartz), 0, 5, 1));
+		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(heart_piece), 0, 1, 2));
+		
+		//Stronghold Corridor
 		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(copper_ingot), 1, 5, 30));
 		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(tin_ingot), 1, 5, 30));
 		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(sunstone_shard), 3, 9, 30));
@@ -542,6 +555,9 @@ public class MItems extends Item
 		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.godstone), 0, 1, 1));
 		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(soul_gem), 1, 2, 1));
 		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(radiant_quartz), 1, 2, 2));
+		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(heart_piece), 0, 1, 2));
+		
+		//Stronghold Storage Room
 		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.lettuce), 1, 3, 50));
 		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.cabbage), 1, 3, 50));
 		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(copper_ingot), 1, 5, 15));
@@ -553,11 +569,17 @@ public class MItems extends Item
 		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(bronze_pickaxe), 0, 1, 2));
 		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(steel_pickaxe), 0, 1, 2));
 		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(meurodite_pickaxe), 0, 1, 2));
+		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(heart_piece), 0, 1, 2));
+		
+		//Stronghold Library
 		strongholdLibrary.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.peanuts), 1, 3, 20));
 		strongholdLibrary.addItem(new WeightedRandomChestContent(new ItemStack(desert_quartz_item), 1, 3, 15));
 		strongholdLibrary.addItem(new WeightedRandomChestContent(new ItemStack(radiant_quartz), 1, 3, 8));
 		strongholdLibrary.addItem(new WeightedRandomChestContent(new ItemStack(soul_gem), 1, 2, 3));
-		strongholdLibrary.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.radiant_ore), 1, 1, 2));
+		strongholdLibrary.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.radiant_chiseled), 1, 1, 2));
+		strongholdLibrary.addItem(new WeightedRandomChestContent(new ItemStack(heart_piece), 0, 1, 2));
+		
+		//Jungle Temple Chest
 		jungleChest.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.peanuts), 1, 3, 20));
 		jungleChest.addItem(new WeightedRandomChestContent(new ItemStack(copper_ingot), 1, 4, 30));
 		jungleChest.addItem(new WeightedRandomChestContent(new ItemStack(tin_ingot), 1, 4, 30));
@@ -567,6 +589,14 @@ public class MItems extends Item
 		jungleChest.addItem(new WeightedRandomChestContent(new ItemStack(radiant_quartz), 1, 2, 6));
 		jungleChest.addItem(new WeightedRandomChestContent(new ItemStack(steel_ingot), 1, 3, 8));
 		jungleChest.addItem(new WeightedRandomChestContent(new ItemStack(soul_gem), 0, 3, 1));
+		jungleChest.addItem(new WeightedRandomChestContent(new ItemStack(heart_piece), 0, 1, 2));
+		
+		//Jungle Temple Dispenser
+		jungleDispenser.addItem(new WeightedRandomChestContent(new ItemStack(Items.fire_charge), 1, 5, 10));
+		jungleDispenser.addItem(new WeightedRandomChestContent(new ItemStack(Items.lava_bucket), 1, 1, 8));
+		jungleDispenser.addItem(new WeightedRandomChestContent(new ItemStack(Blocks.tnt), 1, 3, 6));
+		
+		//Desert Temple
 		desertChest.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.peanuts), 1, 3, 20));
 		desertChest.addItem(new WeightedRandomChestContent(new ItemStack(copper_ingot), 1, 4, 30));
 		desertChest.addItem(new WeightedRandomChestContent(new ItemStack(tin_ingot), 1, 4, 30));
@@ -576,6 +606,9 @@ public class MItems extends Item
 		desertChest.addItem(new WeightedRandomChestContent(new ItemStack(radiant_quartz), 1, 4, 6));
 		desertChest.addItem(new WeightedRandomChestContent(new ItemStack(steel_ingot), 1, 3, 8));
 		desertChest.addItem(new WeightedRandomChestContent(new ItemStack(soul_gem), 0, 3, 1));
+		desertChest.addItem(new WeightedRandomChestContent(new ItemStack(heart_piece), 0, 1, 2));
+		
+		//Village Blacksmith Building
 		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.lettuce), 1, 3, 30));
 		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.cabbage), 1, 3, 30));
 		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(copper_ingot), 1, 5, 30));
@@ -601,6 +634,7 @@ public class MItems extends Item
 		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.radiant_ore), 1, 1, 1));
 		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(titanium_ingot), 0, 1, 1));
 		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(soul_gem), 0, 3, 1));
+		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(heart_piece), 0, 1, 2));
 	}
 	
 	public static void registerRender(Item item)

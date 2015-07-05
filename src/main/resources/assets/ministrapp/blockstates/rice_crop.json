@@ -5,8 +5,8 @@
         "age=2": { "model": "ministrapp:rice_stage1" },
         "age=3": { "model": "ministrapp:rice_stage1" },
         "age=4": { "model": "ministrapp:rice_stage2" },
-        "age=5": { "model": "ministrapp:rice_stage2" },
-        "age=6": { "model": "ministrapp:rice_stage3" },
-        "age=7": { "model": "ministrapp:rice_stage4" }
+        "age=5": { "model": "ministrapp:rice_stage3" },
+        "age=6": { "model": "ministrapp:rice_stage4" },
+        "age=7": { "model": "ministrapp:rice_stage5" }
     }
 }

@@ -14,7 +14,8 @@ public class MRecipes
 	
 	public static void register()
 	{
-		GameRegistry.addRecipe(new ItemStack(MItems.soulbottle, 1), new Object[] { "W", 'W', Items.wheat });
+		GameRegistry.addRecipe(new ItemStack(MItems.soulbottle, 1), new Object[] { "S", "B", 'S', MItems.soul_gem, 'B', Items.glass_bottle });
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.heart_container, 1), new Object[] { MItems.heart_piece, MItems.heart_piece, MItems.heart_piece, MItems.heart_piece });
 		
 		// Food
 		GameRegistry.addRecipe(new ItemStack(MItems.dough, 2), new Object[] { "WW", "WW", 'W', Items.wheat });

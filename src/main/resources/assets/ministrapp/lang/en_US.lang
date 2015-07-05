@@ -487,6 +487,16 @@ item.fried_egg.name=Fried Egg
 item.blueberry.name=Blueberries
 item.raspberry.name=Raspberries
 item.blackberry.name=Blackberries
+item.strawberry.name=Strawberries
+item.rice.name=Rice
+item.pepper_seeds.name=Peppercorns
+item.peanuts.name=Peanuts
+item.cabbage.name=Cabbage
+item.onion.name=Onion
+item.lettuce.name=Lettuce
+item.celery_seeds.name=Celery Seeds
+item.pepper.name=Pepper
+item.celery.name=Celery
 item.mana_leaf.name=Mana Leaf
 
 item.copper_ingot.name=Copper Ingot
@@ -623,6 +633,9 @@ item.titanium_boots.name=Titanium Boots
 
 item.sifter.name=Mining Sieve
 item.magma_bucket.name=Bucket of Magma
+item.heart_piece.name=Heart Piece
+item.heart_container.name=Heart Container
+item.soul_bottle.name=Soul Bottle
 
 itemGroup.tabMBuilding=Minestrapp Building Blocks
 itemGroup.tabMDecor=Minestrapp Decoration Blocks
