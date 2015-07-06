@@ -141,6 +141,7 @@ import net.minecraft.item.ItemBucket;
 import net.minecraft.item.ItemSeedFood;
 import net.minecraft.item.ItemSeeds;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -712,15 +713,15 @@ public class MBlocks
 		pepper_crop = new BlockPepper().setUnlocalizedName("pepper_crop");
 		pepper_seed = new ItemSeeds(pepper_crop, Blocks.farmland).setUnlocalizedName("pepper_seeds").setCreativeTab(Minestrappolation.tabMFood);
 		peanut_crop = new BlockPeanuts().setUnlocalizedName("peanut_crop");
-		peanuts = new ItemSeedFood(1, 0.3F, peanut_crop, Blocks.farmland).setUnlocalizedName("peanuts").setCreativeTab(Minestrappolation.tabMFood);
+		peanuts = new ItemSeedFood(1, 0.2F, peanut_crop, Blocks.farmland).setUnlocalizedName("peanuts").setCreativeTab(Minestrappolation.tabMFood);
 		cabbage_crop = new BlockCabbage().setUnlocalizedName("cabbage_crop");
-		cabbage = new ItemSeeds(cabbage_crop, Blocks.farmland).setUnlocalizedName("cabbage").setCreativeTab(Minestrappolation.tabMFood);
+		cabbage = new ItemSeedFood(3, 0.1F, cabbage_crop, Blocks.farmland).setUnlocalizedName("cabbage").setCreativeTab(Minestrappolation.tabMFood);
 		onion_crop = new BlockOnion().setUnlocalizedName("onion_crop");
-		onion = new ItemSeedFood(1, 0.3F, onion_crop, Blocks.farmland).setUnlocalizedName("onion").setCreativeTab(Minestrappolation.tabMFood);
+		onion = new ItemSeedFood(2, 0.2F, onion_crop, Blocks.farmland).setPotionEffect(Potion.blindness.id, 10, 0, 0.1F).setUnlocalizedName("onion").setCreativeTab(Minestrappolation.tabMFood);
 		lettuce_crop = new BlockLettuce().setUnlocalizedName("lettuce_crop");
-		lettuce = new ItemSeedFood(1, 0.3F, lettuce_crop, Blocks.farmland).setUnlocalizedName("lettuce").setCreativeTab(Minestrappolation.tabMFood);
+		lettuce = new ItemSeedFood(1, 0F, lettuce_crop, Blocks.farmland).setUnlocalizedName("lettuce").setCreativeTab(Minestrappolation.tabMFood);
 		celery_crop = new BlockCelery().setUnlocalizedName("celery_crop");
-		celery_seed = new ItemSeedFood(1, 0.3F, celery_crop, Blocks.farmland).setUnlocalizedName("celery_seeds").setCreativeTab(Minestrappolation.tabMFood);
+		celery_seed = new ItemSeeds(celery_crop, Blocks.farmland).setUnlocalizedName("celery_seeds").setCreativeTab(Minestrappolation.tabMFood);
 		
 		
 		//Liquids

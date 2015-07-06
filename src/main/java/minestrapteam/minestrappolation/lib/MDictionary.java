@@ -155,6 +155,10 @@ public class MDictionary
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.glass_door_item, 3), new Object[] { "II", "GG", "II", 'I', Blocks.iron_bars, 'G', "paneGlassColorless"}));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.steel_mesh, 16), new Object[] { "SSS", "SSS", 'S', "ingotSteel" }));
 		
+		//Food
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(MItems.rice_bowl, 1), new Object[] { "stickWood", MBlocks.rice, Items.bowl, new ItemStack(Items.potionitem, 1, 0)}));
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(MItems.bread_rice_bowl, 1), new Object[] { "stickWood", MBlocks.rice, MItems.bread_bowl, new ItemStack(Items.potionitem, 1, 0)}));
+		
 		//Vanilla
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.flint_and_steel), new Object[] { "S ", " F", 'S', "ingotSteel", 'F', new ItemStack(Items.flint) }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.daylight_detector), new Object[] { "GGG", "QQQ", "WWW", 'G', "blockGlassColorless", 'Q', "gemQuartzAny", 'W', "slabWood"}));
