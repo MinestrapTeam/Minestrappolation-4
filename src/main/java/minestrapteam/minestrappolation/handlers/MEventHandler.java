@@ -38,7 +38,6 @@ public class MEventHandler
 {
 	
 	@SubscribeEvent
-	@SideOnly(Side.CLIENT)
 	public void onPlayerJoin(EntityJoinWorldEvent event)
 	{
 		VersionChecker check = new VersionChecker(MReference.VERSION, "https://raw.githubusercontent.com/MinestrapTeam/Minestrappolation-4/master/version.txt", MReference.NAME);
@@ -47,28 +46,27 @@ public class MEventHandler
 			EntityPlayer player = (EntityPlayer) event.entity;
 			NBTTagCompound nbt = NBTHelper.getPersistedPlayerTag(player);
 
-			if (event.world.isRemote == false && Config.checkForUpdates)
-			{
-				check.run();
-				event.entity.addChatMessage(VersionChecker.uptoDate);
-				event.entity.addChatMessage(VersionChecker.motd);
-			}
-			player.addStat(MAchievements.minestrapp, 1);
-			
 			if(!event.world.isRemote)
 			{
-				nbt.setBoolean("healthSet", false);
-				if(nbt.getBoolean("healthSet") == false)
+				if (event.world.isRemote == false && Config.checkForUpdates)
 				{
-					player.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(Config.healthStarting);
-					nbt.setBoolean("healthSet", true);
+					check.run();
+					event.entity.addChatMessage(VersionChecker.uptoDate);
+					event.entity.addChatMessage(VersionChecker.motd);
 				}
-				
-				if(nbt.hasKey("health"))
-				{
-					player.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(nbt.getDouble("health"));
-				}
+				player.addStat(MAchievements.minestrapp, 1);
 			}	
+			nbt.setBoolean("healthSet", false);
+			if(nbt.getBoolean("healthSet") == false)
+			{
+				player.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(Config.healthStarting);
+				nbt.setBoolean("healthSet", true);
+			}
+			
+			if(nbt.hasKey("health"))
+			{
+				player.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(nbt.getDouble("health"));
+			}
 		}
 	}
 	
