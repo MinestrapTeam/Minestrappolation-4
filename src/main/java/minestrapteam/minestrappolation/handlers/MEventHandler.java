@@ -14,10 +14,12 @@ import minestrapteam.minestrappolation.world.MBiomeManager;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockNetherWart;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
@@ -49,6 +51,12 @@ public class MEventHandler
 				event.entity.addChatMessage(VersionChecker.motd);
 			}
 			player.addStat(MAchievements.minestrapp, 1);
+			
+			if(!event.world.isRemote)
+			{
+				NBTTagCompound nbt = player.getEntityData().getCompoundTag("PlayerPersisted");
+				player.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(nbt.getDouble("health"));
+			}	
 		}
 	}
 	

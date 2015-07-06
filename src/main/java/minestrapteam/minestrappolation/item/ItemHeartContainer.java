@@ -26,8 +26,20 @@ public class ItemHeartContainer extends MItemFoiled
     {
 		if(playerIn.getMaxHealth() < Config.healthIncreaseMax)
 		{
-			playerIn.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(playerIn.getMaxHealth() + 2D);
-	        --itemStackIn.stackSize;
+			
+			 playerIn.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(playerIn.getMaxHealth() + 2D);
+			 NBTTagCompound nbt;
+			  
+			  if (!playerIn.getEntityData().hasKey("PlayerPersisted")) 
+			  {
+			   nbt = new NBTTagCompound();
+			   playerIn.getEntityData().setTag("PlayerPersisted", nbt);
+			  } else {
+			   nbt = playerIn.getEntityData().getCompoundTag("PlayerPersisted");
+			   nbt.setDouble("health", playerIn.getMaxHealth());
+			  }
+			  
+	          --itemStackIn.stackSize;
 		}
         return itemStackIn;
     }
