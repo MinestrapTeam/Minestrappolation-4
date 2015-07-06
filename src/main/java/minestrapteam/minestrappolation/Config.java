@@ -35,6 +35,7 @@ public class Config
 	
 	// ********* Doubles **********
 	public static double    healthIncreaseMax;
+	public static double    healthStarting;
 	
 	public static void configInit(FMLPreInitializationEvent event)
 	{
@@ -53,6 +54,7 @@ public class Config
 		soulBottleStorage = config.get("Mechanics", "SoulBottleStorage", 10).getInt();
 		
 		healthIncreaseMax = config.get("Mechanics", "MaxHealthIncrease", 40D).getDouble();
+		healthStarting = config.get("Mechanics", "StartingHealth", 10D).getDouble();
 		
 		bushGrowChance = config.get("Plants", "BushGrowthChance", 4).getInt();
 		pepperSeedChance = config.get("Plants", "PepperSeedChance", 10).getInt();

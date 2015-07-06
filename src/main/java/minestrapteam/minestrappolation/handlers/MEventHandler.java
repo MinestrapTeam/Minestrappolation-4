@@ -9,6 +9,7 @@ import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MItems;
 import minestrapteam.minestrappolation.lib.MReference;
 import minestrapteam.minestrappolation.util.ChunkHelper;
+import minestrapteam.minestrappolation.util.NBTHelper;
 import minestrapteam.minestrappolation.util.VersionChecker;
 import minestrapteam.minestrappolation.world.MBiomeManager;
 import net.minecraft.block.Block;
@@ -44,6 +45,8 @@ public class MEventHandler
 		if (event.entity instanceof EntityPlayer)
 		{
 			EntityPlayer player = (EntityPlayer) event.entity;
+			NBTTagCompound nbt = NBTHelper.getPersistedPlayerTag(player);
+
 			if (event.world.isRemote == false && Config.checkForUpdates)
 			{
 				check.run();
@@ -54,8 +57,17 @@ public class MEventHandler
 			
 			if(!event.world.isRemote)
 			{
-				NBTTagCompound nbt = player.getEntityData().getCompoundTag("PlayerPersisted");
-				player.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(nbt.getDouble("health"));
+				nbt.setBoolean("healthSet", false);
+				if(nbt.getBoolean("healthSet") == false)
+				{
+					player.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(Config.healthStarting);
+					nbt.setBoolean("healthSet", true);
+				}
+				
+				if(nbt.hasKey("health"))
+				{
+					player.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(nbt.getDouble("health"));
+				}
 			}	
 		}
 	}

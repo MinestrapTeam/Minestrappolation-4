@@ -2,6 +2,7 @@ package minestrapteam.minestrappolation.item;
 
 import minestrapteam.minestrappolation.Config;
 import minestrapteam.minestrappolation.Minestrappolation;
+import minestrapteam.minestrappolation.util.NBTHelper;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.IAttribute;
 import net.minecraft.entity.ai.attributes.IAttributeInstance;
@@ -28,18 +29,8 @@ public class ItemHeartContainer extends MItemFoiled
 		{
 			
 			 playerIn.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(playerIn.getMaxHealth() + 2D);
-			 NBTTagCompound nbt;
-			  
-			  if (!playerIn.getEntityData().hasKey("PlayerPersisted")) 
-			  {
-			   nbt = new NBTTagCompound();
-			   playerIn.getEntityData().setTag("PlayerPersisted", nbt);
-			  } else {
-			   nbt = playerIn.getEntityData().getCompoundTag("PlayerPersisted");
-			   nbt.setDouble("health", playerIn.getMaxHealth());
-			  }
-			  
-	          --itemStackIn.stackSize;
+			 NBTHelper.getPersistedPlayerTag(playerIn).setDouble("health", playerIn.getMaxHealth());
+	         --itemStackIn.stackSize;
 		}
         return itemStackIn;
     }
