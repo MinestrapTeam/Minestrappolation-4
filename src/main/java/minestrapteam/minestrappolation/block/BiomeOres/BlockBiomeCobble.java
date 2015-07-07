@@ -73,7 +73,7 @@ public class BlockBiomeCobble extends Block
 		return ((MStoneType) state.getValue(VARIANT)).getMetadata();
 	}
 	
-	public static void preinventoryRender()
+	public static void inventoryRender()
 	{
 		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "biome_cobble");
 		
@@ -86,10 +86,7 @@ public class BlockBiomeCobble extends Block
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:deep_redrock_cobble");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:oceanstone_cobble");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:pressurized_oceanstone_cobble");
-	}
-	
-	public static void inventoryRender()
-	{
+		
 		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "biome_cobble");
 		MStoneType[] aenumtype = MStoneType.values();
 		int i = aenumtype.length;

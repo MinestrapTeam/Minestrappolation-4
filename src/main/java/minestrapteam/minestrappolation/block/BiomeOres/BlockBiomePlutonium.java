@@ -101,7 +101,7 @@ public class BlockBiomePlutonium extends BlockRadiation
 		return ((MStoneType) state.getValue(VARIANT)).getMetadata();
 	}
 	
-	public static void preinventoryRender()
+	public static void inventoryRender()
 	{
 		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "biome_plutonium");
 		
@@ -114,10 +114,7 @@ public class BlockBiomePlutonium extends BlockRadiation
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:deep_redrock_plutonium");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:oceanstone_plutonium");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:pressurized_oceanstone_plutonium");
-	}
-	
-	public static void inventoryRender()
-	{
+		
 		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "biome_plutonium");
 		MStoneType[] aenumtype = MStoneType.values();
 		int i = aenumtype.length;

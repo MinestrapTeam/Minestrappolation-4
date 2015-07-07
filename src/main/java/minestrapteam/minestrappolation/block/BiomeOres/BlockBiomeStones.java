@@ -80,23 +80,20 @@ public class BlockBiomeStones extends Block
 		return new BlockState(this, new IProperty[] { VARIANT });
 	}
 	
-	public static void preinventoryRender()
-	{
-		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "biome_stone");
-		
-		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:deepstone");
-		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:coldstone");
-		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:icestone");
-		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:glacierrock");
-		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:deep_coldstone");
-		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:red_rock");
-		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:deep_redrock");
-		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:oceanstone");
-		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:pressurized_oceanstone");
-	}
-	
 	public static void inventoryRender()
 	{
+		Item item = GameRegistry.findItem(MReference.MODID, "biome_stone");
+		
+		ModelBakery.addVariantName(item, "ministrapp:deepstone");
+		ModelBakery.addVariantName(item, "ministrapp:coldstone");
+		ModelBakery.addVariantName(item, "ministrapp:icestone");
+		ModelBakery.addVariantName(item, "ministrapp:glacierrock");
+		ModelBakery.addVariantName(item, "ministrapp:deep_coldstone");
+		ModelBakery.addVariantName(item, "ministrapp:red_rock");
+		ModelBakery.addVariantName(item, "ministrapp:deep_redrock");
+		ModelBakery.addVariantName(item, "ministrapp:oceanstone");
+		ModelBakery.addVariantName(item, "ministrapp:pressurized_oceanstone");
+		
 		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "biome_stone");
 		MStoneType[] aenumtype = MStoneType.values();
 		int i = aenumtype.length;

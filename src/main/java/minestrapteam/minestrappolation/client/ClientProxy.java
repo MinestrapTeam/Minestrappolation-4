@@ -65,43 +65,6 @@ public class ClientProxy extends CommonProxy
 	{
 		MBlocks.registerRenders();
 		MItems.registerRenders();
-		BlockBiomeStones.preinventoryRender();
-		BlockBiomeBricks.preinventoryRender();
-		BlockBiomeCobble.preinventoryRender();
-		BlockBiomeDiamond.preinventoryRender();
-		BlockBiomeIron.preinventoryRender();
-		BlockBiomeGold.preinventoryRender();
-		BlockBiomeCoal.preinventoryRender();
-		BlockBiomeLapis.preinventoryRender();
-		BlockBiomeRedstone.preinventoryRender();
-		BlockBiomeTin.preinventoryRender();
-		BlockBiomeCopper.preinventoryRender();
-		BlockBiomeEmerald.preinventoryRender();
-		BlockBiomeSunstone.preinventoryRender();
-		BlockBiomeTorite.preinventoryRender();
-		BlockBiomeTitanium.preinventoryRender();
-		BlockBiomeRadiant.preinventoryRender();
-		BlockBiomePlutonium.preinventoryRender();
-		BlockBiomeUranium.preinventoryRender();
-		BlockBiomeMeurodite.preinventoryRender();
-		MBlockPlanks.preinventoryRender();
-		MBlockLog.preinventoryRender();
-		BlockMSand.preinventoryRender();
-		BlockRoads.preinventoryRender();
-		BlockChiseled.preinventoryRender();
-		BlockMossyCobble.preinventoryRender();
-		BlockMossyBricks.preinventoryRender();
-		BlockCrackedBricks.preinventoryRender();
-		BlockPatternBricks.preinventoryRender();
-		BlockRefined.preinventoryRender();
-		BlockTiles.preinventoryRender();
-		BlockLamp.preinventoryRender("sunstone");
-		BlockLamp.preinventoryRender("glowstone");
-		BlockLamp.preinventoryRender("prismarine");
-		MBlockLeaves.preinventoryRender();
-		MBlockSapling.preinventoryRender();
-		
-		ItemChunk.preinventoryRender();
 		
 		BlockBiomeStones.inventoryRender();
 		BlockBiomeBricks.inventoryRender();

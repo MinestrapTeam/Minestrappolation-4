@@ -23,7 +23,7 @@ public class ItemChunk extends Item
 		this.setMaxDamage(0);
 	}
 	
-	public static void preinventoryRender()
+	public static void inventoryRender()
 	{
 		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "chunks");
 		
@@ -38,10 +38,7 @@ public class ItemChunk extends Item
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:iron_chunk");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:torite_chunk");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:titanium_chunk");
-	}
-	
-	public static void inventoryRender()
-	{
+		
 		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "chunks");
 		MItemChunkTypes[] aenumtype = MItemChunkTypes.values();
 		int i = aenumtype.length;

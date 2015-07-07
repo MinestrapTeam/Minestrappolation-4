@@ -71,7 +71,7 @@ public class BlockLamp extends MBlock{
 		return ((MStoneType) state.getValue(VARIANT)).getMetadata();
 	}
 	
-	public static void preinventoryRender(String lampType)
+	public static void inventoryRender(String lampType)
 	{
 		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "biome_lamp_" + lampType);
 		
@@ -84,10 +84,7 @@ public class BlockLamp extends MBlock{
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:deep_redrock_lamp_" + lampType);
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:oceanstone_lamp_" + lampType);
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:pressurized_oceanstone_lamp_" + lampType);
-	}
-	
-	public static void inventoryRender(String lampType)
-	{
+		
 		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "biome_lamp_" + lampType);
 		MStoneType[] aenumtype = MStoneType.values();
 		int i = aenumtype.length;

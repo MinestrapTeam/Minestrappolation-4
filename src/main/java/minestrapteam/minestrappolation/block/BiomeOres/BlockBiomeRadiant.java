@@ -69,7 +69,7 @@ public class BlockBiomeRadiant extends MBlockOre
 		return ((MStoneType) state.getValue(VARIANT)).getMetadata();
 	}
 	
-	public static void preinventoryRender()
+	public static void inventoryRender()
 	{
 		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "biome_radiant");
 		
@@ -82,10 +82,7 @@ public class BlockBiomeRadiant extends MBlockOre
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:deep_redrock_radiant");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:oceanstone_radiant");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:pressurized_oceanstone_radiant");
-	}
-	
-	public static void inventoryRender()
-	{
+		
 		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "biome_radiant");
 		MStoneType[] aenumtype = MStoneType.values();
 		int i = aenumtype.length;

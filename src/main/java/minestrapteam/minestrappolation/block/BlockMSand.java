@@ -16,16 +16,13 @@ public class BlockMSand extends BlockSand
 		
 	}
 	
-	public static void preinventoryRender()
-	{
-		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "cold_sand");
-		
-		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:cold_sand");
-		ModelBakery.addVariantName(itemBlockVariants, "ministrapp:cold_red_sand");
-	}
-	
 	public static void inventoryRender()
 	{
+		Item item = GameRegistry.findItem(MReference.MODID, "cold_sand");
+		
+		ModelBakery.addVariantName(item, "ministrapp:cold_sand");
+		ModelBakery.addVariantName(item, "ministrapp:cold_red_sand");
+		
 		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "cold_sand");
 		EnumType[] aenumtype = BlockSand.EnumType.values();
 		int i = aenumtype.length;

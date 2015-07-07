@@ -190,16 +190,13 @@ public class MBlockLeaves extends MBlockLeavesBase
 		return this.flammability;
 	}
 	
-	public static void preinventoryRender()
+	public static void inventoryRender()
 	{
 		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "ministrapp_leaves");
 		
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:redwood_leaves");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:frozen_oak_leaves");
-	}
-	
-	public static void inventoryRender()
-	{
+		
 		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "ministrapp_leaves");
 		MWoodType[] aenumtype = MWoodType.values();
 		int i = aenumtype.length;

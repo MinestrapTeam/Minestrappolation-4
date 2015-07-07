@@ -69,7 +69,7 @@ public class BlockMossyBricks extends MBlock{
 		return ((MStoneType) state.getValue(VARIANT)).getMetadata();
 	}
 	
-	public static void preinventoryRender()
+	public static void inventoryRender()
 	{
 		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "biome_mossy_bricks");
 		
@@ -82,10 +82,7 @@ public class BlockMossyBricks extends MBlock{
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:deep_redrock_mossy_bricks");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:oceanstone_mossy_bricks");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:pressurized_oceanstone_mossy_bricks");
-	}
-	
-	public static void inventoryRender()
-	{
+		
 		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "biome_mossy_bricks");
 		MStoneType[] aenumtype = MStoneType.values();
 		int i = aenumtype.length;

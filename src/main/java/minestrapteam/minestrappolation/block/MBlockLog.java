@@ -137,17 +137,14 @@ public class MBlockLog extends BlockLog
 	{
 		return this.flammability;
 	}
-	
-	public static void preinventoryRender()
+
+	public static void inventoryRender()
 	{
 		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "ministrapp_log");
 		
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:redwood_log");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:frozen_oak_log");
-	}
-	
-	public static void inventoryRender()
-	{
+		
 		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "ministrapp_log");
 		MWoodType[] aenumtype = MWoodType.values();
 		int i = aenumtype.length;

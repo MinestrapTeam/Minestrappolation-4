@@ -236,16 +236,13 @@ public class MBlockSapling extends BlockBush implements IGrowable
         return ground == Blocks.grass || ground == Blocks.dirt || ground == Blocks.farmland || ground == MBlocks.dirt_permafrost || ground == MBlocks.lichen_permafrost;
     }
 	
-	public static void preinventoryRender()
+	public static void inventoryRender()
 	{
 		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "ministrapp_sapling");
 		
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:redwood_sapling");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:frozen_oak_sapling");
-	}
-	
-	public static void inventoryRender()
-	{
+		
 		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "ministrapp_sapling");
 		MWoodType[] aenumtype = MWoodType.values();
 		int i = aenumtype.length;

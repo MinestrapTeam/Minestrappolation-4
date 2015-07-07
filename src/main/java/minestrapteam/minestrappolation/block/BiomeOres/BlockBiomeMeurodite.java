@@ -69,7 +69,7 @@ public class BlockBiomeMeurodite extends MBlockOre
 		return ((MStoneType) state.getValue(VARIANT)).getMetadata();
 	}
 	
-	public static void preinventoryRender()
+	public static void inventoryRender()
 	{
 		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "biome_meurodite");
 		
@@ -82,10 +82,7 @@ public class BlockBiomeMeurodite extends MBlockOre
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:deep_redrock_meurodite");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:oceanstone_meurodite");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:pressurized_oceanstone_meurodite");
-	}
-	
-	public static void inventoryRender()
-	{
+		
 		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "biome_meurodite");
 		MStoneType[] aenumtype = MStoneType.values();
 		int i = aenumtype.length;

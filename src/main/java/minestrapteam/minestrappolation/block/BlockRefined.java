@@ -69,7 +69,7 @@ public class BlockRefined extends MBlock{
 		return ((MStoneType) state.getValue(VARIANT)).getMetadata();
 	}
 	
-	public static void preinventoryRender()
+	public static void inventoryRender()
 	{
 		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "biome_refined");
 		
@@ -82,10 +82,7 @@ public class BlockRefined extends MBlock{
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:deep_redrock_refined");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:oceanstone_refined");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:pressurized_oceanstone_refined");
-	}
-	
-	public static void inventoryRender()
-	{
+		
 		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "biome_refined");
 		MStoneType[] aenumtype = MStoneType.values();
 		int i = aenumtype.length;

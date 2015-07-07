@@ -92,7 +92,7 @@ public class BlockRoads extends MBlock
 		return ((MRoadType) state.getValue(VARIANT)).getMetadata();
 	}
 	
-	public static void preinventoryRender()
+	public static void inventoryRender()
 	{
 		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "roads");
 		
@@ -103,10 +103,7 @@ public class BlockRoads extends MBlock
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:sand_road");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:nether_road");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:soul_road");
-	}
-	
-	public static void inventoryRender()
-	{
+		
 		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "roads");
 		MRoadType[] aenumtype = MRoadType.values();
 		int i = aenumtype.length;

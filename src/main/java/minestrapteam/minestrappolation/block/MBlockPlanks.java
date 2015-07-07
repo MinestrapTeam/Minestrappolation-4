@@ -76,16 +76,13 @@ public class MBlockPlanks extends Block
 		return new BlockState(this, new IProperty[] { VARIANT });
 	}
 	
-	public static void preinventoryRender()
+	public static void inventoryRender()
 	{
 		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "ministrapp_planks");
 		
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:redwood_planks");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:frozen_oak_planks");
-	}
-	
-	public static void inventoryRender()
-	{
+		
 		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "ministrapp_planks");
 		MWoodType[] aenumtype = MWoodType.values();
 		int i = aenumtype.length;

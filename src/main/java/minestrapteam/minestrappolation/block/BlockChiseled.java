@@ -69,7 +69,7 @@ public class BlockChiseled extends MBlock{
 		return ((MStoneType) state.getValue(VARIANT)).getMetadata();
 	}
 	
-	public static void preinventoryRender()
+	public static void inventoryRender()
 	{
 		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "biome_chiseled");
 		
@@ -82,10 +82,7 @@ public class BlockChiseled extends MBlock{
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:deep_redrock_chiseled");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:oceanstone_chiseled");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:pressurized_oceanstone_chiseled");
-	}
-	
-	public static void inventoryRender()
-	{
+		
 		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "biome_chiseled");
 		MStoneType[] aenumtype = MStoneType.values();
 		int i = aenumtype.length;
