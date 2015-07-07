@@ -31,6 +31,7 @@ public class ItemMHoe extends ItemHoe
 	@Override
 	public boolean onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ)
 	{
+		super.onItemUse(stack, playerIn, worldIn, pos, side, hitX, hitY, hitZ);
 		if (this.ignites)
 		{
 			pos = pos.offset(side);
