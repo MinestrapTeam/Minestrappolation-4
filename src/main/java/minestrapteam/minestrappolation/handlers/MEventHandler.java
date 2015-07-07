@@ -56,7 +56,11 @@ public class MEventHandler
 				}
 				player.addStat(MAchievements.minestrapp, 1);
 			}	
-			nbt.setBoolean("healthSet", false);
+			
+			if(!nbt.hasKey("healthSet"))
+			{
+				nbt.setBoolean("healthSet", false);
+			}	
 			if(nbt.getBoolean("healthSet") == false)
 			{
 				player.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(Config.healthStarting);
