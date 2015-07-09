@@ -5,7 +5,6 @@ import java.util.Random;
 import minestrapteam.minestrappolation.ChunkProtector;
 import minestrapteam.minestrappolation.Config;
 import minestrapteam.minestrappolation.Key;
-import minestrapteam.minestrappolation.Minestrappolation;
 import minestrapteam.minestrappolation.block.BlockSoul;
 import minestrapteam.minestrappolation.lib.MAchievements;
 import minestrapteam.minestrappolation.lib.MBlocks;
@@ -15,7 +14,6 @@ import minestrapteam.minestrappolation.util.ChunkHelper;
 import minestrapteam.minestrappolation.util.NBTHelper;
 import minestrapteam.minestrappolation.util.VersionChecker;
 import minestrapteam.minestrappolation.world.MBiomeManager;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockNetherWart;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -26,13 +24,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.DamageSource;
-import net.minecraft.world.WorldProvider;
+import net.minecraft.util.ChatComponentText;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
-import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 import net.minecraftforge.event.entity.player.FillBucketEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent.Action;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.fml.common.eventhandler.Event.Result;
@@ -218,19 +215,10 @@ public class MEventHandler
 			if(!(ChunkProtector.getOwner(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition) == event.getPlayer().getName()))
 			{
 				event.setCanceled(true);
-			}
-		}
-	}
-	
-	@SubscribeEvent(priority = EventPriority.HIGH)
-	@SideOnly(Side.SERVER)
-	public void chunksterPlace(BlockEvent.PlaceEvent event)
-	{
-		if(ChunkProtector.isChunkOwned(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition))
-		{
-			if(!(ChunkProtector.getOwner(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition) == event.player.getName()))
-			{
-				event.setCanceled(true);
+				if(!event.world.isRemote)
+				{
+					event.getPlayer().addChatMessage(new ChatComponentText("§cThis chunk is owned by " + ChunkProtector.getOwner(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition)));
+				}
 			}
 		}
 	}
@@ -239,13 +227,17 @@ public class MEventHandler
 	@SideOnly(Side.SERVER)
 	public void chunksterInteract(PlayerInteractEvent event)
 	{
-		if(ChunkProtector.isChunkOwned(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition))
+		if(event.action == Action.RIGHT_CLICK_BLOCK)
 		{
-			if(!(ChunkProtector.getOwner(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition) == event.entityPlayer.getName()))
+			if(ChunkProtector.isChunkOwned(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition))
 			{
-				event.setCanceled(true);
+				if(!(ChunkProtector.getOwner(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition) == event.entityPlayer.getName()))
+				{
+					event.setCanceled(true);
+					event.entityPlayer.addChatMessage(new ChatComponentText("§cThis chunk is owned by " + ChunkProtector.getOwner(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition)));
+				}
 			}
-		}
+		}	
 	}
 	
 	@SubscribeEvent
@@ -261,6 +253,6 @@ public class MEventHandler
 	{
 		ChunkProtector.updateFile(event.world.getWorldInfo().getWorldName());
 	}
-
+	
 	//************************************************************************************************************
 }

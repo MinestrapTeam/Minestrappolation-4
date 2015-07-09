@@ -40,7 +40,6 @@ public class ChunkProtector
 	
 	public static String getOwner(int x, int y)
 	{
-		System.out.println(prot.get(new Key(x, y)));
 		return prot.get(new Key(x, y));
 	}
 	
