@@ -9,6 +9,7 @@ import minestrapteam.minestrappolation.block.BlockBlazium;
 import minestrapteam.minestrappolation.block.BlockBoulder;
 import minestrapteam.minestrappolation.block.BlockBush;
 import minestrapteam.minestrappolation.block.BlockChiseled;
+import minestrapteam.minestrappolation.block.BlockClaimerator;
 import minestrapteam.minestrappolation.block.BlockColdCobweb;
 import minestrapteam.minestrappolation.block.BlockCrackedBricks;
 import minestrapteam.minestrappolation.block.BlockDeadBranch;
@@ -148,6 +149,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class MBlocks
 {
 	public static ArrayList<Block> blockList = new ArrayList<Block>();
+	
+	public static Block claimerator;
 	
 	public static Block	copper_block;
 	public static Block	tin_block;
@@ -435,6 +438,8 @@ public class MBlocks
 	
 	public static void init()
 	{
+		claimerator = new BlockClaimerator(Material.iron, MapColor.blackColor).setUnlocalizedName("claimerator").setCreativeTab(Minestrappolation.tabMTech).setBlockUnbreakable();
+		
 		slate = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("slate").setCreativeTab(Minestrappolation.tabMBuilding);;
 		slate_refined = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("slate_refined").setCreativeTab(Minestrappolation.tabMBuilding);;
 		slate_bricks = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("slate_bricks").setCreativeTab(Minestrappolation.tabMBuilding);;
@@ -742,6 +747,8 @@ public class MBlocks
 	
 	private static void register()
 	{
+		register(claimerator);
+		
 		register(dirt_permafrost);
 		register(lichen_permafrost, ItemBlockPermaFrost.class);
 		register(cold_sand, ItemBlockColdSand.class);

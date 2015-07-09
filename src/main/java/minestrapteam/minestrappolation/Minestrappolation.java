@@ -1,5 +1,8 @@
 package minestrapteam.minestrappolation;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import minestrapteam.minestrappolation.client.CommonProxy;
 import minestrapteam.minestrappolation.creativetab.MTab;
 import minestrapteam.minestrappolation.handlers.MEventHandler;
@@ -23,6 +26,7 @@ import minestrapteam.minestrappolation.tileentity.TileEntityStoneCutter;
 import minestrapteam.minestrappolation.util.Tables;
 import minestrapteam.minestrappolation.world.MBiomeManager;
 import minestrapteam.minestrappolation.world.MGenHandler;
+import net.minecraft.world.chunk.Chunk;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -95,6 +99,7 @@ public class Minestrappolation
 		GameRegistry.registerTileEntity(TileEntitySplitter.class, "tile_entity_splitter");
 		
 		GameRegistry.registerFuelHandler(new MFuelHandler());
+		
 	}
 	
 	@EventHandler

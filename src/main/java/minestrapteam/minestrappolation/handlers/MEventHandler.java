@@ -2,7 +2,10 @@ package minestrapteam.minestrappolation.handlers;
 
 import java.util.Random;
 
+import minestrapteam.minestrappolation.ChunkProtector;
 import minestrapteam.minestrappolation.Config;
+import minestrapteam.minestrappolation.Key;
+import minestrapteam.minestrappolation.Minestrappolation;
 import minestrapteam.minestrappolation.block.BlockSoul;
 import minestrapteam.minestrappolation.lib.MAchievements;
 import minestrapteam.minestrappolation.lib.MBlocks;
@@ -24,12 +27,16 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
+import net.minecraft.world.WorldProvider;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 import net.minecraftforge.event.entity.player.FillBucketEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.world.BlockEvent;
+import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.fml.common.eventhandler.Event.Result;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -78,6 +85,16 @@ public class MEventHandler
 	public void onBlockBreak(BlockEvent.BreakEvent event)
 	{
 		Random rand = new Random();
+
+		if(ChunkProtector.prot.containsKey(new Key(event.pos.getX(), event.pos.getY())))
+		{
+			if(!(ChunkProtector.prot.get(new Key(event.pos.getX(), event.pos.getY())) == event.getPlayer().getName()))
+			{
+				event.setCanceled(true);
+			}
+		}
+		
+		
 		if (event.state.getBlock() instanceof BlockNetherWart)
 		{
 			BlockNetherWart wart = (BlockNetherWart) event.state.getBlock();
@@ -186,4 +203,64 @@ public class MEventHandler
 		}
 	}
 	
+	
+	
+	
+	
+	//Chunkster events
+	
+	@SubscribeEvent(priority = EventPriority.HIGH)
+	@SideOnly(Side.SERVER)
+	public void chunksterBreak(BlockEvent.BreakEvent event)
+	{
+		if(ChunkProtector.isChunkOwned(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition))
+		{
+			if(!(ChunkProtector.getOwner(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition) == event.getPlayer().getName()))
+			{
+				event.setCanceled(true);
+			}
+		}
+	}
+	
+	@SubscribeEvent(priority = EventPriority.HIGH)
+	@SideOnly(Side.SERVER)
+	public void chunksterPlace(BlockEvent.PlaceEvent event)
+	{
+		if(ChunkProtector.isChunkOwned(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition))
+		{
+			if(!(ChunkProtector.getOwner(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition) == event.player.getName()))
+			{
+				event.setCanceled(true);
+			}
+		}
+	}
+	
+	@SubscribeEvent(priority = EventPriority.HIGH)
+	@SideOnly(Side.SERVER)
+	public void chunksterInteract(PlayerInteractEvent event)
+	{
+		if(ChunkProtector.isChunkOwned(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition))
+		{
+			if(!(ChunkProtector.getOwner(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition) == event.entityPlayer.getName()))
+			{
+				event.setCanceled(true);
+			}
+		}
+	}
+	
+	@SubscribeEvent
+	@SideOnly(Side.SERVER)
+	public void worldLoad(WorldEvent.Load event)
+	{
+		ChunkProtector.loadFile(event.world.getWorldInfo().getWorldName());
+	}
+
+	@SubscribeEvent
+	@SideOnly(Side.SERVER)
+	public void worldSave(WorldEvent.Save event)
+	{
+		ChunkProtector.updateFile(event.world.getWorldInfo().getWorldName());
+	}
+
+	//************************************************************************************************************
 }
