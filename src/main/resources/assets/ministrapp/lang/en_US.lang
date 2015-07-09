@@ -655,6 +655,7 @@ item.magma_bucket.name=Bucket of Magma
 item.heart_piece.name=Heart Piece
 item.heart_container.name=Heart Container
 item.soul_bottle.name=Soul Bottle
+item.hangglider.name=Wooden Hang Glider
 
 itemGroup.tabMBuilding=Minestrapp Building Blocks
 itemGroup.tabMDecor=Minestrapp Decoration Blocks

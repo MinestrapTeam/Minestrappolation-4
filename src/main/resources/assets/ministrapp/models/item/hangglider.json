@@ -1,9 +1,9 @@
 {
 "__comment": "Designed by Delocuro with BDcraft Cubik PRO 0.93 Beta - http://bdcraft.net",
 "textures": {
-    "particle": "models/hang_glider_wings",
-    "Wood": "models/planks_oak",
-    "Wings": "models/hang_glider_wings"
+    "particle": "ministrapp:models/hang_glider_wings",
+    "Wood": "ministrapp:models/planks_oak",
+    "Wings": "ministrapp:models/hang_glider_wings"
 },
 "elements": [ 
 {
