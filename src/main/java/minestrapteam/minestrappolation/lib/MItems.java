@@ -349,10 +349,10 @@ public class MItems extends Item
 		meurodite_leggings = new ItemMArmor(ARMOR_MEURODITE, 0, 2, meurodite_gem, "meurodite").setUnlocalizedName("meurodite_leggings").setCreativeTab(Minestrappolation.tabMCombat);
 		meurodite_boots = new ItemMArmor(ARMOR_MEURODITE, 0, 3, meurodite_gem, "meurodite").setUnlocalizedName("meurodite_boots").setCreativeTab(Minestrappolation.tabMCombat);
 		
-		torite_helmet = new ItemMArmor(ARMOR_TORITE, 0, 0, torite_ingot, "tortite").setUnlocalizedName("torite_helmet").setCreativeTab(Minestrappolation.tabMCombat);
-		torite_chestplate = new ItemMArmor(ARMOR_TORITE, 0, 1, torite_ingot, "tortite").setUnlocalizedName("torite_chestplate").setCreativeTab(Minestrappolation.tabMCombat);
-		torite_leggings = new ItemMArmor(ARMOR_TORITE, 0, 2, torite_ingot, "tortite").setUnlocalizedName("torite_leggings").setCreativeTab(Minestrappolation.tabMCombat);
-		torite_boots = new ItemMArmor(ARMOR_TORITE, 0, 3, torite_ingot, "tortite").setUnlocalizedName("torite_boots").setCreativeTab(Minestrappolation.tabMCombat);
+		torite_helmet = new ItemMArmor(ARMOR_TORITE, 0, 0, torite_ingot, "torite").setUnlocalizedName("torite_helmet").setCreativeTab(Minestrappolation.tabMCombat);
+		torite_chestplate = new ItemMArmor(ARMOR_TORITE, 0, 1, torite_ingot, "torite").setUnlocalizedName("torite_chestplate").setCreativeTab(Minestrappolation.tabMCombat);
+		torite_leggings = new ItemMArmor(ARMOR_TORITE, 0, 2, torite_ingot, "torite").setUnlocalizedName("torite_leggings").setCreativeTab(Minestrappolation.tabMCombat);
+		torite_boots = new ItemMArmor(ARMOR_TORITE, 0, 3, torite_ingot, "torite").setUnlocalizedName("torite_boots").setCreativeTab(Minestrappolation.tabMCombat);
 		
 		blazium_helmet = new ItemMArmor(ARMOR_BLAZIUM, 0, 0, blazium_ingot, "blazium").setUnlocalizedName("blazium_helmet").setCreativeTab(Minestrappolation.tabMCombat);
 		blazium_chestplate = new ItemMArmor(ARMOR_BLAZIUM, 0, 1, blazium_ingot, "blazium").setUnlocalizedName("blazium_chestplate").setCreativeTab(Minestrappolation.tabMCombat);
