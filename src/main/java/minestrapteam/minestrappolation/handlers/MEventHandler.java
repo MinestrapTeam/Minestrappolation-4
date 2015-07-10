@@ -60,16 +60,7 @@ public class MEventHandler
 				}
 				player.addStat(MAchievements.minestrapp, 1);
 			}	
-			
-			if(!nbt.hasKey("healthSet"))
-			{
-				nbt.setBoolean("healthSet", false);
-			}	
-			if(nbt.getBoolean("healthSet") == false)
-			{
-				player.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(Config.healthStarting);
-				nbt.setBoolean("healthSet", true);
-			}
+			    player.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(Config.healthStarting);
 			
 			if(nbt.hasKey("health"))
 			{
@@ -83,15 +74,6 @@ public class MEventHandler
 	{
 		Random rand = new Random();
 
-		if(ChunkProtector.prot.containsKey(new Key(event.pos.getX(), event.pos.getY())))
-		{
-			if(!(ChunkProtector.prot.get(new Key(event.pos.getX(), event.pos.getY())) == event.getPlayer().getName()))
-			{
-				event.setCanceled(true);
-			}
-		}
-		
-		
 		if (event.state.getBlock() instanceof BlockNetherWart)
 		{
 			BlockNetherWart wart = (BlockNetherWart) event.state.getBlock();
