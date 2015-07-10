@@ -25,6 +25,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ChatComponentText;
+import net.minecraftforge.event.entity.EntityEvent;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 import net.minecraftforge.event.entity.player.FillBucketEvent;
@@ -200,6 +201,23 @@ public class MEventHandler
 				if(!event.world.isRemote)
 				{
 					event.getPlayer().addChatMessage(new ChatComponentText("§cThis chunk is owned by " + ChunkProtector.getOwner(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition)));
+				}
+			}
+		}
+	}
+	
+	@SubscribeEvent(priority = EventPriority.HIGH)
+	@SideOnly(Side.SERVER)
+	public void chunksterBreak(BlockEvent.PlaceEvent event)
+	{
+		if(ChunkProtector.isChunkOwned(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition))
+		{
+			if(!(ChunkProtector.getOwner(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition) == event.player.getName()))
+			{
+				event.setCanceled(true);
+				if(!event.world.isRemote)
+				{
+					event.player.addChatMessage(new ChatComponentText("§cThis chunk is owned by " + ChunkProtector.getOwner(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition)));
 				}
 			}
 		}
