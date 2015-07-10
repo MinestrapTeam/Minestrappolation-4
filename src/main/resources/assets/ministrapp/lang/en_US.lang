@@ -446,6 +446,7 @@ tile.glass_window.name=Framed Glass
 tile.framed_pane.name=Framed Glass Pane
 tile.glow_glass.name=Glow Glass
 tile.glow_glass_pane.name=Glow Glass Pane
+tile.rope.name=Rope
 
 tile.steel_mesh.name=Steel Mesh
 

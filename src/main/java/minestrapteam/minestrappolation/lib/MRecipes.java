@@ -130,6 +130,8 @@ public class MRecipes
 		GameRegistry.addRecipe(new ItemStack(MBlocks.sugar_block, 1), new Object[] { "SSS", "SSS", "SSS", 'S', Items.sugar});
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.sugar, 9), new Object[] { MBlocks.sugar_block });
 		
+		GameRegistry.addRecipe(new ItemStack(MBlocks.rope, 1), new Object[] { "S", "S", "S", 'S', Items.string });
+		
 		GameRegistry.addSmelting(new ItemStack(MBlocks.cold_sand, 1, 0), new ItemStack(Blocks.sand, 1, 0), 0.1F);
 		GameRegistry.addSmelting(new ItemStack(MBlocks.cold_sand, 1, 1), new ItemStack(Blocks.sand, 1, 1), 0.1F);
 		GameRegistry.addSmelting(new ItemStack(MBlocks.dirt_permafrost, 1, 0), new ItemStack(Blocks.dirt, 1, 0), 0.1F);
@@ -304,12 +306,12 @@ public class MRecipes
 		RecipeHelper.removeRecipeContaining(Blocks.jungle_fence_gate);
 		RecipeHelper.removeRecipeContaining(Blocks.acacia_fence_gate);
 		RecipeHelper.removeRecipeContaining(Blocks.dark_oak_fence_gate);
-		RecipeHelper.removeRecipeContaining(Blocks.oak_door);
-		RecipeHelper.removeRecipeContaining(Blocks.birch_door);
-		RecipeHelper.removeRecipeContaining(Blocks.spruce_door);
-		RecipeHelper.removeRecipeContaining(Blocks.jungle_door);
-		RecipeHelper.removeRecipeContaining(Blocks.acacia_door);
-		RecipeHelper.removeRecipeContaining(Blocks.dark_oak_door);
+		RecipeHelper.removeRecipeContaining(Items.oak_door);
+		RecipeHelper.removeRecipeContaining(Items.birch_door);
+		RecipeHelper.removeRecipeContaining(Items.spruce_door);
+		RecipeHelper.removeRecipeContaining(Items.jungle_door);
+		RecipeHelper.removeRecipeContaining(Items.acacia_door);
+		RecipeHelper.removeRecipeContaining(Items.dark_oak_door);
 		RecipeHelper.removeRecipeContaining(Blocks.anvil);
 		RecipeHelper.removeRecipeContaining(Blocks.chest);
 		RecipeHelper.removeRecipeContaining(Blocks.jukebox);

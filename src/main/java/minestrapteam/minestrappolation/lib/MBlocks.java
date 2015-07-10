@@ -35,6 +35,7 @@ import minestrapteam.minestrappolation.block.BlockRadationMineral;
 import minestrapteam.minestrappolation.block.BlockRadiationInsulated;
 import minestrapteam.minestrappolation.block.BlockRefined;
 import minestrapteam.minestrappolation.block.BlockRoads;
+import minestrapteam.minestrappolation.block.BlockRope;
 import minestrapteam.minestrappolation.block.BlockSawmill;
 import minestrapteam.minestrappolation.block.BlockSoul;
 import minestrapteam.minestrappolation.block.BlockSunstoneBlock;
@@ -424,6 +425,7 @@ public class MBlocks
 	// Misc
 	public static Block	frost_generator;
 	public static Block	invincium;
+	public static Block rope;
 	
 	//Pillars
 	public static Block desert_pillar;
@@ -503,6 +505,7 @@ public class MBlocks
 		flint_block = new BlockMStorage(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("flint_block").setCreativeTab(Minestrappolation.tabMBuilding);
 		sugar_block = new BlockMFalling(Material.sand, MapColor.snowColor).setHardness(0.5F).setStepSound(Block.soundTypeGravel).setUnlocalizedName("sugar_block").setCreativeTab(Minestrappolation.tabMBuilding);
 		meat_block = new BlockMStorage(Material.clay, MapColor.pinkColor).setHardness(0.8F).setStepSound(Block.SLIME_SOUND).setUnlocalizedName("meat_block").setCreativeTab(Minestrappolation.tabMFood);
+		rope = new BlockRope(Material.cloth, MapColor.brownColor).setHardness(0.8F).setStepSound(Block.soundTypeCloth).setUnlocalizedName("rope").setCreativeTab(Minestrappolation.tabMDecor);
 		
 		roads = new BlockRoads(Material.rock, MapColor.blackColor).setHardness(3.0F).setResistance(10.0F).setUnlocalizedName("roads").setCreativeTab(Minestrappolation.tabMBuilding);
 		chiseled = new BlockChiseled(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_chiseled");
@@ -923,6 +926,7 @@ public class MBlocks
 		register(framed_glass_pane);
 		register(glow_glass_pane);
 		register(steel_mesh);
+		register(rope);
 		register(redwood_fence_gate);
 		register(frozen_oak_fence_gate);
 		register(redwood_door);
