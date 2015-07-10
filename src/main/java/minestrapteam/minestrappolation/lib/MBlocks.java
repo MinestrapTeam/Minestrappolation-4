@@ -438,7 +438,7 @@ public class MBlocks
 	
 	public static void init()
 	{
-		claimerator = new BlockClaimerator(Material.iron, MapColor.blackColor).setUnlocalizedName("claimerator").setCreativeTab(Minestrappolation.tabMTech).setBlockUnbreakable();
+		claimerator = new BlockClaimerator(Material.rock, MapColor.obsidianColor).setHardness(50.0F).setResistance(2000.0F).setUnlocalizedName("claimerator").setCreativeTab(Minestrappolation.tabMTech);
 		
 		slate = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("slate").setCreativeTab(Minestrappolation.tabMBuilding);;
 		slate_refined = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("slate_refined").setCreativeTab(Minestrappolation.tabMBuilding);;
@@ -1093,6 +1093,7 @@ public class MBlocks
 		stone_refined.setHarvestLevel("pickaxe", 0);
 		stone_tiles.setHarvestLevel("pickaxe", 0);
 		godstone.setHarvestLevel("pickaxe", 0);
+		claimerator.setHarvestLevel("pickaxe", 3);
 		
 		glass_door.setHarvestLevel("pickaxe", 0);
 		

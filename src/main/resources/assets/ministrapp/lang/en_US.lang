@@ -469,6 +469,7 @@ tile.sawmill.name=Carpenter's Bench
 tile.crusher.name=Crusher
 tile.frost_generator.name=Frost Generator
 tile.splitter.name=Alchemical Splitter
+tile.claimerator.name=Quantum Claimerator
 
 tile.moss.name=Moss Lump
 tile.blueberry_bush.name=Blueberry Bush
