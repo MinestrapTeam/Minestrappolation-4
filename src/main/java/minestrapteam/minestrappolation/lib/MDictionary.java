@@ -146,6 +146,7 @@ public class MDictionary
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.uranium_insulated), new Object[] { "SSS", "GBG", "SSS", 'S', "ingotSteel", 'G', MBlocks.framed_glass_pane, 'B', "blockUranium" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MItems.sifter, 1), new Object[] { " C ", "CMC", " S ", 'C', "ingotCopper", 'M', MBlocks.steel_mesh, 'S', MItems.reinforced_stick }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.splitter, 1), new Object[] { "RTR", "TST", "RTR", 'R', MBlocks.radiant_chiseled, 'T', "ingotTorite", 'S', MBlocks.sunstone_block}));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.claimerator, 1), new Object[] { "DOD", "PGU", "DOD", 'D', Items.diamond, 'O', Blocks.obsidian, 'P', "ingotPlutonium", 'U', "ingotUranium", 'G', MBlocks.godstone }));
 		
 		//Materials
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MItems.reinforced_stick, 8), new Object[] { "SSS", "STS", "SSS", 'S', "stickWood", 'T', new ItemStack(MItems.tin_plating) }));
@@ -172,6 +173,9 @@ public class MDictionary
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.sandstone, 1, 0), new Object[] { "SS", "SS", 'S', new ItemStack(Blocks.sand, 1, 0)}));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.red_sandstone, 1, 0), new Object[] { "SS", "SS", 'S', new ItemStack(Blocks.sand, 1, 1)}));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.prismarine, 1, 0), new Object[] { "PP", "PP", 'P', Items.prismarine_shard}));
+		
+		//TODO: Replace Leather and Feathers with Wing Segments.
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MItems.hangglider, 1), new Object[] { "PPP", "LPL", "FSF", 'P', "plankWood", 'L', Items.leather, 'F', Items.feather, 'S', "stickWood" }));
 	}
 	
 }
