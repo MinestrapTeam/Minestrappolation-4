@@ -71,6 +71,17 @@ public class MDictionary
 		OreDictionary.registerOre("stone", new ItemStack(MBlocks.biome_stones, 1, WILDCARD_VALUE));
 		OreDictionary.registerOre("cobblestone", new ItemStack(MBlocks.biome_cobble, 1, WILDCARD_VALUE));
 		
+		OreDictionary.registerOre("slabSmoothStone", new ItemStack(Blocks.stone_slab, 1, 0));
+		OreDictionary.registerOre("slabSmoothStone", new ItemStack(MBlocks.deepstone_slab, 1, 0));
+		OreDictionary.registerOre("slabSmoothStone", new ItemStack(MBlocks.red_rock_slab, 1, 0));
+		OreDictionary.registerOre("slabSmoothStone", new ItemStack(MBlocks.deep_red_rock_slab, 1, 0));
+		OreDictionary.registerOre("slabSmoothStone", new ItemStack(MBlocks.coldstone_slab, 1, 0));
+		OreDictionary.registerOre("slabSmoothStone", new ItemStack(MBlocks.deep_coldstone_slab, 1, 0));
+		OreDictionary.registerOre("slabSmoothStone", new ItemStack(MBlocks.icestone_slab, 1, 0));
+		OreDictionary.registerOre("slabSmoothStone", new ItemStack(MBlocks.glacierrock_slab, 1, 0));
+		OreDictionary.registerOre("slabSmoothStone", new ItemStack(MBlocks.oceanstone_slab, 1, 0));
+		OreDictionary.registerOre("slabSmoothStone", new ItemStack(MBlocks.poceanstone_slab, 1, 0));
+		
 		OreDictionary.registerOre("oreGold", new ItemStack(MBlocks.biome_gold, 1, WILDCARD_VALUE));
 		OreDictionary.registerOre("oreIron", new ItemStack(MBlocks.biome_iron, 1, WILDCARD_VALUE));
 		OreDictionary.registerOre("oreLapis", new ItemStack(MBlocks.biome_lapis, 1, WILDCARD_VALUE));

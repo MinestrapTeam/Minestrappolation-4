@@ -48,7 +48,7 @@ public class BlockBush extends MBlock implements IPlantable, IShearable{
     {
         super(Material.leaves, MapColor.greenColor);
         this.setDefaultState(this.blockState.getBaseState().withProperty(AGE, Integer.valueOf(0)));
-        this.setLightOpacity(1);
+        this.setLightOpacity(0);
         this.setTickRandomly(true);
         this.item = item;
     }

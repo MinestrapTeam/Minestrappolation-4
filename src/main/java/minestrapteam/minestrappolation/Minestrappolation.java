@@ -60,8 +60,9 @@ public class Minestrappolation
 	{	
 		Config.configInit(event);
 		MFluid.init();
-		MBlocks.init();
 		MItems.init();
+		MBlocks.init();
+		MItems.addItemsToChests();
 		
 		MItems.register();
 		MRecipes.register();

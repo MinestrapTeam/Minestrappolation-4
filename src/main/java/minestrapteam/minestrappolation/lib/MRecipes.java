@@ -312,6 +312,11 @@ public class MRecipes
 		RecipeHelper.removeRecipeContaining(Items.jungle_door);
 		RecipeHelper.removeRecipeContaining(Items.acacia_door);
 		RecipeHelper.removeRecipeContaining(Items.dark_oak_door);
+		RecipeHelper.removeRecipeContaining(Items.bed);
+		RecipeHelper.removeRecipeContaining(Items.sign);
+		RecipeHelper.removeRecipeContaining(Items.item_frame);
+		RecipeHelper.removeRecipeContaining(Items.painting);
+		RecipeHelper.removeRecipeContaining(Items.armor_stand);
 		RecipeHelper.removeRecipeContaining(Blocks.anvil);
 		RecipeHelper.removeRecipeContaining(Blocks.chest);
 		RecipeHelper.removeRecipeContaining(Blocks.jukebox);

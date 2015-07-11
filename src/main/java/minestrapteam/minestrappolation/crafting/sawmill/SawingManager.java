@@ -32,10 +32,12 @@ public class SawingManager
 	{
 		//Vanilla Alternate Recipes
 		this.addRecipe(new ItemStack(Blocks.crafting_table, 1, 0), new Object[] { "WW", "WW", 'W', "plankWood" });
-		this.addRecipe(new ItemStack(Items.sign, 3, 0), new Object[] { "WWW", "WWW", " S ", 'W', "plankWood", 'S', "stickWood" });
 		this.addRecipe(new ItemStack(Items.stick, 6), new Object[] { "W", "W", 'W', "plankWood", 'S', "stickWood"});
 		this.addRecipe(new ItemStack(Blocks.ladder, 3), new Object[] { "S S", "SSS", "S S", 'S', "stickWood"});
 		this.addRecipe(new ItemStack(Blocks.torch, 4), new Object[] { "C", "S", 'C', Items.coal, 'S', "stickWood"});
+		this.addRecipe(new ItemStack(Items.bowl, 6), new Object[] { "W W", " W ", 'W', "plankWood" });
+		this.addRecipe(new ItemStack(Blocks.wooden_button, 1), new Object[]{ "W", 'W', "plankWood" });
+		this.addRecipe(new ItemStack(Blocks.wooden_pressure_plate, 1), new Object[] { "WW", 'W', "plankWood" });
 		
 		this.addRecipe(new ItemStack(Blocks.planks, 6, 0), new Object[] { "L", 'L', new ItemStack(Blocks.log, 1, 0) });
 		this.addRecipe(new ItemStack(Blocks.planks, 6, 1), new Object[] { "L", 'L', new ItemStack(Blocks.log, 1, 1) });
@@ -66,6 +68,7 @@ public class SawingManager
 		
 		//Vanilla Replacement Recipes
 		this.addRecipe(new ItemStack(Blocks.bookshelf, 1), new Object[] { "WWW", "BBB", "WWW", 'W', "plankWood", 'B', Items.book });
+		this.addRecipe(new ItemStack(Items.bed, 1), new Object[] { "WWW", "PPP", 'W', Blocks.wool, 'P', "plankWood" });
 		this.addRecipe(new ItemStack(Blocks.oak_fence, 4), new Object[] { "WSW", "WSW", 'W', new ItemStack(Blocks.planks, 1, 0), 'S', "stickWood" });
 		this.addRecipe(new ItemStack(Blocks.spruce_fence, 4), new Object[] { "WSW", "WSW", 'W', new ItemStack(Blocks.planks, 1, 1), 'S', "stickWood" });
 		this.addRecipe(new ItemStack(Blocks.birch_fence, 4), new Object[] { "WSW", "WSW", 'W', new ItemStack(Blocks.planks, 1, 2), 'S', "stickWood" });
@@ -94,9 +97,14 @@ public class SawingManager
 		this.addRecipe(new ItemStack(Blocks.chest, 1, 0), new Object[] { "WWW", "W W", "WWW", 'W', "plankWood" });
 		this.addRecipe(new ItemStack(Blocks.jukebox, 1), new Object[] { "WWW", "WDW", "WWW", 'W', "plankWood", 'D', Items.diamond});
 		this.addRecipe(new ItemStack(Blocks.noteblock, 1), new Object[] { "WWW", "WRW", "WWW", 'W', "plankWood", 'R', Items.redstone});
+		this.addRecipe(new ItemStack(Items.sign, 3, 0), new Object[] { "WWW", "WWW", " S ", 'W', "plankWood", 'S', "stickWood" });
+		this.addRecipe(new ItemStack(Items.item_frame, 1, 0), new Object[] { "SSS", "SLS", "SSS", 'S', "stickWood", 'L', Items.leather });
+		this.addRecipe(new ItemStack(Items.painting, 1, 0), new Object[] { "SSS", "SWS", "SSS", 'W', Blocks.wool, 'S', "stickWood" });
+		this.addRecipe(new ItemStack(Items.armor_stand, 1, 0), new Object[] { "SSS", " S ", "SHS", 'H', "slabSmoothStone", 'S', "stickWood" });
 		
 		//Minestrapp Alternate Recipes
 		this.addRecipe(new ItemStack(MBlocks.crate, 1), new Object[] { "WWW", "SSS", "WWW", 'W', "plankWood", 'S', "stickWood" });
+		this.addRecipe(new ItemStack(MItems.reinforced_stick, 8), new Object[] { "SSS", "STS", "SSS", 'S', "stickWood", 'T', MItems.tin_plating});
 		
 		//Minestrapp Carpenters Bench Recipes
 		this.addRecipe(new ItemStack(MBlocks.barrel, 1), new Object[] { "WTW", "W W", "WTW", 'W', "plankWood", 'T', "ingotTin" });
