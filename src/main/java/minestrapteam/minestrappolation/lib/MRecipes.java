@@ -16,10 +16,13 @@ public class MRecipes
 	{
 		GameRegistry.addRecipe(new ItemStack(MItems.soulbottle, 1), new Object[] { "S", "B", 'S', MItems.soul_gem, 'B', Items.glass_bottle });
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.heart_container, 1), new Object[] { MItems.heart_piece, MItems.heart_piece, MItems.heart_piece, MItems.heart_piece });
+		GameRegistry.addRecipe(new ItemStack(MItems.wing_segment, 1), new Object[] { "SSS", "LLL", "FFF", 'S', MItems.wing_sinew, 'L', Items.leather, 'F', Items.feather });
+		GameRegistry.addRecipe(new ItemStack(Items.dye, 1, 15), new Object[] { "BB", "BB", 'B', MItems.animal_bones });
 		
 		// Food
 		GameRegistry.addRecipe(new ItemStack(MItems.dough, 2), new Object[] { "WW", "WW", 'W', Items.wheat });
 		GameRegistry.addSmelting(new ItemStack(MItems.dough), new ItemStack(Items.bread), 0.3F);
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.pbj_sandwich, 1), new Object[] { MItems.bun, MItems.bun, MItems.peanut_butter_bottle, MItems.jam_bottle});
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.sugar_dough, 2), new Object[] { MItems.dough, Items.sugar });
 		GameRegistry.addSmelting(new ItemStack(MItems.sugar_dough), new ItemStack(MItems.sugar_cookie, 6), 0.2F);
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.chocolate_dough, 2), new Object[] { MItems.dough, new ItemStack(Items.dye, 1, 3) });
@@ -45,6 +48,12 @@ public class MRecipes
 		GameRegistry.addShapedRecipe(new ItemStack(MItems.bread_speed_salad, 1), new Object[] { "L#C", " B ", 'L', MBlocks.lettuce, 'C', MBlocks.cabbage, '#', MItems.blackberry, 'B', MItems.bread_bowl });
 		GameRegistry.addShapedRecipe(new ItemStack(MItems.strength_salad, 1), new Object[] { "L#C", " B ", 'L', MBlocks.lettuce, 'C', MBlocks.cabbage, '#', MItems.strawberry, 'B', Items.bowl });
 		GameRegistry.addShapedRecipe(new ItemStack(MItems.bread_strength_salad, 1), new Object[] { "L#C", " B ", 'L', MBlocks.lettuce, 'C', MBlocks.cabbage, '#', MItems.strawberry, 'B', MItems.bread_bowl });
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.stir_fry, 1), new Object[] { MItems.rice_bowl, MItems.hot_sauce, Items.carrot});
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.stir_fry, 1), new Object[] { MItems.rice_bowl, MItems.hot_sauce, MBlocks.onion});
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.stir_fry, 1), new Object[] { MItems.rice_bowl, MItems.hot_sauce, MItems.celery});
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.bread_stir_fry, 1), new Object[] { MItems.bread_rice_bowl, MItems.hot_sauce, Items.carrot});
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.bread_stir_fry, 1), new Object[] { MItems.bread_rice_bowl, MItems.hot_sauce, MBlocks.onion});
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.bread_stir_fry, 1), new Object[] { MItems.bread_rice_bowl, MItems.hot_sauce, MItems.celery});
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.jam_bottle, 1), new Object[] { MItems.blueberry, MItems.strawberry, MItems.raspberry, MItems.blackberry, Items.glass_bottle });
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.peanut_butter_bottle, 1), new Object[] { MBlocks.peanuts, MBlocks.peanuts, MBlocks.peanuts, MBlocks.peanuts, Items.glass_bottle });
 		

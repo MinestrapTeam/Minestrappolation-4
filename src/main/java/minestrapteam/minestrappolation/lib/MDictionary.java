@@ -187,7 +187,7 @@ public class MDictionary
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.prismarine, 1, 0), new Object[] { "PP", "PP", 'P', Items.prismarine_shard}));
 		
 		//TODO: Replace Leather and Feathers with Wing Segments.
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MItems.hangglider, 1), new Object[] { "PPP", "LPL", "FSF", 'P', "plankWood", 'L', Items.leather, 'F', Items.feather, 'S', "stickWood" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MItems.hangglider, 1), new Object[] { "PRP", "WPW", " S ", 'P', "plankWood", 'R', MBlocks.rope, 'W', MItems.wing_segment, 'S', MItems.reinforced_stick }));
 	}
 	
 }

@@ -480,6 +480,8 @@ tile.strawberry_bush.name=Strawberry Bush
 tile.mana_bush.name=Mana Bush
 
 item.dough.name=Dough
+item.bun.name=Bun
+item.pbj_sandwich.name=Peanut Butter and Jelly Sandwich
 item.sugar_dough.name=Sugar Dough
 item.chocolate_dough.name=Chocolate Dough
 item.sugar_cookie.name=Sugar Cookie
@@ -519,6 +521,8 @@ item.speed_salad.name=Nourishing Salad
 item.bread_speed_salad.name=Nourishing Salad
 item.strength_salad.name=Refreshing Salad
 item.bread_strength_salad.name=Refreshing Salad
+item.stir_fry.name=Stir Fry
+item.bread_stir_fry.name=Stir Fry
 
 item.copper_ingot.name=Copper Ingot
 item.tin_ingot.name=Tin Ingot
@@ -552,6 +556,9 @@ item.tin_plating.name=Tin Plating
 item.steel_plating.name=Steel Plating
 item.meurodite_plating.name=Meurodite Plating
 item.reinforced_stick.name=Reinforced Stick
+item.animal_bones.name=Animal Bones
+item.wing_sinew.name=Wing Sinew
+item.wing_segment.name=Wing Segment
 
 item.stone_brick.name=Stone Brick
 item.deepstone_brick.name=Deepstone Brick

@@ -33,13 +33,15 @@ public class Config
 	public static int		celerySeedChance;
 	
 	//Drops
-	public static int 		dropAmount;
+	public static int		animalBoneDropAmount;
+	public static int 		sinewDropAmount;
 	
 	
 	// ********* Floats **********
 	
 	//Drops
-	public static float 	testDropChance;
+	public static float		animalBoneDropChance;
+	public static float 	sinewDropChance;
 	
 	
 	// ********* Doubles **********
@@ -73,8 +75,10 @@ public class Config
 		riceSeedChance = config.get("Plants", "RiceSeedChance", 10).getInt();
 		celerySeedChance = config.get("Plants", "CelerySeedChance", 10).getInt();
 		
-		testDropChance = config.get("Drops", "test", 100).getInt();
-		dropAmount = config.get("Drops", "testa", 1).getInt();
+		animalBoneDropChance = config.get("Drops", "AnimalBoneDropChance", 20).getInt();
+		animalBoneDropAmount = config.get("Drops", "AnimalBoneDropQuantity", 2).getInt();
+		sinewDropChance = config.get("Drops", "WingSinewDropChance", 50).getInt();
+		sinewDropAmount = config.get("Drops", "WingSinewDropQuantity", 1).getInt();
 		config.save();
 	}
 	

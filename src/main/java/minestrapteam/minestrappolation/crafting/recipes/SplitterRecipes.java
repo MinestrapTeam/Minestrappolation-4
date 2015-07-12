@@ -380,9 +380,12 @@ public class SplitterRecipes
 		
 		//Minestrapp Foods
 		this.addRecipe(new ItemStack(MItems.dough, 1), new ItemStack(Items.wheat, 1), new ItemStack(Items.wheat, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.pbj_sandwich, 1), new ItemStack(MItems.bun, 2), new ItemStack(MItems.jam_bottle, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.pie_crust, 1), new ItemStack(MItems.sugar_dough, 1), new ItemStack(Items.egg, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.rice_bowl, 1), new ItemStack(MBlocks.rice, 1), new ItemStack(Items.bowl, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.bread_rice_bowl, 1), new ItemStack(MBlocks.rice, 1), new ItemStack(MItems.bread_bowl, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.stir_fry, 1), new ItemStack(MItems.rice_bowl, 1), new ItemStack(MItems.hot_sauce, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.bread_stir_fry, 1), new ItemStack(MItems.rice_bowl, 1), new ItemStack(MItems.hot_sauce, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.hot_sauce, 1), new ItemStack(MItems.pepper, 1), new ItemStack(Items.glass_bottle, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.bread_mushroom_stew, 1), new ItemStack(Blocks.red_mushroom, 1), new ItemStack(Blocks.brown_mushroom, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.bread_rabbit_stew, 1), new ItemStack(Items.cooked_rabbit, 1), new ItemStack(Items.baked_potato, 1), 0.1F);
@@ -446,7 +449,8 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MItems.titanium_sword, 1, 0), new ItemStack(Items.stick, 1), new ItemStack(MItems.titanium_ingot, 2), 0.1F);
 		
 		this.addRecipe(new ItemStack(MItems.sifter, 1), new ItemStack(MItems.copper_ingot, 3), new ItemStack(MBlocks.steel_mesh, 1), 0.1F);
-		this.addRecipe(new ItemStack(MItems.hangglider, 1), new ItemStack(Blocks.planks, 4), new ItemStack(Items.leather, 2), 0.1F);
+		this.addRecipe(new ItemStack(MItems.wing_segment, 1), new ItemStack(MItems.wing_sinew, 3), new ItemStack(Items.leather, 3), 0.1F);
+		this.addRecipe(new ItemStack(MItems.hangglider, 1), new ItemStack(Blocks.planks, 4), new ItemStack(MItems.wing_sinew, 2), 0.1F);
 		this.addRecipe(new ItemStack(MItems.soulbottle, 1), new ItemStack(MItems.soul_gem, 1), new ItemStack(Items.glass_bottle, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.heart_container, 1), new ItemStack(MItems.heart_piece, 2), new ItemStack(MItems.heart_piece, 2), 0.1F);
 		

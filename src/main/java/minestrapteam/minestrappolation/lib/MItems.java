@@ -8,6 +8,7 @@ import minestrapteam.minestrappolation.item.ItemHangGlider;
 import minestrapteam.minestrappolation.item.ItemHeartContainer;
 import minestrapteam.minestrappolation.item.ItemMArmor;
 import minestrapteam.minestrappolation.item.ItemMAxe;
+import minestrapteam.minestrappolation.item.ItemMFood;
 import minestrapteam.minestrappolation.item.ItemMHoe;
 import minestrapteam.minestrappolation.item.ItemMPickaxe;
 import minestrapteam.minestrappolation.item.ItemMShovel;
@@ -36,6 +37,8 @@ public class MItems extends Item
 	public static ArrayList<Item> itemList = new ArrayList<Item>();
 	
 	public static Item							dough;
+	public static Item							bun;
+	public static Item							pbj_sandwich;
 	public static Item							sugar_dough;
 	public static Item							chocolate_dough;
 	public static Item							sugar_cookie;
@@ -50,11 +53,13 @@ public class MItems extends Item
 	public static Item							celery;
 	public static Item							mana_leaf;
 	public static Item							rice_bowl;
+	public static Item							stir_fry;
 	public static Item							hot_sauce;
 	public static Item							bread_bowl;
 	public static Item							bread_mushroom_stew;
 	public static Item							bread_rabbit_stew;
 	public static Item							bread_rice_bowl;
+	public static Item							bread_stir_fry;
 	public static Item							bread_fried_egg;
 	public static Item							salad;
 	public static Item							bread_salad;
@@ -82,6 +87,9 @@ public class MItems extends Item
 	public static Item							steel_plating;
 	public static Item							meurodite_plating;
 	public static Item							reinforced_stick;
+	public static Item							animal_bones;
+	public static Item							wing_sinew;
+	public static Item							wing_segment;
 	
 	public static Item							stone_brick;
 	public static Item							deepstone_brick;
@@ -217,6 +225,8 @@ public class MItems extends Item
 	public static void init()
 	{
 		dough = new ItemFood(1, 0.2F, false).setUnlocalizedName("dough").setCreativeTab(Minestrappolation.tabMFood);
+		bun = new ItemFood(2, 0.3F, false).setUnlocalizedName("bun").setCreativeTab(Minestrappolation.tabMFood);
+		pbj_sandwich = new ItemMFood(14, 2.5F, 0).setUnlocalizedName("pbj_sandwich").setCreativeTab(Minestrappolation.tabMFood);
 		sugar_dough = new ItemFood(1, 0.2F, false).setPotionEffect(Potion.moveSpeed.id, 5, 0, 0.3F).setUnlocalizedName("sugar_dough").setCreativeTab(Minestrappolation.tabMFood);
 		chocolate_dough = new ItemFood(1, 0.3F, false).setUnlocalizedName("chocolate_dough").setCreativeTab(Minestrappolation.tabMFood);
 		sugar_cookie = new ItemFood(1, 0.4F, false).setPotionEffect(Potion.moveSpeed.id, 10, 0, 0.5F).setUnlocalizedName("sugar_cookie").setCreativeTab(Minestrappolation.tabMFood);
@@ -231,11 +241,13 @@ public class MItems extends Item
 		celery = new ItemFood(2, 0.4F, false).setUnlocalizedName("celery").setCreativeTab(Minestrappolation.tabMFood);
 		mana_leaf = new Item().setUnlocalizedName("mana_leaf").setCreativeTab(Minestrappolation.tabMMaterials);
 		rice_bowl = new ItemMSoup(5, 0.8F, Items.bowl, 0).setUnlocalizedName("rice_bowl").setCreativeTab(Minestrappolation.tabMFood);
+		stir_fry = new ItemMSoup(8, 1F, Items.bowl, 6).setPotionEffect(Potion.moveSpeed.id, 40, 2, 1F).setUnlocalizedName("stir_fry").setCreativeTab(Minestrappolation.tabMFood);
 		hot_sauce = new ItemMSoup(0, 0.2F, Items.glass_bottle, 10).setPotionEffect(Potion.moveSpeed.id, 40, 2, 1F).setAlwaysEdible().setUnlocalizedName("hot_sauce").setCreativeTab(Minestrappolation.tabMFood);
 		bread_bowl = new ItemFood(2, 0.3F, false).setUnlocalizedName("bread_bowl").setCreativeTab(Minestrappolation.tabMFood);
 		bread_mushroom_stew = new ItemFood(8, false).setUnlocalizedName("bread_mushroom_stew").setCreativeTab(Minestrappolation.tabMFood);
 		bread_rabbit_stew = new ItemFood(12, false).setUnlocalizedName("bread_rabbit_stew").setCreativeTab(Minestrappolation.tabMFood);
-		bread_rice_bowl = new ItemFood(7, 0.8F, false).setUnlocalizedName("bread_rice_bowl").setCreativeTab(Minestrappolation.tabMFood);
+		bread_rice_bowl = new ItemMFood(7, 0.8F, 0).setUnlocalizedName("bread_rice_bowl").setCreativeTab(Minestrappolation.tabMFood);
+		bread_stir_fry = new ItemMFood(10, 1F, 6).setUnlocalizedName("bread_stir_fry").setCreativeTab(Minestrappolation.tabMFood);
 		bread_fried_egg = new ItemFood(8, 0.4F, false).setUnlocalizedName("bread_fried_egg").setCreativeTab(Minestrappolation.tabMFood);
 		salad = new ItemMSoup(8, 0.2F, Items.bowl, 0).setUnlocalizedName("salad").setCreativeTab(Minestrappolation.tabMFood);
 		bread_salad = new ItemFood(10, 0.2F, false).setUnlocalizedName("bread_salad").setCreativeTab(Minestrappolation.tabMFood);
@@ -264,6 +276,9 @@ public class MItems extends Item
 		steel_plating = new Item().setUnlocalizedName("steel_plating").setCreativeTab(Minestrappolation.tabMMaterials);
 		meurodite_plating = new Item().setUnlocalizedName("meurodite_plating").setCreativeTab(Minestrappolation.tabMMaterials);
 		reinforced_stick = new Item().setUnlocalizedName("reinforced_stick").setCreativeTab(Minestrappolation.tabMMaterials);
+		animal_bones = new Item().setUnlocalizedName("animal_bones").setCreativeTab(Minestrappolation.tabMMaterials);
+		wing_sinew = new Item().setUnlocalizedName("wing_sinew").setCreativeTab(Minestrappolation.tabMMaterials);
+		wing_segment = new Item().setUnlocalizedName("wing_segment").setCreativeTab(Minestrappolation.tabMMaterials);
 		
 		stone_brick = new Item().setUnlocalizedName("stone_brick").setCreativeTab(Minestrappolation.tabMMaterials);
 		deepstone_brick = new Item().setUnlocalizedName("deepstone_brick").setCreativeTab(Minestrappolation.tabMMaterials);
@@ -383,6 +398,9 @@ public class MItems extends Item
 	public static void register()
 	{	
 		register(reinforced_stick);
+		register(animal_bones);
+		register(wing_sinew);
+		register(wing_segment);
 		register(mana_leaf);
 		
 		register(stone_brick);
@@ -431,6 +449,8 @@ public class MItems extends Item
 		register(dough);
 		register(sugar_dough);
 		register(chocolate_dough);
+		register(bun);
+		register(pbj_sandwich);
 		register(sugar_cookie);
 		register(pie_crust);
 		register(apple_pie);
@@ -439,6 +459,8 @@ public class MItems extends Item
 		register(bread_rabbit_stew);
 		register(rice_bowl);
 		register(bread_rice_bowl);
+		register(stir_fry);
+		register(bread_stir_fry);
 		register(fried_egg);
 		register(bread_fried_egg);
 		register(salad);
@@ -580,7 +602,7 @@ public class MItems extends Item
 		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(bronze_ingot), 1, 3, 10));
 		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(meurodite_gem), 1, 1, 5));
 		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(radiant_quartz), 1, 2, 4));
-		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(heart_piece), 1, 2, 4));
+		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(heart_piece), 1, 2, 6));
 		
 		//Abandoned Mineshaft
 		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(copper_ingot), 1, 5, 30));
@@ -595,7 +617,7 @@ public class MItems extends Item
 		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(uranium), 1, 2, 2));
 		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(plutonium), 1, 2, 2));
 		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(radiant_quartz), 1, 5, 1));
-		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(heart_piece), 1, 2, 4));
+		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(heart_piece), 1, 2, 6));
 		
 		//Stronghold Corridor
 		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(copper_ingot), 1, 5, 30));
@@ -615,7 +637,7 @@ public class MItems extends Item
 		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.godstone), 1, 1, 1));
 		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(soul_gem), 1, 2, 1));
 		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(radiant_quartz), 1, 2, 2));
-		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(heart_piece), 1, 2, 4));
+		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(heart_piece), 1, 2, 6));
 		
 		//Stronghold Storage Room
 		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.lettuce), 1, 3, 50));
@@ -629,7 +651,7 @@ public class MItems extends Item
 		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(bronze_pickaxe), 1, 1, 2));
 		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(steel_pickaxe), 1, 1, 2));
 		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(meurodite_pickaxe), 0, 1, 2));
-		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(heart_piece), 1, 2, 4));
+		strongholdCrossing.addItem(new WeightedRandomChestContent(new ItemStack(heart_piece), 1, 2, 6));
 		
 		//Stronghold Library
 		strongholdLibrary.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.peanuts), 1, 3, 20));
@@ -637,7 +659,7 @@ public class MItems extends Item
 		strongholdLibrary.addItem(new WeightedRandomChestContent(new ItemStack(radiant_quartz), 1, 3, 8));
 		strongholdLibrary.addItem(new WeightedRandomChestContent(new ItemStack(soul_gem), 1, 2, 3));
 		strongholdLibrary.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.radiant_chiseled), 1, 1, 2));
-		strongholdLibrary.addItem(new WeightedRandomChestContent(new ItemStack(heart_piece), 1, 2, 4));
+		strongholdLibrary.addItem(new WeightedRandomChestContent(new ItemStack(heart_piece), 1, 2, 6));
 		
 		//Jungle Temple Chest
 		jungleChest.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.peanuts), 1, 3, 20));
@@ -649,7 +671,7 @@ public class MItems extends Item
 		jungleChest.addItem(new WeightedRandomChestContent(new ItemStack(radiant_quartz), 1, 2, 6));
 		jungleChest.addItem(new WeightedRandomChestContent(new ItemStack(steel_ingot), 1, 3, 8));
 		jungleChest.addItem(new WeightedRandomChestContent(new ItemStack(soul_gem), 1, 3, 1));
-		jungleChest.addItem(new WeightedRandomChestContent(new ItemStack(heart_piece), 1, 2, 5));
+		jungleChest.addItem(new WeightedRandomChestContent(new ItemStack(heart_piece), 1, 2, 8));
 		
 		//Jungle Temple Dispenser
 		jungleDispenser.addItem(new WeightedRandomChestContent(new ItemStack(Items.fire_charge), 1, 5, 10));
@@ -666,7 +688,7 @@ public class MItems extends Item
 		desertChest.addItem(new WeightedRandomChestContent(new ItemStack(radiant_quartz), 1, 4, 6));
 		desertChest.addItem(new WeightedRandomChestContent(new ItemStack(steel_ingot), 1, 3, 8));
 		desertChest.addItem(new WeightedRandomChestContent(new ItemStack(soul_gem), 1, 3, 1));
-		desertChest.addItem(new WeightedRandomChestContent(new ItemStack(heart_piece), 1, 2, 5));
+		desertChest.addItem(new WeightedRandomChestContent(new ItemStack(heart_piece), 1, 2, 8));
 		
 		//Village Blacksmith Building
 		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.lettuce), 1, 3, 30));
@@ -694,7 +716,7 @@ public class MItems extends Item
 		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(MBlocks.radiant_ore), 1, 1, 1));
 		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(titanium_ingot), 1, 1, 1));
 		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(soul_gem), 1, 3, 1));
-		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(heart_piece), 1, 2, 4));
+		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(heart_piece), 1, 2, 6));
 	}
 	
 	public static void registerRender(Item item)

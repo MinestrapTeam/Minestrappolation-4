@@ -56,6 +56,7 @@ public class AlloyRecipes
 		
 		//Misc
 		this.addRecipe(new ItemStack(MItems.dough, 1), new ItemStack(Items.bowl, 1), new ItemStack(MItems.bread_bowl, 1), 0.2F);
+		this.addRecipe(new ItemStack(MItems.dough, 1), new ItemStack(MBlocks.pepper_seed, 1), new ItemStack(MItems.bun, 2), 0.2F);
 		this.addRecipe(new ItemStack(Blocks.pumpkin, 1), new ItemStack(MItems.pie_crust, 2), new ItemStack(Items.pumpkin_pie, 2), 0.3F);
 		this.addRecipe(new ItemStack(Items.apple, 2), new ItemStack(MItems.pie_crust, 2), new ItemStack(MItems.apple_pie, 2), 0.3F);
 		this.addRecipe(new ItemStack(Items.egg, 1), new ItemStack(MItems.bread_bowl, 1), new ItemStack(MItems.bread_fried_egg, 1), 0.3F);
