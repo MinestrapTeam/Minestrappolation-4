@@ -11,6 +11,7 @@ import minestrapteam.minestrappolation.handlers.MGuiHandler;
 import minestrapteam.minestrappolation.lib.MAchievements;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MDictionary;
+import minestrapteam.minestrappolation.lib.MDrops;
 import minestrapteam.minestrappolation.lib.MFluid;
 import minestrapteam.minestrappolation.lib.MItems;
 import minestrapteam.minestrappolation.lib.MRecipes;
@@ -77,6 +78,7 @@ public class Minestrappolation
 		MFluid.load();
 		
 		MinecraftForge.EVENT_BUS.register(new MEventHandler());
+		MinecraftForge.EVENT_BUS.register(new MDrops());
 		proxy.preInit(event);
 		if (Minestrappolation.proxy != null)
 		{

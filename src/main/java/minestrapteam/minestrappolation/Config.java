@@ -32,6 +32,15 @@ public class Config
 	public static int		riceSeedChance;
 	public static int		celerySeedChance;
 	
+	//Drops
+	public static int 		dropAmount;
+	
+	
+	// ********* Floats **********
+	
+	//Drops
+	public static float 	testDropChance;
+	
 	
 	// ********* Doubles **********
 	public static double    healthIncreaseMax;
@@ -63,6 +72,9 @@ public class Config
 		peanutChance = config.get("Plants", "PeanutSeedChance", 10).getInt();
 		riceSeedChance = config.get("Plants", "RiceSeedChance", 10).getInt();
 		celerySeedChance = config.get("Plants", "CelerySeedChance", 10).getInt();
+		
+		testDropChance = config.get("Drops", "test", 100).getInt();
+		dropAmount = config.get("Drops", "testa", 1).getInt();
 		config.save();
 	}
 	
