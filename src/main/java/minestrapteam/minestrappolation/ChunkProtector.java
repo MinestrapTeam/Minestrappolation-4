@@ -10,6 +10,12 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
+import java.util.UUID;
+
+import com.mojang.authlib.GameProfile;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.server.MinecraftServer;
 
 public class ChunkProtector 
 {
@@ -28,6 +34,12 @@ public class ChunkProtector
 		}
 	}
 	
+	public static String getPlayerUUID(EntityPlayer player)
+	{
+		GameProfile profile = MinecraftServer.getServer().getPlayerProfileCache().getGameProfileForUsername(player.getName());
+		return profile.getId().toString();
+	}
+	
 	public static void unprotectChunk(int x, int y)
 	{
 		prot.remove(new Key(x, y));
@@ -41,6 +53,11 @@ public class ChunkProtector
 	public static String getOwner(int x, int y)
 	{
 		return prot.get(new Key(x, y));
+	}
+	
+	public static boolean isOwnerForChunk(EntityPlayer player, int x, int y)
+	{
+		return getOwner(x, y).equals(getPlayerUUID(player));
 	}
 	
 	public static void updateFile(String path)

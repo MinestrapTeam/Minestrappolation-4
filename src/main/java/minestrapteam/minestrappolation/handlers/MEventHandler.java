@@ -195,7 +195,7 @@ public class MEventHandler
 	{
 		if(ChunkProtector.isChunkOwned(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition))
 		{
-			if(!(ChunkProtector.getOwner(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition) == event.getPlayer().getName()))
+			if(!ChunkProtector.isOwnerForChunk(event.getPlayer(), event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition))
 			{
 				event.setCanceled(true);
 				if(!event.world.isRemote)
@@ -212,7 +212,7 @@ public class MEventHandler
 	{
 		if(ChunkProtector.isChunkOwned(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition))
 		{
-			if(!(ChunkProtector.getOwner(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition) == event.player.getName()))
+			if(!ChunkProtector.isOwnerForChunk(event.player, event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition))
 			{
 				event.setCanceled(true);
 				if(!event.world.isRemote)
@@ -231,7 +231,7 @@ public class MEventHandler
 		{
 			if(ChunkProtector.isChunkOwned(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition))
 			{
-				if(!(ChunkProtector.getOwner(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition) == event.entityPlayer.getName()))
+				if(!ChunkProtector.isOwnerForChunk(event.entityPlayer, event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition))
 				{
 					event.setCanceled(true);
 					event.entityPlayer.addChatMessage(new ChatComponentText("§cThis chunk is owned by " + ChunkProtector.getOwner(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition)));
