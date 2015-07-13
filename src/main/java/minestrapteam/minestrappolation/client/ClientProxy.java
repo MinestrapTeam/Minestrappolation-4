@@ -34,6 +34,7 @@ import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTitanium;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTorite;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeUranium;
 import minestrapteam.minestrappolation.item.ItemChunk;
+import minestrapteam.minestrappolation.lib.MAchievements;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MFluid;
 import minestrapteam.minestrappolation.lib.MItems;
@@ -58,6 +59,7 @@ public class ClientProxy extends CommonProxy
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		MFluid.buildRenderFor(MBlocks.magma, "magma");
+		MAchievements.preInit();
 	}
 	
 	@Override

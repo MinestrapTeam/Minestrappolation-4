@@ -59,7 +59,7 @@ public class CommonProxy
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		
-		MAchievements.preInit();
+		
 	}
 	
 	public void init(FMLInitializationEvent event)
