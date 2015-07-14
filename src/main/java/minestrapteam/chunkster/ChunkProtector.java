@@ -1,4 +1,4 @@
-package minestrapteam.minestrappolation;
+package minestrapteam.chunkster;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -6,26 +6,24 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
-import java.util.UUID;
-
-import com.mojang.authlib.GameProfile;
 
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.server.MinecraftServer;
 
 public class ChunkProtector 
 {
-	public static HashMap<Key, String> prot = new HashMap<Key, String>();
+	public static HashMap<Key, ArrayList<String>> prot = new HashMap<Key, ArrayList<String>>();
 	
 	public static boolean protectChunk(int x, int y, String playerName)
 	{
 		if(!prot.containsKey(new Key(x, y)))
 		{
-			prot.put(new Key(x, y), playerName);
+			prot.put(new Key(x, y), new ArrayList());
+			getPlayersList(x, y).add(playerName);
 			return true;
 		}
 		else
@@ -34,10 +32,20 @@ public class ChunkProtector
 		}
 	}
 	
-	public static String getPlayerUUID(EntityPlayer player)
+	public static void addCoOwner(int x, int y, String playerName)
 	{
-		GameProfile profile = MinecraftServer.getServer().getPlayerProfileCache().getGameProfileForUsername(player.getName());
-		return profile.getId().toString();
+		if(!getPlayersList(x, y).contains(playerName))
+		{
+			getPlayersList(x, y).add(playerName);
+		}
+	}
+	
+	public static void removeCoOwner(int x, int y, String playerName)
+	{
+		if(getPlayersList(x, y).contains(playerName))
+		{
+			getPlayersList(x, y).remove(playerName);
+		}
 	}
 	
 	public static void unprotectChunk(int x, int y)
@@ -50,14 +58,14 @@ public class ChunkProtector
 		return prot.containsKey(new Key(x, y));
 	}
 	
-	public static String getOwner(int x, int y)
+	public static ArrayList getPlayersList(int x, int y)
 	{
 		return prot.get(new Key(x, y));
 	}
 	
-	public static boolean isOwnerForChunk(EntityPlayer player, int x, int y)
+	public static boolean canEditChunk(EntityPlayer player, int x, int y)
 	{
-		return getOwner(x, y).equals(getPlayerUUID(player));
+		return getPlayersList(x, y).contains(UUIDHelper.getPlayerUUID(player.getName()));
 	}
 	
 	public static void updateFile(String path)
@@ -69,7 +77,7 @@ public class ChunkProtector
                oos.writeObject(prot);
                oos.close();
                fos.close();
-               System.out.printf("Serialized new protection data is saved in Minestrapp/"+path+"/chunkster.pcz");
+               System.out.printf("new protection data is saved in Minestrapp/"+path+"/chunkster.pcz");
         }
 		catch(IOException ioe)
         {
@@ -98,8 +106,7 @@ public class ChunkProtector
 	         fis.close();
 	      }
 		  catch(IOException ioe)
-	      {
-			  
+	      { 
 	         return;
 	      }
 		  catch(ClassNotFoundException c)
@@ -107,15 +114,6 @@ public class ChunkProtector
 	         System.out.println("Class not found");
 	         c.printStackTrace();
 	         return;
-	      }
-	      System.out.println("Deserialized protection data...");
-	      Set set = prot.entrySet();
-	      Iterator iterator = set.iterator();
-	      while(iterator.hasNext()) 
-	      {
-	         Map.Entry mentry = (Map.Entry)iterator.next();
-	         System.out.print("key: "+ mentry.getKey() + " & Value: ");
-	         System.out.println(mentry.getValue());
 	      }
 	}
 	

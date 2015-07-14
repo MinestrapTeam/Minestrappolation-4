@@ -1,4 +1,4 @@
-package minestrapteam.minestrappolation;
+package minestrapteam.chunkster;
 
 import java.io.Serializable;
 

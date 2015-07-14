@@ -1,11 +1,17 @@
 package minestrapteam.minestrappolation.block;
 
-import minestrapteam.minestrappolation.ChunkProtector;
+import java.util.UUID;
+
+import org.lwjgl.input.Keyboard;
+
+import minestrapteam.chunkster.ChunkProtector;
+import minestrapteam.chunkster.UUIDHelper;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumFacing;
@@ -30,7 +36,7 @@ public class BlockClaimerator extends MBlock
 		if(placer instanceof EntityPlayer)
 		{
 			EntityPlayer player = (EntityPlayer)placer;
-			ChunkProtector.protectChunk(worldIn.getChunkFromBlockCoords(pos).xPosition, worldIn.getChunkFromBlockCoords(pos).zPosition, ChunkProtector.getPlayerUUID(player));
+			ChunkProtector.protectChunk(worldIn.getChunkFromBlockCoords(pos).xPosition, worldIn.getChunkFromBlockCoords(pos).zPosition, UUIDHelper.getPlayerUUID(placer.getName()));
 		}
 		return this.getDefaultState();
 	}
@@ -54,6 +60,37 @@ public class BlockClaimerator extends MBlock
 				worldIn.spawnParticle(EnumParticleTypes.REDSTONE, worldIn.getChunkFromBlockCoords(pos).getChunkCoordIntPair().getXEnd(), pos.getY() + j, worldIn.getChunkFromBlockCoords(pos).getChunkCoordIntPair().getZStart() + i, 0.0D, 0.0D, 1.0D, new int[40]);
 			}
 		}
+	}
+	
+	@Override
+	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ)
+	{
+		if (worldIn.isRemote)
+			return true;
+		
+		if(playerIn.getHeldItem() != null && playerIn.getHeldItem().getItem() == Items.name_tag)
+		{
+			String name = playerIn.getHeldItem().getDisplayName();
+			
+			if(UUIDHelper.isValidUUID(name))
+			{
+					if(!ChunkProtector.getPlayersList(worldIn.getChunkFromBlockCoords(pos).xPosition, worldIn.getChunkFromBlockCoords(pos).zPosition).contains(UUIDHelper.getPlayerUUID(name)))
+					{
+						ChunkProtector.addCoOwner(worldIn.getChunkFromBlockCoords(pos).xPosition, worldIn.getChunkFromBlockCoords(pos).zPosition, UUIDHelper.getPlayerUUID(name));
+						playerIn.addChatMessage(new ChatComponentText(name + " with UUID " + UUIDHelper.getPlayerUUID(name) + " can now edit this chunk!"));
+					}	
+					else
+					{
+						playerIn.addChatMessage(new ChatComponentText(name + " can already edit this chunk"));
+					}			
+			}
+			else
+			{
+				playerIn.addChatMessage(new ChatComponentText("Invalid UUID is the username correct?"));
+			}
+			
+		}
+		return true;
 	}
 	
 	@Override

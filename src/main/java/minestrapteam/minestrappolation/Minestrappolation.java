@@ -1,8 +1,6 @@
 package minestrapteam.minestrappolation;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
+import minestrapteam.chunkster.CEventHandler;
 import minestrapteam.minestrappolation.client.CommonProxy;
 import minestrapteam.minestrappolation.creativetab.MTab;
 import minestrapteam.minestrappolation.handlers.MEventHandler;
@@ -27,7 +25,6 @@ import minestrapteam.minestrappolation.tileentity.TileEntityStoneCutter;
 import minestrapteam.minestrappolation.util.Tables;
 import minestrapteam.minestrappolation.world.MBiomeManager;
 import minestrapteam.minestrappolation.world.MGenHandler;
-import net.minecraft.world.chunk.Chunk;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -79,6 +76,9 @@ public class Minestrappolation
 		
 		MinecraftForge.EVENT_BUS.register(new MEventHandler());
 		MinecraftForge.EVENT_BUS.register(new MDrops());
+		
+		MinecraftForge.EVENT_BUS.register(new CEventHandler());
+		
 		proxy.preInit(event);
 		if (Minestrappolation.proxy != null)
 		{

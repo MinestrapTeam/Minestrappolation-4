@@ -2,9 +2,9 @@ package minestrapteam.minestrappolation.handlers;
 
 import java.util.Random;
 
-import minestrapteam.minestrappolation.ChunkProtector;
+import minestrapteam.chunkster.ChunkProtector;
+import minestrapteam.chunkster.Key;
 import minestrapteam.minestrappolation.Config;
-import minestrapteam.minestrappolation.Key;
 import minestrapteam.minestrappolation.block.BlockSoul;
 import minestrapteam.minestrappolation.lib.MAchievements;
 import minestrapteam.minestrappolation.lib.MBlocks;
@@ -182,77 +182,4 @@ public class MEventHandler
 			event.setResult(Result.ALLOW);
 		}
 	}
-	
-	
-	
-	
-	
-	//Chunkster events
-	
-	@SubscribeEvent(priority = EventPriority.HIGH)
-	@SideOnly(Side.SERVER)
-	public void chunksterBreak(BlockEvent.BreakEvent event)
-	{
-		if(ChunkProtector.isChunkOwned(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition))
-		{
-			if(!ChunkProtector.isOwnerForChunk(event.getPlayer(), event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition))
-			{
-				event.setCanceled(true);
-				if(!event.world.isRemote)
-				{
-					event.getPlayer().addChatMessage(new ChatComponentText("§cThis chunk is owned by " + ChunkProtector.getOwner(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition)));
-				}
-			}
-		}
-	}
-	
-	@SubscribeEvent(priority = EventPriority.HIGH)
-	@SideOnly(Side.SERVER)
-	public void chunksterBreak(BlockEvent.PlaceEvent event)
-	{
-		if(ChunkProtector.isChunkOwned(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition))
-		{
-			if(!ChunkProtector.isOwnerForChunk(event.player, event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition))
-			{
-				event.setCanceled(true);
-				if(!event.world.isRemote)
-				{
-					event.player.addChatMessage(new ChatComponentText("§cThis chunk is owned by " + ChunkProtector.getOwner(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition)));
-				}
-			}
-		}
-	}
-	
-	@SubscribeEvent(priority = EventPriority.HIGH)
-	@SideOnly(Side.SERVER)
-	public void chunksterInteract(PlayerInteractEvent event)
-	{
-		if(event.action == Action.RIGHT_CLICK_BLOCK)
-		{
-			if(ChunkProtector.isChunkOwned(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition))
-			{
-				if(!ChunkProtector.isOwnerForChunk(event.entityPlayer, event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition))
-				{
-					event.setCanceled(true);
-					event.entityPlayer.addChatMessage(new ChatComponentText("§cThis chunk is owned by " + ChunkProtector.getOwner(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition)));
-				}
-			}
-		}	
-	}
-	
-	@SubscribeEvent
-	@SideOnly(Side.SERVER)
-	public void worldLoad(WorldEvent.Load event)
-	{
-		ChunkProtector.loadFile(event.world.getWorldInfo().getWorldName());
-	}
-
-	@SubscribeEvent
-	@SideOnly(Side.SERVER)
-	public void worldSave(WorldEvent.Save event)
-	{
-		ChunkProtector.updateFile(event.world.getWorldInfo().getWorldName());
-	}
-	
-	//************************************************************************************************************
 }
