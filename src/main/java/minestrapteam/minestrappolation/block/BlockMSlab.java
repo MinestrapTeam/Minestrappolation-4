@@ -1,7 +1,10 @@
 package minestrapteam.minestrappolation.block;
 
+import java.util.Random;
+
 import minestrapteam.minestrappolation.Minestrappolation;
 import minestrapteam.minestrappolation.lib.MBlocks;
+import minestrapteam.minestrappolation.util.MGameUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;
@@ -9,6 +12,7 @@ import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
@@ -67,12 +71,6 @@ public class BlockMSlab extends BlockSlab
         return this.isDouble() ? new BlockState(this, new IProperty[] {}): new BlockState(this, new IProperty[] {HALF});
     }
 
-    @Override
-    public int damageDropped(IBlockState state)
-    {
-        return 0;
-    }
-
 	@Override
 	public boolean isDouble() {
 		return false;
@@ -101,4 +99,10 @@ public class BlockMSlab extends BlockSlab
 	{
 		return this.flammability;
 	}
+	
+	@Override
+    public int damageDropped(IBlockState state)
+    {
+        return 0;
+    }
 }
