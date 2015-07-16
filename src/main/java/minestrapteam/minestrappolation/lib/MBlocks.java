@@ -131,6 +131,7 @@ import minestrapteam.minestrappolation.item.blocks.ItemBlockTiles;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.BlockFenceGate;
+import net.minecraft.block.BlockWall;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -413,6 +414,7 @@ public class MBlocks
 	public static Block	redwood_fence_gate;
 	public static Block	frozen_oak_fence;
 	public static Block	frozen_oak_fence_gate;
+	public static Block red_rock_wall;
 	
 	// Panes
 	public static Block	refined_glass_pane;
@@ -617,6 +619,7 @@ public class MBlocks
 		redwood_fence_gate = new BlockFenceGate().setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("redwood_fence_gate");
 		frozen_oak_fence = new BlockFence(Material.wood).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("frozen_oak_fence");
 		frozen_oak_fence_gate = new BlockFenceGate().setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("frozen_oak_fence_gate");
+		red_rock_wall = new BlockWall(biome_cobble).setUnlocalizedName("red_rock_wall").setCreativeTab(Minestrappolation.tabMDecor);
 		
 		// Pane
 		refined_glass_pane = new BlockMPane(Material.glass, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setUnlocalizedName("refined_pane");
@@ -920,6 +923,7 @@ public class MBlocks
 		register(cold_cobweb);
 		register(redwood_fence);
 		register(frozen_oak_fence);
+		//register(red_rock_wall);
 		register(refined_glass_pane);
 		register(bricked_glass_pane);
 		register(tiled_glass_pane);

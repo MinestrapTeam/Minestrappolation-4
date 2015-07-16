@@ -175,7 +175,7 @@ public class StonecuttingManager
 		
 		//Pillars
 		this.addRecipe(new ItemStack(Blocks.quartz_block, 2, 2), null, new Object[] { "S", "S", 'S', new ItemStack(Blocks.quartz_block, 1, 0)});
-		this.addRecipe(new ItemStack(MBlocks.desert_quartz_block, 2), null, new Object[] { "S", "S", 'S', new ItemStack(MBlocks.desert_quartz_block, 1)});
+		this.addRecipe(new ItemStack(MBlocks.desert_pillar, 2), null, new Object[] { "S", "S", 'S', new ItemStack(MBlocks.desert_quartz_block, 1)});
 		this.addRecipe(new ItemStack(MBlocks.radiant_pillar, 2), null, new Object[] { "S", "S", 'S', new ItemStack(MBlocks.radiant_block, 1)});
 		
 		//Lamps

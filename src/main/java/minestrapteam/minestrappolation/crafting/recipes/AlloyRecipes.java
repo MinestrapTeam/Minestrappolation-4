@@ -72,6 +72,11 @@ public class AlloyRecipes
 		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(Items.apple, 2), new ItemStack(Items.leather, 2), 0.3F);
 		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(Items.carrot, 3), new ItemStack(Items.leather, 1), 0.3F);
 		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(Items.potato, 3), new ItemStack(Items.leather, 1), 0.3F);
+		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(MBlocks.lettuce, 4), new ItemStack(Items.leather, 1), 0.3F);
+		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(MBlocks.cabbage, 4), new ItemStack(Items.leather, 1), 0.3F);
+		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(MItems.celery, 5), new ItemStack(Items.leather, 1), 0.3F);
+		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(MItems.pepper, 3), new ItemStack(Items.leather, 1), 0.3F);
+		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(MBlocks.onion, 1), new ItemStack(Items.leather, 1), 0.3F);
 		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(Items.poisonous_potato, 1), new ItemStack(Items.leather, 2), 0.3F);
 		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(Items.dye, 2, 1), new ItemStack(Items.leather, 1), 0.3F);
 	}
