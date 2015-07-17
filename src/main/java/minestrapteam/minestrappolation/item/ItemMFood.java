@@ -42,6 +42,6 @@ public class ItemMFood extends ItemFood
         	playerIn.setFire(fireTime);
         }
         super.onItemUseFinish(stack, worldIn, playerIn);
-        return null;
+        return stack;
     }
 }
