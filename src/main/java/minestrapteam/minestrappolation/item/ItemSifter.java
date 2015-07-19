@@ -47,10 +47,14 @@ public class ItemSifter extends Item{
             {
 				this.spawnDropFrom(stack, playerIn, worldIn, pos, "sifter_gravel");
             }
-			else if (worldIn.getBlockState(pos).getBlock() == Blocks.dirt || worldIn.getBlockState(pos).getBlock() == Blocks.grass)
+			else if (worldIn.getBlockState(pos) == Blocks.dirt.getStateFromMeta(0) || worldIn.getBlockState(pos) == Blocks.dirt.getStateFromMeta(1) || worldIn.getBlockState(pos).getBlock() == Blocks.grass)
             {
 				this.spawnDropFrom(stack, playerIn, worldIn, pos, "sifter_dirt");
             }
+			else if (worldIn.getBlockState(pos) == Blocks.dirt.getStateFromMeta(2))
+			{
+				this.spawnDropFrom(stack, playerIn, worldIn, pos, "sifter_podzol");
+			}
 			else if (worldIn.getBlockState(pos).getBlock() == Blocks.mycelium)
             {
 				this.spawnDropFrom(stack, playerIn, worldIn, pos, "sifter_mycelium");

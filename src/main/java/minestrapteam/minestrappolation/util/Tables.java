@@ -2,6 +2,7 @@ package minestrapteam.minestrappolation.util;
 
 import java.util.ArrayList;
 
+import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MItems;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -21,6 +22,7 @@ public class Tables {
 		Chance.createChanceTable("sifter_red_sand", new ArrayList<ItemStack>());
 		Chance.createChanceTable("sifter_gravel", new ArrayList<Item>());
 		Chance.createChanceTable("sifter_dirt", new ArrayList<ItemStack>());
+		Chance.createChanceTable("sifter_podzol", new ArrayList<ItemStack>());
 		Chance.createChanceTable("sifter_mycelium", new ArrayList<ItemStack>());
 		Chance.createChanceTable("sifter_permafrost", new ArrayList<ItemStack>());
 		Chance.createChanceTable("sifter_cold_sand", new ArrayList<ItemStack>());
@@ -52,9 +54,27 @@ public class Tables {
     	Chance.addToChanceTable("sifter_dirt", null, 25);
     	Chance.addToChanceTable("sifter_dirt", new ItemStack(MItems.chunks, 1, 0), 5);
     	Chance.addToChanceTable("sifter_dirt", new ItemStack(Items.wheat_seeds, 1, 0), 10);
+    	Chance.addToChanceTable("sifter_dirt", new ItemStack(MBlocks.pepper_seed, 1, 0), 10);
+    	Chance.addToChanceTable("sifter_dirt", new ItemStack(MBlocks.celery_seed, 1, 0), 10);
+    	Chance.addToChanceTable("sifter_dirt", new ItemStack(MBlocks.rice, 1, 0), 10);
     	Chance.addToChanceTable("sifter_dirt", new ItemStack(Items.potato, 1, 0), 1);
     	Chance.addToChanceTable("sifter_dirt", new ItemStack(Items.carrot, 1, 0), 1);
     	Chance.addToChanceTable("sifter_dirt", new ItemStack(MItems.sunstone_shard, 1, 0), 3);
+    	//Sifter - Podzol
+    	Chance.addToChanceTable("sifter_dirt", null, 25);
+    	Chance.addToChanceTable("sifter_podzol", new ItemStack(MItems.chunks, 1, 0), 5);
+    	Chance.addToChanceTable("sifter_podzol", new ItemStack(Item.getItemFromBlock(Blocks.sapling), 1, 0), 10);
+    	Chance.addToChanceTable("sifter_podzol", new ItemStack(Item.getItemFromBlock(Blocks.sapling), 1, 1), 10);
+    	Chance.addToChanceTable("sifter_podzol", new ItemStack(Item.getItemFromBlock(MBlocks.ministrapp_sapling), 1, 0), 10);
+    	Chance.addToChanceTable("sifter_podzol", new ItemStack(Item.getItemFromBlock(MBlocks.moss), 1, 0), 5);
+    	Chance.addToChanceTable("sifter_podzol", new ItemStack(Item.getItemFromBlock(Blocks.red_mushroom), 1, 0), 10);
+    	Chance.addToChanceTable("sifter_podzol", new ItemStack(Item.getItemFromBlock(Blocks.brown_mushroom), 1, 0), 10);
+    	Chance.addToChanceTable("sifter_podzol", new ItemStack(MBlocks.lettuce, 1, 0), 1);
+    	Chance.addToChanceTable("sifter_podzol", new ItemStack(MBlocks.cabbage, 1, 0), 1);
+    	Chance.addToChanceTable("sifter_podzol", new ItemStack(Item.getItemFromBlock(Blocks.sapling), 1, 2), 1);
+    	Chance.addToChanceTable("sifter_podzol", new ItemStack(Item.getItemFromBlock(Blocks.sapling), 1, 3), 1);
+    	Chance.addToChanceTable("sifter_podzol", new ItemStack(Item.getItemFromBlock(Blocks.sapling), 1, 4), 1);
+    	Chance.addToChanceTable("sifter_podzol", new ItemStack(Item.getItemFromBlock(Blocks.sapling), 1, 5), 1);
     	//Sifter - Mycelium
     	Chance.addToChanceTable("sifter_mycelium", null, 25);
     	Chance.addToChanceTable("sifter_mycelium", new ItemStack(MItems.chunks, 1, 0), 5);

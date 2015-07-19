@@ -717,6 +717,14 @@ public class MItems extends Item
 		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(titanium_ingot), 1, 1, 1));
 		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(soul_gem), 1, 3, 1));
 		blacksmithChest.addItem(new WeightedRandomChestContent(new ItemStack(heart_piece), 1, 2, 6));
+		
+		//Nether Fortress Corners
+		netherFortress.addItem(new WeightedRandomChestContent(new ItemStack(blaze_shard), 1, 6, 20));
+		netherFortress.addItem(new WeightedRandomChestContent(new ItemStack(blazium_ingot), 1, 2, 10));
+		netherFortress.addItem(new WeightedRandomChestContent(new ItemStack(soul_gem), 1, 3, 7));
+		netherFortress.addItem(new WeightedRandomChestContent(new ItemStack(fire_pickaxe), 1, 1, 2));
+		netherFortress.addItem(new WeightedRandomChestContent(new ItemStack(fire_sword), 1, 1, 2));
+		netherFortress.addItem(new WeightedRandomChestContent(new ItemStack(heart_piece), 1, 2, 10));
 	}
 	
 	public static void registerRender(Item item)
