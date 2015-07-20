@@ -39,6 +39,7 @@ public class MItems extends Item
 	public static Item							dough;
 	public static Item							bun;
 	public static Item							pbj_sandwich;
+	public static Item							hamburger;
 	public static Item							sugar_dough;
 	public static Item							chocolate_dough;
 	public static Item							sugar_cookie;
@@ -227,6 +228,7 @@ public class MItems extends Item
 		dough = new ItemFood(1, 0.2F, false).setUnlocalizedName("dough").setCreativeTab(Minestrappolation.tabMFood);
 		bun = new ItemFood(2, 0.3F, false).setUnlocalizedName("bun").setCreativeTab(Minestrappolation.tabMFood);
 		pbj_sandwich = new ItemMFood(14, 2.5F, 0).setUnlocalizedName("pbj_sandwich").setCreativeTab(Minestrappolation.tabMFood);
+		hamburger = new ItemFood(18, 2F, false).setUnlocalizedName("hamburger").setCreativeTab(Minestrappolation.tabMFood);
 		sugar_dough = new ItemFood(1, 0.2F, false).setPotionEffect(Potion.moveSpeed.id, 5, 0, 0.3F).setUnlocalizedName("sugar_dough").setCreativeTab(Minestrappolation.tabMFood);
 		chocolate_dough = new ItemFood(1, 0.3F, false).setUnlocalizedName("chocolate_dough").setCreativeTab(Minestrappolation.tabMFood);
 		sugar_cookie = new ItemFood(1, 0.4F, false).setPotionEffect(Potion.moveSpeed.id, 10, 0, 0.5F).setUnlocalizedName("sugar_cookie").setCreativeTab(Minestrappolation.tabMFood);
@@ -451,6 +453,7 @@ public class MItems extends Item
 		register(chocolate_dough);
 		register(bun);
 		register(pbj_sandwich);
+		register(hamburger);
 		register(sugar_cookie);
 		register(pie_crust);
 		register(apple_pie);

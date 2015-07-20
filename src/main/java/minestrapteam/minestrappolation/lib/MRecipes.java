@@ -22,7 +22,8 @@ public class MRecipes
 		// Food
 		GameRegistry.addRecipe(new ItemStack(MItems.dough, 2), new Object[] { "WW", "WW", 'W', Items.wheat });
 		GameRegistry.addSmelting(new ItemStack(MItems.dough), new ItemStack(Items.bread), 0.3F);
-		GameRegistry.addShapelessRecipe(new ItemStack(MItems.pbj_sandwich, 1), new Object[] { MItems.bun, MItems.bun, MItems.peanut_butter_bottle, MItems.jam_bottle});
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.pbj_sandwich, 1), new Object[] { MItems.bun, MItems.bun, MItems.peanut_butter_bottle, MItems.jam_bottle });
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.hamburger, 1), new Object[] { MItems.bun, MItems.bun, MBlocks.lettuce, MBlocks.onion, Items.cooked_beef });
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.sugar_dough, 2), new Object[] { MItems.dough, Items.sugar });
 		GameRegistry.addSmelting(new ItemStack(MItems.sugar_dough), new ItemStack(MItems.sugar_cookie, 6), 0.2F);
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.chocolate_dough, 2), new Object[] { MItems.dough, new ItemStack(Items.dye, 1, 3) });

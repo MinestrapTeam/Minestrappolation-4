@@ -26,7 +26,7 @@ public class GuiSawmill extends GuiContainer
 	@Override
 	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY)
 	{
-		this.fontRendererObj.drawString(StatCollector.translateToLocal("Sawmill"), 42, 6, 4210752);
+		this.fontRendererObj.drawString(StatCollector.translateToLocal("Carpenter's Bench"), 42, 6, 4210752);
 		this.fontRendererObj.drawString(StatCollector.translateToLocal("container.inventory"), 8, this.ySize - 94, 4210752);
 	}
 	

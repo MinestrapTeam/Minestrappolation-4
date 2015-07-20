@@ -381,6 +381,7 @@ public class SplitterRecipes
 		//Minestrapp Foods
 		this.addRecipe(new ItemStack(MItems.dough, 1), new ItemStack(Items.wheat, 1), new ItemStack(Items.wheat, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.pbj_sandwich, 1), new ItemStack(MItems.bun, 2), new ItemStack(MItems.jam_bottle, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.hamburger, 1), new ItemStack(MItems.bun, 2), new ItemStack(Items.cooked_beef, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.pie_crust, 1), new ItemStack(MItems.sugar_dough, 1), new ItemStack(Items.egg, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.rice_bowl, 1), new ItemStack(MBlocks.rice, 1), new ItemStack(Items.bowl, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.bread_rice_bowl, 1), new ItemStack(MBlocks.rice, 1), new ItemStack(MItems.bread_bowl, 1), 0.1F);

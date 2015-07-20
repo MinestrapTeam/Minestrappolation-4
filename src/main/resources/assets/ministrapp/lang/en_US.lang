@@ -482,6 +482,7 @@ tile.mana_bush.name=Mana Bush
 item.dough.name=Dough
 item.bun.name=Bun
 item.pbj_sandwich.name=Peanut Butter and Jelly Sandwich
+item.hamburger.name=Hamburger
 item.sugar_dough.name=Sugar Dough
 item.chocolate_dough.name=Chocolate Dough
 item.sugar_cookie.name=Sugar Cookie
