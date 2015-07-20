@@ -213,6 +213,7 @@ public class TileEntityCrusher extends TileEntityInventory implements IUpdatePla
 			if (chance < itemChance && this.itemStacks[3] == null)
 			{
 				this.itemStacks[3] = CrusherRecipes.instance().getExtra(input);
+				this.itemStacks[3].stackSize = 1;
 			}
 			else if (chance < itemChance && this.itemStacks[3] != null)
 			{
