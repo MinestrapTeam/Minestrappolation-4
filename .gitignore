@@ -1,4 +1,6 @@
 #Workspace Files
+gradle
+gradlew
 .gradle
 .classpath
 .settings
