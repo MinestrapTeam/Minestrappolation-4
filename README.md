@@ -5,6 +5,7 @@ We have nightly builds check them out!
 [Nightly Builds](https://drone.io/github.com/MinestrapTeam/Minestrappolation-4/files)
 
 RULES FOR COMMITTING ANY CODE
+- From 4.0.1A onward all changes will be documented in the changelog.
 - Do NOT commit code with errors(Doing this makes no sense)
 - Do NOT EVER commit without testing(this just causes problems for everyone)
 - YOU mess up textures you get to re-do all the JSON files(They take a very long time to fix)
