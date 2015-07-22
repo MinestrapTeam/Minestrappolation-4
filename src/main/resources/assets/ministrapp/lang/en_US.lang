@@ -4,6 +4,13 @@ tile.coldstone_boulder.name=Coldstone Boulder
 tile.icestone_boulder.name=Icestone Boulder
 tile.oceanstone_boulder.name=Oceanstone Boulder
 
+recipe.melting=Melter Recipe
+recipe.sawmill.shaped=Sawmill Recipe
+recipe.sawmill.shapeless=Sawmill Recipe
+recipe.stonecutter.shaped=Stonecutter Recipe
+recipe.stonecutter.shapeless=Stonecutter Recipe
+recipe.alloy=Alloy Recipe
+
 deepstone_coal.name=Coal Ore
 red_rock_coal.name=Coal Ore
 deep_redrock_coal.name=Coal Ore

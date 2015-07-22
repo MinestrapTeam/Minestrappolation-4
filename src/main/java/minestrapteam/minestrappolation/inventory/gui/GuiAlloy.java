@@ -12,7 +12,7 @@ import org.lwjgl.opengl.GL11;
 
 public class GuiAlloy extends GuiContainer
 {
-	private static final ResourceLocation	texture	= new ResourceLocation(MReference.MODID, "textures/gui/alloy_furnace.png");
+	public static final ResourceLocation	texture	= new ResourceLocation(MReference.MODID, "textures/gui/alloy_furnace.png");
 	
 	private TileEntityAlloy					furnace;
 	

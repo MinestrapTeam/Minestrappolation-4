@@ -36,7 +36,7 @@ public class BlockClaimerator extends MBlock
 		if(placer instanceof EntityPlayer)
 		{
 			EntityPlayer player = (EntityPlayer)placer;
-			ChunkProtector.protectChunk(worldIn.getChunkFromBlockCoords(pos).xPosition, worldIn.getChunkFromBlockCoords(pos).zPosition, UUIDHelper.getPlayerUUID(placer.getName()));
+			ChunkProtector.protectChunk(worldIn.getChunkFromBlockCoords(pos).xPosition, worldIn.getChunkFromBlockCoords(pos).zPosition, UUIDHelper.getPlayerUUID(placer.getCommandSenderName()));
 		}
 		return this.getDefaultState();
 	}

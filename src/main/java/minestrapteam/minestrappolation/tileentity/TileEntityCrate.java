@@ -36,4 +36,9 @@ public class TileEntityCrate extends TileEntityInventory
 		parentNBTTagCompound.setTag("Items", dataForAllSlots);
 	}
 	
+	@Override
+	public String getCommandSenderName() 
+	{
+		return "container.crate";
+	}
 }

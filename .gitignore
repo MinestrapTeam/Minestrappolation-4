@@ -1,4 +1,13 @@
 #Workspace Files
+*.png
+usernamecache.json
+options.txt
+asm
+saves
+mods
+crash-reports
+config
+logs
 gradle
 gradlew
 .gradle

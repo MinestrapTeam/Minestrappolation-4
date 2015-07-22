@@ -33,4 +33,10 @@ public class TileEntityBarrel extends TileEntityInventory
 		}
 		parentNBTTagCompound.setTag("Items", dataForAllSlots);
 	}
+	
+	@Override
+	public String getCommandSenderName() 
+	{
+		return "container.barrel";
+	}
 }

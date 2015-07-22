@@ -117,7 +117,7 @@ public abstract class TileEntityInventory extends TileEntity implements IInvento
 	}
 	
 	@Override
-	public String getName()
+	public String getCommandSenderName()
 	{
 		if (this.name != null && !this.name.isEmpty())
 			return this.name;
@@ -240,7 +240,7 @@ public abstract class TileEntityInventory extends TileEntity implements IInvento
 	@Override
 	public IChatComponent getDisplayName()
 	{
-		return this.hasCustomName() ? new ChatComponentText(this.getName()) : new ChatComponentTranslation(this.getName(), new Object[0]);
+		return this.hasCustomName() ? new ChatComponentText(this.getCommandSenderName()) : new ChatComponentTranslation(this.getCommandSenderName(), new Object[0]);
 	}
 	
 	// From

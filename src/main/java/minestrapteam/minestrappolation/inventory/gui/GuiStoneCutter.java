@@ -15,7 +15,7 @@ import org.lwjgl.opengl.GL11;
 @SideOnly(Side.CLIENT)
 public class GuiStoneCutter extends GuiContainer
 {
-	private static final ResourceLocation	texture	= new ResourceLocation(MReference.MODID, "textures/gui/stonecutter.png");
+	public static final ResourceLocation	texture	= new ResourceLocation(MReference.MODID, "textures/gui/stonecutter.png");
 	private TileEntityStoneCutter			stonecutter;
 	
 	public GuiStoneCutter(EntityPlayer player, TileEntityStoneCutter stonecutter)

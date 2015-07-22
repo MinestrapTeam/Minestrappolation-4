@@ -23,12 +23,12 @@ public class MRegistry
 	
 	public static void addAlloyRecipe(Block block, Block block2, ItemStack stack, float xp)
 	{
-		AlloyRecipes.instance().addRecipe(block, block2, stack, xp);
+		AlloyRecipes.getInstance().addRecipe(new ItemStack(block), new ItemStack(block2), stack, xp);
 	}
 	
 	public static void addAlloyRecipe(Item item, Item item2, ItemStack stack, float xp)
 	{
-		AlloyRecipes.instance().addRecipe(item, item2, stack, xp);
+		AlloyRecipes.getInstance().addRecipe(new ItemStack(item), new ItemStack(item2), stack, xp);
 	}
 	
 	public static void addCrusherRecipe(Block block, ItemStack stack, float xp, ItemStack extra, int chance)

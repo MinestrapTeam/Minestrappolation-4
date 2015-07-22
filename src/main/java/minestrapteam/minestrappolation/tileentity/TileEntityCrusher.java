@@ -276,4 +276,9 @@ public class TileEntityCrusher extends TileEntityInventory implements IUpdatePla
 	    return true;
 	}
 	
+	@Override
+	public String getCommandSenderName() 
+	{
+		return "container.crusher";
+	}
 }

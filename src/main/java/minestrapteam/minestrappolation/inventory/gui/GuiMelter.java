@@ -12,7 +12,7 @@ import org.lwjgl.opengl.GL11;
 
 public class GuiMelter extends GuiContainer
 {
-	private static final ResourceLocation	texture	= new ResourceLocation(MReference.MODID, "textures/gui/melter.png");
+	public static final ResourceLocation	texture	= new ResourceLocation(MReference.MODID, "textures/gui/melter.png");
 	
 	private TileEntityMelter				melter;
 	

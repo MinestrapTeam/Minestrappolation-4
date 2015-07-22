@@ -65,7 +65,7 @@ public class ChunkProtector
 	
 	public static boolean canEditChunk(EntityPlayer player, int x, int y)
 	{
-		return getPlayersList(x, y).contains(UUIDHelper.getPlayerUUID(player.getName()));
+		return getPlayersList(x, y).contains(UUIDHelper.getPlayerUUID(player.getCommandSenderName()));
 	}
 	
 	public static void updateFile(String path)

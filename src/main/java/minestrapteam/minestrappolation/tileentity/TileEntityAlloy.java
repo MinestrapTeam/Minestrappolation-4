@@ -173,7 +173,7 @@ public class TileEntityAlloy extends TileEntityInventory implements ISidedInvent
 		
 		if (input != null)
 		{
-			ItemStack output = AlloyRecipes.instance().getResult(input, input2);
+			ItemStack output = AlloyRecipes.getInstance().getAlloyResult(input, input2);
 			if (output == null)
 				return false;
 			ItemStack outputSlot = this.itemStacks[2];
@@ -193,7 +193,7 @@ public class TileEntityAlloy extends TileEntityInventory implements ISidedInvent
 		{
 			ItemStack input = this.itemStacks[0];
 			ItemStack input2 = this.itemStacks[3];
-			ItemStack output = AlloyRecipes.instance().getResult(input, input2);
+			ItemStack output = AlloyRecipes.getInstance().getAlloyResult(input, input2);
 			ItemStack outputSlot = this.itemStacks[2];
 			if (outputSlot == null)
 			{
@@ -204,17 +204,19 @@ public class TileEntityAlloy extends TileEntityInventory implements ISidedInvent
 				outputSlot.stackSize += output.stackSize;
 			}
 			
-			input.stackSize -= AlloyRecipes.instance().getInputSize(input);
+			
+			input.stackSize -= AlloyRecipes.getInstance().getInputSize(input);
 			if (input.stackSize <= 0)
 			{
 				this.itemStacks[0] = null;
 			}
 			
-			input2.stackSize -= AlloyRecipes.instance().getInput2Size(input2);
+			input2.stackSize -= AlloyRecipes.getInstance().getInput2Size(input2);
 			if (input2.stackSize <= 0)
 			{
 				this.itemStacks[3] = null;
 			}
+			
 		}
 	}
 	
@@ -267,5 +269,11 @@ public class TileEntityAlloy extends TileEntityInventory implements ISidedInvent
 	    }
 
 	    return true;
+	}
+
+	@Override
+	public String getCommandSenderName() 
+	{
+		return "container.alloy";
 	}
 }
