@@ -1,7 +1,6 @@
 package minestrapteam.minestrappolation;
 
 import minestrapteam.chunkster.CEventHandler;
-import minestrapteam.minestrappolation.client.CommonProxy;
 import minestrapteam.minestrappolation.creativetab.MTab;
 import minestrapteam.minestrappolation.handlers.MEventHandler;
 import minestrapteam.minestrappolation.handlers.MFuelHandler;
@@ -14,6 +13,8 @@ import minestrapteam.minestrappolation.lib.MFluid;
 import minestrapteam.minestrappolation.lib.MItems;
 import minestrapteam.minestrappolation.lib.MRecipes;
 import minestrapteam.minestrappolation.lib.MReference;
+import minestrapteam.minestrappolation.network.CommonProxy;
+import minestrapteam.minestrappolation.network.MPackets;
 import minestrapteam.minestrappolation.tileentity.TileEntityAlloy;
 import minestrapteam.minestrappolation.tileentity.TileEntityBarrel;
 import minestrapteam.minestrappolation.tileentity.TileEntityCrate;
@@ -34,6 +35,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
+import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = MReference.MODID, name = MReference.NAME, version = MReference.VERSION)
@@ -52,6 +54,8 @@ public class Minestrappolation
 	public static final MTab		tabMFood	    = new MTab("tabMFood");
 	public static final MTab		tabMTools	    = new MTab("tabMTools");
 	public static final MTab		tabMCombat	    = new MTab("tabMCombat");
+	
+	public static SimpleNetworkWrapper network;
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
@@ -73,6 +77,9 @@ public class Minestrappolation
 		
 		MAchievements.load();
 		MFluid.load();
+		
+		network = NetworkRegistry.INSTANCE.newSimpleChannel("Minestrap");
+		MPackets.registerPackets(network);
 		
 		MinecraftForge.EVENT_BUS.register(new MEventHandler());
 		MinecraftForge.EVENT_BUS.register(new MDrops());

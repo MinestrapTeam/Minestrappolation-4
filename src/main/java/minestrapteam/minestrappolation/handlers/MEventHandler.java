@@ -6,6 +6,7 @@ import minestrapteam.chunkster.ChunkProtector;
 import minestrapteam.chunkster.Key;
 import minestrapteam.minestrappolation.Config;
 import minestrapteam.minestrappolation.block.BlockSoul;
+import minestrapteam.minestrappolation.inventory.player.ExtendedPlayer;
 import minestrapteam.minestrappolation.lib.MAchievements;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MItems;
@@ -26,6 +27,7 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ChatComponentText;
 import net.minecraftforge.event.entity.EntityEvent;
+import net.minecraftforge.event.entity.EntityEvent.EntityConstructing;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 import net.minecraftforge.event.entity.player.FillBucketEvent;
@@ -41,7 +43,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class MEventHandler
 {
-	
 	@SubscribeEvent
 	public void onPlayerJoin(EntityJoinWorldEvent event)
 	{
@@ -181,5 +182,12 @@ public class MEventHandler
 			event.world.setBlockToAir(event.target.getBlockPos());
 			event.setResult(Result.ALLOW);
 		}
+	}
+	
+	@SubscribeEvent
+	public void onEntityConstructing(EntityConstructing event)
+	{
+		if (event.entity instanceof EntityPlayer && ExtendedPlayer.get((EntityPlayer) event.entity) == null)
+		ExtendedPlayer.register((EntityPlayer) event.entity);
 	}
 }
