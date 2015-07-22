@@ -16,3 +16,6 @@ RULES FOR COMMITTING ANY CODE
 
 
 IF YOU YOU DO ANY OF THIS YOUR CHANGES WILL BE REVERTED EACH AND EVERY TIME YOU COMMIT IT
+
+
+[![Join the chat at https://gitter.im/MinestrapTeam/Minestrappolation-4](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/MinestrapTeam/Minestrappolation-4?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
