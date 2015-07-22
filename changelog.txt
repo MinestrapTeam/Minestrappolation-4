@@ -1,2 +1,5 @@
+4.0.2A(or what ever version it may be)
+ - NEI compatible
+
 4.0.1A
  - Initial release
