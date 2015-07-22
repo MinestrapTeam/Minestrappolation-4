@@ -39,4 +39,5 @@ public class TileEntityBarrel extends TileEntityInventory
 	{
 		return "container.barrel";
 	}
+
 }

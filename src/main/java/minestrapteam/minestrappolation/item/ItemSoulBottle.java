@@ -37,8 +37,6 @@ public class ItemSoulBottle extends Item{
 	@Override
 	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player)
 	{
-		if(!world.isRemote)
-		{
 			if(Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
 			{
 				if(player.experienceLevel > 1)
@@ -60,9 +58,8 @@ public class ItemSoulBottle extends Item{
 					player.addExperienceLevel(1);
 					stack.getTagCompound().setInteger("xp", stored - 1);
 				}
-				
+		
 			}
-		}
 		return stack;
 	}
 	
