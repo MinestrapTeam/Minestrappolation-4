@@ -40,6 +40,8 @@ setup workspace.bat
 Minestrappolation-4.iml
 .idea
 build
+wrapper
+classes
 
 # Windows image file caches
 Thumbs.db
