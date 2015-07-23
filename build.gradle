@@ -139,3 +139,6 @@ artifacts {
     archives srcJar
     archives devJar
 }
+
+//fix IntelliJ assets
+idea { module { inheritOutputDirs = true } }

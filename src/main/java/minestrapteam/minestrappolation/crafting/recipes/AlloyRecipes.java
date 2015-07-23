@@ -1,28 +1,25 @@
 package minestrapteam.minestrappolation.crafting.recipes;
 
+import com.google.common.collect.Maps;
+import minestrapteam.minestrappolation.lib.MBlocks;
+import minestrapteam.minestrappolation.lib.MItems;
+import minestrapteam.minestrappolation.util.MGameUtil;
+import minestrapteam.minestrappolation.util.MStacks;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.OreDictionary;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import minestrapteam.minestrappolation.lib.MBlocks;
-import minestrapteam.minestrappolation.lib.MItems;
-import minestrapteam.minestrappolation.util.MGameUtil;
-import minestrapteam.minestrappolation.util.MStacks;
-import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.oredict.OreDictionary;
-
-import com.google.common.collect.Maps;
-
 public class AlloyRecipes
 {
-	private Map							experienceList	= Maps.newHashMap();
-	private Map							stack1Size		= Maps.newHashMap();
-	private Map							stack2Size		= Maps.newHashMap();
+	private Map<ItemStack, Float>							experienceList	= Maps.newHashMap();
+	private Map<ItemStack, Integer>							stack1Size		= Maps.newHashMap();
+	private Map<ItemStack, Integer>							stack2Size		= Maps.newHashMap();
 	
 	public AlloyRecipes()
 	{
