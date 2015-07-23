@@ -12,6 +12,7 @@ import minestrapteam.minestrappolation.inventory.gui.GuiMelter;
 import minestrapteam.minestrappolation.inventory.gui.GuiSawmill;
 import minestrapteam.minestrappolation.tileentity.TileEntityMelter;
 import minestrapteam.minestrappolation.util.MGameUtil;
+import minestrapteam.minestrappolation.util.MStacks;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.StatCollector;
@@ -132,7 +133,7 @@ public class MelterRecipeHandler extends TemplateRecipeHandler
 		Map<ItemStack, ItemStack> recipes = MelterRecipes.instance().getSmeltingList();
 		for (Entry<ItemStack, ItemStack> recipe : recipes.entrySet())
 		{
-			if (MGameUtil.itemEquals(recipe.getValue(), result))
+			if (MStacks.itemEquals(recipe.getValue(), result))
 			{
 				this.arecipes.add(new MeltingPair(recipe.getKey(), recipe.getValue()));
 			}
@@ -158,7 +159,7 @@ public class MelterRecipeHandler extends TemplateRecipeHandler
 		Map<ItemStack, ItemStack> recipes = MelterRecipes.instance().getSmeltingList();
 		for (Entry<ItemStack, ItemStack> recipe : recipes.entrySet())
 		{
-			if (MGameUtil.itemEquals(recipe.getKey(), ingredient))
+			if (MStacks.itemEquals(recipe.getKey(), ingredient))
 			{
 				MeltingPair arecipe = new MeltingPair(recipe.getKey(), recipe.getValue());
 				arecipe.setIngredientPermutation(Arrays.asList(arecipe.ingred), ingredient);

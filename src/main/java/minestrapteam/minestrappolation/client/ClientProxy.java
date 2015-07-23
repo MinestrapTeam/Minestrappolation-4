@@ -33,11 +33,13 @@ import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTin;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTitanium;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTorite;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeUranium;
+import minestrapteam.minestrappolation.handlers.MKeyHandler;
 import minestrapteam.minestrappolation.item.ItemChunk;
 import minestrapteam.minestrappolation.lib.MAchievements;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MFluid;
 import minestrapteam.minestrappolation.lib.MItems;
+import minestrapteam.minestrappolation.network.CommonProxy;
 import minestrapteam.minestrappolation.tileentity.TileEntityAlloy;
 import minestrapteam.minestrappolation.tileentity.TileEntityBarrel;
 import minestrapteam.minestrappolation.tileentity.TileEntityCrate;
@@ -50,6 +52,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -58,6 +61,10 @@ public class ClientProxy extends CommonProxy
 	@Override
 	public void preInit(FMLPreInitializationEvent event)
 	{
+		//registry
+		FMLCommonHandler.instance().bus().register(new MKeyHandler());
+		
+		//non registry
 		MFluid.buildRenderFor(MBlocks.magma, "magma");
 		MAchievements.preInit();
 	}

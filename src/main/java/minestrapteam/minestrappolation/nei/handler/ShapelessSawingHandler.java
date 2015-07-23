@@ -12,6 +12,7 @@ import net.minecraft.util.StatCollector;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 import minestrapteam.minestrappolation.inventory.gui.GuiSawmill;
 import minestrapteam.minestrappolation.util.MGameUtil;
+import minestrapteam.minestrappolation.util.MStacks;
 
 public class ShapelessSawingHandler extends ShapelessRecipeHandler
 {
@@ -69,7 +70,7 @@ public class ShapelessSawingHandler extends ShapelessRecipeHandler
 	{
 		for (IRecipe irecipe : SawingManager.instance.getRecipeList())
 		{
-			if (MGameUtil.itemEquals(irecipe.getRecipeOutput(), result))
+			if (MStacks.itemEquals(irecipe.getRecipeOutput(), result))
 			{
 				CachedShapelessRecipe recipe = null;
 				if (irecipe instanceof ShapelessRecipes)

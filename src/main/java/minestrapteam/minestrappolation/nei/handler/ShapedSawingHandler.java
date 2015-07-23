@@ -14,6 +14,7 @@ import net.minecraft.util.StatCollector;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import minestrapteam.minestrappolation.inventory.gui.GuiSawmill;
 import minestrapteam.minestrappolation.util.MGameUtil;
+import minestrapteam.minestrappolation.util.MStacks;
 
 public class ShapedSawingHandler extends ShapedRecipeHandler
 {
@@ -77,7 +78,7 @@ public class ShapedSawingHandler extends ShapedRecipeHandler
 	{
 		for (IRecipe irecipe : SawingManager.instance.getRecipeList())
 		{
-			if (MGameUtil.itemEquals(irecipe.getRecipeOutput(), result))
+			if (MStacks.itemEquals(irecipe.getRecipeOutput(), result))
 			{
 				CachedShapedRecipe recipe = null;
 				if (irecipe instanceof ShapedRecipes)
