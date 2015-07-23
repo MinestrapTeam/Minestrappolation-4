@@ -20,6 +20,7 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.Potion;
@@ -178,26 +179,37 @@ public class MEventHandler
 		if (event.entityLiving instanceof EntityPlayer)
 		{
 			EntityPlayer player = (EntityPlayer) event.entityLiving;
-			ItemStack stack = player.getHeldItem();
-			
-			if (stack == null)
+			if("fall".equals(event.source.damageType))
 			{
-				return;
-			}
-			else if (stack.getItem() == MItems.amuletOves)
-			{
-				if (player.getRNG().nextInt(8) == 0)
+				if(player.inventory.hasItem(MItems.amuletPullum))
 				{
 					event.setCanceled(true);
-					stack.damageItem(1, player);
+					int slot = this.getItemsSlot(player, MItems.amuletPullum);
+					ItemStack stack = player.inventory.getStackInSlot(slot);
+					if(stack.getItemDamage() >= stack.getMaxDamage() || stack.getItemDamage() + (int)event.ammount > stack.getMaxDamage())
+					{
+						player.inventory.setInventorySlotContents(slot, null);
+					}
+					stack.damageItem((int)event.ammount, player);
+					
 				}
 			}
-			else if (stack.getItem() == MItems.amuletPullum)
+			else
 			{
-				if ("fall".equals(event.source.getDamageType()))
+				
+				if(player.inventory.hasItem(MItems.amuletOves))
 				{
-					event.setCanceled(true);
-					stack.damageItem(1, player);
+					int slot = this.getItemsSlot(player, MItems.amuletOves);
+					ItemStack stack = player.inventory.getStackInSlot(slot);
+					if(stack.getItemDamage() >= stack.getMaxDamage() || stack.getItemDamage() + (int)event.ammount > stack.getMaxDamage())
+					{
+						player.inventory.setInventorySlotContents(slot, null);
+					}
+					if (player.getRNG().nextInt(8) == 0)
+					{
+						event.setCanceled(true);
+						stack.damageItem((int)event.ammount, player);
+					}					
 				}
 			}
 		}
@@ -213,5 +225,17 @@ public class MEventHandler
 			event.world.setBlockToAir(event.target.getBlockPos());
 			event.setResult(Result.ALLOW);
 		}
+	}
+	
+	private int getItemsSlot(EntityPlayer player, Item item)
+	{
+		for (int i = 0; i < player.inventory.mainInventory.length; ++i)
+        {
+            if (player.inventory.mainInventory[i] != null && player.inventory.mainInventory[i].getItem() == item)
+            {
+                return i;
+            }
+        }
+		return -1;
 	}
 }
