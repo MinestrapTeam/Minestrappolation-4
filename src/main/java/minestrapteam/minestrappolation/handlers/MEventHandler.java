@@ -29,6 +29,7 @@ import net.minecraftforge.event.entity.EntityEvent;
 import net.minecraftforge.event.entity.EntityEvent.EntityConstructing;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
+import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.player.FillBucketEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.Action;
@@ -169,6 +170,37 @@ public class MEventHandler
 		}
 		
 		
+	}
+	
+	@SubscribeEvent
+	public void onDamage(LivingHurtEvent event)
+	{
+		if (event.entityLiving instanceof EntityPlayer)
+		{
+			EntityPlayer player = (EntityPlayer) event.entityLiving;
+			ItemStack stack = player.getHeldItem();
+			
+			if (stack == null)
+			{
+				return;
+			}
+			else if (stack.getItem() == MItems.amuletOves)
+			{
+				if (player.getRNG().nextInt(8) == 0)
+				{
+					event.setCanceled(true);
+					stack.damageItem(1, player);
+				}
+			}
+			else if (stack.getItem() == MItems.amuletPullum)
+			{
+				if ("fall".equals(event.source.getDamageType()))
+				{
+					event.setCanceled(true);
+					stack.damageItem(1, player);
+				}
+			}
+		}
 	}
 	
 	@SubscribeEvent
