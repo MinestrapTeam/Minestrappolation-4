@@ -16,9 +16,6 @@ import minestrapteam.minestrappolation.inventory.gui.GuiMelter;
 import minestrapteam.minestrappolation.inventory.gui.GuiSawmill;
 import minestrapteam.minestrappolation.inventory.gui.GuiSplitter;
 import minestrapteam.minestrappolation.inventory.gui.GuiStoneCutter;
-import minestrapteam.minestrappolation.inventory.player.ContainerInventoryMinestrap;
-import minestrapteam.minestrappolation.inventory.player.ExtendedPlayer;
-import minestrapteam.minestrappolation.inventory.player.GuiInventoryMinestrap;
 import minestrapteam.minestrappolation.tileentity.TileEntityAlloy;
 import minestrapteam.minestrappolation.tileentity.TileEntityBarrel;
 import minestrapteam.minestrappolation.tileentity.TileEntityCrate;
@@ -45,7 +42,6 @@ public class MGuiHandler implements IGuiHandler
 	public static final int	GUIID_SPLITTER		= 7;
 	
 	private static int modGuiIndex = 0;
-	public static final int GUI_CUSTOM_INV = modGuiIndex++;
 	
 	@Override
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
@@ -111,11 +107,6 @@ public class MGuiHandler implements IGuiHandler
 			return new ContainerSplitter(player, tileEntityCrusher);
 		}
 
-		if (ID == GUI_CUSTOM_INV) 
-		{
-			return new ContainerInventoryMinestrap(player, player.inventory, ExtendedPlayer.get(player).inventory);
-		}
-			
 		return null;
 	}
 	
@@ -181,11 +172,6 @@ public class MGuiHandler implements IGuiHandler
 		{
 			TileEntitySplitter tileEntitySplitter = (TileEntitySplitter) tileEntity;
 			return new GuiSplitter(player, tileEntitySplitter);
-		}
-		
-		if (ID == GUI_CUSTOM_INV)
-		{
-			return new GuiInventoryMinestrap(player, player.inventory, ExtendedPlayer.get(player).inventory);
 		}
 		
 		return null;

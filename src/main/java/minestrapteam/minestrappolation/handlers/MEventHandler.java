@@ -6,7 +6,6 @@ import minestrapteam.chunkster.ChunkProtector;
 import minestrapteam.chunkster.Key;
 import minestrapteam.minestrappolation.Config;
 import minestrapteam.minestrappolation.block.BlockSoul;
-import minestrapteam.minestrappolation.inventory.player.ExtendedPlayer;
 import minestrapteam.minestrappolation.lib.MAchievements;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MItems;
@@ -182,12 +181,5 @@ public class MEventHandler
 			event.world.setBlockToAir(event.target.getBlockPos());
 			event.setResult(Result.ALLOW);
 		}
-	}
-	
-	@SubscribeEvent
-	public void onEntityConstructing(EntityConstructing event)
-	{
-		if (event.entity instanceof EntityPlayer && ExtendedPlayer.get((EntityPlayer) event.entity) == null)
-		ExtendedPlayer.register((EntityPlayer) event.entity);
 	}
 }

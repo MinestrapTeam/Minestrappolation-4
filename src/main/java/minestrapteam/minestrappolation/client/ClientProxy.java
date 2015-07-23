@@ -33,7 +33,6 @@ import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTin;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTitanium;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeTorite;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeUranium;
-import minestrapteam.minestrappolation.handlers.MKeyHandler;
 import minestrapteam.minestrappolation.item.ItemChunk;
 import minestrapteam.minestrappolation.lib.MAchievements;
 import minestrapteam.minestrappolation.lib.MBlocks;
@@ -62,7 +61,8 @@ public class ClientProxy extends CommonProxy
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		//registry
-		FMLCommonHandler.instance().bus().register(new MKeyHandler());
+		//OLD KEY HANLDER REGISTER, UNCOMMENT TO ACTIVATE IT
+		//FMLCommonHandler.instance().bus().register(new MKeyHandler());
 		
 		//non registry
 		MFluid.buildRenderFor(MBlocks.magma, "magma");

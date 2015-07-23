@@ -3,7 +3,6 @@ package minestrapteam.minestrappolation.handlers;
 import org.lwjgl.input.Keyboard;
 
 import minestrapteam.minestrappolation.Minestrappolation;
-import minestrapteam.minestrappolation.inventory.player.ContainerInventoryMinestrap;
 import minestrapteam.minestrappolation.network.OpenGuiPacket;
 import net.minecraft.client.gui.GuiChat;
 import net.minecraft.client.settings.KeyBinding;
@@ -13,19 +12,18 @@ import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent;
 
+/** OLD key handler stuff. It used to open a custom inventory. Saved incase we need keybindings.
 public class MKeyHandler
-{
-	/** Key index for easy handling */
+{	 
+	//Key index for easy handling
 
 	public static final int CUSTOM_INV = 0;
 
-	/**
-	 * Key descriptions; use a language file to localize the description later
-	 */
+	// Key descriptions; use a language file to localize the description later
 
 	private static final String[] desc = { "key.tut_inventory.desc" };
 
-	/** Default key values – these can be changed using the in-game menu */
+	//Default key values – these can be changed using the in-game menu
 
 	private static final int[] keyValues = { Keyboard.KEY_P };
 
@@ -74,3 +72,4 @@ public class MKeyHandler
 	}
 
 }
+*/

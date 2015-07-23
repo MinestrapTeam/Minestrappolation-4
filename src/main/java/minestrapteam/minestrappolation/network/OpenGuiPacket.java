@@ -9,6 +9,12 @@ import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 
+/**
+ * This was for opening a player gui. No longer in use, but it might be helpful to some. <br> <br>
+ * Packets work sending IMessages, and can only be sent and recieved with bytes. use ByteBuf to send and recieve (see below).
+ * @author Sobiohazardous (Domenic)
+ *
+ */
 public class OpenGuiPacket implements IMessage
 {
 	private int id;
