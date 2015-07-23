@@ -4,13 +4,6 @@ tile.coldstone_boulder.name=Coldstone Boulder
 tile.icestone_boulder.name=Icestone Boulder
 tile.oceanstone_boulder.name=Oceanstone Boulder
 
-recipe.melting=Melter Recipe
-recipe.sawmill.shaped=Sawmill Recipe
-recipe.sawmill.shapeless=Sawmill Recipe
-recipe.stonecutter.shaped=Stonecutter Recipe
-recipe.stonecutter.shapeless=Stonecutter Recipe
-recipe.alloy=Alloy Recipe
-
 deepstone_coal.name=Coal Ore
 red_rock_coal.name=Coal Ore
 deep_redrock_coal.name=Coal Ore
@@ -673,6 +666,10 @@ item.heart_piece.name=Heart Piece
 item.heart_container.name=Heart Container
 item.soul_bottle.name=Soul Bottle
 item.hangglider.name=Wooden Hang Glider
+item.amulet_porcum.name=Porcum Amulet
+item.amulet_vaccam.name=Vaccam Amulet
+item.amulet_oves.name=Oves Amulet
+item.amulet_pullum.name=Pullum Amulet
 
 itemGroup.tabMBuilding=Minestrapp Building Blocks
 itemGroup.tabMDecor=Minestrapp Decoration Blocks
@@ -704,3 +701,10 @@ achievement.crusher=...dust to dust.
 achievement.crusher.desc=Use a crusher.
 achievement.jam=Oh won't you share this jam with me?
 achievement.jam.desc=Eat some delicious jam.
+
+recipe.melting=Melting
+recipe.sawmill.shaped=Shaped Milling
+recipe.sawmill.shapeless=Shapeless Milling
+recipe.stonecutter.shaped=Shaped Cutting
+recipe.stonecutter.shapeless=Shapeless Cutting
+recipe.alloy=Alloying

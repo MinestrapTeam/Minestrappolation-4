@@ -209,10 +209,18 @@ public class MItems extends Item
 	public static Item							soulbottle;
 	public static Item							hangglider;
 	
+	public static Item							pig_foot;
+	public static Item							cow_foot;
+	public static Item							sheep_foot;
+	public static Item							chicken_foot;
 	public static Item							amuletPorcum;
 	public static Item							amuletVaccam;
 	public static Item							amuletOves;
 	public static Item							amuletPullum;
+	
+	public static Item							wolf_hide;
+	public static Item							squid_tentacle;
+	public static Item							calamari;
 	
 	public static final Item.ToolMaterial		COPPER			= EnumHelper.addToolMaterial("COPPER", 1, 186, 4.5F, 1.5F, 18);
 	public static final Item.ToolMaterial		BRONZE			= EnumHelper.addToolMaterial("BRONZE", 2, 1016, 5.8F, 2.0F, 16);
@@ -271,7 +279,8 @@ public class MItems extends Item
 		bread_strength_salad = new ItemFood(9, 0.1F, false).setPotionEffect(Potion.damageBoost.id, 20, 1, 1F).setUnlocalizedName("bread_strength_salad").setCreativeTab(Minestrappolation.tabMFood);
 		jam_bottle = new ItemMSoup(4, 1.9F, Items.glass_bottle, 0).setUnlocalizedName("jam_bottle").setCreativeTab(Minestrappolation.tabMFood);
 		peanut_butter_bottle = new ItemMSoup(6, 1F, Items.glass_bottle, 0).setUnlocalizedName("peanut_butter_bottle").setCreativeTab(Minestrappolation.tabMFood);
-		
+		squid_tentacle = new ItemFood(2, 0.3F, false).setPotionEffect(Potion.poison.id, 5, 1, 0.7F).setUnlocalizedName("squid_tentacle").setCreativeTab(Minestrappolation.tabMFood);
+		calamari = new ItemFood(6, 0.6F, false).setUnlocalizedName("calimari").setCreativeTab(Minestrappolation.tabMFood);
 		
 		copper_ingot = new Item().setUnlocalizedName("copper_ingot").setCreativeTab(Minestrappolation.tabMMaterials);
 		tin_ingot = new Item().setUnlocalizedName("tin_ingot").setCreativeTab(Minestrappolation.tabMMaterials);
@@ -286,9 +295,15 @@ public class MItems extends Item
 		steel_plating = new Item().setUnlocalizedName("steel_plating").setCreativeTab(Minestrappolation.tabMMaterials);
 		meurodite_plating = new Item().setUnlocalizedName("meurodite_plating").setCreativeTab(Minestrappolation.tabMMaterials);
 		reinforced_stick = new Item().setUnlocalizedName("reinforced_stick").setCreativeTab(Minestrappolation.tabMMaterials);
+		
 		animal_bones = new Item().setUnlocalizedName("animal_bones").setCreativeTab(Minestrappolation.tabMMaterials);
 		wing_sinew = new Item().setUnlocalizedName("wing_sinew").setCreativeTab(Minestrappolation.tabMMaterials);
 		wing_segment = new Item().setUnlocalizedName("wing_segment").setCreativeTab(Minestrappolation.tabMMaterials);
+		pig_foot = new Item().setUnlocalizedName("pig_foot").setCreativeTab(Minestrappolation.tabMMaterials);
+		cow_foot = new Item().setUnlocalizedName("cow_foot").setCreativeTab(Minestrappolation.tabMMaterials);
+		sheep_foot = new Item().setUnlocalizedName("sheep_foot").setCreativeTab(Minestrappolation.tabMMaterials);
+		chicken_foot = new Item().setUnlocalizedName("chicken_foot").setCreativeTab(Minestrappolation.tabMMaterials);
+		wolf_hide = new Item().setUnlocalizedName("wolf_hide").setCreativeTab(Minestrappolation.tabMMaterials);
 		
 		stone_brick = new Item().setUnlocalizedName("stone_brick").setCreativeTab(Minestrappolation.tabMMaterials);
 		deepstone_brick = new Item().setUnlocalizedName("deepstone_brick").setCreativeTab(Minestrappolation.tabMMaterials);
@@ -414,6 +429,11 @@ public class MItems extends Item
 	{	
 		register(reinforced_stick);
 		register(animal_bones);
+		register(pig_foot);
+		register(cow_foot);
+		register(sheep_foot);
+		register(chicken_foot);
+		register(wolf_hide);
 		register(wing_sinew);
 		register(wing_segment);
 		register(mana_leaf);
@@ -492,6 +512,8 @@ public class MItems extends Item
 		register(jam_bottle);
 		register(peanut_butter_bottle);
 		register(hot_sauce);
+		register(squid_tentacle);
+		register(calamari);
 		
 		register(copper_pickaxe);
 		register(copper_axe);
@@ -622,6 +644,10 @@ public class MItems extends Item
 		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(bronze_ingot), 1, 3, 10));
 		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(meurodite_gem), 1, 1, 5));
 		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(radiant_quartz), 1, 2, 4));
+		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(amuletPorcum), 1, 1, 1));
+		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(amuletVaccam), 1, 1, 1));
+		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(amuletOves), 1, 1, 1));
+		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(amuletPullum), 1, 1, 1));
 		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(heart_piece), 1, 2, 6));
 		
 		//Abandoned Mineshaft

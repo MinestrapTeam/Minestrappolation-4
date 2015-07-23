@@ -35,6 +35,9 @@ public class Config
 	//Drops
 	public static int		animalBoneDropAmount;
 	public static int 		sinewDropAmount;
+	public static int		animalFeetDropAmount;
+	public static int		wolfHideDropAmount;
+	public static int		tentacleDropAmount;
 	
 	
 	// ********* Floats **********
@@ -42,6 +45,9 @@ public class Config
 	//Drops
 	public static float		animalBoneDropChance;
 	public static float 	sinewDropChance;
+	public static float		animalFeetDropChance;
+	public static float		wolfHideDropChance;
+	public static float		tentacleDropChance;
 	
 	
 	// ********* Doubles **********
@@ -77,8 +83,14 @@ public class Config
 		
 		animalBoneDropChance = config.get("Drops", "AnimalBoneDropChance", 20).getInt();
 		animalBoneDropAmount = config.get("Drops", "AnimalBoneDropQuantity", 2).getInt();
+		animalFeetDropChance = config.get("Drops", "AnimalFeetDropChance", 8).getInt();
+		animalFeetDropAmount = config.get("Drops", "AnimalFeetDropQuantity", 2).getInt();
+		wolfHideDropChance = config.get("Drops", "WolfHideDropChance", 20).getInt();
+		wolfHideDropAmount = config.get("Drops", "WolfHideDropQuantity", 1).getInt();
 		sinewDropChance = config.get("Drops", "WingSinewDropChance", 50).getInt();
 		sinewDropAmount = config.get("Drops", "WingSinewDropQuantity", 1).getInt();
+		tentacleDropChance = config.get("Drops", "SquidTentacleDropChance", 55).getInt();
+		tentacleDropAmount = config.get("Drops", "SquidTentacleDropQuantity", 3).getInt();
 		config.save();
 	}
 	

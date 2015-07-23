@@ -487,6 +487,8 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MItems.torite_boots, 1, 0), new ItemStack(MItems.torite_ingot, 2), new ItemStack(MItems.torite_ingot, 2), 0.1F);
 		this.addRecipe(new ItemStack(MItems.blazium_boots, 1, 0), new ItemStack(MItems.blazium_ingot, 2), new ItemStack(MItems.blazium_ingot, 2), 0.1F);
 		this.addRecipe(new ItemStack(MItems.titanium_boots, 1, 0), new ItemStack(MItems.titanium_ingot, 2), new ItemStack(MItems.titanium_ingot, 2), 0.1F);
+		
+		//TODO: Add missing Splitter recipes for Amulets and Backpacks.
 	}
 	
 	public void addRecipe(Block input, ItemStack stack, ItemStack stack2, float experience)

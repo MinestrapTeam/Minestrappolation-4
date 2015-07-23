@@ -18,6 +18,14 @@ public class MRecipes
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.heart_container, 1), new Object[] { MItems.heart_piece, MItems.heart_piece, MItems.heart_piece, MItems.heart_piece });
 		GameRegistry.addRecipe(new ItemStack(MItems.wing_segment, 1), new Object[] { "SSS", "LLL", "FFF", 'S', MItems.wing_sinew, 'L', Items.leather, 'F', Items.feather });
 		GameRegistry.addRecipe(new ItemStack(Items.dye, 1, 15), new Object[] { "BB", "BB", 'B', MItems.animal_bones });
+		GameRegistry.addRecipe(new ItemStack(MItems.amuletPorcum, 1), new Object[] {"SSS", "GFG", "NGN", 'S', Items.string, 'G', Items.gold_ingot, 'F', MItems.pig_foot, 'N', Items.gold_nugget });
+		GameRegistry.addRecipe(new ItemStack(MItems.amuletVaccam, 1), new Object[] {"SSS", "GFG", "NGN", 'S', Items.string, 'G', Items.gold_ingot, 'F', MItems.cow_foot, 'N', Items.gold_nugget });
+		GameRegistry.addRecipe(new ItemStack(MItems.amuletOves, 1), new Object[] {"SSS", "GFG", "NGN", 'S', Items.string, 'G', Items.gold_ingot, 'F', MItems.sheep_foot, 'N', Items.gold_nugget });
+		GameRegistry.addRecipe(new ItemStack(MItems.amuletPullum, 1), new Object[] {"SSS", "GFG", "NGN", 'S', Items.string, 'G', Items.gold_ingot, 'F', MItems.chicken_foot, 'N', Items.gold_nugget });
+		
+		//TODO: Un-Comment these recipes when Backpacks and Satchels are added.
+		//GameRegistry.addRecipe(new ItemStack(MItems.satchel, 1), new Object[] {"HRH", "HCH", "HHH", 'H', Items.rabbit_hide, 'R', MBlocks.rope, 'C', MBlocks.crate });
+		//GameRegistry.addRecipe(new ItemStack(MItems.backpack, 1), new Object[] {"HGH", "RBR", "HHH", 'H', MItems.wolf_hide, 'R', MBlocks.rope, 'B', MBlocks.barrel, 'G', Items.gold_ingot });
 		
 		// Food
 		GameRegistry.addRecipe(new ItemStack(MItems.dough, 2), new Object[] { "WW", "WW", 'W', Items.wheat });
@@ -57,6 +65,7 @@ public class MRecipes
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.bread_stir_fry, 1), new Object[] { MItems.bread_rice_bowl, MItems.hot_sauce, MItems.celery});
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.jam_bottle, 1), new Object[] { MItems.blueberry, MItems.strawberry, MItems.raspberry, MItems.blackberry, Items.glass_bottle });
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.peanut_butter_bottle, 1), new Object[] { MBlocks.peanuts, MBlocks.peanuts, MBlocks.peanuts, MBlocks.peanuts, Items.glass_bottle });
+		GameRegistry.addSmelting(new ItemStack(MItems.squid_tentacle), new ItemStack(MItems.calamari), 0.3F);
 		
 		// Minerals
 		GameRegistry.addSmelting(MBlocks.copper_ore, new ItemStack(MItems.copper_ingot), 0.5F);
