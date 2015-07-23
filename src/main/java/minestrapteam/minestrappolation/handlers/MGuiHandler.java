@@ -1,18 +1,23 @@
 package minestrapteam.minestrappolation.handlers;
 
+import minestrapteam.minestrappolation.inventory.InventoryBackpack;
 import minestrapteam.minestrappolation.inventory.container.ContainerAlloy;
+import minestrapteam.minestrappolation.inventory.container.ContainerBackpack;
 import minestrapteam.minestrappolation.inventory.container.ContainerBarrel;
 import minestrapteam.minestrappolation.inventory.container.ContainerCrate;
 import minestrapteam.minestrappolation.inventory.container.ContainerCrusher;
 import minestrapteam.minestrappolation.inventory.container.ContainerMelter;
+import minestrapteam.minestrappolation.inventory.container.ContainerSatchel;
 import minestrapteam.minestrappolation.inventory.container.ContainerSawmill;
 import minestrapteam.minestrappolation.inventory.container.ContainerSplitter;
 import minestrapteam.minestrappolation.inventory.container.ContainerStoneCutter;
 import minestrapteam.minestrappolation.inventory.gui.GuiAlloy;
+import minestrapteam.minestrappolation.inventory.gui.GuiBackpack;
 import minestrapteam.minestrappolation.inventory.gui.GuiBarrel;
 import minestrapteam.minestrappolation.inventory.gui.GuiCrate;
 import minestrapteam.minestrappolation.inventory.gui.GuiCrusher;
 import minestrapteam.minestrappolation.inventory.gui.GuiMelter;
+import minestrapteam.minestrappolation.inventory.gui.GuiSatchel;
 import minestrapteam.minestrappolation.inventory.gui.GuiSawmill;
 import minestrapteam.minestrappolation.inventory.gui.GuiSplitter;
 import minestrapteam.minestrappolation.inventory.gui.GuiStoneCutter;
@@ -40,8 +45,9 @@ public class MGuiHandler implements IGuiHandler
 	public static final int	GUIID_SAWMILL		= 6;
 	public static final int	GUIID_CRUSHER		= 6;
 	public static final int	GUIID_SPLITTER		= 7;
-	
-	private static int modGuiIndex = 0;
+	public static final int GUIID_BACKPACK		= 8;
+	public static final int GUIID_SATCHEL		= 9;
+
 	
 	@Override
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
@@ -107,6 +113,15 @@ public class MGuiHandler implements IGuiHandler
 			return new ContainerSplitter(player, tileEntityCrusher);
 		}
 
+		if (ID == GUIID_BACKPACK)
+		{
+			return new ContainerBackpack(player, player.inventory, new InventoryBackpack(player.getHeldItem()));
+		}
+		
+		if (ID == GUIID_SATCHEL)
+		{
+			return new ContainerSatchel(player, player.inventory, new InventoryBackpack(player.getHeldItem()));
+		}
 		return null;
 	}
 	
@@ -174,6 +189,15 @@ public class MGuiHandler implements IGuiHandler
 			return new GuiSplitter(player, tileEntitySplitter);
 		}
 		
+		if (ID == GUIID_BACKPACK)
+		{
+			return new GuiBackpack((ContainerBackpack) new ContainerBackpack(player, player.inventory, new InventoryBackpack(player.getHeldItem())));
+		}
+		
+		if (ID == GUIID_SATCHEL)
+		{
+			return new GuiSatchel((ContainerSatchel) new ContainerSatchel(player, player.inventory, new InventoryBackpack(player.getHeldItem())));
+		}
 		return null;
 	}
 }
