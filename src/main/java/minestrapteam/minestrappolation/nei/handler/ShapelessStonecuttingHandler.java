@@ -9,7 +9,7 @@ import minestrapteam.minestrappolation.crafting.stonecutter.ICuttingRecipes;
 import minestrapteam.minestrappolation.crafting.stonecutter.ShapelessCuttingRecipe;
 import minestrapteam.minestrappolation.crafting.stonecutter.StonecuttingManager;
 import minestrapteam.minestrappolation.inventory.gui.GuiStoneCutter;
-import minestrapteam.minestrappolation.util.MGameUtil;
+import minestrapteam.minestrappolation.util.MStacks;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.inventory.Container;
 import net.minecraft.item.ItemStack;
@@ -137,7 +137,7 @@ public class ShapelessStonecuttingHandler extends ShapelessRecipeHandler
 		{
 			if (irecipe instanceof ShapelessCuttingRecipe)
 			{
-				if (MGameUtil.itemEquals(irecipe.getRecipeOutput(), result))
+				if (MStacks.itemEquals(irecipe.getRecipeOutput(), result))
 				{
 					CachedShapelessSCRecipe recipe = new CachedShapelessSCRecipe((ShapelessCuttingRecipe) irecipe);
 					this.arecipes.add(recipe);

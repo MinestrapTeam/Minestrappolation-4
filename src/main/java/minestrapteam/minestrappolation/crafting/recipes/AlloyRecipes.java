@@ -340,7 +340,13 @@ public class AlloyRecipes
         {
             AlloyRecipe irecipe = this.recipes.get(j);
 
-            if (irecipe.matches(itemStack, otherItemStack)) { return irecipe.getCraftingResult(); }
+            if (irecipe.matches(itemStack, otherItemStack)) 
+            { 
+            	if(MStacks.equals(itemStack, irecipe.first) && MStacks.equals(otherItemStack, irecipe.baseItem))
+            	{
+            		return irecipe.getCraftingResult(); 
+            	}
+            }
         }
 
         return null;
@@ -352,7 +358,10 @@ public class AlloyRecipes
         {
             AlloyRecipe irecipe = this.recipes.get(j);
 
-            if (irecipe.uses(itemStack)) { return true; }
+            if (irecipe.uses(itemStack)) 
+            { 
+            	return true; 
+            }
         }
         return false;
     }

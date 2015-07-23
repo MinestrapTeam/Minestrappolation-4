@@ -19,55 +19,6 @@ public class MGameUtil
 		return GameRegistry.findBlock(MReference.NAME, name);
     }
 	
-	public static boolean equals(ItemStack input, ItemStack target)
-	{
-		return itemEquals(input, target);
-	}
-	
-	public static boolean stackEquals(ItemStack input, ItemStack target)
-	{
-		if (input == target)
-		{
-			return true;
-		}
-		else if (input == null)
-		{
-			return target == null;
-		}
-		else if (target == null)
-		{
-			return false;
-		}
-		return equals(input.getItem(), input.stackSize, input.getItemDamage(), target.getItem(), target.stackSize, target.getItemDamage());
-	}
-	
-	public static boolean itemEquals(ItemStack input, ItemStack target)
-	{
-		if (input == target)
-		{
-			return true;
-		}
-		else if (input == null)
-		{
-			return target == null;
-		}
-		else if (target == null)
-		{
-			return false;
-		}
-		return equals(input.getItem(), input.getItemDamage(), target.getItem(), target.getItemDamage());
-	}
-	
-	public static boolean equals(Item item1, int meta1, Item item2, int meta2)
-	{
-		return item1 == item2 && (meta1 == meta2 || meta1 == WILDCARD_VALUE || meta2 == WILDCARD_VALUE);
-	}
-	
-	public static boolean equals(Item item1, int size1, int meta1, Item item2, int size2, int meta2)
-	{
-		return item1 == item2 && size1 == size2 && (meta1 == meta2 || meta1 == WILDCARD_VALUE || meta2 == WILDCARD_VALUE);
-	}
-	
 	public static boolean matchesOreDict(ItemStack input, ItemStack... stacks)
     {
         if (input == null) { return false; }

@@ -10,6 +10,7 @@ import minestrapteam.minestrappolation.crafting.stonecutter.ShapedCuttingRecipe;
 import minestrapteam.minestrappolation.crafting.stonecutter.StonecuttingManager;
 import minestrapteam.minestrappolation.inventory.gui.GuiStoneCutter;
 import minestrapteam.minestrappolation.util.MGameUtil;
+import minestrapteam.minestrappolation.util.MStacks;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.inventory.Container;
 import net.minecraft.item.Item;
@@ -159,7 +160,7 @@ public class ShapedStonecuttingHandler extends ShapedRecipeHandler
 		{
 			if (irecipe instanceof ShapedCuttingRecipe)
 			{
-				if (MGameUtil.itemEquals(irecipe.getRecipeOutput(), result))
+				if (MStacks.itemEquals(irecipe.getRecipeOutput(), result))
 				{
 					CachedShapedSCRecipe recipe = new CachedShapedSCRecipe((ShapedCuttingRecipe) irecipe);
 					recipe.computeVisuals();
