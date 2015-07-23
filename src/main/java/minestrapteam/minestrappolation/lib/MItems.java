@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 import minestrapteam.minestrappolation.Minestrappolation;
 import minestrapteam.minestrappolation.item.ItemBackpack;
+import minestrapteam.minestrappolation.item.ItemAmulet;
+import minestrapteam.minestrappolation.item.ItemAmuletPorcum;
+import minestrapteam.minestrappolation.item.ItemAmuletVaccam;
 import minestrapteam.minestrappolation.item.ItemChunk;
 import minestrapteam.minestrappolation.item.ItemHangGlider;
 import minestrapteam.minestrappolation.item.ItemHeartContainer;
@@ -206,11 +209,15 @@ public class MItems extends Item
 	public static Item							heart_container;
 	public static Item							soulbottle;
 	public static Item							hangglider;
-	
+
 	public static Item							backpack;
 	public static Item							satchel;
 
-	
+	public static Item							amuletPorcum;
+	public static Item							amuletVaccam;
+	public static Item							amuletOves;
+	public static Item							amuletPullum;
+
 	public static final Item.ToolMaterial		COPPER			= EnumHelper.addToolMaterial("COPPER", 1, 186, 4.5F, 1.5F, 18);
 	public static final Item.ToolMaterial		BRONZE			= EnumHelper.addToolMaterial("BRONZE", 2, 1016, 5.8F, 2.0F, 16);
 	public static final Item.ToolMaterial		STEEL			= EnumHelper.addToolMaterial("STEEL", 2, 420, 7.8F, 2.5F, 20);
@@ -401,8 +408,14 @@ public class MItems extends Item
 		soulbottle = new ItemSoulBottle().setUnlocalizedName("soul_bottle").setCreativeTab(Minestrappolation.tabMTools);
 		hangglider = new ItemHangGlider().setUnlocalizedName("hangglider").setCreativeTab(Minestrappolation.tabMTools);
 		
+
 		backpack = new ItemBackpack(0).setUnlocalizedName("backpack").setCreativeTab(Minestrappolation.tabMTools);
 		satchel = new ItemBackpack(1).setUnlocalizedName("satchel").setCreativeTab(Minestrappolation.tabMTools);
+
+		amuletPorcum = new ItemAmuletPorcum().setUnlocalizedName("amulet_porcum").setCreativeTab(Minestrappolation.tabMTools);
+		amuletVaccam = new ItemAmuletVaccam().setUnlocalizedName("amulet_vaccam").setCreativeTab(Minestrappolation.tabMTools);
+		amuletOves = new ItemAmulet(30).setUnlocalizedName("amulet_oves").setCreativeTab(Minestrappolation.tabMTools);
+		amuletPullum = new ItemAmulet(30).setUnlocalizedName("amulet_pullum").setCreativeTab(Minestrappolation.tabMTools);
 	}
 	
 	public static void register()
@@ -578,6 +591,11 @@ public class MItems extends Item
 		
 		register(backpack);
 		register(satchel);
+
+		register(amuletPorcum);
+		register(amuletVaccam);
+		register(amuletOves);
+		register(amuletPullum);
 	}
 	
 	public static void register(Item item)

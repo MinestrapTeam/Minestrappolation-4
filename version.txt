@@ -1,2 +1,2 @@
 version=1.8.0-4.0.1A
-motd=§dThank you all for downloading the Minestrappolation 4 alpha!
+motd=§eWelcom Anon10W1z to the team!

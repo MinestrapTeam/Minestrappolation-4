@@ -20,6 +20,7 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.Potion;
@@ -29,6 +30,7 @@ import net.minecraftforge.event.entity.EntityEvent;
 import net.minecraftforge.event.entity.EntityEvent.EntityConstructing;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
+import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.player.FillBucketEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.Action;
@@ -172,6 +174,48 @@ public class MEventHandler
 	}
 	
 	@SubscribeEvent
+	public void onDamage(LivingHurtEvent event)
+	{
+		if (event.entityLiving instanceof EntityPlayer)
+		{
+			EntityPlayer player = (EntityPlayer) event.entityLiving;
+			if("fall".equals(event.source.damageType))
+			{
+				if(player.inventory.hasItem(MItems.amuletPullum))
+				{
+					event.setCanceled(true);
+					int slot = this.getItemsSlot(player, MItems.amuletPullum);
+					ItemStack stack = player.inventory.getStackInSlot(slot);
+					if(stack.getItemDamage() >= stack.getMaxDamage() || stack.getItemDamage() + (int)event.ammount > stack.getMaxDamage())
+					{
+						player.inventory.setInventorySlotContents(slot, null);
+					}
+					stack.damageItem((int)event.ammount, player);
+					
+				}
+			}
+			else
+			{
+				
+				if(player.inventory.hasItem(MItems.amuletOves))
+				{
+					int slot = this.getItemsSlot(player, MItems.amuletOves);
+					ItemStack stack = player.inventory.getStackInSlot(slot);
+					if(stack.getItemDamage() >= stack.getMaxDamage() || stack.getItemDamage() + (int)event.ammount > stack.getMaxDamage())
+					{
+						player.inventory.setInventorySlotContents(slot, null);
+					}
+					if (player.getRNG().nextInt(8) == 0)
+					{
+						event.setCanceled(true);
+						stack.damageItem((int)event.ammount, player);
+					}					
+				}
+			}
+		}
+	}
+	
+	@SubscribeEvent
 	public void onBucketFill(FillBucketEvent event)
 	{
 		IBlockState block = event.world.getBlockState(event.target.getBlockPos());
@@ -181,5 +225,17 @@ public class MEventHandler
 			event.world.setBlockToAir(event.target.getBlockPos());
 			event.setResult(Result.ALLOW);
 		}
+	}
+	
+	private int getItemsSlot(EntityPlayer player, Item item)
+	{
+		for (int i = 0; i < player.inventory.mainInventory.length; ++i)
+        {
+            if (player.inventory.mainInventory[i] != null && player.inventory.mainInventory[i].getItem() == item)
+            {
+                return i;
+            }
+        }
+		return -1;
 	}
 }
