@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-4.0.1A
- - Initial release
-=======
 4.0.2A(or what ever version it may be)
  - Fixed soul bottles not working in multiplayer
  - NEI compatible
 
 4.0.1A
  - Initial release
->>>>>>> origin/master
