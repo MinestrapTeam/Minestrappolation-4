@@ -209,31 +209,24 @@ public class MItems extends Item
 	public static Item							heart_container;
 	public static Item							soulbottle;
 	public static Item							hangglider;
-<<<<<<< HEAD
 	
 	public static Item							pig_foot;
 	public static Item							cow_foot;
 	public static Item							sheep_foot;
 	public static Item							chicken_foot;
-=======
 
 	public static Item							backpack;
 	public static Item							satchel;
 
->>>>>>> origin/master
 	public static Item							amuletPorcum;
 	public static Item							amuletVaccam;
 	public static Item							amuletOves;
 	public static Item							amuletPullum;
-<<<<<<< HEAD
 	
 	public static Item							wolf_hide;
 	public static Item							squid_tentacle;
 	public static Item							calamari;
-	
-=======
 
->>>>>>> origin/master
 	public static final Item.ToolMaterial		COPPER			= EnumHelper.addToolMaterial("COPPER", 1, 186, 4.5F, 1.5F, 18);
 	public static final Item.ToolMaterial		BRONZE			= EnumHelper.addToolMaterial("BRONZE", 2, 1016, 5.8F, 2.0F, 16);
 	public static final Item.ToolMaterial		STEEL			= EnumHelper.addToolMaterial("STEEL", 2, 420, 7.8F, 2.5F, 20);
