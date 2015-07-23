@@ -13,5 +13,5 @@ public class MReference
 	public static final List<String>	AUTHORS				= Arrays.asList("Delocuro", "TheWerty1124", "SoBioHazardous");
 	
 	public static final String			CLIENT_PROXY_CLASS	= "minestrapteam.minestrappolation.client.ClientProxy";
-	public static final String			SERVER_PROXY_CLASS	= "minestrapteam.minestrappolation.client.CommonProxy";
+	public static final String			SERVER_PROXY_CLASS	= "minestrapteam.minestrappolation.network.CommonProxy";
 }
