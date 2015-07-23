@@ -1,7 +1,6 @@
 package minestrapteam.minestrappolation.item;
 
 import minestrapteam.minestrappolation.lib.MAchievements;
-import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MItems;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;

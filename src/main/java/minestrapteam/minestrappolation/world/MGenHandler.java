@@ -2,7 +2,6 @@ package minestrapteam.minestrappolation.world;
 
 import java.util.Random;
 
-import minestrapteam.minestrappolation.block.BlockBush;
 import minestrapteam.minestrappolation.block.BiomeOres.BlockBiomeStones;
 import minestrapteam.minestrappolation.block.ore.BlockPlutoniumOre;
 import minestrapteam.minestrappolation.block.ore.BlockUraniumOre;
@@ -19,8 +18,6 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.BiomeGenBase.TempCategory;
-import net.minecraft.world.biome.BiomeGenHills;
-import net.minecraft.world.biome.BiomeGenTaiga;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.IChunkProvider;

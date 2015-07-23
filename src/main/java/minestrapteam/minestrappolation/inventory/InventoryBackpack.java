@@ -2,7 +2,6 @@ package minestrapteam.minestrappolation.inventory;
 
 import java.util.UUID;
 
-import minestrapteam.minestrappolation.inventory.container.ContainerBackpack;
 import minestrapteam.minestrappolation.item.ItemBackpack;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;

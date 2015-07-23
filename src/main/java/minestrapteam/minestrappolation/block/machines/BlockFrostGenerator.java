@@ -1,19 +1,11 @@
 package minestrapteam.minestrappolation.block.machines;
 
-import java.util.HashMap;
-import java.util.Random;
-
 import minestrapteam.minestrappolation.block.MBlock;
 import minestrapteam.minestrappolation.enumtypes.MWoodType;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import net.minecraft.block.BlockDirt;
-import net.minecraft.block.BlockDoublePlant;
-import net.minecraft.block.BlockFlower;
-import net.minecraft.block.BlockLog;
 import net.minecraft.block.BlockPlanks;
 import net.minecraft.block.BlockSand;
-import net.minecraft.block.BlockSponge;
-import net.minecraft.block.BlockTallGrass;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -23,7 +15,9 @@ import net.minecraft.util.EnumWorldBlockLayer;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import net.minecraftforge.oredict.OreDictionary;
+
+import java.util.HashMap;
+import java.util.Random;
 
 public class BlockFrostGenerator extends MBlock
 {

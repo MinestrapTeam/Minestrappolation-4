@@ -1,6 +1,5 @@
 package minestrapteam.minestrappolation.inventory.gui;
 
-import minestrapteam.minestrappolation.inventory.container.ContainerMelter;
 import minestrapteam.minestrappolation.inventory.container.ContainerSplitter;
 import minestrapteam.minestrappolation.lib.MReference;
 import minestrapteam.minestrappolation.tileentity.TileEntitySplitter;

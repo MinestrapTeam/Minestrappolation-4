@@ -1,17 +1,5 @@
 package minestrapteam.minestrappolation.handlers;
 
-import org.lwjgl.input.Keyboard;
-
-import minestrapteam.minestrappolation.Minestrappolation;
-import minestrapteam.minestrappolation.network.OpenGuiPacket;
-import net.minecraft.client.gui.GuiChat;
-import net.minecraft.client.settings.KeyBinding;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraftforge.fml.client.FMLClientHandler;
-import net.minecraftforge.fml.client.registry.ClientRegistry;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent;
-
 /** OLD key handler stuff. It used to open a custom inventory. Saved incase we need keybindings.
 public class MKeyHandler
 {	 

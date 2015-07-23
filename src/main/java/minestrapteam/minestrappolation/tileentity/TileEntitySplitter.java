@@ -1,6 +1,5 @@
 package minestrapteam.minestrappolation.tileentity;
 
-import minestrapteam.minestrappolation.block.machines.BlockMelter;
 import minestrapteam.minestrappolation.block.machines.BlockSplitter;
 import minestrapteam.minestrappolation.crafting.recipes.SplitterRecipes;
 import minestrapteam.minestrappolation.lib.MBlocks;
@@ -14,7 +13,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.server.gui.IUpdatePlayerListBox;
-import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraft.util.EnumFacing;
 
 public class TileEntitySplitter extends TileEntityInventory implements ISidedInventory, IUpdatePlayerListBox

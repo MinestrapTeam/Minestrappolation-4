@@ -11,7 +11,6 @@ import net.minecraft.item.crafting.ShapelessRecipes;
 import net.minecraft.util.StatCollector;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 import minestrapteam.minestrappolation.inventory.gui.GuiSawmill;
-import minestrapteam.minestrappolation.util.MGameUtil;
 import minestrapteam.minestrappolation.util.MStacks;
 
 public class ShapelessSawingHandler extends ShapelessRecipeHandler

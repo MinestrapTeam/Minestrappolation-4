@@ -3,7 +3,6 @@ package minestrapteam.minestrappolation.inventory.container;
 import java.util.List;
 
 import minestrapteam.minestrappolation.crafting.recipes.MelterRecipes;
-import minestrapteam.minestrappolation.inventory.slot.SlotMelter;
 import minestrapteam.minestrappolation.inventory.slot.SlotSplitter;
 import minestrapteam.minestrappolation.tileentity.TileEntitySplitter;
 import minestrapteam.minestrappolation.util.MinistrappolationInventoryHandler;

@@ -1,7 +1,6 @@
 package minestrapteam.minestrappolation.inventory.gui;
 
 import minestrapteam.minestrappolation.inventory.InventoryBackpack;
-import minestrapteam.minestrappolation.inventory.container.ContainerBackpack;
 import minestrapteam.minestrappolation.inventory.container.ContainerSatchel;
 import minestrapteam.minestrappolation.lib.MReference;
 import net.minecraft.client.Minecraft;

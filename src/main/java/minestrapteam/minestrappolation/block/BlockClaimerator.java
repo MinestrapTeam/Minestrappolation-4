@@ -1,9 +1,5 @@
 package minestrapteam.minestrappolation.block;
 
-import java.util.UUID;
-
-import org.lwjgl.input.Keyboard;
-
 import minestrapteam.chunkster.ChunkProtector;
 import minestrapteam.chunkster.UUIDHelper;
 import net.minecraft.block.material.MapColor;

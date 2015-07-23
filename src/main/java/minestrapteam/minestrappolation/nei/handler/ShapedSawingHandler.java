@@ -13,7 +13,6 @@ import net.minecraft.item.crafting.ShapedRecipes;
 import net.minecraft.util.StatCollector;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import minestrapteam.minestrappolation.inventory.gui.GuiSawmill;
-import minestrapteam.minestrappolation.util.MGameUtil;
 import minestrapteam.minestrappolation.util.MStacks;
 
 public class ShapedSawingHandler extends ShapedRecipeHandler

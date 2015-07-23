@@ -2,10 +2,7 @@ package minestrapteam.minestrappolation.inventory.container;
 
 import java.util.List;
 
-import minestrapteam.minestrappolation.crafting.recipes.AlloyRecipes;
-import minestrapteam.minestrappolation.crafting.recipes.MelterRecipes;
 import minestrapteam.minestrappolation.tileentity.TileEntityAlloy;
-import minestrapteam.minestrappolation.tileentity.TileEntityMelter;
 import minestrapteam.minestrappolation.util.MinistrappolationInventoryHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.ICrafting;

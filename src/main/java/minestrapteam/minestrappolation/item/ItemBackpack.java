@@ -1,7 +1,5 @@
 package minestrapteam.minestrappolation.item;
 
-import org.lwjgl.input.Mouse;
-
 import minestrapteam.minestrappolation.Minestrappolation;
 import minestrapteam.minestrappolation.handlers.MGuiHandler;
 import minestrapteam.minestrappolation.inventory.container.ContainerBackpack;
@@ -10,9 +8,9 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.client.FMLClientHandler;
+import org.lwjgl.input.Mouse;
 
 public class ItemBackpack extends Item
 {

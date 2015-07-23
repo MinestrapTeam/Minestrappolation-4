@@ -1,11 +1,9 @@
 package minestrapteam.minestrappolation.util;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import minestrapteam.minestrappolation.lib.MReference;
 import net.minecraft.block.Block;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;

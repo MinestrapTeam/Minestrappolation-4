@@ -4,8 +4,6 @@ import java.util.List;
 import java.util.Random;
 
 import minestrapteam.minestrappolation.lib.MBlocks;
-import net.minecraft.block.BlockDoor;
-import net.minecraft.block.BlockTallGrass;
 import net.minecraft.block.IGrowable;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;

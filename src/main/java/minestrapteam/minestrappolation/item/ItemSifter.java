@@ -1,24 +1,16 @@
 package minestrapteam.minestrappolation.item;
 
-import java.util.ArrayList;
-
 import minestrapteam.minestrappolation.Minestrappolation;
 import minestrapteam.minestrappolation.lib.MAchievements;
 import minestrapteam.minestrappolation.lib.MBlocks;
-import minestrapteam.minestrappolation.lib.MItems;
 import minestrapteam.minestrappolation.util.Chance;
-import net.minecraft.block.Block;
-import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemSifter extends Item{
 	

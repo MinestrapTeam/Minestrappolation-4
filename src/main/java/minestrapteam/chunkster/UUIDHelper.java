@@ -1,7 +1,5 @@
 package minestrapteam.chunkster;
 
-import java.util.UUID;
-
 import com.mojang.authlib.GameProfile;
 
 import net.minecraft.server.MinecraftServer;

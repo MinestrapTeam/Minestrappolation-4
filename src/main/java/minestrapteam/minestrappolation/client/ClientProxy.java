@@ -39,21 +39,9 @@ import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MFluid;
 import minestrapteam.minestrappolation.lib.MItems;
 import minestrapteam.minestrappolation.network.CommonProxy;
-import minestrapteam.minestrappolation.tileentity.TileEntityAlloy;
-import minestrapteam.minestrappolation.tileentity.TileEntityBarrel;
-import minestrapteam.minestrappolation.tileentity.TileEntityCrate;
-import minestrapteam.minestrappolation.tileentity.TileEntityCrusher;
-import minestrapteam.minestrappolation.tileentity.TileEntityMelter;
-import minestrapteam.minestrappolation.tileentity.TileEntitySawMill;
-import minestrapteam.minestrappolation.tileentity.TileEntitySplitter;
-import minestrapteam.minestrappolation.tileentity.TileEntityStoneCutter;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.world.World;
-import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ClientProxy extends CommonProxy
 {

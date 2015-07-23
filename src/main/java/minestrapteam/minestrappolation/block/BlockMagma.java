@@ -1,7 +1,5 @@
 package minestrapteam.minestrappolation.block;
 
-import minestrapteam.minestrappolation.enumtypes.MStoneType;
-import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.lib.MFluid;
 
 import net.minecraft.block.Block;
