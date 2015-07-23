@@ -20,7 +20,7 @@ public class ContainerSatchel extends MinistrappolationInventoryHandler
 
 	public boolean needsUpdate;
 
-	private static final int INV_START = InventoryBackpack.INV_SIZE, INV_END = INV_START + 26,
+	private static final int INV_START = 18, INV_END = INV_START + 26,
 
 	HOTBAR_START = INV_END + 1, HOTBAR_END = HOTBAR_START + 8;
 

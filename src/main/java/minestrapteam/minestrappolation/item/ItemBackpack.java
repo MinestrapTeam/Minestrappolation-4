@@ -34,12 +34,13 @@ public class ItemBackpack extends Item
 
 			if (FMLClientHandler.instance().getClient().inGameHasFocus && Mouse.isButtonDown(1) && player.getHeldItem() != null && player.getHeldItem().getItem() instanceof ItemBackpack)
 			{
-				if(type == 0)
+				ItemBackpack item = (ItemBackpack)player.getHeldItem().getItem();
+				if(item.type == 0)
 				{
 					player.openGui(Minestrappolation.instance, MGuiHandler.GUIID_BACKPACK, world,(int) player.posX, (int) player.posY, (int) player.posZ);
 					
 				}
-				if(type == 1)
+				if(item.type == 1)
 				{
 					player.openGui(Minestrappolation.instance, MGuiHandler.GUIID_SATCHEL, world,(int) player.posX, (int) player.posY, (int) player.posZ);
 				}
