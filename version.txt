@@ -1,2 +1,2 @@
 version=1.8.0-4.0.1A
-motd=§eWelcom Anon10W1z to the team!
+motd=§eThanks for downloading M4!
