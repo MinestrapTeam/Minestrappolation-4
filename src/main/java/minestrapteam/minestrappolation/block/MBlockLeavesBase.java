@@ -69,7 +69,7 @@ public abstract class MBlockLeavesBase extends BlockLeavesBase implements net.mi
 		{
 			if (((Boolean) state.getValue(CHECK_DECAY)).booleanValue() && ((Boolean) state.getValue(DECAYABLE)).booleanValue())
 			{
-				byte b0 = 8;
+				byte b0 = 6;
 				int i = b0 + 1;
 				int j = pos.getX();
 				int k = pos.getY();
