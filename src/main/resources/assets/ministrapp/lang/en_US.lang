@@ -524,6 +524,12 @@ item.strength_salad.name=Refreshing Salad
 item.bread_strength_salad.name=Refreshing Salad
 item.stir_fry.name=Stir Fry
 item.bread_stir_fry.name=Stir Fry
+item.squid_tentacle.name=Squid Tentacle
+item.calamari.name=Calamari
+item.seaweed.name=Seaweed
+item.sushi.name=Sushi
+item.lucky_sushi.name=Lucky Sushi
+item.onigiri.name=Onigiri
 
 item.copper_ingot.name=Copper Ingot
 item.tin_ingot.name=Tin Ingot
