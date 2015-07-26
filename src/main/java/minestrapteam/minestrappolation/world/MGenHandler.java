@@ -118,15 +118,15 @@ public class MGenHandler implements IWorldGenerator
 		{
 			this.generateBerries(world, rand, x1, z1, new WorldGenBush(MBlocks.raspberry_bush));
 		}
-		if(biome == BiomeGenBase.deepOcean || biome == BiomeGenBase.ocean || biome == BiomeGenBase.swampland || biome == BiomeGenBase.river)
-		{
-			this.generateSeaPlant(world, rand, x1, z1, new WorldGenWaterPlant(MBlocks.seaweed));
-		}
 		if(biome == BiomeGenBase.mushroomIsland || biome == BiomeGenBase.mushroomIslandShore || biome == BiomeGenBase.deepOcean || biome == BiomeGenBase.ocean)
 		{
 			this.generateBerries(world, rand, x1, z1, new WorldGenBush(MBlocks.mana_bush));
 		}
 		
+		if(biome == BiomeGenBase.deepOcean || biome == BiomeGenBase.ocean || biome == BiomeGenBase.swampland || biome == BiomeGenBase.river)
+		{
+			this.generateSeaPlant(world, rand, x1, z1, new WorldGenWaterPlant(MBlocks.seaweed));
+		}
 		
 		// Redwood Trees
 		if (biome == BiomeGenBase.extremeHills || biome == BiomeGenBase.taigaHills)
@@ -219,10 +219,10 @@ public class MGenHandler implements IWorldGenerator
 		}
 	}
 	
-	private void generateSeaPlant(World world, Random rand, int chunkX, int chunkZ, WorldGenerator plant)
+	private void generateSeaPlant(World world, Random rand, int chunkX, int chunkZ, WorldGenerator seaweed)
 	{
-		WorldGenerator gen = plant;
-		for (int i = 0; i < 2; i++)
+		WorldGenerator gen = seaweed;
+		for (int i = 0; i < 5; i++)
 		{
 			int xRand = chunkX * 16 + rand.nextInt(16);
 			int yRand = rand.nextInt(63);
