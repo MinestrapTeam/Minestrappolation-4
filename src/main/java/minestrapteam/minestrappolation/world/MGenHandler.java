@@ -118,6 +118,10 @@ public class MGenHandler implements IWorldGenerator
 		{
 			this.generateBerries(world, rand, x1, z1, new WorldGenBush(MBlocks.raspberry_bush));
 		}
+		if(biome == BiomeGenBase.deepOcean || biome == BiomeGenBase.ocean || biome == BiomeGenBase.swampland || biome == BiomeGenBase.river)
+		{
+			this.generateSeaPlant(world, rand, x1, z1, new WorldGenWaterPlant(MBlocks.seaweed));
+		}
 		if(biome == BiomeGenBase.mushroomIsland || biome == BiomeGenBase.mushroomIslandShore || biome == BiomeGenBase.deepOcean || biome == BiomeGenBase.ocean)
 		{
 			this.generateBerries(world, rand, x1, z1, new WorldGenBush(MBlocks.mana_bush));
@@ -209,6 +213,19 @@ public class MGenHandler implements IWorldGenerator
 		{
 			int xRand = chunkX * 16 + rand.nextInt(16);
 			int yRand = rand.nextInt(256);
+			int zRand = chunkZ * 16 + rand.nextInt(16);
+			BlockPos position = new BlockPos(xRand, yRand, zRand);
+			gen.generate(world, rand, position);
+		}
+	}
+	
+	private void generateSeaPlant(World world, Random rand, int chunkX, int chunkZ, WorldGenerator plant)
+	{
+		WorldGenerator gen = plant;
+		for (int i = 0; i < 2; i++)
+		{
+			int xRand = chunkX * 16 + rand.nextInt(16);
+			int yRand = rand.nextInt(63);
 			int zRand = chunkZ * 16 + rand.nextInt(16);
 			BlockPos position = new BlockPos(xRand, yRand, zRand);
 			gen.generate(world, rand, position);
