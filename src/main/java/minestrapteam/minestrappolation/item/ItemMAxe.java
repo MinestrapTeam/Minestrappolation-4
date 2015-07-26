@@ -62,7 +62,7 @@ public class ItemMAxe extends ItemAxe
 					worldIn.setBlockState(pos, Blocks.fire.getDefaultState());
 				}
 				
-				stack.damageItem(1, playerIn);
+				stack.damageItem(4, playerIn);
 				return true;
 			}
 		}

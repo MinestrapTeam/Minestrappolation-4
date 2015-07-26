@@ -14,6 +14,8 @@ import minestrapteam.minestrappolation.util.VersionChecker;
 import minestrapteam.minestrappolation.world.MBiomeManager;
 import net.minecraft.block.BlockNetherWart;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
@@ -23,6 +25,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.DamageSource;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
@@ -168,6 +171,12 @@ public class MEventHandler
 		if (event.entityLiving instanceof EntityPlayer)
 		{
 			EntityPlayer player = (EntityPlayer) event.entityLiving;
+			
+			ItemStack helmet = player.getCurrentArmor(3);
+			ItemStack chest = player.getCurrentArmor(2);
+			ItemStack pants = player.getCurrentArmor(1);
+			ItemStack boots = player.getCurrentArmor(0);
+			
 			if("fall".equals(event.source.damageType))
 			{
 				if(player.inventory.hasItem(MItems.amuletPullum))
@@ -185,7 +194,12 @@ public class MEventHandler
 			}
 			else
 			{
-				
+				if(("mob".equals(event.source.damageType) || "player".equals(event.source.damageType)) && helmet.getItem() == MItems.blazium_helmet && chest.getItem() == MItems.blazium_chestplate && pants.getItem() == MItems.blazium_leggings && boots.getItem() == MItems.blazium_boots)
+				{
+					player.addPotionEffect(new PotionEffect(Potion.fireResistance.id, 2, 0, true, false));
+					Entity living = event.source.getEntity();
+					living.setFire(5);
+				}
 				if(player.inventory.hasItem(MItems.amuletOves))
 				{
 					int slot = this.getItemsSlot(player, MItems.amuletOves);

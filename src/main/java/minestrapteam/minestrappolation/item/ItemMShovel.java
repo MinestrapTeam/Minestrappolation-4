@@ -62,7 +62,7 @@ public class ItemMShovel extends ItemSpade
 					worldIn.setBlockState(pos, Blocks.fire.getDefaultState());
 				}
 				
-				stack.damageItem(1, playerIn);
+				stack.damageItem(4, playerIn);
 				return true;
 			}
 		}

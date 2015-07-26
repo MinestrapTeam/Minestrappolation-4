@@ -21,6 +21,7 @@ public class MRecipes
 		GameRegistry.addRecipe(new ItemStack(MItems.amuletOves, 1), new Object[] {"SSS", "GFG", "NGN", 'S', Items.string, 'G', Items.gold_ingot, 'F', MItems.sheep_foot, 'N', Items.gold_nugget });
 		GameRegistry.addRecipe(new ItemStack(MItems.amuletPullum, 1), new Object[] {"SSS", "GFG", "NGN", 'S', Items.string, 'G', Items.gold_ingot, 'F', MItems.chicken_foot, 'N', Items.gold_nugget });
 		GameRegistry.addRecipe(new ItemStack(MItems.propeller, 1), new Object[] { "C C", " B ", " C ", 'C', MItems.copper_ingot, 'B', MItems.bronze_ingot});
+		GameRegistry.addRecipe(new ItemStack(MBlocks.fan, 1), new Object[] { "GSG", "CBC", "CPC", 'G', MBlocks.granite_bricks, 'S', MBlocks.steel_mesh, 'C', new ItemStack(MBlocks.biome_bricks, 1, 3), 'B', MItems.propeller, 'P', Blocks.piston });
 		
 		//TODO: Un-Comment these recipes when Backpacks and Satchels are added.
 		//GameRegistry.addRecipe(new ItemStack(MItems.satchel, 1), new Object[] {"HRH", "HCH", "HHH", 'H', Items.rabbit_hide, 'R', MBlocks.rope, 'C', MBlocks.crate });

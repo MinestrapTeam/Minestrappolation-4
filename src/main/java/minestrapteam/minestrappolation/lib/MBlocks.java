@@ -319,6 +319,7 @@ public class MBlocks
 	public static Block	glacierstone_brick_stairs;
 	public static Block	deep_redrock_brick_stairs;
 	public static Block	deep_coldstone_brick_stairs;
+	public static Block prismarine_stairs;
 	
 	public static BlockMSlab       redwood_slab;
 	public static BlockMDoubleSlab redwood_double_slab;
@@ -382,6 +383,8 @@ public class MBlocks
 	public static BlockMDoubleSlab oceanstone_brick_double_slab;
 	public static BlockMSlab       poceanstone_brick_slab;
 	public static BlockMDoubleSlab poceanstone_brick_double_slab;
+	public static BlockMSlab	   prismarine_slab;
+	public static BlockMDoubleSlab prismarine_double_slab;
 	
 	//Plants
 	public static Block moss;
@@ -616,6 +619,7 @@ public class MBlocks
 		glacierstone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("glacierstone_brick_stairs");
 		deep_redrock_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("deep_redrock_brick_stairs");
 		deep_coldstone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("deep_coldstone_brick_stairs");
+		prismarine_stairs = new MBlockStairs(Blocks.prismarine.getDefaultState(), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("prismarine_stairs");
 		
 		// Fence
 		redwood_fence = new BlockFence(Material.wood).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("redwood_fence");
@@ -646,6 +650,8 @@ public class MBlocks
 		desert_quartz_double_slab = new BlockMDoubleSlab(Material.rock, "desert_quartz", 1F, 4F, "pickaxe", 0, 0, desert_quartz_slab);
 		radiant_slab = new BlockMSlab(Material.rock, "radiant_quartz_slab", 1F, 4F, "pickaxe", 3, 0);
 		radiant_double_slab = new BlockMDoubleSlab(Material.rock, "radiant_quartz", 1F, 4F, "pickaxe", 3, 0, radiant_slab);
+		prismarine_slab = new BlockMSlab(Material.rock, "prismarine_slab", 1.5F, 10F, "pickaxe", 0, 0);
+		prismarine_double_slab = new BlockMDoubleSlab(Material.rock, "prismarine", 1.5F, 10F, "pickaxe", 0, 0, prismarine_slab);
 		
 		deepstone_slab = new BlockMSlab(Material.rock, "deepstone_slab", 2F, 10F, "pickaxe", 2, 0);
 		deepstone_double_slab = new BlockMDoubleSlab(Material.rock, "deepstone", 2F, 10F, "pickaxe", 2, 0, deepstone_slab);
@@ -806,6 +812,8 @@ public class MBlocks
 		register(radiant_chiseled);
 		registerSlab("radiant_quartz_slab", "radiant_quartz_double_slab", radiant_slab, radiant_double_slab);
 		register(radiant_stairs);
+		registerSlab("prismarine_slab", "prismarine_double_slab", prismarine_slab, prismarine_double_slab);
+		register(prismarine_stairs);
 		register(obsidian_bricks);
 		register(stone_pattern_bricks);
 		register(stone_refined);

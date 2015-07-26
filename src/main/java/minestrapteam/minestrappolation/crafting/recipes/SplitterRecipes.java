@@ -492,6 +492,9 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MItems.amuletVaccam, 1, 0), new ItemStack(MItems.cow_foot, 1), new ItemStack(Items.gold_ingot, 3), 0.1F);
 		this.addRecipe(new ItemStack(MItems.amuletPorcum, 1, 0), new ItemStack(MItems.pig_foot, 1), new ItemStack(Items.gold_ingot, 3), 0.1F);
 		this.addRecipe(new ItemStack(MItems.amuletPullum, 1, 0), new ItemStack(MItems.chicken_foot, 1), new ItemStack(Items.gold_ingot, 3), 0.1F);
+		
+		this.addRecipe(new ItemStack(MItems.propeller, 1), new ItemStack(MItems.copper_ingot, 3), new ItemStack(MItems.bronze_ingot, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.fan, 1), new ItemStack(MItems.propeller, 1), new ItemStack(MBlocks.biome_bricks, 4, 3), 0.1F);
 	}
 	
 	public void addRecipe(Block input, ItemStack stack, ItemStack stack2, float experience)

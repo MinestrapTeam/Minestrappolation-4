@@ -14,6 +14,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.EnumWorldBlockLayer;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -27,7 +28,7 @@ public class BlockFan extends MBlock
 	{
 		super(material, mapColor);
 		this.effectRate = rate;
-		//this.setTickRandomly(true);
+		this.setTickRandomly(true);
 	}
 	
 	@Override
@@ -36,6 +37,15 @@ public class BlockFan extends MBlock
 	{
 		return EnumWorldBlockLayer.CUTOUT;
 	}
+	
+	@SideOnly(Side.CLIENT)
+	public void randomDisplayTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
+	{
+	    super.randomDisplayTick(worldIn, pos, state, rand);
+	    worldIn.spawnParticle(EnumParticleTypes.CLOUD, true, (double)((float)pos.getX() + rand.nextFloat()), (double)((float)pos.getY() + 1.1F), (double)((float)pos.getZ() + rand.nextFloat()), 0.0D, 0.3D, 0.0D, new int[0]);
+	    worldIn.spawnParticle(EnumParticleTypes.CLOUD, false, (double)((float)pos.getX() + rand.nextFloat()), (double)((float)pos.getY() + 1.1F), (double)((float)pos.getZ() + rand.nextFloat()), 0.0D, 0.3D, 0.0D, new int[0]);
+	}
+	
 	/*
 	@Override
 	public void onBlockAdded(World world, BlockPos pos, IBlockState state)

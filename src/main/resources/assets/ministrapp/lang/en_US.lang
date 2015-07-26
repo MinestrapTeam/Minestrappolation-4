@@ -430,6 +430,8 @@ tile.radiant_quartz_stairs.name=Radiant Quartz Stairs
 tile.desert_pillar.name=Desert Quartz Pillar
 tile.radiant_pillar.name=Radiant Quartz Pillar
 tile.obsidian_bricks.name=Obsidian Bricks
+tile.prismarine_slab.name=Prismarine Slab
+tile.prismarine_stairs.name=Prismarine Stairs
 
 tile.flint_block.name=Block of Flint
 tile.sugar_block.name=Block of Sugar
@@ -471,6 +473,7 @@ tile.crusher.name=Crusher
 tile.frost_generator.name=Frost Generator
 tile.splitter.name=Alchemical Splitter
 tile.claimerator.name=Quantum Claimerator
+tile.fan.name=Fan
 
 tile.moss.name=Moss Lump
 tile.blueberry_bush.name=Blueberry Bush
@@ -525,7 +528,7 @@ item.bread_strength_salad.name=Refreshing Salad
 item.stir_fry.name=Stir Fry
 item.bread_stir_fry.name=Stir Fry
 item.squid_tentacle.name=Squid Tentacle
-item.calamari.name=Calamari
+item.calimari.name=Calamari
 item.seaweed.name=Seaweed
 item.sushi.name=Sushi
 item.lucky_sushi.name=Lucky Sushi
@@ -566,7 +569,11 @@ item.reinforced_stick.name=Reinforced Stick
 item.animal_bones.name=Animal Bones
 item.wing_sinew.name=Wing Sinew
 item.wing_segment.name=Wing Segment
-item.propeller.name-Propeller
+item.propeller.name=Propeller
+item.pig_foot.name=Pig Hoof
+item.cow_foot.name=Cow Hoof
+item.sheep_foot.name=Sheep Hoof
+item.chicken_foot.name=Chicken Foot
 
 item.stone_brick.name=Stone Brick
 item.deepstone_brick.name=Deepstone Brick
