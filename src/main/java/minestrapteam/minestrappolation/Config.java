@@ -75,7 +75,7 @@ public class Config
 		healthStarting = config.get("Mechanics", "StartingHealth", 10D, "Vanilla is 20").getDouble();
 		
 		bushGrowChance = config.get("Plants", "BushGrowthChance", 4).getInt();
-		seaweedGrowChance = config.get("Plants", "SeaweedGrowthChance", 5).getInt();
+		seaweedGrowChance = config.get("Plants", "SeaweedGrowthChance", 20).getInt();
 		pepperSeedChance = config.get("Plants", "PepperSeedChance", 10).getInt();
 		onionSeedChance = config.get("Plants", "OnionSeedChance", 10).getInt();
 		cabbageSeedChance = config.get("Plants", "CabbageSeedChance", 10).getInt();

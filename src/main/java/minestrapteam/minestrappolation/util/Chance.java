@@ -7,7 +7,7 @@ import java.util.Random;
 
 public class Chance
 {
-	public static Random rand = new Random();
+	private static Random rand = new Random();
 	@SuppressWarnings("rawtypes")
 	private static Map<String, ArrayList>	chanceTableMap	= new HashMap<String, ArrayList>();
 	

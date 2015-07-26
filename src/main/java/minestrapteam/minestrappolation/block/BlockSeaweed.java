@@ -2,6 +2,7 @@ package minestrapteam.minestrappolation.block;
 
 import java.util.Random;
 
+import minestrapteam.minestrappolation.Config;
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.util.Chance;
 import net.minecraft.block.Block;
@@ -135,6 +136,7 @@ public class BlockSeaweed extends Block {
     
     public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
     {
+    	
         if (this.checkForDrop(worldIn, pos, state))
         {
             if (this.canBlockStay(worldIn, pos.up()))
@@ -148,7 +150,7 @@ public class BlockSeaweed extends Block {
 
                 if (i < 15)
                 {
-                    if (Chance.rand.nextInt(20) == 1)
+                    if (rand.nextInt(Config.seaweedGrowChance) == 0)
                     {
                         worldIn.setBlockState(pos.up(), this.getDefaultState());
                     }
