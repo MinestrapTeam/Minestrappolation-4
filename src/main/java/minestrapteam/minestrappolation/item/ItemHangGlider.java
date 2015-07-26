@@ -1,5 +1,7 @@
 package minestrapteam.minestrappolation.item;
 
+import java.util.Random;
+
 import minestrapteam.minestrappolation.lib.MBlocks;
 import minestrapteam.minestrappolation.util.Chance;
 import net.minecraft.entity.Entity;
@@ -29,6 +31,7 @@ public class ItemHangGlider extends Item
 		
 		if(isSelected && entityIn instanceof EntityPlayer)
 		{
+			Random rand = new Random();
 			EntityPlayer entityplayer = (EntityPlayer)entityIn;
 			double absX = Math.abs(entityplayer.motionX);
 			double absZ = Math.abs(entityplayer.motionZ);
@@ -41,10 +44,10 @@ public class ItemHangGlider extends Item
 				if (worldIn.getBlockState(pos).getBlock() == Blocks.lava || worldIn.getBlockState(pos).getBlock() == Blocks.flowing_lava || worldIn.getBlockState(pos).getBlock() == MBlocks.magma || worldIn.getBlockState(pos).getBlock() == Blocks.fire || worldIn.getBlockState(pos).getBlock() == MBlocks.blazium_block)
 				{
 					entityplayer.motionY += (5 - i) * 0.01D;
-					if(Chance.rand.nextInt(100) == 1)
+					if(rand.nextInt(100) == 1)
 					{
 						if(stack.getItemDamage() < stack.getMaxDamage())
-							stack.attemptDamageItem(1, Chance.rand);
+							stack.attemptDamageItem(1, rand);
 						else
 							entityplayer.destroyCurrentEquippedItem();
 					}

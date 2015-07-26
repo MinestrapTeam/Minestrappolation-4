@@ -54,7 +54,6 @@ public class ClientProxy extends CommonProxy
 		
 		//non registry
 		MFluid.buildRenderFor(MBlocks.magma, "magma");
-		MAchievements.preInit();
 	}
 	
 	@Override

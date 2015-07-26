@@ -21,6 +21,7 @@ public class MAchievements {
 	public static void load()
 	{
 		AchievementPage.registerAchievementPage( new AchievementPage("Minestrappolation", new Achievement[] {stonecutter, sawmill, alloy, melter, frost, bedrock, minestrapp, sifter, god, jam, crusher}));
+		preInit();
 	}
 	
 	public static void preInit()
