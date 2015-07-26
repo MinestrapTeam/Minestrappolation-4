@@ -38,6 +38,7 @@ import minestrapteam.minestrappolation.block.BlockRefined;
 import minestrapteam.minestrappolation.block.BlockRoads;
 import minestrapteam.minestrappolation.block.BlockRope;
 import minestrapteam.minestrappolation.block.BlockSawmill;
+import minestrapteam.minestrappolation.block.BlockSeaweed;
 import minestrapteam.minestrappolation.block.BlockSoul;
 import minestrapteam.minestrappolation.block.BlockSunstoneBlock;
 import minestrapteam.minestrappolation.block.BlockTiles;
@@ -393,6 +394,7 @@ public class MBlocks
 	public static Block strawberry_bush;
 	public static Block raspberry_bush;
 	public static Block mana_bush;
+	public static Block seaweed;
 	
 	//Crops
 	public static Block rice_crop;
@@ -726,6 +728,7 @@ public class MBlocks
 		raspberry_bush = new BlockBush(MItems.raspberry).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("raspberry_bush");
 		strawberry_bush = new BlockBush(MItems.strawberry).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("strawberry_bush");
 		mana_bush = new BlockBush(MItems.mana_leaf).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("mana_bush");
+		seaweed = new BlockSeaweed().setUnlocalizedName("seaweed").setCreativeTab(Minestrappolation.tabMDecor);
 		
 		//Crops
 		rice_crop = new BlockRice().setUnlocalizedName("rice_crop");
@@ -912,6 +915,7 @@ public class MBlocks
 		register(strawberry_bush);
 		register(mana_bush);
 		register(rice_crop);
+		register(seaweed);
 		GameRegistry.registerItem(rice, rice.getUnlocalizedName().substring(5));
 		register(pepper_crop);
 		GameRegistry.registerItem(pepper_seed, pepper_seed.getUnlocalizedName().substring(5));

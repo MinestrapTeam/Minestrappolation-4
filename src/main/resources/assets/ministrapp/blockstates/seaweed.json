@@ -1,5 +1,21 @@
 {
     "variants": {
-        "normal": { "model": "ministrapp:seaweed" }
+"level=15": { "model": "ministrapp:seaweed" },
+"level=14": { "model": "ministrapp:seaweed" },
+"level=13": { "model": "ministrapp:seaweed" },
+"level=12": { "model": "ministrapp:seaweed" },
+"level=11": { "model": "ministrapp:seaweed" },
+"level=10": { "model": "ministrapp:seaweed" },
+"level=9": { "model": "ministrapp:seaweed" },
+"level=8": { "model": "ministrapp:seaweed" },
+"level=7": { "model": "ministrapp:seaweed" },
+"level=6": { "model": "ministrapp:seaweed" },
+"level=5": { "model": "ministrapp:seaweed" },
+"level=4": { "model": "ministrapp:seaweed" },
+"level=3": { "model": "ministrapp:seaweed" },
+"level=3": { "model": "ministrapp:seaweed" },
+"level=2": { "model": "ministrapp:seaweed" },
+"level=1": { "model": "ministrapp:seaweed" },
+"level=0": { "model": "ministrapp:seaweed" }
     }
 }
