@@ -40,32 +40,36 @@ public class MItems extends Item
 {
 	public static ArrayList<Item> itemList = new ArrayList<Item>();
 	
-	public static Item							dough;
-	public static Item							bun;
-	public static Item							pbj_sandwich;
-	public static Item							hamburger;
-	public static Item							sugar_dough;
-	public static Item							chocolate_dough;
-	public static Item							sugar_cookie;
-	public static Item							pie_crust;
-	public static Item							apple_pie;
-	public static Item							fried_egg;
+	//Fruits and Vegetables
 	public static Item							blueberry;
 	public static Item							blackberry;
 	public static Item							raspberry;
 	public static Item							strawberry;
 	public static Item							pepper;
 	public static Item							celery;
-	public static Item							mana_leaf;
-	public static Item							rice_bowl;
-	public static Item							stir_fry;
-	public static Item							hot_sauce;
+	
+	//Bread-Based Foods
+	public static Item							dough;
+	public static Item							sugar_dough;
+	public static Item							chocolate_dough;
+	public static Item							sugar_cookie;
+	public static Item							bun;
+	public static Item							pbj_sandwich;
+	public static Item							hamburger;
+	public static Item							pie_crust;
+	public static Item							apple_pie;
+	
+	//Bowl-Based Food Items
 	public static Item							bread_bowl;
 	public static Item							bread_mushroom_stew;
 	public static Item							bread_rabbit_stew;
-	public static Item							bread_rice_bowl;
-	public static Item							bread_stir_fry;
+	public static Item							fried_egg;
 	public static Item							bread_fried_egg;
+	public static Item							rice_bowl;
+	public static Item							bread_rice_bowl;
+	public static Item							stir_fry;
+	public static Item							bread_stir_fry;
+	
 	public static Item							salad;
 	public static Item							bread_salad;
 	public static Item							health_salad;
@@ -76,25 +80,55 @@ public class MItems extends Item
 	public static Item							bread_speed_salad;
 	public static Item							strength_salad;
 	public static Item							bread_strength_salad;
+	
+	//Bottle-Based Food Items
 	public static Item							jam_bottle;
 	public static Item							peanut_butter_bottle;
+	public static Item							hot_sauce;
 	
+	//Meats
+	public static Item							squid_tentacle;
+	public static Item							calamari;
+	
+	//Plant Products
+	public static Item							mana_leaf;
+	
+	//Minerals
 	public static Item							copper_ingot;
 	public static Item							tin_ingot;
-	public static Item							sunstone_shard;
 	public static Item							bronze_ingot;
 	public static Item							steel_ingot;
-	public static Item							blazium_ingot;
-	public static Item							titanium_ingot;
+	public static Item							sunstone_shard;
 	public static Item							plutonium;
 	public static Item							uranium;
+	public static Item							radiant_quartz;
+	public static Item							meurodite_gem;
+	public static Item							soul_gem;
+	public static Item							torite_ingot;
+	public static Item							desert_quartz_item;
+	public static Item							blaze_shard;
+	public static Item							blazium_ingot;
+	public static Item							titanium_ingot;
+	
 	public static Item							tin_plating;
 	public static Item							steel_plating;
 	public static Item							meurodite_plating;
+	
+	//Crafting Materials
 	public static Item							reinforced_stick;
 	public static Item							animal_bones;
 	public static Item							wing_sinew;
 	public static Item							wing_segment;
+	public static Item							heart_piece;
+	public static Item							pig_foot;
+	public static Item							cow_foot;
+	public static Item							sheep_foot;
+	public static Item							chicken_foot;
+	public static Item							wolf_hide;
+	public static Item							propeller;
+	
+	//Stonecutter
+	public static Item							chunks;
 	
 	public static Item							stone_brick;
 	public static Item							deepstone_brick;
@@ -113,6 +147,7 @@ public class MItems extends Item
 	public static Item							flint_brick;
 	public static Item							obsidian_brick;
 	
+	//Tools and Weapons
 	public static Item							copper_pickaxe;
 	public static Item							copper_axe;
 	public static Item							copper_shovel;
@@ -160,6 +195,7 @@ public class MItems extends Item
 	public static Item							bedrock_shovel;
 	public static Item							bedrock_hoe;
 	
+	//Armor
 	public static Item							tin_helmet;
 	public static Item							tin_chestplate;
 	public static Item							tin_leggings;
@@ -195,38 +231,19 @@ public class MItems extends Item
 	public static Item							titanium_leggings;
 	public static Item							titanium_boots;
 	
-	public static Item							radiant_quartz;
-	public static Item							meurodite_gem;
-	public static Item							soul_gem;
-	public static Item							torite_ingot;
-	public static Item							desert_quartz_item;
-	public static Item							blaze_shard;
-	
-	public static Item							chunks;
-	
+	//Specialty Tools
 	public static Item							sifter;
-	public static Item							heart_piece;
 	public static Item							heart_container;
 	public static Item							soulbottle;
 	public static Item							hangglider;
-	
-	public static Item							pig_foot;
-	public static Item							cow_foot;
-	public static Item							sheep_foot;
-	public static Item							chicken_foot;
-
-	public static Item							backpack;
-	public static Item							satchel;
-
 	public static Item							amuletPorcum;
 	public static Item							amuletVaccam;
 	public static Item							amuletOves;
 	public static Item							amuletPullum;
-	
-	public static Item							wolf_hide;
-	public static Item							squid_tentacle;
-	public static Item							calamari;
+	public static Item							backpack;
+	public static Item							satchel;
 
+	//Tool Enums
 	public static final Item.ToolMaterial		COPPER			= EnumHelper.addToolMaterial("COPPER", 1, 186, 4.5F, 1.5F, 18);
 	public static final Item.ToolMaterial		BRONZE			= EnumHelper.addToolMaterial("BRONZE", 2, 1016, 5.8F, 2.0F, 16);
 	public static final Item.ToolMaterial		STEEL			= EnumHelper.addToolMaterial("STEEL", 2, 420, 7.8F, 2.5F, 20);
@@ -236,6 +253,7 @@ public class MItems extends Item
 	public static final Item.ToolMaterial		TITANIUM		= EnumHelper.addToolMaterial("TITANIUM", 4, 3122, 14.0F, 5.0F, 8);
 	public static final Item.ToolMaterial		BEDROCK			= EnumHelper.addToolMaterial("BEDROCK", 5, 6244, 7.0F, 1.0F, 5);
 	
+	//Armor Enums
 	public static final ItemArmor.ArmorMaterial	ARMOR_TIN		= EnumHelper.addArmorMaterial("ARMOR_TIN", "tin", 4, new int[] { 2, 4, 3, 2 }, 6);
 	public static final ItemArmor.ArmorMaterial	ARMOR_BRONZE	= EnumHelper.addArmorMaterial("ARMOR_BRONZE", "bronze", 30, new int[] { 2, 6, 5, 2 }, 10);
 	public static final ItemArmor.ArmorMaterial	ARMOR_STEEL		= EnumHelper.addArmorMaterial("ARMOR_STEEL", "steel", 19, new int[] { 3, 7, 5, 3 }, 14);
@@ -246,32 +264,35 @@ public class MItems extends Item
 	
 	public static void init()
 	{
-		dough = new ItemFood(1, 0.2F, false).setUnlocalizedName("dough").setCreativeTab(Minestrappolation.tabMFood);
-		bun = new ItemFood(2, 0.3F, false).setUnlocalizedName("bun").setCreativeTab(Minestrappolation.tabMFood);
-		pbj_sandwich = new ItemMFood(14, 2.5F, 0).setUnlocalizedName("pbj_sandwich").setCreativeTab(Minestrappolation.tabMFood);
-		hamburger = new ItemFood(18, 2F, false).setUnlocalizedName("hamburger").setCreativeTab(Minestrappolation.tabMFood);
-		sugar_dough = new ItemFood(1, 0.2F, false).setPotionEffect(Potion.moveSpeed.id, 5, 0, 0.3F).setUnlocalizedName("sugar_dough").setCreativeTab(Minestrappolation.tabMFood);
-		chocolate_dough = new ItemFood(1, 0.3F, false).setUnlocalizedName("chocolate_dough").setCreativeTab(Minestrappolation.tabMFood);
-		sugar_cookie = new ItemFood(1, 0.4F, false).setPotionEffect(Potion.moveSpeed.id, 10, 0, 0.5F).setUnlocalizedName("sugar_cookie").setCreativeTab(Minestrappolation.tabMFood);
-		pie_crust = new ItemFood(2, 0.2F, false).setUnlocalizedName("pie_crust").setCreativeTab(Minestrappolation.tabMFood);
-		apple_pie = new ItemFood(6, 0.7F, false).setUnlocalizedName("apple_pie").setCreativeTab(Minestrappolation.tabMFood);
-		fried_egg = new ItemMSoup(6, 0.4F, Items.bowl, 0).setUnlocalizedName("fried_egg").setCreativeTab(Minestrappolation.tabMFood);
+		//Fruits and Vegetables
 		blueberry = new ItemFood(0, 1.0F, false).setPotionEffect(Potion.healthBoost.id, 10, 0, 0.3F).setUnlocalizedName("blueberry").setCreativeTab(Minestrappolation.tabMFood);
 		blackberry = new ItemFood(1, 0.4F, false).setPotionEffect(Potion.digSpeed.id, 10, 0, 0.3F).setUnlocalizedName("blackberry").setCreativeTab(Minestrappolation.tabMFood);
 		raspberry = new ItemFood(1, 0.0F, false).setPotionEffect(Potion.heal.id, 1, 0, 0.3F).setUnlocalizedName("raspberry").setCreativeTab(Minestrappolation.tabMFood);
 		strawberry = new ItemFood(2, 0.5F, false).setPotionEffect(Potion.damageBoost.id, 10, 0, 0.3F).setUnlocalizedName("strawberry").setCreativeTab(Minestrappolation.tabMFood);
 		pepper = new ItemFood(4, 0.4F, false).setPotionEffect(Potion.moveSpeed.id, 20, 1, 0.5F).setUnlocalizedName("pepper").setCreativeTab(Minestrappolation.tabMFood);
 		celery = new ItemFood(2, 0.4F, false).setUnlocalizedName("celery").setCreativeTab(Minestrappolation.tabMFood);
-		mana_leaf = new Item().setUnlocalizedName("mana_leaf").setCreativeTab(Minestrappolation.tabMMaterials);
-		rice_bowl = new ItemMSoup(5, 0.8F, Items.bowl, 0).setUnlocalizedName("rice_bowl").setCreativeTab(Minestrappolation.tabMFood);
-		stir_fry = new ItemMSoup(8, 1F, Items.bowl, 6).setPotionEffect(Potion.moveSpeed.id, 40, 2, 1F).setUnlocalizedName("stir_fry").setCreativeTab(Minestrappolation.tabMFood);
-		hot_sauce = new ItemMSoup(0, 0.2F, Items.glass_bottle, 10).setPotionEffect(Potion.moveSpeed.id, 40, 2, 1F).setAlwaysEdible().setUnlocalizedName("hot_sauce").setCreativeTab(Minestrappolation.tabMFood);
+		
+		//Bread-Based Foods
+		dough = new ItemFood(1, 0.2F, false).setUnlocalizedName("dough").setCreativeTab(Minestrappolation.tabMFood);
+		sugar_dough = new ItemFood(1, 0.2F, false).setPotionEffect(Potion.moveSpeed.id, 5, 0, 0.3F).setUnlocalizedName("sugar_dough").setCreativeTab(Minestrappolation.tabMFood);
+		chocolate_dough = new ItemFood(1, 0.3F, false).setUnlocalizedName("chocolate_dough").setCreativeTab(Minestrappolation.tabMFood);
+		sugar_cookie = new ItemFood(1, 0.4F, false).setPotionEffect(Potion.moveSpeed.id, 10, 0, 0.5F).setUnlocalizedName("sugar_cookie").setCreativeTab(Minestrappolation.tabMFood);
+		bun = new ItemFood(2, 0.3F, false).setUnlocalizedName("bun").setCreativeTab(Minestrappolation.tabMFood);
+		pbj_sandwich = new ItemMFood(14, 2.5F, 0).setUnlocalizedName("pbj_sandwich").setCreativeTab(Minestrappolation.tabMFood);
+		hamburger = new ItemFood(18, 2F, false).setUnlocalizedName("hamburger").setCreativeTab(Minestrappolation.tabMFood);
+		pie_crust = new ItemFood(2, 0.2F, false).setUnlocalizedName("pie_crust").setCreativeTab(Minestrappolation.tabMFood);
+		apple_pie = new ItemFood(6, 0.7F, false).setUnlocalizedName("apple_pie").setCreativeTab(Minestrappolation.tabMFood);
+		
+		//Bowl-Based Foods
 		bread_bowl = new ItemFood(2, 0.3F, false).setUnlocalizedName("bread_bowl").setCreativeTab(Minestrappolation.tabMFood);
 		bread_mushroom_stew = new ItemFood(8, false).setUnlocalizedName("bread_mushroom_stew").setCreativeTab(Minestrappolation.tabMFood);
 		bread_rabbit_stew = new ItemFood(12, false).setUnlocalizedName("bread_rabbit_stew").setCreativeTab(Minestrappolation.tabMFood);
-		bread_rice_bowl = new ItemMFood(7, 0.8F, 0).setUnlocalizedName("bread_rice_bowl").setCreativeTab(Minestrappolation.tabMFood);
-		bread_stir_fry = new ItemMFood(10, 1F, 6).setUnlocalizedName("bread_stir_fry").setCreativeTab(Minestrappolation.tabMFood);
+		fried_egg = new ItemMSoup(6, 0.4F, Items.bowl, 0).setUnlocalizedName("fried_egg").setCreativeTab(Minestrappolation.tabMFood);
 		bread_fried_egg = new ItemFood(8, 0.4F, false).setUnlocalizedName("bread_fried_egg").setCreativeTab(Minestrappolation.tabMFood);
+		rice_bowl = new ItemMSoup(5, 0.8F, Items.bowl, 0).setUnlocalizedName("rice_bowl").setCreativeTab(Minestrappolation.tabMFood);
+		bread_rice_bowl = new ItemMFood(7, 0.8F, 0).setUnlocalizedName("bread_rice_bowl").setCreativeTab(Minestrappolation.tabMFood);
+		stir_fry = new ItemMSoup(8, 1F, Items.bowl, 6).setPotionEffect(Potion.moveSpeed.id, 40, 2, 1F).setUnlocalizedName("stir_fry").setCreativeTab(Minestrappolation.tabMFood);
+		bread_stir_fry = new ItemMFood(10, 1F, 6).setUnlocalizedName("bread_stir_fry").setCreativeTab(Minestrappolation.tabMFood);
 		salad = new ItemMSoup(8, 0.2F, Items.bowl, 0).setUnlocalizedName("salad").setCreativeTab(Minestrappolation.tabMFood);
 		bread_salad = new ItemFood(10, 0.2F, false).setUnlocalizedName("bread_salad").setCreativeTab(Minestrappolation.tabMFood);
 		health_salad = new ItemMSoup(5, 0.1F, Items.bowl, 0).setPotionEffect(Potion.heal.id, 1, 1, 1F).setUnlocalizedName("health_salad").setCreativeTab(Minestrappolation.tabMFood);
@@ -282,11 +303,20 @@ public class MItems extends Item
 		bread_speed_salad = new ItemFood(8, 0.5F, false).setPotionEffect(Potion.digSpeed.id, 20, 1, 1F).setUnlocalizedName("bread_speed_salad").setCreativeTab(Minestrappolation.tabMFood);
 		strength_salad = new ItemMSoup(7, 0.1F, Items.bowl, 0).setPotionEffect(Potion.damageBoost.id, 20, 1, 1F).setUnlocalizedName("strength_salad").setCreativeTab(Minestrappolation.tabMFood);
 		bread_strength_salad = new ItemFood(9, 0.1F, false).setPotionEffect(Potion.damageBoost.id, 20, 1, 1F).setUnlocalizedName("bread_strength_salad").setCreativeTab(Minestrappolation.tabMFood);
+		
+		//Bottle-Based Foods
+		hot_sauce = new ItemMSoup(0, 0.2F, Items.glass_bottle, 10).setPotionEffect(Potion.moveSpeed.id, 40, 2, 1F).setAlwaysEdible().setUnlocalizedName("hot_sauce").setCreativeTab(Minestrappolation.tabMFood);
 		jam_bottle = new ItemMSoup(4, 1.9F, Items.glass_bottle, 0).setUnlocalizedName("jam_bottle").setCreativeTab(Minestrappolation.tabMFood);
 		peanut_butter_bottle = new ItemMSoup(6, 1F, Items.glass_bottle, 0).setUnlocalizedName("peanut_butter_bottle").setCreativeTab(Minestrappolation.tabMFood);
+		
+		//Meats
 		squid_tentacle = new ItemFood(2, 0.3F, false).setPotionEffect(Potion.poison.id, 5, 1, 0.7F).setUnlocalizedName("squid_tentacle").setCreativeTab(Minestrappolation.tabMFood);
 		calamari = new ItemFood(6, 0.6F, false).setUnlocalizedName("calimari").setCreativeTab(Minestrappolation.tabMFood);
 		
+		//Plant Products
+		mana_leaf = new Item().setUnlocalizedName("mana_leaf").setCreativeTab(Minestrappolation.tabMMaterials);
+		
+		//Minerals
 		copper_ingot = new Item().setUnlocalizedName("copper_ingot").setCreativeTab(Minestrappolation.tabMMaterials);
 		tin_ingot = new Item().setUnlocalizedName("tin_ingot").setCreativeTab(Minestrappolation.tabMMaterials);
 		bronze_ingot = new Item().setUnlocalizedName("bronze_ingot").setCreativeTab(Minestrappolation.tabMMaterials);
@@ -296,11 +326,20 @@ public class MItems extends Item
 		sunstone_shard = new Item().setUnlocalizedName("sunstone_shard").setCreativeTab(Minestrappolation.tabMMaterials);
 		plutonium = new Item().setUnlocalizedName("plutonium").setCreativeTab(Minestrappolation.tabMMaterials);
 		uranium = new Item().setUnlocalizedName("uranium").setCreativeTab(Minestrappolation.tabMMaterials);
+		radiant_quartz = new MItemFoiled().setUnlocalizedName("radiant_quartz").setCreativeTab(Minestrappolation.tabMMaterials);
+		meurodite_gem = new Item().setUnlocalizedName("meurodite_gem").setCreativeTab(Minestrappolation.tabMMaterials);
+		torite_ingot = new Item().setUnlocalizedName("torite_ingot").setCreativeTab(Minestrappolation.tabMMaterials);
+		desert_quartz_item = new Item().setUnlocalizedName("desert_quartz_item").setCreativeTab(Minestrappolation.tabMMaterials);
+		blaze_shard = new Item().setUnlocalizedName("blaze_shard").setCreativeTab(Minestrappolation.tabMMaterials);
+		soul_gem = new ItemSoulGem().setUnlocalizedName("soul_gem").setCreativeTab(Minestrappolation.tabMMaterials);
+		
 		tin_plating = new Item().setUnlocalizedName("tin_plating").setCreativeTab(Minestrappolation.tabMMaterials);
 		steel_plating = new Item().setUnlocalizedName("steel_plating").setCreativeTab(Minestrappolation.tabMMaterials);
 		meurodite_plating = new Item().setUnlocalizedName("meurodite_plating").setCreativeTab(Minestrappolation.tabMMaterials);
-		reinforced_stick = new Item().setUnlocalizedName("reinforced_stick").setCreativeTab(Minestrappolation.tabMMaterials);
 		
+		//Crafting Materials
+		reinforced_stick = new Item().setUnlocalizedName("reinforced_stick").setCreativeTab(Minestrappolation.tabMMaterials);
+		propeller = new Item().setUnlocalizedName("propeller").setCreativeTab(Minestrappolation.tabMMaterials);
 		animal_bones = new Item().setUnlocalizedName("animal_bones").setCreativeTab(Minestrappolation.tabMMaterials);
 		wing_sinew = new Item().setUnlocalizedName("wing_sinew").setCreativeTab(Minestrappolation.tabMMaterials);
 		wing_segment = new Item().setUnlocalizedName("wing_segment").setCreativeTab(Minestrappolation.tabMMaterials);
@@ -309,6 +348,10 @@ public class MItems extends Item
 		sheep_foot = new Item().setUnlocalizedName("sheep_foot").setCreativeTab(Minestrappolation.tabMMaterials);
 		chicken_foot = new Item().setUnlocalizedName("chicken_foot").setCreativeTab(Minestrappolation.tabMMaterials);
 		wolf_hide = new Item().setUnlocalizedName("wolf_hide").setCreativeTab(Minestrappolation.tabMMaterials);
+		heart_piece = new Item().setUnlocalizedName("heart_piece").setCreativeTab(Minestrappolation.tabMTools);
+		
+		//Stonecutter
+		chunks = new ItemChunk().setUnlocalizedName("chunks").setCreativeTab(Minestrappolation.tabMMaterials);
 		
 		stone_brick = new Item().setUnlocalizedName("stone_brick").setCreativeTab(Minestrappolation.tabMMaterials);
 		deepstone_brick = new Item().setUnlocalizedName("deepstone_brick").setCreativeTab(Minestrappolation.tabMMaterials);
@@ -327,6 +370,7 @@ public class MItems extends Item
 		flint_brick = new Item().setUnlocalizedName("flint_brick").setCreativeTab(Minestrappolation.tabMMaterials);
 		obsidian_brick = new Item().setUnlocalizedName("obsidian_brick").setCreativeTab(Minestrappolation.tabMMaterials);
 		
+		//Tools and Weapons
 		copper_pickaxe = new ItemMPickaxe(COPPER, copper_ingot, false).setUnlocalizedName("copper_pickaxe").setCreativeTab(Minestrappolation.tabMTools);
 		copper_axe = new ItemMAxe(COPPER, copper_ingot, false).setUnlocalizedName("copper_axe").setCreativeTab(Minestrappolation.tabMTools);
 		copper_shovel = new ItemMShovel(COPPER, copper_ingot, false).setUnlocalizedName("copper_shovel").setCreativeTab(Minestrappolation.tabMTools);
@@ -374,6 +418,7 @@ public class MItems extends Item
 		bedrock_shovel = new ItemMShovel(BEDROCK, Item.getItemFromBlock(Blocks.bedrock), false).setUnlocalizedName("bedrock_shovel").setCreativeTab(Minestrappolation.tabMTools);
 		bedrock_hoe = new ItemMHoe(BEDROCK, Item.getItemFromBlock(Blocks.bedrock), false).setUnlocalizedName("bedrock_hoe").setCreativeTab(Minestrappolation.tabMTools);
 		
+		//Armor
 		tin_helmet = new ItemMArmor(ARMOR_TIN, 0, 0, tin_ingot, "tin").setUnlocalizedName("tin_helmet").setCreativeTab(Minestrappolation.tabMCombat);
 		tin_chestplate = new ItemMArmor(ARMOR_TIN, 0, 1, tin_ingot, "tin").setUnlocalizedName("tin_chestplate").setCreativeTab(Minestrappolation.tabMCombat);
 		tin_leggings = new ItemMArmor(ARMOR_TIN, 0, 2, tin_ingot, "tin").setUnlocalizedName("tin_leggings").setCreativeTab(Minestrappolation.tabMCombat);
@@ -409,25 +454,13 @@ public class MItems extends Item
 		titanium_leggings = new ItemMArmor(ARMOR_TITANIUM, 0, 2, titanium_ingot, "titanium").setUnlocalizedName("titanium_leggings").setCreativeTab(Minestrappolation.tabMCombat);
 		titanium_boots = new ItemMArmor(ARMOR_TITANIUM, 0, 3, titanium_ingot, "titanium").setUnlocalizedName("titanium_boots").setCreativeTab(Minestrappolation.tabMCombat);
 		
-		radiant_quartz = new MItemFoiled().setUnlocalizedName("radiant_quartz").setCreativeTab(Minestrappolation.tabMMaterials);
-		meurodite_gem = new Item().setUnlocalizedName("meurodite_gem").setCreativeTab(Minestrappolation.tabMMaterials);
-		torite_ingot = new Item().setUnlocalizedName("torite_ingot").setCreativeTab(Minestrappolation.tabMMaterials);
-		desert_quartz_item = new Item().setUnlocalizedName("desert_quartz_item").setCreativeTab(Minestrappolation.tabMMaterials);
-		blaze_shard = new Item().setUnlocalizedName("blaze_shard").setCreativeTab(Minestrappolation.tabMMaterials);
-		soul_gem = new ItemSoulGem().setUnlocalizedName("soul_gem").setCreativeTab(Minestrappolation.tabMMaterials);
-		
-		chunks = new ItemChunk().setUnlocalizedName("chunks").setCreativeTab(Minestrappolation.tabMMaterials);
-		
+		//Specialty Tools
 		sifter = new ItemSifter().setUnlocalizedName("sifter");
-		heart_piece = new Item().setUnlocalizedName("heart_piece").setCreativeTab(Minestrappolation.tabMTools);
 		heart_container = new ItemHeartContainer().setUnlocalizedName("heart_container").setCreativeTab(Minestrappolation.tabMTools);
 		soulbottle = new ItemSoulBottle().setUnlocalizedName("soul_bottle").setCreativeTab(Minestrappolation.tabMTools);
 		hangglider = new ItemHangGlider().setUnlocalizedName("hangglider").setCreativeTab(Minestrappolation.tabMTools);
-		
-
 		backpack = new ItemBackpack(0).setUnlocalizedName("backpack").setCreativeTab(Minestrappolation.tabMTools);
 		satchel = new ItemBackpack(1).setUnlocalizedName("satchel").setCreativeTab(Minestrappolation.tabMTools);
-
 		amuletPorcum = new ItemAmuletPorcum().setUnlocalizedName("amulet_porcum").setCreativeTab(Minestrappolation.tabMTools);
 		amuletVaccam = new ItemAmuletVaccam().setUnlocalizedName("amulet_vaccam").setCreativeTab(Minestrappolation.tabMTools);
 		amuletOves = new ItemAmulet(30).setUnlocalizedName("amulet_oves").setCreativeTab(Minestrappolation.tabMTools);
@@ -436,7 +469,9 @@ public class MItems extends Item
 	
 	public static void register()
 	{	
+		//Materials Tab
 		register(reinforced_stick);
+		register(propeller);
 		register(animal_bones);
 		register(pig_foot);
 		register(cow_foot);
@@ -484,6 +519,7 @@ public class MItems extends Item
 		register(steel_plating);
 		register(meurodite_plating);
 		
+		//Foods Tab
 		register(blueberry);
 		register(blackberry);
 		register(strawberry);
@@ -524,6 +560,20 @@ public class MItems extends Item
 		register(squid_tentacle);
 		register(calamari);
 		
+		//Tools Tab
+		register(sifter);
+		register(hangglider);
+		register(heart_piece);
+		register(heart_container);
+		register(soulbottle);
+		//register(backpack);
+		//register(satchel);
+		register(amuletPorcum);
+		register(amuletVaccam);
+		register(amuletOves);
+		register(amuletPullum);		
+		
+		//Tools Tab and Combat Tab
 		register(copper_pickaxe);
 		register(copper_axe);
 		register(copper_shovel);
@@ -605,20 +655,6 @@ public class MItems extends Item
 		register(bedrock_axe);
 		register(bedrock_shovel);
 		register(bedrock_hoe);
-		
-		register(sifter);
-		register(hangglider);
-		register(heart_piece);
-		register(heart_container);
-		register(soulbottle);
-		
-		//register(backpack);
-		//register(satchel);
-
-		register(amuletPorcum);
-		register(amuletVaccam);
-		register(amuletOves);
-		register(amuletPullum);
 	}
 	
 	public static void register(Item item)

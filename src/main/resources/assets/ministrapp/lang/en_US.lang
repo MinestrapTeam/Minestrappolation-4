@@ -566,6 +566,7 @@ item.reinforced_stick.name=Reinforced Stick
 item.animal_bones.name=Animal Bones
 item.wing_sinew.name=Wing Sinew
 item.wing_segment.name=Wing Segment
+item.propeller.name-Propeller
 
 item.stone_brick.name=Stone Brick
 item.deepstone_brick.name=Deepstone Brick

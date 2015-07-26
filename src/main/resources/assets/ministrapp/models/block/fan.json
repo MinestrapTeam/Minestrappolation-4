@@ -1,12 +1,12 @@
 {
 "__comment": "Designed by Delocuro with BDcraft Cubik PRO 0.93 Beta - http://bdcraft.net",
 "textures": {
-    "particle": "blocks/fan_side",
-    "side": "blocks/fan_side",
-    "blade": "blocks/fan_blade",
-    "inside": "blocks/fan_inside",
-    "top": "blocks/fan_top",
-    "bottom": "blocks/coldstone_bricks"
+    "particle": "ministrapp:blocks/fan_side",
+    "side": "ministrapp:blocks/fan_side",
+    "blade": "ministrapp:blocks/fan_blade",
+    "inside": "ministrapp:blocks/fan_inside",
+    "top": "ministrapp:blocks/fan_top",
+    "bottom": "ministrapp:blocks/coldstone_bricks"
 },
 "elements": [ 
 {

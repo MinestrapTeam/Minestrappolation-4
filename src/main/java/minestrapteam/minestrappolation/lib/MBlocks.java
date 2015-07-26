@@ -13,6 +13,7 @@ import minestrapteam.minestrappolation.block.BlockClaimerator;
 import minestrapteam.minestrappolation.block.BlockColdCobweb;
 import minestrapteam.minestrappolation.block.BlockCrackedBricks;
 import minestrapteam.minestrappolation.block.BlockDeadBranch;
+import minestrapteam.minestrappolation.block.BlockFan;
 import minestrapteam.minestrappolation.block.BlockGodstone;
 import minestrapteam.minestrappolation.block.BlockInvincium;
 import minestrapteam.minestrappolation.block.BlockLamp;
@@ -425,6 +426,7 @@ public class MBlocks
 	public static Block glow_glass_pane;
 	
 	// Misc
+	public static Block fan;
 	public static Block	frost_generator;
 	public static Block	invincium;
 	public static Block rope;
@@ -589,6 +591,7 @@ public class MBlocks
 		frost_generator = new BlockFrostGenerator(Material.rock, MapColor.iceColor).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("frost_generator");
 		splitter = new BlockSplitter(false).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("splitter");
 		splitter_active = new BlockSplitter(true).setUnlocalizedName("splitter_active");
+		fan = new BlockFan(6, Material.rock, MapColor.pinkColor).setHardness(3F).setResistance(20F).setUnlocalizedName("fan").setCreativeTab(Minestrappolation.tabMTech);
 		
 		// Stairs
 		redwood_stairs = new MBlockStairs(ministrapp_planks.getStateFromMeta(MWoodType.REDWOOD.getMetadata()), 300).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("redwood_stairs");
@@ -942,6 +945,7 @@ public class MBlocks
 		register(crate);
 		register(barrel);
 		
+		register(fan);
 		register(plutonium_insulated);
 		register(uranium_insulated);
 		register(sawmill);

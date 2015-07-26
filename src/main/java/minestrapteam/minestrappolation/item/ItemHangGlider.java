@@ -49,6 +49,13 @@ public class ItemHangGlider extends Item
 							entityplayer.destroyCurrentEquippedItem();
 					}
 				}
+				else if(worldIn.getBlockState(pos).getBlock() == MBlocks.fan)
+				{
+					if(entityplayer.motionY <= 0)
+						entityplayer.motionY += 0.1;
+					else
+						entityplayer.motionY += ((0.01 * Chance.randomNumber(i, 8)) * (5 - Chance.randomNumber(-i, i)));
+				}
 			}
 			if (absX < 0.9D)
 			{
