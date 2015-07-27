@@ -28,6 +28,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
@@ -196,6 +197,11 @@ public class MItems extends Item
 	public static Item							bedrock_hoe;
 	
 	//Armor
+	public static Item							rad_helmet;
+	public static Item							rad_chestplate;
+	public static Item							rad_leggings;
+	public static Item							rad_boots;
+	
 	public static Item							tin_helmet;
 	public static Item							tin_chestplate;
 	public static Item							tin_leggings;
@@ -419,6 +425,11 @@ public class MItems extends Item
 		bedrock_hoe = new ItemMHoe(BEDROCK, Item.getItemFromBlock(Blocks.bedrock), false).setUnlocalizedName("bedrock_hoe").setCreativeTab(Minestrappolation.tabMTools);
 		
 		//Armor
+		rad_helmet = new ItemMArmor(ArmorMaterial.LEATHER, 0, 0, Items.leather, "rad").setUnlocalizedName("rad_helmet").setCreativeTab(Minestrappolation.tabMCombat);
+		rad_chestplate = new ItemMArmor(ArmorMaterial.LEATHER, 0, 1, Items.leather, "rad").setUnlocalizedName("rad_chestplate").setCreativeTab(Minestrappolation.tabMCombat);
+		rad_leggings = new ItemMArmor(ArmorMaterial.LEATHER, 0, 2, Items.leather, "rad").setUnlocalizedName("rad_leggings").setCreativeTab(Minestrappolation.tabMCombat);
+		rad_boots = new ItemMArmor(ArmorMaterial.LEATHER, 0, 3, Items.leather, "rad").setUnlocalizedName("rad_boots").setCreativeTab(Minestrappolation.tabMCombat);
+		
 		tin_helmet = new ItemMArmor(ARMOR_TIN, 0, 0, tin_ingot, "tin").setUnlocalizedName("tin_helmet").setCreativeTab(Minestrappolation.tabMCombat);
 		tin_chestplate = new ItemMArmor(ARMOR_TIN, 0, 1, tin_ingot, "tin").setUnlocalizedName("tin_chestplate").setCreativeTab(Minestrappolation.tabMCombat);
 		tin_leggings = new ItemMArmor(ARMOR_TIN, 0, 2, tin_ingot, "tin").setUnlocalizedName("tin_leggings").setCreativeTab(Minestrappolation.tabMCombat);
@@ -579,6 +590,11 @@ public class MItems extends Item
 		register(copper_shovel);
 		register(copper_hoe);
 		register(copper_sword);
+		
+		register(rad_helmet);
+		register(rad_chestplate);
+		register(rad_leggings);
+		register(rad_boots);
 		
 		register(tin_helmet);
 		register(tin_chestplate);

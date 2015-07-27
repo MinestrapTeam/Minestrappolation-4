@@ -5,10 +5,13 @@ import java.util.Random;
 
 import minestrapteam.minestrappolation.Config;
 import minestrapteam.minestrappolation.block.ore.MBlockOre;
+import minestrapteam.minestrappolation.lib.MItems;
+import minestrapteam.minestrappolation.util.PlayerHelper;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
@@ -45,7 +48,17 @@ public abstract class BlockRadiation extends MBlockOre
 			
 			for (EntityLivingBase living : list)
 			{
-				this.addPotionEffect(living, world, pos);
+				if(living instanceof EntityPlayer)
+				{
+					if(!PlayerHelper.hasArmorSet((EntityPlayer)living, MItems.rad_helmet, MItems.rad_chestplate, MItems.rad_leggings, MItems.rad_boots))
+					{
+						this.addPotionEffect(living, world, pos);
+					}
+				}
+				else
+				{
+					this.addPotionEffect(living, world, pos);
+				}	
 			}
 		}
 	}

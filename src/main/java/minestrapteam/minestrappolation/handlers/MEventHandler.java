@@ -10,6 +10,7 @@ import minestrapteam.minestrappolation.lib.MItems;
 import minestrapteam.minestrappolation.lib.MReference;
 import minestrapteam.minestrappolation.util.ChunkHelper;
 import minestrapteam.minestrappolation.util.NBTHelper;
+import minestrapteam.minestrappolation.util.PlayerHelper;
 import minestrapteam.minestrappolation.util.VersionChecker;
 import minestrapteam.minestrappolation.world.MBiomeManager;
 import net.minecraft.block.BlockNetherWart;
@@ -122,29 +123,27 @@ public class MEventHandler
 		if (event.entity instanceof EntityPlayer)
 		{
 			EntityPlayer player = (EntityPlayer) event.entity;
-			ItemStack helmet = player.getCurrentArmor(3);
-			ItemStack chest = player.getCurrentArmor(2);
-			ItemStack pants = player.getCurrentArmor(1);
-			ItemStack boots = player.getCurrentArmor(0);
-			
-			if (helmet != null && chest != null && pants != null && boots != null)
+
+			if (PlayerHelper.hasArmorSet(player, MItems.meurodite_helmet, MItems.meurodite_chestplate, MItems.meurodite_leggings, MItems.meurodite_boots))
 			{
-				if (helmet.getItem() == MItems.meurodite_helmet && chest.getItem() == MItems.meurodite_chestplate && pants.getItem() == MItems.meurodite_leggings && boots.getItem() == MItems.meurodite_boots)
-				{
-					player.addPotionEffect(new PotionEffect(Potion.fireResistance.id, 2, 0, true, false));
-				}
-				else if (helmet.getItem() == MItems.torite_helmet && chest.getItem() == MItems.torite_chestplate && pants.getItem() == MItems.torite_leggings && boots.getItem() == MItems.torite_boots)
-				{
-					player.addPotionEffect(new PotionEffect(Potion.regeneration.id, 2, 0, true, false));
-				}
-				else if (helmet.getItem() == MItems.titanium_helmet && chest.getItem() == MItems.titanium_chestplate && pants.getItem() == MItems.titanium_leggings && boots.getItem() == MItems.titanium_boots)
-				{
-					player.addPotionEffect(new PotionEffect(Potion.resistance.id, 2, 1, true, false));
-				}
+				player.addPotionEffect(new PotionEffect(Potion.fireResistance.id, 2, 0, true, false));
 			}
+			else if (PlayerHelper.hasArmorSet(player, MItems.torite_helmet, MItems.torite_chestplate, MItems.torite_leggings, MItems.torite_boots))
+			{
+				player.addPotionEffect(new PotionEffect(Potion.regeneration.id, 2, 0, true, false));
+			}
+			else if (PlayerHelper.hasArmorSet(player, MItems.titanium_helmet, MItems.titanium_chestplate, MItems.titanium_leggings, MItems.titanium_boots))
+			{
+				player.addPotionEffect(new PotionEffect(Potion.resistance.id, 2, 1, true, false));
+			}
+			
 			if(ChunkHelper.getChunkBiomeForEntity(player).equals(MBiomeManager.frost.biomeName) && Config.frostSpeedEffect && !player.capabilities.isCreativeMode)
 			{
 				player.addStat(MAchievements.frost, 1);
+				ItemStack helmet = player.getCurrentArmor(3);
+				ItemStack chest = player.getCurrentArmor(2);
+				ItemStack pants = player.getCurrentArmor(1);
+				ItemStack boots = player.getCurrentArmor(0);
 				if(helmet == null || chest == null || pants == null || boots == null)
 				{
 					player.motionX *= .75;
@@ -172,11 +171,6 @@ public class MEventHandler
 		{
 			EntityPlayer player = (EntityPlayer) event.entityLiving;
 			
-			ItemStack helmet = player.getCurrentArmor(3);
-			ItemStack chest = player.getCurrentArmor(2);
-			ItemStack pants = player.getCurrentArmor(1);
-			ItemStack boots = player.getCurrentArmor(0);
-			
 			if("fall".equals(event.source.damageType))
 			{
 				if(player.inventory.hasItem(MItems.amuletPullum))
@@ -194,12 +188,13 @@ public class MEventHandler
 			}
 			else
 			{
-				if(("mob".equals(event.source.damageType) || "player".equals(event.source.damageType)) && helmet.getItem() == MItems.blazium_helmet && chest.getItem() == MItems.blazium_chestplate && pants.getItem() == MItems.blazium_leggings && boots.getItem() == MItems.blazium_boots)
+				if(("mob".equals(event.source.damageType) || "player".equals(event.source.damageType)) && PlayerHelper.hasArmorSet(player, MItems.blazium_helmet, MItems.blazium_chestplate, MItems.blazium_leggings, MItems.blazium_boots))
 				{
 					player.addPotionEffect(new PotionEffect(Potion.fireResistance.id, 2, 0, true, false));
 					Entity living = event.source.getEntity();
 					living.setFire(5);
 				}
+				
 				if(player.inventory.hasItem(MItems.amuletOves))
 				{
 					int slot = this.getItemsSlot(player, MItems.amuletOves);
