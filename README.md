@@ -1,5 +1,6 @@
 Minestrappolation 4 [![Build Status](https://drone.io/github.com/MinestrapTeam/Minestrappolation-4/status.png)](https://drone.io/github.com/MinestrapTeam/Minestrappolation-4/latest) [![Join the chat at https://gitter.im/MinestrapTeam/Minestrappolation-4](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/MinestrapTeam/Minestrappolation-4?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 =====================================
+[Official Forum Page](http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/2480301-minestrappolation-4-its-out)
 
 We have nightly builds check them out!
 
@@ -15,3 +16,5 @@ RULES FOR COMMITTING ANY CODE
 - If you have to push a commit with a problem YOU CANT FIX make a issue for it immediately 
 
 IF YOU YOU DO ANY OF THIS YOUR CHANGES WILL BE REVERTED EACH AND EVERY TIME YOU COMMIT IT
+
+Want to help? Create a PR! Or submit a [bug](https://github.com/MinestrapTeam/Minestrappolation-4/issues)

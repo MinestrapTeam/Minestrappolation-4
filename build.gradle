@@ -29,6 +29,8 @@ if (ENV.DRONE_BUILD_NUMBER) {
 }
 group= "minestrapteam"
 archivesBaseName = "Minestrappolation"
+targetCompatibility = '1.8'
+sourceCompatibility = '1.8'
 
 minecraft
 {
@@ -37,10 +39,12 @@ minecraft
     if (file('../run').exists())
     {
     	runDir = '../run'
+	assetDir = '../run'
     }
     else
     {
     	runDir = 'eclipse'
+	assetDir = 'eclipse'
     }
     
     // the mappings can be changed at any time, and must be in the following format.
@@ -48,7 +52,7 @@ minecraft
     // stable_#            stables are built at the discretion of the MCP team.
     // Use non-default mappings at your own risk. they may not allways work.
     // simply re-run your setup task after changing the mappings to update your workspace.
-    mappings = "snapshot_20150721"
+    mappings = "snapshot_20150727"
 }
 
 task textureZip(type: Zip)
