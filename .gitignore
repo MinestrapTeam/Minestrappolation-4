@@ -1,24 +1,5 @@
 #Workspace Files
-#I have to ignore all mc files because they are in my workspace for some reason.
-servers.dat
-banned-ips.json
-banned-players.json
-ops.json
-usercache.json
-whitelist.json
-eula.txt
-server.properties
-stencil1.png
-stencil2.png
-stencil3.png
-usernamecache.json
-options.txt
 asm
-saves
-mods
-crash-reports
-config
-logs
 gradle
 gradlew
 .gradle
