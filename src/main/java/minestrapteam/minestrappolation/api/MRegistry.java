@@ -11,14 +11,14 @@ import net.minecraft.item.ItemStack;
 public class MRegistry
 {
 	
-	public static void addMelterRecipe(Block block, ItemStack stack, float xp)
+	public static void addMelterRecipe(Block block, ItemStack stack, float xp, boolean bucket)
 	{
-		MelterRecipes.instance().addRecipe(block, stack, xp);
+		MelterRecipes.instance().addRecipe(block, stack, xp, bucket);
 	}
 	
-	public static void addMelterRecipe(Item item, ItemStack stack, float xp)
+	public static void addMelterRecipe(Item item, ItemStack stack, float xp, boolean bucket)
 	{
-		MelterRecipes.instance().addRecipe(item, stack, xp);
+		MelterRecipes.instance().addRecipe(item, stack, xp, bucket);
 	}
 	
 	public static void addAlloyRecipe(Block block, Block block2, ItemStack stack, float xp)

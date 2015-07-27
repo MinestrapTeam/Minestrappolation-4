@@ -196,10 +196,13 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 			if (output == null)
 				return false;
 			ItemStack container = new ItemStack(Items.bucket);
-			if (container != null)
+			if(MelterRecipes.instance().needsBucket(input))
 			{
-				if (!ItemStack.areItemsEqual(container, this.itemStacks[3]))
-					return false;
+				if (container != null)
+				{
+					if (!ItemStack.areItemsEqual(container, this.itemStacks[3]))
+						return false;
+				}
 			}
 			ItemStack outputSlot = this.itemStacks[2];
 			if (outputSlot == null)
