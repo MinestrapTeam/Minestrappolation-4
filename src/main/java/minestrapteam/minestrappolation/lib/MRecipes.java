@@ -21,7 +21,8 @@ public class MRecipes
 		GameRegistry.addRecipe(new ItemStack(MItems.amuletOves, 1), new Object[] {"SSS", "GFG", "NGN", 'S', Items.string, 'G', Items.gold_ingot, 'F', MItems.sheep_foot, 'N', Items.gold_nugget });
 		GameRegistry.addRecipe(new ItemStack(MItems.amuletPullum, 1), new Object[] {"SSS", "GFG", "NGN", 'S', Items.string, 'G', Items.gold_ingot, 'F', MItems.chicken_foot, 'N', Items.gold_nugget });
 		GameRegistry.addRecipe(new ItemStack(MItems.propeller, 1), new Object[] { "C C", " B ", " C ", 'C', MItems.copper_ingot, 'B', MItems.bronze_ingot});
-		GameRegistry.addRecipe(new ItemStack(MBlocks.fan, 1), new Object[] { "GSG", "CBC", "CPC", 'G', MBlocks.granite_bricks, 'S', MBlocks.steel_mesh, 'C', new ItemStack(MBlocks.biome_bricks, 1, 3), 'B', MItems.propeller, 'P', Blocks.piston });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.fan, 1), new Object[] { "GSG", "CBC", "CPC", 'G', MBlocks.granite_bricks, 'S', MBlocks.steel_mesh, 'C', new ItemStack(MBlocks.biome_bricks, 1, 3), 'B', MItems.propeller, 'P', MItems.technological_doodad });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.chimney, 1), new Object[] { "G G", "SSS", "SSS", 'G', MItems.granite_brick, 'S', MItems.slate_brick});
 		
 		//TODO: Un-Comment these recipes when Backpacks and Satchels are added.
 		//GameRegistry.addRecipe(new ItemStack(MItems.satchel, 1), new Object[] {"HRH", "HCH", "HHH", 'H', Items.rabbit_hide, 'R', MBlocks.rope, 'C', MBlocks.crate });
@@ -66,6 +67,11 @@ public class MRecipes
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.jam_bottle, 1), new Object[] { MItems.blueberry, MItems.strawberry, MItems.raspberry, MItems.blackberry, Items.glass_bottle });
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.peanut_butter_bottle, 1), new Object[] { MBlocks.peanuts, MBlocks.peanuts, MBlocks.peanuts, MBlocks.peanuts, Items.glass_bottle });
 		GameRegistry.addSmelting(new ItemStack(MItems.squid_tentacle), new ItemStack(MItems.calamari), 0.3F);
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.sushi, 1), new Object[] { MBlocks.seaweed, MBlocks.rice, Items.carrot, new ItemStack(Items.cooked_fish, 1, 1) });
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.sushi, 1), new Object[] { MBlocks.seaweed, MBlocks.rice, MItems.celery, new ItemStack(Items.cooked_fish, 1, 1) });
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.lucky_sushi, 1), new Object[] { MBlocks.seaweed, MBlocks.rice, Items.carrot, MItems.hot_sauce, new ItemStack(Items.fish, 1, 2), Items.gold_nugget, Items.gold_nugget, Items.gold_nugget, Items.gold_nugget });
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.lucky_sushi, 1), new Object[] { MBlocks.seaweed, MBlocks.rice, MItems.celery, MItems.hot_sauce, new ItemStack(Items.fish, 1, 2), Items.gold_nugget, Items.gold_nugget, Items.gold_nugget, Items.gold_nugget });
+		GameRegistry.addRecipe(new ItemStack(MItems.onigiri, 3), new Object[] { " R ", "RCR", "RSR", 'R', MBlocks.rice, 'C', MItems.calamari, 'S', MBlocks.seaweed });
 		
 		// Minerals
 		GameRegistry.addSmelting(MBlocks.copper_ore, new ItemStack(MItems.copper_ingot), 0.5F);
@@ -278,6 +284,13 @@ public class MRecipes
 		GameRegistry.addRecipe(new ItemStack(MItems.titanium_chestplate), new Object[] { "I I", "III", "III", 'I', MItems.titanium_ingot });
 		GameRegistry.addRecipe(new ItemStack(MItems.titanium_leggings), new Object[] { "III", "I I", "I I", 'I', MItems.titanium_ingot });
 		GameRegistry.addRecipe(new ItemStack(MItems.titanium_boots), new Object[] { "I I", "I I", 'I', MItems.titanium_ingot });
+		
+		GameRegistry.addRecipe(new ItemStack(MItems.rad_helmet), new Object[] { "TST", "UGU", 'T', MItems.torite_ingot, 'S', MItems.steel_plating, 'U', MItems.uranium, 'G', new ItemStack(Blocks.stained_glass_pane, 1, 2) });
+		GameRegistry.addRecipe(new ItemStack(MItems.rad_chestplate), new Object[] { "S S", "URU", "TDT", 'S', MItems.steel_plating, 'U', MItems.uranium, 'R', new ItemStack(Items.potionitem, 1, 8193), 'T', MItems.torite_ingot, 'D', MItems.technological_doodad });
+		GameRegistry.addRecipe(new ItemStack(MItems.rad_chestplate), new Object[] { "S S", "URU", "TDT", 'S', MItems.steel_plating, 'U', MItems.uranium, 'R', new ItemStack(Items.potionitem, 1, 8257), 'T', MItems.torite_ingot, 'D', MItems.technological_doodad });
+		GameRegistry.addRecipe(new ItemStack(MItems.rad_chestplate), new Object[] { "S S", "URU", "TDT", 'S', MItems.steel_plating, 'U', MItems.uranium, 'R', new ItemStack(Items.potionitem, 1, 8225), 'T', MItems.torite_ingot, 'D', MItems.technological_doodad });
+		GameRegistry.addRecipe(new ItemStack(MItems.rad_leggings), new Object[] { "SDS", "P P", "T T", 'S', MItems.steel_plating, 'D', MItems.technological_doodad, 'P', MItems.plutonium, 'T', MItems.torite_ingot });
+		GameRegistry.addRecipe(new ItemStack(MItems.rad_boots), new Object[] { "S S", "P P", "T T", 'S', MItems.steel_plating, 'P', MItems.plutonium, 'T', MItems.torite_ingot });
 		
 		//Vanilla
 		GameRegistry.addRecipe(new ItemStack(Blocks.redstone_lamp, 1, 0), new Object[] { " R ", "RSR", " R ", 'R', Items.redstone, 'S', MBlocks.sunstone_block});

@@ -1,6 +1,41 @@
-4.0.2A(or what ever version it may be)
- - Fixed soul bottles not working in multiplayer
- - NEI compatible
+4.0.2A
+ - Added Chicken Feet (dropped by Chickens).
+ - Added Sheep Feet (dropped by Sheep).
+ - Added Pig Feet (dropped by Pigs and Zombie Pigmen).
+ - Added Cow Feet (dropped by Cows and Mooshrooms).
+ - Added Pullum Amulets.
+ - Added Oves Amulets.
+ - Added Porcum Amulets.
+ - Added Vaccam Amulets.
+ - Added Wolf Hide (dropped by Wolves).
+ - Added Squid Tentacles (dropped by Squids and Guardians).
+ - Added Calamari.
+ - Added Onigiri.
+ - Added Sushi.
+ - Added Lucky Sushi.
+ - Added Propellers.
+ - Added Technological Doodads (found in dungeon Chests and dropped by Iron Golems).
+ - Added Resilient Armor (protects against Uranium and Plutonium Ores' effects).
+ - Added Fan blocks.
+ - Added Chimney blocks.
+ - Added growable Seaweed blocks and items (generate in Ocean biomes).
+ - Added Prismarine Slabs.
+ - Added Prismarine Stairs.
+ - Right-clicking crops with a Torite Hoe will Bone Meal them at the cost of 10 durability.
+ - Blazium Tools' Flint and Steel effect now costs 4 durability per use instead of 2 (with the eception of Blazium Hoes).
+ - Wearing a full set of Blazium Armor now causes all direct attackers to be lit on fire.
+ - Tweaked Berry hunger restoration values.
+ - Fixed Soul Bottles not working in multiplayer.
+ - Fixed Berry Bushes making Stone sounds when broken.
+ - Fixed Redwood Leaves' decay range being much shorter than their generated distance from the trunk.
+ - Fixed being able to shift-sneak off the edge of Roads.
+ - Fixed Roads giving players a speed boost when they bump against the side of the Road block.
+ - Fixed Achievements resetting upon logging off of a server.
+ - Fixed non-Bucket melting recipes (such as Titanium Ore to Titanium Ingots) requiring a Bucket.
+ - Added Not Enough Items support for all milling, cutting, alloying, melting, and crushing recipes.
+ - Changed Vanilla's Rain texture to make it less obtrusive.
+ - Improved Wing Sinew texture.
+ - Improved Meurodite and Titanium Armor model textures.
 
 4.0.1A
- - Initial release
+ - Initial release.

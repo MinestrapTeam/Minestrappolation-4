@@ -90,6 +90,9 @@ public class MItems extends Item
 	//Meats
 	public static Item							squid_tentacle;
 	public static Item							calamari;
+	public static Item							sushi;
+	public static Item							lucky_sushi;
+	public static Item							onigiri;
 	
 	//Plant Products
 	public static Item							mana_leaf;
@@ -127,6 +130,7 @@ public class MItems extends Item
 	public static Item							chicken_foot;
 	public static Item							wolf_hide;
 	public static Item							propeller;
+	public static Item							technological_doodad;
 	
 	//Stonecutter
 	public static Item							chunks;
@@ -271,8 +275,8 @@ public class MItems extends Item
 	public static void init()
 	{
 		//Fruits and Vegetables
-		blueberry = new ItemFood(0, 1.0F, false).setPotionEffect(Potion.healthBoost.id, 10, 0, 0.3F).setUnlocalizedName("blueberry").setCreativeTab(Minestrappolation.tabMFood);
-		blackberry = new ItemFood(1, 0.4F, false).setPotionEffect(Potion.digSpeed.id, 10, 0, 0.3F).setUnlocalizedName("blackberry").setCreativeTab(Minestrappolation.tabMFood);
+		blueberry = new ItemFood(1, 1.0F, false).setPotionEffect(Potion.healthBoost.id, 10, 0, 0.3F).setUnlocalizedName("blueberry").setCreativeTab(Minestrappolation.tabMFood);
+		blackberry = new ItemFood(2, 0.4F, false).setPotionEffect(Potion.digSpeed.id, 10, 0, 0.3F).setUnlocalizedName("blackberry").setCreativeTab(Minestrappolation.tabMFood);
 		raspberry = new ItemFood(1, 0.0F, false).setPotionEffect(Potion.heal.id, 1, 0, 0.3F).setUnlocalizedName("raspberry").setCreativeTab(Minestrappolation.tabMFood);
 		strawberry = new ItemFood(2, 0.5F, false).setPotionEffect(Potion.damageBoost.id, 10, 0, 0.3F).setUnlocalizedName("strawberry").setCreativeTab(Minestrappolation.tabMFood);
 		pepper = new ItemFood(4, 0.4F, false).setPotionEffect(Potion.moveSpeed.id, 20, 1, 0.5F).setUnlocalizedName("pepper").setCreativeTab(Minestrappolation.tabMFood);
@@ -318,6 +322,9 @@ public class MItems extends Item
 		//Meats
 		squid_tentacle = new ItemFood(2, 0.3F, false).setPotionEffect(Potion.poison.id, 5, 1, 0.7F).setUnlocalizedName("squid_tentacle").setCreativeTab(Minestrappolation.tabMFood);
 		calamari = new ItemFood(6, 0.6F, false).setUnlocalizedName("calimari").setCreativeTab(Minestrappolation.tabMFood);
+		sushi = new ItemFood(16, 1.8F, false).setUnlocalizedName("sushi").setCreativeTab(Minestrappolation.tabMFood);
+		lucky_sushi = new ItemMFood(12, 1.0F, 0).setUnlocalizedName("lucky_sushi").setCreativeTab(Minestrappolation.tabMFood);
+		onigiri = new ItemFood(11, 1.2F, false).setUnlocalizedName("onigiri").setCreativeTab(Minestrappolation.tabMFood);
 		
 		//Plant Products
 		mana_leaf = new Item().setUnlocalizedName("mana_leaf").setCreativeTab(Minestrappolation.tabMMaterials);
@@ -354,6 +361,7 @@ public class MItems extends Item
 		sheep_foot = new Item().setUnlocalizedName("sheep_foot").setCreativeTab(Minestrappolation.tabMMaterials);
 		chicken_foot = new Item().setUnlocalizedName("chicken_foot").setCreativeTab(Minestrappolation.tabMMaterials);
 		wolf_hide = new Item().setUnlocalizedName("wolf_hide").setCreativeTab(Minestrappolation.tabMMaterials);
+		technological_doodad = new Item().setUnlocalizedName("technological_doodad").setCreativeTab(Minestrappolation.tabMMaterials);
 		heart_piece = new Item().setUnlocalizedName("heart_piece").setCreativeTab(Minestrappolation.tabMTools);
 		
 		//Stonecutter
@@ -425,10 +433,10 @@ public class MItems extends Item
 		bedrock_hoe = new ItemMHoe(BEDROCK, Item.getItemFromBlock(Blocks.bedrock), false).setUnlocalizedName("bedrock_hoe").setCreativeTab(Minestrappolation.tabMTools);
 		
 		//Armor
-		rad_helmet = new ItemMArmor(ArmorMaterial.LEATHER, 0, 0, Items.leather, "rad").setUnlocalizedName("rad_helmet").setCreativeTab(Minestrappolation.tabMCombat);
-		rad_chestplate = new ItemMArmor(ArmorMaterial.LEATHER, 0, 1, Items.leather, "rad").setUnlocalizedName("rad_chestplate").setCreativeTab(Minestrappolation.tabMCombat);
-		rad_leggings = new ItemMArmor(ArmorMaterial.LEATHER, 0, 2, Items.leather, "rad").setUnlocalizedName("rad_leggings").setCreativeTab(Minestrappolation.tabMCombat);
-		rad_boots = new ItemMArmor(ArmorMaterial.LEATHER, 0, 3, Items.leather, "rad").setUnlocalizedName("rad_boots").setCreativeTab(Minestrappolation.tabMCombat);
+		rad_helmet = new ItemMArmor(ARMOR_STEEL, 0, 0, uranium, "rad").setUnlocalizedName("rad_helmet").setCreativeTab(Minestrappolation.tabMCombat);
+		rad_chestplate = new ItemMArmor(ARMOR_STEEL, 0, 1, uranium, "rad").setUnlocalizedName("rad_chestplate").setCreativeTab(Minestrappolation.tabMCombat);
+		rad_leggings = new ItemMArmor(ARMOR_STEEL, 0, 2, plutonium, "rad").setUnlocalizedName("rad_leggings").setCreativeTab(Minestrappolation.tabMCombat);
+		rad_boots = new ItemMArmor(ARMOR_STEEL, 0, 3, plutonium, "rad").setUnlocalizedName("rad_boots").setCreativeTab(Minestrappolation.tabMCombat);
 		
 		tin_helmet = new ItemMArmor(ARMOR_TIN, 0, 0, tin_ingot, "tin").setUnlocalizedName("tin_helmet").setCreativeTab(Minestrappolation.tabMCombat);
 		tin_chestplate = new ItemMArmor(ARMOR_TIN, 0, 1, tin_ingot, "tin").setUnlocalizedName("tin_chestplate").setCreativeTab(Minestrappolation.tabMCombat);
@@ -483,6 +491,7 @@ public class MItems extends Item
 		//Materials Tab
 		register(reinforced_stick);
 		register(propeller);
+		register(technological_doodad);
 		register(animal_bones);
 		register(pig_foot);
 		register(cow_foot);
@@ -568,8 +577,11 @@ public class MItems extends Item
 		register(jam_bottle);
 		register(peanut_butter_bottle);
 		register(hot_sauce);
+		register(sushi);
+		register(lucky_sushi);
 		register(squid_tentacle);
 		register(calamari);
+		register(onigiri);
 		
 		//Tools Tab
 		register(sifter);
@@ -702,6 +714,7 @@ public class MItems extends Item
 		ChestGenHooks netherFortress = ChestGenHooks.getInfo(ChestGenHooks.NETHER_FORTRESS);
 		
 		//Dungeon
+		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(technological_doodad), 2, 6, 50));
 		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(copper_ingot), 1, 4, 20));
 		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(tin_ingot), 1, 4, 20));
 		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(sunstone_shard), 1, 4, 25));
@@ -716,6 +729,7 @@ public class MItems extends Item
 		dungeonChest.addItem(new WeightedRandomChestContent(new ItemStack(heart_piece), 1, 2, 6));
 		
 		//Abandoned Mineshaft
+		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(technological_doodad), 1, 3, 30));
 		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(copper_ingot), 1, 5, 30));
 		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(tin_ingot), 1, 5, 30));
 		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(sunstone_shard), 4, 8, 30));
@@ -731,6 +745,7 @@ public class MItems extends Item
 		mineshaftCorridor.addItem(new WeightedRandomChestContent(new ItemStack(heart_piece), 1, 2, 6));
 		
 		//Stronghold Corridor
+		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(technological_doodad), 1, 4, 40));
 		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(copper_ingot), 1, 5, 30));
 		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(tin_ingot), 1, 5, 30));
 		strongholdCorridor.addItem(new WeightedRandomChestContent(new ItemStack(sunstone_shard), 3, 9, 30));

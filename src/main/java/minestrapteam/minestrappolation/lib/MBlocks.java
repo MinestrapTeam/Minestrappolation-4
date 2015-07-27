@@ -642,7 +642,7 @@ public class MBlocks
 		
 		// Misc
 		invincium = new BlockInvincium(Material.rock).setUnlocalizedName("invincium").setBlockUnbreakable().setHardness(50000F).setCreativeTab(Minestrappolation.tabMBuilding);
-		chimney = new BlockChimney(Material.rock, MapColor.blackColor).setUnlocalizedName("chimney").setCreativeTab(Minestrappolation.tabMBuilding);
+		chimney = new BlockChimney(Material.rock, MapColor.blackColor).setHardness(1.5F).setResistance(10F).setUnlocalizedName("chimney").setCreativeTab(Minestrappolation.tabMDecor);
 		
 		//Wood Slabs
 		redwood_slab = new BlockMSlab(Material.wood, "redwood_slab", 2F, 5F, "axe", 0, 300);
@@ -959,9 +959,9 @@ public class MBlocks
 		GameRegistry.registerItem(glass_door_item, glass_door_item.getUnlocalizedName().substring(5));
 		register(crate);
 		register(barrel);
+		register(chimney);
 		
 		register(fan);
-		register(chimney);
 		register(plutonium_insulated);
 		register(uranium_insulated);
 		register(sawmill);

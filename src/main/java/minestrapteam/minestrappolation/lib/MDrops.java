@@ -5,6 +5,8 @@ import java.util.Random;
 import minestrapteam.minestrappolation.Config;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntityGuardian;
+import net.minecraft.entity.monster.EntityIronGolem;
+import net.minecraft.entity.monster.EntityPigZombie;
 import net.minecraft.entity.passive.EntityBat;
 import net.minecraft.entity.passive.EntityChicken;
 import net.minecraft.entity.passive.EntityCow;
@@ -71,6 +73,14 @@ public class MDrops
 		{
 			dropSquidItems(living, random, onFire, looting);
 		}
+		if(living instanceof EntityIronGolem)
+		{
+			dropIronGolemItems(living, random, onFire, looting);
+		}
+		if(living instanceof EntityPigZombie)
+		{
+			dropPigItems(living, random, onFire, looting);
+		}
 	}
 	
 	private static void dropPigItems(EntityLivingBase living, Random random, boolean onFire, int looting)
@@ -120,6 +130,13 @@ public class MDrops
 		if (random.nextFloat() / looting < Config.sinewDropChance)
 		{
 			living.dropItem(MItems.wing_sinew, random.nextInt(Config.sinewDropAmount + looting));
+		}
+	}
+	private static void dropIronGolemItems(EntityLivingBase living, Random random, boolean onFire, int looting)
+	{
+		if (random.nextFloat() / looting < Config.doodadDropChance)
+		{
+			living.dropItem(MItems.technological_doodad, random.nextInt(Config.doodadDropAmount + looting));
 		}
 	}
 	private static void dropQuadripedItems(EntityLivingBase living, Random random, boolean onFire, int looting)

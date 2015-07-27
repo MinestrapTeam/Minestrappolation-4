@@ -474,8 +474,10 @@ tile.frost_generator.name=Frost Generator
 tile.splitter.name=Alchemical Splitter
 tile.claimerator.name=Quantum Claimerator
 tile.fan.name=Fan
+tile.chimney.name=Chimney
 
 tile.moss.name=Moss Lump
+tile.seaweed.name=Seaweed
 tile.blueberry_bush.name=Blueberry Bush
 tile.raspberry_bush.name=Raspberry Bush
 tile.blackberry_bush.name=Blackberry Bush
@@ -574,6 +576,7 @@ item.pig_foot.name=Pig Hoof
 item.cow_foot.name=Cow Hoof
 item.sheep_foot.name=Sheep Hoof
 item.chicken_foot.name=Chicken Foot
+item.technological_doodad.name=Technological Doodad
 
 item.stone_brick.name=Stone Brick
 item.deepstone_brick.name=Deepstone Brick
@@ -673,6 +676,11 @@ item.titanium_helmet.name=Titanium Helmet
 item.titanium_chestplate.name=Titanium Chestplate
 item.titanium_leggings.name=Titanium Leggings
 item.titanium_boots.name=Titanium Boots
+
+item.rad_helmet.name=Resilient Helmet
+item.rad_chestplate.name=Resilient Chestplate
+item.rad_leggings.name=Resilient Leggings
+item.rad_boots.name=Resilient Boots
 
 item.sifter.name=Mining Sieve
 item.magma_bucket.name=Bucket of Magma

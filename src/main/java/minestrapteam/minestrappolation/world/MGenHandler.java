@@ -209,7 +209,7 @@ public class MGenHandler implements IWorldGenerator
 		for (int i = 0; i < 5; i++)
 		{
 			int xRand = chunkX * 16 + rand.nextInt(16);
-			int yRand = rand.nextInt(256);
+			int yRand = rand.nextInt(63);
 			int zRand = chunkZ * 16 + rand.nextInt(16);
 			BlockPos position = new BlockPos(xRand, yRand, zRand);
 			gen.generate(world, rand, position);

@@ -403,6 +403,8 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MItems.jam_bottle, 1), new ItemStack(MItems.strawberry, 1), new ItemStack(MItems.blackberry, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.peanut_butter_bottle, 1), new ItemStack(MBlocks.peanuts, 4), new ItemStack(Items.glass_bottle, 1), 0.1F);
 		this.addRecipe(new ItemStack(MBlocks.meat_block, 1), new ItemStack(Items.rotten_flesh, 5), new ItemStack(Items.rotten_flesh, 4), 0.1F);
+		this.addRecipe(new ItemStack(MItems.sushi), new ItemStack(Items.cooked_fish, 1, 1), new ItemStack(MBlocks.rice), 0.1F);
+		this.addRecipe(new ItemStack(MItems.lucky_sushi), new ItemStack(Items.fish, 1, 2), new ItemStack(Items.gold_nugget, 1), 0.1F);
 		
 		//Minestrapp Tools
 		this.addRecipe(new ItemStack(MItems.copper_pickaxe, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(MItems.copper_ingot, 3), 0.1F);
@@ -495,6 +497,7 @@ public class SplitterRecipes
 		
 		this.addRecipe(new ItemStack(MItems.propeller, 1), new ItemStack(MItems.copper_ingot, 3), new ItemStack(MItems.bronze_ingot, 1), 0.1F);
 		this.addRecipe(new ItemStack(MBlocks.fan, 1), new ItemStack(MItems.propeller, 1), new ItemStack(MBlocks.biome_bricks, 4, 3), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.chimney, 1), new ItemStack(MItems.slate_brick, 6), new ItemStack(MItems.granite_brick, 2), 0.1F);
 	}
 	
 	public void addRecipe(Block input, ItemStack stack, ItemStack stack2, float experience)
