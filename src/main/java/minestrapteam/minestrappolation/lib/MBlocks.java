@@ -8,6 +8,7 @@ import minestrapteam.minestrappolation.block.BlockBiomeBricks;
 import minestrapteam.minestrappolation.block.BlockBlazium;
 import minestrapteam.minestrappolation.block.BlockBoulder;
 import minestrapteam.minestrappolation.block.BlockBush;
+import minestrapteam.minestrappolation.block.BlockChimney;
 import minestrapteam.minestrappolation.block.BlockChiseled;
 import minestrapteam.minestrappolation.block.BlockClaimerator;
 import minestrapteam.minestrappolation.block.BlockColdCobweb;
@@ -435,6 +436,7 @@ public class MBlocks
 	public static Block	frost_generator;
 	public static Block	invincium;
 	public static Block rope;
+	public static Block chimney;
 	
 	//Pillars
 	public static Block desert_pillar;
@@ -640,6 +642,7 @@ public class MBlocks
 		
 		// Misc
 		invincium = new BlockInvincium(Material.rock).setUnlocalizedName("invincium").setBlockUnbreakable().setHardness(50000F).setCreativeTab(Minestrappolation.tabMBuilding);
+		chimney = new BlockChimney(Material.rock, MapColor.blackColor).setUnlocalizedName("chimney").setCreativeTab(Minestrappolation.tabMBuilding);
 		
 		//Wood Slabs
 		redwood_slab = new BlockMSlab(Material.wood, "redwood_slab", 2F, 5F, "axe", 0, 300);
@@ -958,6 +961,7 @@ public class MBlocks
 		register(barrel);
 		
 		register(fan);
+		register(chimney);
 		register(plutonium_insulated);
 		register(uranium_insulated);
 		register(sawmill);
