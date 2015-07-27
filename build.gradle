@@ -29,8 +29,8 @@ if (ENV.DRONE_BUILD_NUMBER) {
 }
 group= "minestrapteam"
 archivesBaseName = "Minestrappolation"
-targetCompatibility = '1.8'
-sourceCompatibility = '1.8'
+targetCompatibility = '1.7'
+sourceCompatibility = '1.7'
 
 minecraft
 {
@@ -39,12 +39,10 @@ minecraft
     if (file('../run').exists())
     {
     	runDir = '../run'
-	assetDir = '../run'
     }
     else
     {
     	runDir = 'eclipse'
-	assetDir = 'eclipse'
     }
     
     // the mappings can be changed at any time, and must be in the following format.
