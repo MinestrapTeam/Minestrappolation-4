@@ -26,6 +26,8 @@
  - Wearing a full set of Blazium Armor now causes all direct attackers to be lit on fire.
  - Tweaked Berry hunger restoration values.
  - Fixed Soul Bottles not working in multiplayer.
+ - Fixed rice bowls dropping stick that coudlnt be picked up.
+ - Fixed Version checker message displaying after every respawn
  - Fixed Berry Bushes making Stone sounds when broken.
  - Fixed Redwood Leaves' decay range being much shorter than their generated distance from the trunk.
  - Fixed being able to shift-sneak off the edge of Roads.
