@@ -559,7 +559,7 @@ public class MBlocks
 		torite_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 2, false).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("torite_ore").setCreativeTab(Minestrappolation.tabMBuilding);
 		desert_quartz = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.desert_quartz_item, 0, 1, 2, 1, 2, "pickaxe", 0, true).setHardness(2.0F).setStepSound(Block.soundTypePiston).setResistance(3.0F).setUnlocalizedName("desert_quartz").setCreativeTab(Minestrappolation.tabMBuilding);
 		blazium_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.blaze_shard, 0, 1, 2, 1, 4, "pickaxe", 2, true).setHardness(3.0F).setStepSound(Block.soundTypePiston).setResistance(5.0F).setUnlocalizedName("blazium_ore").setCreativeTab(Minestrappolation.tabMBuilding);
-		soul_ore = new BlockSoulOre(Material.ground, MapColor.stoneColor, MItems.soul_gem, 0, 1, 7, 1, 0, "shovel", 2, true).setHardness(2.0F).setStepSound(Block.soundTypePiston).setResistance(3.0F).setUnlocalizedName("soul_ore").setCreativeTab(Minestrappolation.tabMBuilding);
+		soul_ore = new BlockSoulOre(Material.ground, MapColor.stoneColor, MItems.soul_gem, 0, 1, 7, 1, 0, "shovel", 2, true).setHardness(2.0F).setStepSound(Block.soundTypeSand).setResistance(3.0F).setUnlocalizedName("soul_ore").setCreativeTab(Minestrappolation.tabMBuilding);
 		
 		biome_coal = new BlockBiomeCoal(0, 0, Material.rock, MapColor.stoneColor, Items.coal, 0, 0, 1, 1, 0, "pickaxe", 0, true).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_coal").setCreativeTab(Minestrappolation.tabMBuilding);
 		biome_iron = new BlockBiomeIron(0, 0, Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 1, false).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_iron").setCreativeTab(Minestrappolation.tabMBuilding);
@@ -731,7 +731,7 @@ public class MBlocks
 		raspberry_bush = new BlockBush(MItems.raspberry).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("raspberry_bush");
 		strawberry_bush = new BlockBush(MItems.strawberry).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("strawberry_bush");
 		mana_bush = new BlockBush(MItems.mana_leaf).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("mana_bush");
-		seaweed = new BlockSeaweed().setUnlocalizedName("seaweed").setCreativeTab(Minestrappolation.tabMDecor);
+		seaweed = new BlockSeaweed().setStepSound(Block.soundTypeGrass).setUnlocalizedName("seaweed").setCreativeTab(Minestrappolation.tabMDecor);
 		
 		//Crops
 		rice_crop = new BlockRice().setUnlocalizedName("rice_crop");

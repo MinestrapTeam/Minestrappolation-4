@@ -87,7 +87,11 @@ public class MGenHandler implements IWorldGenerator
 		this.generateOre(MBlocks.titanium_ore, world, rand, x1, z1, 1, 4, 12, 1, 10, BlockHelper.forBlock(Blocks.stone));
 		this.generateOre(MBlocks.slate, world, rand, x1, z1, 10, 33, 18, 0, 80, BlockHelper.forBlock(Blocks.stone));
 		this.generateBoulder(world, rand, x1, z1);
-		this.generateSeaweed(world, rand, x1, z1);
+		
+		if (biome == BiomeGenBase.ocean || biome == BiomeGenBase.river || biome == BiomeGenBase.deepOcean || biome == BiomeGenBase.swampland)
+		{
+			this.generateSeaweed(world, rand, x1, z1);
+		}
 		
 		if (biome == BiomeGenBase.jungle || biome == BiomeGenBase.jungleEdge || biome == BiomeGenBase.jungleHills || biome == BiomeGenBase.swampland || biome == BiomeGenBase.roofedForest || biome == MBiomeManager.redwood)
 		{

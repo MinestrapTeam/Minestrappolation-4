@@ -72,7 +72,7 @@ public class BlockSeaweed extends Block {
 	@SideOnly(Side.CLIENT)
 	public EnumWorldBlockLayer getBlockLayer()
 	{
-		return EnumWorldBlockLayer.TRANSLUCENT;
+		return EnumWorldBlockLayer.CUTOUT;
 	}
 	
 	@Override
@@ -157,6 +157,12 @@ public class BlockSeaweed extends Block {
                 }
             }
         }
+    }
+    
+    @SideOnly(Side.CLIENT)
+    public Block.EnumOffsetType getOffsetType()
+    {
+        return Block.EnumOffsetType.XYZ;
     }
 
 }
