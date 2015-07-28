@@ -24,8 +24,7 @@ public class ItemMFood extends ItemFood
     {
         if(this == MItems.bread_rice_bowl || this == MItems.bread_stir_fry)
         {
-    		EntityItem eitem = new EntityItem(worldIn, playerIn.posX, playerIn.posY, playerIn.posZ, new ItemStack(Items.stick, 1));
-        	worldIn.spawnEntityInWorld(eitem);
+    		playerIn.inventory.addItemStackToInventory(new ItemStack(Items.stick));
     	}
         if (this == MItems.pbj_sandwich && !worldIn.isRemote)
         {

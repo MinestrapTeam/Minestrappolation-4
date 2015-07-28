@@ -24,7 +24,7 @@ public class MRecipes
 		GameRegistry.addRecipe(new ItemStack(MBlocks.fan, 1), new Object[] { "GSG", "CBC", "CPC", 'G', MBlocks.granite_bricks, 'S', MBlocks.steel_mesh, 'C', new ItemStack(MBlocks.biome_bricks, 1, 3), 'B', MItems.propeller, 'P', MItems.technological_doodad });
 		GameRegistry.addRecipe(new ItemStack(MBlocks.chimney, 1), new Object[] { "G G", "SSS", "SSS", 'G', MItems.granite_brick, 'S', MItems.slate_brick});
 		
-		//TODO: Un-Comment these recipes when Backpacks and Satchels are added.
+		//TODO: Un-Comment these recipes when Backpacks and Satchels are fixed.
 		//GameRegistry.addRecipe(new ItemStack(MItems.satchel, 1), new Object[] {"HRH", "HCH", "HHH", 'H', Items.rabbit_hide, 'R', MBlocks.rope, 'C', MBlocks.crate });
 		//GameRegistry.addRecipe(new ItemStack(MItems.backpack, 1), new Object[] {"HGH", "RBR", "HHH", 'H', MItems.wolf_hide, 'R', MBlocks.rope, 'B', MBlocks.barrel, 'G', Items.gold_ingot });
 		

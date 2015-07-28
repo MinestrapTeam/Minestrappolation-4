@@ -3,6 +3,7 @@ package minestrapteam.mods.minestrappolation.handlers;
 import java.util.Random;
 
 import minestrapteam.mods.minestrappolation.Config;
+import minestrapteam.mods.minestrappolation.Minestrappolation;
 import minestrapteam.mods.minestrappolation.block.BlockSoul;
 import minestrapteam.mods.minestrappolation.lib.MAchievements;
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
@@ -50,9 +51,14 @@ public class MEventHandler
 			{
 				if (event.world.isRemote == false && Config.checkForUpdates)
 				{
-					check.run();
-					event.entity.addChatMessage(VersionChecker.uptoDate);
-					event.entity.addChatMessage(VersionChecker.motd);
+					if(Minestrappolation.hasCheckedVersion == false)
+					{
+						check.run();
+						event.entity.addChatMessage(VersionChecker.uptoDate);
+						event.entity.addChatMessage(VersionChecker.motd);
+						Minestrappolation.hasCheckedVersion = true;
+					}
+					
 				}
 				player.addStat(MAchievements.minestrapp, 1);
 			}	

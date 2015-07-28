@@ -29,8 +29,7 @@ public class ItemMSoup extends ItemFood
     {
         if(this == MItems.rice_bowl)
         {
-    		EntityItem eitem = new EntityItem(worldIn, playerIn.posX, playerIn.posY, playerIn.posZ, new ItemStack(Items.stick, 1));
-        	worldIn.spawnEntityInWorld(eitem);
+        	playerIn.inventory.addItemStackToInventory(new ItemStack(Items.stick));
     	}
         if (this == MItems.jam_bottle && !worldIn.isRemote)
         {

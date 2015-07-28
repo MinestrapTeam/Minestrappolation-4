@@ -57,6 +57,9 @@ public class Minestrappolation
 	
 	public static SimpleNetworkWrapper network;
 	
+	
+	public static boolean hasCheckedVersion = false;
+	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{	
