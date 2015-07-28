@@ -37,7 +37,7 @@ public class ItemSoulBottle extends Item{
 	@Override
 	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player)
 	{
-			if(Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
+			if(player.isSneaking())
 			{
 				if(player.experienceLevel > 1)
 				{
