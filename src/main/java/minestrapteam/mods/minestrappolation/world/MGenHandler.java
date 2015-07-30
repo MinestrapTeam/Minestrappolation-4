@@ -1,5 +1,7 @@
 package minestrapteam.mods.minestrappolation.world;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 import net.minecraft.block.Block;
@@ -24,7 +26,10 @@ import net.minecraftforge.fml.common.IWorldGenerator;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.google.common.base.Predicate;
+import com.google.common.collect.BiMap;
+import com.google.common.collect.HashBiMap;
 
+import minestrapteam.mods.minestrappolation.api.MRegistry;
 import minestrapteam.mods.minestrappolation.block.biomeores.BlockBiomeStones;
 import minestrapteam.mods.minestrappolation.block.ore.BlockPlutoniumOre;
 import minestrapteam.mods.minestrappolation.block.ore.BlockUraniumOre;
@@ -35,9 +40,12 @@ import minestrapteam.mods.minestrappolation.lib.MBlocks;
 public class MGenHandler implements IWorldGenerator
 {
 	
+	public static Map<Block, Block> oreReplacements = new HashMap();
+	
 	public static void load()
 	{
 		GameRegistry.registerWorldGenerator(new MGenHandler(), 0);
+		loadOreMOreReplacement();
 	}
 	
 	@Override
@@ -421,44 +429,30 @@ public class MGenHandler implements IWorldGenerator
 		}
 	}
 	
+	public static void loadOreMOreReplacement()
+	{
+		MRegistry.registerBiomeOreReplacement(Blocks.coal_ore, MBlocks.biome_coal);
+		MRegistry.registerBiomeOreReplacement(Blocks.iron_ore, MBlocks.biome_iron);
+		MRegistry.registerBiomeOreReplacement(Blocks.gold_ore, MBlocks.biome_gold);
+		MRegistry.registerBiomeOreReplacement(Blocks.redstone_ore, MBlocks.biome_redstone);
+		MRegistry.registerBiomeOreReplacement(Blocks.lit_redstone_ore, MBlocks.biome_redstone);
+		MRegistry.registerBiomeOreReplacement(Blocks.diamond_ore, MBlocks.biome_diamond);
+		MRegistry.registerBiomeOreReplacement(Blocks.lapis_ore, MBlocks.biome_lapis);
+		MRegistry.registerBiomeOreReplacement(Blocks.emerald_ore, MBlocks.biome_emerald);
+		MRegistry.registerBiomeOreReplacement(MBlocks.sunstone_ore, MBlocks.biome_sunstone);
+		MRegistry.registerBiomeOreReplacement(MBlocks.tin_ore, MBlocks.biome_tin);
+		MRegistry.registerBiomeOreReplacement(MBlocks.copper_ore, MBlocks.biome_copper);
+		MRegistry.registerBiomeOreReplacement(MBlocks.plutonium_ore, MBlocks.biome_plutonium);
+		MRegistry.registerBiomeOreReplacement(MBlocks.uranium_ore, MBlocks.biome_uranium);
+		MRegistry.registerBiomeOreReplacement(MBlocks.radiant_ore, MBlocks.biome_radiant);
+		MRegistry.registerBiomeOreReplacement(MBlocks.torite_ore, MBlocks.biome_torite);
+		MRegistry.registerBiomeOreReplacement(MBlocks.titanium_ore, MBlocks.biome_titanium);
+		MRegistry.registerBiomeOreReplacement(MBlocks.meurodite_ore, MBlocks.biome_meurodite);
+	}
+	
 	public Block getOreToReplace(Block block)
 	{
-		if (block == Blocks.coal_ore)
-			return MBlocks.biome_coal;
-		else if (block == Blocks.iron_ore)
-			return MBlocks.biome_iron;
-		else if (block == Blocks.gold_ore)
-			return MBlocks.biome_gold;
-		else if (block == Blocks.redstone_ore)
-			return MBlocks.biome_redstone;
-		else if (block == Blocks.lit_redstone_ore)
-			return MBlocks.biome_redstone;
-		else if (block == Blocks.diamond_ore)
-			return MBlocks.biome_diamond;
-		else if (block == Blocks.lapis_ore)
-			return MBlocks.biome_lapis;
-		else if (block == Blocks.emerald_ore)
-			return MBlocks.biome_emerald;
-		else if (block == MBlocks.sunstone_ore)
-			return MBlocks.biome_sunstone;
-		else if (block == MBlocks.tin_ore)
-			return MBlocks.biome_tin;
-		else if (block == MBlocks.copper_ore)
-			return MBlocks.biome_copper;
-		else if (block == MBlocks.plutonium_ore)
-			return MBlocks.biome_plutonium;
-		else if (block == MBlocks.uranium_ore)
-			return MBlocks.biome_uranium;
-		else if (block == MBlocks.radiant_ore)
-			return MBlocks.biome_radiant;
-		else if (block == MBlocks.torite_ore)
-			return MBlocks.biome_torite;
-		else if (block == MBlocks.titanium_ore)
-			return MBlocks.biome_titanium;
-		else if (block == MBlocks.meurodite_ore)
-			return MBlocks.biome_meurodite;
-		else
-			return MBlocks.biome_bricks;
+		return oreReplacements.get(block);
 	}
 	
 }

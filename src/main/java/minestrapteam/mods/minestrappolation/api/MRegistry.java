@@ -4,6 +4,7 @@ import minestrapteam.mods.minestrappolation.crafting.recipes.AlloyRecipes;
 import minestrapteam.mods.minestrappolation.crafting.recipes.CrusherRecipes;
 import minestrapteam.mods.minestrappolation.crafting.recipes.MelterRecipes;
 import minestrapteam.mods.minestrappolation.crafting.recipes.SplitterRecipes;
+import minestrapteam.mods.minestrappolation.world.MGenHandler;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -49,6 +50,11 @@ public class MRegistry
 	public static void addSplitterRecipe(Block input, Item stack, Item stack2, float experience)
 	{
 		SplitterRecipes.instance().addRecipe(new ItemStack(input), new ItemStack(stack), new ItemStack(stack2), experience);
+	}
+	
+	public static void registerBiomeOreReplacement(Block ore, Block replacement)
+	{
+		MGenHandler.oreReplacements.put(ore, replacement);
 	}
 	
 }
