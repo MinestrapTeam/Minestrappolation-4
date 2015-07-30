@@ -150,6 +150,7 @@ public class AlloyRecipes
         
         this.stack1Size.put(itemStack, itemStack.stackSize);
 		this.stack2Size.put(otherItemStack, otherItemStack.stackSize);
+		
 		this.stack1Size.put(otherItemStack, otherItemStack.stackSize);
 		this.stack2Size.put(itemStack, itemStack.stackSize);
 		
@@ -164,7 +165,7 @@ public class AlloyRecipes
 
             if (irecipe.matches(itemStack, otherItemStack)) 
             { 
-            	if(MStacks.equals(itemStack, irecipe.first) && MStacks.equals(otherItemStack, irecipe.baseItem))
+            	if((MStacks.equals(itemStack, irecipe.first) && MStacks.equals(otherItemStack, irecipe.baseItem)) || (MStacks.equals(otherItemStack, irecipe.first) && MStacks.equals(itemStack, irecipe.baseItem)))
             	{
             		return irecipe.getCraftingResult(); 
             	}
