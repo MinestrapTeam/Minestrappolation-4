@@ -69,6 +69,8 @@ public class MItems extends Item
 	public static Item							bread_rice_bowl;
 	public static Item							stir_fry;
 	public static Item							bread_stir_fry;
+	public static Item							ice_cream;
+	public static Item							crushed_ice;
 	
 	public static Item							salad;
 	public static Item							bread_salad;
@@ -312,6 +314,8 @@ public class MItems extends Item
 		bread_speed_salad = new ItemFood(8, 0.5F, false).setPotionEffect(Potion.digSpeed.id, 20, 1, 1F).setUnlocalizedName("bread_speed_salad").setCreativeTab(Minestrappolation.tabMFood);
 		strength_salad = new ItemMSoup(7, 0.1F, Items.bowl, 0).setPotionEffect(Potion.damageBoost.id, 20, 1, 1F).setUnlocalizedName("strength_salad").setCreativeTab(Minestrappolation.tabMFood);
 		bread_strength_salad = new ItemFood(9, 0.1F, false).setPotionEffect(Potion.damageBoost.id, 20, 1, 1F).setUnlocalizedName("bread_strength_salad").setCreativeTab(Minestrappolation.tabMFood);
+		crushed_ice = new Item().setUnlocalizedName("crushed_ice").setCreativeTab(Minestrappolation.tabMFood);
+		ice_cream = new ItemMSoup(1, 0.5F, Items.bowl, 0).setUnlocalizedName("icecream").setCreativeTab(Minestrappolation.tabMFood);
 		
 		//Bottle-Based Foods
 		hot_sauce = new ItemMSoup(0, 0.2F, Items.glass_bottle, 10).setPotionEffect(Potion.moveSpeed.id, 40, 2, 1F).setAlwaysEdible().setUnlocalizedName("hot_sauce").setCreativeTab(Minestrappolation.tabMFood);
@@ -581,6 +585,8 @@ public class MItems extends Item
 		register(squid_tentacle);
 		register(calamari);
 		register(onigiri);
+		register(crushed_ice);
+		register(ice_cream);
 		
 		//Tools Tab
 		register(sifter);

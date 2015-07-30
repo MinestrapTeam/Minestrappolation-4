@@ -242,6 +242,9 @@ public class CrusherRecipes
 		this.addRecipe(new ItemStack(Blocks.red_flower, 1, 1), new ItemStack(Items.dye, 3, 12), 0.1F, new ItemStack(Items.dye, 1, 12), 10);
 		this.addRecipe(new ItemStack(Blocks.red_flower, 1, 2), new ItemStack(Items.dye, 3, 13), 0.1F, new ItemStack(Items.dye, 1, 13), 10);
 		this.addRecipe(new ItemStack(Blocks.double_plant, 1, 1), new ItemStack(Items.dye, 5, 13), 0.1F, new ItemStack(Items.dye, 1, 13), 10);
+		
+		//Misc
+		this.addRecipe(Blocks.ice, new ItemStack(MItems.crushed_ice,1), 0.1F, null, 0);
 	}
 	
 	public void addRecipe(Block input, ItemStack stack, float experience, ItemStack extra, int chance)
