@@ -437,6 +437,8 @@ tile.flint_block.name=Block of Flint
 tile.sugar_block.name=Block of Sugar
 tile.meat_block.name=Meat Block
 tile.invincium.name=Invincium
+tile.glaical_invincium.name=Glacial Invincium
+tile.glacieric_ice_vein.name=Glacieric Ice Deposit
 
 tile.glass_bricks.name=Bricked Glass
 tile.bricked_pane.name=Bricked Glass Pane
@@ -455,6 +457,7 @@ tile.steel_mesh.name=Steel Mesh
 tile.snow_bricks.name=Snow Bricks
 tile.snow_refined.name=Packed Snow
 tile.snow_tiles.name=Snow Tiles
+tile.glacieric_ice.name=Glacieric Ice
 tile.melon_bricks.name=Melon Bricks
 
 tile.dirt_permafrost.name=Permafrost
@@ -535,6 +538,9 @@ item.seaweed.name=Seaweed
 item.sushi.name=Sushi
 item.lucky_sushi.name=Lucky Sushi
 item.onigiri.name=Onigiri
+item.crushed_ice.name=Crushed Ice
+item.icecream.name=Ice Cream
+item.bread_icecream.name=Ice Cream
 
 item.copper_ingot.name=Copper Ingot
 item.tin_ingot.name=Tin Ingot
@@ -551,6 +557,7 @@ item.bronze_ingot.name=Bronze Ingot
 item.titanium_ingot.name=Titanium Ingot
 item.plutonium.name=Plutonium
 item.uranium.name=Uranium
+item.glacieric_ice_shard.name=Glacieric Ice Shard
 
 stone_chunk.name=Stone Chunk
 red_rock_chunk.name=Red Rock Chunk
@@ -723,6 +730,14 @@ achievement.crusher=...dust to dust.
 achievement.crusher.desc=Use a crusher.
 achievement.jam=Oh won't you share this jam with me?
 achievement.jam.desc=Eat some delicious jam.
+achievement.icecream=They won't stop screaming...
+achievement.icecream.desc=Eat some delicious ice cream.
+achievement.glacieric_ice=Cut Through the Heart, Cold and Clear
+achievement.glacieric_ice.desc=Obtain some glacieric ice shards.
+achievement.frost_gen=A Cold Reception
+achievement.frost_gen.desc=Place and power a frost generator.
+achievement.heart=It's Dangerous to go Alone
+achievement.heart.desc=Increase your maximum health.
 
 recipe.melting=Melting
 recipe.sawmill.shaped=Shaped Milling

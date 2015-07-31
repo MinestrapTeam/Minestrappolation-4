@@ -1,6 +1,7 @@
 package minestrapteam.mods.minestrappolation.item;
 
 import minestrapteam.mods.minestrappolation.Config;
+import minestrapteam.mods.minestrappolation.lib.MAchievements;
 import minestrapteam.mods.minestrappolation.util.NBTHelper;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.player.EntityPlayer;
@@ -21,6 +22,7 @@ public class ItemHeartContainer extends MItemFoiled
 			
 			 playerIn.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(playerIn.getMaxHealth() + 2D);
 			 NBTHelper.getPersistedPlayerTag(playerIn).setDouble("health", playerIn.getMaxHealth());
+			 playerIn.addStat(MAchievements.heart, 1);
 	         --itemStackIn.stackSize;
 		}
         return itemStackIn;

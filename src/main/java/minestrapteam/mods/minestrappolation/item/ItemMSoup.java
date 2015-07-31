@@ -39,6 +39,14 @@ public class ItemMSoup extends ItemFood
             playerIn.addPotionEffect(new PotionEffect(Potion.digSpeed.id, 10 * 20, 0));
             playerIn.addPotionEffect(new PotionEffect(Potion.damageBoost.id, 10 * 20, 0));
         }
+        if (this == MItems.ice_cream && !worldIn.isRemote)
+        {
+        	playerIn.addStat(MAchievements.icecream, 1);
+        	playerIn.extinguish();
+        	playerIn.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 30 * 20, 2));
+        	playerIn.addPotionEffect(new PotionEffect(Potion.damageBoost.id, 30 * 20, 1));
+        	playerIn.addPotionEffect(new PotionEffect(Potion.heal.id, 1, 1));
+        }
         if(fireTime != 0)
         {
         	playerIn.setFire(fireTime);

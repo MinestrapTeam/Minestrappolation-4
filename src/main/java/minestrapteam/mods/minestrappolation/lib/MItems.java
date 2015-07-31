@@ -70,7 +70,7 @@ public class MItems extends Item
 	public static Item							stir_fry;
 	public static Item							bread_stir_fry;
 	public static Item							ice_cream;
-	public static Item							crushed_ice;
+	public static Item							bread_ice_cream;
 	
 	public static Item							salad;
 	public static Item							bread_salad;
@@ -114,12 +114,14 @@ public class MItems extends Item
 	public static Item							blaze_shard;
 	public static Item							blazium_ingot;
 	public static Item							titanium_ingot;
+	public static Item							glacieric_ice_shard;
 	
 	public static Item							tin_plating;
 	public static Item							steel_plating;
 	public static Item							meurodite_plating;
 	
 	//Crafting Materials
+	public static Item							crushed_ice;
 	public static Item							reinforced_stick;
 	public static Item							animal_bones;
 	public static Item							wing_sinew;
@@ -314,8 +316,8 @@ public class MItems extends Item
 		bread_speed_salad = new ItemFood(8, 0.5F, false).setPotionEffect(Potion.digSpeed.id, 20, 1, 1F).setUnlocalizedName("bread_speed_salad").setCreativeTab(Minestrappolation.tabMFood);
 		strength_salad = new ItemMSoup(7, 0.1F, Items.bowl, 0).setPotionEffect(Potion.damageBoost.id, 20, 1, 1F).setUnlocalizedName("strength_salad").setCreativeTab(Minestrappolation.tabMFood);
 		bread_strength_salad = new ItemFood(9, 0.1F, false).setPotionEffect(Potion.damageBoost.id, 20, 1, 1F).setUnlocalizedName("bread_strength_salad").setCreativeTab(Minestrappolation.tabMFood);
-		crushed_ice = new Item().setUnlocalizedName("crushed_ice").setCreativeTab(Minestrappolation.tabMFood);
-		ice_cream = new ItemMSoup(1, 0.5F, Items.bowl, 0).setUnlocalizedName("icecream").setCreativeTab(Minestrappolation.tabMFood);
+		ice_cream = new ItemMSoup(6, 0.6F, Items.bowl, 0).setUnlocalizedName("icecream").setCreativeTab(Minestrappolation.tabMFood);
+		bread_ice_cream = new ItemMFood(8, 0.6F, 0).setUnlocalizedName("bread_icecream").setCreativeTab(Minestrappolation.tabMFood);
 		
 		//Bottle-Based Foods
 		hot_sauce = new ItemMSoup(0, 0.2F, Items.glass_bottle, 10).setPotionEffect(Potion.moveSpeed.id, 40, 2, 1F).setAlwaysEdible().setUnlocalizedName("hot_sauce").setCreativeTab(Minestrappolation.tabMFood);
@@ -348,12 +350,14 @@ public class MItems extends Item
 		desert_quartz_item = new Item().setUnlocalizedName("desert_quartz_item").setCreativeTab(Minestrappolation.tabMMaterials);
 		blaze_shard = new Item().setUnlocalizedName("blaze_shard").setCreativeTab(Minestrappolation.tabMMaterials);
 		soul_gem = new ItemSoulGem().setUnlocalizedName("soul_gem").setCreativeTab(Minestrappolation.tabMMaterials);
+		glacieric_ice_shard = new Item().setUnlocalizedName("glacieric_ice_shard").setCreativeTab(Minestrappolation.tabMMaterials);
 		
 		tin_plating = new Item().setUnlocalizedName("tin_plating").setCreativeTab(Minestrappolation.tabMMaterials);
 		steel_plating = new Item().setUnlocalizedName("steel_plating").setCreativeTab(Minestrappolation.tabMMaterials);
 		meurodite_plating = new Item().setUnlocalizedName("meurodite_plating").setCreativeTab(Minestrappolation.tabMMaterials);
 		
 		//Crafting Materials
+		crushed_ice = new ItemMFood(0, 0, 0).setUnlocalizedName("crushed_ice").setCreativeTab(Minestrappolation.tabMFood);
 		reinforced_stick = new Item().setUnlocalizedName("reinforced_stick").setCreativeTab(Minestrappolation.tabMMaterials);
 		propeller = new Item().setUnlocalizedName("propeller").setCreativeTab(Minestrappolation.tabMMaterials);
 		animal_bones = new Item().setUnlocalizedName("animal_bones").setCreativeTab(Minestrappolation.tabMMaterials);
@@ -535,6 +539,7 @@ public class MItems extends Item
 		register(uranium);
 		register(radiant_quartz);
 		register(titanium_ingot);
+		register(glacieric_ice_shard);
 		register(blaze_shard);
 		register(blazium_ingot);
 		register(soul_gem);
@@ -587,6 +592,7 @@ public class MItems extends Item
 		register(onigiri);
 		register(crushed_ice);
 		register(ice_cream);
+		register(bread_ice_cream);
 		
 		//Tools Tab
 		register(sifter);

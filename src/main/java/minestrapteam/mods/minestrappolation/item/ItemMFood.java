@@ -1,5 +1,6 @@
 package minestrapteam.mods.minestrappolation.item;
 
+import minestrapteam.mods.minestrappolation.lib.MAchievements;
 import minestrapteam.mods.minestrappolation.lib.MItems;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
@@ -18,6 +19,8 @@ public class ItemMFood extends ItemFood
     {
         super(healAmount, saturation, false);
         fireTime = igniteTime;
+        if(this == MItems.crushed_ice)
+        	this.setMaxStackSize(16);
     }
 
     public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityPlayer playerIn)
@@ -68,6 +71,18 @@ public class ItemMFood extends ItemFood
         if(fireTime != 0)
         {
         	playerIn.setFire(fireTime);
+        }
+        if(this == MItems.crushed_ice && !worldIn.isRemote)
+        {
+        	playerIn.extinguish();
+        }
+        if (this == MItems.bread_ice_cream && !worldIn.isRemote)
+        {
+        	playerIn.addStat(MAchievements.icecream, 1);
+        	playerIn.extinguish();
+        	playerIn.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 30 * 20, 2));
+        	playerIn.addPotionEffect(new PotionEffect(Potion.damageBoost.id, 30 * 20, 1));
+        	playerIn.addPotionEffect(new PotionEffect(Potion.heal.id, 1, 1));
         }
         super.onItemUseFinish(stack, worldIn, playerIn);
         return stack;

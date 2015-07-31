@@ -225,6 +225,8 @@ public class CrusherRecipes
 		this.addRecipe(new ItemStack(MBlocks.cold_sand, 1, 0), new ItemStack(Blocks.sand, 1, 0), 0.1F, new ItemStack(Blocks.ice), 5);
 		this.addRecipe(new ItemStack(MBlocks.cold_sand, 1, 1), new ItemStack(Blocks.sand, 1, 1), 0.1F, new ItemStack(Blocks.ice), 5);
 		this.addRecipe(new ItemStack(MBlocks.dirt_permafrost, 1, 0), new ItemStack(Blocks.dirt, 1, 0), 0.1F, new ItemStack(Blocks.packed_ice), 5);
+		this.addRecipe(Blocks.ice, new ItemStack(MItems.crushed_ice, 1), 0.1F, new ItemStack(MItems.crushed_ice, 1), 50);
+		this.addRecipe(Blocks.packed_ice, new ItemStack(MItems.crushed_ice, 1), 0.1F, new ItemStack(MItems.crushed_ice, 1), 50);
 		
 		//Dyes
 		this.addRecipe(Items.bone, new ItemStack(Items.dye, 5, 15), 0.1F, new ItemStack(Items.dye, 1, 15), 10);
@@ -242,9 +244,6 @@ public class CrusherRecipes
 		this.addRecipe(new ItemStack(Blocks.red_flower, 1, 1), new ItemStack(Items.dye, 3, 12), 0.1F, new ItemStack(Items.dye, 1, 12), 10);
 		this.addRecipe(new ItemStack(Blocks.red_flower, 1, 2), new ItemStack(Items.dye, 3, 13), 0.1F, new ItemStack(Items.dye, 1, 13), 10);
 		this.addRecipe(new ItemStack(Blocks.double_plant, 1, 1), new ItemStack(Items.dye, 5, 13), 0.1F, new ItemStack(Items.dye, 1, 13), 10);
-		
-		//Misc
-		this.addRecipe(Blocks.ice, new ItemStack(MItems.crushed_ice,1), 0.1F, null, 0);
 	}
 	
 	public void addRecipe(Block input, ItemStack stack, float experience, ItemStack extra, int chance)

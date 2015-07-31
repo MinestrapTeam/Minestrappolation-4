@@ -1,9 +1,9 @@
 {
 "__comment": "Designed by Delocuro with BDcraft Cubik PRO 0.93 Beta - http://bdcraft.net",
 "textures": {
-    "particle": "blocks/glacieric_ice_outside",
-    "Inside": "blocks/glacieric_ice_inside",
-    "Outside": "blocks/glacieric_ice_outside"
+    "particle": "ministrapp:blocks/glacieric_ice_outside",
+    "Inside": "ministrapp:blocks/glacieric_ice_inside",
+    "Outside": "ministrapp:blocks/glacieric_ice_outside"
 },
 "elements": [ 
 {

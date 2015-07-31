@@ -11,6 +11,7 @@ import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
@@ -29,6 +30,7 @@ import java.util.List;
 import java.util.Random;
 
 import minestrapteam.mods.minestrappolation.Config;
+import minestrapteam.mods.minestrappolation.lib.MAchievements;
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
 
 public class BlockBush extends MBlock implements IPlantable, IShearable{
@@ -36,10 +38,9 @@ public class BlockBush extends MBlock implements IPlantable, IShearable{
 	public static final PropertyInteger AGE = PropertyInteger.create("age", 0, 5);
     public Item item;
 	
-    public BlockBush(Item item)
+    public BlockBush(Material material, Item item, MapColor mapcolor)
     {
-        super(Material.leaves, MapColor.greenColor);
-        this.setStepSound(Block.soundTypeGrass);
+        super(material, mapcolor);
         this.setDefaultState(this.blockState.getBaseState().withProperty(AGE, Integer.valueOf(0)));
         this.setLightOpacity(0);
         this.setTickRandomly(true);
@@ -62,6 +63,21 @@ public class BlockBush extends MBlock implements IPlantable, IShearable{
         }
     }
     
+    public void fillWithRain(World worldIn, BlockPos pos)
+    {
+        IBlockState iblockstate = worldIn.getBlockState(pos);
+        int j = ((Integer)iblockstate.getValue(AGE)).intValue();
+        
+        if(j < 5 && this == MBlocks.glacieric_ice_vein)
+        {
+        	int chance = worldIn.rand.nextInt(Config.bushGrowChance / 2);
+        	if(chance == 1)
+        	{
+        		worldIn.setBlockState(pos, iblockstate.withProperty(AGE, Integer.valueOf(j + 1)), 2);
+        	}
+        }
+    }
+    
     @Override
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ)
 	{
@@ -69,12 +85,31 @@ public class BlockBush extends MBlock implements IPlantable, IShearable{
     		{
     			if(worldIn.isRemote)
     				return true;
-    			worldIn.setBlockState(pos, this.getDefaultState(), 2);
-    			EntityItem ei = new EntityItem(worldIn, playerIn.posX, playerIn.posY, playerIn.posZ, new ItemStack(item));
-    			worldIn.spawnEntityInWorld(ei);
-    			if(playerIn instanceof FakePlayer)
-    				ei.onCollideWithPlayer(playerIn);
-    			return true;
+    			if(this == MBlocks.glacieric_ice_vein)
+    			{
+    				if(playerIn.getHeldItem().getItem() instanceof ItemPickaxe)
+    				{
+    					worldIn.setBlockState(pos, this.getDefaultState(), 2);
+        				EntityItem ei = new EntityItem(worldIn, playerIn.posX, playerIn.posY, playerIn.posZ, new ItemStack(item));
+        				worldIn.spawnEntityInWorld(ei);
+        				playerIn.getHeldItem().damageItem(2, playerIn);
+        				playerIn.addStat(MAchievements.glacieric_ice, 1);
+        				if(playerIn instanceof FakePlayer)
+        					ei.onCollideWithPlayer(playerIn);
+        				return true;
+    				}
+    				else
+    					return false;
+    			}
+    			else
+    			{
+    				worldIn.setBlockState(pos, this.getDefaultState(), 2);
+    				EntityItem ei = new EntityItem(worldIn, playerIn.posX, playerIn.posY, playerIn.posZ, new ItemStack(item));
+    				worldIn.spawnEntityInWorld(ei);
+    				if(playerIn instanceof FakePlayer)
+    					ei.onCollideWithPlayer(playerIn);
+    				return true;
+    			}
     		}
 	return false;
 	}
@@ -95,20 +130,30 @@ public class BlockBush extends MBlock implements IPlantable, IShearable{
     public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
     {
         Block block = worldIn.getBlockState(pos.down()).getBlock();
-        if (block.canSustainPlant(worldIn, pos.down(), EnumFacing.UP, this)) return true;
-
-        if (block == this)
+        if(this == MBlocks.glacieric_ice_vein)
         {
-            return true;
-        }
-        else if (block != Blocks.grass && block != Blocks.dirt && block != Blocks.sand)
-        {
-        	if(block == Blocks.mycelium && this == MBlocks.mana_bush)
+        	if(block == MBlocks.glaical_invincium)
         		return true;
         	else
         		return false;
         }
-        return false;
+        else
+        {
+        	if (block.canSustainPlant(worldIn, pos.down(), EnumFacing.UP, this)) return true;
+
+        	if (block == this)
+        	{
+        		return true;
+        	}
+        	else if (block != Blocks.grass && block != Blocks.dirt && block != Blocks.sand)
+        	{
+        		if(block == Blocks.mycelium && this == MBlocks.mana_bush)
+        			return true;
+        		else
+        			return false;
+        	}
+        	return false;
+        }
     }
 
     public void onNeighborBlockChange(World worldIn, BlockPos pos, IBlockState state, Block neighborBlock)
@@ -137,7 +182,13 @@ public class BlockBush extends MBlock implements IPlantable, IShearable{
 
     public AxisAlignedBB getCollisionBoundingBox(World worldIn, BlockPos pos, IBlockState state)
     {
-        return null;
+        if(this == MBlocks.glacieric_ice_vein)
+        {
+        	this.setBlockBounds(0.0F, 0.0F, 0.0F, 1F, 0.5F, 1F);
+        	return super.getCollisionBoundingBox(worldIn, pos, state);
+        }
+        else
+        	return null;
     }
 
     public IBlockState getStateFromMeta(int meta)
@@ -148,7 +199,7 @@ public class BlockBush extends MBlock implements IPlantable, IShearable{
     @SideOnly(Side.CLIENT)
     public EnumWorldBlockLayer getBlockLayer()
     {
-        if(this == MBlocks.mana_bush)
+        if(this == MBlocks.mana_bush || this == MBlocks.glacieric_ice_vein)
         	return EnumWorldBlockLayer.TRANSLUCENT;
         else
         	return EnumWorldBlockLayer.CUTOUT;

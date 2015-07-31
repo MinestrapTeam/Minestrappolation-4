@@ -15,6 +15,8 @@ import minestrapteam.mods.minestrappolation.block.BlockColdCobweb;
 import minestrapteam.mods.minestrappolation.block.BlockCrackedBricks;
 import minestrapteam.mods.minestrappolation.block.BlockDeadBranch;
 import minestrapteam.mods.minestrappolation.block.BlockFan;
+import minestrapteam.mods.minestrappolation.block.BlockGlacialInvincium;
+import minestrapteam.mods.minestrappolation.block.BlockGlaciericIce;
 import minestrapteam.mods.minestrappolation.block.BlockGodstone;
 import minestrapteam.mods.minestrappolation.block.BlockInvincium;
 import minestrapteam.mods.minestrappolation.block.BlockLamp;
@@ -232,6 +234,8 @@ public class MBlocks
 	public static Block	snow_refined;
 	public static Block	snow_bricks;
 	public static Block	snow_tiles;
+	public static Block glacieric_ice;
+	
 	public static Block melon_bricks;
 	public static Block	glass_bricks;
 	public static Block	glass_refined;
@@ -397,6 +401,8 @@ public class MBlocks
 	public static Block mana_bush;
 	public static Block seaweed;
 	
+	public static Block glacieric_ice_vein;
+	
 	//Crops
 	public static Block rice_crop;
 	public static Item	rice;
@@ -482,6 +488,8 @@ public class MBlocks
 		snow_refined = new MBlockSnow(Material.snow, MapColor.snowColor).setHardness(0.4F).setStepSound(Block.soundTypeSnow).setUnlocalizedName("snow_refined").setCreativeTab(Minestrappolation.tabMBuilding);
 		snow_bricks = new MBlockSnow(Material.snow, MapColor.snowColor).setHardness(0.6F).setStepSound(Block.soundTypeSnow).setUnlocalizedName("snow_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
 		snow_tiles = new MBlockSnow(Material.snow, MapColor.snowColor).setHardness(0.6F).setStepSound(Block.soundTypeSnow).setUnlocalizedName("snow_tiles").setCreativeTab(Minestrappolation.tabMBuilding);
+		glacieric_ice = new BlockGlaciericIce(Material.ice, MapColor.iceColor).setHardness(0.5F).setLightOpacity(3).setStepSound(Block.soundTypeGlass).setUnlocalizedName("glacieric_ice").setCreativeTab(Minestrappolation.tabMBuilding);
+		
 		melon_bricks = new BlockMMelon().setHardness(1.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMFood).setUnlocalizedName("melon_bricks");
 		glass_bricks = new BlockTransparent(Material.glass, MapColor.airColor, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setLightOpacity(1).setUnlocalizedName("glass_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
 		glass_refined = new BlockTransparent(Material.glass, MapColor.airColor, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setUnlocalizedName("glass_refined").setCreativeTab(Minestrappolation.tabMBuilding);
@@ -642,8 +650,8 @@ public class MBlocks
 		steel_mesh = new BlockMPane(Material.iron, true).setHardness(5.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("steel_mesh");
 		
 		// Misc
-		invincium = new BlockInvincium(Material.rock).setUnlocalizedName("invincium").setBlockUnbreakable().setHardness(50000F).setCreativeTab(Minestrappolation.tabMBuilding);
-		glaical_invincium = new MBlock(Material.rock, MapColor.blueColor).setUnlocalizedName("glaical_invincium").setBlockUnbreakable().setHardness(50000F).setCreativeTab(Minestrappolation.tabMBuilding);
+		invincium = new BlockInvincium(Material.rock).setUnlocalizedName("invincium").setBlockUnbreakable().setHardness(50000F).setResistance(50000F).setCreativeTab(Minestrappolation.tabMBuilding);
+		glaical_invincium = new BlockGlacialInvincium(Material.rock, MapColor.blueColor).setUnlocalizedName("glaical_invincium").setBlockUnbreakable().setHardness(50000F).setResistance(50000F).setCreativeTab(Minestrappolation.tabMBuilding);
 		chimney = new BlockChimney(Material.rock, MapColor.blackColor).setHardness(1.5F).setResistance(10F).setUnlocalizedName("chimney").setCreativeTab(Minestrappolation.tabMDecor);
 		
 		//Wood Slabs
@@ -728,12 +736,14 @@ public class MBlocks
 		
 		//Plants
 		moss = new BlockMoss(MapColor.greenColor).setHardness(0.3F).setStepSound(Block.soundTypeCloth).setUnlocalizedName("moss").setCreativeTab(Minestrappolation.tabMDecor);
-		blueberry_bush = new BlockBush(MItems.blueberry).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("blueberry_bush");
-		blackberry_bush = new BlockBush(MItems.blackberry).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("blackberry_bush");
-		raspberry_bush = new BlockBush(MItems.raspberry).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("raspberry_bush");
-		strawberry_bush = new BlockBush(MItems.strawberry).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("strawberry_bush");
-		mana_bush = new BlockBush(MItems.mana_leaf).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("mana_bush");
+		blueberry_bush = new BlockBush(Material.leaves, MItems.blueberry, MapColor.greenColor).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("blueberry_bush");
+		blackberry_bush = new BlockBush(Material.leaves, MItems.blackberry, MapColor.greenColor).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("blackberry_bush");
+		raspberry_bush = new BlockBush(Material.leaves, MItems.raspberry, MapColor.greenColor).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("raspberry_bush");
+		strawberry_bush = new BlockBush(Material.leaves, MItems.strawberry, MapColor.greenColor).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("strawberry_bush");
+		mana_bush = new BlockBush(Material.leaves, MItems.mana_leaf, MapColor.lightBlueColor).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("mana_bush");
 		seaweed = new BlockSeaweed().setStepSound(Block.soundTypeGrass).setUnlocalizedName("seaweed").setCreativeTab(Minestrappolation.tabMDecor);
+		
+		glacieric_ice_vein = new BlockBush(Material.glass, MItems.glacieric_ice_shard, MapColor.iceColor).setStepSound(Block.soundTypeGlass).setBlockUnbreakable().setHardness(50000F).setResistance(50000F).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("glacieric_ice_vein");
 		
 		//Crops
 		rice_crop = new BlockRice().setUnlocalizedName("rice_crop");
@@ -779,6 +789,7 @@ public class MBlocks
 		register(snow_bricks);
 		register(snow_refined);
 		register(snow_tiles);
+		register(glacieric_ice);
 		register(melon_bricks);
 		register(glass_bricks);
 		register(glass_refined);
@@ -911,6 +922,7 @@ public class MBlocks
 		register(biome_titanium, ItemBlockBiomeTitanium.class);
 		register(blazium_ore);
 		register(soul_ore);
+		register(glaical_invincium);
 		register(invincium);
 		
 		register(moss);
@@ -941,6 +953,7 @@ public class MBlocks
 		
 		register(dead_branch);
 		register(cold_cobweb);
+		register(glacieric_ice_vein);
 		register(redwood_fence);
 		register(frozen_oak_fence);
 		//register(red_rock_wall);

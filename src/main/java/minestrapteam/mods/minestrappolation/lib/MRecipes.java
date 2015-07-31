@@ -73,6 +73,7 @@ public class MRecipes
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.lucky_sushi, 1), new Object[] { MBlocks.seaweed, MBlocks.rice, MItems.celery, MItems.hot_sauce, new ItemStack(Items.fish, 1, 2), Items.gold_nugget, Items.gold_nugget, Items.gold_nugget, Items.gold_nugget });
 		GameRegistry.addRecipe(new ItemStack(MItems.onigiri, 3), new Object[] { " R ", "RCR", "RSR", 'R', MBlocks.rice, 'C', MItems.calamari, 'S', MBlocks.seaweed });
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.ice_cream, 1), new Object[] { MItems.strawberry, new ItemStack(Items.dye, 1, EnumDyeColor.BROWN.getDyeDamage()), MItems.crushed_ice, Items.bowl, Items.sugar});
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.ice_cream, 1), new Object[] { MItems.strawberry, new ItemStack(Items.dye, 1, EnumDyeColor.BROWN.getDyeDamage()), MItems.crushed_ice, MItems.bread_bowl, Items.sugar});
 		
 		// Minerals
 		GameRegistry.addSmelting(MBlocks.copper_ore, new ItemStack(MItems.copper_ingot), 0.5F);
@@ -141,6 +142,7 @@ public class MRecipes
 		GameRegistry.addRecipe(new ItemStack(MBlocks.snow_bricks, 4), new Object[] { "SS", "SS", 'S', Blocks.snow });
 		GameRegistry.addRecipe(new ItemStack(MBlocks.snow_refined, 9), new Object[] { "SSS", "SSS", "SSS", 'S', Blocks.snow });
 		GameRegistry.addRecipe(new ItemStack(MBlocks.snow_tiles, 4), new Object[] { "SS", "SS", 'S', MBlocks.snow_refined });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.glacieric_ice, 3), new Object[] { "GPG", "PGP", "GPG", 'G', MItems.glacieric_ice_shard, 'P', Blocks.packed_ice });
 		
 		GameRegistry.addRecipe(new ItemStack(MBlocks.glass_bricks, 4), new Object[] { "GG", "GG", 'G', Blocks.glass });
 		GameRegistry.addSmelting(new ItemStack(Blocks.glass), new ItemStack(MBlocks.glass_refined), .1F);
@@ -201,7 +203,7 @@ public class MRecipes
 		// Tech
 		GameRegistry.addRecipe(new ItemStack(MBlocks.alloy, 1), new Object[] { "TTT", "TFT", "BBB", 'T', new ItemStack(MItems.tin_plating), 'F', new ItemStack(Blocks.furnace), 'B', new ItemStack(MBlocks.biome_bricks, 1, 1) });
 		GameRegistry.addRecipe(new ItemStack(MBlocks.melter, 1), new Object[] { "MMM", "MFM", "IBI", 'M', new ItemStack(MItems.meurodite_plating), 'F', new ItemStack(Blocks.furnace), 'I', new ItemStack(Blocks.iron_bars), 'B', MBlocks.blazium_block });
-		GameRegistry.addRecipe(new ItemStack(MBlocks.frost_generator, 1), new Object[] { "IPI", "QPQ", "GRG", 'I', new ItemStack(MBlocks.biome_cobble, 1, 5), 'G', new ItemStack(MBlocks.biome_stones, 1, 6), 'P', new ItemStack(Blocks.packed_ice), 'R', Blocks.redstone_block, 'Q', MItems.radiant_quartz });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.frost_generator, 1), new Object[] { "IPI", "QPQ", "GRG", 'I', new ItemStack(MBlocks.biome_cobble, 1, 5), 'G', new ItemStack(MBlocks.biome_stones, 1, 6), 'P', new ItemStack(MBlocks.glacieric_ice), 'R', Blocks.redstone_block, 'Q', MItems.radiant_quartz });
 		
 		// Tools and Weapons
 		GameRegistry.addRecipe(new ItemStack(MItems.copper_pickaxe), new Object[] { "III", " S ", " S ", 'I', MItems.copper_ingot, 'S', Items.stick });

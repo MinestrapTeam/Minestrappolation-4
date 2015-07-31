@@ -6,7 +6,10 @@ import net.minecraft.block.BlockSand;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumWorldBlockLayer;
 import net.minecraft.world.World;
@@ -18,6 +21,7 @@ import java.util.Random;
 
 import minestrapteam.mods.minestrappolation.block.MBlock;
 import minestrapteam.mods.minestrappolation.enumtypes.MWoodType;
+import minestrapteam.mods.minestrappolation.lib.MAchievements;
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
 
 public class BlockFrostGenerator extends MBlock
@@ -127,6 +131,13 @@ public class BlockFrostGenerator extends MBlock
 	public void onBlockAdded(World world, BlockPos pos, IBlockState state)
 	{
 		this.updateTick(world, pos, state, world.rand);
+	}
+	
+	@Override
+	public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack)
+	{
+		if(placer instanceof EntityPlayer)
+			((EntityPlayer) placer).addStat(MAchievements.frost_gen, 1);
 	}
 	
 	@Override

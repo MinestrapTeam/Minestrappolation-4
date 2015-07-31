@@ -2,6 +2,7 @@ package minestrapteam.mods.minestrappolation.world;
 
 import java.util.Random;
 
+import minestrapteam.mods.minestrappolation.block.BlockBush;
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
@@ -20,7 +21,7 @@ public class WorldGenIceMound extends WorldGenerator
 			this.buildShell(world, pos.add(0, a, 0), radius);
 			radius--;
 		}
-		world.setBlockState(pos.add(0, radius + 2, 0), Blocks.stone.getDefaultState(), 2);
+		world.setBlockState(pos.add(0, radius + 2, 0), MBlocks.glacieric_ice_vein.getDefaultState().withProperty(BlockBush.AGE, 5), 2);
 		return true;
 	}
 	

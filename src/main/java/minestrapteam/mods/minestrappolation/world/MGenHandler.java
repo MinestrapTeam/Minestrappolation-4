@@ -144,6 +144,11 @@ public class MGenHandler implements IWorldGenerator
 			new WorldGenRedWoodTreeSmall().generate(world, rand, pos);
 		}
 		
+		if (biome == MBiomeManager.frost)
+		{
+			new WorldGenIceMound().generate(world, rand, pos);
+		}
+		
 		for (x1 = 0; x1 < 16; x1++)
 		{
 			for (z1 = 0; z1 < 16; z1++)
