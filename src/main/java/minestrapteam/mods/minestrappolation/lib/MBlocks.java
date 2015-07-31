@@ -435,6 +435,7 @@ public class MBlocks
 	public static Block fan;
 	public static Block	frost_generator;
 	public static Block	invincium;
+	public static Block	glaical_invincium;
 	public static Block rope;
 	public static Block chimney;
 	
@@ -642,6 +643,7 @@ public class MBlocks
 		
 		// Misc
 		invincium = new BlockInvincium(Material.rock).setUnlocalizedName("invincium").setBlockUnbreakable().setHardness(50000F).setCreativeTab(Minestrappolation.tabMBuilding);
+		glaical_invincium = new MBlock(Material.rock, MapColor.blueColor).setUnlocalizedName("glaical_invincium").setBlockUnbreakable().setHardness(50000F).setCreativeTab(Minestrappolation.tabMBuilding);
 		chimney = new BlockChimney(Material.rock, MapColor.blackColor).setHardness(1.5F).setResistance(10F).setUnlocalizedName("chimney").setCreativeTab(Minestrappolation.tabMDecor);
 		
 		//Wood Slabs

@@ -2,6 +2,7 @@ package minestrapteam.mods.minestrappolation.world;
 
 import java.util.Random;
 
+import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
@@ -43,7 +44,7 @@ public class WorldGenIceMound extends WorldGenerator
 				
 				if (d <= radius1)
 				{
-						world.setBlockState(pos.add(xfr, 0, zfr), Blocks.dirt.getDefaultState(), 2);
+						world.setBlockState(pos.add(xfr, 0, zfr), MBlocks.glaical_invincium.getDefaultState(), 2);
 				}
 			}
 		}
