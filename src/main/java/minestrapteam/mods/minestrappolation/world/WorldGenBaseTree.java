@@ -80,7 +80,7 @@ public abstract class WorldGenBaseTree extends WorldGenAbstractTree
 			{
 				world.setBlockState(pos.add(0, h, 0), this.wood, 2);
 			}
-			else if (this.width == 2)
+			else if (this.width >= 2)
 			{
 				world.setBlockState(pos.add(0, h, 0), this.wood, 2);
 				world.setBlockState(pos.add(0, h, 1), this.wood, 2);
@@ -89,13 +89,21 @@ public abstract class WorldGenBaseTree extends WorldGenAbstractTree
 			}
 			else
 			{
-				for (int i = 0; i < this.width; i++)
+				if(width >= 2)
 				{
-					for (int j = 0; j < this.width; j++)
+					for (int i = 0; i < this.width; i++)
 					{
-						world.setBlockState(pos.add(i, h, j), this.wood, 2);
+						for (int j = 0; j < this.width; j++)
+						{
+							world.setBlockState(pos.add(i, h, j), this.wood, 2);
+						}
 					}
 				}
+				else
+				{
+					world.setBlockState(pos.add(0, h, 0), this.wood, 2);
+				}
+				
 			}
 		}
 	}
