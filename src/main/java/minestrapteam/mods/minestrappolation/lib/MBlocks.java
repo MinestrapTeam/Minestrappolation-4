@@ -18,6 +18,7 @@ import minestrapteam.mods.minestrappolation.block.BlockFan;
 import minestrapteam.mods.minestrappolation.block.BlockGlacialInvincium;
 import minestrapteam.mods.minestrappolation.block.BlockGlaciericIce;
 import minestrapteam.mods.minestrappolation.block.BlockGodstone;
+import minestrapteam.mods.minestrappolation.block.BlockIceDeposit;
 import minestrapteam.mods.minestrappolation.block.BlockInvincium;
 import minestrapteam.mods.minestrappolation.block.BlockLamp;
 import minestrapteam.mods.minestrappolation.block.BlockMDoor;
@@ -743,7 +744,7 @@ public class MBlocks
 		mana_bush = new BlockBush(Material.leaves, MItems.mana_leaf, MapColor.lightBlueColor).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("mana_bush");
 		seaweed = new BlockSeaweed().setStepSound(Block.soundTypeGrass).setUnlocalizedName("seaweed").setCreativeTab(Minestrappolation.tabMDecor);
 		
-		glacieric_ice_vein = new BlockBush(Material.glass, MItems.glacieric_ice_shard, MapColor.iceColor).setStepSound(Block.soundTypeGlass).setBlockUnbreakable().setHardness(50000F).setResistance(50000F).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("glacieric_ice_vein");
+		glacieric_ice_vein = new BlockIceDeposit(Material.glass, MItems.glacieric_ice_shard, MapColor.iceColor).setStepSound(Block.soundTypeGlass).setBlockUnbreakable().setHardness(50000F).setResistance(50000F).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("glacieric_ice_vein");
 		
 		//Crops
 		rice_crop = new BlockRice().setUnlocalizedName("rice_crop");
