@@ -80,7 +80,6 @@ public class MEventHandler
 		{
 			BlockNetherWart wart = (BlockNetherWart) event.state.getBlock();
 			IBlockState ground = event.world.getBlockState(event.pos.add(0, -1, 0));
-			
 			ItemStack item = new ItemStack(MItems.soul_gem);
 			EntityItem eitem = new EntityItem(event.world, event.pos.getX(), event.pos.getY(), event.pos.getZ(), item);
 			

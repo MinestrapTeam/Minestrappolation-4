@@ -1,11 +1,15 @@
 package minestrapteam.mods.minestrappolation.inventory.slot;
 
 import minestrapteam.mods.minestrappolation.crafting.recipes.MelterRecipes;
+import minestrapteam.mods.minestrappolation.lib.MAchievements;
+import minestrapteam.mods.minestrappolation.lib.MItems;
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
+import net.minecraft.stats.AchievementList;
 import net.minecraft.util.MathHelper;
 
 public class SlotMelter extends Slot
@@ -79,5 +83,10 @@ public class SlotMelter extends Slot
 			}
 		}
 		this.amountCrafted = 0;
+		
+		if (stack.getItem() == MItems.titanium_ingot)
+        {
+            this.thePlayer.triggerAchievement(MAchievements.titanium);
+        }
 	}
 }
