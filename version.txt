@@ -1,2 +1,2 @@
 version=1.8.0-4.0.2A
-motd=§94.0.2A is out! It adds quite a few new things and fixes NEI compatibility.
+motd=§9Thanks for downloading M4!
