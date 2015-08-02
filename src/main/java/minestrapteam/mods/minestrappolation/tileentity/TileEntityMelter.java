@@ -22,8 +22,8 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 	public boolean				hasPower;
 	
 	private static final int[]	topInputSlot	= new int[] { 0 };
-	private static final int[]	outputSlots		= new int[] { 2, 1 };
-	private static final int[]	inputSlots		= new int[] { 1 };
+	private static final int[]	outputSlots		= new int[] { 2 };
+	private static final int[]	inputSlots		= new int[] { 1 , 3 };
 	
 	public TileEntityMelter()
 	{
@@ -195,7 +195,7 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 			ItemStack output = MelterRecipes.instance().getResult(input);
 			if (output == null)
 				return false;
-			ItemStack container = new ItemStack(Items.bucket);
+			ItemStack container = new ItemStack(MelterRecipes.instance().getRequiredContainer(input));
 			if(MelterRecipes.instance().needsBucket(input))
 			{
 				if (container != null)
@@ -238,7 +238,7 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 			}
 			
 			ItemStack bucket = this.itemStacks[3];
-			if (bucket != null && ItemStack.areItemsEqual(bucket, new ItemStack(Items.bucket)))
+			if (bucket != null && ItemStack.areItemsEqual(bucket, new ItemStack(MelterRecipes.instance().getRequiredContainer(input))))
 			{
 				--bucket.stackSize;
 				if (bucket.stackSize <= 0)
@@ -271,7 +271,7 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 	@Override
 	public boolean isItemValidForSlot(int index, ItemStack stack)
     {
-		return index == 2 ? false : (index != 1 ? true : isItemFuel(stack) || SlotFurnaceFuel.isBucket(stack));
+		return index == 2 ? false : (index != 1 ? true : isItemFuel(stack) || SlotFurnaceFuel.isBucket(stack));	
     }
 
 	@Override
@@ -287,16 +287,16 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 
 	public boolean canExtractItem(int index, ItemStack stack, EnumFacing direction)
 	{
-	    if (direction == EnumFacing.DOWN && index == 1)
-	    {
-	            Item item = stack.getItem();
+		if (direction == EnumFacing.DOWN && index == 1)
+        {
+            Item item = stack.getItem();
 
-	        if (item != Items.water_bucket && item != Items.bucket)
-	        {
-	            return false;
-	        }
-	    }
+            if (item != Items.water_bucket && item != Items.bucket)
+            {
+                return false;
+            }
+        }
 
-	    return true;
+        return true;
 	}
 }

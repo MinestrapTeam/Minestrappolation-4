@@ -64,25 +64,33 @@ public class BlockClaimerator extends MBlock
 		if (worldIn.isRemote)
 			return true;
 		
-		if(playerIn.getHeldItem() != null && playerIn.getHeldItem().getItem() == Items.name_tag)
+		if(playerIn.getHeldItem() != null)
 		{
-			String name = playerIn.getHeldItem().getDisplayName();
-			
-			if(UUIDHelper.isValidUUID(name))
+			if(playerIn.getHeldItem().getItem() == Items.name_tag)
 			{
-					if(!ChunkProtector.getPlayersList(worldIn.getChunkFromBlockCoords(pos).xPosition, worldIn.getChunkFromBlockCoords(pos).zPosition).contains(UUIDHelper.getPlayerUUID(name)))
-					{
-						ChunkProtector.addCoOwner(worldIn.getChunkFromBlockCoords(pos).xPosition, worldIn.getChunkFromBlockCoords(pos).zPosition, UUIDHelper.getPlayerUUID(name));
-						playerIn.addChatMessage(new ChatComponentText(name + " with UUID " + UUIDHelper.getPlayerUUID(name) + " can now edit this chunk!"));
-					}	
-					else
-					{
-						playerIn.addChatMessage(new ChatComponentText(name + " can already edit this chunk"));
-					}			
+				String name = playerIn.getHeldItem().getDisplayName();
+				
+				if(UUIDHelper.isValidUUID(name))
+				{
+						if(ChunkProtector.addCoOwner(worldIn.getChunkFromBlockCoords(pos).xPosition, worldIn.getChunkFromBlockCoords(pos).zPosition, UUIDHelper.getPlayerUUID(name)))
+						{
+							playerIn.addChatMessage(new ChatComponentText(name + " with UUID " + UUIDHelper.getPlayerUUID(name) + " can now edit this chunk!"));
+						}	
+						else
+						{
+							playerIn.addChatMessage(new ChatComponentText(name + " can already edit this chunk"));
+						}			
+				}
+				else
+				{
+					playerIn.addChatMessage(new ChatComponentText("Invalid UUID is the username correct?"));
+				}
 			}
-			else
+			
+			if(playerIn.getHeldItem().getItem() == Items.redstone)
 			{
-				playerIn.addChatMessage(new ChatComponentText("Invalid UUID is the username correct?"));
+				ChunkProtector.getProtectionData(worldIn.getChunkFromBlockCoords(pos).xPosition, worldIn.getChunkFromBlockCoords(pos).zPosition).setUseRedstoneObjects(true);
+				playerIn.addChatMessage(new ChatComponentText("Levers, doors, and buttons can now be used by everyone"));
 			}
 			
 		}

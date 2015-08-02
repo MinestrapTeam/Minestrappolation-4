@@ -8,9 +8,9 @@ import net.minecraft.world.World;
 
 public class ItemAmuletPorcum extends ItemAmulet
 {
-	public ItemAmuletPorcum()
+	public ItemAmuletPorcum(String desc)
 	{
-		super(50);
+		super(50, desc);
 	}
 	
 	@Override

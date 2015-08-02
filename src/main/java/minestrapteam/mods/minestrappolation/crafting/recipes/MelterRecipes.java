@@ -21,7 +21,8 @@ public class MelterRecipes
 	private static final MelterRecipes	meltingBase		= new MelterRecipes();
 	private Map							meltingList		= Maps.newHashMap();
 	private Map							experienceList	= Maps.newHashMap();
-	private Map						    needBucket      = Maps.newHashMap();
+	public HashMap<Item, Boolean> 		needBucket      = new HashMap<Item, Boolean>();
+	public HashMap<Item, Item> 		    container       = new HashMap<Item, Item>();
 	
 	public static MelterRecipes instance()
 	{
@@ -138,7 +139,7 @@ public class MelterRecipes
 		this.addRecipe(MBlocks.obsidian_bricks, new ItemStack(MBlocks.magmaBucket), 1.0F, true);
 		
 		//Misc
-		this.addRecipe(Blocks.glowstone, new ItemStack(MBlocks.glow_glass), 1.0F, true);
+		this.addRecipe(Blocks.glowstone, new ItemStack(MBlocks.glow_glass), 1.0F, false);
 		this.addRecipe(MBlocks.titanium_ore, new ItemStack(MItems.titanium_ingot), 2.0F, false);
 		this.addRecipe(MBlocks.biome_titanium, new ItemStack(MItems.titanium_ingot), 2.0F, false);
 		this.addRecipe(new ItemStack(MItems.chunks, 1, 10), new ItemStack(MItems.titanium_ingot), 2.0F, false);
@@ -147,7 +148,15 @@ public class MelterRecipes
 	public void addRecipe(Block input, ItemStack stack, float experience, boolean bucket)
 	{
 		this.addRecipe(Item.getItemFromBlock(input), stack, experience, bucket);
-		this.needBucket.put(new ItemStack(input), bucket);
+		this.needBucket.put(Item.getItemFromBlock(input), bucket);
+		this.container.put(Item.getItemFromBlock(input), Items.bucket);
+	}
+	
+	public void addRecipe(Block input, ItemStack stack, float experience, Item container, boolean bucket)
+	{
+		this.addRecipe(Item.getItemFromBlock(input), stack, experience, bucket);
+		this.needBucket.put(Item.getItemFromBlock(input), bucket);
+		this.container.put(Item.getItemFromBlock(input), container);
 	}
 	
 	public void addRecipe(Item input, ItemStack stack, float experience, boolean bucket)
@@ -159,24 +168,32 @@ public class MelterRecipes
 	{
 		this.meltingList.put(input, stack);
 		this.experienceList.put(stack, Float.valueOf(experience));
-		this.needBucket.put(input, bucket);
+		this.needBucket.put(input.getItem(), bucket);
+		this.container.put(input.getItem(), Items.bucket);
+	}
+	
+	public void addRecipe(ItemStack input, ItemStack stack, float experience, Item container, boolean bucket)
+	{
+		this.addRecipe(input, stack, experience, bucket);
+		this.container.put(input.getItem(), container);
 	}
 	
 	public boolean needsBucket(ItemStack stack)
 	{
-		Iterator iterator = this.needBucket.entrySet().iterator();
-		Entry entry;
-		
-		do
+		if(this.needBucket.containsKey(stack.getItem()))
 		{
-			if (!iterator.hasNext())
-				return false;
-			
-			entry = (Entry) iterator.next();
+			return (boolean)this.needBucket.get(stack.getItem());
 		}
-		while (!this.compareItemStacks(stack, (ItemStack) entry.getKey()));
-		
-		return (boolean) entry.getValue();
+		return true;
+	}
+	
+	public Item getRequiredContainer(ItemStack stack)
+	{
+		if(this.container.containsKey(stack.getItem()))
+		{
+			return this.container.get(stack.getItem());
+		}
+		return Items.bucket;
 	}
 	
 	public ItemStack getResult(ItemStack stack)

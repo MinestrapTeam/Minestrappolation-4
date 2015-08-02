@@ -487,10 +487,10 @@ public class MItems extends Item
 		hangglider = new ItemHangGlider().setUnlocalizedName("hangglider").setCreativeTab(Minestrappolation.tabMTools);
 		backpack = new ItemBackpack(0).setUnlocalizedName("backpack").setCreativeTab(Minestrappolation.tabMTools);
 		satchel = new ItemBackpack(1).setUnlocalizedName("satchel").setCreativeTab(Minestrappolation.tabMTools);
-		amuletPorcum = new ItemAmuletPorcum().setUnlocalizedName("amulet_porcum").setCreativeTab(Minestrappolation.tabMTools);
-		amuletVaccam = new ItemAmuletVaccam().setUnlocalizedName("amulet_vaccam").setCreativeTab(Minestrappolation.tabMTools);
-		amuletOves = new ItemAmulet(30).setUnlocalizedName("amulet_oves").setCreativeTab(Minestrappolation.tabMTools);
-		amuletPullum = new ItemAmulet(30).setUnlocalizedName("amulet_pullum").setCreativeTab(Minestrappolation.tabMTools);
+		amuletPorcum = new ItemAmuletPorcum("fames restituam").setUnlocalizedName("amulet_porcum").setCreativeTab(Minestrappolation.tabMTools);
+		amuletVaccam = new ItemAmuletVaccam("damnum incrementum").setUnlocalizedName("amulet_vaccam").setCreativeTab(Minestrappolation.tabMTools);
+		amuletOves = new ItemAmulet(30, "damnum praesidium").setUnlocalizedName("amulet_oves").setCreativeTab(Minestrappolation.tabMTools);
+		amuletPullum = new ItemAmulet(30, "libramen praesidium").setUnlocalizedName("amulet_pullum").setCreativeTab(Minestrappolation.tabMTools);
 	}
 	
 	public static void register()

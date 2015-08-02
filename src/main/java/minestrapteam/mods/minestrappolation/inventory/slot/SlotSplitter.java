@@ -65,7 +65,7 @@ public class SlotSplitter extends Slot
 			else if (exp < 1.0F)
 			{
 				exp1 = MathHelper.floor_float(amount * exp);
-				if (exp1 < MathHelper.ceiling_float_int(amount * exp) && (float) Math.random() < amount * exp - exp1)
+				if (exp1 < MathHelper.ceiling_float_int((float)amount * exp) && Math.random() < (double)((float)amount * exp - (float)exp1))
 				{
 					++exp1;
 				}

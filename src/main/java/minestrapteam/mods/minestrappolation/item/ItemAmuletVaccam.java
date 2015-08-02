@@ -7,9 +7,9 @@ import net.minecraft.util.DamageSource;
 
 public class ItemAmuletVaccam extends ItemAmulet
 {
-	public ItemAmuletVaccam()
+	public ItemAmuletVaccam(String desc)
 	{
-		super(50);
+		super(50, desc);
 	}
 	
 	@Override

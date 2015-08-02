@@ -1,6 +1,6 @@
 package minestrapteam.mods.minestrappolation.inventory.slot;
 
-import minestrapteam.mods.minestrappolation.crafting.recipes.MelterRecipes;
+import minestrapteam.mods.minestrappolation.crafting.recipes.AlloyRecipes;
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -8,12 +8,12 @@ import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
 
-public class SlotMelter extends Slot
+public class SlotAlloy extends Slot
 {
 	private EntityPlayer	thePlayer;
 	private int				amountCrafted;
 	
-	public SlotMelter(EntityPlayer player, IInventory inventory, int id, int x, int y)
+	public SlotAlloy(EntityPlayer player, IInventory inventory, int id, int x, int y)
 	{
 		super(inventory, id, x, y);
 		this.thePlayer = player;
@@ -56,7 +56,7 @@ public class SlotMelter extends Slot
 		if (!this.thePlayer.worldObj.isRemote)
 		{
 			int amount = this.amountCrafted;
-			float exp = MelterRecipes.instance().getSmeltingExperience(stack);
+			float exp = AlloyRecipes.getInstance().getSmeltingExperience(stack);
 			int exp1;
 			if (exp == 0.0F)
 			{

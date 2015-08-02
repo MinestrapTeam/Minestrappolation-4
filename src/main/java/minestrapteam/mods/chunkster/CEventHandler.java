@@ -1,6 +1,10 @@
 package minestrapteam.mods.chunkster;
 
 
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockButton;
+import net.minecraft.block.BlockDoor;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.ChatComponentText;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.Action;
@@ -24,7 +28,7 @@ public class CEventHandler
 				event.setCanceled(true);
 				if(!event.world.isRemote)
 				{
-					event.getPlayer().addChatMessage(new ChatComponentText("§cThis chunk is owned by " + ChunkProtector.getPlayersList(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition).get(0)));
+					event.getPlayer().addChatMessage(new ChatComponentText("§cThis chunk is owned by " + ChunkProtector.getProtectionData(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition).owner));
 				}
 			}
 		}
@@ -41,7 +45,7 @@ public class CEventHandler
 				event.setCanceled(true);
 				if(!event.world.isRemote)
 				{
-					event.player.addChatMessage(new ChatComponentText("§cThis chunk is owned by " + ChunkProtector.getPlayersList(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition).get(0)));
+					event.player.addChatMessage(new ChatComponentText("§cThis chunk is owned by " + ChunkProtector.getProtectionData(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition).owner));
 				}
 			}
 		}
@@ -51,15 +55,33 @@ public class CEventHandler
 	@SideOnly(Side.SERVER)
 	public void chunksterInteract(PlayerInteractEvent event)
 	{
+		
 		if(event.action == Action.RIGHT_CLICK_BLOCK)
 		{
 			if(ChunkProtector.isChunkOwned(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition))
 			{
-				if(!ChunkProtector.canEditChunk(event.entityPlayer, event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition))
-				{
-					event.setCanceled(true);
-					event.entityPlayer.addChatMessage(new ChatComponentText("§cThis chunk is owned by " + ChunkProtector.getPlayersList(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition).get(0)));
-				}
+					if(!ChunkProtector.canEditChunk(event.entityPlayer, event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition))
+					{
+						if(ChunkProtector.getProtectionData(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition).redstoneUseable)
+						{
+							Block block = event.world.getBlockState(event.pos).getBlock();
+							if(block == Blocks.lever || block instanceof BlockDoor || block instanceof BlockButton)
+							{
+								
+							}
+							else
+							{
+								event.setCanceled(true);
+								event.entityPlayer.addChatMessage(new ChatComponentText("§cThis chunk is owned by " + ChunkProtector.getProtectionData(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition).owner));
+							}
+						}
+						else
+						{
+							event.setCanceled(true);
+							event.entityPlayer.addChatMessage(new ChatComponentText("§cThis chunk is owned by " + ChunkProtector.getProtectionData(event.world.getChunkFromBlockCoords(event.pos).xPosition, event.world.getChunkFromBlockCoords(event.pos).zPosition).owner));
+						}
+						
+					}				
 			}
 		}	
 	}

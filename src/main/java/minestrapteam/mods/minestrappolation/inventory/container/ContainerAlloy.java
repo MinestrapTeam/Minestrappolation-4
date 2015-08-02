@@ -2,6 +2,7 @@ package minestrapteam.mods.minestrappolation.inventory.container;
 
 import java.util.List;
 
+import minestrapteam.mods.minestrappolation.inventory.slot.SlotAlloy;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntityAlloy;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.ICrafting;
@@ -28,7 +29,7 @@ public class ContainerAlloy extends MinestrappolationContainer
 		// fuel
 		this.addSlotToContainer(new Slot(furnace, 1, 46, 53));
 		// result
-		this.addSlotToContainer(new Slot(furnace, 2, 116, 35));
+		this.addSlotToContainer(new SlotAlloy(player, furnace, 2, 116, 35));
 		// smelt2
 		this.addSlotToContainer(new Slot(furnace, 3, 55, 17));
 		

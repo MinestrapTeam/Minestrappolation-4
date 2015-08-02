@@ -3,6 +3,7 @@ package minestrapteam.mods.minestrappolation.inventory.container;
 import java.util.List;
 
 import minestrapteam.mods.minestrappolation.crafting.recipes.CrusherRecipes;
+import minestrapteam.mods.minestrappolation.inventory.slot.SlotCrusher;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntityCrusher;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.ICrafting;
@@ -31,7 +32,7 @@ public class ContainerCrusher extends MinestrappolationContainer
 		this.addSlotToContainer(new Slot(furnace, 1, 56, 53));
 		
 		// result
-		this.addSlotToContainer(new Slot(furnace, 2, 116, 25));
+		this.addSlotToContainer(new SlotCrusher(player, furnace, 2, 116, 25));
 		// randomOut
 		this.addSlotToContainer(new Slot(furnace, 3, 116, 49));
 		

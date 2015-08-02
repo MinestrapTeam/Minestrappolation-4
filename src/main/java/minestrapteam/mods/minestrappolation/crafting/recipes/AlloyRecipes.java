@@ -95,7 +95,8 @@ public class AlloyRecipes
             return new ItemStack[] { this.first, this.baseItem };
         }
 
-        public boolean matches(final ItemStack first, final ItemStack second)
+        @SuppressWarnings("unused")
+		public boolean matches(final ItemStack first, final ItemStack second)
         {
             if (first.isItemEqual(second)) { return false; }
 

@@ -38,7 +38,7 @@ public class MRecipes
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.chocolate_dough, 2), new Object[] { MItems.dough, new ItemStack(Items.dye, 1, 3) });
 		GameRegistry.addSmelting(new ItemStack(MItems.chocolate_dough), new ItemStack(Items.cookie, 6), 0.2F);
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.pie_crust, 1), new Object[] { MItems.sugar_dough, Items.egg, Items.bowl });
-		GameRegistry.addShapelessRecipe(new ItemStack(MItems.hot_sauce, 1), new Object[] { MItems.pepper, new ItemStack(Items.potionitem, 1, 0) });
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.hot_sauce, 1), new Object[] { MItems.pepper, new ItemStack(Items.potionitem.setContainerItem(Items.glass_bottle), 1, 0) });
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.bread_mushroom_stew, 1), new Object[] { Blocks.red_mushroom, Blocks.brown_mushroom, MItems.bread_bowl });
 		GameRegistry.addShapedRecipe(new ItemStack(MItems.bread_rabbit_stew, 1), new Object[] { " R ", "CPM", " B ", 'R', Items.cooked_rabbit, 'C', Items.carrot, 'P', Items.baked_potato, 'M', Blocks.red_mushroom, 'B', MItems.bread_bowl });
 		GameRegistry.addShapedRecipe(new ItemStack(MItems.bread_rabbit_stew, 1), new Object[] { " R ", "CPM", " B ", 'R', Items.cooked_rabbit, 'C', Items.carrot, 'P', Items.baked_potato, 'M', Blocks.brown_mushroom, 'B', MItems.bread_bowl });
