@@ -4,6 +4,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
+import com.google.common.base.Predicate;
+
+import minestrapteam.mods.minestrappolation.api.MRegistry;
+import minestrapteam.mods.minestrappolation.block.biomeores.BlockBiomeStones;
+import minestrapteam.mods.minestrappolation.block.ore.BlockPlutoniumOre;
+import minestrapteam.mods.minestrappolation.block.ore.BlockUraniumOre;
+import minestrapteam.mods.minestrappolation.block.ore.MBlockOre;
+import minestrapteam.mods.minestrappolation.enumtypes.MStoneType;
+import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockOre;
 import net.minecraft.block.BlockRedstoneOre;
@@ -24,18 +33,6 @@ import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-
-import com.google.common.base.Predicate;
-import com.google.common.collect.BiMap;
-import com.google.common.collect.HashBiMap;
-
-import minestrapteam.mods.minestrappolation.api.MRegistry;
-import minestrapteam.mods.minestrappolation.block.biomeores.BlockBiomeStones;
-import minestrapteam.mods.minestrappolation.block.ore.BlockPlutoniumOre;
-import minestrapteam.mods.minestrappolation.block.ore.BlockUraniumOre;
-import minestrapteam.mods.minestrappolation.block.ore.MBlockOre;
-import minestrapteam.mods.minestrappolation.enumtypes.MStoneType;
-import minestrapteam.mods.minestrappolation.lib.MBlocks;
 
 public class MGenHandler implements IWorldGenerator
 {

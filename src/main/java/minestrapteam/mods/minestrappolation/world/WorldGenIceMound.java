@@ -4,7 +4,6 @@ import java.util.Random;
 
 import minestrapteam.mods.minestrappolation.block.BlockBush;
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
-import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
@@ -15,14 +14,19 @@ public class WorldGenIceMound extends WorldGenerator
 	@Override
 	public boolean generate(World world, Random random, BlockPos pos) 
 	{
-		int radius = random.nextInt(8) + 1;
-		for(int a = 0; a < radius+1; a++)
+		if(world.getBlockState(pos.add(1, -1, 1)) == MBlocks.lichen_permafrost.getDefaultState() && world.getBlockState(pos.add(-1, -1, -1)) == MBlocks.lichen_permafrost.getDefaultState())
 		{
-			this.buildShell(world, pos.add(0, a, 0), radius);
-			radius--;
+			int radius = random.nextInt(8) + 1;
+			for(int a = 0; a < radius+1; a++)
+			{
+				this.buildShell(world, pos.add(0, a, 0), radius);
+				this.buildShell(world, pos.add(0, -a, 0), radius);
+				radius--;
+			}
+			world.setBlockState(pos.add(0, radius + 2, 0), MBlocks.glacieric_ice_vein.getDefaultState().withProperty(BlockBush.AGE, 5), 2);
+			return true;
 		}
-		world.setBlockState(pos.add(0, radius + 2, 0), MBlocks.glacieric_ice_vein.getDefaultState().withProperty(BlockBush.AGE, 5), 2);
-		return true;
+		return false;
 	}
 	
 	//Uses a modified generate generateLeafCircles(); from WorldGenBaseTree

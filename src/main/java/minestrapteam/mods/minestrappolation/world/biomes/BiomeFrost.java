@@ -5,12 +5,14 @@ import java.util.Random;
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import minestrapteam.mods.minestrappolation.world.MBiomeDecorator;
 import minestrapteam.mods.minestrappolation.world.WorldGenFrostTree;
+import minestrapteam.mods.minestrappolation.world.WorldGenIceMound;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.ChunkPrimer;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
+import net.minecraft.world.gen.feature.WorldGenDesertWells;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -33,6 +35,19 @@ public class BiomeFrost extends BiomeGenBase
 		this.theBiomeDecorator.treesPerChunk = 1;
 		this.theBiomeDecorator.grassPerChunk = 1;
 	}
+	
+	@Override
+	public void decorate(World worldIn, Random rand, BlockPos pos)
+    {
+        super.decorate(worldIn, rand, pos);
+        if (rand.nextInt(20) == 0)
+        {
+            int i = rand.nextInt(16) + 8;
+            int j = rand.nextInt(16) + 8;
+            BlockPos blockpos1 = worldIn.getHeight(pos.add(i, -1, j));
+            (new WorldGenIceMound()).generate(worldIn, rand, blockpos1);
+        }
+    }
 	
 	@Override
 	public WorldGenAbstractTree genBigTreeChance(Random random)
