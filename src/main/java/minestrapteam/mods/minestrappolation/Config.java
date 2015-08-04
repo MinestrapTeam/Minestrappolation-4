@@ -15,6 +15,24 @@ public class Config
 	
 	public static Boolean checkForUpdates;
 	
+	public static Boolean removeRecipes;
+	
+	//Ores
+	public static Boolean   genCopper;
+	public static Boolean   genTin;
+	public static Boolean   genTitanium;
+	public static Boolean   genMeurodite;
+	public static Boolean   genSunstone;
+	public static Boolean   genTorite;
+	public static Boolean   genPlutonium;
+	public static Boolean   genUranium;
+	public static Boolean   genSlate;
+	public static Boolean   genRadiant;
+	
+	//Biomes
+	public static Boolean   genRedwood;
+	public static Boolean   genFrost;
+	
 	// ********* Integers **********
 	//Misc
 	public static int		soulGemDropChance;
@@ -39,7 +57,7 @@ public class Config
 	public static int		animalFeetDropAmount;
 	public static int		wolfHideDropAmount;
 	public static int		tentacleDropAmount;
-	public static int		doodadDropAmount;
+	public static int		doodadDropAmount;	
 	
 	
 	// ********* Floats **********
@@ -66,6 +84,8 @@ public class Config
 		frostSpeedEffect = config.get("Mechanics", "TheFrostSpeedEffect", true).getBoolean();
 		
 		checkForUpdates = config.get("Mechanics", "CheckForUpdates", true).getBoolean();
+		
+		removeRecipes = config.get("Mechanics", "RemoveRecipes", true, "Removes some recipes from the crafting bench").getBoolean();
 		
 		soulGemDropChance = config.get("Mechanics", "SoulGemDropChance", 3).getInt();
 		soulBlockDamage = config.get("Mechanics", "SoulBlockDamage", 200).getInt();
@@ -96,7 +116,21 @@ public class Config
 		tentacleDropChance = config.get("Drops", "SquidTentacleDropChance", 55).getInt();
 		tentacleDropAmount = config.get("Drops", "SquidTentacleDropQuantity", 3).getInt();
 		doodadDropChance = config.get("Drops", "TechnologicalDoodadDropChance", 100).getInt();
-		doodadDropAmount = config.get("Drops", "TechnologicalDoodadTentacleDropQuantity", 1).getInt();
+		doodadDropAmount = config.get("Drops", "TechnologicalDoodadDropQuantity", 1).getInt();
+		
+		genCopper = config.get("Ores", "GenerateCopper", true).getBoolean();
+		genTin = config.get("Ores", "GenerateTin", true).getBoolean();
+		genTitanium = config.get("Ores", "GenerateTitanium", true).getBoolean();
+		genMeurodite = config.get("Ores", "GenerateMeurodite", true).getBoolean();
+		genSunstone = config.get("Ores", "GenerateSunstone", true).getBoolean();
+		genTorite = config.get("Ores", "GenerateTorite", true).getBoolean();
+		genPlutonium = config.get("Ores", "GeneratePlutonium", true).getBoolean();
+		genUranium = config.get("Ores", "GenerateUranium", true).getBoolean();
+		genSlate = config.get("Ores", "GenerateSlate", true).getBoolean();
+		genRadiant = config.get("Ores", "GenerateRadiant", true).getBoolean();
+
+		genRedwood = config.get("Biomes", "GenerateRedwood", true).getBoolean();
+		genFrost = config.get("Biomes", "GenerateTheFrost", true).getBoolean();
 		config.save();
 	}
 	

@@ -1,5 +1,6 @@
 package minestrapteam.mods.minestrappolation.world;
 
+import minestrapteam.mods.minestrappolation.Config;
 import minestrapteam.mods.minestrappolation.world.biomes.BiomeFrost;
 import minestrapteam.mods.minestrappolation.world.biomes.BiomeRedwood;
 import net.minecraft.world.biome.BiomeGenBase;
@@ -24,11 +25,18 @@ public class MBiomeManager
 	
 	private static void initBiomes()
 	{
-		redwood = new BiomeRedwood(nextBiomeID).setBiomeName("Redwood Forest");
-		frost = new BiomeFrost(nextBiomeID + 1).setBiomeName("The Frost");
-		
-		registerBiomes(redwood, BiomeType.WARM, Type.FOREST, nextBiomeID(), true);
-		registerBiomes(frost, BiomeType.ICY, Type.COLD, nextBiomeID(), false);
+		if(Config.genRedwood == true)
+		{
+			int redwoodID = nextBiomeID();
+			redwood = new BiomeRedwood(redwoodID).setBiomeName("Redwood Forest");
+			registerBiomes(redwood, BiomeType.WARM, Type.FOREST, redwoodID, true);
+		}
+		if(Config.genFrost == true)
+		{
+			int frostID = nextBiomeID();
+			frost = new BiomeFrost(frostID).setBiomeName("The Frost");
+			registerBiomes(frost, BiomeType.ICY, Type.COLD, frostID, false);
+		}
 	}
 	
 	private static void registerBiomes(BiomeGenBase biome, BiomeType type, Type forgeType, int id, boolean canSpawnIn)
@@ -50,7 +58,7 @@ public class MBiomeManager
 		{
 			if (BiomeGenBase.getBiomeGenArray()[id] == null)
 			{
-				nextBiomeID = id + 1;
+				nextBiomeID = id;
 				System.out.println("Found next Biome ID: " + nextBiomeID);
 				return nextBiomeID;
 			}

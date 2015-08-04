@@ -6,6 +6,7 @@ import java.util.Random;
 
 import com.google.common.base.Predicate;
 
+import minestrapteam.mods.minestrappolation.Config;
 import minestrapteam.mods.minestrappolation.api.MRegistry;
 import minestrapteam.mods.minestrappolation.block.biomeores.BlockBiomeStones;
 import minestrapteam.mods.minestrappolation.block.ore.BlockPlutoniumOre;
@@ -81,16 +82,16 @@ public class MGenHandler implements IWorldGenerator
 		WorldChunkManager chunkManager = world.getWorldChunkManager();
 		BiomeGenBase biome = chunk.getBiome(pos, chunkManager);
 		
-		this.generateOre(MBlocks.copper_ore, world, rand, x1, z1, 3, 12, 20, 15, 100, BlockHelper.forBlock(Blocks.stone));
-		this.generateOre(MBlocks.tin_ore, world, rand, x1, z1, 3, 12, 24, 15, 100, BlockHelper.forBlock(Blocks.stone));
-		this.generateOre(MBlocks.meurodite_ore, world, rand, x1, z1, 1, 9, 10, 1, 32, BlockHelper.forBlock(Blocks.stone));
-		this.generateOre(MBlocks.sunstone_ore, world, rand, x1, z1, 2, 4, 20, 1, 200, BlockHelper.forBlock(Blocks.stone));
+		this.generateOre(MBlocks.copper_ore, world, rand, x1, z1, 3, 12, 20, 15, 100, BlockHelper.forBlock(Blocks.stone), Config.genCopper);
+		this.generateOre(MBlocks.tin_ore, world, rand, x1, z1, 3, 12, 24, 15, 100, BlockHelper.forBlock(Blocks.stone), Config.genTin);
+		this.generateOre(MBlocks.meurodite_ore, world, rand, x1, z1, 1, 9, 10, 1, 32, BlockHelper.forBlock(Blocks.stone), Config.genMeurodite);
+		this.generateOre(MBlocks.sunstone_ore, world, rand, x1, z1, 2, 4, 20, 1, 200, BlockHelper.forBlock(Blocks.stone), Config.genSunstone);
 		
-		this.generateOre(MBlocks.plutonium_ore, world, rand, x1, z1, 1, 4, 15, 1, 32, BlockHelper.forBlock(Blocks.stone));
-		this.generateOre(MBlocks.uranium_ore, world, rand, x1, z1, 1, 4, 15, 1, 32, BlockHelper.forBlock(Blocks.stone));
-		this.generateOre(MBlocks.radiant_ore, world, rand, x1, z1, 1, 4, 10, 15, 128, BlockHelper.forBlock(Blocks.stone));
-		this.generateOre(MBlocks.titanium_ore, world, rand, x1, z1, 1, 4, 12, 1, 10, BlockHelper.forBlock(Blocks.stone));
-		this.generateOre(MBlocks.slate, world, rand, x1, z1, 10, 33, 18, 0, 80, BlockHelper.forBlock(Blocks.stone));
+		this.generateOre(MBlocks.plutonium_ore, world, rand, x1, z1, 1, 4, 15, 1, 32, BlockHelper.forBlock(Blocks.stone), Config.genPlutonium);
+		this.generateOre(MBlocks.uranium_ore, world, rand, x1, z1, 1, 4, 15, 1, 32, BlockHelper.forBlock(Blocks.stone), Config.genUranium);
+		this.generateOre(MBlocks.radiant_ore, world, rand, x1, z1, 1, 4, 10, 15, 128, BlockHelper.forBlock(Blocks.stone), Config.genRadiant);
+		this.generateOre(MBlocks.titanium_ore, world, rand, x1, z1, 1, 4, 12, 1, 10, BlockHelper.forBlock(Blocks.stone), Config.genTitanium);
+		this.generateOre(MBlocks.slate, world, rand, x1, z1, 10, 33, 18, 0, 80, BlockHelper.forBlock(Blocks.stone), Config.genSlate);
 		this.generateBoulder(world, rand, x1, z1);
 		
 		if (biome == BiomeGenBase.ocean || biome == BiomeGenBase.river || biome == BiomeGenBase.deepOcean || biome == BiomeGenBase.swampland)
@@ -100,7 +101,7 @@ public class MGenHandler implements IWorldGenerator
 		
 		if (biome == BiomeGenBase.jungle || biome == BiomeGenBase.jungleEdge || biome == BiomeGenBase.jungleHills || biome == BiomeGenBase.swampland || biome == BiomeGenBase.roofedForest || biome == MBiomeManager.redwood)
 		{
-			this.generateOre(MBlocks.torite_ore, world, rand, x1, z1, 1, 6, 4, 1, 20, BlockHelper.forBlock(Blocks.stone));
+			this.generateOre(MBlocks.torite_ore, world, rand, x1, z1, 1, 6, 4, 1, 20, BlockHelper.forBlock(Blocks.stone), Config.genTorite);
 		}
 		if (biome == BiomeGenBase.desert || biome == BiomeGenBase.desertHills || biome == MBiomeManager.redwood)
 		{
@@ -160,22 +161,25 @@ public class MGenHandler implements IWorldGenerator
 		int x1 = x;
 		int y1 = 0;
 		int z1 = z;
-		this.generateOre(MBlocks.blazium_ore, world, rand, x1, z1, 1, 10, 15, 0, 128, BlockHelper.forBlock(Blocks.netherrack));
-		this.generateOre(MBlocks.soul_ore, world, rand, x1, z1, 3, 8, 30, 0, 128, BlockHelper.forBlock(Blocks.soul_sand));
+		this.generateOre(MBlocks.blazium_ore, world, rand, x1, z1, 1, 10, 15, 0, 128, BlockHelper.forBlock(Blocks.netherrack), true);
+		this.generateOre(MBlocks.soul_ore, world, rand, x1, z1, 3, 8, 30, 0, 128, BlockHelper.forBlock(Blocks.soul_sand), true);
 	}
 	
-	private void generateOre(Block block, World world, Random rand, int chunkX, int chunkZ, int minVienSize, int maxVienSize, int chance, int minY, int maxY, Predicate blockType)
+	private void generateOre(Block block, World world, Random rand, int chunkX, int chunkZ, int minVienSize, int maxVienSize, int chance, int minY, int maxY, Predicate blockType, boolean generate)
 	{
-		int vienSize = minVienSize + rand.nextInt(maxVienSize - minVienSize);
-		int heightRange = maxY - minY;
-		WorldGenMinable gen = new WorldGenMinable(block.getDefaultState(), vienSize, blockType);
-		for (int i = 0; i < chance; i++)
+		if(generate == true)
 		{
-			int xRand = chunkX * 16 + rand.nextInt(16);
-			int yRand = rand.nextInt(heightRange) + minY;
-			int zRand = chunkZ * 16 + rand.nextInt(16);
-			BlockPos position = new BlockPos(xRand, yRand, zRand);
-			gen.generate(world, rand, position);
+			int vienSize = minVienSize + rand.nextInt(maxVienSize - minVienSize);
+			int heightRange = maxY - minY;
+			WorldGenMinable gen = new WorldGenMinable(block.getDefaultState(), vienSize, blockType);
+			for (int i = 0; i < chance; i++)
+			{
+				int xRand = chunkX * 16 + rand.nextInt(16);
+				int yRand = rand.nextInt(heightRange) + minY;
+				int zRand = chunkZ * 16 + rand.nextInt(16);
+				BlockPos position = new BlockPos(xRand, yRand, zRand);
+				gen.generate(world, rand, position);
+			}
 		}
 	}
 	
