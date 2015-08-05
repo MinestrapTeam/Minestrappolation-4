@@ -289,25 +289,12 @@ public class AlloyRecipes
     {
 		ItemStack[] set1 = OreDictionary.getOres(name).toArray(new ItemStack[OreDictionary.getOres(name).size()]);
 		ItemStack[] set2 = OreDictionary.getOres(otherName).toArray(new ItemStack[OreDictionary.getOres(otherName).size()]);
-		ItemStack[] starting;
-		ItemStack[] ending;
-		
-		if(set1.length > set2.length)
-		{
-			starting = set1;
-			ending = set2;
-		}
-		else
-		{
-			starting = set2;
-			ending = set1;
-		}
-		
-    	for(int i = 0; i < starting.length; i++)
+	
+    	for(int i = 0; i < set1.length; i++)
     	{
-    		for(int i2 = 0; i2 < ending.length; i2++)
+    		for(int i2 = 0; i2 < set2.length; i2++)
     		{
-    			this.addRecipe(new ItemStack(starting[i].getItem(), amount), new ItemStack(ending[i2].getItem(), amount2), output, exp);
+    			this.addRecipe(new ItemStack(set1[i].getItem(), amount), new ItemStack(set2[i2].getItem(), amount2), output, exp);
     		}
     	}	
     }
