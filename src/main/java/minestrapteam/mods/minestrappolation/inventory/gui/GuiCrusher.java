@@ -13,7 +13,7 @@ import minestrapteam.mods.minestrappolation.tileentity.TileEntityCrusher;
 
 public class GuiCrusher extends GuiContainer
 {
-	private static final ResourceLocation	texture	= new ResourceLocation(MReference.MODID, "textures/gui/crusher.png");
+	public static final ResourceLocation	texture	= new ResourceLocation(MReference.MODID, "textures/gui/crusher.png");
 	
 	private TileEntityCrusher				furnace;
 	

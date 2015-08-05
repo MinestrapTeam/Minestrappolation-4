@@ -6,6 +6,7 @@ import minestrapteam.mods.minestrappolation.crafting.recipes.AlloyRecipes;
 import minestrapteam.mods.minestrappolation.inventory.gui.*;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.OreDictionary;
 
 import java.util.ArrayList;
 import java.util.List;

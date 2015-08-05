@@ -37,7 +37,7 @@ public class AlloyRecipes
 		this.addRecipe(new ItemStack(Blocks.clay, 4, 0), new ItemStack(MBlocks.desert_quartz_block, 1, 0), new ItemStack(MBlocks.slate, 4, 0), 0.3F);
 		
 		//Minerals
-		this.addRecipe(new ItemStack(MItems.tin_ingot, 3, 0), new ItemStack(MItems.copper_ingot, 3, 0), new ItemStack(MItems.bronze_ingot), 1F);
+		this.addDictionaryRecipes("ingotTin", 3, "ingotCopper", 3, new ItemStack(MItems.bronze_ingot), 1F);
 		this.addRecipe(new ItemStack(Items.iron_ingot, 1, 0), new ItemStack(Items.coal, 6, 0), new ItemStack(MItems.steel_ingot), 1F);
 		this.addRecipe(new ItemStack(Items.prismarine_shard, 1), new ItemStack(MItems.sunstone_shard, 1), new ItemStack(Items.prismarine_crystals), 1F);
 		this.addRecipe(new ItemStack(MItems.chunks, 8, 3), new ItemStack(MItems.radiant_quartz, 1), new ItemStack(Items.prismarine_shard, 8), 1.5F);
@@ -284,4 +284,31 @@ public class AlloyRecipes
 		
 		return (Integer) entry.getValue();
 	}
+	
+	public void addDictionaryRecipes(String name, int amount, String otherName, int amount2, ItemStack output, Float exp)
+    {
+		ItemStack[] set1 = OreDictionary.getOres(name).toArray(new ItemStack[OreDictionary.getOres(name).size()]);
+		ItemStack[] set2 = OreDictionary.getOres(otherName).toArray(new ItemStack[OreDictionary.getOres(otherName).size()]);
+		ItemStack[] starting;
+		ItemStack[] ending;
+		
+		if(set1.length > set2.length)
+		{
+			starting = set1;
+			ending = set2;
+		}
+		else
+		{
+			starting = set2;
+			ending = set1;
+		}
+		
+    	for(int i = 0; i < starting.length; i++)
+    	{
+    		for(int i2 = 0; i2 < ending.length; i2++)
+    		{
+    			this.addRecipe(new ItemStack(starting[i].getItem(), amount), new ItemStack(ending[i2].getItem(), amount2), output, exp);
+    		}
+    	}	
+    }
 }

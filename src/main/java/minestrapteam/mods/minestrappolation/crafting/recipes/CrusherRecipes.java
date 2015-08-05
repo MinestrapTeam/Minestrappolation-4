@@ -10,6 +10,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.OreDictionary;
 
 import com.google.common.collect.Maps;
 
@@ -147,8 +148,7 @@ public class CrusherRecipes
 		
 		this.addRecipe(MBlocks.desert_quartz, new ItemStack(MItems.desert_quartz_item, 8, 0), 0.1F, new ItemStack(MItems.radiant_quartz), 1);
 		
-		this.addRecipe(MBlocks.copper_ore, new ItemStack(MItems.chunks, 2, 5), 0.25F, new ItemStack(MItems.chunks, 1, 6), 8);
-		this.addRecipe(MBlocks.biome_copper, new ItemStack(MItems.chunks, 2, 5), 0.25F, new ItemStack(MItems.chunks, 1, 6), 8);
+		this.addDictionaryRecipes("oreCopper", new ItemStack(MItems.chunks, 2, 5), new ItemStack(MItems.chunks, 1, 6), 0.25F, 8);
 		
 		this.addRecipe(MBlocks.tin_ore, new ItemStack(MItems.chunks, 2, 6), 0.25F, new ItemStack(MItems.chunks, 1, 5), 8);
 		this.addRecipe(MBlocks.biome_tin, new ItemStack(MItems.chunks, 2, 6), 0.25F, new ItemStack(MItems.chunks, 1, 5), 8);
@@ -345,4 +345,12 @@ public class CrusherRecipes
 		
 		return ((Float) entry.getValue()).floatValue();
 	}
+	
+	public void addDictionaryRecipes(String name, ItemStack output ,ItemStack bonus, Float exp, int chance)
+    {
+    	for(ItemStack is : OreDictionary.getOres(name))
+    	{
+    		this.addRecipe(is, output, exp, bonus, chance);
+    	}
+    }
 }
