@@ -29,8 +29,8 @@ public class MelterRecipeHandler extends TemplateRecipeHandler
 			this.ingred = new PositionedStack(ingred, 51, 6);
 			this.result = new PositionedStack(result, 111, 24);
 			
-			ItemStack container = result.getItem().getContainerItem(result);
-			if (container != null)
+			ItemStack container = new ItemStack(MelterRecipes.instance().getRequiredContainer(ingred));
+			if (container != null && MelterRecipes.instance().needsBucket(ingred))
 			{
 				this.bucket = new PositionedStack(container, 61, 42);
 			}

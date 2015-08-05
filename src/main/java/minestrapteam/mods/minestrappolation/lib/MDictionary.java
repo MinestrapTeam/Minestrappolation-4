@@ -47,16 +47,16 @@ public class MDictionary
 		OreDictionary.registerOre("blockUranium", MBlocks.uranium_block);
 		OreDictionary.registerOre("blockSoulGem", MBlocks.soul_gem_block);
 		
-		OreDictionary.registerOre("ingotBrickStone", MItems.stone_brick);
-		OreDictionary.registerOre("ingotBrickStone", MItems.deepstone_brick);
-		OreDictionary.registerOre("ingotBrickStone", MItems.red_rock_brick);
-		OreDictionary.registerOre("ingotBrickStone", MItems.deep_red_rock_brick);
-		OreDictionary.registerOre("ingotBrickStone", MItems.coldstone_brick);
-		OreDictionary.registerOre("ingotBrickStone", MItems.deep_coldstone_brick);
-		OreDictionary.registerOre("ingotBrickStone", MItems.icestone_brick);
-		OreDictionary.registerOre("ingotBrickStone", MItems.glacierrock_brick);
-		OreDictionary.registerOre("ingotBrickStone", MItems.oceanstone_brick);
-		OreDictionary.registerOre("ingotBrickStone", MItems.pressurized_oceanstone_brick);
+		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 0));
+		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 1));
+		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 2));
+		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 3));
+		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 4));
+		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 5));
+		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 6));
+		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 7));
+		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 8));
+		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 9));
 		
 		OreDictionary.registerOre("logWood", new ItemStack(MBlocks.ministrapp_log, 1, WILDCARD_VALUE));
 		OreDictionary.registerOre("plankWood", new ItemStack(MBlocks.ministrapp_planks, 1, WILDCARD_VALUE));

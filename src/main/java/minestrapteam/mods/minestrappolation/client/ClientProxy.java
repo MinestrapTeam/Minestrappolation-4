@@ -33,6 +33,7 @@ import minestrapteam.mods.minestrappolation.block.biomeores.BlockBiomeTin;
 import minestrapteam.mods.minestrappolation.block.biomeores.BlockBiomeTitanium;
 import minestrapteam.mods.minestrappolation.block.biomeores.BlockBiomeTorite;
 import minestrapteam.mods.minestrappolation.block.biomeores.BlockBiomeUranium;
+import minestrapteam.mods.minestrappolation.item.ItemBricks;
 import minestrapteam.mods.minestrappolation.item.ItemChunk;
 import minestrapteam.mods.minestrappolation.lib.MAchievements;
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
@@ -99,6 +100,7 @@ public class ClientProxy extends CommonProxy
 		MBlockSapling.inventoryRender();
 		
 		ItemChunk.inventoryRender();
+		ItemBricks.inventoryRender();
 	}
 
 	

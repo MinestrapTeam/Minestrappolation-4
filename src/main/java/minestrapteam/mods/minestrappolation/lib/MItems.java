@@ -7,6 +7,7 @@ import minestrapteam.mods.minestrappolation.item.ItemAmulet;
 import minestrapteam.mods.minestrappolation.item.ItemAmuletPorcum;
 import minestrapteam.mods.minestrappolation.item.ItemAmuletVaccam;
 import minestrapteam.mods.minestrappolation.item.ItemBackpack;
+import minestrapteam.mods.minestrappolation.item.ItemBricks;
 import minestrapteam.mods.minestrappolation.item.ItemChunk;
 import minestrapteam.mods.minestrappolation.item.ItemHangGlider;
 import minestrapteam.mods.minestrappolation.item.ItemHeartContainer;
@@ -137,23 +138,7 @@ public class MItems extends Item
 	
 	//Stonecutter
 	public static Item							chunks;
-	
-	public static Item							stone_brick;
-	public static Item							deepstone_brick;
-	public static Item							red_rock_brick;
-	public static Item							deep_red_rock_brick;
-	public static Item							coldstone_brick;
-	public static Item							deep_coldstone_brick;
-	public static Item							icestone_brick;
-	public static Item							glacierrock_brick;
-	public static Item							oceanstone_brick;
-	public static Item							pressurized_oceanstone_brick;
-	public static Item							slate_brick;
-	public static Item							granite_brick;
-	public static Item							diorite_brick;
-	public static Item							andesite_brick;
-	public static Item							flint_brick;
-	public static Item							obsidian_brick;
+	public static Item							bricks;
 	
 	//Tools and Weapons
 	public static Item							copper_pickaxe;
@@ -372,24 +357,8 @@ public class MItems extends Item
 		heart_piece = new Item().setUnlocalizedName("heart_piece").setCreativeTab(Minestrappolation.tabMTools);
 		
 		//Stonecutter
-		chunks = new ItemChunk().setUnlocalizedName("chunks").setCreativeTab(Minestrappolation.tabMMaterials);
-		
-		stone_brick = new Item().setUnlocalizedName("stone_brick").setCreativeTab(Minestrappolation.tabMMaterials);
-		deepstone_brick = new Item().setUnlocalizedName("deepstone_brick").setCreativeTab(Minestrappolation.tabMMaterials);
-		red_rock_brick = new Item().setUnlocalizedName("red_rock_brick").setCreativeTab(Minestrappolation.tabMMaterials);
-		deep_red_rock_brick = new Item().setUnlocalizedName("deep_red_rock_brick").setCreativeTab(Minestrappolation.tabMMaterials);
-		coldstone_brick = new Item().setUnlocalizedName("coldstone_brick").setCreativeTab(Minestrappolation.tabMMaterials);
-		deep_coldstone_brick = new Item().setUnlocalizedName("deep_coldstone_brick").setCreativeTab(Minestrappolation.tabMMaterials);
-		icestone_brick = new Item().setUnlocalizedName("icestone_brick").setCreativeTab(Minestrappolation.tabMMaterials);
-		glacierrock_brick = new Item().setUnlocalizedName("glacierrock_brick").setCreativeTab(Minestrappolation.tabMMaterials);
-		oceanstone_brick = new Item().setUnlocalizedName("oceanstone_brick").setCreativeTab(Minestrappolation.tabMMaterials);
-		pressurized_oceanstone_brick = new Item().setUnlocalizedName("pressurized_oceanstone_brick").setCreativeTab(Minestrappolation.tabMMaterials);
-		slate_brick = new Item().setUnlocalizedName("slate_brick").setCreativeTab(Minestrappolation.tabMMaterials);
-		granite_brick = new Item().setUnlocalizedName("granite_brick").setCreativeTab(Minestrappolation.tabMMaterials);
-		diorite_brick = new Item().setUnlocalizedName("diorite_brick").setCreativeTab(Minestrappolation.tabMMaterials);
-		andesite_brick = new Item().setUnlocalizedName("andesite_brick").setCreativeTab(Minestrappolation.tabMMaterials);
-		flint_brick = new Item().setUnlocalizedName("flint_brick").setCreativeTab(Minestrappolation.tabMMaterials);
-		obsidian_brick = new Item().setUnlocalizedName("obsidian_brick").setCreativeTab(Minestrappolation.tabMMaterials);
+		chunks = new ItemChunk().setUnlocalizedName("chunks").setCreativeTab(Minestrappolation.tabMMaterials);	
+		bricks = new ItemBricks().setUnlocalizedName("bricks").setCreativeTab(Minestrappolation.tabMMaterials);
 		
 		//Tools and Weapons
 		copper_pickaxe = new ItemMPickaxe(COPPER, copper_ingot, false).setUnlocalizedName("copper_pickaxe").setCreativeTab(Minestrappolation.tabMTools);
@@ -509,22 +478,7 @@ public class MItems extends Item
 		register(wing_segment);
 		register(mana_leaf);
 		
-		register(stone_brick);
-		register(deepstone_brick);
-		register(red_rock_brick);
-		register(deep_red_rock_brick);
-		register(coldstone_brick);
-		register(deep_coldstone_brick);
-		register(icestone_brick);
-		register(glacierrock_brick);
-		register(oceanstone_brick);
-		register(pressurized_oceanstone_brick);
-		register(slate_brick);
-		register(granite_brick);
-		register(diorite_brick);
-		register(andesite_brick);
-		register(flint_brick);
-		register(obsidian_brick);
+		register(bricks);
 		
 		register(chunks);
 		register(desert_quartz_item);

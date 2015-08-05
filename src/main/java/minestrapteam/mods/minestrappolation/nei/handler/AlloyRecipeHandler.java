@@ -75,13 +75,13 @@ public class AlloyRecipeHandler extends TemplateRecipeHandler
         private void setIngredients(ItemStack[] inputs, ItemStack output)
         {
             PositionedStack stack = new PositionedStack(inputs[0], 32, 6);
-            stack.setMaxSize(1);
+            stack.setMaxSize(AlloyRecipes.getInstance().getInputSize(inputs[0]));
             ingredients.add(stack);
 
             if(inputs.length > 1 && inputs[1] != null)
             {
                 stack = new PositionedStack(inputs[1], 50, 6);
-                stack.setMaxSize(1);
+                stack.setMaxSize(AlloyRecipes.getInstance().getInputSize(inputs[1]));
                 ingredients.add(stack);
             }
         }

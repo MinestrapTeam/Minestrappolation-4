@@ -89,8 +89,16 @@ public class BlockClaimerator extends MBlock
 			
 			if(playerIn.getHeldItem().getItem() == Items.redstone)
 			{
-				ChunkProtector.getProtectionData(worldIn.getChunkFromBlockCoords(pos).xPosition, worldIn.getChunkFromBlockCoords(pos).zPosition).setUseRedstoneObjects(true);
-				playerIn.addChatMessage(new ChatComponentText("Levers, doors, and buttons can now be used by everyone"));
+				if(playerIn.isSneaking())
+				{
+					ChunkProtector.getProtectionData(worldIn.getChunkFromBlockCoords(pos).xPosition, worldIn.getChunkFromBlockCoords(pos).zPosition).setUseRedstoneObjects(false);
+					playerIn.addChatMessage(new ChatComponentText("Levers, doors, and buttons CANNOT be used by everyone"));
+				}
+				else
+				{
+					ChunkProtector.getProtectionData(worldIn.getChunkFromBlockCoords(pos).xPosition, worldIn.getChunkFromBlockCoords(pos).zPosition).setUseRedstoneObjects(true);
+					playerIn.addChatMessage(new ChatComponentText("Levers, doors, and buttons CAN now be used by everyone"));
+				}
 			}
 			
 		}
