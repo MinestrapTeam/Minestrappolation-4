@@ -341,6 +341,11 @@ public class MGenHandler implements IWorldGenerator
 					else if (block instanceof BlockOre || block instanceof MBlockOre && block != MBlocks.desert_quartz || block instanceof BlockPlutoniumOre || block instanceof BlockUraniumOre || block instanceof BlockRedstoneOre)
 					{
 						Block oreToReplace = this.getOreToReplace(block);
+						if(!this.oreReplacements.containsKey(block))
+						{
+							oreMeta = 0;
+							deepOreMeta = 0;
+						}
 						
 						if (y < deepStoneDepth)
 						{
@@ -458,6 +463,10 @@ public class MGenHandler implements IWorldGenerator
 	
 	public Block getOreToReplace(Block block)
 	{
+		if(!this.oreReplacements.containsKey(block))
+		{
+			return block;
+		}
 		return oreReplacements.get(block);
 	}
 	
