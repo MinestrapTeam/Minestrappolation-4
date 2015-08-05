@@ -9,6 +9,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.OreDictionary;
 
 import com.google.common.collect.Maps;
 
@@ -590,4 +591,12 @@ public class SplitterRecipes
 		
 		return ((Float) entry.getValue()).floatValue();
 	}
+	
+	public void addDictionaryRecipes(String name, ItemStack output, ItemStack output2, Float exp, int chance)
+    {
+    	for(ItemStack is : OreDictionary.getOres(name))
+    	{
+    		this.addRecipe(is, output, output2, 0.1F);
+    	}
+    }
 }

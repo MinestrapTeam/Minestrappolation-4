@@ -10,6 +10,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.OreDictionary;
 
 import com.google.common.collect.Maps;
 
@@ -140,8 +141,7 @@ public class MelterRecipes
 		
 		//Misc
 		this.addRecipe(Blocks.glowstone, new ItemStack(MBlocks.glow_glass), 1.0F, false);
-		this.addRecipe(MBlocks.titanium_ore, new ItemStack(MItems.titanium_ingot), 2.0F, false);
-		this.addRecipe(MBlocks.biome_titanium, new ItemStack(MItems.titanium_ingot), 2.0F, false);
+		this.addDictionaryRecipes("oreTitanium", new ItemStack(MItems.titanium_ingot), 2.0F, false);
 		this.addRecipe(new ItemStack(MItems.chunks, 1, 10), new ItemStack(MItems.titanium_ingot), 2.0F, false);
 	}
 	
@@ -243,4 +243,12 @@ public class MelterRecipes
 		
 		return ((Float) entry.getValue()).floatValue();
 	}
+	
+	public void addDictionaryRecipes(String name, ItemStack output, Float exp, boolean needsBucket)
+    {
+    	for(ItemStack is : OreDictionary.getOres(name))
+    	{
+    		this.addRecipe(is, output, exp, needsBucket);
+    	}
+    }
 }
