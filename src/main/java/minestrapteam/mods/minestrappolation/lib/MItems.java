@@ -376,55 +376,55 @@ public class MItems extends Item
 		bricks = new ItemBricks().setUnlocalizedName("bricks").setCreativeTab(Minestrappolation.tabMMaterials);
 		
 		//Tools and Weapons
-		copper_pickaxe = new ItemMPickaxe(COPPER, copper_ingot, false).setUnlocalizedName("copper_pickaxe").setCreativeTab(Minestrappolation.tabMTools);
+		copper_pickaxe = new ItemMPickaxe(COPPER, copper_ingot, false, false).setUnlocalizedName("copper_pickaxe").setCreativeTab(Minestrappolation.tabMTools);
 		copper_axe = new ItemMAxe(COPPER, copper_ingot, false).setUnlocalizedName("copper_axe").setCreativeTab(Minestrappolation.tabMTools);
 		copper_shovel = new ItemMShovel(COPPER, copper_ingot, false).setUnlocalizedName("copper_shovel").setCreativeTab(Minestrappolation.tabMTools);
 		copper_hoe = new ItemMHoe(COPPER, copper_ingot, false).setUnlocalizedName("copper_hoe").setCreativeTab(Minestrappolation.tabMTools);
 		copper_sword = new ItemMSword(COPPER, copper_ingot, false).setUnlocalizedName("copper_sword").setCreativeTab(Minestrappolation.tabMCombat);
 		
-		bronze_pickaxe = new ItemMPickaxe(BRONZE, bronze_ingot, false).setUnlocalizedName("bronze_pickaxe").setCreativeTab(Minestrappolation.tabMTools);
+		bronze_pickaxe = new ItemMPickaxe(BRONZE, bronze_ingot, false, false).setUnlocalizedName("bronze_pickaxe").setCreativeTab(Minestrappolation.tabMTools);
 		bronze_axe = new ItemMAxe(BRONZE, bronze_ingot, false).setUnlocalizedName("bronze_axe").setCreativeTab(Minestrappolation.tabMTools);
 		bronze_shovel = new ItemMShovel(BRONZE, bronze_ingot, false).setUnlocalizedName("bronze_shovel").setCreativeTab(Minestrappolation.tabMTools);
 		bronze_hoe = new ItemMHoe(BRONZE, bronze_ingot, false).setUnlocalizedName("bronze_hoe").setCreativeTab(Minestrappolation.tabMTools);
 		bronze_sword = new ItemMSword(BRONZE, bronze_ingot, false).setUnlocalizedName("bronze_sword").setCreativeTab(Minestrappolation.tabMCombat);
 		
-		steel_pickaxe = new ItemMPickaxe(STEEL, steel_ingot, false).setUnlocalizedName("steel_pickaxe").setCreativeTab(Minestrappolation.tabMTools);
+		steel_pickaxe = new ItemMPickaxe(STEEL, steel_ingot, false, false).setUnlocalizedName("steel_pickaxe").setCreativeTab(Minestrappolation.tabMTools);
 		steel_axe = new ItemMAxe(STEEL, steel_ingot, false).setUnlocalizedName("steel_axe").setCreativeTab(Minestrappolation.tabMTools);
 		steel_shovel = new ItemMShovel(STEEL, steel_ingot, false).setUnlocalizedName("steel_shovel").setCreativeTab(Minestrappolation.tabMTools);
 		steel_hoe = new ItemMHoe(STEEL, steel_ingot, false).setUnlocalizedName("steel_hoe").setCreativeTab(Minestrappolation.tabMTools);
 		steel_sword = new ItemMSword(STEEL, steel_ingot, false).setUnlocalizedName("steel_sword").setCreativeTab(Minestrappolation.tabMCombat);
 		
-		meurodite_pickaxe = new ItemMPickaxe(MEURODITE, meurodite_gem, false).setUnlocalizedName("meurodite_pickaxe").setCreativeTab(Minestrappolation.tabMTools);
+		meurodite_pickaxe = new ItemMPickaxe(MEURODITE, meurodite_gem, false, false).setUnlocalizedName("meurodite_pickaxe").setCreativeTab(Minestrappolation.tabMTools);
 		meurodite_axe = new ItemMAxe(MEURODITE, meurodite_gem, false).setUnlocalizedName("meurodite_axe").setCreativeTab(Minestrappolation.tabMTools);
 		meurodite_shovel = new ItemMShovel(MEURODITE, meurodite_gem, false).setUnlocalizedName("meurodite_shovel").setCreativeTab(Minestrappolation.tabMTools);
 		meurodite_hoe = new ItemMHoe(MEURODITE, meurodite_gem, false).setUnlocalizedName("meurodite_hoe").setCreativeTab(Minestrappolation.tabMTools);
 		meurodite_sword = new ItemMSword(MEURODITE, meurodite_gem, false).setUnlocalizedName("meurodite_sword").setCreativeTab(Minestrappolation.tabMCombat);
 		
-		torite_pickaxe = new ItemMPickaxe(TORITE, torite_ingot, false).setUnlocalizedName("torite_pickaxe").setCreativeTab(Minestrappolation.tabMTools);
+		torite_pickaxe = new ItemMPickaxe(TORITE, torite_ingot, false, false).setUnlocalizedName("torite_pickaxe").setCreativeTab(Minestrappolation.tabMTools);
 		torite_axe = new ItemMAxe(TORITE, torite_ingot, false).setUnlocalizedName("torite_axe").setCreativeTab(Minestrappolation.tabMTools);
 		torite_shovel = new ItemMShovel(TORITE, torite_ingot, false).setUnlocalizedName("torite_shovel").setCreativeTab(Minestrappolation.tabMTools);
 		torite_hoe = new ItemMHoe(TORITE, torite_ingot, false).setUnlocalizedName("torite_hoe").setCreativeTab(Minestrappolation.tabMTools);
 		torite_sword = new ItemMSword(TORITE, torite_ingot, false).setUnlocalizedName("torite_sword").setCreativeTab(Minestrappolation.tabMCombat);
 		
-		ice_pickaxe = new ItemMPickaxe(ICE, glacierite_ingot, true).setUnlocalizedName("ice_pickaxe").setCreativeTab(Minestrappolation.tabMTools);
-		ice_axe = new ItemMAxe(ICE, glacierite_ingot, true).setUnlocalizedName("ice_axe").setCreativeTab(Minestrappolation.tabMTools);
-		ice_shovel = new ItemMShovel(ICE, glacierite_ingot, true).setUnlocalizedName("ice_shovel").setCreativeTab(Minestrappolation.tabMTools);
-		ice_hoe = new ItemMHoe(ICE, glacierite_ingot, true).setUnlocalizedName("ice_hoe").setCreativeTab(Minestrappolation.tabMTools);
-		ice_sword = new ItemMSword(ICE, glacierite_ingot, true).setUnlocalizedName("ice_sword").setCreativeTab(Minestrappolation.tabMCombat);
+		ice_pickaxe = new ItemMPickaxe(ICE, glacierite_ingot, false, true).setUnlocalizedName("ice_pickaxe").setCreativeTab(Minestrappolation.tabMTools);
+		ice_axe = new ItemMAxe(ICE, glacierite_ingot, false).setUnlocalizedName("ice_axe").setCreativeTab(Minestrappolation.tabMTools);
+		ice_shovel = new ItemMShovel(ICE, glacierite_ingot, false).setUnlocalizedName("ice_shovel").setCreativeTab(Minestrappolation.tabMTools);
+		ice_hoe = new ItemMHoe(ICE, glacierite_ingot, false).setUnlocalizedName("ice_hoe").setCreativeTab(Minestrappolation.tabMTools);
+		ice_sword = new ItemMSword(ICE, glacierite_ingot, false).setUnlocalizedName("ice_sword").setCreativeTab(Minestrappolation.tabMCombat);
 		
-		fire_pickaxe = new ItemMPickaxe(BLAZIUM, blazium_ingot, true).setUnlocalizedName("fire_pickaxe").setCreativeTab(Minestrappolation.tabMTools);
+		fire_pickaxe = new ItemMPickaxe(BLAZIUM, blazium_ingot, true, false).setUnlocalizedName("fire_pickaxe").setCreativeTab(Minestrappolation.tabMTools);
 		fire_axe = new ItemMAxe(BLAZIUM, blazium_ingot, true).setUnlocalizedName("fire_axe").setCreativeTab(Minestrappolation.tabMTools);
 		fire_shovel = new ItemMShovel(BLAZIUM, blazium_ingot, true).setUnlocalizedName("fire_shovel").setCreativeTab(Minestrappolation.tabMTools);
 		fire_hoe = new ItemMHoe(BLAZIUM, blazium_ingot, true).setUnlocalizedName("fire_hoe").setCreativeTab(Minestrappolation.tabMTools);
 		fire_sword = new ItemMSword(BLAZIUM, blazium_ingot, true).setUnlocalizedName("fire_sword").setCreativeTab(Minestrappolation.tabMCombat);
 		
-		titanium_pickaxe = new ItemMPickaxe(TITANIUM, titanium_ingot, false).setUnlocalizedName("titanium_pickaxe").setCreativeTab(Minestrappolation.tabMTools);
+		titanium_pickaxe = new ItemMPickaxe(TITANIUM, titanium_ingot, false, false).setUnlocalizedName("titanium_pickaxe").setCreativeTab(Minestrappolation.tabMTools);
 		titanium_axe = new ItemMAxe(TITANIUM, titanium_ingot, false).setUnlocalizedName("titanium_axe").setCreativeTab(Minestrappolation.tabMTools);
 		titanium_shovel = new ItemMShovel(TITANIUM, titanium_ingot, false).setUnlocalizedName("titanium_shovel").setCreativeTab(Minestrappolation.tabMTools);
 		titanium_hoe = new ItemMHoe(TITANIUM, titanium_ingot, false).setUnlocalizedName("titanium_hoe").setCreativeTab(Minestrappolation.tabMTools);
 		titanium_sword = new ItemMSword(TITANIUM, titanium_ingot, false).setUnlocalizedName("titanium_sword").setCreativeTab(Minestrappolation.tabMCombat);
 		
-		bedrock_pickaxe = new ItemMPickaxe(BEDROCK, Item.getItemFromBlock(Blocks.bedrock), false).setUnlocalizedName("bedrock_pickaxe").setCreativeTab(Minestrappolation.tabMTools);
+		bedrock_pickaxe = new ItemMPickaxe(BEDROCK, Item.getItemFromBlock(Blocks.bedrock), false, false).setUnlocalizedName("bedrock_pickaxe").setCreativeTab(Minestrappolation.tabMTools);
 		bedrock_axe = new ItemMAxe(BEDROCK, Item.getItemFromBlock(Blocks.bedrock), false).setUnlocalizedName("bedrock_axe").setCreativeTab(Minestrappolation.tabMTools);
 		bedrock_shovel = new ItemMShovel(BEDROCK, Item.getItemFromBlock(Blocks.bedrock), false).setUnlocalizedName("bedrock_shovel").setCreativeTab(Minestrappolation.tabMTools);
 		bedrock_hoe = new ItemMHoe(BEDROCK, Item.getItemFromBlock(Blocks.bedrock), false).setUnlocalizedName("bedrock_hoe").setCreativeTab(Minestrappolation.tabMTools);
