@@ -35,6 +35,10 @@ public class ItemSifter extends Item{
             {
 				this.spawnDropFrom(stack, playerIn, worldIn, pos, "sifter_red_sand"); 
             }
+			else if (worldIn.getBlockState(pos).getBlock() == Blocks.clay)
+            {
+				this.spawnDropFrom(stack, playerIn, worldIn, pos, "sifter_clay");
+            }
 			else if (worldIn.getBlockState(pos).getBlock() == Blocks.gravel)
             {
 				this.spawnDropFrom(stack, playerIn, worldIn, pos, "sifter_gravel");

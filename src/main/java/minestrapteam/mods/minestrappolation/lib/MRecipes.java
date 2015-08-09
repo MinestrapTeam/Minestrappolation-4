@@ -238,6 +238,12 @@ public class MRecipes
 		GameRegistry.addRecipe(new ItemStack(MItems.torite_hoe), new Object[] { "II", " S", " S", 'I', MItems.torite_ingot, 'S', MItems.reinforced_stick });
 		GameRegistry.addRecipe(new ItemStack(MItems.torite_sword), new Object[] { "I", "I", "S", 'I', MItems.torite_ingot, 'S', MItems.reinforced_stick });
 		
+		GameRegistry.addRecipe(new ItemStack(MItems.ice_pickaxe), new Object[] { "III", " S ", " S ", 'I', MItems.glacierite_ingot, 'S', MItems.reinforced_stick });
+		GameRegistry.addRecipe(new ItemStack(MItems.ice_axe), new Object[] { "II", "IS", " S", 'I', MItems.glacierite_ingot, 'S', MItems.reinforced_stick });
+		GameRegistry.addRecipe(new ItemStack(MItems.ice_shovel), new Object[] { "I", "S", "S", 'I', MItems.glacierite_ingot, 'S', MItems.reinforced_stick });
+		GameRegistry.addRecipe(new ItemStack(MItems.ice_hoe), new Object[] { "II", " S", " S", 'I', MItems.glacierite_ingot, 'S', MItems.reinforced_stick });
+		GameRegistry.addRecipe(new ItemStack(MItems.ice_sword), new Object[] { "I", "I", "S", 'I', MItems.glacierite_ingot, 'S', MItems.reinforced_stick });
+		
 		GameRegistry.addRecipe(new ItemStack(MItems.fire_pickaxe), new Object[] { "III", " S ", " S ", 'I', MItems.blazium_ingot, 'S', Items.blaze_rod });
 		GameRegistry.addRecipe(new ItemStack(MItems.fire_axe), new Object[] { "II", "IS", " S", 'I', MItems.blazium_ingot, 'S', Items.blaze_rod });
 		GameRegistry.addRecipe(new ItemStack(MItems.fire_shovel), new Object[] { "I", "S", "S", 'I', MItems.blazium_ingot, 'S', Items.blaze_rod });
@@ -279,6 +285,11 @@ public class MRecipes
 		GameRegistry.addRecipe(new ItemStack(MItems.torite_chestplate), new Object[] { "I I", "III", "III", 'I', MItems.torite_ingot });
 		GameRegistry.addRecipe(new ItemStack(MItems.torite_leggings), new Object[] { "III", "I I", "I I", 'I', MItems.torite_ingot });
 		GameRegistry.addRecipe(new ItemStack(MItems.torite_boots), new Object[] { "I I", "I I", 'I', MItems.torite_ingot });
+		
+		GameRegistry.addRecipe(new ItemStack(MItems.ice_helmet), new Object[] { "III", "I I", 'I', MItems.glacierite_ingot });
+		GameRegistry.addRecipe(new ItemStack(MItems.ice_chestplate), new Object[] { "I I", "III", "III", 'I', MItems.glacierite_ingot });
+		GameRegistry.addRecipe(new ItemStack(MItems.ice_leggings), new Object[] { "III", "I I", "I I", 'I', MItems.glacierite_ingot });
+		GameRegistry.addRecipe(new ItemStack(MItems.ice_boots), new Object[] { "I I", "I I", 'I', MItems.glacierite_ingot });
 		
 		GameRegistry.addRecipe(new ItemStack(MItems.blazium_helmet), new Object[] { "III", "I I", 'I', MItems.blazium_ingot });
 		GameRegistry.addRecipe(new ItemStack(MItems.blazium_chestplate), new Object[] { "I I", "III", "III", 'I', MItems.blazium_ingot });

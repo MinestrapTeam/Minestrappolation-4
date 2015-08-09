@@ -20,7 +20,7 @@ public class ItemMFood extends ItemFood
         super(healAmount, saturation, false);
         fireTime = igniteTime;
         if(this == MItems.crushed_ice)
-        	this.setMaxStackSize(16);
+        	this.setAlwaysEdible();
     }
 
     public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityPlayer playerIn)

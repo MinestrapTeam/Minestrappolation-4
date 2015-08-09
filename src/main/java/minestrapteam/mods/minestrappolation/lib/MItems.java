@@ -172,6 +172,12 @@ public class MItems extends Item
 	public static Item							torite_hoe;
 	public static Item							torite_sword;
 	
+	public static Item							ice_pickaxe;
+	public static Item							ice_axe;
+	public static Item							ice_shovel;
+	public static Item							ice_hoe;
+	public static Item							ice_sword;
+	
 	public static Item							fire_pickaxe;
 	public static Item							fire_axe;
 	public static Item							fire_shovel;
@@ -220,6 +226,11 @@ public class MItems extends Item
 	public static Item							torite_leggings;
 	public static Item							torite_boots;
 	
+	public static Item							ice_helmet;
+	public static Item							ice_chestplate;
+	public static Item							ice_leggings;
+	public static Item							ice_boots;
+	
 	public static Item							blazium_helmet;
 	public static Item							blazium_chestplate;
 	public static Item							blazium_leggings;
@@ -248,6 +259,7 @@ public class MItems extends Item
 	public static final Item.ToolMaterial		STEEL			= EnumHelper.addToolMaterial("STEEL", 2, 420, 7.8F, 2.5F, 20);
 	public static final Item.ToolMaterial		MEURODITE		= EnumHelper.addToolMaterial("MEURODITE", 2, 905, 7.0F, 2.5F, 13);
 	public static final Item.ToolMaterial		TORITE			= EnumHelper.addToolMaterial("TORITE", 3, 1208, 9.0F, 3.5F, 28);
+	public static final Item.ToolMaterial		ICE				= EnumHelper.addToolMaterial("ICE", 2, 808, 8.0F, 3.5F, 18);
 	public static final Item.ToolMaterial		BLAZIUM			= EnumHelper.addToolMaterial("BLAZIUM", 2, 808, 8.0F, 3.5F, 18);
 	public static final Item.ToolMaterial		TITANIUM		= EnumHelper.addToolMaterial("TITANIUM", 4, 3122, 14.0F, 5.0F, 8);
 	public static final Item.ToolMaterial		BEDROCK			= EnumHelper.addToolMaterial("BEDROCK", 5, 6244, 7.0F, 1.0F, 5);
@@ -258,6 +270,7 @@ public class MItems extends Item
 	public static final ItemArmor.ArmorMaterial	ARMOR_STEEL		= EnumHelper.addArmorMaterial("ARMOR_STEEL", "steel", 19, new int[] { 3, 7, 5, 3 }, 14);
 	public static final ItemArmor.ArmorMaterial	ARMOR_MEURODITE	= EnumHelper.addArmorMaterial("ARMOR_MEURODITE", "meurodite", 24, new int[] { 3, 7, 6, 2 }, 10);
 	public static final ItemArmor.ArmorMaterial	ARMOR_TORITE	= EnumHelper.addArmorMaterial("ARMOR_TORITE", "torite", 31, new int[] { 4, 9, 7, 3 }, 30);
+	public static final ItemArmor.ArmorMaterial	ARMOR_ICE		= EnumHelper.addArmorMaterial("ARMOR_ICE", "ice", 22, new int[] { 2, 7, 6, 2 }, 10);
 	public static final ItemArmor.ArmorMaterial	ARMOR_BLAZIUM	= EnumHelper.addArmorMaterial("ARMOR_BLAZIUM", "blazium", 22, new int[] { 2, 7, 6, 2 }, 10);
 	public static final ItemArmor.ArmorMaterial	ARMOR_TITANIUM	= EnumHelper.addArmorMaterial("ARMOR_TITANIUM", "titanium", 66, new int[] { 6, 16, 12, 6 }, 8);
 	
@@ -344,7 +357,7 @@ public class MItems extends Item
 		meurodite_plating = new Item().setUnlocalizedName("meurodite_plating").setCreativeTab(Minestrappolation.tabMMaterials);
 		
 		//Crafting Materials
-		crushed_ice = new ItemMFood(0, 0, 0).setUnlocalizedName("crushed_ice").setCreativeTab(Minestrappolation.tabMFood);
+		crushed_ice = new ItemMFood(0, 0, 0).setMaxStackSize(16).setUnlocalizedName("crushed_ice").setCreativeTab(Minestrappolation.tabMFood);
 		reinforced_stick = new Item().setUnlocalizedName("reinforced_stick").setCreativeTab(Minestrappolation.tabMMaterials);
 		propeller = new Item().setUnlocalizedName("propeller").setCreativeTab(Minestrappolation.tabMMaterials);
 		animal_bones = new Item().setUnlocalizedName("animal_bones").setCreativeTab(Minestrappolation.tabMMaterials);
@@ -393,6 +406,12 @@ public class MItems extends Item
 		torite_hoe = new ItemMHoe(TORITE, torite_ingot, false).setUnlocalizedName("torite_hoe").setCreativeTab(Minestrappolation.tabMTools);
 		torite_sword = new ItemMSword(TORITE, torite_ingot, false).setUnlocalizedName("torite_sword").setCreativeTab(Minestrappolation.tabMCombat);
 		
+		ice_pickaxe = new ItemMPickaxe(ICE, glacierite_ingot, true).setUnlocalizedName("ice_pickaxe").setCreativeTab(Minestrappolation.tabMTools);
+		ice_axe = new ItemMAxe(ICE, glacierite_ingot, true).setUnlocalizedName("ice_axe").setCreativeTab(Minestrappolation.tabMTools);
+		ice_shovel = new ItemMShovel(ICE, glacierite_ingot, true).setUnlocalizedName("ice_shovel").setCreativeTab(Minestrappolation.tabMTools);
+		ice_hoe = new ItemMHoe(ICE, glacierite_ingot, true).setUnlocalizedName("ice_hoe").setCreativeTab(Minestrappolation.tabMTools);
+		ice_sword = new ItemMSword(ICE, glacierite_ingot, true).setUnlocalizedName("ice_sword").setCreativeTab(Minestrappolation.tabMCombat);
+		
 		fire_pickaxe = new ItemMPickaxe(BLAZIUM, blazium_ingot, true).setUnlocalizedName("fire_pickaxe").setCreativeTab(Minestrappolation.tabMTools);
 		fire_axe = new ItemMAxe(BLAZIUM, blazium_ingot, true).setUnlocalizedName("fire_axe").setCreativeTab(Minestrappolation.tabMTools);
 		fire_shovel = new ItemMShovel(BLAZIUM, blazium_ingot, true).setUnlocalizedName("fire_shovel").setCreativeTab(Minestrappolation.tabMTools);
@@ -440,6 +459,11 @@ public class MItems extends Item
 		torite_chestplate = new ItemMArmor(ARMOR_TORITE, 0, 1, torite_ingot, "torite").setUnlocalizedName("torite_chestplate").setCreativeTab(Minestrappolation.tabMCombat);
 		torite_leggings = new ItemMArmor(ARMOR_TORITE, 0, 2, torite_ingot, "torite").setUnlocalizedName("torite_leggings").setCreativeTab(Minestrappolation.tabMCombat);
 		torite_boots = new ItemMArmor(ARMOR_TORITE, 0, 3, torite_ingot, "torite").setUnlocalizedName("torite_boots").setCreativeTab(Minestrappolation.tabMCombat);
+		
+		ice_helmet = new ItemMArmor(ARMOR_ICE, 0, 0, glacierite_ingot, "ice").setUnlocalizedName("ice_helmet").setCreativeTab(Minestrappolation.tabMCombat);
+		ice_chestplate = new ItemMArmor(ARMOR_ICE, 0, 1, glacierite_ingot, "ice").setUnlocalizedName("ice_chestplate").setCreativeTab(Minestrappolation.tabMCombat);
+		ice_leggings = new ItemMArmor(ARMOR_ICE, 0, 2, glacierite_ingot, "ice").setUnlocalizedName("ice_leggings").setCreativeTab(Minestrappolation.tabMCombat);
+		ice_boots = new ItemMArmor(ARMOR_ICE, 0, 3, glacierite_ingot, "ice").setUnlocalizedName("ice_boots").setCreativeTab(Minestrappolation.tabMCombat);
 		
 		blazium_helmet = new ItemMArmor(ARMOR_BLAZIUM, 0, 0, blazium_ingot, "blazium").setUnlocalizedName("blazium_helmet").setCreativeTab(Minestrappolation.tabMCombat);
 		blazium_chestplate = new ItemMArmor(ARMOR_BLAZIUM, 0, 1, blazium_ingot, "blazium").setUnlocalizedName("blazium_chestplate").setCreativeTab(Minestrappolation.tabMCombat);
@@ -635,6 +659,17 @@ public class MItems extends Item
 		register(titanium_chestplate);
 		register(titanium_leggings);
 		register(titanium_boots);
+		
+		register(ice_pickaxe);
+		register(ice_axe);
+		register(ice_shovel);
+		register(ice_hoe);
+		register(ice_sword);
+		
+		register(ice_helmet);
+		register(ice_chestplate);
+		register(ice_leggings);
+		register(ice_boots);
 		
 		register(fire_pickaxe);
 		register(fire_axe);

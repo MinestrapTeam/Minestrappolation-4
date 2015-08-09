@@ -20,7 +20,8 @@ public class Tables {
 	{
 		Chance.createChanceTable("sifter_sand", new ArrayList<ItemStack>());
 		Chance.createChanceTable("sifter_red_sand", new ArrayList<ItemStack>());
-		Chance.createChanceTable("sifter_gravel", new ArrayList<Item>());
+		Chance.createChanceTable("sifter_clay", new ArrayList<ItemStack>());
+		Chance.createChanceTable("sifter_gravel", new ArrayList<ItemStack>());
 		Chance.createChanceTable("sifter_dirt", new ArrayList<ItemStack>());
 		Chance.createChanceTable("sifter_podzol", new ArrayList<ItemStack>());
 		Chance.createChanceTable("sifter_mycelium", new ArrayList<ItemStack>());
@@ -43,6 +44,15 @@ public class Tables {
     	Chance.addToChanceTable("sifter_red_sand", new ItemStack(MItems.chunks, 1, 4), 5);
     	Chance.addToChanceTable("sifter_red_sand", new ItemStack(Items.clay_ball, 1, 0), 50);
     	Chance.addToChanceTable("sifter_red_sand", new ItemStack(MItems.chunks, 1, 5), 3);
+    	//Sifter - Clay
+    	Chance.addToChanceTable("sifter_clay", null, 25);
+    	Chance.addToChanceTable("sifter_clay", new ItemStack(Items.clay_ball, 1, 0), 50);
+    	Chance.addToChanceTable("sifter_clay", new ItemStack(MItems.animal_bones, 1, 0), 30);
+    	Chance.addToChanceTable("sifter_clay", new ItemStack(Items.bone, 1, 0), 10);
+    	Chance.addToChanceTable("sifter_clay", new ItemStack(Items.reeds, 1, 0), 10);
+    	Chance.addToChanceTable("sifter_clay", new ItemStack(MBlocks.seaweed, 1, 0), 5);
+    	Chance.addToChanceTable("sifter_clay", new ItemStack(Items.slime_ball, 1, 0), 5);
+    	Chance.addToChanceTable("sifter_clay", new ItemStack(MItems.squid_tentacle, 1, 0), 3);
     	//Sifter - Gravel
     	Chance.addToChanceTable("sifter_gravel", null, 25);
     	Chance.addToChanceTable("sifter_gravel", new ItemStack(MItems.chunks, 1, 2), 20);
@@ -87,14 +97,18 @@ public class Tables {
     	Chance.addToChanceTable("sifter_permafrost", null, 25);
     	Chance.addToChanceTable("sifter_permafrost", new ItemStack(MItems.chunks, 1, 3), 5);
     	Chance.addToChanceTable("sifter_permafrost", new ItemStack(Items.snowball, 1, 0), 30);
-    	Chance.addToChanceTable("sifter_permafrost", new ItemStack(Item.getItemFromBlock(Blocks.ice), 1, 0), 1);
+    	Chance.addToChanceTable("sifter_permafrost", new ItemStack(Item.getItemFromBlock(Blocks.ice), 1, 0), 3);
+    	Chance.addToChanceTable("sifter_permafrost", new ItemStack(MItems.crushed_ice, 1, 0), 1);
+    	Chance.addToChanceTable("sifter_permafrost", new ItemStack(MItems.glacieric_ice_shard, 1, 0), 1);
     	//Sifter - Cold Sand
     	Chance.addToChanceTable("sifter_cold_sand", null, 25);
     	Chance.addToChanceTable("sifter_cold_sand", new ItemStack(MItems.chunks, 1, 4), 20);
     	Chance.addToChanceTable("sifter_cold_sand", new ItemStack(MItems.chunks, 1, 3), 5);
     	Chance.addToChanceTable("sifter_cold_sand", new ItemStack(Items.clay_ball, 1, 0), 20);
     	Chance.addToChanceTable("sifter_cold_sand", new ItemStack(Items.snowball, 1, 0), 30);
-    	Chance.addToChanceTable("sifter_cold_sand", new ItemStack(Item.getItemFromBlock(Blocks.ice), 1, 0), 1);
+    	Chance.addToChanceTable("sifter_cold_sand", new ItemStack(Item.getItemFromBlock(Blocks.ice), 1, 0), 5);
+    	Chance.addToChanceTable("sifter_cold_sand", new ItemStack(MItems.crushed_ice, 1, 0), 1);
+    	Chance.addToChanceTable("sifter_cold_sand", new ItemStack(MItems.glacieric_ice_shard, 1, 0), 1);
     	//Sifter - Soul Sand
     	Chance.addToChanceTable("sifter_soul_sand", null, 25);
     	Chance.addToChanceTable("sifter_soul_sand", new ItemStack(Items.quartz, 1, 0), 20);
