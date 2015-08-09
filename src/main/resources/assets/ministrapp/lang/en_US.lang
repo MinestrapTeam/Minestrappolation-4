@@ -192,6 +192,7 @@ tile.titanium_block.name=Block of Titanium
 tile.blazium_block.name=Block of Blazium
 tile.soul_gem_block.name=Soul Gem Block
 tile.godstone.name=Godstone
+tile.glacierite_block.name=Block of Glacierite
 
 redwood_log.name=Redwood
 redwood_leaves.name=Redwood Leaves
@@ -558,6 +559,7 @@ item.titanium_ingot.name=Titanium Ingot
 item.plutonium.name=Plutonium
 item.uranium.name=Uranium
 item.glacieric_ice_shard.name=Glacieric Ice Shard
+item.glacierite_ingot.name=Glacierite Ingot
 
 stone_chunk.name=Stone Chunk
 red_rock_chunk.name=Red Rock Chunk
@@ -583,6 +585,7 @@ item.pig_foot.name=Pig Hoof
 item.cow_foot.name=Cow Hoof
 item.sheep_foot.name=Sheep Hoof
 item.chicken_foot.name=Chicken Foot
+item.wolf_hide.name=Wolf Hide
 item.technological_doodad.name=Technological Doodad
 
 item.stone_brick.name=Stone Brick
@@ -638,6 +641,12 @@ item.fire_shovel.name=Fire Shovel
 item.fire_hoe.name=Fire Hoe
 item.fire_sword.name=Fire Sword
 
+item.ice_pickaxe.name=Ice Pickaxe
+item.ice_axe.name=Ice Axe
+item.ice_shovel.name=Ice Shovel
+item.ice_hoe.name=Ice Hoe
+item.ice_sword.name=Ice Sword
+
 item.titanium_pickaxe.name=Titanium Pickaxe
 item.titanium_axe.name=Titanium Axe
 item.titanium_shovel.name=Titanium Shovel
@@ -678,6 +687,11 @@ item.blazium_helmet.name=Fire Helmet
 item.blazium_chestplate.name=Fire Chestplate
 item.blazium_leggings.name=Fire Leggings
 item.blazium_boots.name=Fire Boots
+
+item.ice_helmet.name=Ice Helmet
+item.ice_chestplate.name=Ice Chestplate
+item.ice_leggings.name=Ice Leggings
+item.ice_boots.name=Ice Boots
 
 item.titanium_helmet.name=Titanium Helmet
 item.titanium_chestplate.name=Titanium Chestplate

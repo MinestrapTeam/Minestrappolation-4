@@ -23,6 +23,8 @@ public class MDictionary
 		OreDictionary.registerOre("ingotTorite", MItems.torite_ingot);
 		OreDictionary.registerOre("dustBlazium", MItems.blaze_shard);
 		OreDictionary.registerOre("ingotBlazium", MItems.blazium_ingot);
+		OreDictionary.registerOre("dustGlacierite", MItems.glacieric_ice_shard);
+		OreDictionary.registerOre("ingotGlacierite", MItems.glacierite_ingot);
 		OreDictionary.registerOre("ingotTitanium", MItems.titanium_ingot);
 		OreDictionary.registerOre("dustSunstone", MItems.sunstone_shard);
 		OreDictionary.registerOre("ingotPlutonium", MItems.plutonium);
@@ -40,6 +42,7 @@ public class MDictionary
 		OreDictionary.registerOre("blockSteel", MBlocks.steel_block);
 		OreDictionary.registerOre("blockMeurodite", MBlocks.meurodite_block);
 		OreDictionary.registerOre("blockTorite", MBlocks.torite_block);
+		OreDictionary.registerOre("blockGlacierite", MBlocks.glacierite_block);
 		OreDictionary.registerOre("blockBlazium", MBlocks.blazium_block);
 		OreDictionary.registerOre("blockTitanium", MBlocks.titanium_block);
 		OreDictionary.registerOre("sunstone", MBlocks.sunstone_block);
@@ -142,6 +145,7 @@ public class MDictionary
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.steel_block), new Object[] { "III", "III", "III", 'I', "ingotSteel" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.meurodite_block), new Object[] { "III", "III", "III", 'I', "gemMeurodite" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.torite_block), new Object[] { "III", "III", "III", 'I', "ingotTorite" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.glacierite_block), new Object[] { "III", "III", "III", 'I', "ingotGlacierite" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.plutonium_block), new Object[] { "III", "III", "III", 'I', "ingotPlutonium" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.uranium_block), new Object[] { "III", "III", "III", 'I', "ingotUranium" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.titanium_block), new Object[] { "III", "III", "III", 'I', "ingotTitanium" }));
@@ -153,8 +157,8 @@ public class MDictionary
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.sawmill, 1), new Object[] { "CC", "WW", "WW", 'C', "ingotCopper", 'W', "plankWood" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.stonecutter, 1), new Object[] { "II", "CC", "CC", 'I', "ingotIron", 'C', "cobblestone" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.crusher, 1), new Object[] { "BPB", "BTB", "OOO", 'B', "blockBronze", 'P', Blocks.piston, 'T', "ingotTitanium", 'O', MBlocks.obsidian_bricks }));
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.plutonium_insulated), new Object[] { "SSS", "GBG", "SSS", 'S', "ingotSteel", 'G', MBlocks.framed_glass_pane, 'B', "blockPlutonium" }));
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.uranium_insulated), new Object[] { "SSS", "GBG", "SSS", 'S', "ingotSteel", 'G', MBlocks.framed_glass_pane, 'B', "blockUranium" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.plutonium_insulated), new Object[] { "SSS", "GBG", "STS", 'S', "ingotSteel", 'G', MBlocks.framed_glass_pane, 'B', "blockPlutonium", 'T', MItems.technological_doodad }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.uranium_insulated), new Object[] { "SSS", "GBG", "STS", 'S', "ingotSteel", 'G', MBlocks.framed_glass_pane, 'B', "blockUranium", 'T', MItems.technological_doodad }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MItems.sifter, 1), new Object[] { " C ", "CMC", " S ", 'C', "ingotCopper", 'M', MBlocks.steel_mesh, 'S', MItems.reinforced_stick }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.splitter, 1), new Object[] { "RTR", "GSG", "RTR", 'R', MBlocks.radiant_chiseled, 'T', "ingotTorite", 'S', MBlocks.sunstone_block, 'G', MItems.soul_gem}));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.claimerator, 1), new Object[] { "DOD", "PGU", "DOD", 'D', Items.diamond, 'O', Blocks.obsidian, 'P', "ingotPlutonium", 'U', "ingotUranium", 'G', MBlocks.godstone }));

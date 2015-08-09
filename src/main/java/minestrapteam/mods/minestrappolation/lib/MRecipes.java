@@ -124,10 +124,11 @@ public class MRecipes
 		
 		GameRegistry.addSmelting(MBlocks.blazium_ore, new ItemStack(MItems.blaze_shard), 1.0F);
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.blazium_ingot, 9), new Object[] { MBlocks.blazium_block });
-		GameRegistry.addRecipe(new ItemStack(MItems.blazium_ingot, 1), new Object[] { "BB", "BB", 'B', MItems.blaze_shard });
 		
 		GameRegistry.addSmelting(MBlocks.soul_ore, new ItemStack(MItems.soul_gem), 1.0F);
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.soul_gem, 9), new Object[] { MBlocks.soul_gem_block });
+		
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.glacierite_ingot, 9), new Object[] { MBlocks.glacierite_block });
 		
 		GameRegistry.addSmelting(MBlocks.biome_coal, new ItemStack(Items.coal, 1, 0), 0.1F);
 		GameRegistry.addSmelting(MBlocks.biome_iron, new ItemStack(Items.iron_ingot), 0.7F);

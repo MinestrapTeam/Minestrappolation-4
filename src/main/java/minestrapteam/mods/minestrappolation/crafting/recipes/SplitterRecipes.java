@@ -289,6 +289,7 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MBlocks.soul_gem_block, 1), new ItemStack(MItems.soul_gem, 5), new ItemStack(MItems.soul_gem, 4), 0.1F);
 		this.addRecipe(new ItemStack(MBlocks.flint_block, 1), new ItemStack(Items.flint, 2), new ItemStack(Items.flint, 2), 0.1F);
 		this.addRecipe(new ItemStack(MBlocks.sugar_block, 1), new ItemStack(Items.sugar, 5), new ItemStack(Items.sugar, 4), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.glacierite_block, 1), new ItemStack(MItems.glacierite_ingot, 5), new ItemStack(MItems.glacierite_ingot, 4), 0.1F);
 		
 		this.addRecipe(new ItemStack(MItems.tin_plating, 1), new ItemStack(MItems.tin_ingot, 3), new ItemStack(MItems.tin_ingot, 3), 0.1F);
 		this.addRecipe(new ItemStack(MItems.steel_plating, 1), new ItemStack(MItems.steel_ingot, 3), new ItemStack(MItems.steel_ingot, 3), 0.1F);

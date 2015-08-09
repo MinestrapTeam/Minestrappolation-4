@@ -17,6 +17,7 @@ import minestrapteam.mods.minestrappolation.block.BlockDeadBranch;
 import minestrapteam.mods.minestrappolation.block.BlockFan;
 import minestrapteam.mods.minestrappolation.block.BlockGlacialInvincium;
 import minestrapteam.mods.minestrappolation.block.BlockGlaciericIce;
+import minestrapteam.mods.minestrappolation.block.BlockGlacierite;
 import minestrapteam.mods.minestrappolation.block.BlockGodstone;
 import minestrapteam.mods.minestrappolation.block.BlockIceDeposit;
 import minestrapteam.mods.minestrappolation.block.BlockInvincium;
@@ -171,6 +172,7 @@ public class MBlocks
 	public static Block	steel_block;
 	public static Block	titanium_block;
 	public static Block	torite_block;
+	public static Block glacierite_block;
 	public static Block	uranium_block;
 	public static Block	plutonium_insulated;
 	public static Block	uranium_insulated;
@@ -522,6 +524,7 @@ public class MBlocks
 		uranium_insulated = new BlockRadiationInsulated(1, 20, Material.iron, MapColor.clayColor, null, 0, 0, 1, 0, "pickaxe", 2, false).setHardness(7F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("uranium_insulated").setCreativeTab(Minestrappolation.tabMTech);
 		titanium_block = new MBlock(Material.iron, MapColor.grayColor).setHardness(10.0F).setResistance(9999.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("titanium_block").setCreativeTab(Minestrappolation.tabMBuilding);
 		blazium_block = new BlockBlazium(Material.iron, MapColor.redColor).setHardness(5.0F).setResistance(10.0F).setLightLevel(0.5F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("blazium_block").setCreativeTab(Minestrappolation.tabMBuilding);
+		glacierite_block = new BlockGlacierite(Material.iron, MapColor.blueColor).setHardness(5.0F).setResistance(10.0F).setLightLevel(0.3F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("glacierite_block").setCreativeTab(Minestrappolation.tabMBuilding);
 		soul_gem_block = new BlockSoul(Material.iron, MapColor.cyanColor).setHardness(10.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("soul_gem_block").setCreativeTab(Minestrappolation.tabMBuilding);
 		flint_block = new BlockMStorage(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("flint_block").setCreativeTab(Minestrappolation.tabMBuilding);
 		sugar_block = new BlockMFalling(Material.sand, MapColor.snowColor).setHardness(0.5F).setStepSound(Block.soundTypeGravel).setUnlocalizedName("sugar_block").setCreativeTab(Minestrappolation.tabMBuilding);
@@ -885,6 +888,7 @@ public class MBlocks
 		register(plutonium_block);
 		register(uranium_block);
 		register(titanium_block);
+		register(glacierite_block);
 		register(blazium_block);
 		register(soul_gem_block);
 		register(godstone);
@@ -1077,6 +1081,9 @@ public class MBlocks
 	private static void registerHarvestLevels()
 	{
 		moss.setHarvestLevel("shovel", 0);
+		cold_sand.setHarvestLevel("shovel", 0);
+		dirt_permafrost.setHarvestLevel("shovel", 0);
+		lichen_permafrost.setHarvestLevel("shovel", 0);
 		
 		slate.setHarvestLevel("pickaxe", 0);
 		slate_bricks.setHarvestLevel("pickaxe", 0);
@@ -1120,6 +1127,7 @@ public class MBlocks
 		uranium_insulated.setHarvestLevel("pickaxe", 2);
 		plutonium_insulated.setHarvestLevel("pickaxe", 2);
 		titanium_block.setHarvestLevel("pickaxe", 3);
+		glacierite_block.setHarvestLevel("pickaxe", 2);
 		blazium_block.setHarvestLevel("pickaxe", 2);
 		soul_gem_block.setHarvestLevel("pickaxe", 3);
 		glass_window.setHarvestLevel("pickaxe", 0);

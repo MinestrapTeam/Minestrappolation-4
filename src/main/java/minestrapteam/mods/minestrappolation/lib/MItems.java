@@ -116,6 +116,7 @@ public class MItems extends Item
 	public static Item							blazium_ingot;
 	public static Item							titanium_ingot;
 	public static Item							glacieric_ice_shard;
+	public static Item							glacierite_ingot;
 	
 	public static Item							tin_plating;
 	public static Item							steel_plating;
@@ -336,6 +337,7 @@ public class MItems extends Item
 		blaze_shard = new Item().setUnlocalizedName("blaze_shard").setCreativeTab(Minestrappolation.tabMMaterials);
 		soul_gem = new ItemSoulGem().setUnlocalizedName("soul_gem").setCreativeTab(Minestrappolation.tabMMaterials);
 		glacieric_ice_shard = new Item().setUnlocalizedName("glacieric_ice_shard").setCreativeTab(Minestrappolation.tabMMaterials);
+		glacierite_ingot = new Item().setUnlocalizedName("glacierite_ingot").setCreativeTab(Minestrappolation.tabMMaterials);
 		
 		tin_plating = new Item().setUnlocalizedName("tin_plating").setCreativeTab(Minestrappolation.tabMMaterials);
 		steel_plating = new Item().setUnlocalizedName("steel_plating").setCreativeTab(Minestrappolation.tabMMaterials);
@@ -494,6 +496,7 @@ public class MItems extends Item
 		register(radiant_quartz);
 		register(titanium_ingot);
 		register(glacieric_ice_shard);
+		register(glacierite_ingot);
 		register(blaze_shard);
 		register(blazium_ingot);
 		register(soul_gem);

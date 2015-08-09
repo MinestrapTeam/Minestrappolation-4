@@ -44,6 +44,7 @@ public class AlloyRecipes
 		this.addRecipe(new ItemStack(Items.blaze_powder, 1), new ItemStack(MItems.sunstone_shard, 1), new ItemStack(MItems.blaze_shard), 1F);
 		this.addRecipe(new ItemStack(Items.bone, 1), new ItemStack(MItems.blaze_shard, 4), new ItemStack(Items.blaze_rod), 1F);
 		this.addRecipe(new ItemStack(MItems.blaze_shard, 4), new ItemStack(Items.gold_ingot, 1), new ItemStack(MItems.blazium_ingot), 1F);
+		this.addRecipe(new ItemStack(MItems.glacieric_ice_shard, 4), new ItemStack(MItems.torite_ingot, 1), new ItemStack(MItems.glacierite_ingot), 1F);
 		
 		//Misc
 		this.addRecipe(new ItemStack(MItems.dough, 1), new ItemStack(Items.bowl, 1), new ItemStack(MItems.bread_bowl, 1), 0.2F);
