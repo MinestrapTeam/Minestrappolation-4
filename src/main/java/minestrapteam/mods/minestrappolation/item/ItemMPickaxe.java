@@ -26,6 +26,7 @@ public class ItemMPickaxe extends ItemPickaxe
 	Item	repairItem;
 	boolean	ignites	= false;
 	boolean freezes = false;
+	boolean mapCreated = false;
 	
 	public HashMap<IBlockState, IBlockState>	canFreeze	= new HashMap<IBlockState, IBlockState>();
 	
@@ -35,11 +36,9 @@ public class ItemMPickaxe extends ItemPickaxe
 		this.repairItem = repair;
 		this.ignites = ignites;
 		this.freezes = freezes;
-		//if(this.freezes)
-		//	this.createFreezeMap();
 	}
 	
-	/*public void createFreezeMap()
+	public void createFreezeMap()
 	{
 		this.canFreeze.put(Blocks.water.getDefaultState(), Blocks.ice.getDefaultState());
 		this.canFreeze.put(Blocks.snow.getDefaultState(), MBlocks.snow_refined.getDefaultState());
@@ -126,7 +125,7 @@ public class ItemMPickaxe extends ItemPickaxe
 		
 		this.canFreeze.put(Blocks.sponge.getStateFromMeta(1), Blocks.snow.getDefaultState());
 		this.canFreeze.put(Blocks.web.getDefaultState(), MBlocks.cold_cobweb.getDefaultState());
-	}*/
+	}
 	
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
@@ -168,21 +167,33 @@ public class ItemMPickaxe extends ItemPickaxe
 				return true;
 			}
 		}
-		/*else if(this.freezes)
+		else if(this.freezes)
 		{
 			if (!playerIn.canPlayerEdit(pos, side, stack))
 				return false;
 			else
 			{
-				if (this.canFreeze.containsKey(worldIn.getBlockState(pos)))
+				if (mapCreated == false)
 				{
-					worldIn.playSoundEffect(pos.getX() + 0.5D, pos.getY() + 0.5D, pos.getZ() + 0.5D, "fire.ignite", 1.0F, itemRand.nextFloat() * 0.4F + 0.8F);
-					worldIn.setBlockState(pos, this.canFreeze.get(worldIn.getBlockState(pos)), 2);
+					this.createFreezeMap();
+					mapCreated = true;
+				}
+				BlockPos pos1 = pos.offset(side);
+				if (this.canFreeze.containsKey(worldIn.getBlockState(pos1)))
+				{
+					worldIn.playSoundEffect(pos1.getX() + 0.5D, pos1.getY() + 0.5D, pos1.getZ() + 0.5D, "fire.ignite", 1.0F, itemRand.nextFloat() * 0.4F + 0.8F);
+					worldIn.setBlockState(pos1, this.canFreeze.get(worldIn.getBlockState(pos1)));
+					stack.damageItem(4, playerIn);
+				}
+				else if (this.canFreeze.containsKey(worldIn.getBlockState(pos)))
+				{
+					worldIn.playSoundEffect(pos.getX() + 0.5D, pos.getY() + 0.5D, pos.getZ() + 0.5D, "dig.glass", 1.0F, itemRand.nextFloat() * 0.4F + 0.8F);
+					worldIn.setBlockState(pos, this.canFreeze.get(worldIn.getBlockState(pos)));
 					stack.damageItem(4, playerIn);
 				}
 				return true;
 			}
-		}*/
+		}
 		return false;
 	}
 	
