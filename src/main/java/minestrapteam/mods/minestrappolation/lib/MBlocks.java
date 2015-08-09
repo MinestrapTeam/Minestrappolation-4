@@ -34,6 +34,7 @@ import minestrapteam.mods.minestrappolation.block.BlockMagma;
 import minestrapteam.mods.minestrappolation.block.BlockMoss;
 import minestrapteam.mods.minestrappolation.block.BlockMossyBricks;
 import minestrapteam.mods.minestrappolation.block.BlockMossyCobble;
+import minestrapteam.mods.minestrappolation.block.BlockMud;
 import minestrapteam.mods.minestrappolation.block.BlockPatternBricks;
 import minestrapteam.mods.minestrappolation.block.BlockPermaFrost;
 import minestrapteam.mods.minestrappolation.block.BlockPermaFrostDirt;
@@ -220,6 +221,9 @@ public class MBlocks
 	public static Block	cold_sand;
 	public static Block	lichen_permafrost;
 	public static Block	dirt_permafrost;
+	public static Block mud;
+	public static Block mud_bricks;
+	public static Block rubble;
 	
 	public static Block	sunstone_ore;
 	public static Block	copper_ore;
@@ -546,6 +550,7 @@ public class MBlocks
 		cold_sand = new BlockMSand().setUnlocalizedName("cold_sand").setHardness(0.7F).setStepSound(Block.soundTypeSand).setCreativeTab(Minestrappolation.tabMBuilding);
 		lichen_permafrost = new BlockPermaFrost().setUnlocalizedName("permafrost").setHardness(1F).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMBuilding);
 		dirt_permafrost = new BlockPermaFrostDirt(Material.ground, MapColor.cyanColor).setHardness(0.9F).setStepSound(Block.soundTypeGravel).setUnlocalizedName("dirt_permafrost").setCreativeTab(Minestrappolation.tabMBuilding);
+		mud = new BlockMud(Material.ground, MapColor.brownColor).setHardness(0.5F).setStepSound(Block.soundTypeSand).setUnlocalizedName("mud").setCreativeTab(Minestrappolation.tabMBuilding);
 		cold_cobweb = new BlockColdCobweb().setLightOpacity(1).setHardness(5.0F).setUnlocalizedName("cold_cobweb");
 		
 		// Door
@@ -784,8 +789,7 @@ public class MBlocks
 	
 	private static void register()
 	{
-		register(claimerator);
-		
+		register(mud);
 		register(dirt_permafrost);
 		register(lichen_permafrost, ItemBlockPermaFrost.class);
 		register(cold_sand, ItemBlockColdSand.class);
@@ -995,6 +999,7 @@ public class MBlocks
 		register(crusher_active);
 		register(splitter);
 		register(splitter_active);
+		register(claimerator);
 		
 		register(desert_pillar);
 		register(radiant_pillar);

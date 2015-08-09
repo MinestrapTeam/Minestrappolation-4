@@ -467,6 +467,10 @@ cold_red_sand.name=Cold Red Sand
 permafrost.name=Lichen-Coated Permafrost
 tile.cold_cobweb.name=Frozen Cobweb
 
+tile.mud.name=Mud
+tile.mud_bricks.name=Mud Bricks
+tile.rubble.name=Rubble
+
 tile.crate.name=Crate
 tile.barrel.name=Barrel
 tile.melter.name=Melter
