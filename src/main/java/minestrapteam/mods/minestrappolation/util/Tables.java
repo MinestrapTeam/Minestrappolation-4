@@ -21,6 +21,8 @@ public class Tables {
 		Chance.createChanceTable("sifter_sand", new ArrayList<ItemStack>());
 		Chance.createChanceTable("sifter_red_sand", new ArrayList<ItemStack>());
 		Chance.createChanceTable("sifter_clay", new ArrayList<ItemStack>());
+		Chance.createChanceTable("sifter_mud", new ArrayList<ItemStack>());
+		Chance.createChanceTable("sifter_rubble", new ArrayList<ItemStack>());
 		Chance.createChanceTable("sifter_gravel", new ArrayList<ItemStack>());
 		Chance.createChanceTable("sifter_dirt", new ArrayList<ItemStack>());
 		Chance.createChanceTable("sifter_podzol", new ArrayList<ItemStack>());
@@ -53,6 +55,19 @@ public class Tables {
     	Chance.addToChanceTable("sifter_clay", new ItemStack(MBlocks.seaweed, 1, 0), 5);
     	Chance.addToChanceTable("sifter_clay", new ItemStack(Items.slime_ball, 1, 0), 5);
     	Chance.addToChanceTable("sifter_clay", new ItemStack(MItems.squid_tentacle, 1, 0), 3);
+    	//Sifter - Mud
+    	Chance.addToChanceTable("sifter_mud", null, 25);
+    	Chance.addToChanceTable("sifter_mud", new ItemStack(MItems.mud_ball, 1, 0), 50);
+    	Chance.addToChanceTable("sifter_mud", new ItemStack(MItems.animal_bones, 1, 0), 40);
+    	Chance.addToChanceTable("sifter_mud", new ItemStack(Items.clay_ball, 1, 0), 30);
+    	Chance.addToChanceTable("sifter_mud", new ItemStack(MItems.chunks, 1, 0), 5);
+    	Chance.addToChanceTable("sifter_mud", new ItemStack(Items.wheat_seeds, 1, 0), 5);
+    	Chance.addToChanceTable("sifter_mud", new ItemStack(MBlocks.pepper_seed, 1, 0), 5);
+    	Chance.addToChanceTable("sifter_mud", new ItemStack(MBlocks.celery_seed, 1, 0), 5);
+    	Chance.addToChanceTable("sifter_mud", new ItemStack(MBlocks.rice, 1, 0), 5);
+    	Chance.addToChanceTable("sifter_mud", new ItemStack(Items.potato, 1, 0), 1);
+    	Chance.addToChanceTable("sifter_mud", new ItemStack(Items.carrot, 1, 0), 1);
+    	Chance.addToChanceTable("sifter_mud", new ItemStack(Items.slime_ball, 1, 0), 8);
     	//Sifter - Gravel
     	Chance.addToChanceTable("sifter_gravel", null, 25);
     	Chance.addToChanceTable("sifter_gravel", new ItemStack(MItems.chunks, 1, 2), 20);
@@ -60,6 +75,32 @@ public class Tables {
     	Chance.addToChanceTable("sifter_gravel", new ItemStack(Items.flint, 1, 0), 20);
     	Chance.addToChanceTable("sifter_gravel", new ItemStack(Items.gunpowder, 1, 0), 5);
     	Chance.addToChanceTable("sifter_gravel", new ItemStack(MItems.chunks, 1, 7), 3);
+    	//Sifter - Rubble
+    	Chance.addToChanceTable("sifter_rubble", null, 25);
+    	Chance.addToChanceTable("sifter_rubble", new ItemStack(MItems.chunks, 1, 2), 20);
+    	Chance.addToChanceTable("sifter_rubble", new ItemStack(Items.bone, 1, 0), 10);
+    	Chance.addToChanceTable("sifter_rubble", new ItemStack(Items.flint, 1, 0), 20);
+    	Chance.addToChanceTable("sifter_rubble", new ItemStack(Items.gunpowder, 1, 0), 5);
+    	Chance.addToChanceTable("sifter_rubble", new ItemStack(MItems.chunks, 1, 7), 3);
+    	Chance.addToChanceTable("sifter_rubble", new ItemStack(MItems.technological_doodad, 1, 0), 5);
+    	Chance.addToChanceTable("sifter_rubble", new ItemStack(MItems.propeller, 1, 0), 10);
+    	Chance.addToChanceTable("sifter_rubble", new ItemStack(MItems.bricks, 1, 0), 1);
+    	Chance.addToChanceTable("sifter_rubble", new ItemStack(MItems.bricks, 1, 1), 1);
+    	Chance.addToChanceTable("sifter_rubble", new ItemStack(MItems.bricks, 1, 2), 1);
+    	Chance.addToChanceTable("sifter_rubble", new ItemStack(MItems.bricks, 1, 3), 1);
+    	Chance.addToChanceTable("sifter_rubble", new ItemStack(MItems.bricks, 1, 4), 1);
+    	Chance.addToChanceTable("sifter_rubble", new ItemStack(MItems.bricks, 1, 5), 1);
+    	Chance.addToChanceTable("sifter_rubble", new ItemStack(MItems.bricks, 1, 6), 1);
+    	Chance.addToChanceTable("sifter_rubble", new ItemStack(MItems.bricks, 1, 7), 1);
+    	Chance.addToChanceTable("sifter_rubble", new ItemStack(MItems.bricks, 1, 8), 1);
+    	Chance.addToChanceTable("sifter_rubble", new ItemStack(MItems.bricks, 1, 9), 1);
+    	Chance.addToChanceTable("sifter_rubble", new ItemStack(MItems.bricks, 1, 10), 1);
+    	Chance.addToChanceTable("sifter_rubble", new ItemStack(MItems.bricks, 1, 11), 1);
+    	Chance.addToChanceTable("sifter_rubble", new ItemStack(MItems.bricks, 1, 12), 1);
+    	Chance.addToChanceTable("sifter_rubble", new ItemStack(MItems.bricks, 1, 13), 1);
+    	Chance.addToChanceTable("sifter_rubble", new ItemStack(MItems.bricks, 1, 14), 1);
+    	Chance.addToChanceTable("sifter_rubble", new ItemStack(MItems.bricks, 1, 15), 1);
+    	Chance.addToChanceTable("sifter_rubble", new ItemStack(Blocks.skull, 1, 0), 1);
     	//Sifter - Dirt
     	Chance.addToChanceTable("sifter_dirt", null, 25);
     	Chance.addToChanceTable("sifter_dirt", new ItemStack(MItems.chunks, 1, 0), 5);

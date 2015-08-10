@@ -296,6 +296,8 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MItems.meurodite_plating, 1), new ItemStack(MItems.meurodite_gem, 3), new ItemStack(MItems.meurodite_gem, 3), 0.1F);
 		
 		//Minestrapp Decor Blocks
+		this.addRecipe(new ItemStack(MBlocks.mud, 1, 0), new ItemStack(MItems.mud_ball, 2), new ItemStack(MItems.mud_ball, 2), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.mud_bricks, 1, 0), new ItemStack(MItems.mud_ball, 2), new ItemStack(MItems.mud_ball, 2), 0.1F);
 		this.addRecipe(new ItemStack(MBlocks.glass_window, 1), new ItemStack(MBlocks.glass_refined, 1), new ItemStack(Blocks.iron_bars, 1), 0.1F);
 		this.addRecipe(new ItemStack(MBlocks.rope, 1), new ItemStack(Items.string, 2), new ItemStack(Items.string, 1), 0.1F);
 		this.addRecipe(new ItemStack(Blocks.cobblestone, 1), new ItemStack(MItems.chunks, 2, 0), new ItemStack(MItems.chunks, 2, 0), 0.1F);

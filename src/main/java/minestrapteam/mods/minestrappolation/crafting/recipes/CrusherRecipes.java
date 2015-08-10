@@ -198,6 +198,8 @@ public class CrusherRecipes
 		
 		//Misc
 		this.addRecipe(Blocks.clay, new ItemStack(Blocks.sand, 1, 0), 0.1F, new ItemStack(Items.clay_ball, 2, 0), 50);
+		this.addRecipe(MBlocks.mud, new ItemStack(Blocks.dirt, 1, 0), 0.1F, new ItemStack(MItems.mud_ball, 1, 0), 10);
+		this.addRecipe(MBlocks.rubble, new ItemStack(Blocks.gravel, 1, 0), 0.1F, new ItemStack(MItems.technological_doodad, 1, 0), 10);
 		this.addRecipe(Blocks.gravel, new ItemStack(Blocks.sand, 1, 0), 0.05F, new ItemStack(Items.flint, 1, 0), 30);
 		this.addRecipe(new ItemStack(Blocks.dirt, 1, 1), new ItemStack(Blocks.dirt, 1, 0), 0.05F, new ItemStack(Items.flint, 1, 0), 10);
 		this.addRecipe(Blocks.bookshelf, new ItemStack(Items.book, 3), 0.05F, new ItemStack(Items.paper, 1), 5);
@@ -227,6 +229,7 @@ public class CrusherRecipes
 		this.addRecipe(new ItemStack(MBlocks.dirt_permafrost, 1, 0), new ItemStack(Blocks.dirt, 1, 0), 0.1F, new ItemStack(Blocks.packed_ice), 5);
 		this.addRecipe(Blocks.ice, new ItemStack(MItems.crushed_ice, 1), 0.1F, new ItemStack(MItems.crushed_ice, 1), 50);
 		this.addRecipe(Blocks.packed_ice, new ItemStack(MItems.crushed_ice, 1), 0.1F, new ItemStack(MItems.crushed_ice, 1), 50);
+		this.addRecipe(MBlocks.glacieric_ice, new ItemStack(MItems.crushed_ice, 4), 0.1F, new ItemStack(MItems.glacieric_ice_shard, 1), 100);
 		
 		//Dyes
 		this.addRecipe(Items.bone, new ItemStack(Items.dye, 5, 15), 0.1F, new ItemStack(Items.dye, 1, 15), 10);

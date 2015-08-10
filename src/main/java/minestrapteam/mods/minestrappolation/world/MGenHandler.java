@@ -92,6 +92,8 @@ public class MGenHandler implements IWorldGenerator
 		this.generateOre(MBlocks.radiant_ore, world, rand, x1, z1, 1, 4, 10, 15, 128, BlockHelper.forBlock(Blocks.stone), Config.genRadiant);
 		this.generateOre(MBlocks.titanium_ore, world, rand, x1, z1, 1, 4, 12, 1, 10, BlockHelper.forBlock(Blocks.stone), Config.genTitanium);
 		this.generateOre(MBlocks.slate, world, rand, x1, z1, 10, 33, 18, 0, 80, BlockHelper.forBlock(Blocks.stone), Config.genSlate);
+		this.generateOre(MBlocks.rubble, world, rand, x1, z1, 1, 10, 90, 0, 256, BlockHelper.forBlock(Blocks.gravel), Config.genRubble);
+		this.generateOre(MBlocks.rubble, world, rand, x1, z1, 10, 50, 30, 0, 256, BlockHelper.forBlock(Blocks.stonebrick), Config.genRubble);
 		this.generateBoulder(world, rand, x1, z1);
 		
 		if (biome == BiomeGenBase.ocean || biome == BiomeGenBase.river || biome == BiomeGenBase.deepOcean || biome == BiomeGenBase.swampland)
