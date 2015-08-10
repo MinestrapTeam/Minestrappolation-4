@@ -19,6 +19,7 @@ import minestrapteam.mods.minestrappolation.item.ItemMPickaxe;
 import minestrapteam.mods.minestrappolation.item.ItemMShovel;
 import minestrapteam.mods.minestrappolation.item.ItemMSoup;
 import minestrapteam.mods.minestrappolation.item.ItemMSword;
+import minestrapteam.mods.minestrappolation.item.ItemMudBall;
 import minestrapteam.mods.minestrappolation.item.ItemSifter;
 import minestrapteam.mods.minestrappolation.item.ItemSoulBottle;
 import minestrapteam.mods.minestrappolation.item.ItemSoulGem;
@@ -123,6 +124,7 @@ public class MItems extends Item
 	public static Item							meurodite_plating;
 	
 	//Crafting Materials
+	public static Item							mud_ball;
 	public static Item							crushed_ice;
 	public static Item							reinforced_stick;
 	public static Item							animal_bones;
@@ -357,6 +359,7 @@ public class MItems extends Item
 		meurodite_plating = new Item().setUnlocalizedName("meurodite_plating").setCreativeTab(Minestrappolation.tabMMaterials);
 		
 		//Crafting Materials
+		mud_ball = new ItemMudBall().setUnlocalizedName("mud_ball");
 		crushed_ice = new ItemMFood(0, 0, 0).setMaxStackSize(16).setUnlocalizedName("crushed_ice").setCreativeTab(Minestrappolation.tabMFood);
 		reinforced_stick = new Item().setUnlocalizedName("reinforced_stick").setCreativeTab(Minestrappolation.tabMMaterials);
 		propeller = new Item().setUnlocalizedName("propeller").setCreativeTab(Minestrappolation.tabMMaterials);
@@ -506,6 +509,7 @@ public class MItems extends Item
 		
 		register(bricks);
 		
+		register(mud_ball);
 		register(chunks);
 		register(desert_quartz_item);
 		register(copper_ingot);

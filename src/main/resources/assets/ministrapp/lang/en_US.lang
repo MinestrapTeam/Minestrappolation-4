@@ -565,6 +565,7 @@ item.uranium.name=Uranium
 item.glacieric_ice_shard.name=Glacieric Ice Shard
 item.glacierite_ingot.name=Glacierite Ingot
 
+item.mud_ball.name=Mud Ball
 stone_chunk.name=Stone Chunk
 red_rock_chunk.name=Red Rock Chunk
 coldstone_chunk.name=Coldstone Chunk

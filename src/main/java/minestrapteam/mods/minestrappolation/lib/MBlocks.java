@@ -550,7 +550,9 @@ public class MBlocks
 		cold_sand = new BlockMSand().setUnlocalizedName("cold_sand").setHardness(0.7F).setStepSound(Block.soundTypeSand).setCreativeTab(Minestrappolation.tabMBuilding);
 		lichen_permafrost = new BlockPermaFrost().setUnlocalizedName("permafrost").setHardness(1F).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMBuilding);
 		dirt_permafrost = new BlockPermaFrostDirt(Material.ground, MapColor.cyanColor).setHardness(0.9F).setStepSound(Block.soundTypeGravel).setUnlocalizedName("dirt_permafrost").setCreativeTab(Minestrappolation.tabMBuilding);
-		mud = new BlockMud(Material.ground, MapColor.brownColor).setHardness(0.5F).setStepSound(Block.soundTypeSand).setUnlocalizedName("mud").setCreativeTab(Minestrappolation.tabMBuilding);
+		mud = new BlockMud(Material.ground, MapColor.brownColor).setHardness(0.5F).setStepSound(Block.SLIME_SOUND).setUnlocalizedName("mud").setCreativeTab(Minestrappolation.tabMBuilding);
+		mud_bricks = new MBlock(Material.ground, MapColor.brownColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setUnlocalizedName("mud_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
+		rubble = new BlockMFalling(Material.rock, MapColor.grayColor).setHardness(0.7F).setStepSound(Block.soundTypePiston).setUnlocalizedName("rubble").setCreativeTab(Minestrappolation.tabMBuilding);
 		cold_cobweb = new BlockColdCobweb().setLightOpacity(1).setHardness(5.0F).setUnlocalizedName("cold_cobweb");
 		
 		// Door
@@ -790,6 +792,8 @@ public class MBlocks
 	private static void register()
 	{
 		register(mud);
+		register(mud_bricks);
+		register(rubble);
 		register(dirt_permafrost);
 		register(lichen_permafrost, ItemBlockPermaFrost.class);
 		register(cold_sand, ItemBlockColdSand.class);
@@ -1086,6 +1090,9 @@ public class MBlocks
 	private static void registerHarvestLevels()
 	{
 		moss.setHarvestLevel("shovel", 0);
+		mud.setHarvestLevel("shovel", 0);
+		mud_bricks.setHarvestLevel("shovel", 0);
+		rubble.setHarvestLevel("pickaxe", 0);
 		cold_sand.setHarvestLevel("shovel", 0);
 		dirt_permafrost.setHarvestLevel("shovel", 0);
 		lichen_permafrost.setHarvestLevel("shovel", 0);

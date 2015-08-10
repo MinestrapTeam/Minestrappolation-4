@@ -141,6 +141,8 @@ public class MRecipes
 		GameRegistry.addSmelting(MBlocks.biome_emerald, new ItemStack(Items.emerald), 1.0F);
 		
 		// Decor
+		GameRegistry.addRecipe(new ItemStack(MBlocks.mud, 1), new Object[] { "MM", "MM", 'M', MItems.mud_ball });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.mud, 8), new Object[] { "DDD", "DWD", "DDD", 'D', new ItemStack(Blocks.dirt, 1, 0), 'W', Items.water_bucket });
 		GameRegistry.addRecipe(new ItemStack(MBlocks.snow_bricks, 4), new Object[] { "SS", "SS", 'S', Blocks.snow });
 		GameRegistry.addRecipe(new ItemStack(MBlocks.snow_refined, 9), new Object[] { "SSS", "SSS", "SSS", 'S', Blocks.snow });
 		GameRegistry.addRecipe(new ItemStack(MBlocks.snow_tiles, 4), new Object[] { "SS", "SS", 'S', MBlocks.snow_refined });

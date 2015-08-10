@@ -28,6 +28,7 @@ public class Config
 	public static Boolean   genUranium;
 	public static Boolean   genSlate;
 	public static Boolean   genRadiant;
+	public static Boolean	genMud;
 	
 	//Biomes
 	public static Boolean   genRedwood;
@@ -128,6 +129,7 @@ public class Config
 		genUranium = config.get("Ores", "GenerateUranium", true).getBoolean();
 		genSlate = config.get("Ores", "GenerateSlate", true).getBoolean();
 		genRadiant = config.get("Ores", "GenerateRadiant", true).getBoolean();
+		genMud = config.get("Ores", "GenerateMud", true).getBoolean();
 
 		genRedwood = config.get("Biomes", "GenerateRedwood", true).getBoolean();
 		genFrost = config.get("Biomes", "GenerateTheFrost", true).getBoolean();

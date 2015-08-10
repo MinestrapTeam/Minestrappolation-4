@@ -147,6 +147,11 @@ public class MGenHandler implements IWorldGenerator
 			new WorldGenIceMound().generate(world, rand, pos);
 		}
 		
+		if (biome == BiomeGenBase.swampland || biome == BiomeGenBase.river || biome == BiomeGenBase.frozenRiver)
+		{
+			this.generateMud(world, rand, x1, z1, 4, 10, 20, 50, 64, Config.genMud);
+		}
+		
 		for (x1 = 0; x1 < 16; x1++)
 		{
 			for (z1 = 0; z1 < 16; z1++)
@@ -172,6 +177,24 @@ public class MGenHandler implements IWorldGenerator
 			int vienSize = minVienSize + rand.nextInt(maxVienSize - minVienSize);
 			int heightRange = maxY - minY;
 			WorldGenMinable gen = new WorldGenMinable(block.getDefaultState(), vienSize, blockType);
+			for (int i = 0; i < chance; i++)
+			{
+				int xRand = chunkX * 16 + rand.nextInt(16);
+				int yRand = rand.nextInt(heightRange) + minY;
+				int zRand = chunkZ * 16 + rand.nextInt(16);
+				BlockPos position = new BlockPos(xRand, yRand, zRand);
+				gen.generate(world, rand, position);
+			}
+		}
+	}
+	
+	private void generateMud(World world, Random rand, int chunkX, int chunkZ, int minVienSize, int maxVienSize, int chance, int minY, int maxY, boolean generate)
+	{
+		if(generate == true)
+		{
+			int vienSize = minVienSize + rand.nextInt(maxVienSize - minVienSize);
+			int heightRange = maxY - minY;
+			WorldGenMud gen = new WorldGenMud(vienSize);
 			for (int i = 0; i < chance; i++)
 			{
 				int xRand = chunkX * 16 + rand.nextInt(16);

@@ -80,12 +80,20 @@ public class ItemMPickaxe extends ItemPickaxe
 		}
 		else if(this.freezes)
 		{
+			BlockPos pos1 = pos.offset(side);
 			if (!playerIn.canPlayerEdit(pos, side, stack))
 				return false;
 			else
 			{
-				if(BlockFrostGenerator.canFreeze.containsKey(worldIn.getBlockState(pos)))
+				if(BlockFrostGenerator.canFreeze.containsKey(worldIn.getBlockState(pos1)))
 				{
+					worldIn.playSoundEffect(pos.getX() + 0.5D, pos.getY() + 0.5D, pos.getZ() + 0.5D, "dig.glass", 1.0F, itemRand.nextFloat() * 0.4F + 0.8F);
+					worldIn.setBlockState(pos1, BlockFrostGenerator.canFreeze.get(worldIn.getBlockState(pos1)));
+					stack.damageItem(4, playerIn);
+				}
+				else if(BlockFrostGenerator.canFreeze.containsKey(worldIn.getBlockState(pos)))
+				{
+					worldIn.playSoundEffect(pos.getX() + 0.5D, pos.getY() + 0.5D, pos.getZ() + 0.5D, "dig.glass", 1.0F, itemRand.nextFloat() * 0.4F + 0.8F);
 					worldIn.setBlockState(pos, BlockFrostGenerator.canFreeze.get(worldIn.getBlockState(pos)));
 					stack.damageItem(4, playerIn);
 				}
