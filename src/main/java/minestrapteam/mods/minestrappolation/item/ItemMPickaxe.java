@@ -2,6 +2,7 @@ package minestrapteam.mods.minestrappolation.item;
 
 import java.util.HashMap;
 
+import minestrapteam.mods.minestrappolation.block.machines.BlockFrostGenerator;
 import minestrapteam.mods.minestrappolation.enumtypes.MWoodType;
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import minestrapteam.mods.minestrappolation.lib.MItems;
@@ -28,8 +29,6 @@ public class ItemMPickaxe extends ItemPickaxe
 	boolean freezes = false;
 	boolean mapCreated = false;
 	
-	public HashMap<IBlockState, IBlockState>	canFreeze	= new HashMap<IBlockState, IBlockState>();
-	
 	public ItemMPickaxe(ToolMaterial material, Item repair, boolean ignites, boolean freezes)
 	{
 		super(material);
@@ -38,94 +37,6 @@ public class ItemMPickaxe extends ItemPickaxe
 		this.freezes = freezes;
 	}
 	
-	public void createFreezeMap()
-	{
-		this.canFreeze.put(Blocks.water.getDefaultState(), Blocks.ice.getDefaultState());
-		this.canFreeze.put(Blocks.snow.getDefaultState(), MBlocks.snow_refined.getDefaultState());
-		this.canFreeze.put(MBlocks.snow_bricks.getDefaultState(), MBlocks.snow_tiles.getDefaultState());
-		this.canFreeze.put(MBlocks.snow_refined.getDefaultState(), Blocks.ice.getDefaultState());
-		this.canFreeze.put(MBlocks.snow_tiles.getDefaultState(), Blocks.ice.getDefaultState());
-		this.canFreeze.put(Blocks.ice.getDefaultState(), Blocks.packed_ice.getDefaultState());
-		for(int i = 0 ; i < 16 ; i++)
-		{
-			if (i < 14)
-				this.canFreeze.put(Blocks.snow_layer.getStateFromMeta(i), Blocks.snow_layer.getStateFromMeta(i + 1));
-			else
-				this.canFreeze.put(Blocks.snow_layer.getStateFromMeta(15), Blocks.snow.getDefaultState());
-		}
-		
-		this.canFreeze.put(Blocks.fire.getDefaultState(), Blocks.air.getDefaultState());
-		this.canFreeze.put(Blocks.lava.getDefaultState(), Blocks.obsidian.getDefaultState());
-		
-		for(int i = 0 ; i < 16 ; i++)
-		{
-			this.canFreeze.put(Blocks.tallgrass.getStateFromMeta(i), Blocks.deadbush.getDefaultState());
-		}
-		this.canFreeze.put(Blocks.deadbush.getDefaultState(), Blocks.air.getDefaultState());
-		for(int i = 0 ; i < 16 ; i++)
-		{
-			this.canFreeze.put(Blocks.red_flower.getStateFromMeta(i), Blocks.deadbush.getDefaultState());
-		}
-		for(int i = 0 ; i < 16 ; i++)
-		{
-			this.canFreeze.put(Blocks.double_plant.getStateFromMeta(i), Blocks.deadbush.getDefaultState());
-		}
-		this.canFreeze.put(Blocks.yellow_flower.getDefaultState(), Blocks.deadbush.getDefaultState());
-		this.canFreeze.put(Blocks.red_mushroom.getDefaultState(), Blocks.air.getDefaultState());
-		this.canFreeze.put(Blocks.brown_mushroom.getDefaultState(), Blocks.air.getDefaultState());
-		this.canFreeze.put(Blocks.reeds.getDefaultState(), Blocks.air.getDefaultState());
-		for(int i = 0 ; i < 16 ; i++)
-		{
-			this.canFreeze.put(Blocks.vine.getStateFromMeta(i), Blocks.air.getDefaultState());
-		}
-		this.canFreeze.put(Blocks.sapling.getStateFromMeta(BlockPlanks.EnumType.ACACIA.getMetadata()), Blocks.deadbush.getDefaultState());
-		this.canFreeze.put(Blocks.sapling.getStateFromMeta(BlockPlanks.EnumType.OAK.getMetadata()), MBlocks.ministrapp_sapling.getStateFromMeta(MWoodType.FROZEN.getMetadata()));
-		this.canFreeze.put(Blocks.sapling.getStateFromMeta(BlockPlanks.EnumType.DARK_OAK.getMetadata()), MBlocks.ministrapp_sapling.getStateFromMeta(MWoodType.FROZEN.getMetadata()));
-		this.canFreeze.put(Blocks.sapling.getStateFromMeta(BlockPlanks.EnumType.SPRUCE.getMetadata()), Blocks.deadbush.getDefaultState());
-		this.canFreeze.put(Blocks.sapling.getStateFromMeta(BlockPlanks.EnumType.JUNGLE.getMetadata()), Blocks.deadbush.getDefaultState());
-		this.canFreeze.put(Blocks.sapling.getStateFromMeta(BlockPlanks.EnumType.BIRCH.getMetadata()), Blocks.deadbush.getDefaultState());
-		this.canFreeze.put(Blocks.cactus.getDefaultState(), Blocks.snow.getDefaultState());
-		this.canFreeze.put(Blocks.lit_pumpkin.getStateFromMeta(0), Blocks.pumpkin.getStateFromMeta(0));
-		this.canFreeze.put(Blocks.lit_pumpkin.getStateFromMeta(1), Blocks.pumpkin.getStateFromMeta(1));
-		this.canFreeze.put(Blocks.lit_pumpkin.getStateFromMeta(2), Blocks.pumpkin.getStateFromMeta(2));
-		this.canFreeze.put(Blocks.lit_pumpkin.getStateFromMeta(3), Blocks.pumpkin.getStateFromMeta(3));
-		for(int i = 0 ; i < 16 ; i++)
-		{
-			this.canFreeze.put(Blocks.pumpkin.getStateFromMeta(i), Blocks.snow.getDefaultState());
-		}
-		this.canFreeze.put(Blocks.melon_block.getDefaultState(), Blocks.snow.getDefaultState());
-		
-		this.canFreeze.put(Blocks.log.getStateFromMeta(BlockPlanks.EnumType.OAK.getMetadata()), MBlocks.ministrapp_log.getStateFromMeta(MWoodType.FROZEN.getMetadata()));
-		this.canFreeze.put(Blocks.log2.getStateFromMeta(BlockPlanks.EnumType.SPRUCE.getMetadata()), MBlocks.ministrapp_log.getStateFromMeta(MWoodType.FROZEN.getMetadata()));
-		this.canFreeze.put(Blocks.leaves.getStateFromMeta(BlockPlanks.EnumType.OAK.getMetadata()), MBlocks.ministrapp_leaves.getStateFromMeta(MWoodType.FROZEN.getMetadata()));
-		this.canFreeze.put(Blocks.leaves.getStateFromMeta(BlockPlanks.EnumType.BIRCH.getMetadata()), MBlocks.dead_branch.getDefaultState());
-		this.canFreeze.put(Blocks.leaves.getStateFromMeta(BlockPlanks.EnumType.JUNGLE.getMetadata()), MBlocks.dead_branch.getDefaultState());
-		this.canFreeze.put(Blocks.leaves2.getStateFromMeta(BlockPlanks.EnumType.OAK.getMetadata()), MBlocks.dead_branch.getDefaultState());
-		this.canFreeze.put(Blocks.leaves2.getStateFromMeta(BlockPlanks.EnumType.SPRUCE.getMetadata()), MBlocks.ministrapp_leaves.getStateFromMeta(MWoodType.FROZEN.getMetadata()));
-		for(int i = 0 ; i < 16 ; i++)
-		{
-			this.canFreeze.put(Blocks.red_mushroom_block.getStateFromMeta(i), Blocks.snow.getDefaultState());
-		}
-		for(int i = 0 ; i < 16 ; i++)
-		{
-			this.canFreeze.put(Blocks.brown_mushroom_block.getStateFromMeta(i), Blocks.snow.getDefaultState());
-		}
-		
-		this.canFreeze.put(Blocks.sand.getDefaultState(), MBlocks.cold_sand.getDefaultState());
-		this.canFreeze.put(Blocks.sand.getStateFromMeta(BlockSand.EnumType.RED_SAND.getMetadata()), MBlocks.cold_sand.getStateFromMeta(BlockSand.EnumType.RED_SAND.getMetadata()));
-		this.canFreeze.put(Blocks.grass.getDefaultState(), MBlocks.lichen_permafrost.getDefaultState());
-		this.canFreeze.put(Blocks.mycelium.getDefaultState(), MBlocks.lichen_permafrost.getDefaultState());
-		this.canFreeze.put(Blocks.dirt.getStateFromMeta(BlockDirt.DirtType.DIRT.getMetadata()), MBlocks.dirt_permafrost.getDefaultState());
-		this.canFreeze.put(Blocks.dirt.getStateFromMeta(BlockDirt.DirtType.COARSE_DIRT.getMetadata()), MBlocks.dirt_permafrost.getDefaultState());
-		this.canFreeze.put(Blocks.dirt.getStateFromMeta(BlockDirt.DirtType.PODZOL.getMetadata()), MBlocks.lichen_permafrost.getDefaultState());
-		for(int i = 0 ; i < 16 ; i++)
-		{
-			this.canFreeze.put(Blocks.farmland.getStateFromMeta(i), MBlocks.dirt_permafrost.getDefaultState());
-		}
-		
-		this.canFreeze.put(Blocks.sponge.getStateFromMeta(1), Blocks.snow.getDefaultState());
-		this.canFreeze.put(Blocks.web.getDefaultState(), MBlocks.cold_cobweb.getDefaultState());
-	}
 	
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
@@ -173,22 +84,9 @@ public class ItemMPickaxe extends ItemPickaxe
 				return false;
 			else
 			{
-				if (mapCreated == false)
+				if(BlockFrostGenerator.canFreeze.containsKey(worldIn.getBlockState(pos)))
 				{
-					this.createFreezeMap();
-					mapCreated = true;
-				}
-				BlockPos pos1 = pos.offset(side);
-				if (this.canFreeze.containsKey(worldIn.getBlockState(pos1)))
-				{
-					worldIn.playSoundEffect(pos1.getX() + 0.5D, pos1.getY() + 0.5D, pos1.getZ() + 0.5D, "fire.ignite", 1.0F, itemRand.nextFloat() * 0.4F + 0.8F);
-					worldIn.setBlockState(pos1, this.canFreeze.get(worldIn.getBlockState(pos1)));
-					stack.damageItem(4, playerIn);
-				}
-				else if (this.canFreeze.containsKey(worldIn.getBlockState(pos)))
-				{
-					worldIn.playSoundEffect(pos.getX() + 0.5D, pos.getY() + 0.5D, pos.getZ() + 0.5D, "dig.glass", 1.0F, itemRand.nextFloat() * 0.4F + 0.8F);
-					worldIn.setBlockState(pos, this.canFreeze.get(worldIn.getBlockState(pos)));
+					worldIn.setBlockState(pos, BlockFrostGenerator.canFreeze.get(worldIn.getBlockState(pos)));
 					stack.damageItem(4, playerIn);
 				}
 				return true;

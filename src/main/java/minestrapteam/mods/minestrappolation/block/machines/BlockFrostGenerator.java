@@ -27,7 +27,7 @@ import minestrapteam.mods.minestrappolation.lib.MBlocks;
 public class BlockFrostGenerator extends MBlock
 {
 	
-	public HashMap<IBlockState, IBlockState>	canFreeze	= new HashMap<IBlockState, IBlockState>();
+	public static HashMap<IBlockState, IBlockState>	canFreeze	= new HashMap<IBlockState, IBlockState>();
 	
 	int											range		= 8;
 	
