@@ -1,5 +1,6 @@
 package minestrapteam.mods.minestrappolation.item;
 
+import minestrapteam.mods.minestrappolation.block.machines.BlockFrostGenerator;
 import minestrapteam.mods.minestrappolation.lib.MItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.IGrowable;
@@ -22,12 +23,14 @@ public class ItemMHoe extends ItemHoe
 	
 	Item	repairItem;
 	boolean	ignites	= false;
+	boolean freezes = false;
 	
-	public ItemMHoe(ToolMaterial material, Item repair, boolean ignites)
+	public ItemMHoe(ToolMaterial material, Item repair, boolean ignites, boolean freezes)
 	{
 		super(material);
 		this.repairItem = repair;
 		this.ignites = ignites;
+		this.freezes = freezes;
 	}
 	
 	@Override
@@ -54,6 +57,28 @@ public class ItemMHoe extends ItemHoe
 				}
 				
 				stack.damageItem(2, playerIn);
+				return true;
+			}
+		}
+		else if(this.freezes)
+		{
+			BlockPos pos1 = pos.offset(side);
+			if (!playerIn.canPlayerEdit(pos, side, stack))
+				return false;
+			else
+			{
+				if(BlockFrostGenerator.canFreeze.containsKey(worldIn.getBlockState(pos1)))
+				{
+					worldIn.playSoundEffect(pos.getX() + 0.5D, pos.getY() + 0.5D, pos.getZ() + 0.5D, "dig.glass", 1.0F, itemRand.nextFloat() * 0.4F + 0.8F);
+					worldIn.setBlockState(pos1, BlockFrostGenerator.canFreeze.get(worldIn.getBlockState(pos1)));
+					stack.damageItem(2, playerIn);
+				}
+				else if(BlockFrostGenerator.canFreeze.containsKey(worldIn.getBlockState(pos)))
+				{
+					worldIn.playSoundEffect(pos.getX() + 0.5D, pos.getY() + 0.5D, pos.getZ() + 0.5D, "dig.glass", 1.0F, itemRand.nextFloat() * 0.4F + 0.8F);
+					worldIn.setBlockState(pos, BlockFrostGenerator.canFreeze.get(worldIn.getBlockState(pos)));
+					stack.damageItem(2, playerIn);
+				}
 				return true;
 			}
 		}

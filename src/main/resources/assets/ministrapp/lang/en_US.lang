@@ -708,7 +708,9 @@ item.rad_chestplate.name=Resilient Chestplate
 item.rad_leggings.name=Resilient Leggings
 item.rad_boots.name=Resilient Boots
 
-item.sifter.name=Mining Sieve
+item.sifter.name=Copper Mining Sieve
+item.titanium_sifter.name=Titanium Mining Sieve
+item.empty_titanium_sifter.name=Broken Titanium Mining Sieve
 item.magma_bucket.name=Bucket of Magma
 item.heart_piece.name=Heart Piece
 item.heart_container.name=Heart Container
@@ -757,6 +759,8 @@ achievement.frost_gen=A Cold Reception
 achievement.frost_gen.desc=Place and power a frost generator.
 achievement.heart=It's Dangerous to go Alone
 achievement.heart.desc=Increase your maximum health.
+achievement.titanium=Titanic
+achievement.titanium.desc=Acquire a titanium ingot.
 
 recipe.melting=Melting
 recipe.sawmill.shaped=Shaped Milling

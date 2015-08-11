@@ -16,12 +16,12 @@ public class MAchievements {
 	public static Achievement frost = new Achievement("achievement.frost", "frost",  2, -1, MBlocks.dirt_permafrost, (Achievement)minestrapp);
 	public static Achievement glacieric_ice = new Achievement("achievement.glacieric_ice", "glacieric_ice", 4, -1, MItems.glacieric_ice_shard, (Achievement)frost);
 	public static Achievement frost_gen = new Achievement("achievemnt.frost_gen", "frost_gen", 4, -3, MBlocks.frost_generator, (Achievement)glacieric_ice);
-	public static Achievement bedrock = new Achievement("achievement.bedrock", "bedrock", -3, 6, Blocks.bedrock, (Achievement)melter).setSpecial();
+	public static Achievement bedrock = new Achievement("achievement.bedrock", "bedrock", -3, 8, Blocks.bedrock, (Achievement)titanium).setSpecial();
 	public static Achievement sifter = new Achievement("achievement.sifter", "sifter", 1, 4, MItems.sifter, (Achievement)alloy);
 	public static Achievement god = new Achievement("achievement.god", "god",  -2, -1, MBlocks.godstone, (Achievement)minestrapp).setSpecial();
 	public static Achievement jam = new Achievement("achievement.jam", "jam", 2, 1, MItems.jam_bottle, (Achievement)minestrapp);
-	public static Achievement crusher = new Achievement("achievement.crusher", "crusher",  1, 6, MBlocks.crusher, (Achievement)melter).setSpecial();
-	public static Achievement icecream = new Achievement("achievement.icecream", "icecream", 3, 6, MItems.ice_cream, (Achievement)crusher);
+	public static Achievement crusher = new Achievement("achievement.crusher", "crusher",  1, 8, MBlocks.crusher, (Achievement)titanium).setSpecial();
+	public static Achievement icecream = new Achievement("achievement.icecream", "icecream", 1, 6, MItems.ice_cream, (Achievement)crusher);
 	
 	public static void load()
 	{

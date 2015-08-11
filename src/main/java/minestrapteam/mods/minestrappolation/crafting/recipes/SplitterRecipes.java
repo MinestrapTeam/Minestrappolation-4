@@ -456,9 +456,11 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MItems.fire_sword, 1, 0), new ItemStack(Items.stick, 1), new ItemStack(MItems.blazium_ingot, 2), 0.1F);
 		this.addRecipe(new ItemStack(MItems.titanium_sword, 1, 0), new ItemStack(Items.stick, 1), new ItemStack(MItems.titanium_ingot, 2), 0.1F);
 		
-		this.addRecipe(new ItemStack(MItems.sifter, 1), new ItemStack(MItems.copper_ingot, 3), new ItemStack(MBlocks.steel_mesh, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.sifter, 1, 0), new ItemStack(MItems.copper_ingot, 3), new ItemStack(MItems.reinforced_stick, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.titanium_sifter, 1), new ItemStack(MItems.titanium_ingot, 3), new ItemStack(MItems.reinforced_stick, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.empty_titanium_sifter, 1), new ItemStack(MItems.titanium_ingot, 3), new ItemStack(MItems.reinforced_stick, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.wing_segment, 1), new ItemStack(MItems.wing_sinew, 3), new ItemStack(Items.leather, 3), 0.1F);
-		this.addRecipe(new ItemStack(MItems.hangglider, 1), new ItemStack(Blocks.planks, 4), new ItemStack(MItems.wing_sinew, 2), 0.1F);
+		this.addRecipe(new ItemStack(MItems.hangglider, 1, 0), new ItemStack(Blocks.planks, 4), new ItemStack(MItems.wing_sinew, 2), 0.1F);
 		this.addRecipe(new ItemStack(MItems.soulbottle, 1), new ItemStack(MItems.soul_gem, 1), new ItemStack(Items.glass_bottle, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.heart_container, 1), new ItemStack(MItems.heart_piece, 2), new ItemStack(MItems.heart_piece, 2), 0.1F);
 		

@@ -5,6 +5,7 @@ import java.util.Random;
 import minestrapteam.mods.minestrappolation.Config;
 import minestrapteam.mods.minestrappolation.Minestrappolation;
 import minestrapteam.mods.minestrappolation.block.BlockSoul;
+import minestrapteam.mods.minestrappolation.block.machines.BlockFrostGenerator;
 import minestrapteam.mods.minestrappolation.lib.MAchievements;
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import minestrapteam.mods.minestrappolation.lib.MItems;
@@ -26,6 +27,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.BlockPos;
+import net.minecraft.world.World;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
@@ -126,6 +129,8 @@ public class MEventHandler
 		if (event.entity instanceof EntityPlayer)
 		{
 			EntityPlayer player = (EntityPlayer) event.entity;
+			World worldIn = player.worldObj;
+			BlockPos pos = player.getPosition().down();
 
 			if (PlayerHelper.hasArmorSet(player, MItems.meurodite_helmet, MItems.meurodite_chestplate, MItems.meurodite_leggings, MItems.meurodite_boots))
 			{
@@ -138,6 +143,19 @@ public class MEventHandler
 			else if (PlayerHelper.hasArmorSet(player, MItems.titanium_helmet, MItems.titanium_chestplate, MItems.titanium_leggings, MItems.titanium_boots))
 			{
 				player.addPotionEffect(new PotionEffect(Potion.resistance.id, 2, 1, true, false));
+			}
+			else if (PlayerHelper.hasArmorSet(player, MItems.ice_helmet, MItems.ice_chestplate, MItems.ice_leggings, MItems.ice_boots))
+			{
+				if(BlockFrostGenerator.canFreeze.containsKey(worldIn.getBlockState(pos)))
+					worldIn.setBlockState(pos, BlockFrostGenerator.canFreeze.get(worldIn.getBlockState(pos)));
+				if(BlockFrostGenerator.canFreeze.containsKey(worldIn.getBlockState(pos.north())))
+					worldIn.setBlockState(pos.north(), BlockFrostGenerator.canFreeze.get(worldIn.getBlockState(pos.north())));
+				if(BlockFrostGenerator.canFreeze.containsKey(worldIn.getBlockState(pos.east())))
+					worldIn.setBlockState(pos.east(), BlockFrostGenerator.canFreeze.get(worldIn.getBlockState(pos.east())));
+				if(BlockFrostGenerator.canFreeze.containsKey(worldIn.getBlockState(pos.south())))
+					worldIn.setBlockState(pos.south(), BlockFrostGenerator.canFreeze.get(worldIn.getBlockState(pos.south())));
+				if(BlockFrostGenerator.canFreeze.containsKey(worldIn.getBlockState(pos.west())))
+					worldIn.setBlockState(pos.west(), BlockFrostGenerator.canFreeze.get(worldIn.getBlockState(pos.west())));
 			}
 			
 			if(ChunkHelper.getChunkBiomeForEntity(player).equals(MBiomeManager.frost.biomeName) && Config.frostSpeedEffect && !player.capabilities.isCreativeMode)

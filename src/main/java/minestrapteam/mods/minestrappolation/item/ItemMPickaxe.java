@@ -27,7 +27,6 @@ public class ItemMPickaxe extends ItemPickaxe
 	Item	repairItem;
 	boolean	ignites	= false;
 	boolean freezes = false;
-	boolean mapCreated = false;
 	
 	public ItemMPickaxe(ToolMaterial material, Item repair, boolean ignites, boolean freezes)
 	{

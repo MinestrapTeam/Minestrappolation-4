@@ -3,6 +3,7 @@ package minestrapteam.mods.minestrappolation.item;
 import minestrapteam.mods.minestrappolation.Minestrappolation;
 import minestrapteam.mods.minestrappolation.lib.MAchievements;
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
+import minestrapteam.mods.minestrappolation.lib.MItems;
 import minestrapteam.mods.minestrappolation.util.Chance;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -14,12 +15,26 @@ import net.minecraft.world.World;
 
 public class ItemSifter extends Item{
 	
-	public ItemSifter()
+	public Boolean isReusable;
+	public Item base;
+	
+	public ItemSifter(int durability, boolean reusable)
     {
         this.maxStackSize = 1;
-        this.setMaxDamage(36);
+        this.setMaxDamage(durability);
         this.isDamageable();
         this.setCreativeTab(Minestrappolation.tabMTools);
+        this.isReusable = reusable;
+    }
+	
+	public ItemSifter(int durability, boolean reusable, Item base)
+    {
+        this.maxStackSize = 1;
+        this.setMaxDamage(durability);
+        this.isDamageable();
+        this.setCreativeTab(Minestrappolation.tabMTools);
+        this.isReusable = reusable;
+        this.base = base;
     }
 	
 	@Override
@@ -38,6 +53,14 @@ public class ItemSifter extends Item{
 			else if (worldIn.getBlockState(pos).getBlock() == Blocks.clay)
             {
 				this.spawnDropFrom(stack, playerIn, worldIn, pos, "sifter_clay");
+            }
+			else if (worldIn.getBlockState(pos).getBlock() == MBlocks.mud)
+            {
+				this.spawnDropFrom(stack, playerIn, worldIn, pos, "sifter_mud");
+            }
+			else if (worldIn.getBlockState(pos).getBlock() == MBlocks.rubble)
+            {
+				this.spawnDropFrom(stack, playerIn, worldIn, pos, "sifter_rubble");
             }
 			else if (worldIn.getBlockState(pos).getBlock() == Blocks.gravel)
             {
@@ -79,6 +102,21 @@ public class ItemSifter extends Item{
         	 drop.stackSize = 1;
              playerIn.inventory.addItemStackToInventory(drop);	
          }	
-         stack.damageItem(1, playerIn); 
+         if(isReusable == false)
+         {
+        	 stack.damageItem(1, playerIn);
+         }
+         else if(isReusable == true)
+         {
+        	 if(stack.getItemDamage() == stack.getMaxDamage())
+        	 {
+        		stack.setItem(base);
+        	 	stack.setItemDamage(0);
+        	 }
+        	 else
+        	 {
+        		 stack.damageItem(1, playerIn);
+        	 }
+         }
 	}
 }
