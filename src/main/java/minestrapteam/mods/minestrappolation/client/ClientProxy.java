@@ -1,5 +1,6 @@
 package minestrapteam.mods.minestrappolation.client;
 
+import minestrapteam.mods.minestrappolation.Minestrappolation;
 import minestrapteam.mods.minestrappolation.block.BlockBiomeBricks;
 import minestrapteam.mods.minestrappolation.block.BlockChiseled;
 import minestrapteam.mods.minestrappolation.block.BlockCrackedBricks;
@@ -33,16 +34,19 @@ import minestrapteam.mods.minestrappolation.block.biomeores.BlockBiomeTin;
 import minestrapteam.mods.minestrappolation.block.biomeores.BlockBiomeTitanium;
 import minestrapteam.mods.minestrappolation.block.biomeores.BlockBiomeTorite;
 import minestrapteam.mods.minestrappolation.block.biomeores.BlockBiomeUranium;
+import minestrapteam.mods.minestrappolation.entity.EntityMudBall;
+import minestrapteam.mods.minestrappolation.entity.RenderMudBall;
 import minestrapteam.mods.minestrappolation.item.ItemBricks;
 import minestrapteam.mods.minestrappolation.item.ItemChunk;
-import minestrapteam.mods.minestrappolation.lib.MAchievements;
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import minestrapteam.mods.minestrappolation.lib.MFluid;
 import minestrapteam.mods.minestrappolation.lib.MItems;
 import minestrapteam.mods.minestrappolation.network.CommonProxy;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 public class ClientProxy extends CommonProxy
 {
@@ -101,6 +105,9 @@ public class ClientProxy extends CommonProxy
 		
 		ItemChunk.inventoryRender();
 		ItemBricks.inventoryRender();
+		
+		RenderingRegistry.registerEntityRenderingHandler(EntityMudBall.class, new RenderMudBall(Minecraft.getMinecraft().getRenderManager(), MItems.mud_ball, Minecraft.getMinecraft().getRenderItem()));
+		
 	}
 
 	
