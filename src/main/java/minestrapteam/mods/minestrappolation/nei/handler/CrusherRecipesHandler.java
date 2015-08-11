@@ -32,10 +32,10 @@ public class CrusherRecipesHandler extends TemplateRecipeHandler
 			this.ingred = new PositionedStack(ingred, 51, 6);
 			this.result = new PositionedStack(result, 111, 15);
 			
-			ItemStack container = new ItemStack(CrusherRecipes.instance().getExtra(ingred).getItem());
-			if (container != null)
+			ItemStack bonus = new ItemStack(CrusherRecipes.instance().getExtra(ingred).getItem());
+			if (bonus != null)
 			{
-				this.bonus = new PositionedStack(container, 111, 38);
+				this.bonus = new PositionedStack(bonus, 111, 38);
 			}
 		}
 		
@@ -137,34 +137,6 @@ public class CrusherRecipesHandler extends TemplateRecipeHandler
 			if (MStacks.itemEquals(recipe.getValue(), result))
 			{
 				this.arecipes.add(new CrushingPair(recipe.getKey(), recipe.getValue()));
-			}
-		}
-	}
-	
-	@Override
-	public void loadUsageRecipes(String inputId, Object... ingredients)
-	{
-		if (inputId.equals("crusher_fuel"))
-		{
-			this.loadCraftingRecipes("crusher");
-		}
-		else
-		{
-			super.loadUsageRecipes(inputId, ingredients);
-		}
-	}
-	
-	@Override
-	public void loadUsageRecipes(ItemStack ingredient)
-	{
-		Map<ItemStack, ItemStack> recipes = CrusherRecipes.instance().getSmeltingList();
-		for (Entry<ItemStack, ItemStack> recipe : recipes.entrySet())
-		{
-			if (MStacks.itemEquals(recipe.getKey(), ingredient))
-			{
-				CrushingPair arecipe = new CrushingPair(recipe.getKey(), recipe.getValue());
-				arecipe.setIngredientPermutation(Arrays.asList(arecipe.ingred), ingredient);
-				this.arecipes.add(arecipe);
 			}
 		}
 	}
