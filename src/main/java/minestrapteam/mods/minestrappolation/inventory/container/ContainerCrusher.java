@@ -115,12 +115,12 @@ public class ContainerCrusher extends MinestrappolationContainer
 				if (!this.mergeItemStack(itemstack1, 1, 2, false))
 					return null;
 			}
-			else if (slotID >= 3 && slotID < 30)
+			else if (slotID >= 3 && slotID < 31)
 			{
 				if (!this.mergeItemStack(itemstack1, 31, 40, false))
 					return null;
 			}
-			else if (slotID >= 30 && slotID < 39)
+			else if (slotID >= 30 && slotID < 40)
 			{
 				if (!this.mergeItemStack(itemstack1, 4, 31, false))
 					return null;
