@@ -3,6 +3,7 @@ package minestrapteam.mods.minestrappolation.block.machines;
 import minestrapteam.mods.minestrappolation.Minestrappolation;
 import minestrapteam.mods.minestrappolation.block.BlockDirectional;
 import minestrapteam.mods.minestrappolation.handlers.MGuiHandler;
+import minestrapteam.mods.minestrappolation.lib.MAchievements;
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntitySplitter;
 import net.minecraft.block.material.Material;
@@ -115,6 +116,7 @@ public class BlockSplitter extends BlockDirectional
 			return true;
 		
 		playerIn.openGui(Minestrappolation.instance, MGuiHandler.GUIID_MELTER, worldIn, pos.getX(), pos.getY(), pos.getZ());
+		playerIn.addStat(MAchievements.splitter, 1);
 		return true;
 	}
 }

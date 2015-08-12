@@ -22,10 +22,11 @@ public class MAchievements {
 	public static Achievement jam = new Achievement("achievement.jam", "jam", 2, 1, MItems.jam_bottle, (Achievement)minestrapp);
 	public static Achievement crusher = new Achievement("achievement.crusher", "crusher",  1, 8, MBlocks.crusher, (Achievement)titanium).setSpecial();
 	public static Achievement icecream = new Achievement("achievement.icecream", "icecream", 1, 6, MItems.ice_cream, (Achievement)crusher);
+	public static Achievement splitter = new Achievement("achievement.splitter", "splitter", -1, -3, MBlocks.splitter_active, (Achievement)minestrapp);
 	
 	public static void load()
 	{
-		AchievementPage.registerAchievementPage( new AchievementPage("Minestrappolation", new Achievement[] {heart, stonecutter, sawmill, alloy, melter, titanium, frost, glacieric_ice, frost_gen, bedrock, minestrapp, sifter, god, jam, crusher, icecream}));
+		AchievementPage.registerAchievementPage( new AchievementPage("Minestrappolation", new Achievement[] {heart, stonecutter, sawmill, alloy, melter, titanium, frost, glacieric_ice, frost_gen, bedrock, minestrapp, sifter, god, jam, crusher, icecream, splitter}));
 		preInit();
 	}
 	
@@ -47,6 +48,7 @@ public class MAchievements {
 		god.registerStat();
 		jam.registerStat();
 		icecream.registerStat();
+		splitter.registerStat();
 	}
 	
 	public static void addAchievement(EntityPlayer player, Achievement ach)

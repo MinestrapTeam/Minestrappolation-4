@@ -3,11 +3,14 @@ package minestrapteam.mods.minestrappolation.entity;
 import java.util.Random;
 
 import minestrapteam.mods.minestrappolation.lib.MItems;
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntityBlaze;
 import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.MovingObjectPosition;
@@ -40,6 +43,11 @@ public class EntityMudBall extends EntityThrowable
             Random rand = new Random();
         	int dam = rand.nextInt(2);
         	pos.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), (float)dam);
+        	if (pos.entityHit instanceof EntityLiving)
+        	{
+        		int duration = rand.nextInt(10) + 2;
+        		((EntityLivingBase) pos.entityHit).addPotionEffect(new PotionEffect(Potion.blindness.id, duration * 20, 1, true, false));
+        	}
         }
 
         for (int i = 0; i < 8; ++i)

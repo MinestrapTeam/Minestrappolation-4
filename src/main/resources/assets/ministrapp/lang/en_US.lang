@@ -761,6 +761,8 @@ achievement.heart=It's Dangerous to go Alone
 achievement.heart.desc=Increase your maximum health.
 achievement.titanium=Titanic
 achievement.titanium.desc=Acquire a titanium ingot.
+achievement.splitter=The Alchemist
+achievement.splitter.desc=Use an alchemical splitter.
 
 recipe.melting=Melting
 recipe.sawmill.shaped=Shaped Milling
