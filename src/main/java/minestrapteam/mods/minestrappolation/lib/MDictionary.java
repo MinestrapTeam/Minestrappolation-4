@@ -163,6 +163,7 @@ public class MDictionary
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MItems.titanium_sifter, 1), new Object[] { " C ", "CMC", " S ", 'C', "ingotTitanium", 'M', MBlocks.steel_mesh, 'S', MItems.reinforced_stick }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.splitter, 1), new Object[] { "RTR", "GSG", "RTR", 'R', MBlocks.radiant_chiseled, 'T', "ingotTorite", 'S', MBlocks.sunstone_block, 'G', MItems.soul_gem}));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.claimerator, 1), new Object[] { "DOD", "PGU", "DOD", 'D', Items.diamond, 'O', Blocks.obsidian, 'P', "ingotPlutonium", 'U', "ingotUranium", 'G', MBlocks.godstone }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MItems.charge_gun, 1), new Object[] { "SBT", "DPE", "SCT", 'S', MItems.steel_plating, 'B', "ingotBronze", 'T', "ingotTitanium", 'D', Blocks.dispenser, 'P', MItems.propeller, 'E', MItems.technological_doodad, 'C', "ingotCopper" }));
 		
 		//Materials
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MItems.reinforced_stick, 8), new Object[] { "SSS", "STS", "SSS", 'S', "stickWood", 'T', new ItemStack(MItems.tin_plating) }));

@@ -8,9 +8,11 @@ import minestrapteam.mods.minestrappolation.item.ItemAmuletPorcum;
 import minestrapteam.mods.minestrappolation.item.ItemAmuletVaccam;
 import minestrapteam.mods.minestrappolation.item.ItemBackpack;
 import minestrapteam.mods.minestrappolation.item.ItemBricks;
+import minestrapteam.mods.minestrappolation.item.ItemChargeGun;
 import minestrapteam.mods.minestrappolation.item.ItemChunk;
 import minestrapteam.mods.minestrappolation.item.ItemHangGlider;
 import minestrapteam.mods.minestrappolation.item.ItemHeartContainer;
+import minestrapteam.mods.minestrappolation.item.ItemIceCharge;
 import minestrapteam.mods.minestrappolation.item.ItemMArmor;
 import minestrapteam.mods.minestrappolation.item.ItemMAxe;
 import minestrapteam.mods.minestrappolation.item.ItemMFood;
@@ -138,6 +140,7 @@ public class MItems extends Item
 	public static Item							wolf_hide;
 	public static Item							propeller;
 	public static Item							technological_doodad;
+	public static Item							ice_charge;
 	
 	//Stonecutter
 	public static Item							chunks;
@@ -247,6 +250,7 @@ public class MItems extends Item
 	public static Item							sifter;
 	public static Item							titanium_sifter;
 	public static Item							empty_titanium_sifter;
+	public static Item							charge_gun;
 	public static Item							heart_container;
 	public static Item							soulbottle;
 	public static Item							hangglider;
@@ -376,6 +380,7 @@ public class MItems extends Item
 		technological_doodad = new Item().setUnlocalizedName("technological_doodad").setCreativeTab(Minestrappolation.tabMMaterials);
 		empty_titanium_sifter = new Item().setMaxStackSize(1).setUnlocalizedName("empty_titanium_sifter").setCreativeTab(Minestrappolation.tabMTools);
 		heart_piece = new Item().setUnlocalizedName("heart_piece").setCreativeTab(Minestrappolation.tabMTools);
+		ice_charge = new ItemIceCharge().setUnlocalizedName("ice_charge");
 		
 		//Stonecutter
 		chunks = new ItemChunk().setUnlocalizedName("chunks").setCreativeTab(Minestrappolation.tabMMaterials);	
@@ -484,6 +489,7 @@ public class MItems extends Item
 		//Specialty Tools
 		sifter = new ItemSifter(36, false).setUnlocalizedName("sifter");
 		titanium_sifter = new ItemSifter(72, true, empty_titanium_sifter).setUnlocalizedName("titanium_sifter");
+		charge_gun = new ItemChargeGun().setUnlocalizedName("charge_gun");
 		heart_container = new ItemHeartContainer().setUnlocalizedName("heart_container").setCreativeTab(Minestrappolation.tabMTools);
 		soulbottle = new ItemSoulBottle().setUnlocalizedName("soul_bottle").setCreativeTab(Minestrappolation.tabMTools);
 		hangglider = new ItemHangGlider().setUnlocalizedName("hangglider").setCreativeTab(Minestrappolation.tabMTools);
@@ -510,6 +516,7 @@ public class MItems extends Item
 		register(wing_sinew);
 		register(wing_segment);
 		register(mana_leaf);
+		register(ice_charge);
 		
 		register(bricks);
 		
@@ -598,6 +605,9 @@ public class MItems extends Item
 		register(amuletVaccam);
 		register(amuletOves);
 		register(amuletPullum);		
+		
+		//Combat Tab
+		register(charge_gun);
 		
 		//Tools Tab and Combat Tab
 		register(copper_pickaxe);

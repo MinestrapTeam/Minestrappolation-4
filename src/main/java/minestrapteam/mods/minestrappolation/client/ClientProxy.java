@@ -34,7 +34,9 @@ import minestrapteam.mods.minestrappolation.block.biomeores.BlockBiomeTin;
 import minestrapteam.mods.minestrappolation.block.biomeores.BlockBiomeTitanium;
 import minestrapteam.mods.minestrappolation.block.biomeores.BlockBiomeTorite;
 import minestrapteam.mods.minestrappolation.block.biomeores.BlockBiomeUranium;
+import minestrapteam.mods.minestrappolation.entity.EntityIceball;
 import minestrapteam.mods.minestrappolation.entity.EntityMudBall;
+import minestrapteam.mods.minestrappolation.entity.RenderIceBall;
 import minestrapteam.mods.minestrappolation.entity.RenderMudBall;
 import minestrapteam.mods.minestrappolation.item.ItemBricks;
 import minestrapteam.mods.minestrappolation.item.ItemChunk;
@@ -107,6 +109,7 @@ public class ClientProxy extends CommonProxy
 		ItemBricks.inventoryRender();
 		
 		RenderingRegistry.registerEntityRenderingHandler(EntityMudBall.class, new RenderMudBall(Minecraft.getMinecraft().getRenderManager(), MItems.mud_ball, Minecraft.getMinecraft().getRenderItem()));
+		RenderingRegistry.registerEntityRenderingHandler(EntityIceball.class, new RenderIceBall(Minecraft.getMinecraft().getRenderManager(), MItems.ice_charge, Minecraft.getMinecraft().getRenderItem()));
 		
 	}
 

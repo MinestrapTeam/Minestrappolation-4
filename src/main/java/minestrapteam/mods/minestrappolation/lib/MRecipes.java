@@ -24,6 +24,7 @@ public class MRecipes
 		GameRegistry.addRecipe(new ItemStack(MItems.propeller, 1), new Object[] { "C C", " B ", " C ", 'C', MItems.copper_ingot, 'B', MItems.bronze_ingot});
 		GameRegistry.addRecipe(new ItemStack(MBlocks.fan, 1), new Object[] { "GSG", "CBC", "CPC", 'G', MBlocks.granite_bricks, 'S', MBlocks.steel_mesh, 'C', new ItemStack(MBlocks.biome_bricks, 1, 3), 'B', MItems.propeller, 'P', MItems.technological_doodad });
 		GameRegistry.addRecipe(new ItemStack(MBlocks.chimney, 1), new Object[] { "G G", "SSS", "SSS", 'G', new ItemStack(MItems.bricks, 4, 11), 'S', new ItemStack(MItems.bricks, 4, 10)});
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.ice_charge, 3), new Object[] { MItems.glacieric_ice_shard, MItems.mana_leaf, MItems.crushed_ice });
 		
 		//TODO: Un-Comment these recipes when Backpacks and Satchels are fixed.
 		//GameRegistry.addRecipe(new ItemStack(MItems.satchel, 1), new Object[] {"HRH", "HCH", "HHH", 'H', Items.rabbit_hide, 'R', MBlocks.rope, 'C', MBlocks.crate });

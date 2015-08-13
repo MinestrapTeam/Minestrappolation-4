@@ -720,6 +720,10 @@ item.amulet_porcum.name=Porcum Amulet
 item.amulet_vaccam.name=Vaccam Amulet
 item.amulet_oves.name=Oves Amulet
 item.amulet_pullum.name=Pullum Amulet
+item.charge_gun.name=Charge Gun
+item.ice_charge.name=Ice Charge
+item.backpack.name=Backpack
+item.satchel.name=Satchel
 
 itemGroup.tabMBuilding=Minestrapp Building Blocks
 itemGroup.tabMDecor=Minestrapp Decoration Blocks

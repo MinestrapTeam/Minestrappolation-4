@@ -2,6 +2,7 @@ package minestrapteam.mods.minestrappolation;
 
 import minestrapteam.mods.chunkster.CEventHandler;
 import minestrapteam.mods.minestrappolation.creativetab.MTab;
+import minestrapteam.mods.minestrappolation.entity.EntityIceball;
 import minestrapteam.mods.minestrappolation.entity.EntityMudBall;
 import minestrapteam.mods.minestrappolation.handlers.MEventHandler;
 import minestrapteam.mods.minestrappolation.handlers.MFuelHandler;
@@ -105,6 +106,7 @@ public class Minestrappolation
 		proxy.init(event);
 		MGenHandler.load();
 		EntityRegistry.registerModEntity(EntityMudBall.class, "mud_ball", EntityRegistry.findGlobalUniqueEntityId(), Minestrappolation.instance, 350, 5, true);
+		EntityRegistry.registerModEntity(EntityIceball.class, "ice_ball", EntityRegistry.findGlobalUniqueEntityId() + 1, Minestrappolation.instance, 350, 5, true);
 		GameRegistry.registerTileEntity(TileEntityBarrel.class, "tile_entity_barrel");
 		GameRegistry.registerTileEntity(TileEntityCrate.class, "tile_entity_crate");
 		GameRegistry.registerTileEntity(TileEntityMelter.class, "tile_entity_melter");
