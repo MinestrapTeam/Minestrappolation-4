@@ -15,8 +15,7 @@ public class ContainerBackpack extends MinestrappolationContainer
 	/**
 	 * Current item using gui
 	 */
-	private final ItemStack containerstack;
-
+	
 	public boolean needsUpdate;
 
 	private static final int INV_START = InventoryBackpack.INV_SIZE, INV_END = INV_START + 26,
@@ -30,8 +29,6 @@ public class ContainerBackpack extends MinestrappolationContainer
 		
 		this.inventory = InventoryBackpack;
 
-		this.containerstack = par1Player.getHeldItem();
-
 		// BARREL INVENTORY
 		for (int j = 0; j < 4; ++j)
 		{
@@ -42,16 +39,6 @@ public class ContainerBackpack extends MinestrappolationContainer
 		}
 		
 		this.addInventorySlots(0, 20);
-	}
-
-	public void writeToNBT()
-	{
-		if (!this.containerstack.hasTagCompound())
-		{
-			this.containerstack.setTagCompound(new NBTTagCompound());
-		}
-
-		((InventoryBackpack) inventory).writeToNBT(this.containerstack.getTagCompound());
 	}
 
 	@Override
@@ -149,18 +136,6 @@ public class ContainerBackpack extends MinestrappolationContainer
 
 		return super.slotClick(slotID, buttonPressed, flag, player);
 	}
-
-	/*
-	 * 
-	 * Vanilla mergeItemStack method doesn't correctly handle inventories whose
-	 * 
-	 * max stack size is 1 when you shift-click into the inventory.
-	 * 
-	 * This is a modified method I wrote to handle such cases.
-	 * 
-	 * Note you only need it if your slot / inventory's max stack size is 1
-	 * 
-	 */
 
 	@Override
 

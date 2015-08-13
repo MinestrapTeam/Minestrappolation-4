@@ -591,8 +591,9 @@ public class MItems extends Item
 		register(heart_piece);
 		register(heart_container);
 		register(soulbottle);
-		//register(backpack);
-		//register(satchel);
+		//FIXME backbacks
+		register(backpack);
+		register(satchel);
 		register(amuletPorcum);
 		register(amuletVaccam);
 		register(amuletOves);
