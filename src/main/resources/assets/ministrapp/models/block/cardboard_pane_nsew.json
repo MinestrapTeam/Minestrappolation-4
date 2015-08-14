@@ -1,0 +1,7 @@
+{
+    "parent": "block/pane_nsew",
+    "textures": {
+        "edge": "ministrapp:blocks/cardboard_pane_edge",
+        "pane": "ministrapp:blocks/cardboard"
+    }
+}

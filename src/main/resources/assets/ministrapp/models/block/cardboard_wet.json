@@ -1,0 +1,8 @@
+{
+    "parent": "block/cube_bottom_top",
+    "textures": {
+        "bottom": "ministrapp:blocks/cardboard",
+        "top": "ministrapp:blocks/cardboard_wet_top",
+        "side": "ministrapp:blocks/cardboard_wet_side"
+    }
+}
