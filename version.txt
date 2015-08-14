@@ -1,2 +1,2 @@
 ﻿version=1.8.0-4.1.0
-motd=§9We're out of Alpha! Minestrappolation 4.1.0 is out, with tons of new features, fixes, etcetera! Head over to the forums to get the latest version!
+motd=§9We're out of Alpha! Minestrappolation 4.1.0 is out, with tons of new features, fixes, etcetera!
