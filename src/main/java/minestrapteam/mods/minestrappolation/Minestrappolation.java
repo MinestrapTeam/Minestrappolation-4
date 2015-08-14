@@ -4,6 +4,7 @@ import minestrapteam.mods.chunkster.CEventHandler;
 import minestrapteam.mods.minestrappolation.creativetab.MTab;
 import minestrapteam.mods.minestrappolation.entity.EntityIceball;
 import minestrapteam.mods.minestrappolation.entity.EntityMudBall;
+import minestrapteam.mods.minestrappolation.handlers.MDispenserHandler;
 import minestrapteam.mods.minestrappolation.handlers.MEventHandler;
 import minestrapteam.mods.minestrappolation.handlers.MFuelHandler;
 import minestrapteam.mods.minestrappolation.handlers.MGuiHandler;
@@ -83,6 +84,8 @@ public class Minestrappolation
 		
 		MAchievements.load();
 		MFluid.load();
+		
+		MDispenserHandler.registerBehaviors();
 		
 		network = NetworkRegistry.INSTANCE.newSimpleChannel("Minestrap");
 		MPackets.registerPackets(network);

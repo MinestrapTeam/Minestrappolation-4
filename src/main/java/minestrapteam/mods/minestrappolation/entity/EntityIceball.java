@@ -6,6 +6,7 @@ import minestrapteam.mods.minestrappolation.block.machines.BlockFrostGenerator;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.IProjectile;
 import net.minecraft.entity.projectile.EntityFireball;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -20,7 +21,7 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
 
-public class EntityIceball extends EntityFireball
+public class EntityIceball extends EntityFireball implements IProjectile
 {
     public EntityIceball(World worldIn)
     {
@@ -111,4 +112,9 @@ public class EntityIceball extends EntityFireball
     {
         return false;
     }
+
+	@Override
+	public void setThrowableHeading(double x, double y, double z, float velocity, float inaccuracy) 
+	{
+	}
 }
