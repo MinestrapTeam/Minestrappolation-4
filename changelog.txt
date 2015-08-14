@@ -1,3 +1,50 @@
+4.1.0
+ - Added Mud blocks. Can be crafted, and also generate in Rivers and Swamps.
+ - Added Mud Bricks.
+ - Added Mud Balls. Throwable like Eggs or Snowballs, and give players Blindness.
+ - Added Rubble. Generates in Gravel and in Strongholds. Has a chance to drop any type of Brick item or Chunk when harvested.
+ - Added Crushed Ice. Can be eaten to extinguish the player.
+ - Added Ice Cream. Credit to Godzillanator for the original texture.
+ - Added Glacial Invincium.
+ - Added Glacieric Ice Deposits. They are indestructable and generate on Glacial Invincium mounds in the Frost, but can be harvested like Berry Bushes while holding a Pickaxe.
+ - Added Glacieric Ice Shards.
+ - Added Glacieric Ice blocks.
+ - Added Glacierite Ingots.
+ - Added Blocks of Glacierite.
+ - Added Ice Tools. Behave the same way as Fire Tools, but freeze blocks when right-clicked.
+ - Added Ice Swords. Behave the same way as Fire Swords, but freeze mobs and blocks.
+ - Added Ice Armor. Wearing a full set freezes any blocks you walk on.
+ - Added Titanium Mining Sieves. Have more durability than Copper Mining Sieves, and can also be repaired when broken.
+ - Added Satchels. Right-click to open. Has the same storage space as a Crate.
+ - Added Backpacks. Right-click to open. Has the same storage space as a Barrel.
+ - Added Ice Charges. Act like Fire Charges, but freeze blocks and mobs instead of igniting them.
+ - Added Charge Guns. Act similar to Bows, but use Fire and Ice Charges as ammo, allowing you to use them without setting up a Dispenser first.
+ - Added an achievement for placing a Frost Generator.
+ - Added an achievement for harvesting a Glacieric Ice Deposit.
+ - Added an achievement for eating Ice Cream.
+ - Added an achievement for using a Heart Container.
+ - Added an achievement for using an Alchemical Splitter.
+ - Added a bunch of new Config options.
+ - Decreased default Wolf Hide and Mob Feet drop chances.
+ - Clay is now siftable.
+ - Glacieric Ice Shards can be found by sifting Permafrost, Lichen-Covered Permafrost, Cold Sand, and Cold Red Sand.
+ - Propellers and Technological Doodads can be found by sifting Rubble.
+ - Insulated Uranium and Plutonium now require a Technological Doodad to craft.
+ - Frost Generators are now crafted with Glacieric Ice instead of Packed Ice.
+ - Other players can now open claimed Doors and use claimed Levers and Buttons.
+ - Amulets now have a Latin description that explains what they do.
+ - Brick items are now handled under 1 ID. Could cause already existant Brick items to get deleted/change what type of brick they are.
+ - Fixed Minestrapp crashing if another mod adds Ores.
+ - Fixed Hoppers not placing items in Minestrapp machines correctly.
+ - Fixed Minestrapp machines not giving XP.
+ - Fixed crafting recipes that require a Water Bottle not returning the emptied Glass Bottle.
+ - Fixed Alloy Furnace recipes not being mirrorable.
+ - Fixed Titanium and Glow Glass Melter recipes requiring a Bucket.
+ - Fixed Insulated Uranium and Plutonium being broken instantly.
+ - Fixed NEI crashing every time you press "U", but had to temporarily remove NEI support for Crusher recipes.
+ - Fixed Blazium Ingots being craftable.
+ - Fixed Redwood Leaves decaying too much (for realsies this time).
+
 4.0.2A
  - Added Chicken Feet (dropped by Chickens).
  - Added Sheep Feet (dropped by Sheep).
