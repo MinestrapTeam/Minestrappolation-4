@@ -45,6 +45,7 @@ public abstract class WorldGenBaseTree extends WorldGenAbstractTree
 		if (!world.isAirBlock(pos.add(0, this.topHeight, 0)))
 			return false;
 		
+		
 		this.genLeafStructure(world, rand, pos);
 		this.createTrunk(world, rand, pos);
 		this.genExtras(world, rand, pos);
@@ -129,7 +130,10 @@ public abstract class WorldGenBaseTree extends WorldGenAbstractTree
 				{
 					if (d <= radius2 || random.nextInt(2) == 0)
 					{
-						world.setBlockState(pos.add(xfr, 0, zfr), this.leaves, 2);
+						if(world.isAirBlock(pos.add(xfr, 0, zfr)))
+						{
+							world.setBlockState(pos.add(xfr, 0, zfr), this.leaves, 2);
+						}
 					}
 				}
 			}
