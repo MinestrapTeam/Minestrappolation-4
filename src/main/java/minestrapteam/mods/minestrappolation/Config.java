@@ -107,7 +107,7 @@ public class Config
 		animalBoneDropAmount = config.get("Drops", "AnimalBoneDropQuantity", 2, "The maximum amount of Animal Bones dropped when killing any farm animal.").getInt();
 		animalFeetDropChance = config.get("Drops", "AnimalFeetDropChance", 8, "The percentage chance of finding animal feet when killing any farm animal.").getInt();
 		animalFeetDropAmount = config.get("Drops", "AnimalFeetDropQuantity", 1, "The maximum amount of animal feet dropped when killing any farm animal.").getInt();
-		wolfHideDropChance = config.get("Drops", "WolfHideDropChance", 20, "The percentage chance of finding Wolf Hide when killing Wolves.").getInt();
+		wolfHideDropChance = config.get("Drops", "WolfHideDropChance", 10, "The percentage chance of finding Wolf Hide when killing Wolves.").getInt();
 		wolfHideDropAmount = config.get("Drops", "WolfHideDropQuantity", 1, "The maximum amount of Wolf Hide dropped when killing Wolves.").getInt();
 		sinewDropChance = config.get("Drops", "WingSinewDropChance", 50, "The percentage chance of finding Wing Sinew when killing Bats.").getInt();
 		sinewDropAmount = config.get("Drops", "WingSinewDropQuantity", 1, "The maximum amount of Wing Sinew dropped when killing Bats.").getInt();

@@ -24,6 +24,7 @@ public class WorldGenIceMound extends WorldGenerator
 				radius--;
 			}
 			world.setBlockState(pos.add(0, radius + 2, 0), MBlocks.glacieric_ice_vein.getDefaultState().withProperty(BlockBush.AGE, 5), 2);
+			world.setBlockState(pos.add(0, radius + 1, 0), MBlocks.glaical_invincium.getDefaultState(), 2);
 			return true;
 		}
 		return false;
