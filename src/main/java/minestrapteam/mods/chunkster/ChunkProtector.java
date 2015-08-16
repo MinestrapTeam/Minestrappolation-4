@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.server.MinecraftServer;
 
 public class ChunkProtector 
 {
@@ -50,6 +51,10 @@ public class ChunkProtector
 	
 	public static boolean canEditChunk(EntityPlayer player, int x, int y)
 	{
+		if(MinecraftServer.getServer().getConfigurationManager().getOppedPlayers().getGameProfileFromName(player.getCommandSenderName()) != null)
+		{
+			return true;
+		}
 		return getProtectionData(x, y).canEdit(UUIDHelper.getPlayerUUID(player.getCommandSenderName()));
 	}
 	
