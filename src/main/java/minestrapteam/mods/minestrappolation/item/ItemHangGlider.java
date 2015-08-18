@@ -20,7 +20,7 @@ public class ItemHangGlider extends Item
 	public ItemHangGlider()
 	{
 		this.maxStackSize = 1;
-        this.setMaxDamage(50);
+        this.setMaxDamage(30);
         this.isDamageable();
         this.prevVelX = 0;
         this.prevVelZ = 0;

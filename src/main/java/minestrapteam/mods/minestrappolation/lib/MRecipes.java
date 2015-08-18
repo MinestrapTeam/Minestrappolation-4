@@ -17,10 +17,10 @@ public class MRecipes
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.heart_container, 1), new Object[] { MItems.heart_piece, MItems.heart_piece, MItems.heart_piece, MItems.heart_piece });
 		GameRegistry.addRecipe(new ItemStack(MItems.wing_segment, 1), new Object[] { "SSS", "LLL", "FFF", 'S', MItems.wing_sinew, 'L', Items.leather, 'F', Items.feather });
 		GameRegistry.addRecipe(new ItemStack(Items.dye, 1, 15), new Object[] { "BB", "BB", 'B', MItems.animal_bones });
-		GameRegistry.addRecipe(new ItemStack(MItems.amuletPorcum, 1), new Object[] {"SSS", "GFG", "NGN", 'S', Items.string, 'G', Items.gold_ingot, 'F', MItems.pig_foot, 'N', Items.gold_nugget });
-		GameRegistry.addRecipe(new ItemStack(MItems.amuletVaccam, 1), new Object[] {"SSS", "GFG", "NGN", 'S', Items.string, 'G', Items.gold_ingot, 'F', MItems.cow_foot, 'N', Items.gold_nugget });
-		GameRegistry.addRecipe(new ItemStack(MItems.amuletOves, 1), new Object[] {"SSS", "GFG", "NGN", 'S', Items.string, 'G', Items.gold_ingot, 'F', MItems.sheep_foot, 'N', Items.gold_nugget });
-		GameRegistry.addRecipe(new ItemStack(MItems.amuletPullum, 1), new Object[] {"SSS", "GFG", "NGN", 'S', Items.string, 'G', Items.gold_ingot, 'F', MItems.chicken_foot, 'N', Items.gold_nugget });
+		GameRegistry.addRecipe(new ItemStack(MItems.amuletPorcum, 1), new Object[] {"SSS", "GFG", "NEN", 'S', Items.string, 'G', Items.gold_ingot, 'F', MItems.pig_foot, 'N', Items.gold_nugget, 'E', Items.emerald });
+		GameRegistry.addRecipe(new ItemStack(MItems.amuletVaccam, 1), new Object[] {"SSS", "GFG", "NEN", 'S', Items.string, 'G', Items.gold_ingot, 'F', MItems.cow_foot, 'N', Items.gold_nugget, 'E', Items.emerald });
+		GameRegistry.addRecipe(new ItemStack(MItems.amuletOves, 1), new Object[] {"SSS", "GFG", "NEN", 'S', Items.string, 'G', Items.gold_ingot, 'F', MItems.sheep_foot, 'N', Items.gold_nugget, 'E', Items.emerald });
+		GameRegistry.addRecipe(new ItemStack(MItems.amuletPullum, 1), new Object[] {"SSS", "GFG", "NEN", 'S', Items.string, 'G', Items.gold_ingot, 'F', MItems.chicken_foot, 'N', Items.gold_nugget, 'E', Items.emerald });
 		GameRegistry.addRecipe(new ItemStack(MItems.propeller, 1), new Object[] { "C C", " B ", " C ", 'C', MItems.copper_ingot, 'B', MItems.bronze_ingot});
 		GameRegistry.addRecipe(new ItemStack(MBlocks.fan, 1), new Object[] { "GSG", "CBC", "CPC", 'G', MBlocks.granite_bricks, 'S', MBlocks.steel_mesh, 'C', new ItemStack(MBlocks.biome_bricks, 1, 3), 'B', MItems.propeller, 'P', MItems.technological_doodad });
 		GameRegistry.addRecipe(new ItemStack(MBlocks.chimney, 1), new Object[] { "G G", "SSS", "SSS", 'G', new ItemStack(MItems.bricks, 4, 11), 'S', new ItemStack(MItems.bricks, 4, 10)});
@@ -38,7 +38,7 @@ public class MRecipes
 		GameRegistry.addSmelting(new ItemStack(MItems.sugar_dough), new ItemStack(MItems.sugar_cookie, 6), 0.2F);
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.chocolate_dough, 2), new Object[] { MItems.dough, new ItemStack(Items.dye, 1, 3) });
 		GameRegistry.addSmelting(new ItemStack(MItems.chocolate_dough), new ItemStack(Items.cookie, 6), 0.2F);
-		GameRegistry.addShapelessRecipe(new ItemStack(MItems.pie_crust, 1), new Object[] { MItems.sugar_dough, Items.egg, Items.bowl.setContainerItem(Items.bowl) });
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.pie_crust, 1), new Object[] { MItems.sugar_dough, Items.egg, Items.bowl });
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.hot_sauce, 1), new Object[] { MItems.pepper, new ItemStack(Items.potionitem, 1, 0) });
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.bread_mushroom_stew, 1), new Object[] { Blocks.red_mushroom, Blocks.brown_mushroom, MItems.bread_bowl });
 		GameRegistry.addShapedRecipe(new ItemStack(MItems.bread_rabbit_stew, 1), new Object[] { " R ", "CPM", " B ", 'R', Items.cooked_rabbit, 'C', Items.carrot, 'P', Items.baked_potato, 'M', Blocks.red_mushroom, 'B', MItems.bread_bowl });

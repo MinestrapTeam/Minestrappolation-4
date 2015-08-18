@@ -261,8 +261,8 @@
     }
 },
 {
-    "from": [ 3, -0.0625, 15 ],
-    "to": [ 13, 0, 16 ],
+    "from": [ 3, 0, 15 ],
+    "to": [ 13, 0.0625, 16 ],
     "faces": {
         "down":  { "uv": [ 13, 16, 3, 15 ], "texture": "#melter_bottom" },
         "up":    { "uv": [ 3, 15, 13, 16 ], "texture": "#melter_bottom" }

@@ -7,6 +7,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.IProjectile;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityFireball;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -62,14 +63,14 @@ public class EntityIceball extends EntityFireball implements IProjectile
 
             if (movingObject.entityHit != null)
             {
-                flag = movingObject.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.shootingEntity), 5.0F);
+                flag = movingObject.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.shootingEntity), 10.0F);
 
                 if (flag)
                 {
                     this.applyEnchantments(this.shootingEntity, movingObject.entityHit);
 
                     movingObject.entityHit.extinguish();
-                    if(movingObject.entityHit instanceof EntityLiving)
+                    if(movingObject.entityHit instanceof EntityLiving || movingObject.entityHit instanceof EntityPlayer)
                     	((EntityLivingBase) movingObject.entityHit).addPotionEffect(new PotionEffect(Potion.moveSlowdown.id, 10 * 20, 10));
                 }
             }

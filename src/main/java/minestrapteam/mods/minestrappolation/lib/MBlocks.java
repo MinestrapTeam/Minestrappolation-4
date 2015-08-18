@@ -615,7 +615,7 @@ public class MBlocks
 		sawmill = new BlockSawmill().setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("sawmill").setHardness(2.5F).setStepSound(Block.soundTypeWood);
 		crusher = new BlockCrusher(false).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("crusher").setHardness(7F).setResistance(100.0F).setStepSound(Block.soundTypePiston);
 		crusher_active = new BlockCrusher(true).setUnlocalizedName("crusher_active").setHardness(7F).setResistance(100.0F).setStepSound(Block.soundTypePiston);
-		frost_generator = new BlockFrostGenerator(Material.rock, MapColor.iceColor).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("frost_generator");
+		frost_generator = new BlockFrostGenerator(Material.rock, MapColor.iceColor).setHardness(50.0F).setResistance(2000.0F).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("frost_generator");
 		splitter = new BlockSplitter(false).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("splitter");
 		splitter_active = new BlockSplitter(true).setUnlocalizedName("splitter_active");
 		fan = new BlockFan(6, Material.rock, MapColor.pinkColor).setHardness(3F).setResistance(20F).setUnlocalizedName("fan").setCreativeTab(Minestrappolation.tabMTech);
@@ -1157,7 +1157,8 @@ public class MBlocks
 		stone_refined.setHarvestLevel("pickaxe", 0);
 		stone_tiles.setHarvestLevel("pickaxe", 0);
 		godstone.setHarvestLevel("pickaxe", 0);
-		claimerator.setHarvestLevel("pickaxe", 0);
+		claimerator.setHarvestLevel("pickaxe", 2);
+		frost_generator.setHarvestLevel("pickaxe", 2);
 		
 		glass_door.setHarvestLevel("pickaxe", 0);
 		

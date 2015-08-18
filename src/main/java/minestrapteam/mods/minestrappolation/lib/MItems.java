@@ -273,13 +273,13 @@ public class MItems extends Item
 	public static final Item.ToolMaterial		BEDROCK			= EnumHelper.addToolMaterial("BEDROCK", 5, 6244, 7.0F, 1.0F, 5);
 	
 	//Armor Enums
-	public static final ItemArmor.ArmorMaterial	ARMOR_TIN		= EnumHelper.addArmorMaterial("ARMOR_TIN", "tin", 4, new int[] { 2, 4, 3, 2 }, 6);
+	public static final ItemArmor.ArmorMaterial	ARMOR_TIN		= EnumHelper.addArmorMaterial("ARMOR_TIN", "tin", 4, new int[] { 1, 2, 1, 1 }, 6);
 	public static final ItemArmor.ArmorMaterial	ARMOR_BRONZE	= EnumHelper.addArmorMaterial("ARMOR_BRONZE", "bronze", 30, new int[] { 2, 6, 5, 2 }, 10);
 	public static final ItemArmor.ArmorMaterial	ARMOR_STEEL		= EnumHelper.addArmorMaterial("ARMOR_STEEL", "steel", 19, new int[] { 3, 7, 5, 3 }, 14);
-	public static final ItemArmor.ArmorMaterial	ARMOR_MEURODITE	= EnumHelper.addArmorMaterial("ARMOR_MEURODITE", "meurodite", 24, new int[] { 3, 7, 6, 2 }, 10);
-	public static final ItemArmor.ArmorMaterial	ARMOR_TORITE	= EnumHelper.addArmorMaterial("ARMOR_TORITE", "torite", 31, new int[] { 4, 9, 7, 3 }, 30);
-	public static final ItemArmor.ArmorMaterial	ARMOR_ICE		= EnumHelper.addArmorMaterial("ARMOR_ICE", "ice", 22, new int[] { 2, 7, 6, 2 }, 10);
-	public static final ItemArmor.ArmorMaterial	ARMOR_BLAZIUM	= EnumHelper.addArmorMaterial("ARMOR_BLAZIUM", "blazium", 22, new int[] { 2, 7, 6, 2 }, 10);
+	public static final ItemArmor.ArmorMaterial	ARMOR_MEURODITE	= EnumHelper.addArmorMaterial("ARMOR_MEURODITE", "meurodite", 24, new int[] { 3, 6, 6, 2 }, 10);
+	public static final ItemArmor.ArmorMaterial	ARMOR_TORITE	= EnumHelper.addArmorMaterial("ARMOR_TORITE", "torite", 31, new int[] { 3, 7, 6, 3 }, 30);
+	public static final ItemArmor.ArmorMaterial	ARMOR_ICE		= EnumHelper.addArmorMaterial("ARMOR_ICE", "ice", 22, new int[] { 3, 7, 6, 3 }, 10);
+	public static final ItemArmor.ArmorMaterial	ARMOR_BLAZIUM	= EnumHelper.addArmorMaterial("ARMOR_BLAZIUM", "blazium", 22, new int[] { 3, 7, 6, 3 }, 10);
 	public static final ItemArmor.ArmorMaterial	ARMOR_TITANIUM	= EnumHelper.addArmorMaterial("ARMOR_TITANIUM", "titanium", 66, new int[] { 6, 16, 12, 6 }, 8);
 	
 	public static void init()
@@ -333,10 +333,10 @@ public class MItems extends Item
 		
 		//Meats
 		squid_tentacle = new ItemFood(2, 0.3F, false).setPotionEffect(Potion.poison.id, 5, 1, 0.7F).setUnlocalizedName("squid_tentacle").setCreativeTab(Minestrappolation.tabMFood);
-		calamari = new ItemFood(6, 0.6F, false).setUnlocalizedName("calimari").setCreativeTab(Minestrappolation.tabMFood);
-		sushi = new ItemFood(16, 1.8F, false).setUnlocalizedName("sushi").setCreativeTab(Minestrappolation.tabMFood);
+		calamari = new ItemFood(5, 0.6F, false).setUnlocalizedName("calimari").setCreativeTab(Minestrappolation.tabMFood);
+		sushi = new ItemFood(14, 1.8F, false).setUnlocalizedName("sushi").setCreativeTab(Minestrappolation.tabMFood);
 		lucky_sushi = new ItemMFood(12, 1.0F, 0).setUnlocalizedName("lucky_sushi").setCreativeTab(Minestrappolation.tabMFood);
-		onigiri = new ItemFood(11, 1.2F, false).setUnlocalizedName("onigiri").setCreativeTab(Minestrappolation.tabMFood);
+		onigiri = new ItemFood(7, 1.0F, false).setUnlocalizedName("onigiri").setCreativeTab(Minestrappolation.tabMFood);
 		
 		//Plant Products
 		mana_leaf = new Item().setUnlocalizedName("mana_leaf").setCreativeTab(Minestrappolation.tabMMaterials);
@@ -497,8 +497,8 @@ public class MItems extends Item
 		satchel = new ItemBackpack(1).setUnlocalizedName("satchel").setCreativeTab(Minestrappolation.tabMTools);
 		amuletPorcum = new ItemAmuletPorcum("fames restituam").setUnlocalizedName("amulet_porcum").setCreativeTab(Minestrappolation.tabMTools);
 		amuletVaccam = new ItemAmuletVaccam("damnum incrementum").setUnlocalizedName("amulet_vaccam").setCreativeTab(Minestrappolation.tabMTools);
-		amuletOves = new ItemAmulet(30, "damnum praesidium").setUnlocalizedName("amulet_oves").setCreativeTab(Minestrappolation.tabMTools);
-		amuletPullum = new ItemAmulet(30, "libramen praesidium").setUnlocalizedName("amulet_pullum").setCreativeTab(Minestrappolation.tabMTools);
+		amuletOves = new ItemAmulet(36, "damnum praesidium").setUnlocalizedName("amulet_oves").setCreativeTab(Minestrappolation.tabMTools);
+		amuletPullum = new ItemAmulet(26, "libramen praesidium").setUnlocalizedName("amulet_pullum").setCreativeTab(Minestrappolation.tabMTools);
 	}
 	
 	public static void register()

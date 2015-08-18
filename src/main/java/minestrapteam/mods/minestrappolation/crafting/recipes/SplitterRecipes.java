@@ -190,6 +190,7 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(Items.map, 1), new ItemStack(Items.paper, 8), new ItemStack(Items.compass, 1), 0.1F);
 		this.addRecipe(new ItemStack(Items.filled_map, 1), new ItemStack(Items.paper, 1), new ItemStack(Items.compass, 1), 0.1F);
 		this.addRecipe(new ItemStack(Items.fireworks, 1), new ItemStack(Items.gunpowder, 1), new ItemStack(Items.paper, 1), 0.1F);
+		this.addRecipe(new ItemStack(Items.ender_eye, 1), new ItemStack(Items.ender_pearl, 1), new ItemStack(Items.blaze_powder, 1), 0.1F);
 		
 		//Vanilla Utility Items
 		this.addRecipe(new ItemStack(Items.bowl, 1), new ItemStack(Blocks.planks, 1), new ItemStack(Items.stick, 1), 0.1F);
@@ -295,6 +296,15 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MItems.steel_plating, 1), new ItemStack(MItems.steel_ingot, 3), new ItemStack(MItems.steel_ingot, 3), 0.1F);
 		this.addRecipe(new ItemStack(MItems.meurodite_plating, 1), new ItemStack(MItems.meurodite_gem, 3), new ItemStack(MItems.meurodite_gem, 3), 0.1F);
 		
+		//Minestrapp Materials
+		this.addRecipe(new ItemStack(MItems.bronze_ingot, 1), new ItemStack(MItems.copper_ingot, 3), new ItemStack(MItems.tin_ingot, 3), 0.1F);
+		this.addRecipe(new ItemStack(MItems.steel_ingot, 1), new ItemStack(Items.iron_ingot, 1), new ItemStack(Items.coal, 6), 0.1F);
+		this.addRecipe(new ItemStack(Items.prismarine_crystals, 1), new ItemStack(Items.prismarine_shard, 1), new ItemStack(MItems.sunstone_shard, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.blaze_shard, 1), new ItemStack(Items.blaze_powder, 1), new ItemStack(MItems.sunstone_shard, 1), 0.1F);
+		this.addRecipe(new ItemStack(Items.blaze_rod, 1), new ItemStack(Items.bone, 1), new ItemStack(MItems.blaze_shard, 4), 0.1F);
+		this.addRecipe(new ItemStack(MItems.blazium_ingot, 1), new ItemStack(Items.gold_ingot, 1), new ItemStack(MItems.blaze_shard, 4), 0.1F);
+		this.addRecipe(new ItemStack(MItems.glacierite_ingot, 1), new ItemStack(MItems.torite_ingot, 1), new ItemStack(MItems.glacieric_ice_shard, 4), 0.1F);
+		
 		//Minestrapp Decor Blocks
 		this.addRecipe(new ItemStack(MBlocks.mud, 1, 0), new ItemStack(MItems.mud_ball, 2), new ItemStack(MItems.mud_ball, 2), 0.1F);
 		this.addRecipe(new ItemStack(MBlocks.mud_bricks, 1, 0), new ItemStack(MItems.mud_ball, 2), new ItemStack(MItems.mud_ball, 2), 0.1F);
@@ -385,9 +395,13 @@ public class SplitterRecipes
 		
 		//Minestrapp Foods
 		this.addRecipe(new ItemStack(MItems.dough, 1), new ItemStack(Items.wheat, 1), new ItemStack(Items.wheat, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.bread_bowl, 1), new ItemStack(MItems.dough, 1), new ItemStack(Items.bowl, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.pbj_sandwich, 1), new ItemStack(MItems.bun, 2), new ItemStack(MItems.jam_bottle, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.hamburger, 1), new ItemStack(MItems.bun, 2), new ItemStack(Items.cooked_beef, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.pie_crust, 1), new ItemStack(MItems.sugar_dough, 1), new ItemStack(Items.egg, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.apple_pie, 1), new ItemStack(MItems.pie_crust, 1), new ItemStack(Items.apple, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.fried_egg, 1), new ItemStack(Items.bowl, 1), new ItemStack(Items.egg, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.bread_fried_egg, 1), new ItemStack(MItems.bread_bowl, 1), new ItemStack(Items.egg, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.rice_bowl, 1), new ItemStack(MBlocks.rice, 1), new ItemStack(Items.bowl, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.bread_rice_bowl, 1), new ItemStack(MBlocks.rice, 1), new ItemStack(MItems.bread_bowl, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.stir_fry, 1), new ItemStack(MItems.rice_bowl, 1), new ItemStack(MItems.hot_sauce, 1), 0.1F);
@@ -415,46 +429,51 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MItems.copper_pickaxe, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(MItems.copper_ingot, 3), 0.1F);
 		this.addRecipe(new ItemStack(MItems.bronze_pickaxe, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(MItems.bronze_ingot, 3), 0.1F);
 		this.addRecipe(new ItemStack(MItems.steel_pickaxe, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(MItems.steel_ingot, 3), 0.1F);
-		this.addRecipe(new ItemStack(MItems.meurodite_pickaxe, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(MItems.meurodite_gem, 3), 0.1F);
-		this.addRecipe(new ItemStack(MItems.torite_pickaxe, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(MItems.torite_ingot, 3), 0.1F);
-		this.addRecipe(new ItemStack(MItems.fire_pickaxe, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(MItems.blazium_ingot, 3), 0.1F);
-		this.addRecipe(new ItemStack(MItems.titanium_pickaxe, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(MItems.titanium_ingot, 3), 0.1F);
-		this.addRecipe(new ItemStack(MItems.bedrock_pickaxe, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(Blocks.bedrock, 3), 0.1F);
+		this.addRecipe(new ItemStack(MItems.meurodite_pickaxe, 1, 0), new ItemStack(MItems.reinforced_stick, 2), new ItemStack(MItems.meurodite_gem, 3), 0.1F);
+		this.addRecipe(new ItemStack(MItems.torite_pickaxe, 1, 0), new ItemStack(MItems.reinforced_stick, 2), new ItemStack(MItems.torite_ingot, 3), 0.1F);
+		this.addRecipe(new ItemStack(MItems.fire_pickaxe, 1, 0), new ItemStack(Items.blaze_rod, 2), new ItemStack(MItems.blazium_ingot, 3), 0.1F);
+		this.addRecipe(new ItemStack(MItems.titanium_pickaxe, 1, 0), new ItemStack(MItems.reinforced_stick, 2), new ItemStack(MItems.titanium_ingot, 3), 0.1F);
+		this.addRecipe(new ItemStack(MItems.bedrock_pickaxe, 1, 0), new ItemStack(MItems.reinforced_stick, 2), new ItemStack(Blocks.bedrock, 3), 0.1F);
+		this.addRecipe(new ItemStack(MItems.ice_pickaxe, 1, 0), new ItemStack(MItems.reinforced_stick, 2), new ItemStack(MItems.glacierite_ingot, 3), 0.1F);
 		
 		this.addRecipe(new ItemStack(MItems.copper_axe, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(MItems.copper_ingot, 3), 0.1F);
 		this.addRecipe(new ItemStack(MItems.bronze_axe, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(MItems.bronze_ingot, 3), 0.1F);
 		this.addRecipe(new ItemStack(MItems.steel_axe, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(MItems.steel_ingot, 3), 0.1F);
-		this.addRecipe(new ItemStack(MItems.meurodite_axe, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(MItems.meurodite_gem, 3), 0.1F);
-		this.addRecipe(new ItemStack(MItems.torite_axe, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(MItems.torite_ingot, 3), 0.1F);
-		this.addRecipe(new ItemStack(MItems.fire_axe, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(MItems.blazium_ingot, 3), 0.1F);
-		this.addRecipe(new ItemStack(MItems.titanium_axe, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(MItems.titanium_ingot, 3), 0.1F);
-		this.addRecipe(new ItemStack(MItems.bedrock_axe, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(Blocks.bedrock, 3), 0.1F);
+		this.addRecipe(new ItemStack(MItems.meurodite_axe, 1, 0), new ItemStack(MItems.reinforced_stick, 2), new ItemStack(MItems.meurodite_gem, 3), 0.1F);
+		this.addRecipe(new ItemStack(MItems.torite_axe, 1, 0), new ItemStack(MItems.reinforced_stick, 2), new ItemStack(MItems.torite_ingot, 3), 0.1F);
+		this.addRecipe(new ItemStack(MItems.fire_axe, 1, 0), new ItemStack(Items.blaze_rod, 2), new ItemStack(MItems.blazium_ingot, 3), 0.1F);
+		this.addRecipe(new ItemStack(MItems.titanium_axe, 1, 0), new ItemStack(MItems.reinforced_stick, 2), new ItemStack(MItems.titanium_ingot, 3), 0.1F);
+		this.addRecipe(new ItemStack(MItems.bedrock_axe, 1, 0), new ItemStack(MItems.reinforced_stick, 2), new ItemStack(Blocks.bedrock, 3), 0.1F);
+		this.addRecipe(new ItemStack(MItems.ice_axe, 1, 0), new ItemStack(MItems.reinforced_stick, 2), new ItemStack(MItems.glacierite_ingot, 3), 0.1F);
 		
 		this.addRecipe(new ItemStack(MItems.copper_shovel, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(MItems.copper_ingot, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.bronze_shovel, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(MItems.bronze_ingot, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.steel_shovel, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(MItems.steel_ingot, 1), 0.1F);
-		this.addRecipe(new ItemStack(MItems.meurodite_shovel, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(MItems.meurodite_gem, 1), 0.1F);
-		this.addRecipe(new ItemStack(MItems.torite_shovel, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(MItems.torite_ingot, 1), 0.1F);
-		this.addRecipe(new ItemStack(MItems.fire_shovel, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(MItems.blazium_ingot, 1), 0.1F);
-		this.addRecipe(new ItemStack(MItems.titanium_shovel, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(MItems.titanium_ingot, 1), 0.1F);
-		this.addRecipe(new ItemStack(MItems.bedrock_shovel, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(Blocks.bedrock, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.meurodite_shovel, 1, 0), new ItemStack(MItems.reinforced_stick, 2), new ItemStack(MItems.meurodite_gem, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.torite_shovel, 1, 0), new ItemStack(MItems.reinforced_stick, 2), new ItemStack(MItems.torite_ingot, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.fire_shovel, 1, 0), new ItemStack(Items.blaze_rod, 2), new ItemStack(MItems.blazium_ingot, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.titanium_shovel, 1, 0), new ItemStack(MItems.reinforced_stick, 2), new ItemStack(MItems.titanium_ingot, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.bedrock_shovel, 1, 0), new ItemStack(MItems.reinforced_stick, 2), new ItemStack(Blocks.bedrock, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.ice_shovel, 1, 0), new ItemStack(MItems.reinforced_stick, 2), new ItemStack(MItems.glacierite_ingot, 1), 0.1F);
 		
 		this.addRecipe(new ItemStack(MItems.copper_hoe, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(MItems.copper_ingot, 2), 0.1F);
 		this.addRecipe(new ItemStack(MItems.bronze_hoe, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(MItems.bronze_ingot, 2), 0.1F);
 		this.addRecipe(new ItemStack(MItems.steel_hoe, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(MItems.steel_ingot, 2), 0.1F);
-		this.addRecipe(new ItemStack(MItems.meurodite_hoe, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(MItems.meurodite_gem, 2), 0.1F);
-		this.addRecipe(new ItemStack(MItems.torite_hoe, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(MItems.torite_ingot, 2), 0.1F);
-		this.addRecipe(new ItemStack(MItems.fire_hoe, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(MItems.blazium_ingot, 2), 0.1F);
-		this.addRecipe(new ItemStack(MItems.titanium_hoe, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(MItems.titanium_ingot, 2), 0.1F);
-		this.addRecipe(new ItemStack(MItems.bedrock_hoe, 1, 0), new ItemStack(Items.stick, 2), new ItemStack(Blocks.bedrock, 2), 0.1F);
+		this.addRecipe(new ItemStack(MItems.meurodite_hoe, 1, 0), new ItemStack(MItems.reinforced_stick, 2), new ItemStack(MItems.meurodite_gem, 2), 0.1F);
+		this.addRecipe(new ItemStack(MItems.torite_hoe, 1, 0), new ItemStack(MItems.reinforced_stick, 2), new ItemStack(MItems.torite_ingot, 2), 0.1F);
+		this.addRecipe(new ItemStack(MItems.fire_hoe, 1, 0), new ItemStack(Items.blaze_rod, 2), new ItemStack(MItems.blazium_ingot, 2), 0.1F);
+		this.addRecipe(new ItemStack(MItems.titanium_hoe, 1, 0), new ItemStack(MItems.reinforced_stick, 2), new ItemStack(MItems.titanium_ingot, 2), 0.1F);
+		this.addRecipe(new ItemStack(MItems.bedrock_hoe, 1, 0), new ItemStack(MItems.reinforced_stick, 2), new ItemStack(Blocks.bedrock, 2), 0.1F);
+		this.addRecipe(new ItemStack(MItems.ice_hoe, 1, 0), new ItemStack(MItems.reinforced_stick, 2), new ItemStack(MItems.glacierite_ingot, 2), 0.1F);
 		
 		this.addRecipe(new ItemStack(MItems.copper_sword, 1, 0), new ItemStack(Items.stick, 1), new ItemStack(MItems.copper_ingot, 2), 0.1F);
 		this.addRecipe(new ItemStack(MItems.bronze_sword, 1, 0), new ItemStack(Items.stick, 1), new ItemStack(MItems.bronze_ingot, 2), 0.1F);
 		this.addRecipe(new ItemStack(MItems.steel_sword, 1, 0), new ItemStack(Items.stick, 1), new ItemStack(MItems.steel_ingot, 2), 0.1F);
-		this.addRecipe(new ItemStack(MItems.meurodite_sword, 1, 0), new ItemStack(Items.stick, 1), new ItemStack(MItems.meurodite_gem, 2), 0.1F);
-		this.addRecipe(new ItemStack(MItems.torite_sword, 1, 0), new ItemStack(Items.stick, 1), new ItemStack(MItems.torite_ingot, 2), 0.1F);
-		this.addRecipe(new ItemStack(MItems.fire_sword, 1, 0), new ItemStack(Items.stick, 1), new ItemStack(MItems.blazium_ingot, 2), 0.1F);
-		this.addRecipe(new ItemStack(MItems.titanium_sword, 1, 0), new ItemStack(Items.stick, 1), new ItemStack(MItems.titanium_ingot, 2), 0.1F);
+		this.addRecipe(new ItemStack(MItems.meurodite_sword, 1, 0), new ItemStack(MItems.reinforced_stick, 1), new ItemStack(MItems.meurodite_gem, 2), 0.1F);
+		this.addRecipe(new ItemStack(MItems.torite_sword, 1, 0), new ItemStack(MItems.reinforced_stick, 1), new ItemStack(MItems.torite_ingot, 2), 0.1F);
+		this.addRecipe(new ItemStack(MItems.fire_sword, 1, 0), new ItemStack(Items.blaze_rod, 1), new ItemStack(MItems.blazium_ingot, 2), 0.1F);
+		this.addRecipe(new ItemStack(MItems.titanium_sword, 1, 0), new ItemStack(MItems.reinforced_stick, 1), new ItemStack(MItems.titanium_ingot, 2), 0.1F);
+		this.addRecipe(new ItemStack(MItems.ice_sword, 1, 0), new ItemStack(MItems.reinforced_stick, 1), new ItemStack(MItems.glacierite_ingot, 2), 0.1F);
 		
 		this.addRecipe(new ItemStack(MItems.sifter, 1, 0), new ItemStack(MItems.copper_ingot, 3), new ItemStack(MItems.reinforced_stick, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.titanium_sifter, 1), new ItemStack(MItems.titanium_ingot, 3), new ItemStack(MItems.reinforced_stick, 1), 0.1F);
@@ -473,6 +492,7 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MItems.blazium_helmet, 1, 0), new ItemStack(MItems.blazium_ingot, 3), new ItemStack(MItems.blazium_ingot, 2), 0.1F);
 		this.addRecipe(new ItemStack(MItems.titanium_helmet, 1, 0), new ItemStack(MItems.titanium_ingot, 3), new ItemStack(MItems.titanium_ingot, 2), 0.1F);
 		this.addRecipe(new ItemStack(MItems.rad_helmet, 1, 0), new ItemStack(MItems.steel_plating, 1), new ItemStack(MItems.torite_ingot, 2), 0.1F);
+		this.addRecipe(new ItemStack(MItems.ice_helmet, 1, 0), new ItemStack(MItems.glacierite_ingot, 3), new ItemStack(MItems.glacierite_ingot, 2), 0.1F);
 		
 		this.addRecipe(new ItemStack(MItems.tin_chestplate, 1, 0), new ItemStack(MItems.tin_ingot, 4), new ItemStack(MItems.tin_ingot, 4), 0.1F);
 		this.addRecipe(new ItemStack(MItems.bronze_chestplate, 1, 0), new ItemStack(MItems.bronze_ingot, 4), new ItemStack(MItems.bronze_ingot, 4), 0.1F);
@@ -482,6 +502,7 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MItems.blazium_chestplate, 1, 0), new ItemStack(MItems.blazium_ingot, 4), new ItemStack(MItems.blazium_ingot, 4), 0.1F);
 		this.addRecipe(new ItemStack(MItems.titanium_chestplate, 1, 0), new ItemStack(MItems.titanium_ingot, 4), new ItemStack(MItems.titanium_ingot, 4), 0.1F);
 		this.addRecipe(new ItemStack(MItems.rad_chestplate, 1, 0), new ItemStack(MItems.technological_doodad, 1), new ItemStack(MItems.steel_plating, 2), 0.1F);
+		this.addRecipe(new ItemStack(MItems.ice_chestplate, 1, 0), new ItemStack(MItems.glacierite_ingot, 4), new ItemStack(MItems.glacierite_ingot, 4), 0.1F);
 		
 		this.addRecipe(new ItemStack(MItems.tin_leggings, 1, 0), new ItemStack(MItems.tin_ingot, 4), new ItemStack(MItems.tin_ingot, 3), 0.1F);
 		this.addRecipe(new ItemStack(MItems.bronze_leggings, 1, 0), new ItemStack(MItems.bronze_ingot, 4), new ItemStack(MItems.bronze_ingot, 3), 0.1F);
@@ -491,6 +512,7 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MItems.blazium_leggings, 1, 0), new ItemStack(MItems.blazium_ingot, 4), new ItemStack(MItems.blazium_ingot, 3), 0.1F);
 		this.addRecipe(new ItemStack(MItems.titanium_leggings, 1, 0), new ItemStack(MItems.titanium_ingot, 4), new ItemStack(MItems.titanium_ingot, 3), 0.1F);
 		this.addRecipe(new ItemStack(MItems.rad_leggings, 1, 0), new ItemStack(MItems.technological_doodad, 1), new ItemStack(MItems.steel_plating, 2), 0.1F);
+		this.addRecipe(new ItemStack(MItems.ice_leggings, 1, 0), new ItemStack(MItems.glacierite_ingot, 4), new ItemStack(MItems.glacierite_ingot, 3), 0.1F);
 		
 		this.addRecipe(new ItemStack(MItems.tin_boots, 1, 0), new ItemStack(MItems.tin_ingot, 2), new ItemStack(MItems.tin_ingot, 2), 0.1F);
 		this.addRecipe(new ItemStack(MItems.bronze_boots, 1, 0), new ItemStack(MItems.bronze_ingot, 2), new ItemStack(MItems.bronze_ingot, 2), 0.1F);
@@ -500,6 +522,7 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MItems.blazium_boots, 1, 0), new ItemStack(MItems.blazium_ingot, 2), new ItemStack(MItems.blazium_ingot, 2), 0.1F);
 		this.addRecipe(new ItemStack(MItems.titanium_boots, 1, 0), new ItemStack(MItems.titanium_ingot, 2), new ItemStack(MItems.titanium_ingot, 2), 0.1F);
 		this.addRecipe(new ItemStack(MItems.rad_boots, 1, 0), new ItemStack(MItems.steel_plating, 2), new ItemStack(MItems.torite_ingot, 2), 0.1F);
+		this.addRecipe(new ItemStack(MItems.ice_boots, 1, 0), new ItemStack(MItems.glacierite_ingot, 2), new ItemStack(MItems.glacierite_ingot, 2), 0.1F);
 		
 		this.addRecipe(new ItemStack(MItems.amuletOves, 1, 0), new ItemStack(MItems.sheep_foot, 1), new ItemStack(Items.gold_ingot, 3), 0.1F);
 		this.addRecipe(new ItemStack(MItems.amuletVaccam, 1, 0), new ItemStack(MItems.cow_foot, 1), new ItemStack(Items.gold_ingot, 3), 0.1F);
@@ -513,6 +536,9 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MItems.ice_cream, 1), new ItemStack(MItems.crushed_ice, 1), new ItemStack(MItems.strawberry, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.bread_ice_cream, 1), new ItemStack(MItems.crushed_ice, 1), new ItemStack(MItems.strawberry, 1), 0.1F);
 		this.addRecipe(new ItemStack(MBlocks.glacieric_ice, 1), new ItemStack(MItems.glacieric_ice_shard, 1), new ItemStack(Blocks.packed_ice, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.charge_gun, 1), new ItemStack(MItems.titanium_ingot, 2), new ItemStack(MItems.steel_plating, 2), 0.1F);
+		this.addRecipe(new ItemStack(MItems.satchel, 1), new ItemStack(Items.rabbit_hide, 7), new ItemStack(MBlocks.crate, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.backpack, 1), new ItemStack(MItems.wolf_hide, 5), new ItemStack(MBlocks.barrel, 1), 0.1F);
 	}
 	
 	public void addRecipe(Block input, ItemStack stack, ItemStack stack2, float experience)

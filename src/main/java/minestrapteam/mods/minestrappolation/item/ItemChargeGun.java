@@ -8,6 +8,7 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
+import net.minecraft.entity.projectile.EntityLargeFireball;
 import net.minecraft.entity.projectile.EntitySmallFireball;
 import net.minecraft.init.Items;
 import net.minecraft.item.EnumAction;
@@ -69,7 +70,7 @@ public class ItemChargeGun extends Item
             double accelZ = (double)(MathHelper.cos(playerIn.rotationYaw / 180.0F * (float)Math.PI) * MathHelper.cos(playerIn.rotationPitch / 180.0F * (float)Math.PI));
             double d3 = (double)MathHelper.sqrt_double(accelX * accelX + accelY * accelY + accelZ * accelZ);
             
-            EntitySmallFireball entityFireCharge = new EntitySmallFireball(worldIn);
+            EntityLargeFireball entityFireCharge = new EntityLargeFireball(worldIn);
             entityFireCharge.shootingEntity = playerIn;
             entityFireCharge.setLocationAndAngles(playerIn.posX, playerIn.posY + (double)(playerIn.height / 2.0F), playerIn.posZ, playerIn.rotationYaw, playerIn.rotationPitch);
             entityFireCharge.setPosition(entityFireCharge.posX, entityFireCharge.posY, entityFireCharge.posZ);

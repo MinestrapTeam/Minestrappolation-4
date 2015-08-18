@@ -135,6 +135,11 @@ public class MEventHandler
 			if (PlayerHelper.hasArmorSet(player, MItems.meurodite_helmet, MItems.meurodite_chestplate, MItems.meurodite_leggings, MItems.meurodite_boots))
 			{
 				player.addPotionEffect(new PotionEffect(Potion.fireResistance.id, 2, 0, true, false));
+				if(player.isInLava() || player.isBurning())
+				{
+					if(player.worldObj.rand.nextInt(100) == 1 && !player.capabilities.isCreativeMode)
+						player.inventory.damageArmor(1);
+				}
 			}
 			else if (PlayerHelper.hasArmorSet(player, MItems.torite_helmet, MItems.torite_chestplate, MItems.torite_leggings, MItems.torite_boots))
 			{
