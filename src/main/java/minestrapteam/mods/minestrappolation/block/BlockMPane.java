@@ -1,6 +1,7 @@
 package minestrapteam.mods.minestrappolation.block;
 
 import minestrapteam.mods.minestrappolation.Minestrappolation;
+import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import net.minecraft.block.BlockPane;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.EnumWorldBlockLayer;
@@ -20,7 +21,10 @@ public class BlockMPane extends BlockPane
 	@SideOnly(Side.CLIENT)
 	public EnumWorldBlockLayer getBlockLayer()
 	{
-		return EnumWorldBlockLayer.TRANSLUCENT;
+		if(this == MBlocks.glow_glass_pane)
+			return EnumWorldBlockLayer.TRANSLUCENT;
+		else
+			return EnumWorldBlockLayer.CUTOUT;
 	}
 	
 }

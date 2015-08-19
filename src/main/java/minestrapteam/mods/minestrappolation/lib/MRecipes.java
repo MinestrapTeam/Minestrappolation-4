@@ -163,6 +163,8 @@ public class MRecipes
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.sugar, 9), new Object[] { MBlocks.sugar_block });
 		
 		GameRegistry.addRecipe(new ItemStack(MBlocks.rope, 1), new Object[] { "S", "S", "S", 'S', Items.string });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.cardboard, 2), new Object[] { "PPP", "PPP", 'P', Items.paper });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.cardboard_block, 1), new Object[] { "PP", "PP", 'P', MBlocks.cardboard });
 		
 		GameRegistry.addSmelting(new ItemStack(MBlocks.cold_sand, 1, 0), new ItemStack(Blocks.sand, 1, 0), 0.1F);
 		GameRegistry.addSmelting(new ItemStack(MBlocks.cold_sand, 1, 1), new ItemStack(Blocks.sand, 1, 1), 0.1F);

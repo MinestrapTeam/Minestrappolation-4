@@ -8,6 +8,7 @@ import minestrapteam.mods.minestrappolation.block.BlockBiomeBricks;
 import minestrapteam.mods.minestrappolation.block.BlockBlazium;
 import minestrapteam.mods.minestrappolation.block.BlockBoulder;
 import minestrapteam.mods.minestrappolation.block.BlockBush;
+import minestrapteam.mods.minestrappolation.block.BlockCardboard;
 import minestrapteam.mods.minestrappolation.block.BlockChimney;
 import minestrapteam.mods.minestrappolation.block.BlockChiseled;
 import minestrapteam.mods.minestrappolation.block.BlockClaimerator;
@@ -50,6 +51,7 @@ import minestrapteam.mods.minestrappolation.block.BlockSunstoneBlock;
 import minestrapteam.mods.minestrappolation.block.BlockTiles;
 import minestrapteam.mods.minestrappolation.block.BlockTranslucent;
 import minestrapteam.mods.minestrappolation.block.BlockTransparent;
+import minestrapteam.mods.minestrappolation.block.BlockWetCardboard;
 import minestrapteam.mods.minestrappolation.block.MBlock;
 import minestrapteam.mods.minestrappolation.block.MBlockLeaves;
 import minestrapteam.mods.minestrappolation.block.MBlockLog;
@@ -160,27 +162,81 @@ public class MBlocks
 {
 	public static ArrayList<Block> blockList = new ArrayList<Block>();
 	
-	public static Block claimerator;
+	//Soil
+	public static Block	cold_sand;
+	public static Block	lichen_permafrost;
+	public static Block	dirt_permafrost;
+	public static Block mud;
+	public static Block rubble;
 	
-	public static Block	copper_block;
-	public static Block	tin_block;
-	public static Block	sunstone_block;
-	public static Block	blazium_block;
-	public static Block	bronze_block;
-	public static Block	meurodite_block;
-	public static Block	plutonium_block;
-	public static Block	soul_gem_block;
-	public static Block	steel_block;
-	public static Block	titanium_block;
-	public static Block	torite_block;
-	public static Block glacierite_block;
-	public static Block	uranium_block;
-	public static Block	plutonium_insulated;
-	public static Block	uranium_insulated;
+	//Plants
+	public static Block	ministrapp_leaves;
+	public static Block	ministrapp_sapling;
+	public static Block dead_branch;
+	public static Block moss;
+	public static Block blueberry_bush;
+	public static Block blackberry_bush;
+	public static Block strawberry_bush;
+	public static Block raspberry_bush;
+	public static Block mana_bush;
+	public static Block seaweed;
+	public static Block rice_crop;
+	public static Item	rice;
+	public static Block pepper_crop;
+	public static Item	pepper_seed;
+	public static Block peanut_crop;
+	public static Item	peanuts;
+	public static Block cabbage_crop;
+	public static Item	cabbage;
+	public static Block onion_crop;
+	public static Item	onion;
+	public static Block lettuce_crop;
+	public static Item	lettuce;
+	public static Block celery_crop;
+	public static Item	celery_seed;
+	
+	//Food Blocks
 	public static Block	sugar_block;
 	public static Block	meat_block;
-	public static Block cold_cobweb;
 	
+	//Mineral Blocks
+	public static Block	copper_block;
+	public static Block	tin_block;
+	public static Block	bronze_block;
+	public static Block	steel_block;
+	public static Block	meurodite_block;
+	public static Block	torite_block;
+	public static Block	sunstone_block;
+	public static Block	uranium_block;
+	public static Block	plutonium_block;
+	public static Block	titanium_block;
+	public static Block glacierite_block;
+	public static Block	blazium_block;
+	public static Block	soul_gem_block;
+	
+	//Wood Blocks
+	public static Block	ministrapp_log;
+	public static Block	ministrapp_planks;	
+	
+	//Glass Decor Blocks
+	public static Block	glass_bricks;
+	public static Block	glass_refined;
+	public static Block	glass_tiles;
+	public static Block	glass_window;
+	public static Block glow_glass;
+	
+	//Misc. Decor Blocks
+	public static Block	snow_refined;
+	public static Block	snow_bricks;
+	public static Block	snow_tiles;
+	public static Block mud_bricks;
+	public static Block melon_bricks;
+	public static Block cardboard_block;
+	public static Block wet_cardboard_block;
+	public static Block	invincium;
+	public static Block	glaical_invincium;
+	
+	//Misc. Stone Decor Blocks
 	public static Block	slate;
 	public static Block	slate_bricks;
 	public static Block	slate_pattern_bricks;
@@ -202,11 +258,22 @@ public class MBlocks
 	public static Block	flint_lamp_prismarine;
 	public static Block	desert_quartz_block;
 	public static Block	desert_quartz_chiseled;
+	public static Block desert_pillar;
 	public static Block	radiant_block;
 	public static Block	radiant_chiseled;
+	public static Block radiant_pillar;
 	public static Block obsidian_bricks;
 	
-	public static Block	roads;
+	//Biome Stone Decor Blocks
+	public static Block	stone_lamp_glowstone;
+	public static Block	stone_lamp_prismarine;
+	public static Block	stone_lamp_sunstone;
+	public static Block	stone_pattern_bricks;
+	public static Block	stone_refined;
+	public static Block	stone_tiles;
+	public static Block	biome_stones;
+	public static Block	biome_cobble;
+	public static Block	biome_bricks;
 	public static Block chiseled;
 	public static Block mossy;
 	public static Block mossy_bricks;
@@ -218,96 +285,91 @@ public class MBlocks
 	public static Block lamp_glowstone;
 	public static Block lamp_prismarine;
 	
-	public static Block	cold_sand;
-	public static Block	lichen_permafrost;
-	public static Block	dirt_permafrost;
-	public static Block mud;
-	public static Block mud_bricks;
-	public static Block rubble;
-	
-	public static Block	sunstone_ore;
-	public static Block	copper_ore;
-	public static Block	tin_ore;
-	public static Block	plutonium_ore;
-	public static Block	uranium_ore;
-	public static Block	radiant_ore;
-	public static Block	titanium_ore;
-	public static Block	meurodite_ore;
-	public static Block	torite_ore;
-	public static Block	desert_quartz;
-	public static Block	blazium_ore;
-	public static Block	soul_ore;
-	
-	public static Block	snow_refined;
-	public static Block	snow_bricks;
-	public static Block	snow_tiles;
-	public static Block glacieric_ice;
-	
-	public static Block melon_bricks;
-	public static Block	glass_bricks;
-	public static Block	glass_refined;
-	public static Block	glass_tiles;
-	public static Block	glass_window;
-	public static Block glow_glass;
+	//Utility Decor Blocks
 	public static Block	stone_boulder;
 	public static Block	red_rock_boulder;
 	public static Block	coldstone_boulder;
 	public static Block	icestone_boulder;
 	public static Block	oceanstone_boulder;
-	public static Block	stone_lamp_glowstone;
-	public static Block	stone_lamp_prismarine;
-	public static Block	stone_lamp_sunstone;
-	public static Block	stone_pattern_bricks;
-	public static Block	stone_refined;
-	public static Block	stone_tiles;
-	
-	public static Block	redwood_door;
-	public static Block	frozen_door;
-	public static Block glass_door;
-	
-	// Wood
-	public static Block	ministrapp_log;
-	public static Block	ministrapp_leaves;
-	public static Block	ministrapp_sapling;
-	public static Block	ministrapp_planks;
-	public static Block dead_branch;
-	
+	public static Block	roads;
+	public static Block fan;
+	public static Block rope;
+	public static Block chimney;
+	public static Block cold_cobweb;
+	public static Block glacieric_ice;
 	public static Block	godstone;
 	
-	public static Block	barrel;
+	//Tech Blocks
 	public static Block	crate;
-	public static Block	melter;
-	public static Block	melter_active;
+	public static Block	barrel;
+	public static Block	sawmill;
+	public static Block	stonecutter;
+	public static Block	plutonium_insulated;
+	public static Block	uranium_insulated;
 	public static Block	alloy;
 	public static Block	alloy_active;
-	public static Block	stonecutter;
-	public static Block	sawmill;
+	public static Block	melter;
+	public static Block	melter_active;
 	public static Block	crusher;
 	public static Block	crusher_active;
 	public static Block splitter;
 	public static Block splitter_active;
+	public static Block	frost_generator;
+	public static Block claimerator;
 	
-	// Biome Stones
+	//Fences and Panes
+	public static Block cardboard;
+	public static Block	redwood_fence;
+	public static Block	redwood_fence_gate;
+	public static Block	frozen_oak_fence;
+	public static Block	frozen_oak_fence_gate;
+	public static Block red_rock_wall;
+	public static Block	refined_glass_pane;
+	public static Block	bricked_glass_pane;
+	public static Block	tiled_glass_pane;
+	public static Block	framed_glass_pane;
+	public static Block glow_glass_pane;
+	public static Block	steel_mesh;
+	
+	//Doors
+	public static Block	redwood_door;
+	public static Block	frozen_door;
+	public static Block glass_door;
+	
+	public static Item	redwood_door_item;
+	public static Item  frozen_door_item;
+	public static Item  glass_door_item;
+	
+	//Ores
+	public static Block	desert_quartz;
+	public static Block glacieric_ice_vein;
 	public static Block	biome_coal;
+	public static Block	copper_ore;
+	public static Block	biome_copper;
+	public static Block	tin_ore;
+	public static Block	biome_tin;
 	public static Block	biome_iron;
 	public static Block	biome_gold;
+	public static Block	meurodite_ore;
+	public static Block	biome_meurodite;
+	public static Block	torite_ore;
+	public static Block	biome_torite;
 	public static Block	biome_redstone;
 	public static Block	biome_lapis;
+	public static Block	sunstone_ore;
+	public static Block	biome_sunstone;
+	public static Block	plutonium_ore;
+	public static Block	biome_plutonium;
+	public static Block	uranium_ore;
+	public static Block	biome_uranium;
+	public static Block	radiant_ore;
+	public static Block	biome_radiant;
 	public static Block	biome_diamond;
 	public static Block	biome_emerald;
-	public static Block	biome_sunstone;
-	public static Block	biome_tin;
-	public static Block	biome_copper;
-	public static Block	biome_plutonium;
-	public static Block	biome_uranium;
-	public static Block	biome_radiant;
+	public static Block	titanium_ore;
 	public static Block	biome_titanium;
-	public static Block	biome_meurodite;
-	public static Block	biome_torite;
-	
-	public static Block	biome_stones;
-	public static Block	biome_cobble;
-	public static Block	biome_bricks;
+	public static Block	blazium_ore;
+	public static Block	soul_ore;
 	
 	// Stairs
 	public static Block	redwood_stairs;
@@ -334,6 +396,7 @@ public class MBlocks
 	public static Block	deep_coldstone_brick_stairs;
 	public static Block prismarine_stairs;
 	
+	//Slabs
 	public static BlockMSlab       redwood_slab;
 	public static BlockMDoubleSlab redwood_double_slab;
 	public static BlockMSlab       frozen_oak_slab;
@@ -399,68 +462,8 @@ public class MBlocks
 	public static BlockMSlab	   prismarine_slab;
 	public static BlockMDoubleSlab prismarine_double_slab;
 	
-	//Plants
-	public static Block moss;
-	public static Block blueberry_bush;
-	public static Block blackberry_bush;
-	public static Block strawberry_bush;
-	public static Block raspberry_bush;
-	public static Block mana_bush;
-	public static Block seaweed;
-	
-	public static Block glacieric_ice_vein;
-	
-	//Crops
-	public static Block rice_crop;
-	public static Item	rice;
-	public static Block pepper_crop;
-	public static Item	pepper_seed;
-	public static Block peanut_crop;
-	public static Item	peanuts;
-	public static Block cabbage_crop;
-	public static Item	cabbage;
-	public static Block onion_crop;
-	public static Item	onion;
-	public static Block lettuce_crop;
-	public static Item	lettuce;
-	public static Block celery_crop;
-	public static Item	celery_seed;
-	
 	//Fluid
 	public static Block magma;
-	
-	// Fence
-	public static Block	redwood_fence;
-	public static Block	redwood_fence_gate;
-	public static Block	frozen_oak_fence;
-	public static Block	frozen_oak_fence_gate;
-	public static Block red_rock_wall;
-	
-	// Panes
-	public static Block	refined_glass_pane;
-	public static Block	bricked_glass_pane;
-	public static Block	tiled_glass_pane;
-	public static Block	framed_glass_pane;
-	public static Block	steel_mesh;
-	public static Block glow_glass_pane;
-	
-	// Misc
-	public static Block fan;
-	public static Block	frost_generator;
-	public static Block	invincium;
-	public static Block	glaical_invincium;
-	public static Block rope;
-	public static Block chimney;
-	
-	//Pillars
-	public static Block desert_pillar;
-	public static Block radiant_pillar;
-	
-	// BLOCK ITEMS
-	public static Item	redwood_door_item;
-	public static Item  frozen_door_item;
-	public static Item  glass_door_item;
-	
 	public static Item	magmaBucket;
 	
 	public static void init()
@@ -534,6 +537,8 @@ public class MBlocks
 		sugar_block = new BlockMFalling(Material.sand, MapColor.snowColor).setHardness(0.5F).setStepSound(Block.soundTypeGravel).setUnlocalizedName("sugar_block").setCreativeTab(Minestrappolation.tabMBuilding);
 		meat_block = new BlockMStorage(Material.clay, MapColor.pinkColor).setHardness(0.8F).setStepSound(Block.SLIME_SOUND).setUnlocalizedName("meat_block").setCreativeTab(Minestrappolation.tabMFood);
 		rope = new BlockRope(Material.cloth, MapColor.brownColor).setHardness(0.8F).setStepSound(Block.soundTypeCloth).setUnlocalizedName("rope").setCreativeTab(Minestrappolation.tabMDecor);
+		cardboard_block = new BlockCardboard(Material.cloth, MapColor.brownColor).setHardness(0.1F).setResistance(0F).setUnlocalizedName("cardboard_block").setStepSound(Block.soundTypePiston).setCreativeTab(Minestrappolation.tabMBuilding);
+		wet_cardboard_block = new BlockWetCardboard(Material.cloth, MapColor.brownColor).setHardness(0F).setResistance(0F).setUnlocalizedName("wet_cardboard_block").setStepSound(Block.soundTypePiston).setCreativeTab(Minestrappolation.tabMBuilding);
 		
 		roads = new BlockRoads(Material.rock, MapColor.blackColor).setHardness(3.0F).setResistance(10.0F).setUnlocalizedName("roads").setCreativeTab(Minestrappolation.tabMBuilding);
 		chiseled = new BlockChiseled(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_chiseled");
@@ -659,6 +664,7 @@ public class MBlocks
 		framed_glass_pane = new BlockMPane(Material.iron, true).setHardness(3.0F).setStepSound(Block.soundTypeGlass).setUnlocalizedName("framed_pane");
 		glow_glass_pane = new BlockMPane(Material.glass, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setLightLevel(0.9F).setUnlocalizedName("glow_glass_pane");
 		steel_mesh = new BlockMPane(Material.iron, true).setHardness(5.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("steel_mesh");
+		cardboard = new BlockMPane(Material.cloth, true).setHardness(0.1F).setResistance(0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("cardboard");
 		
 		// Misc
 		invincium = new BlockInvincium(Material.rock).setUnlocalizedName("invincium").setBlockUnbreakable().setHardness(50000F).setResistance(50000F).setCreativeTab(Minestrappolation.tabMBuilding);
@@ -798,6 +804,8 @@ public class MBlocks
 		register(lichen_permafrost, ItemBlockPermaFrost.class);
 		register(cold_sand, ItemBlockColdSand.class);
 		
+		register(cardboard_block);
+		register(wet_cardboard_block);
 		register(snow_bricks);
 		register(snow_refined);
 		register(snow_tiles);
@@ -970,6 +978,7 @@ public class MBlocks
 		register(redwood_fence);
 		register(frozen_oak_fence);
 		//register(red_rock_wall);
+		register(cardboard);
 		register(refined_glass_pane);
 		register(bricked_glass_pane);
 		register(tiled_glass_pane);

@@ -473,7 +473,7 @@ tile.rubble.name=Rubble
 
 tile.cardboard.name=Cardboard
 tile.cardboard_block.name=Block of Cardboard
-tile.wet_cardboard.name=Wet Block of Cardboard
+tile.wet_cardboard_block.name=Wet Block of Cardboard
 
 tile.crate.name=Crate
 tile.barrel.name=Barrel
