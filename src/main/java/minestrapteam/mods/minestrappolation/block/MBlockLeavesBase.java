@@ -69,7 +69,15 @@ public abstract class MBlockLeavesBase extends BlockLeavesBase implements net.mi
 		{
 			if (((Boolean) state.getValue(CHECK_DECAY)).booleanValue() && ((Boolean) state.getValue(DECAYABLE)).booleanValue())
 			{
-				byte b0 = 6;
+				byte b0;
+				if(state.getValue(MBlockLeaves.VARIANT) == MWoodType.REDWOOD)
+				{
+					b0 = 12;
+				}
+				else
+				{
+					b0 = 6;
+				}
 				int i = b0 + 1;
 				int j = pos.getX();
 				int k = pos.getY();
