@@ -496,6 +496,8 @@ tile.blackberry_bush.name=Blackberry Bush
 tile.strawberry_bush.name=Strawberry Bush
 tile.mana_bush.name=Mana Bush
 
+tile.block_flesh.name=Block of Flesh
+
 item.dough.name=Dough
 item.bun.name=Bun
 item.pbj_sandwich.name=Peanut Butter and Jelly Sandwich

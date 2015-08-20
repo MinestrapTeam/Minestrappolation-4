@@ -16,6 +16,7 @@ import minestrapteam.mods.minestrappolation.block.BlockColdCobweb;
 import minestrapteam.mods.minestrappolation.block.BlockCrackedBricks;
 import minestrapteam.mods.minestrappolation.block.BlockDeadBranch;
 import minestrapteam.mods.minestrappolation.block.BlockFan;
+import minestrapteam.mods.minestrappolation.block.BlockFlesh;
 import minestrapteam.mods.minestrappolation.block.BlockGlacialInvincium;
 import minestrapteam.mods.minestrappolation.block.BlockGlaciericIce;
 import minestrapteam.mods.minestrappolation.block.BlockGlacierite;
@@ -298,6 +299,9 @@ public class MBlocks
 	public static Block cold_cobweb;
 	public static Block glacieric_ice;
 	public static Block	godstone;
+	
+	//Gene Blocks
+	public static Block block_flesh;
 	
 	//Tech Blocks
 	public static Block	crate;
@@ -778,6 +782,7 @@ public class MBlocks
 		celery_crop = new BlockCelery().setUnlocalizedName("celery_crop");
 		celery_seed = new ItemSeeds(celery_crop, Blocks.farmland).setUnlocalizedName("celery_seeds").setCreativeTab(Minestrappolation.tabMFood);
 		
+		block_flesh = new BlockFlesh(Material.cloth, MapColor.pinkColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_flesh");
 		
 		//Liquids
 		magma = new BlockMagma().setUnlocalizedName("magma");
@@ -1013,6 +1018,7 @@ public class MBlocks
 		register(splitter);
 		register(splitter_active);
 		register(claimerator);
+		register(block_flesh);
 		
 		register(desert_pillar);
 		register(radiant_pillar);
