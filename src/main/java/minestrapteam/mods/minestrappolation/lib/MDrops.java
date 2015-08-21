@@ -6,7 +6,9 @@ import minestrapteam.mods.minestrappolation.Config;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntityGuardian;
 import net.minecraft.entity.monster.EntityIronGolem;
+import net.minecraft.entity.monster.EntityMagmaCube;
 import net.minecraft.entity.monster.EntityPigZombie;
+import net.minecraft.entity.monster.EntitySlime;
 import net.minecraft.entity.passive.EntityBat;
 import net.minecraft.entity.passive.EntityChicken;
 import net.minecraft.entity.passive.EntityCow;
@@ -15,6 +17,7 @@ import net.minecraft.entity.passive.EntityMooshroom;
 import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.entity.passive.EntitySquid;
+import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.passive.EntityWolf;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -81,6 +84,14 @@ public class MDrops
 		{
 			dropPigItems(living, random, onFire, looting);
 		}
+		if(living instanceof EntitySlime || living instanceof EntityMagmaCube)
+		{
+			dropSlimeItems(living, random, onFire, looting);
+		}
+		if(living instanceof EntityVillager)
+		{
+			dropVillagerItems(living, random, onFire, looting);
+		}
 	}
 	
 	private static void dropPigItems(EntityLivingBase living, Random random, boolean onFire, int looting)
@@ -137,6 +148,20 @@ public class MDrops
 		if (random.nextFloat() / looting < Config.doodadDropChance)
 		{
 			living.dropItem(MItems.technological_doodad, random.nextInt(Config.doodadDropAmount + looting));
+		}
+	}
+	private static void dropSlimeItems(EntityLivingBase living, Random random, boolean onFire, int looting)
+	{
+		if (random.nextFloat() / looting < Config.slimeCoreDropChance)
+		{
+			living.dropItem(MItems.slime_core, random.nextInt(Config.slimeCoreDropAmount + looting));
+		}
+	}
+	private static void dropVillagerItems(EntityLivingBase living, Random random, boolean onFire, int looting)
+	{
+		if (random.nextFloat() / looting < Config.fleshDropChance)
+		{
+			living.dropItem(MItems.flesh, random.nextInt(Config.fleshDropAmount + looting));
 		}
 	}
 	private static void dropQuadripedItems(EntityLivingBase living, Random random, boolean onFire, int looting)

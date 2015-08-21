@@ -13,6 +13,7 @@ import minestrapteam.mods.minestrappolation.block.BlockChimney;
 import minestrapteam.mods.minestrappolation.block.BlockChiseled;
 import minestrapteam.mods.minestrappolation.block.BlockClaimerator;
 import minestrapteam.mods.minestrappolation.block.BlockColdCobweb;
+import minestrapteam.mods.minestrappolation.block.BlockCow;
 import minestrapteam.mods.minestrappolation.block.BlockCrackedBricks;
 import minestrapteam.mods.minestrappolation.block.BlockDeadBranch;
 import minestrapteam.mods.minestrappolation.block.BlockFan;
@@ -42,6 +43,7 @@ import minestrapteam.mods.minestrappolation.block.BlockPermaFrost;
 import minestrapteam.mods.minestrappolation.block.BlockPermaFrostDirt;
 import minestrapteam.mods.minestrappolation.block.BlockRadationMineral;
 import minestrapteam.mods.minestrappolation.block.BlockRadiationInsulated;
+import minestrapteam.mods.minestrappolation.block.BlockReactiveFlesh;
 import minestrapteam.mods.minestrappolation.block.BlockRefined;
 import minestrapteam.mods.minestrappolation.block.BlockRoads;
 import minestrapteam.mods.minestrappolation.block.BlockRope;
@@ -302,6 +304,8 @@ public class MBlocks
 	
 	//Gene Blocks
 	public static Block block_flesh;
+	public static Block block_flesh_reactive;
+	public static Block block_cow;
 	
 	//Tech Blocks
 	public static Block	crate;
@@ -783,6 +787,8 @@ public class MBlocks
 		celery_seed = new ItemSeeds(celery_crop, Blocks.farmland).setUnlocalizedName("celery_seeds").setCreativeTab(Minestrappolation.tabMFood);
 		
 		block_flesh = new BlockFlesh(Material.cloth, MapColor.pinkColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_flesh");
+		block_flesh_reactive = new BlockReactiveFlesh(Material.cloth, MapColor.pinkColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setUnlocalizedName("block_flesh_reactive");
+		block_cow = new BlockCow(Material.cloth, MapColor.brownColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_cow");
 		
 		//Liquids
 		magma = new BlockMagma().setUnlocalizedName("magma");
@@ -1019,6 +1025,8 @@ public class MBlocks
 		register(splitter_active);
 		register(claimerator);
 		register(block_flesh);
+		register(block_flesh_reactive);
+		register(block_cow);
 		
 		register(desert_pillar);
 		register(radiant_pillar);

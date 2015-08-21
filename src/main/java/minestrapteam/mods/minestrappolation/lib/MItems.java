@@ -98,6 +98,7 @@ public class MItems extends Item
 	public static Item							sushi;
 	public static Item							lucky_sushi;
 	public static Item							onigiri;
+	public static Item							flesh;
 	
 	//Plant Products
 	public static Item							mana_leaf;
@@ -141,6 +142,10 @@ public class MItems extends Item
 	public static Item							propeller;
 	public static Item							technological_doodad;
 	public static Item							ice_charge;
+	public static Item							slime_core;
+	public static Item							diamond_dust;
+	public static Item							crystal_heart;
+	public static Item							cow_gene_sample;
 	
 	//Stonecutter
 	public static Item							chunks;
@@ -337,6 +342,7 @@ public class MItems extends Item
 		sushi = new ItemFood(14, 1.8F, false).setUnlocalizedName("sushi").setCreativeTab(Minestrappolation.tabMFood);
 		lucky_sushi = new ItemMFood(12, 1.0F, 0).setUnlocalizedName("lucky_sushi").setCreativeTab(Minestrappolation.tabMFood);
 		onigiri = new ItemFood(7, 1.0F, false).setUnlocalizedName("onigiri").setCreativeTab(Minestrappolation.tabMFood);
+		flesh = new ItemFood(4, 0.4F, true).setUnlocalizedName("flesh").setCreativeTab(Minestrappolation.tabMFood);
 		
 		//Plant Products
 		mana_leaf = new Item().setUnlocalizedName("mana_leaf").setCreativeTab(Minestrappolation.tabMMaterials);
@@ -381,6 +387,10 @@ public class MItems extends Item
 		empty_titanium_sifter = new Item().setMaxStackSize(1).setUnlocalizedName("empty_titanium_sifter").setCreativeTab(Minestrappolation.tabMTools);
 		heart_piece = new Item().setUnlocalizedName("heart_piece").setCreativeTab(Minestrappolation.tabMTools);
 		ice_charge = new ItemIceCharge().setUnlocalizedName("ice_charge");
+		slime_core = new Item().setUnlocalizedName("slime_core").setCreativeTab(Minestrappolation.tabMMaterials);
+		diamond_dust = new Item().setUnlocalizedName("diamond_dust").setCreativeTab(Minestrappolation.tabMMaterials);
+		crystal_heart = new MItemFoiled().setUnlocalizedName("crystal_heart").setCreativeTab(Minestrappolation.tabMMaterials);
+		cow_gene_sample = new Item().setUnlocalizedName("cow_gene_sample").setCreativeTab(Minestrappolation.tabMMaterials);
 		
 		//Stonecutter
 		chunks = new ItemChunk().setUnlocalizedName("chunks").setCreativeTab(Minestrappolation.tabMMaterials);	
@@ -515,6 +525,8 @@ public class MItems extends Item
 		register(wolf_hide);
 		register(wing_sinew);
 		register(wing_segment);
+		register(slime_core);
+		register(cow_gene_sample);
 		register(mana_leaf);
 		register(ice_charge);
 		
@@ -522,6 +534,7 @@ public class MItems extends Item
 		
 		register(mud_ball);
 		register(chunks);
+		register(diamond_dust);
 		register(desert_quartz_item);
 		register(copper_ingot);
 		register(tin_ingot);
@@ -542,6 +555,7 @@ public class MItems extends Item
 		register(tin_plating);
 		register(steel_plating);
 		register(meurodite_plating);
+		register(crystal_heart);
 		
 		//Foods Tab
 		register(blueberry);
@@ -581,6 +595,7 @@ public class MItems extends Item
 		register(jam_bottle);
 		register(peanut_butter_bottle);
 		register(hot_sauce);
+		register(flesh);
 		register(sushi);
 		register(lucky_sushi);
 		register(squid_tentacle);
@@ -598,7 +613,6 @@ public class MItems extends Item
 		register(heart_piece);
 		register(heart_container);
 		register(soulbottle);
-		//FIXME backbacks
 		register(backpack);
 		register(satchel);
 		register(amuletPorcum);

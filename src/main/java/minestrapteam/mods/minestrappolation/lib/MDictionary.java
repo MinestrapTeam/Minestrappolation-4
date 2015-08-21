@@ -35,6 +35,7 @@ public class MDictionary
 		OreDictionary.registerOre("gemQuartzAny", MItems.desert_quartz_item);
 		OreDictionary.registerOre("gemQuartzAny", MItems.radiant_quartz);
 		OreDictionary.registerOre("gemSoul", MItems.soul_gem);
+		OreDictionary.registerOre("dustDiamond", MItems.diamond_dust);
 		
 		OreDictionary.registerOre("blockCopper", MBlocks.copper_block);
 		OreDictionary.registerOre("blockTin", MBlocks.tin_block);
@@ -167,6 +168,7 @@ public class MDictionary
 		
 		//Materials
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MItems.reinforced_stick, 8), new Object[] { "SSS", "STS", "SSS", 'S', "stickWood", 'T', new ItemStack(MItems.tin_plating) }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MItems.crystal_heart, 1), new Object[] { "MDM", "DHD", "MDM", 'M', MItems.mana_leaf, 'D', "dustDiamond", 'H', MItems.heart_piece}));
 		
 		//Decor
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.meat_block, 1), new Object[] { "MMM", "MMM", "MMM", 'M', "meatRaw" }));

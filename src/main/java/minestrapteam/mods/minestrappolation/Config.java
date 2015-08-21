@@ -56,6 +56,8 @@ public class Config
 	public static int 		sinewDropAmount;
 	public static int		animalFeetDropAmount;
 	public static int		wolfHideDropAmount;
+	public static int		slimeCoreDropAmount;
+	public static int		fleshDropAmount;
 	public static int		tentacleDropAmount;
 	public static int		doodadDropAmount;	
 	
@@ -67,6 +69,8 @@ public class Config
 	public static float 	sinewDropChance;
 	public static float		animalFeetDropChance;
 	public static float		wolfHideDropChance;
+	public static float		slimeCoreDropChance;
+	public static float		fleshDropChance;
 	public static float		tentacleDropChance;
 	public static float		doodadDropChance;
 	
@@ -111,6 +115,10 @@ public class Config
 		wolfHideDropAmount = config.get("Drops", "WolfHideDropQuantity", 1, "The maximum amount of Wolf Hide dropped when killing Wolves.").getInt();
 		sinewDropChance = config.get("Drops", "WingSinewDropChance", 50, "The percentage chance of finding Wing Sinew when killing Bats.").getInt();
 		sinewDropAmount = config.get("Drops", "WingSinewDropQuantity", 1, "The maximum amount of Wing Sinew dropped when killing Bats.").getInt();
+		slimeCoreDropChance = config.get("Drops", "SlimeCoreDropChance", 50, "The percentage chance of finding Slime Cores when killing Slimes or Magma Cubes.").getInt();
+		slimeCoreDropAmount = config.get("Drops", "SlimeCoreDropQuantity", 1, "The maximum amount of Slime Cores dropped when killing Slimes or Magma Cubes.").getInt();
+		fleshDropChance = config.get("Drops", "FleshDropChance", 80, "The percentage chance of finding Flesh when killing Villagers.").getInt();
+		fleshDropAmount = config.get("Drops", "FleshDropQuantity", 3, "The maximum amount of Flesh dropped when killing Villagers.").getInt();
 		tentacleDropChance = config.get("Drops", "SquidTentacleDropChance", 55, "The percentage chance of finding Squid Tentacles when killing Squids or Guardians.").getInt();
 		tentacleDropAmount = config.get("Drops", "SquidTentacleDropQuantity", 3, "The maximum amount of Squid Tentacles dropped when killing Squids or Guardians.").getInt();
 		doodadDropChance = config.get("Drops", "TechnologicalDoodadDropChance", 100, "The percentage chance of finding Technological Doodads when killing Iron Golems.").getInt();

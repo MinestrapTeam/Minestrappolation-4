@@ -497,6 +497,8 @@ tile.strawberry_bush.name=Strawberry Bush
 tile.mana_bush.name=Mana Bush
 
 tile.block_flesh.name=Block of Flesh
+tile.block_flesh_reactive.name=Reactive Block of Flesh
+tile.block_cow.name=Cow Gene Block
 
 item.dough.name=Dough
 item.bun.name=Bun
@@ -730,6 +732,12 @@ item.charge_gun.name=Charge Gun
 item.ice_charge.name=Ice Charge
 item.backpack.name=Backpack
 item.satchel.name=Satchel
+
+item.crystal_heart.name=Crystal Heart
+item.diamond_dust.name=Diamond Dust
+item.flesh.name=Flesh
+item.slime_core.name=Slime Core
+item.cow_gene_sample.name=Fermented Cow Gene Sample
 
 itemGroup.tabMBuilding=Minestrapp Building Blocks
 itemGroup.tabMDecor=Minestrapp Decoration Blocks
