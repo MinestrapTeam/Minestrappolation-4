@@ -192,7 +192,7 @@ public class BlockBush extends MBlock implements IPlantable, IShearable{
     @Override
 	public boolean isShearable(ItemStack item, IBlockAccess world, BlockPos pos)
 	{
-		return true;
+		return false;
 	}
 
 	@Override

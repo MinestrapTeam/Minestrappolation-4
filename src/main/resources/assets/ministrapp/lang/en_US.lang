@@ -499,6 +499,7 @@ tile.mana_bush.name=Mana Bush
 tile.block_flesh.name=Block of Flesh
 tile.block_flesh_reactive.name=Reactive Block of Flesh
 tile.block_cow.name=Cow Gene Block
+tile.block_mooshroom.name=Mooshroom Gene Block
 
 item.dough.name=Dough
 item.bun.name=Bun
