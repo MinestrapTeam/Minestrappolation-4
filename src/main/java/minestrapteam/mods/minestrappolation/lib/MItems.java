@@ -146,6 +146,7 @@ public class MItems extends Item
 	public static Item							diamond_dust;
 	public static Item							crystal_heart;
 	public static Item							cow_gene_sample;
+	public static Item							infectious_fungus;
 	
 	//Stonecutter
 	public static Item							chunks;
@@ -391,6 +392,7 @@ public class MItems extends Item
 		diamond_dust = new Item().setUnlocalizedName("diamond_dust").setCreativeTab(Minestrappolation.tabMMaterials);
 		crystal_heart = new MItemFoiled().setUnlocalizedName("crystal_heart").setCreativeTab(Minestrappolation.tabMMaterials);
 		cow_gene_sample = new Item().setUnlocalizedName("cow_gene_sample").setCreativeTab(Minestrappolation.tabMMaterials);
+		infectious_fungus = new Item().setUnlocalizedName("infectious_fungus").setCreativeTab(Minestrappolation.tabMMaterials);
 		
 		//Stonecutter
 		chunks = new ItemChunk().setUnlocalizedName("chunks").setCreativeTab(Minestrappolation.tabMMaterials);	
@@ -526,6 +528,7 @@ public class MItems extends Item
 		register(wing_sinew);
 		register(wing_segment);
 		register(slime_core);
+		register(infectious_fungus);
 		register(cow_gene_sample);
 		register(mana_leaf);
 		register(ice_charge);

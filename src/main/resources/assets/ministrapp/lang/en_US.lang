@@ -739,6 +739,7 @@ item.diamond_dust.name=Diamond Dust
 item.flesh.name=Flesh
 item.slime_core.name=Slime Core
 item.cow_gene_sample.name=Fermented Cow Gene Sample
+item.infectious_fungus.name=Infectious Fungus
 
 itemGroup.tabMBuilding=Minestrapp Building Blocks
 itemGroup.tabMDecor=Minestrapp Decoration Blocks

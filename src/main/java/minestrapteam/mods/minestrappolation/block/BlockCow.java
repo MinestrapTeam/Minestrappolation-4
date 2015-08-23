@@ -57,6 +57,21 @@ public class BlockCow extends BlockFlesh
 				return true;
 			}			
 		}
+		if(playerIn.getCurrentEquippedItem().getItem() == MItems.infectious_fungus)
+		{
+			if(playerIn.getCurrentEquippedItem().stackSize > 1)
+			{
+				playerIn.getCurrentEquippedItem().stackSize--;
+				worldIn.setBlockState(pos, MBlocks.block_mooshroom.getDefaultState());
+				return true;
+			}
+			else
+			{
+				playerIn.destroyCurrentEquippedItem();
+				worldIn.setBlockState(pos, MBlocks.block_mooshroom.getDefaultState());
+				return true;
+			}			
+		}
 		return false;
 	}
 }

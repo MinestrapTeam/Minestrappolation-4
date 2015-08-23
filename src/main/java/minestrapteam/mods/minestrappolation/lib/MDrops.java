@@ -50,6 +50,7 @@ public class MDrops
 		{
 			dropQuadripedItems(living, random, onFire, looting);
 			dropCowItems(living, random, onFire, looting);
+			dropMooshroomItems(living, random, onFire, looting);
 		}
 		if(living instanceof EntitySheep)
 		{
@@ -108,6 +109,13 @@ public class MDrops
 			living.dropItem(MItems.cow_foot, random.nextInt(Config.animalFeetDropAmount + looting));
 		}
 	}
+	private static void dropMooshroomItems(EntityLivingBase living, Random random, boolean onFire, int looting)
+	{
+		if (random.nextFloat() / looting < Config.fungusDropChance)
+		{
+			living.dropItem(MItems.infectious_fungus, random.nextInt(Config.fungusDropAmount + looting));
+		}
+	}
 	private static void dropSheepItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
 		if (random.nextFloat() / looting < Config.animalFeetDropChance)
@@ -133,7 +141,10 @@ public class MDrops
 	{
 		if (random.nextFloat() / looting < Config.tentacleDropChance)
 		{
-			living.dropItem(MItems.squid_tentacle, random.nextInt(Config.tentacleDropAmount + looting));
+			if(onFire == true)
+				living.dropItem(MItems.squid_tentacle, random.nextInt(Config.tentacleDropAmount + looting));
+			else
+				living.dropItem(MItems.calamari, random.nextInt(Config.tentacleDropAmount + looting));
 		}
 	}
 	private static void dropBatItems(EntityLivingBase living, Random random, boolean onFire, int looting)
