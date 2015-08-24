@@ -57,6 +57,7 @@ import minestrapteam.mods.minestrappolation.block.BlockTiles;
 import minestrapteam.mods.minestrappolation.block.BlockTranslucent;
 import minestrapteam.mods.minestrappolation.block.BlockTransparent;
 import minestrapteam.mods.minestrappolation.block.BlockWetCardboard;
+import minestrapteam.mods.minestrappolation.block.BlockWolf;
 import minestrapteam.mods.minestrappolation.block.MBlock;
 import minestrapteam.mods.minestrappolation.block.MBlockLeaves;
 import minestrapteam.mods.minestrappolation.block.MBlockLog;
@@ -310,6 +311,7 @@ public class MBlocks
 	public static Block block_cow;
 	public static Block block_mooshroom;
 	public static Block block_chicken;
+	public static Block block_wolf;
 	
 	//Tech Blocks
 	public static Block	crate;
@@ -795,6 +797,7 @@ public class MBlocks
 		block_cow = new BlockCow(Material.cloth, MapColor.brownColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_cow");
 		block_mooshroom = new BlockMooshroom(Material.cloth, MapColor.redColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_mooshroom");
 		block_chicken = new BlockChicken(Material.cloth, MapColor.ironColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_chicken");
+		block_wolf = new BlockWolf(Material.cloth, MapColor.silverColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_wolf");
 		
 		//Liquids
 		magma = new BlockMagma().setUnlocalizedName("magma");
@@ -1035,6 +1038,7 @@ public class MBlocks
 		register(block_chicken);
 		register(block_cow);
 		register(block_mooshroom);
+		register(block_wolf);
 		
 		register(desert_pillar);
 		register(radiant_pillar);

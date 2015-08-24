@@ -96,6 +96,21 @@ public class BlockReactiveFlesh extends BlockFlesh
 				return true;
 			}			
 		}
+		if(playerIn.getCurrentEquippedItem().getItem() == MItems.wolf_gene_sample)
+		{
+			if(playerIn.getCurrentEquippedItem().stackSize > 1)
+			{
+				playerIn.getCurrentEquippedItem().stackSize--;
+				worldIn.setBlockState(pos, MBlocks.block_wolf.getDefaultState());
+				return true;
+			}
+			else
+			{
+				playerIn.destroyCurrentEquippedItem();
+				worldIn.setBlockState(pos, MBlocks.block_wolf.getDefaultState());
+				return true;
+			}			
+		}
 		return false;
 	}
 	
