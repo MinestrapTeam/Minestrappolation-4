@@ -168,7 +168,7 @@ public class MDictionary
 		
 		//Materials
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MItems.reinforced_stick, 8), new Object[] { "SSS", "STS", "SSS", 'S', "stickWood", 'T', new ItemStack(MItems.tin_plating) }));
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MItems.crystal_heart, 1), new Object[] { "MDM", "DHD", "MDM", 'M', MItems.mana_leaf, 'D', "dustDiamond", 'H', MItems.heart_piece}));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MItems.inert_crystal_heart, 1), new Object[] { "MDM", "DHD", "MDM", 'M', MItems.mana_leaf, 'D', "dustDiamond", 'H', MItems.heart_piece}));
 		
 		//Decor
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.meat_block, 1), new Object[] { "MMM", "MMM", "MMM", 'M', "meatRaw" }));

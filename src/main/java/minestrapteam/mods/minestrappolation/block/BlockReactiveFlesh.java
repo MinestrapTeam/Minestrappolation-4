@@ -2,6 +2,7 @@ package minestrapteam.mods.minestrappolation.block;
 
 import java.util.Random;
 
+import minestrapteam.mods.minestrappolation.lib.MAchievements;
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import minestrapteam.mods.minestrappolation.lib.MItems;
 import net.minecraft.block.Block;
@@ -70,12 +71,14 @@ public class BlockReactiveFlesh extends BlockFlesh
 		{
 			if(playerIn.getCurrentEquippedItem().stackSize > 1)
 			{
+				playerIn.addStat(MAchievements.gene_block, 1);
 				playerIn.getCurrentEquippedItem().stackSize--;
 				worldIn.setBlockState(pos, MBlocks.block_cow.getDefaultState());
 				return true;
 			}
 			else
 			{
+				playerIn.addStat(MAchievements.gene_block, 1);
 				playerIn.destroyCurrentEquippedItem();
 				worldIn.setBlockState(pos, MBlocks.block_cow.getDefaultState());
 				return true;
@@ -85,12 +88,14 @@ public class BlockReactiveFlesh extends BlockFlesh
 		{
 			if(playerIn.getCurrentEquippedItem().stackSize > 1)
 			{
+				playerIn.addStat(MAchievements.gene_block, 1);
 				playerIn.getCurrentEquippedItem().stackSize--;
 				worldIn.setBlockState(pos, MBlocks.block_chicken.getDefaultState());
 				return true;
 			}
 			else
 			{
+				playerIn.addStat(MAchievements.gene_block, 1);
 				playerIn.destroyCurrentEquippedItem();
 				worldIn.setBlockState(pos, MBlocks.block_chicken.getDefaultState());
 				return true;
@@ -100,12 +105,14 @@ public class BlockReactiveFlesh extends BlockFlesh
 		{
 			if(playerIn.getCurrentEquippedItem().stackSize > 1)
 			{
+				playerIn.addStat(MAchievements.gene_block, 1);
 				playerIn.getCurrentEquippedItem().stackSize--;
 				worldIn.setBlockState(pos, MBlocks.block_wolf.getDefaultState());
 				return true;
 			}
 			else
 			{
+				playerIn.addStat(MAchievements.gene_block, 1);
 				playerIn.destroyCurrentEquippedItem();
 				worldIn.setBlockState(pos, MBlocks.block_wolf.getDefaultState());
 				return true;

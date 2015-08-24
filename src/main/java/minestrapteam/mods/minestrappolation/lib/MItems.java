@@ -13,6 +13,7 @@ import minestrapteam.mods.minestrappolation.item.ItemChunk;
 import minestrapteam.mods.minestrappolation.item.ItemHangGlider;
 import minestrapteam.mods.minestrappolation.item.ItemHeartContainer;
 import minestrapteam.mods.minestrappolation.item.ItemIceCharge;
+import minestrapteam.mods.minestrappolation.item.ItemInertCrystalHeart;
 import minestrapteam.mods.minestrappolation.item.ItemMArmor;
 import minestrapteam.mods.minestrappolation.item.ItemMAxe;
 import minestrapteam.mods.minestrappolation.item.ItemMFood;
@@ -144,6 +145,7 @@ public class MItems extends Item
 	public static Item							ice_charge;
 	public static Item							slime_core;
 	public static Item							diamond_dust;
+	public static Item							inert_crystal_heart;
 	public static Item							crystal_heart;
 	public static Item							cow_gene_sample;
 	public static Item							infectious_fungus;
@@ -391,7 +393,8 @@ public class MItems extends Item
 		heart_piece = new Item().setUnlocalizedName("heart_piece").setCreativeTab(Minestrappolation.tabMTools);
 		ice_charge = new ItemIceCharge().setUnlocalizedName("ice_charge");
 		slime_core = new Item().setUnlocalizedName("slime_core").setCreativeTab(Minestrappolation.tabMMaterials);
-		diamond_dust = new Item().setUnlocalizedName("diamond_dust").setCreativeTab(Minestrappolation.tabMMaterials);
+		diamond_dust = new Item().setMaxStackSize(1).setUnlocalizedName("diamond_dust").setCreativeTab(Minestrappolation.tabMMaterials);
+		inert_crystal_heart = new ItemInertCrystalHeart().setMaxStackSize(1).setUnlocalizedName("inert_crystal_heart").setCreativeTab(Minestrappolation.tabMMaterials);
 		crystal_heart = new MItemFoiled().setUnlocalizedName("crystal_heart").setCreativeTab(Minestrappolation.tabMMaterials);
 		cow_gene_sample = new Item().setUnlocalizedName("cow_gene_sample").setCreativeTab(Minestrappolation.tabMMaterials);
 		infectious_fungus = new Item().setUnlocalizedName("infectious_fungus").setCreativeTab(Minestrappolation.tabMMaterials);
@@ -564,6 +567,7 @@ public class MItems extends Item
 		register(tin_plating);
 		register(steel_plating);
 		register(meurodite_plating);
+		register(inert_crystal_heart);
 		register(crystal_heart);
 		
 		//Foods Tab

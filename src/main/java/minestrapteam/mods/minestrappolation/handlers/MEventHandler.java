@@ -177,6 +177,10 @@ public class MEventHandler
 				}
 				
 			}
+			if(player.inventory.hasItem(MItems.diamond_dust))
+			{
+				player.addStat(MAchievements.diamond_dust, 1);
+			}
 		}
 		else
 		{

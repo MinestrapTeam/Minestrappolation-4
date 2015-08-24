@@ -1,5 +1,6 @@
 package minestrapteam.mods.minestrappolation.block;
 
+import minestrapteam.mods.minestrappolation.lib.MAchievements;
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import minestrapteam.mods.minestrappolation.lib.MItems;
 import net.minecraft.block.Block;
@@ -61,12 +62,14 @@ public class BlockCow extends BlockFlesh
 		{
 			if(playerIn.getCurrentEquippedItem().stackSize > 1)
 			{
+				playerIn.addStat(MAchievements.gene_block, 1);
 				playerIn.getCurrentEquippedItem().stackSize--;
 				worldIn.setBlockState(pos, MBlocks.block_mooshroom.getDefaultState());
 				return true;
 			}
 			else
 			{
+				playerIn.addStat(MAchievements.gene_block, 1);
 				playerIn.destroyCurrentEquippedItem();
 				worldIn.setBlockState(pos, MBlocks.block_mooshroom.getDefaultState());
 				return true;

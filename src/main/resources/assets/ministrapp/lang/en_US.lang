@@ -736,6 +736,7 @@ item.ice_charge.name=Ice Charge
 item.backpack.name=Backpack
 item.satchel.name=Satchel
 
+item.inert_crystal_heart.name=Inert Crystal Heart
 item.crystal_heart.name=Crystal Heart
 item.diamond_dust.name=Diamond Dust
 item.flesh.name=Flesh
@@ -787,6 +788,12 @@ achievement.titanium=Titanic
 achievement.titanium.desc=Acquire a titanium ingot.
 achievement.splitter=The Alchemist
 achievement.splitter.desc=Use an alchemical splitter.
+achievement.diamond_dust=Pulverized
+achievement.diamond_dust.desc=Crush a diamond into dust.
+achievement.crystal_heart=Blood Magic
+achievement.crystal_heart.desc=Sacrifice your own life-force to activate a Crystal Heart.
+achievement.gene_block=What hath science wrought???
+achievement.gene_block.desc=Mutate a block of flesh into a gene block.
 
 recipe.melting=Melting
 recipe.sawmill.shaped=Shaped Milling
