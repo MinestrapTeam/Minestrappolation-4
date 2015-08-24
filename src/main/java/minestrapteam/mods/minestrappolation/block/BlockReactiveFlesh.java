@@ -81,6 +81,21 @@ public class BlockReactiveFlesh extends BlockFlesh
 				return true;
 			}			
 		}
+		if(playerIn.getCurrentEquippedItem().getItem() == MItems.chicken_gene_sample)
+		{
+			if(playerIn.getCurrentEquippedItem().stackSize > 1)
+			{
+				playerIn.getCurrentEquippedItem().stackSize--;
+				worldIn.setBlockState(pos, MBlocks.block_chicken.getDefaultState());
+				return true;
+			}
+			else
+			{
+				playerIn.destroyCurrentEquippedItem();
+				worldIn.setBlockState(pos, MBlocks.block_chicken.getDefaultState());
+				return true;
+			}			
+		}
 		return false;
 	}
 	

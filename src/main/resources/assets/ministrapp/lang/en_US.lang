@@ -500,6 +500,7 @@ tile.block_flesh.name=Block of Flesh
 tile.block_flesh_reactive.name=Reactive Block of Flesh
 tile.block_cow.name=Cow Gene Block
 tile.block_mooshroom.name=Mooshroom Gene Block
+tile.block_chicken.name=Chicken Gene Block
 
 item.dough.name=Dough
 item.bun.name=Bun
@@ -740,6 +741,7 @@ item.flesh.name=Flesh
 item.slime_core.name=Slime Core
 item.cow_gene_sample.name=Fermented Cow Gene Sample
 item.infectious_fungus.name=Infectious Fungus
+item.chicken_gene_sample.name=Fermented Chicken Gene Sample
 
 itemGroup.tabMBuilding=Minestrapp Building Blocks
 itemGroup.tabMDecor=Minestrapp Decoration Blocks

@@ -213,6 +213,7 @@ public class MRecipes
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.titanium_sifter, 1), new Object[] { MItems.empty_titanium_sifter, MBlocks.steel_mesh });
 		GameRegistry.addRecipe(new ItemStack(MBlocks.block_flesh, 8), new Object[] { "FFF", "FHF", "FFF", 'F', MItems.flesh, 'H', MItems.crystal_heart });
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.cow_gene_sample, 1), new Object[] { MItems.cow_foot, MItems.slime_core, Items.sugar, Blocks.brown_mushroom});
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.chicken_gene_sample, 1), new Object[] { MItems.chicken_foot, MItems.slime_core, Items.sugar, Blocks.brown_mushroom});
 		
 		// Tools and Weapons
 		GameRegistry.addRecipe(new ItemStack(MItems.copper_pickaxe), new Object[] { "III", " S ", " S ", 'I', MItems.copper_ingot, 'S', Items.stick });

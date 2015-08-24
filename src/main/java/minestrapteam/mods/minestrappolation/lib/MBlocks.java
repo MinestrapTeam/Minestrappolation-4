@@ -9,6 +9,7 @@ import minestrapteam.mods.minestrappolation.block.BlockBlazium;
 import minestrapteam.mods.minestrappolation.block.BlockBoulder;
 import minestrapteam.mods.minestrappolation.block.BlockBush;
 import minestrapteam.mods.minestrappolation.block.BlockCardboard;
+import minestrapteam.mods.minestrappolation.block.BlockChicken;
 import minestrapteam.mods.minestrappolation.block.BlockChimney;
 import minestrapteam.mods.minestrappolation.block.BlockChiseled;
 import minestrapteam.mods.minestrappolation.block.BlockClaimerator;
@@ -308,6 +309,7 @@ public class MBlocks
 	public static Block block_flesh_reactive;
 	public static Block block_cow;
 	public static Block block_mooshroom;
+	public static Block block_chicken;
 	
 	//Tech Blocks
 	public static Block	crate;
@@ -792,6 +794,7 @@ public class MBlocks
 		block_flesh_reactive = new BlockReactiveFlesh(Material.cloth, MapColor.pinkColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setUnlocalizedName("block_flesh_reactive");
 		block_cow = new BlockCow(Material.cloth, MapColor.brownColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_cow");
 		block_mooshroom = new BlockMooshroom(Material.cloth, MapColor.redColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_mooshroom");
+		block_chicken = new BlockChicken(Material.cloth, MapColor.ironColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_chicken");
 		
 		//Liquids
 		magma = new BlockMagma().setUnlocalizedName("magma");
@@ -1029,6 +1032,7 @@ public class MBlocks
 		register(claimerator);
 		register(block_flesh);
 		register(block_flesh_reactive);
+		register(block_chicken);
 		register(block_cow);
 		register(block_mooshroom);
 		
