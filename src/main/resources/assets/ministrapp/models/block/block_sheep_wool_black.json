@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "ministrapp:blocks/geneblock_sheep_wool_black"
+    }
+}

@@ -118,6 +118,41 @@ public class BlockReactiveFlesh extends BlockFlesh
 				return true;
 			}			
 		}
+		if(playerIn.getCurrentEquippedItem().getItem() == MItems.sheep_gene_sample)
+		{
+			if(playerIn.getCurrentEquippedItem().stackSize > 1)
+			{
+				playerIn.addStat(MAchievements.gene_block, 1);
+				playerIn.getCurrentEquippedItem().stackSize--;
+				int chance = worldIn.rand.nextInt(10000);
+				if(chance <= 81835)
+					worldIn.setBlockState(pos, MBlocks.block_sheep_white.getDefaultState());
+				else if(chance <= 96835)
+				{
+					chance = worldIn.rand.nextInt(3);
+					if(chance == 0)
+						worldIn.setBlockState(pos, MBlocks.block_sheep_silver.getDefaultState());
+					else if(chance == 1)
+						worldIn.setBlockState(pos, MBlocks.block_sheep_grey.getDefaultState());
+					else if(chance == 2)
+						worldIn.setBlockState(pos, MBlocks.block_sheep_black.getDefaultState());						
+				}
+				else if(chance <= 99835)
+					worldIn.setBlockState(pos, MBlocks.block_sheep_brown.getDefaultState());
+				else
+				{
+					worldIn.setBlockState(pos, MBlocks.block_sheep_pink.getDefaultState());
+				}
+				return true;
+			}
+			else
+			{
+				playerIn.addStat(MAchievements.gene_block, 1);
+				playerIn.destroyCurrentEquippedItem();
+				worldIn.setBlockState(pos, MBlocks.block_wolf.getDefaultState());
+				return true;
+			}			
+		}
 		return false;
 	}
 	

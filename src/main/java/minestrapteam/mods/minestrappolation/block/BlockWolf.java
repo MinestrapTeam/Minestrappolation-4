@@ -63,6 +63,14 @@ public class BlockWolf extends BlockFlesh
 		}
 		if((Integer)state.getValue(AGE) == 5 && playerIn.getCurrentEquippedItem().getItem() == Items.shears)
 		{
+			if(playerIn.getCurrentEquippedItem().getItemDamage() < playerIn.getCurrentEquippedItem().getMaxDamage())
+			{
+				playerIn.getCurrentEquippedItem().damageItem(1, playerIn);
+			}
+			else
+			{
+				playerIn.destroyCurrentEquippedItem();
+			}
 			worldIn.setBlockState(pos, this.getDefaultState(), 2);
 			EntityItem ei = new EntityItem(worldIn, playerIn.posX, playerIn.posY, playerIn.posZ, new ItemStack(MItems.wolf_hide, 1));
 			worldIn.spawnEntityInWorld(ei);

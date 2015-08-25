@@ -51,6 +51,7 @@ import minestrapteam.mods.minestrappolation.block.BlockRoads;
 import minestrapteam.mods.minestrappolation.block.BlockRope;
 import minestrapteam.mods.minestrappolation.block.BlockSawmill;
 import minestrapteam.mods.minestrappolation.block.BlockSeaweed;
+import minestrapteam.mods.minestrappolation.block.BlockSheep;
 import minestrapteam.mods.minestrappolation.block.BlockSoul;
 import minestrapteam.mods.minestrappolation.block.BlockSunstoneBlock;
 import minestrapteam.mods.minestrappolation.block.BlockTiles;
@@ -312,6 +313,22 @@ public class MBlocks
 	public static Block block_mooshroom;
 	public static Block block_chicken;
 	public static Block block_wolf;
+	public static Block block_sheep_white;
+	public static Block block_sheep_silver;
+	public static Block block_sheep_grey;
+	public static Block block_sheep_black;
+	public static Block block_sheep_brown;
+	public static Block block_sheep_pink;
+	public static Block block_sheep_red;
+	public static Block block_sheep_orange;
+	public static Block block_sheep_yellow;
+	public static Block block_sheep_lime;
+	public static Block block_sheep_green;
+	public static Block block_sheep_cyan;
+	public static Block block_sheep_light_blue;
+	public static Block block_sheep_blue;
+	public static Block block_sheep_purple;
+	public static Block block_sheep_magenta;
 	
 	//Tech Blocks
 	public static Block	crate;
@@ -797,7 +814,23 @@ public class MBlocks
 		block_cow = new BlockCow(Material.cloth, MapColor.brownColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_cow");
 		block_mooshroom = new BlockMooshroom(Material.cloth, MapColor.redColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_mooshroom");
 		block_chicken = new BlockChicken(Material.cloth, MapColor.ironColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_chicken");
-		block_wolf = new BlockWolf(Material.cloth, MapColor.silverColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_wolf");
+		block_wolf = new BlockWolf(Material.cloth, MapColor.silverColor).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_wolf");
+		block_sheep_white = new BlockSheep(Material.cloth, MapColor.ironColor, 0).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_white");
+		block_sheep_orange = new BlockSheep(Material.cloth, MapColor.ironColor, 1).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_orange");
+		block_sheep_magenta = new BlockSheep(Material.cloth, MapColor.ironColor, 2).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_magenta");
+		block_sheep_light_blue = new BlockSheep(Material.cloth, MapColor.ironColor, 3).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_light_blue");
+		block_sheep_yellow = new BlockSheep(Material.cloth, MapColor.ironColor, 4).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_yellow");
+		block_sheep_lime = new BlockSheep(Material.cloth, MapColor.ironColor, 5).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_lime");
+		block_sheep_pink = new BlockSheep(Material.cloth, MapColor.ironColor, 6).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_pink");
+		block_sheep_grey = new BlockSheep(Material.cloth, MapColor.ironColor, 7).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_grey");
+		block_sheep_silver = new BlockSheep(Material.cloth, MapColor.ironColor, 8).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_silver");
+		block_sheep_cyan = new BlockSheep(Material.cloth, MapColor.ironColor, 9).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_cyan");
+		block_sheep_purple = new BlockSheep(Material.cloth, MapColor.ironColor, 10).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_purple");
+		block_sheep_blue = new BlockSheep(Material.cloth, MapColor.ironColor, 11).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_blue");
+		block_sheep_brown = new BlockSheep(Material.cloth, MapColor.ironColor, 12).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_brown");
+		block_sheep_green = new BlockSheep(Material.cloth, MapColor.ironColor, 13).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_green");
+		block_sheep_red = new BlockSheep(Material.cloth, MapColor.ironColor, 14).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_red");
+		block_sheep_black = new BlockSheep(Material.cloth, MapColor.ironColor, 15).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_black");
 		
 		//Liquids
 		magma = new BlockMagma().setUnlocalizedName("magma");
@@ -1039,6 +1072,22 @@ public class MBlocks
 		register(block_cow);
 		register(block_mooshroom);
 		register(block_wolf);
+		register(block_sheep_white);
+		register(block_sheep_silver);
+		register(block_sheep_grey);
+		register(block_sheep_black);
+		register(block_sheep_brown);
+		register(block_sheep_pink);
+		register(block_sheep_red);
+		register(block_sheep_orange);
+		register(block_sheep_yellow);
+		register(block_sheep_lime);
+		register(block_sheep_green);
+		register(block_sheep_cyan);
+		register(block_sheep_light_blue);
+		register(block_sheep_blue);
+		register(block_sheep_purple);
+		register(block_sheep_magenta);
 		
 		register(desert_pillar);
 		register(radiant_pillar);
