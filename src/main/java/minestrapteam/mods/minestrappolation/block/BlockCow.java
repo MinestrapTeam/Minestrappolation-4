@@ -37,7 +37,7 @@ public class BlockCow extends BlockFlesh
 		{
 			return true;
 		}
-		if(playerIn.getCurrentEquippedItem().getItem() == Items.bucket)
+		if(playerIn.getCurrentEquippedItem() != null && playerIn.getCurrentEquippedItem().getItem() == Items.bucket)
 		{
 			if(playerIn.getCurrentEquippedItem().stackSize > 1)
 			{
@@ -58,7 +58,7 @@ public class BlockCow extends BlockFlesh
 				return true;
 			}			
 		}
-		if(playerIn.getCurrentEquippedItem().getItem() == MItems.infectious_fungus)
+		if(playerIn.getCurrentEquippedItem() != null && playerIn.getCurrentEquippedItem().getItem() == MItems.infectious_fungus)
 		{
 			if(playerIn.getCurrentEquippedItem().stackSize > 1)
 			{

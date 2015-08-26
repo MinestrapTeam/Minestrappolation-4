@@ -82,7 +82,7 @@ public class BlockSheep extends BlockFlesh
 				ei.onCollideWithPlayer(playerIn);
 			return true;
 		}
-		else if(playerIn.getCurrentEquippedItem().getItem() == Items.dye)
+		else if( playerIn.getCurrentEquippedItem() != null && playerIn.getCurrentEquippedItem().getItem() == Items.dye)
 		{
 			if(playerIn.getCurrentEquippedItem().getItemDamage() == 0)
 				worldIn.setBlockState(pos, MBlocks.block_sheep_black.getStateFromMeta(this.getMetaFromState(state)), 2);

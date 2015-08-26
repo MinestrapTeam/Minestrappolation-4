@@ -87,7 +87,7 @@ public class BlockFlesh extends MBlock
 		{
 			return true;
 		}
-		if(playerIn.getCurrentEquippedItem().getItem() == Items.potionitem && (playerIn.getCurrentEquippedItem().getItemDamage() == 8193 || playerIn.getCurrentEquippedItem().getItemDamage() == 8225 || playerIn.getCurrentEquippedItem().getItemDamage() == 8257 || playerIn.getCurrentEquippedItem().getItemDamage() == 16385 || playerIn.getCurrentEquippedItem().getItemDamage() == 16417 || playerIn.getCurrentEquippedItem().getItemDamage() == 16449))
+		if((playerIn.getCurrentEquippedItem() != null) && playerIn.getCurrentEquippedItem().getItem() == Items.potionitem && (playerIn.getCurrentEquippedItem().getItemDamage() == 8193 || playerIn.getCurrentEquippedItem().getItemDamage() == 8225 || playerIn.getCurrentEquippedItem().getItemDamage() == 8257 || playerIn.getCurrentEquippedItem().getItemDamage() == 16385 || playerIn.getCurrentEquippedItem().getItemDamage() == 16417 || playerIn.getCurrentEquippedItem().getItemDamage() == 16449))
 		{
 			playerIn.destroyCurrentEquippedItem();
 			worldIn.setBlockState(pos, MBlocks.block_flesh_reactive.getDefaultState());
