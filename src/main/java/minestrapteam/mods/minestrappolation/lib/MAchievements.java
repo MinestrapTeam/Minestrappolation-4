@@ -26,10 +26,11 @@ public class MAchievements {
 	public static Achievement diamond_dust = new Achievement("achievement.diamond_dust", "diamond_dust", 4, 8, MItems.diamond_dust, (Achievement)crusher);
 	public static Achievement crystal_heart = new Achievement("achievement.crystal_heart", "crystal_heart", 4, 6, MItems.crystal_heart, (Achievement)heart);
 	public static Achievement gene_block = new Achievement("achievement.gene_block", "gene_block", 6, 7, MBlocks.block_cow, (Achievement)crystal_heart);
+	public static Achievement pink_sheep = new Achievement("achievement.pink_sheep", "pink_sheep", 6, 5, MBlocks.block_sheep_pink, (Achievement)gene_block);
 	
 	public static void load()
 	{
-		AchievementPage.registerAchievementPage( new AchievementPage("Minestrappolation", new Achievement[] {heart, stonecutter, sawmill, alloy, melter, titanium, frost, glacieric_ice, frost_gen, bedrock, minestrapp, sifter, god, jam, crusher, icecream, splitter, diamond_dust, crystal_heart, gene_block}));
+		AchievementPage.registerAchievementPage( new AchievementPage("Minestrappolation", new Achievement[] {heart, stonecutter, sawmill, alloy, melter, titanium, frost, glacieric_ice, frost_gen, bedrock, minestrapp, sifter, god, jam, crusher, icecream, splitter, diamond_dust, crystal_heart, gene_block, pink_sheep}));
 		preInit();
 	}
 	
@@ -55,6 +56,7 @@ public class MAchievements {
 		diamond_dust.registerStat();
 		crystal_heart.registerStat();
 		gene_block.registerStat();
+		pink_sheep.registerStat();
 	}
 	
 	public static void addAchievement(EntityPlayer player, Achievement ach)

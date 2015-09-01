@@ -152,6 +152,7 @@ public class MItems extends Item
 	public static Item							chicken_gene_sample;
 	public static Item							wolf_gene_sample;
 	public static Item							sheep_gene_sample;
+	public static Item							rabbit_gene_sample;
 	
 	//Stonecutter
 	public static Item							chunks;
@@ -402,6 +403,7 @@ public class MItems extends Item
 		chicken_gene_sample = new Item().setUnlocalizedName("chicken_gene_sample").setCreativeTab(Minestrappolation.tabMMaterials);
 		wolf_gene_sample = new Item().setUnlocalizedName("wolf_gene_sample").setCreativeTab(Minestrappolation.tabMMaterials);
 		sheep_gene_sample = new Item().setUnlocalizedName("sheep_gene_sample").setCreativeTab(Minestrappolation.tabMMaterials);
+		rabbit_gene_sample = new Item().setUnlocalizedName("rabbit_gene_sample").setCreativeTab(Minestrappolation.tabMMaterials);
 		
 		//Stonecutter
 		chunks = new ItemChunk().setUnlocalizedName("chunks").setCreativeTab(Minestrappolation.tabMMaterials);	
@@ -538,6 +540,7 @@ public class MItems extends Item
 		register(wing_segment);
 		register(slime_core);
 		register(infectious_fungus);
+		register(rabbit_gene_sample);
 		register(chicken_gene_sample);
 		register(cow_gene_sample);
 		register(sheep_gene_sample);

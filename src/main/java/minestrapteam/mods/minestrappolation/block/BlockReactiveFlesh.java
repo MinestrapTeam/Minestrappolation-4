@@ -67,6 +67,23 @@ public class BlockReactiveFlesh extends BlockFlesh
 		{
 			return true;
 		}
+		if(playerIn.getCurrentEquippedItem().getItem() == MItems.rabbit_gene_sample)
+		{
+			if(playerIn.getCurrentEquippedItem().stackSize > 1)
+			{
+				playerIn.addStat(MAchievements.gene_block, 1);
+				playerIn.getCurrentEquippedItem().stackSize--;
+				worldIn.setBlockState(pos, MBlocks.block_rabbit.getDefaultState());
+				return true;
+			}
+			else
+			{
+				playerIn.addStat(MAchievements.gene_block, 1);
+				playerIn.destroyCurrentEquippedItem();
+				worldIn.setBlockState(pos, MBlocks.block_rabbit.getDefaultState());
+				return true;
+			}			
+		}
 		if(playerIn.getCurrentEquippedItem().getItem() == MItems.cow_gene_sample)
 		{
 			if(playerIn.getCurrentEquippedItem().stackSize > 1)
@@ -142,6 +159,7 @@ public class BlockReactiveFlesh extends BlockFlesh
 				else
 				{
 					worldIn.setBlockState(pos, MBlocks.block_sheep_pink.getDefaultState());
+					playerIn.addStat(MAchievements.pink_sheep, 1);
 				}
 				return true;
 			}
@@ -167,6 +185,7 @@ public class BlockReactiveFlesh extends BlockFlesh
 				else
 				{
 					worldIn.setBlockState(pos, MBlocks.block_sheep_pink.getDefaultState());
+					playerIn.addStat(MAchievements.pink_sheep, 1);
 				}
 				return true;
 			}			

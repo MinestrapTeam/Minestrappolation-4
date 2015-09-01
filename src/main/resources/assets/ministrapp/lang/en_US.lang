@@ -518,6 +518,7 @@ tile.block_sheep_light_blue.name=Light Blue Sheep Gene Block
 tile.block_sheep_blue.name=Blue Sheep Gene Block
 tile.block_sheep_purple.name=Purple Sheep Gene Block
 tile.block_sheep_magenta.name=Magenta Sheep Gene Block
+tile.block_rabbit.name=Rabbit Gene Block
 
 item.dough.name=Dough
 item.bun.name=Bun
@@ -762,6 +763,7 @@ item.infectious_fungus.name=Infectious Fungus
 item.chicken_gene_sample.name=Fermented Chicken Gene Sample
 item.wolf_gene_sample.name=Fermented Wolf Gene Sample
 item.sheep_gene_sample.name=Fermented Sheep Gene Sample
+item.rabbit_gene_sample.name=Fermented Rabbit Gene Sample
 
 itemGroup.tabMBuilding=Minestrapp Building Blocks
 itemGroup.tabMDecor=Minestrapp Decoration Blocks
@@ -811,6 +813,8 @@ achievement.crystal_heart=Blood Magic
 achievement.crystal_heart.desc=Sacrifice your own life-force to activate a Crystal Heart.
 achievement.gene_block=What hath science wrought???
 achievement.gene_block.desc=Mutate a block of flesh into a gene block.
+achievement.pink_sheep=What are the odds?
+achievement.pink_sheep.desc=Create a pink sheep gene block by random chance.
 
 recipe.melting=Melting
 recipe.sawmill.shaped=Shaped Milling

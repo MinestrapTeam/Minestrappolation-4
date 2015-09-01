@@ -1,0 +1,40 @@
+{
+    "variants": {
+        "age=0": [
+			{ "model": "ministrapp:block_rabbit_0" },
+			{ "model": "ministrapp:block_rabbit_0", "y": 90 },
+			{ "model": "ministrapp:block_rabbit_0", "y": 180 },
+			{ "model": "ministrapp:block_rabbit_0", "y": 270 }
+		],
+		"age=1": [
+			{ "model": "ministrapp:block_rabbit_1" },
+			{ "model": "ministrapp:block_rabbit_1", "y": 90 },
+			{ "model": "ministrapp:block_rabbit_1", "y": 180 },
+			{ "model": "ministrapp:block_rabbit_1", "y": 270 }
+		],
+		"age=2": [
+			{ "model": "ministrapp:block_rabbit_2" },
+			{ "model": "ministrapp:block_rabbit_2", "y": 90 },
+			{ "model": "ministrapp:block_rabbit_2", "y": 180 },
+			{ "model": "ministrapp:block_rabbit_2", "y": 270 }
+		],
+		"age=3": [
+			{ "model": "ministrapp:block_rabbit_3" },
+			{ "model": "ministrapp:block_rabbit_3", "y": 90 },
+			{ "model": "ministrapp:block_rabbit_3", "y": 180 },
+			{ "model": "ministrapp:block_rabbit_3", "y": 270 }
+		],
+		"age=4": [
+			{ "model": "ministrapp:block_rabbit_4" },
+			{ "model": "ministrapp:block_rabbit_4", "y": 90 },
+			{ "model": "ministrapp:block_rabbit_4", "y": 180 },
+			{ "model": "ministrapp:block_rabbit_4", "y": 270 }
+		],
+		"age=5": [
+			{ "model": "ministrapp:block_rabbit_5" },
+			{ "model": "ministrapp:block_rabbit_5", "y": 90 },
+			{ "model": "ministrapp:block_rabbit_5", "y": 180 },
+			{ "model": "ministrapp:block_rabbit_5", "y": 270 }
+		]
+    }
+}
