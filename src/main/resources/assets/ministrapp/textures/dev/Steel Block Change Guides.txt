@@ -1,0 +1,8 @@
+LEVELS:
+0, 0.57, 255
+
+BRIGHTNESS:
+-6
+
+HUE/SAT:
++4, -40, -8
