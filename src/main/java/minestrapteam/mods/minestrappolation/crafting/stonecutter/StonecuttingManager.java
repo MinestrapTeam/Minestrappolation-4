@@ -223,6 +223,10 @@ public class StonecuttingManager
 		this.addRecipe(new ItemStack(Blocks.stone_slab2, 6, 0), null, new Object[] { "SSS", 'S', new ItemStack(Blocks.red_sandstone, 1, 0)});
 		this.addRecipe(new ItemStack(MBlocks.prismarine_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(Blocks.prismarine, 1, 0)});
 		
+		this.addRecipe(new ItemStack(MBlocks.andesite_brick_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.andesite_bricks, 1)});
+		this.addRecipe(new ItemStack(MBlocks.diorite_brick_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.diorite_bricks, 1)});
+		this.addRecipe(new ItemStack(MBlocks.granite_brick_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.granite_bricks, 1)});
+		this.addRecipe(new ItemStack(MBlocks.slate_brick_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.slate_bricks, 1)});
 		this.addRecipe(new ItemStack(MBlocks.desert_quartz_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.desert_quartz_block, 1)});
 		this.addRecipe(new ItemStack(MBlocks.radiant_slab, 6), null, new Object[] { "SSS", 'S', new ItemStack(MBlocks.radiant_block, 1)});
 		
@@ -285,6 +289,10 @@ public class StonecuttingManager
 		this.addRecipe(new ItemStack(MBlocks.oceanstone_brick_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(MBlocks.biome_bricks, 1, 7)});
 		this.addRecipe(new ItemStack(MBlocks.poceanstone_brick_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(MBlocks.biome_bricks, 1, 8)});
 		this.addRecipe(new ItemStack(MBlocks.prismarine_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(Blocks.prismarine, 1, 0)});
+		this.addRecipe(new ItemStack(MBlocks.andesite_brick_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(MBlocks.andesite_bricks, 1, 0)});
+		this.addRecipe(new ItemStack(MBlocks.diorite_brick_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(MBlocks.diorite_bricks, 1, 0)});
+		this.addRecipe(new ItemStack(MBlocks.granite_brick_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(MBlocks.granite_bricks, 1, 0)});
+		this.addRecipe(new ItemStack(MBlocks.slate_brick_stairs, 4, 0), null, new Object[] { "  S", " SS", "SSS", 'S', new ItemStack(MBlocks.slate_bricks, 1, 0)});
 		
 		//Walls, Fences, etc
 		this.addRecipe(new ItemStack(Blocks.cobblestone_wall, 2, 0), null, new Object[] { "CCC", "CCC", 'C', new ItemStack(MItems.chunks, 1, 0)});

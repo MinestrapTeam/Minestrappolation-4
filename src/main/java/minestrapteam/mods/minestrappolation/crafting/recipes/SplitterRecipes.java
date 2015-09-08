@@ -540,7 +540,6 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MItems.satchel, 1), new ItemStack(Items.rabbit_hide, 7), new ItemStack(MBlocks.crate, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.backpack, 1), new ItemStack(MItems.wolf_hide, 5), new ItemStack(MBlocks.barrel, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.crystal_heart, 1), new ItemStack(MItems.diamond_dust, 4), new ItemStack(MItems.heart_piece, 1), 0.1F);
-		this.addRecipe(new ItemStack(MBlocks.block_flesh, 1), new ItemStack(MItems.flesh, 8), new ItemStack(MItems.crystal_heart, 1), 0.1F);
 	}
 	
 	public void addRecipe(Block input, ItemStack stack, ItemStack stack2, float experience)

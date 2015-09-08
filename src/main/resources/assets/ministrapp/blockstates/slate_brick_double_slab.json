@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "ministrapp:slate_bricks" }
+    }
+}

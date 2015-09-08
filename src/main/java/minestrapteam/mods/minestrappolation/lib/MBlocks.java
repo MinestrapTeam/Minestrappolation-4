@@ -407,6 +407,10 @@ public class MBlocks
 	// Stairs
 	public static Block	redwood_stairs;
 	public static Block	frozen_oak_stairs;
+	public static Block andesite_brick_stairs;
+	public static Block diorite_brick_stairs;
+	public static Block granite_brick_stairs;
+	public static Block slate_brick_stairs;
 	public static Block	desert_quartz_stairs;
 	public static Block radiant_stairs;
 	public static Block	deepstone_stairs;
@@ -434,6 +438,14 @@ public class MBlocks
 	public static BlockMDoubleSlab redwood_double_slab;
 	public static BlockMSlab       frozen_oak_slab;
 	public static BlockMDoubleSlab frozen_oak_double_slab;
+	public static BlockMSlab	   andesite_brick_slab;
+	public static BlockMDoubleSlab andesite_brick_double_slab;
+	public static BlockMSlab	   diorite_brick_slab;
+	public static BlockMDoubleSlab diorite_brick_double_slab;
+	public static BlockMSlab	   granite_brick_slab;
+	public static BlockMDoubleSlab granite_brick_double_slab;
+	public static BlockMSlab	   slate_brick_slab;
+	public static BlockMDoubleSlab slate_brick_double_slab;
 	public static BlockMSlab	   desert_quartz_slab;
 	public static BlockMDoubleSlab desert_quartz_double_slab;
 	public static BlockMSlab	   radiant_slab;
@@ -738,6 +750,10 @@ public class MBlocks
 		//Stairs
 		redwood_stairs = new MBlockStairs(ministrapp_planks.getStateFromMeta(MWoodType.REDWOOD.getMetadata()), 300).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("redwood_stairs");
 		frozen_oak_stairs = new MBlockStairs(ministrapp_planks.getStateFromMeta(MWoodType.FROZEN.getMetadata()), 300).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("frozen_oak_stairs");
+		andesite_brick_stairs = new MBlockStairs(andesite_bricks.getDefaultState(), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("andesite_brick_stairs");
+		diorite_brick_stairs = new MBlockStairs(diorite_bricks.getDefaultState(), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("diorite_brick_stairs");
+		granite_brick_stairs = new MBlockStairs(granite_bricks.getDefaultState(), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("granite_brick_stairs");
+		slate_brick_stairs = new MBlockStairs(slate_bricks.getDefaultState(), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("slate_brick_stairs");
 		desert_quartz_stairs = new MBlockStairs(desert_quartz_block.getDefaultState(), 0).setHardness(1.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("desert_quartz_stairs");
 		radiant_stairs = new MBlockStairs(radiant_block.getDefaultState(), 0).setHardness(1.0F).setLightLevel(0.6F).setStepSound(Block.soundTypePiston).setUnlocalizedName("radiant_quartz_stairs");
 		deepstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()), 0).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("deepstone_stairs");
@@ -766,6 +782,14 @@ public class MBlocks
 		frozen_oak_slab = new BlockMSlab(Material.wood, "frozen_oak_slab", 2F, 5F, "axe", 0, 300);
 		frozen_oak_double_slab = new BlockMDoubleSlab(Material.wood, "frozen_oak", 2F, 5F, "axe", 0, 300, frozen_oak_slab);
 		
+		andesite_brick_slab = new BlockMSlab(Material.rock, "andesite_brick_slab", 1F, 4F, "pickaxe", 0, 0);
+		andesite_brick_double_slab = new BlockMDoubleSlab(Material.rock, "andesite_brick", 1F, 4F, "pickaxe", 0, 0, andesite_brick_slab);
+		diorite_brick_slab = new BlockMSlab(Material.rock, "diorite_brick_slab", 1F, 4F, "pickaxe", 0, 0);
+		diorite_brick_double_slab = new BlockMDoubleSlab(Material.rock, "diorite_brick", 1F, 4F, "pickaxe", 0, 0, diorite_brick_slab);
+		granite_brick_slab = new BlockMSlab(Material.rock, "granite_brick_slab", 1F, 4F, "pickaxe", 0, 0);
+		granite_brick_double_slab = new BlockMDoubleSlab(Material.rock, "granite_brick", 1F, 4F, "pickaxe", 0, 0, granite_brick_slab);
+		slate_brick_slab = new BlockMSlab(Material.rock, "slate_brick_slab", 1F, 4F, "pickaxe", 0, 0);
+		slate_brick_double_slab = new BlockMDoubleSlab(Material.rock, "slate_brick", 1F, 4F, "pickaxe", 0, 0, slate_brick_slab);
 		desert_quartz_slab = new BlockMSlab(Material.rock, "desert_quartz_slab", 1F, 4F, "pickaxe", 0, 0);
 		desert_quartz_double_slab = new BlockMDoubleSlab(Material.rock, "desert_quartz", 1F, 4F, "pickaxe", 0, 0, desert_quartz_slab);
 		radiant_slab = new BlockMSlab(Material.rock, "radiant_quartz_slab", 1F, 4F, "pickaxe", 3, 0);
@@ -880,12 +904,20 @@ public class MBlocks
 		register(slate_bricks);
 		register(slate_pattern_bricks);
 		register(slate_refined);
+		register(slate_brick_stairs);
+		registerSlab("slate_brick_slab", "slate_brick_double_slab", slate_brick_slab, slate_brick_double_slab);
 		register(granite_bricks);
 		register(granite_pattern_bricks);
+		register(granite_brick_stairs);
+		registerSlab("granite_brick_slab", "granite_brick_double_slab", granite_brick_slab, granite_brick_double_slab);
 		register(diorite_bricks);
 		register(diorite_pattern_bricks);
+		register(diorite_brick_stairs);
+		registerSlab("diorite_brick_slab", "diorite_brick_double_slab", diorite_brick_slab, diorite_brick_double_slab);
 		register(andesite_bricks);
 		register(andesite_pattern_bricks);
+		register(andesite_brick_stairs);
+		registerSlab("andesite_brick_slab", "andesite_brick_double_slab", andesite_brick_slab, andesite_brick_double_slab);
 		register(flint_block);
 		register(flint_bricks);
 		register(flint_pattern_bricks);
