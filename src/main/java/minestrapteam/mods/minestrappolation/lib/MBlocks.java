@@ -68,6 +68,7 @@ import minestrapteam.mods.minestrappolation.block.MBlockPlanks;
 import minestrapteam.mods.minestrappolation.block.MBlockSapling;
 import minestrapteam.mods.minestrappolation.block.MBlockSnow;
 import minestrapteam.mods.minestrappolation.block.MBlockStairs;
+import minestrapteam.mods.minestrappolation.block.MBlockWall;
 import minestrapteam.mods.minestrappolation.block.biomeores.BlockBiomeCoal;
 import minestrapteam.mods.minestrappolation.block.biomeores.BlockBiomeCobble;
 import minestrapteam.mods.minestrappolation.block.biomeores.BlockBiomeCopper;
@@ -698,7 +699,7 @@ public class MBlocks
 		redwood_fence_gate = new BlockFenceGate().setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("redwood_fence_gate");
 		frozen_oak_fence = new BlockFence(Material.wood).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("frozen_oak_fence");
 		frozen_oak_fence_gate = new BlockFenceGate().setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("frozen_oak_fence_gate");
-		red_rock_wall = new BlockWall(biome_cobble).setUnlocalizedName("red_rock_wall").setCreativeTab(Minestrappolation.tabMDecor);
+		red_rock_wall = new MBlockWall(biome_cobble, 2.0F, 10.0F).setUnlocalizedName("red_rock_wall");
 		refined_glass_pane = new BlockMPane(Material.glass, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setUnlocalizedName("refined_pane");
 		bricked_glass_pane = new BlockMPane(Material.glass, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setUnlocalizedName("bricked_pane");
 		tiled_glass_pane = new BlockMPane(Material.glass, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setUnlocalizedName("tiled_pane");
@@ -1064,7 +1065,7 @@ public class MBlocks
 		register(redwood_fence);
 		register(frozen_oak_fence);
 		//TODO: Fix and Add Biome-Specific Cobble Walls
-		//register(red_rock_wall);
+		register(red_rock_wall);
 		register(cardboard);
 		register(refined_glass_pane);
 		register(bricked_glass_pane);

@@ -76,6 +76,10 @@ public class MDrops
 		if(living instanceof EntityGuardian)
 		{
 			dropSquidItems(living, random, onFire, looting);
+			if(((EntityGuardian)living).isElder() == true)
+			{
+				dropElderGuardianItems(living, random, onFire, looting);
+			}
 		}
 		if(living instanceof EntityIronGolem)
 		{
@@ -147,6 +151,13 @@ public class MDrops
 				living.dropItem(MItems.calamari, random.nextInt(Config.tentacleDropAmount + looting));
 		}
 	}
+	private static void dropElderGuardianItems(EntityLivingBase living, Random random, boolean onFire, int looting)
+	{
+		if (random.nextFloat() / looting < 70)
+		{
+			living.dropItem(MItems.heart_piece, 1);
+		}
+	}
 	private static void dropBatItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
 		if (random.nextFloat() / looting < Config.sinewDropChance)
@@ -165,6 +176,8 @@ public class MDrops
 	{
 		if (random.nextFloat() / looting < Config.slimeCoreDropChance)
 		{
+			if(looting > 1)
+				looting = 1;
 			living.dropItem(MItems.slime_core, random.nextInt(Config.slimeCoreDropAmount + looting));
 		}
 	}
