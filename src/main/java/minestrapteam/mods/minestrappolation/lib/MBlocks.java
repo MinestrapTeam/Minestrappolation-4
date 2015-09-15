@@ -358,6 +358,13 @@ public class MBlocks
 	public static Block	frozen_oak_fence;
 	public static Block	frozen_oak_fence_gate;
 	public static Block red_rock_wall;
+	public static Block red_rock_wall_mossy;
+	public static Block coldstone_wall;
+	public static Block coldstone_wall_mossy;
+	public static Block icestone_wall;
+	public static Block icestone_wall_mossy;
+	public static Block oceanstone_wall;
+	public static Block oceanstone_wall_mossy;
 	public static Block	refined_glass_pane;
 	public static Block	bricked_glass_pane;
 	public static Block	tiled_glass_pane;
@@ -700,6 +707,13 @@ public class MBlocks
 		frozen_oak_fence = new BlockFence(Material.wood).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("frozen_oak_fence");
 		frozen_oak_fence_gate = new BlockFenceGate().setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("frozen_oak_fence_gate");
 		red_rock_wall = new MBlockWall(biome_cobble, 2.0F, 10.0F).setUnlocalizedName("red_rock_wall");
+		red_rock_wall_mossy = new MBlockWall(biome_cobble, 2.0F, 10.0F).setUnlocalizedName("red_rock_wall_mossy");
+		coldstone_wall = new MBlockWall(biome_cobble, 2.0F, 10.0F).setUnlocalizedName("coldstone_wall");
+		coldstone_wall_mossy = new MBlockWall(biome_cobble, 2.0F, 10.0F).setUnlocalizedName("coldstone_wall_mossy");
+		icestone_wall = new MBlockWall(biome_cobble, 2.0F, 10.0F).setUnlocalizedName("icestone_wall");
+		icestone_wall_mossy = new MBlockWall(biome_cobble, 2.0F, 10.0F).setUnlocalizedName("icestone_wall_mossy");
+		oceanstone_wall = new MBlockWall(biome_cobble, 2.0F, 10.0F).setUnlocalizedName("oceanstone_wall");
+		oceanstone_wall_mossy = new MBlockWall(biome_cobble, 2.0F, 10.0F).setUnlocalizedName("oceanstone_wall_mossy");
 		refined_glass_pane = new BlockMPane(Material.glass, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setUnlocalizedName("refined_pane");
 		bricked_glass_pane = new BlockMPane(Material.glass, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setUnlocalizedName("bricked_pane");
 		tiled_glass_pane = new BlockMPane(Material.glass, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setUnlocalizedName("tiled_pane");
@@ -1064,8 +1078,14 @@ public class MBlocks
 		register(glacieric_ice_vein);
 		register(redwood_fence);
 		register(frozen_oak_fence);
-		//TODO: Fix and Add Biome-Specific Cobble Walls
 		register(red_rock_wall);
+		register(red_rock_wall_mossy);
+		register(coldstone_wall);
+		register(coldstone_wall_mossy);
+		register(icestone_wall);
+		register(icestone_wall_mossy);
+		register(oceanstone_wall);
+		register(oceanstone_wall_mossy);
 		register(cardboard);
 		register(refined_glass_pane);
 		register(bricked_glass_pane);

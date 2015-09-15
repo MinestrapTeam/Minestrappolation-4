@@ -4,6 +4,7 @@ import java.util.List;
 
 import minestrapteam.mods.minestrappolation.Minestrappolation;
 import minestrapteam.mods.minestrappolation.enumtypes.MWoodType;
+import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import minestrapteam.mods.minestrappolation.lib.MReference;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFenceGate;
@@ -38,13 +39,15 @@ public class MBlockWall extends Block
     public static final PropertyBool EAST = PropertyBool.create("east");
     public static final PropertyBool SOUTH = PropertyBool.create("south");
     public static final PropertyBool WEST = PropertyBool.create("west");
-
+    public Block modelBlock;
+    
     public MBlockWall(Block modelBlock, float hardness, float resistance)
     {
         super(modelBlock.getMaterial());
         this.setDefaultState(this.blockState.getBaseState().withProperty(UP, Boolean.valueOf(false)).withProperty(NORTH, Boolean.valueOf(false)).withProperty(EAST, Boolean.valueOf(false)).withProperty(SOUTH, Boolean.valueOf(false)).withProperty(WEST, Boolean.valueOf(false)));
         this.setHardness(hardness);
         this.setResistance(resistance / 3.0F);
+        this.modelBlock = modelBlock;
         this.setStepSound(modelBlock.stepSound);
         this.setCreativeTab(Minestrappolation.tabMDecor);
     }
@@ -122,7 +125,10 @@ public class MBlockWall extends Block
     public boolean canConnectTo(IBlockAccess worldIn, BlockPos pos)
     {
         Block block = worldIn.getBlockState(pos).getBlock();
-        return block == Blocks.barrier ? false : (block != this && !(block instanceof BlockFenceGate) ? (block.getMaterial().isOpaque() && block.isFullCube() ? block.getMaterial() != Material.gourd : false) : true);
+        if((this == MBlocks.red_rock_wall && block == MBlocks.red_rock_wall_mossy) || (this == MBlocks.red_rock_wall_mossy && block == MBlocks.red_rock_wall) || (this == MBlocks.coldstone_wall && block == MBlocks.coldstone_wall_mossy) || (this == MBlocks.coldstone_wall_mossy && block == MBlocks.coldstone_wall) || (this == MBlocks.icestone_wall && block == MBlocks.icestone_wall_mossy) || (this == MBlocks.icestone_wall_mossy && block == MBlocks.icestone_wall) || (this == MBlocks.oceanstone_wall && block == MBlocks.oceanstone_wall_mossy) || (this == MBlocks.oceanstone_wall_mossy && block == MBlocks.oceanstone_wall))
+        	return true;
+        else
+        	return block == Blocks.barrier ? false : (block != this && !(block instanceof BlockFenceGate) ? (block.getMaterial().isOpaque() && block.isFullCube() ? block.getMaterial() != Material.gourd : false) : true);
     }
 
     /**

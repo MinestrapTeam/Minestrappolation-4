@@ -528,6 +528,15 @@ tile.block_sheep_purple.name=Purple Sheep Gene Block
 tile.block_sheep_magenta.name=Magenta Sheep Gene Block
 tile.block_rabbit.name=Rabbit Gene Block
 
+tile.red_rock_wall.name=Cobbled Red Rock Wall
+tile.red_rock_wall_mossy.name=Mossy Cobbled Red Rock Wall
+tile.coldstone_wall.name=Cobbled Coldstone Wall
+tile.coldstone_wall_mossy.name=Mossy Cobbled Coldstone Wall
+tile.icestone_wall.name=Cracked Icestone Wall
+tile.icestone_wall_mossy.name=Wet Cracked Icestone Wall
+tile.oceanstone_wall.name=Cobbled Oceanstone Wall
+tile.oceanstone_wall_mossy.name=Mossy Cobbled Oceanstone Wall
+
 item.dough.name=Dough
 item.bun.name=Bun
 item.pbj_sandwich.name=Peanut Butter and Jelly Sandwich

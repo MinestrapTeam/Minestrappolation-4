@@ -370,6 +370,14 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MBlocks.radiant_chiseled, 1), new ItemStack(MBlocks.radiant_slab, 1), new ItemStack(MBlocks.radiant_slab, 1), 0.1F);
 		
 		this.addRecipe(new ItemStack(Blocks.cobblestone_wall, 1), new ItemStack(MItems.chunks, 2, 0), new ItemStack(MItems.chunks, 1, 0), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.red_rock_wall, 1), new ItemStack(MItems.chunks, 2, 1), new ItemStack(MItems.chunks, 1, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.red_rock_wall_mossy, 1), new ItemStack(MItems.chunks, 2, 1), new ItemStack(MItems.chunks, 1, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.coldstone_wall, 1), new ItemStack(MItems.chunks, 2, 1), new ItemStack(MItems.chunks, 1, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.coldstone_wall_mossy, 1), new ItemStack(MItems.chunks, 2, 1), new ItemStack(MItems.chunks, 1, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.icestone_wall, 1), new ItemStack(MItems.chunks, 2, 1), new ItemStack(MItems.chunks, 1, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.icestone_wall_mossy, 1), new ItemStack(MItems.chunks, 2, 1), new ItemStack(MItems.chunks, 1, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.oceanstone_wall, 1), new ItemStack(MItems.chunks, 2, 1), new ItemStack(MItems.chunks, 1, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.oceanstone_wall_mossy, 1), new ItemStack(MItems.chunks, 2, 1), new ItemStack(MItems.chunks, 1, 1), 0.1F);
 		this.addRecipe(new ItemStack(Blocks.nether_brick_fence, 1), new ItemStack(Items.netherbrick, 2), new ItemStack(Items.netherbrick, 1), 0.1F);
 		
 		this.addRecipe(new ItemStack(MBlocks.roads, 1, 0), new ItemStack(Blocks.dirt, 1, 0), new ItemStack(MItems.chunks, 2, 0), 0.1F);

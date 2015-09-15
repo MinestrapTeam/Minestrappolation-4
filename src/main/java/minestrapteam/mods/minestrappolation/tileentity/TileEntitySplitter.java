@@ -243,7 +243,7 @@ public class TileEntitySplitter extends TileEntityInventory implements ISidedInv
 		{
 			item = stack.getItem();
 		}
-		if(item == MItems.mana_leaf) return 800;
+		if(item == MItems.mana_leaf) return 820;
 		if(item == Items.gold_nugget) return 960;
 		if(item == Items.dye && item.getMetadata(stack) == 4) return 3200;
 		if(item == Items.gold_ingot) return 6400;

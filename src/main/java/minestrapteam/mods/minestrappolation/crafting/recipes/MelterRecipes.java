@@ -106,6 +106,14 @@ public class MelterRecipes
 		this.addRecipe(MBlocks.flint_lamp_prismarine, new ItemStack(Items.lava_bucket), 0.7F, true);
 		this.addRecipe(MBlocks.stonecutter, new ItemStack(Items.lava_bucket), 0.6F, true);
 		this.addRecipe(MBlocks.roads, new ItemStack(Items.lava_bucket), 0.5F, true);
+		this.addRecipe(MBlocks.red_rock_wall, new ItemStack(Items.lava_bucket), 0.5F, true);
+		this.addRecipe(MBlocks.red_rock_wall_mossy, new ItemStack(Items.lava_bucket), 0.5F, true);
+		this.addRecipe(MBlocks.coldstone_wall, new ItemStack(Items.lava_bucket), 0.5F, true);
+		this.addRecipe(MBlocks.coldstone_wall_mossy, new ItemStack(Items.lava_bucket), 0.5F, true);
+		this.addRecipe(MBlocks.icestone_wall, new ItemStack(Items.lava_bucket), 0.5F, true);
+		this.addRecipe(MBlocks.icestone_wall_mossy, new ItemStack(Items.lava_bucket), 0.5F, true);
+		this.addRecipe(MBlocks.oceanstone_wall, new ItemStack(Items.lava_bucket), 0.5F, true);
+		this.addRecipe(MBlocks.oceanstone_wall_mossy, new ItemStack(Items.lava_bucket), 0.5F, true);
 		this.addRecipe(MBlocks.stone_boulder, new ItemStack(Items.lava_bucket), 0.6F, true);
 		this.addRecipe(MBlocks.red_rock_boulder, new ItemStack(Items.lava_bucket), 0.6F, true);
 		this.addRecipe(MBlocks.coldstone_boulder, new ItemStack(Items.lava_bucket), 0.6F, true);
