@@ -69,15 +69,7 @@ public abstract class MBlockLeavesBase extends BlockLeavesBase implements net.mi
 		{
 			if (((Boolean) state.getValue(CHECK_DECAY)).booleanValue() && ((Boolean) state.getValue(DECAYABLE)).booleanValue())
 			{
-				byte b0;
-				if(state.getValue(MBlockLeaves.VARIANT) == MWoodType.REDWOOD)
-				{
-					b0 = 12;
-				}
-				else
-				{
-					b0 = 6;
-				}
+				byte b0 = 6;
 				int i = b0 + 1;
 				int j = pos.getX();
 				int k = pos.getY();
@@ -174,7 +166,7 @@ public abstract class MBlockLeavesBase extends BlockLeavesBase implements net.mi
 				
 				k1 = this.surroundings[j1 * i1 + j1 * b1 + j1];
 				
-				if (k1 >= 0)
+				if ((k1 >= 0 && state.getValue(MBlockLeaves.VARIANT) != MWoodType.REDWOOD) || (k1 >= -1.9 && state.getValue(MBlockLeaves.VARIANT) == MWoodType.REDWOOD))
 				{
 					worldIn.setBlockState(pos, state.withProperty(CHECK_DECAY, Boolean.valueOf(false)), 4);
 				}
@@ -267,7 +259,15 @@ public abstract class MBlockLeavesBase extends BlockLeavesBase implements net.mi
 	{
 		java.util.List<ItemStack> ret = new java.util.ArrayList<ItemStack>();
 		Random rand = world instanceof World ? ((World) world).rand : new Random();
-		int chance = this.getSaplingDropChance(state);
+		int chance;
+		if(state.getValue(MBlockLeaves.VARIANT) == MWoodType.REDWOOD)
+		{
+			chance = this.getSaplingDropChance(state) * 7;
+		}
+		else
+		{
+			chance = this.getSaplingDropChance(state);
+		}
 		
 		if (fortune > 0)
 		{
