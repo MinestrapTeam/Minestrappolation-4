@@ -66,6 +66,7 @@ import minestrapteam.mods.minestrappolation.block.MBlockLog;
 import minestrapteam.mods.minestrappolation.block.MBlockPillar;
 import minestrapteam.mods.minestrappolation.block.MBlockPlanks;
 import minestrapteam.mods.minestrappolation.block.MBlockSapling;
+import minestrapteam.mods.minestrappolation.block.MBlockSketchyBackwaterFlowerpot;
 import minestrapteam.mods.minestrappolation.block.MBlockSnow;
 import minestrapteam.mods.minestrappolation.block.MBlockStairs;
 import minestrapteam.mods.minestrappolation.block.MBlockWall;
@@ -150,6 +151,7 @@ import minestrapteam.mods.minestrappolation.item.blocks.ItemBlockTiles;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.BlockFenceGate;
+import net.minecraft.block.BlockFlowerPot;
 import net.minecraft.block.BlockWall;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -300,6 +302,7 @@ public class MBlocks
 	public static Block	coldstone_boulder;
 	public static Block	icestone_boulder;
 	public static Block	oceanstone_boulder;
+	public static Block ministrapp_flower_pot;
 	public static Block	roads;
 	public static Block fan;
 	public static Block rope;
@@ -650,6 +653,7 @@ public class MBlocks
 		coldstone_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("coldstone_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
 		icestone_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("icestone_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
 		oceanstone_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("oceanstone_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
+		ministrapp_flower_pot = new MBlockSketchyBackwaterFlowerpot().setHardness(0.0F).setStepSound(Block.soundTypeStone).setUnlocalizedName("ministrapp_flower_pot").setCreativeTab(Minestrappolation.tabMDecor);
 		roads = new BlockRoads(Material.rock, MapColor.blackColor).setHardness(3.0F).setResistance(10.0F).setUnlocalizedName("roads").setCreativeTab(Minestrappolation.tabMBuilding);
 		rope = new BlockRope(Material.cloth, MapColor.brownColor).setHardness(0.8F).setStepSound(Block.soundTypeCloth).setUnlocalizedName("rope").setCreativeTab(Minestrappolation.tabMDecor);
 		chimney = new BlockChimney(Material.rock, MapColor.blackColor).setHardness(1.5F).setResistance(10F).setUnlocalizedName("chimney").setCreativeTab(Minestrappolation.tabMDecor);
@@ -1075,6 +1079,7 @@ public class MBlocks
 		
 		register(dead_branch);
 		register(cold_cobweb);
+		register(ministrapp_flower_pot);
 		register(glacieric_ice_vein);
 		register(redwood_fence);
 		register(frozen_oak_fence);

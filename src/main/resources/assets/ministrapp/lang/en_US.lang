@@ -537,6 +537,8 @@ tile.icestone_wall_mossy.name=Wet Cracked Icestone Wall
 tile.oceanstone_wall.name=Cobbled Oceanstone Wall
 tile.oceanstone_wall_mossy.name=Mossy Cobbled Oceanstone Wall
 
+tile.ministrapp_flower_pot.name=Flower Pot
+
 item.dough.name=Dough
 item.bun.name=Bun
 item.pbj_sandwich.name=Peanut Butter and Jelly Sandwich

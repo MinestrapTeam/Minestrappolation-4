@@ -321,6 +321,7 @@ public class MRecipes
 		
 		//Vanilla
 		GameRegistry.addRecipe(new ItemStack(Blocks.redstone_lamp, 1, 0), new Object[] { " R ", "RSR", " R ", 'R', Items.redstone, 'S', MBlocks.sunstone_block});
+		GameRegistry.addRecipe(new ItemStack(MBlocks.ministrapp_flower_pot, 1, 0), new Object[] { "BDB", " B ", 'B', Items.brick, 'D', new ItemStack(Blocks.dirt, 1, 0)});
 	}
 	
 	public static void removeRecipes()
@@ -387,6 +388,7 @@ public class MRecipes
 			RecipeHelper.removeRecipeContaining(Blocks.nether_brick_fence);
 			RecipeHelper.removeRecipeContaining(Blocks.quartz_block);
 			RecipeHelper.removeRecipeContaining(Items.ender_eye);
+			RecipeHelper.removeRecipeContaining(Items.flower_pot);
 		}
 	}
 	
