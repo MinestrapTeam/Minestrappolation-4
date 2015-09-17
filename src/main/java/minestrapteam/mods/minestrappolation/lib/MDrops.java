@@ -145,7 +145,7 @@ public class MDrops
 	{
 		if (random.nextFloat() / looting < Config.tentacleDropChance)
 		{
-			if(onFire == true)
+			if(onFire == false)
 				living.dropItem(MItems.squid_tentacle, random.nextInt(Config.tentacleDropAmount + looting));
 			else
 				living.dropItem(MItems.calamari, random.nextInt(Config.tentacleDropAmount + looting));
