@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "ministrapp:sandstone_pattern_bricks" }
+    }
+}

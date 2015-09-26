@@ -39,6 +39,7 @@ import minestrapteam.mods.minestrappolation.entity.EntityMudBall;
 import minestrapteam.mods.minestrappolation.entity.RenderIceBall;
 import minestrapteam.mods.minestrappolation.entity.RenderMudBall;
 import minestrapteam.mods.minestrappolation.item.ItemBricks;
+import minestrapteam.mods.minestrappolation.item.ItemBricks2;
 import minestrapteam.mods.minestrappolation.item.ItemChunk;
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import minestrapteam.mods.minestrappolation.lib.MFluid;
@@ -107,6 +108,7 @@ public class ClientProxy extends CommonProxy
 		
 		ItemChunk.inventoryRender();
 		ItemBricks.inventoryRender();
+		ItemBricks2.inventoryRender();
 		
 		RenderingRegistry.registerEntityRenderingHandler(EntityMudBall.class, new RenderMudBall(Minecraft.getMinecraft().getRenderManager(), MItems.mud_ball, Minecraft.getMinecraft().getRenderItem()));
 		RenderingRegistry.registerEntityRenderingHandler(EntityIceball.class, new RenderIceBall(Minecraft.getMinecraft().getRenderManager(), MItems.ice_charge, Minecraft.getMinecraft().getRenderItem()));

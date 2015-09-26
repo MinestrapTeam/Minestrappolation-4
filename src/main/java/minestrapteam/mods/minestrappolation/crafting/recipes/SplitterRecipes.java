@@ -330,6 +330,8 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MBlocks.diorite_bricks, 1), new ItemStack(MItems.bricks, 2, 12), new ItemStack(MItems.bricks, 2, 12), 0.1F);
 		this.addRecipe(new ItemStack(MBlocks.andesite_bricks, 1), new ItemStack(MItems.bricks, 2, 13), new ItemStack(MItems.bricks, 2, 13), 0.1F);
 		this.addRecipe(new ItemStack(MBlocks.slate_bricks, 1), new ItemStack(MItems.bricks, 2, 10), new ItemStack(MItems.bricks, 2, 10), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.sandstone_bricks, 1), new ItemStack(MItems.bricks2, 2, 0), new ItemStack(MItems.bricks2, 2, 0), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.red_sandstone_bricks, 1), new ItemStack(MItems.bricks2, 2, 1), new ItemStack(MItems.bricks2, 2, 1), 0.1F);
 		this.addRecipe(new ItemStack(MBlocks.flint_bricks, 1), new ItemStack(MItems.bricks, 2, 14), new ItemStack(MItems.bricks, 2, 14), 0.1F);
 		this.addRecipe(new ItemStack(Blocks.prismarine, 1, 1), new ItemStack(Items.prismarine_shard, 2), new ItemStack(Items.prismarine_shard, 2), 0.1F);
 		this.addRecipe(new ItemStack(Blocks.brick_block, 1), new ItemStack(Items.brick, 2), new ItemStack(Items.brick, 2), 0.1F);
@@ -351,6 +353,8 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MBlocks.diorite_pattern_bricks, 1), new ItemStack(MItems.bricks, 2, 12), new ItemStack(MItems.bricks, 2, 12), 0.1F);
 		this.addRecipe(new ItemStack(MBlocks.andesite_pattern_bricks, 1), new ItemStack(MItems.bricks, 2, 13), new ItemStack(MItems.bricks, 2, 13), 0.1F);
 		this.addRecipe(new ItemStack(MBlocks.slate_pattern_bricks, 1), new ItemStack(MItems.bricks, 2, 10), new ItemStack(MItems.bricks, 2, 10), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.sandstone_pattern_bricks, 1), new ItemStack(MItems.bricks2, 2, 0), new ItemStack(MItems.bricks2, 2, 0), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.red_sandstone_pattern_bricks, 1), new ItemStack(MItems.bricks2, 2, 1), new ItemStack(MItems.bricks2, 2, 1), 0.1F);
 		this.addRecipe(new ItemStack(MBlocks.flint_pattern_bricks, 1), new ItemStack(MItems.bricks, 2, 14), new ItemStack(MItems.bricks, 2, 14), 0.1F);
 		
 		this.addRecipe(new ItemStack(Blocks.stonebrick, 1, 3), new ItemStack(Blocks.stone_slab, 1), new ItemStack(Blocks.stone_slab, 1), 0.1F);
@@ -548,6 +552,33 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MItems.satchel, 1), new ItemStack(Items.rabbit_hide, 7), new ItemStack(MBlocks.crate, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.backpack, 1), new ItemStack(MItems.wolf_hide, 5), new ItemStack(MBlocks.barrel, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.crystal_heart, 1), new ItemStack(MItems.diamond_dust, 4), new ItemStack(MItems.heart_piece, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.inert_crystal_heart, 1), new ItemStack(MItems.diamond_dust, 4), new ItemStack(MItems.heart_piece, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.block_cow, 1), new ItemStack(MBlocks.block_flesh, 1), new ItemStack(MItems.cow_gene_sample, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.block_mooshroom, 1), new ItemStack(MBlocks.block_cow, 1), new ItemStack(MItems.infectious_fungus, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.block_chicken, 1), new ItemStack(MBlocks.block_flesh, 1), new ItemStack(MItems.chicken_gene_sample, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.block_rabbit, 1), new ItemStack(MBlocks.block_flesh, 1), new ItemStack(MItems.rabbit_gene_sample, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.block_wolf, 1), new ItemStack(MBlocks.block_flesh, 1), new ItemStack(MItems.wolf_gene_sample, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.block_sheep_white, 1), new ItemStack(MBlocks.block_flesh, 1), new ItemStack(MItems.sheep_gene_sample, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.block_sheep_silver, 1), new ItemStack(MBlocks.block_flesh, 1), new ItemStack(MItems.sheep_gene_sample, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.block_sheep_grey, 1), new ItemStack(MBlocks.block_flesh, 1), new ItemStack(MItems.sheep_gene_sample, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.block_sheep_black, 1), new ItemStack(MBlocks.block_flesh, 1), new ItemStack(MItems.sheep_gene_sample, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.block_sheep_brown, 1), new ItemStack(MBlocks.block_flesh, 1), new ItemStack(MItems.sheep_gene_sample, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.block_sheep_pink, 1), new ItemStack(MBlocks.block_flesh, 1), new ItemStack(MItems.sheep_gene_sample, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.block_sheep_red, 1), new ItemStack(MBlocks.block_flesh, 1), new ItemStack(MItems.sheep_gene_sample, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.block_sheep_orange, 1), new ItemStack(MBlocks.block_flesh, 1), new ItemStack(MItems.sheep_gene_sample, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.block_sheep_yellow, 1), new ItemStack(MBlocks.block_flesh, 1), new ItemStack(MItems.sheep_gene_sample, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.block_sheep_lime, 1), new ItemStack(MBlocks.block_flesh, 1), new ItemStack(MItems.sheep_gene_sample, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.block_sheep_green, 1), new ItemStack(MBlocks.block_flesh, 1), new ItemStack(MItems.sheep_gene_sample, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.block_sheep_cyan, 1), new ItemStack(MBlocks.block_flesh, 1), new ItemStack(MItems.sheep_gene_sample, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.block_sheep_light_blue, 1), new ItemStack(MBlocks.block_flesh, 1), new ItemStack(MItems.sheep_gene_sample, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.block_sheep_blue, 1), new ItemStack(MBlocks.block_flesh, 1), new ItemStack(MItems.sheep_gene_sample, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.block_sheep_purple, 1), new ItemStack(MBlocks.block_flesh, 1), new ItemStack(MItems.sheep_gene_sample, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.block_sheep_magenta, 1), new ItemStack(MBlocks.block_flesh, 1), new ItemStack(MItems.sheep_gene_sample, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.cow_gene_sample, 1), new ItemStack(MItems.cow_foot, 1), new ItemStack(MItems.slime_core, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.chicken_gene_sample, 1), new ItemStack(MItems.chicken_foot, 1), new ItemStack(MItems.slime_core, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.rabbit_gene_sample, 1), new ItemStack(Items.rabbit_foot, 1), new ItemStack(MItems.slime_core, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.sheep_gene_sample, 1), new ItemStack(MItems.sheep_foot, 1), new ItemStack(MItems.slime_core, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.wolf_gene_sample, 1), new ItemStack(MItems.wolf_hide, 1), new ItemStack(MItems.slime_core, 1), 0.1F);
 	}
 	
 	public void addRecipe(Block input, ItemStack stack, ItemStack stack2, float experience)

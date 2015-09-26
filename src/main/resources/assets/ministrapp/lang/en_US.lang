@@ -539,6 +539,15 @@ tile.oceanstone_wall_mossy.name=Mossy Cobbled Oceanstone Wall
 
 tile.ministrapp_flower_pot.name=Flower Pot
 
+tile.sandstone_bricks.name=Sandstone Bricks
+tile.sandstone_pattern_bricks.name=Patterned Sandstone Bricks
+tile.sandstone_brick_stairs.name=Sandstone Brick Stairs
+tile.sandstone_brick_slab.name=Sandstone Brick Slab
+tile.red_sandstone_bricks.name=Red Sandstone Bricks
+tile.red_sandstone_pattern_bricks.name=Red Patterned Sandstone Bricks
+tile.red_sandstone_brick_stairs.name=Red Sandstone Brick Stairs
+tile.red_sandstone_brick_slab.name=Red Sandstone Brick Slab
+
 item.dough.name=Dough
 item.bun.name=Bun
 item.pbj_sandwich.name=Peanut Butter and Jelly Sandwich
@@ -783,6 +792,9 @@ item.chicken_gene_sample.name=Fermented Chicken Gene Sample
 item.wolf_gene_sample.name=Fermented Wolf Gene Sample
 item.sheep_gene_sample.name=Fermented Sheep Gene Sample
 item.rabbit_gene_sample.name=Fermented Rabbit Gene Sample
+
+sandstone_brick.name=Sandstone Brick
+red_sandstone_brick.name=Red Sandstone Brick
 
 itemGroup.tabMBuilding=Minestrapp Building Blocks
 itemGroup.tabMDecor=Minestrapp Decoration Blocks

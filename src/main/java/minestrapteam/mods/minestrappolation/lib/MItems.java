@@ -8,6 +8,7 @@ import minestrapteam.mods.minestrappolation.item.ItemAmuletPorcum;
 import minestrapteam.mods.minestrappolation.item.ItemAmuletVaccam;
 import minestrapteam.mods.minestrappolation.item.ItemBackpack;
 import minestrapteam.mods.minestrappolation.item.ItemBricks;
+import minestrapteam.mods.minestrappolation.item.ItemBricks2;
 import minestrapteam.mods.minestrappolation.item.ItemChargeGun;
 import minestrapteam.mods.minestrappolation.item.ItemChunk;
 import minestrapteam.mods.minestrappolation.item.ItemHangGlider;
@@ -23,6 +24,7 @@ import minestrapteam.mods.minestrappolation.item.ItemMShovel;
 import minestrapteam.mods.minestrappolation.item.ItemMSoup;
 import minestrapteam.mods.minestrappolation.item.ItemMSword;
 import minestrapteam.mods.minestrappolation.item.ItemMudBall;
+import minestrapteam.mods.minestrappolation.item.ItemPortableCrafting;
 import minestrapteam.mods.minestrappolation.item.ItemSifter;
 import minestrapteam.mods.minestrappolation.item.ItemSoulBottle;
 import minestrapteam.mods.minestrappolation.item.ItemSoulGem;
@@ -159,6 +161,7 @@ public class MItems extends Item
 	//Stonecutter
 	public static Item							chunks;
 	public static Item							bricks;
+	public static Item							bricks2;
 	
 	//Tools and Weapons
 	public static Item							copper_pickaxe;
@@ -272,6 +275,7 @@ public class MItems extends Item
 	public static Item							amuletVaccam;
 	public static Item							amuletOves;
 	public static Item							amuletPullum;
+	public static Item							portable_crafting_table;
 	public static Item							backpack;
 	public static Item							satchel;
 
@@ -397,9 +401,9 @@ public class MItems extends Item
 		heart_piece = new Item().setUnlocalizedName("heart_piece").setCreativeTab(Minestrappolation.tabMTools);
 		ice_charge = new ItemIceCharge().setUnlocalizedName("ice_charge");
 		slime_core = new Item().setUnlocalizedName("slime_core").setCreativeTab(Minestrappolation.tabMMaterials);
-		diamond_dust = new Item().setMaxStackSize(1).setUnlocalizedName("diamond_dust").setCreativeTab(Minestrappolation.tabMMaterials);
+		diamond_dust = new Item().setUnlocalizedName("diamond_dust").setCreativeTab(Minestrappolation.tabMMaterials);
 		inert_crystal_heart = new ItemInertCrystalHeart().setMaxStackSize(1).setUnlocalizedName("inert_crystal_heart").setCreativeTab(Minestrappolation.tabMMaterials);
-		crystal_heart = new MItemFoiled().setUnlocalizedName("crystal_heart").setCreativeTab(Minestrappolation.tabMMaterials);
+		crystal_heart = new MItemFoiled().setMaxStackSize(1).setUnlocalizedName("crystal_heart").setCreativeTab(Minestrappolation.tabMMaterials);
 		cow_gene_sample = new Item().setUnlocalizedName("cow_gene_sample").setCreativeTab(Minestrappolation.tabMMaterials);
 		infectious_fungus = new Item().setUnlocalizedName("infectious_fungus").setCreativeTab(Minestrappolation.tabMMaterials);
 		chicken_gene_sample = new Item().setUnlocalizedName("chicken_gene_sample").setCreativeTab(Minestrappolation.tabMMaterials);
@@ -410,6 +414,7 @@ public class MItems extends Item
 		//Stonecutter
 		chunks = new ItemChunk().setUnlocalizedName("chunks").setCreativeTab(Minestrappolation.tabMMaterials);	
 		bricks = new ItemBricks().setUnlocalizedName("bricks").setCreativeTab(Minestrappolation.tabMMaterials);
+		bricks2 = new ItemBricks2().setUnlocalizedName("bricks2").setCreativeTab(Minestrappolation.tabMMaterials);
 		
 		//Tools and Weapons
 		copper_pickaxe = new ItemMPickaxe(COPPER, copper_ingot, false, false).setUnlocalizedName("copper_pickaxe").setCreativeTab(Minestrappolation.tabMTools);
@@ -518,6 +523,7 @@ public class MItems extends Item
 		heart_container = new ItemHeartContainer().setUnlocalizedName("heart_container").setCreativeTab(Minestrappolation.tabMTools);
 		soulbottle = new ItemSoulBottle().setUnlocalizedName("soul_bottle").setCreativeTab(Minestrappolation.tabMTools);
 		hangglider = new ItemHangGlider().setUnlocalizedName("hangglider").setCreativeTab(Minestrappolation.tabMTools);
+		portable_crafting_table = new ItemPortableCrafting(0).setUnlocalizedName("portable_crafting_table").setCreativeTab(Minestrappolation.tabMTools);
 		backpack = new ItemBackpack(0).setUnlocalizedName("backpack").setCreativeTab(Minestrappolation.tabMTools);
 		satchel = new ItemBackpack(1).setUnlocalizedName("satchel").setCreativeTab(Minestrappolation.tabMTools);
 		amuletPorcum = new ItemAmuletPorcum("fames restituam").setUnlocalizedName("amulet_porcum").setCreativeTab(Minestrappolation.tabMTools);
@@ -551,6 +557,7 @@ public class MItems extends Item
 		register(ice_charge);
 		
 		register(bricks);
+		register(bricks2);
 		
 		register(mud_ball);
 		register(chunks);
@@ -634,8 +641,10 @@ public class MItems extends Item
 		register(heart_piece);
 		register(heart_container);
 		register(soulbottle);
-		register(backpack);
+		//TODO: Re-Add Portable Crafting Tables when we can get them to actually work.
+		//register(portable_crafting_table);
 		register(satchel);
+		register(backpack);
 		register(amuletPorcum);
 		register(amuletVaccam);
 		register(amuletOves);
@@ -860,6 +869,7 @@ public class MItems extends Item
 		
 		//Jungle Temple Dispenser
 		jungleDispenser.addItem(new WeightedRandomChestContent(new ItemStack(Items.fire_charge), 1, 5, 10));
+		jungleDispenser.addItem(new WeightedRandomChestContent(new ItemStack(MItems.ice_charge), 1, 5, 10));
 		jungleDispenser.addItem(new WeightedRandomChestContent(new ItemStack(Items.lava_bucket), 1, 1, 8));
 		jungleDispenser.addItem(new WeightedRandomChestContent(new ItemStack(Blocks.tnt), 1, 3, 6));
 		
