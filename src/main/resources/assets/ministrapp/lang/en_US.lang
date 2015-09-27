@@ -548,6 +548,8 @@ tile.red_sandstone_pattern_bricks.name=Red Patterned Sandstone Bricks
 tile.red_sandstone_brick_stairs.name=Red Sandstone Brick Stairs
 tile.red_sandstone_brick_slab.name=Red Sandstone Brick Slab
 
+tile.hanging_moss.name=Hanging Moss
+
 item.dough.name=Dough
 item.bun.name=Bun
 item.pbj_sandwich.name=Peanut Butter and Jelly Sandwich

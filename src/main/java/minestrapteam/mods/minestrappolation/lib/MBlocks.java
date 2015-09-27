@@ -23,6 +23,7 @@ import minestrapteam.mods.minestrappolation.block.BlockGlacialInvincium;
 import minestrapteam.mods.minestrappolation.block.BlockGlaciericIce;
 import minestrapteam.mods.minestrappolation.block.BlockGlacierite;
 import minestrapteam.mods.minestrappolation.block.BlockGodstone;
+import minestrapteam.mods.minestrappolation.block.BlockHangingMoss;
 import minestrapteam.mods.minestrappolation.block.BlockIceDeposit;
 import minestrapteam.mods.minestrappolation.block.BlockInvincium;
 import minestrapteam.mods.minestrappolation.block.BlockLamp;
@@ -185,6 +186,7 @@ public class MBlocks
 	public static Block	ministrapp_sapling;
 	public static Block dead_branch;
 	public static Block moss;
+	public static Block hanging_moss;
 	public static Block blueberry_bush;
 	public static Block blackberry_bush;
 	public static Block strawberry_bush;
@@ -546,6 +548,7 @@ public class MBlocks
 		ministrapp_sapling = new MBlockSapling(600);
 		dead_branch = new BlockDeadBranch(Material.vine, MapColor.woodColor).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("dead_branch");
 		moss = new BlockMoss(MapColor.greenColor).setHardness(0.3F).setStepSound(Block.soundTypeCloth).setUnlocalizedName("moss").setCreativeTab(Minestrappolation.tabMDecor);
+		hanging_moss = new BlockHangingMoss().setStepSound(Block.soundTypeGrass).setUnlocalizedName("hanging_moss").setCreativeTab(Minestrappolation.tabMDecor);
 		blueberry_bush = new BlockBush(Material.leaves, MItems.blueberry, MapColor.greenColor).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("blueberry_bush");
 		blackberry_bush = new BlockBush(Material.leaves, MItems.blackberry, MapColor.greenColor).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("blackberry_bush");
 		raspberry_bush = new BlockBush(Material.leaves, MItems.raspberry, MapColor.greenColor).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("raspberry_bush");
@@ -1081,6 +1084,7 @@ public class MBlocks
 		
 		//Decor Tab
 		register(moss);
+		register(hanging_moss);
 		register(blueberry_bush);
 		register(blackberry_bush);
 		register(raspberry_bush);

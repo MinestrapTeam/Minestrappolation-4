@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "bottom=true": { "model": "ministrapp:hanging_moss_bottom" },
+		"bottom=false": { "model": "ministrapp:hanging_moss" }
+    }
+}

@@ -104,6 +104,7 @@ public class MGenHandler implements IWorldGenerator
 		if (biome == BiomeGenBase.jungle || biome == BiomeGenBase.jungleEdge || biome == BiomeGenBase.jungleHills || biome == BiomeGenBase.swampland || biome == BiomeGenBase.roofedForest || biome == MBiomeManager.redwood)
 		{
 			this.generateOre(MBlocks.torite_ore, world, rand, x1, z1, 1, 6, 4, 1, 20, BlockHelper.forBlock(Blocks.stone), Config.genTorite);
+			this.generateHangingMoss(world, rand, x1, z1);
 		}
 		if (biome == BiomeGenBase.desert || biome == BiomeGenBase.desertHills || biome == MBiomeManager.redwood)
 		{
@@ -127,6 +128,11 @@ public class MGenHandler implements IWorldGenerator
 		if(biome == BiomeGenBase.extremeHills || biome == BiomeGenBase.extremeHillsEdge || biome == BiomeGenBase.extremeHillsPlus || biome == BiomeGenBase.taiga || biome == BiomeGenBase.taigaHills || biome == BiomeGenBase.megaTaiga || biome == BiomeGenBase.megaTaigaHills)
 		{
 			this.generateBerries(world, rand, x1, z1, new WorldGenBush(MBlocks.blackberry_bush));
+			if (biome == BiomeGenBase.extremeHills || biome == BiomeGenBase.extremeHillsEdge || biome == BiomeGenBase.extremeHillsPlus || biome == BiomeGenBase.taigaHills)
+			{
+				new WorldGenRedWoodTreeSmall().generate(world, rand, pos);
+				this.generateHangingMoss(world, rand, x1, z1);
+			}
 		}
 		if(biome == BiomeGenBase.savanna || biome == BiomeGenBase.savannaPlateau || biome == BiomeGenBase.mesa || biome == BiomeGenBase.mesaPlateau || biome == BiomeGenBase.mesaPlateau_F || biome== MBiomeManager.redwood)
 		{
@@ -135,13 +141,6 @@ public class MGenHandler implements IWorldGenerator
 		if(biome == BiomeGenBase.mushroomIsland || biome == BiomeGenBase.mushroomIslandShore || biome == BiomeGenBase.deepOcean || biome == BiomeGenBase.ocean)
 		{
 			this.generateBerries(world, rand, x1, z1, new WorldGenBush(MBlocks.mana_bush));
-		}
-		
-		
-		// Redwood Trees
-		if (biome == BiomeGenBase.extremeHills || biome == BiomeGenBase.taigaHills)
-		{
-			new WorldGenRedWoodTreeSmall().generate(world, rand, pos);
 		}
 		
 		if (biome == MBiomeManager.frost)
@@ -254,6 +253,19 @@ public class MGenHandler implements IWorldGenerator
 		{
 			int xRand = chunkX * 16 + rand.nextInt(16);
 			int yRand = rand.nextInt(63);
+			int zRand = chunkZ * 16 + rand.nextInt(16);
+			BlockPos position = new BlockPos(xRand, yRand, zRand);
+			gen.generate(world, rand, position);
+		}
+	}
+	
+	private void generateHangingMoss(World world, Random rand, int chunkX, int chunkZ)
+	{
+		WorldGenHangingMoss gen = new WorldGenHangingMoss();
+		for (int i = 0; i < 7; i++)
+		{
+			int xRand = chunkX * 16 + rand.nextInt(16);
+			int yRand = rand.nextInt(128);
 			int zRand = chunkZ * 16 + rand.nextInt(16);
 			BlockPos position = new BlockPos(xRand, yRand, zRand);
 			gen.generate(world, rand, position);

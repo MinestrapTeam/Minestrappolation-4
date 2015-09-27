@@ -100,6 +100,15 @@ public class StonecuttingManager
 		this.addRecipe(new ItemStack(MBlocks.mossy_bricks, 9, 7), new ItemStack(MBlocks.moss), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_bricks, 1, 7)});
 		this.addRecipe(new ItemStack(MBlocks.mossy_bricks, 9, 8), new ItemStack(MBlocks.moss), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_bricks, 1, 8)});
 		
+		this.addRecipe(new ItemStack(Blocks.stonebrick, 9, 1), new ItemStack(MBlocks.hanging_moss), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(Blocks.stonebrick, 1, 0)});
+		this.addRecipe(new ItemStack(MBlocks.mossy_bricks, 9, 0), new ItemStack(MBlocks.hanging_moss), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_bricks, 1, 0)});
+		this.addRecipe(new ItemStack(MBlocks.mossy_bricks, 9, 1), new ItemStack(MBlocks.hanging_moss), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_bricks, 1, 1)});
+		this.addRecipe(new ItemStack(MBlocks.mossy_bricks, 9, 2), new ItemStack(MBlocks.hanging_moss), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_bricks, 1, 2)});
+		this.addRecipe(new ItemStack(MBlocks.mossy_bricks, 9, 3), new ItemStack(MBlocks.hanging_moss), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_bricks, 1, 3)});
+		this.addRecipe(new ItemStack(MBlocks.mossy_bricks, 9, 4), new ItemStack(MBlocks.hanging_moss), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_bricks, 1, 4)});
+		this.addRecipe(new ItemStack(MBlocks.mossy_bricks, 9, 7), new ItemStack(MBlocks.hanging_moss), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_bricks, 1, 7)});
+		this.addRecipe(new ItemStack(MBlocks.mossy_bricks, 9, 8), new ItemStack(MBlocks.hanging_moss), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_bricks, 1, 8)});
+		
 		//Pattern Brick Blocks
 		this.addRecipe(new ItemStack(MBlocks.stone_pattern_bricks, 2), null, new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MItems.bricks, 1, 0) });
 		this.addRecipe(new ItemStack(MBlocks.pattern_bricks, 2, 0), null, new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MItems.bricks, 1, 1) });
@@ -130,6 +139,15 @@ public class StonecuttingManager
 		this.addRecipe(new ItemStack(MBlocks.mossy, 9, 6), new ItemStack(MItems.crushed_ice), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_cobble, 1, 6)});
 		this.addRecipe(new ItemStack(MBlocks.mossy, 9, 7), new ItemStack(MBlocks.moss), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_cobble, 1, 7)});
 		this.addRecipe(new ItemStack(MBlocks.mossy, 9, 8), new ItemStack(MBlocks.moss), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_cobble, 1, 8)});
+		
+		this.addRecipe(new ItemStack(Blocks.mossy_cobblestone, 9), new ItemStack(MBlocks.hanging_moss), new Object[] { "BBB", "BBB", "BBB", 'B', Blocks.cobblestone});
+		this.addRecipe(new ItemStack(MBlocks.mossy, 9, 0), new ItemStack(MBlocks.hanging_moss), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_cobble, 1, 0)});
+		this.addRecipe(new ItemStack(MBlocks.mossy, 9, 1), new ItemStack(MBlocks.hanging_moss), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_cobble, 1, 1)});
+		this.addRecipe(new ItemStack(MBlocks.mossy, 9, 2), new ItemStack(MBlocks.hanging_moss), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_cobble, 1, 2)});
+		this.addRecipe(new ItemStack(MBlocks.mossy, 9, 3), new ItemStack(MBlocks.hanging_moss), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_cobble, 1, 3)});
+		this.addRecipe(new ItemStack(MBlocks.mossy, 9, 4), new ItemStack(MBlocks.hanging_moss), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_cobble, 1, 4)});
+		this.addRecipe(new ItemStack(MBlocks.mossy, 9, 7), new ItemStack(MBlocks.hanging_moss), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_cobble, 1, 7)});
+		this.addRecipe(new ItemStack(MBlocks.mossy, 9, 8), new ItemStack(MBlocks.hanging_moss), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_cobble, 1, 8)});
 		
 		//Refined Blocks
 		this.addRecipe(new ItemStack(MBlocks.stone_refined, 9), null, new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(Blocks.stone, 1, 0) });
@@ -309,14 +327,18 @@ public class StonecuttingManager
 		//Walls, Fences, etc
 		this.addRecipe(new ItemStack(Blocks.cobblestone_wall, 2, 0), null, new Object[] { "CCC", "CCC", 'C', new ItemStack(MItems.chunks, 1, 0)});
 		this.addRecipe(new ItemStack(Blocks.cobblestone_wall, 2, 1), new ItemStack(MBlocks.moss), new Object[] { "CCC", "CCC", 'C', new ItemStack(MItems.chunks, 1, 0)});
+		this.addRecipe(new ItemStack(Blocks.cobblestone_wall, 2, 1), new ItemStack(MBlocks.hanging_moss), new Object[] { "CCC", "CCC", 'C', new ItemStack(MItems.chunks, 1, 0)});
 		this.addRecipe(new ItemStack(MBlocks.red_rock_wall, 2, 0), null, new Object[] { "CCC", "CCC", 'C', new ItemStack(MItems.chunks, 1, 1)});
 		this.addRecipe(new ItemStack(MBlocks.red_rock_wall_mossy, 2, 0), new ItemStack(MBlocks.moss), new Object[] { "CCC", "CCC", 'C', new ItemStack(MItems.chunks, 1, 1)});
+		this.addRecipe(new ItemStack(MBlocks.red_rock_wall_mossy, 2, 0), new ItemStack(MBlocks.hanging_moss), new Object[] { "CCC", "CCC", 'C', new ItemStack(MItems.chunks, 1, 1)});
 		this.addRecipe(new ItemStack(MBlocks.coldstone_wall, 2, 0), null, new Object[] { "CCC", "CCC", 'C', new ItemStack(MItems.chunks, 1, 2)});
 		this.addRecipe(new ItemStack(MBlocks.coldstone_wall_mossy, 2, 0), new ItemStack(MBlocks.moss), new Object[] { "CCC", "CCC", 'C', new ItemStack(MItems.chunks, 1, 2)});
+		this.addRecipe(new ItemStack(MBlocks.coldstone_wall_mossy, 2, 0), new ItemStack(MBlocks.hanging_moss), new Object[] { "CCC", "CCC", 'C', new ItemStack(MItems.chunks, 1, 2)});
 		this.addRecipe(new ItemStack(MBlocks.icestone_wall, 2, 0), null, new Object[] { "CCC", "CCC", 'C', new ItemStack(MItems.chunks, 1, 3)});
 		this.addRecipe(new ItemStack(MBlocks.icestone_wall_mossy, 2, 0), new ItemStack(MItems.crushed_ice), new Object[] { "CCC", "CCC", 'C', new ItemStack(MItems.chunks, 1, 3)});
 		this.addRecipe(new ItemStack(MBlocks.oceanstone_wall, 2, 0), null, new Object[] { "CCC", "CCC", 'C', new ItemStack(MItems.chunks, 1, 4)});
 		this.addRecipe(new ItemStack(MBlocks.oceanstone_wall_mossy, 2, 0), new ItemStack(MBlocks.moss), new Object[] { "CCC", "CCC", 'C', new ItemStack(MItems.chunks, 1, 4)});
+		this.addRecipe(new ItemStack(MBlocks.oceanstone_wall_mossy, 2, 0), new ItemStack(MBlocks.hanging_moss), new Object[] { "CCC", "CCC", 'C', new ItemStack(MItems.chunks, 1, 4)});
 		this.addRecipe(new ItemStack(Blocks.nether_brick_fence, 2, 0), null, new Object[] { "BBB", "BBB", 'B', new ItemStack(Items.netherbrick, 1)});
 		
 		//Dying
