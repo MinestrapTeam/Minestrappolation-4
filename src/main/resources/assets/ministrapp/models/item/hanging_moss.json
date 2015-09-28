@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "ministrapp:blocks/hanging_moss_bottom"
+        "layer0": "ministrapp:items/hanging_moss"
     },
     "display": {
         "thirdperson": {
