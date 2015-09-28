@@ -109,6 +109,8 @@ public class StonecuttingManager
 		this.addRecipe(new ItemStack(MBlocks.mossy_bricks, 9, 7), new ItemStack(MBlocks.hanging_moss), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_bricks, 1, 7)});
 		this.addRecipe(new ItemStack(MBlocks.mossy_bricks, 9, 8), new ItemStack(MBlocks.hanging_moss), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_bricks, 1, 8)});
 		
+		this.addRecipe(new ItemStack(MBlocks.glow_mossy_nether_bricks, 9, 0), new ItemStack(MBlocks.hanging_glow_moss), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(Blocks.nether_brick, 1, 0)});
+		
 		//Pattern Brick Blocks
 		this.addRecipe(new ItemStack(MBlocks.stone_pattern_bricks, 2), null, new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MItems.bricks, 1, 0) });
 		this.addRecipe(new ItemStack(MBlocks.pattern_bricks, 2, 0), null, new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MItems.bricks, 1, 1) });
@@ -148,6 +150,9 @@ public class StonecuttingManager
 		this.addRecipe(new ItemStack(MBlocks.mossy, 9, 4), new ItemStack(MBlocks.hanging_moss), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_cobble, 1, 4)});
 		this.addRecipe(new ItemStack(MBlocks.mossy, 9, 7), new ItemStack(MBlocks.hanging_moss), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_cobble, 1, 7)});
 		this.addRecipe(new ItemStack(MBlocks.mossy, 9, 8), new ItemStack(MBlocks.hanging_moss), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(MBlocks.biome_cobble, 1, 8)});
+		
+		this.addRecipe(new ItemStack(MBlocks.glow_mossy_netherrack, 9, 0), new ItemStack(MBlocks.hanging_glow_moss), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(Blocks.netherrack, 1, 0)});
+		this.addRecipe(new ItemStack(MBlocks.glow_mossy_end_stone, 9, 0), new ItemStack(MBlocks.hanging_glow_moss), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(Blocks.end_stone, 1, 0)});
 		
 		//Refined Blocks
 		this.addRecipe(new ItemStack(MBlocks.stone_refined, 9), null, new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(Blocks.stone, 1, 0) });

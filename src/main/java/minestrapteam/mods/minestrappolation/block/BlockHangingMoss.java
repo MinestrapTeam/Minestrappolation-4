@@ -79,36 +79,76 @@ public class BlockHangingMoss extends Block {
 	@Override
 	public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
     {
-        if(worldIn.getBlockState(pos.up()).getBlock() == Blocks.stone || worldIn.getBlockState(pos.up()).getBlock() == MBlocks.biome_stones || worldIn.getBlockState(pos.up()).getBlock() == Blocks.dirt || worldIn.getBlockState(pos.up()).getBlock() == Blocks.mycelium || worldIn.getBlockState(pos.up()).getBlock() == Blocks.grass || worldIn.getBlockState(pos.up()).getBlock() == Blocks.leaves || worldIn.getBlockState(pos.up()).getBlock() == Blocks.leaves2 || worldIn.getBlockState(pos.up()).getBlock() == MBlocks.ministrapp_leaves || worldIn.getBlockState(pos.up()).getBlock() == this)
-        {
-        	int yCheck = pos.getY() - 1;
-        	BlockPos pos1 = new BlockPos(pos.getX(), yCheck, pos.getZ());
-        	boolean outcome = false;
-        	for(boolean isChecking = true ; isChecking == true ;)
-        	{
-        		if(worldIn.getBlockState(pos1).getBlock() == this)
-        		{
-        			yCheck --;
-        			pos1 = new BlockPos(pos.getX(), yCheck, pos.getZ());
-        			isChecking = true;
-        		}
-        		else if(worldIn.getBlockState(pos1).getBlock() == Blocks.air)
-        		{
-        			outcome = true;
-        			isChecking = false;
-        		}
-        		else
-        		{
-        			outcome = false;
-        			isChecking = false;
-        		}
-        	}
-        	return outcome;
-        }
-        else
-        {
-        	return false;
-        }
+		if(this == MBlocks.hanging_moss)
+		{
+			if(worldIn.getBlockState(pos.up()).getBlock() == Blocks.stone || worldIn.getBlockState(pos.up()).getBlock() == MBlocks.biome_stones || worldIn.getBlockState(pos.up()).getBlock() == Blocks.dirt || worldIn.getBlockState(pos.up()).getBlock() == Blocks.mycelium || worldIn.getBlockState(pos.up()).getBlock() == Blocks.grass || worldIn.getBlockState(pos.up()).getBlock() == Blocks.leaves || worldIn.getBlockState(pos.up()).getBlock() == Blocks.leaves2 || worldIn.getBlockState(pos.up()).getBlock() == MBlocks.ministrapp_leaves || worldIn.getBlockState(pos.up()).getBlock() == this)
+			{
+				int yCheck = pos.getY() - 1;
+				BlockPos pos1 = new BlockPos(pos.getX(), yCheck, pos.getZ());
+				boolean outcome = false;
+				for(boolean isChecking = true ; isChecking == true ;)
+				{
+					if(worldIn.getBlockState(pos1).getBlock() == this)
+					{
+						yCheck --;
+						pos1 = new BlockPos(pos.getX(), yCheck, pos.getZ());
+						isChecking = true;
+					}
+					else if(worldIn.getBlockState(pos1).getBlock() == Blocks.air)
+					{
+						outcome = true;
+						isChecking = false;
+					}
+					else
+					{
+						outcome = false;
+						isChecking = false;
+					}
+				}
+				return outcome;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		else if(this == MBlocks.hanging_glow_moss)
+		{
+			if(worldIn.getBlockState(pos.up()).getBlock() == Blocks.netherrack || worldIn.getBlockState(pos.up()).getBlock() == Blocks.soul_sand || worldIn.getBlockState(pos.up()).getBlock() == Blocks.glowstone || worldIn.getBlockState(pos.up()).getBlock() == MBlocks.glow_mossy_netherrack || worldIn.getBlockState(pos.up()).getBlock() == Blocks.end_stone || worldIn.getBlockState(pos.up()).getBlock() == MBlocks.glow_mossy_end_stone || worldIn.getBlockState(pos.up()).getBlock() == this)
+			{
+				int yCheck = pos.getY() - 1;
+				BlockPos pos1 = new BlockPos(pos.getX(), yCheck, pos.getZ());
+				boolean outcome = false;
+				for(boolean isChecking = true ; isChecking == true ;)
+				{
+					if(worldIn.getBlockState(pos1).getBlock() == this)
+					{
+						yCheck --;
+						pos1 = new BlockPos(pos.getX(), yCheck, pos.getZ());
+						isChecking = true;
+					}
+					else if(worldIn.getBlockState(pos1).getBlock() == Blocks.air)
+					{
+						outcome = true;
+						isChecking = false;
+					}
+					else
+					{
+						outcome = false;
+						isChecking = false;
+					}
+				}
+				return outcome;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		else
+		{
+			return false;
+		}
     }
 	
 	public void onNeighborBlockChange(World worldIn, BlockPos pos, IBlockState state, Block neighborBlock)

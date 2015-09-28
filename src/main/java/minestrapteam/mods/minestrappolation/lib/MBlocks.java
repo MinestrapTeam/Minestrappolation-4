@@ -187,6 +187,7 @@ public class MBlocks
 	public static Block dead_branch;
 	public static Block moss;
 	public static Block hanging_moss;
+	public static Block hanging_glow_moss;
 	public static Block blueberry_bush;
 	public static Block blackberry_bush;
 	public static Block strawberry_bush;
@@ -280,6 +281,9 @@ public class MBlocks
 	public static Block	radiant_chiseled;
 	public static Block radiant_pillar;
 	public static Block obsidian_bricks;
+	public static Block glow_mossy_netherrack;
+	public static Block glow_mossy_nether_bricks;
+	public static Block glow_mossy_end_stone;
 	
 	//Biome Stone Decor Blocks
 	public static Block	stone_lamp_glowstone;
@@ -549,6 +553,7 @@ public class MBlocks
 		dead_branch = new BlockDeadBranch(Material.vine, MapColor.woodColor).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("dead_branch");
 		moss = new BlockMoss(MapColor.greenColor).setHardness(0.3F).setStepSound(Block.soundTypeCloth).setUnlocalizedName("moss").setCreativeTab(Minestrappolation.tabMDecor);
 		hanging_moss = new BlockHangingMoss().setStepSound(Block.soundTypeGrass).setUnlocalizedName("hanging_moss").setCreativeTab(Minestrappolation.tabMDecor);
+		hanging_glow_moss = new BlockHangingMoss().setStepSound(Block.soundTypeGrass).setLightLevel(0.8F).setUnlocalizedName("hanging_glow_moss").setCreativeTab(Minestrappolation.tabMDecor);
 		blueberry_bush = new BlockBush(Material.leaves, MItems.blueberry, MapColor.greenColor).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("blueberry_bush");
 		blackberry_bush = new BlockBush(Material.leaves, MItems.blackberry, MapColor.greenColor).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("blackberry_bush");
 		raspberry_bush = new BlockBush(Material.leaves, MItems.raspberry, MapColor.greenColor).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("raspberry_bush");
@@ -642,6 +647,9 @@ public class MBlocks
 		radiant_chiseled = new MBlock(Material.rock, MapColor.pinkColor).setHardness(1.0F).setLightLevel(0.6F).setStepSound(Block.soundTypePiston).setUnlocalizedName("radiant_quartz_chiseled").setCreativeTab(Minestrappolation.tabMBuilding);
 		radiant_pillar = new MBlockPillar(Material.rock, MapColor.pinkColor).setLightLevel(0.6F).setUnlocalizedName("radiant_pillar").setHardness(1F).setResistance(4F);
 		obsidian_bricks =  new MBlock(Material.rock, MapColor.obsidianColor).setHardness(50.0F).setResistance(2000.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("obsidian_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
+		glow_mossy_netherrack = new MBlock(Material.rock, MapColor.netherrackColor).setHardness(0.4F).setStepSound(Block.soundTypePiston).setLightLevel(0.5F).setUnlocalizedName("glow_mossy_netherrack").setCreativeTab(Minestrappolation.tabMBuilding);
+		glow_mossy_nether_bricks = new MBlock(Material.rock, MapColor.netherrackColor).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setLightLevel(0.5F).setUnlocalizedName("glow_mossy_nether_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
+		glow_mossy_end_stone = new MBlock(Material.rock, MapColor.stoneColor).setHardness(3.0F).setResistance(15.0F).setStepSound(Block.soundTypePiston).setLightLevel(0.5F).setUnlocalizedName("glow_mossy_end_stone").setCreativeTab(Minestrappolation.tabMBuilding);
 		
 		//Biome Stone Decor Blocks
 		stone_lamp_glowstone = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setLightLevel(1.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_lamp_glowstone").setCreativeTab(Minestrappolation.tabMBuilding);
@@ -990,6 +998,9 @@ public class MBlocks
 		registerSlab("prismarine_slab", "prismarine_double_slab", prismarine_slab, prismarine_double_slab);
 		register(prismarine_stairs);
 		register(obsidian_bricks);
+		register(glow_mossy_netherrack);
+		register(glow_mossy_nether_bricks);
+		register(glow_mossy_end_stone);
 		register(stone_pattern_bricks);
 		register(stone_refined);
 		register(stone_tiles);
@@ -1085,6 +1096,7 @@ public class MBlocks
 		//Decor Tab
 		register(moss);
 		register(hanging_moss);
+		register(hanging_glow_moss);
 		register(blueberry_bush);
 		register(blackberry_bush);
 		register(raspberry_bush);

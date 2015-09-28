@@ -69,7 +69,10 @@ public class MGenHandler implements IWorldGenerator
 	
 	public void generateEnd(World world, Random rand, int x, int z)
 	{
-		
+		int x1 = x;
+		int y1 = 0;
+		int z1 = z;
+		this.generateHangingMoss(world, rand, x1, z1, MBlocks.hanging_glow_moss);
 	}
 	
 	public void generateOverworld(World world, Random rand, int x, int z)
@@ -104,7 +107,7 @@ public class MGenHandler implements IWorldGenerator
 		if (biome == BiomeGenBase.jungle || biome == BiomeGenBase.jungleEdge || biome == BiomeGenBase.jungleHills || biome == BiomeGenBase.swampland || biome == BiomeGenBase.roofedForest || biome == MBiomeManager.redwood)
 		{
 			this.generateOre(MBlocks.torite_ore, world, rand, x1, z1, 1, 6, 4, 1, 20, BlockHelper.forBlock(Blocks.stone), Config.genTorite);
-			this.generateHangingMoss(world, rand, x1, z1);
+			this.generateHangingMoss(world, rand, x1, z1, MBlocks.hanging_moss);
 		}
 		if (biome == BiomeGenBase.desert || biome == BiomeGenBase.desertHills || biome == MBiomeManager.redwood)
 		{
@@ -131,7 +134,7 @@ public class MGenHandler implements IWorldGenerator
 			if (biome == BiomeGenBase.extremeHills || biome == BiomeGenBase.extremeHillsEdge || biome == BiomeGenBase.extremeHillsPlus || biome == BiomeGenBase.taigaHills)
 			{
 				new WorldGenRedWoodTreeSmall().generate(world, rand, pos);
-				this.generateHangingMoss(world, rand, x1, z1);
+				this.generateHangingMoss(world, rand, x1, z1, MBlocks.hanging_moss);
 			}
 		}
 		if(biome == BiomeGenBase.savanna || biome == BiomeGenBase.savannaPlateau || biome == BiomeGenBase.mesa || biome == BiomeGenBase.mesaPlateau || biome == BiomeGenBase.mesaPlateau_F || biome== MBiomeManager.redwood)
@@ -168,7 +171,10 @@ public class MGenHandler implements IWorldGenerator
 		int y1 = 0;
 		int z1 = z;
 		this.generateOre(MBlocks.blazium_ore, world, rand, x1, z1, 1, 10, 15, 0, 128, BlockHelper.forBlock(Blocks.netherrack), true);
+		this.generateOre(MBlocks.glow_mossy_netherrack, world, rand, x1, z1, 5, 20, 2, 0, 128, BlockHelper.forBlock(Blocks.netherrack), true);
+		this.generateOre(MBlocks.glow_mossy_nether_bricks, world, rand, x1, z1, 5, 20, 30, 0, 100, BlockHelper.forBlock(Blocks.nether_brick), true);
 		this.generateOre(MBlocks.soul_ore, world, rand, x1, z1, 3, 8, 30, 0, 128, BlockHelper.forBlock(Blocks.soul_sand), true);
+		this.generateHangingMoss(world, rand, x1, z1, MBlocks.hanging_glow_moss);
 	}
 	
 	private void generateOre(Block block, World world, Random rand, int chunkX, int chunkZ, int minVienSize, int maxVienSize, int chance, int minY, int maxY, Predicate blockType, boolean generate)
@@ -259,10 +265,15 @@ public class MGenHandler implements IWorldGenerator
 		}
 	}
 	
-	private void generateHangingMoss(World world, Random rand, int chunkX, int chunkZ)
+	private void generateHangingMoss(World world, Random rand, int chunkX, int chunkZ, Block block)
 	{
-		WorldGenHangingMoss gen = new WorldGenHangingMoss();
-		for (int i = 0; i < 7; i++)
+		WorldGenHangingMoss gen = new WorldGenHangingMoss(block);
+		int chance;
+		if(block == MBlocks.hanging_glow_moss)
+			chance = 3;
+		else
+			chance = 7;
+		for (int i = 0; i < chance; i++)
 		{
 			int xRand = chunkX * 16 + rand.nextInt(16);
 			int yRand = rand.nextInt(128);

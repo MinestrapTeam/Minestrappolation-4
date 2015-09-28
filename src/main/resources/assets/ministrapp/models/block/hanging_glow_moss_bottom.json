@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "ministrapp:blocks/hanging_glow_moss_bottom"
+    }
+}

@@ -231,6 +231,7 @@ public class CrusherRecipes
 		this.addRecipe(Blocks.packed_ice, new ItemStack(MItems.crushed_ice, 1), 0.1F, new ItemStack(MItems.crushed_ice, 1), 50);
 		this.addRecipe(MBlocks.glacieric_ice, new ItemStack(MItems.crushed_ice, 4), 0.1F, new ItemStack(MItems.glacieric_ice_shard, 1), 100);
 		this.addRecipe(Items.diamond, new ItemStack(MItems.diamond_dust, 4), 0.1F, new ItemStack(MItems.radiant_quartz, 1), 5);
+		this.addRecipe(MBlocks.hanging_glow_moss, new ItemStack(Items.glowstone_dust, 1), 0.1F, new ItemStack(Items.glowstone_dust), 20);
 		
 		//Dyes
 		this.addRecipe(Items.bone, new ItemStack(Items.dye, 5, 15), 0.1F, new ItemStack(Items.dye, 1, 15), 10);

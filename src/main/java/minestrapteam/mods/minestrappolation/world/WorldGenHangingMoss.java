@@ -3,6 +3,7 @@ package minestrapteam.mods.minestrappolation.world;
 import java.util.Random;
 
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
@@ -11,7 +12,13 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class WorldGenHangingMoss extends WorldGenerator
 {
-
+	Block block;
+	
+	public WorldGenHangingMoss(Block block)
+	{
+		this.block = block;
+	}
+	
 	@Override
 	public boolean generate(World world, Random rand, BlockPos pos) 
 	{		
@@ -20,9 +27,9 @@ public class WorldGenHangingMoss extends WorldGenerator
 			for (int i = 0; i < 64; i++)
 			{
 				BlockPos randPos = pos.add(rand.nextInt(8) - rand.nextInt(8), rand.nextInt(4) - rand.nextInt(4), rand.nextInt(8) - rand.nextInt(8));
-				if(MBlocks.hanging_moss.canPlaceBlockAt(world, randPos))
+				if(block.canPlaceBlockAt(world, randPos))
 				{
-					world.setBlockState(randPos, MBlocks.hanging_moss.getDefaultState(), 2);
+					world.setBlockState(randPos, block.getDefaultState(), 2);
 				}
 			}
 		}
