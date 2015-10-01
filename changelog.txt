@@ -1,3 +1,75 @@
+4.1.1
+ - Added Cardboard.
+ - Added Cardboard Blocks. Very useful for temporary scaffolding.
+ - Added Wet Cardboard Blocks. Created when Cardboard Blocks are touched by Rain or Water, and collapse when you try to walk on them.
+ - Added Granite Brick Stairs and Slabs.
+ - Added Diorite Brick Stairs and Slabs.
+ - Added Andesite Brick Stairs and Slabs.
+ - Added Slate Brick Stairs and Slabs.
+ - Added Cobbled Red Rock, Cobbled Coldstone, Cracked Icestone, and Cobbled Oceanstone Walls.
+ - Added Mossy Cobbled Red Rock, Mossy Cobbled Coldstone, Wet Cracked Icestone, and Mossy Cobbled Oceanstone Walls.
+ - Added Sandstone and Red Sandstone Brick items.
+ - Added Sandstone and Red Sandstone Brick blocks.
+ - Added Sandstone and Red Sandstone Patterned Bricks.
+ - Added Sandstone and Red Sandstone Brick Stairs and Slabs.
+ - Added Hanging Moss. Generates on the underside of blocks in Mountain, Jungle, Swamp, and Roofed Forest biomes. Used for the same stuff as normal Moss, mostly just makes the world look fancier.
+ - Added Hanging Glow Moss. Generates on the underside of blocks in the Nether and End, and emits light.
+ - Added Glow-Mossy Netherrack. Can be cut with Glow Moss, or can be found in patches in the Nether.
+ - Added Glow-Mossy Nether Bricks. Can be cut with Glow Moss, or can be found in patches in Nether Fortresses.
+ - Added Glow-Mossy End Stone. Can be cut with Glow Moss.
+ - Added Diamond Dust. Obtained by crushing Diamonds.
+ - Added Crystal Hearts. Require a Heart Piece and Diamond Dust to craft. They also can't be used for anything until you activate them, which requires you to already have at least one extra heart of health, since it saps 5 hearts of health when activated.
+ - Added Blocks of Flesh.
+ - Added Reactive Blocks of Flesh. Created by right-clicking a Block of Flesh with any Potion or Splash Potion of Regeneration.
+ - Added Slime Cores. Dropped by Slimes. Duh.
+ - Added Fermented Rabbit Gene Samples.
+ - Added Fermented Chicken Gene Samples.
+ - Added Fermented Cow Gene Samples.
+ - Added Fermented Sheep Gene Samples.
+ - Added Fermented Wolf Gene Samples.
+ - Added Infectious Fungus. Dropped by Mooshrooms.
+ - Added Rabbit Gene Blocks. Can be sheared for Rabbit Hide and sometimes Rabbit Feet.
+ - Added Chicken Gene Blocks. Randomly generate Eggs and Feathers around them over time.
+ - Added Cow Gene Blocks. Can be right-clicked with a Bucket to fill it with Milk.
+ - Added Mooshroom Gene Blocks. Acts like a Cow Block, plus it can be right-clicked with a Bowl to get Mushroom Stew, or sheared to harvest the Red Mushroom on its top.
+ - Added Sheep Gene Blocks. Can be sheared for Wool, and comes in 16 vivid technicolors!
+ - Added Wolf Gene Blocks. Can be sheared for Wolf Hide.
+ - Added an achievement for obtaining Diamond Dust.
+ - Added an achievement for activating a Crystal Heart.
+ - Added an achievement for creating any type of Gene Block.
+ - Added an achievement for getting  a Pink Sheep Gene Block by random chance while creating Sheep Gene Blocks.
+ - Nerfed Tin, Meurodite, and Torite Armor.
+ - Buffed Fire and Ice Armor.
+ - Ice Charges now deal more damage.
+ - Fire Charges shot from Charge Guns are now Ghast fireballs instead of Blaze fireballs. This means they deal more damage and cause explosion damage to any terrain that they hit.
+ - Decreased Hang Glider durability.
+ - Nerfed Calamari, Sushi, and Onigiri hunger values.
+ - Increased Oves Amulet durability.
+ - Decreased Pullum Amulet durability.
+ - Server admins can now build inside claims and manually remove Quantum Claimerators.
+ - Added most residual missing Splitter recipes.
+ - Frost Generators and Quantum Claimerators are now harvestable with an Iron Pickaxe or better, rather than Diamond.
+ - Changed Flower Pots' recipe to include Dirt.
+ - All Amulets now require an Emerald in their crafting recipe.
+ - Added the Emerald used in their recipe to all Amulets' textures.
+ - The Splitter GUI now uses magic particles instead of flames as the fuel meter texture to better indicate that it doesn't use combustable fuels.
+ - Elder Guardians now have a 70% chance to drop a Heart Piece when killed.
+ - Moss and Hanging Moss can now be used as fuel to smelt up to two items. Not very useful early-game, but it does allow for automated infinite fuel farms in the late game.
+ - Improved Vanilla Netherrack and Nether Quartz Ore textures.
+ - Changed Blazium Ore texture to match the new Netherrack texture.
+ - Fixed Meurodite Armor not taking durability damage while the player is in Lava.
+ - Fixed Frost Generators being instantly minable.
+ - Fixed Bowl Ice Cream dupe glitch.
+ - Fixed floating Glacieric Ice Deposits.
+ - Fixed Z-fighting issues with Furnace, Alloy Furnace, and Melter models.
+ - Fixed Melters not changing to their inactive texture while inactive.
+ - Fixed Steel Mesh and Minestrapp Glass Panes sometimes rendering weird.
+ - Fixed Squids not dropping pre-cooked Calamari when killed via fire.
+ - Fixed Insulated Uranium having no blast resistance or step sound.
+ - Fixed Mana Leaves' burn time being just barely less than 2 items in the Splitter.
+ - Fixed Minestrapp Saplings not being plantable in Flower Pots. WARNING: Break and re-craft all your Flower Pots in existing worlds. We had to code in an entirely new replacement Flower Pot block to do this, so old ones won't work.
+ - Fixed Redwood Leaves decaying so much. They'll still decay sometimes, but not as much, and they have less chance to drop Saplings, so the lag should be reduced in Redwood biomes.
+
 4.1.0
  - Added Mud blocks. Can be crafted, and also generate in Rivers and Swamps.
  - Added Mud Bricks.
