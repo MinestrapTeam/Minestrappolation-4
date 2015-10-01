@@ -483,6 +483,21 @@ public class MGenHandler implements IWorldGenerator
 							}
 						}
 					}
+					else if (biome.temperature < 0.2F)
+					{
+						if(block == Blocks.dirt)
+							chunk.setBlockState(subpos2, MBlocks.dirt_permafrost.getDefaultState());
+						else if(block == Blocks.grass)
+							chunk.setBlockState(subpos2, MBlocks.lichen_permafrost.getDefaultState());
+						else if(state == Blocks.sand.getStateFromMeta(0))
+							chunk.setBlockState(subpos2, MBlocks.cold_sand.getStateFromMeta(0));
+						else if(state == Blocks.sand.getStateFromMeta(1))
+							chunk.setBlockState(subpos2, MBlocks.cold_sand.getStateFromMeta(1));
+						else if(block == Blocks.web)
+							chunk.setBlockState(subpos2, MBlocks.cold_cobweb.getDefaultState());
+						else if(block == Blocks.tallgrass || block == Blocks.red_flower || block == Blocks.yellow_flower)
+							chunk.setBlockState(subpos2, MBlocks.shrub_grass.getDefaultState());
+					}
 				}
 			}
 		}

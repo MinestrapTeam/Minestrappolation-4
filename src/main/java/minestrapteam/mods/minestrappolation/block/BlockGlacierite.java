@@ -11,6 +11,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 public class BlockGlacierite extends MBlock
@@ -48,4 +49,10 @@ public class BlockGlacierite extends MBlock
 			world.spawnParticle(EnumParticleTypes.SNOW_SHOVEL, x2, y1, z1 + 0.52F, 0.01D * (1 - random.nextInt(3)) * random.nextInt(5), 0.1D, 0.01D * (1 - random.nextInt(3)) * random.nextInt(5), new int[0]);
 		}
 	}	
+	
+	@Override
+	public boolean isBeaconBase(IBlockAccess worldObj, BlockPos pos, BlockPos beacon)
+	{
+		return true;
+	}
 }

@@ -120,4 +120,10 @@ public class BlockRope extends MBlock
     }
     
     @Override public boolean isLadder(IBlockAccess world, BlockPos pos, EntityLivingBase entity) { return true; }
+    
+    @Override
+	public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face)
+	{
+		return 300;
+	}
 }

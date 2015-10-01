@@ -36,7 +36,6 @@ public class MBlockSketchyBackwaterFlowerpot extends BlockContainer
 {
     public static final PropertyInteger LEGACY_DATA = PropertyInteger.create("legacy_data", 0, 15);
     public static final PropertyEnum CONTENTS = PropertyEnum.create("contents", MBlockSketchyBackwaterFlowerpot.EnumFlowerType.class);
-    private static final String __OBFID = "CL_00000247";
 
     public MBlockSketchyBackwaterFlowerpot()
     {

@@ -202,4 +202,9 @@ public class BlockBush extends MBlock implements IPlantable, IShearable{
 		return list;
 	}
 	
+	@Override
+	public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face)
+	{
+		return 600;
+	}
 }

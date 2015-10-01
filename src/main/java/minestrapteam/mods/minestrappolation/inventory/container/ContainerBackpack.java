@@ -2,6 +2,7 @@ package minestrapteam.mods.minestrappolation.inventory.container;
 
 import minestrapteam.mods.minestrappolation.inventory.InventoryBackpack;
 import minestrapteam.mods.minestrappolation.inventory.slot.SlotBackpack;
+import minestrapteam.mods.minestrappolation.lib.MItems;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Slot;
@@ -316,11 +317,21 @@ public class ContainerBackpack extends MinestrappolationContainer
 	public ItemStack slotClick(int slotId, int clickedButton, int mode, EntityPlayer playerIn)
     {
 		this.needsUpdate = true;
+		InventoryPlayer inventoryplayer = playerIn.inventory;
 		
 		if(slotId >= 0 && this.getSlot(slotId) != null && this.getSlot(slotId).getStack() == playerIn.getHeldItem())
 		{
 			return null;
 		}
+		if (mode == 2 && clickedButton >= 0 && clickedButton < 9)
+        {
+			Slot slot2 = (Slot)this.inventorySlots.get(slotId);
+			ItemStack itemstack3 = inventoryplayer.getStackInSlot(clickedButton);
+			if(slot2.getStack() == playerIn.getHeldItem() || itemstack3 == playerIn.getHeldItem())
+			{
+				return null;
+			}
+        }
 		return super.slotClick(slotId, clickedButton, mode, playerIn);
     }
 }

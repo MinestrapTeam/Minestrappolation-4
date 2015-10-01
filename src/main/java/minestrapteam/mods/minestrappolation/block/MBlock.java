@@ -6,6 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.Entity;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.IBlockAccess;
 
@@ -34,4 +35,15 @@ public class MBlock extends Block
 		else
 			return false;
 	}
+	
+	@Override
+    public boolean canEntityDestroy(IBlockAccess world, BlockPos pos, Entity entity)
+    {
+        if (entity instanceof net.minecraft.entity.boss.EntityDragon && this == MBlocks.obsidian_bricks)
+        {
+            return false;
+        }
+
+        return true;
+    }
 }

@@ -37,7 +37,5 @@ public class BlockMDoor extends BlockDoor
 			return MBlocks.glass_door_item;
 		}
 		return null;
-		
 	}
-	
 }

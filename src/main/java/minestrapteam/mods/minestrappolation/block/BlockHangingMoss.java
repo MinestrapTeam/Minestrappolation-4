@@ -16,6 +16,7 @@ import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
@@ -33,12 +34,14 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class BlockHangingMoss extends Block {
 
 	public static final PropertyBool BOTTOM = PropertyBool.create("bottom");
+	private int	flammability;
 	
-	public BlockHangingMoss()
+	public BlockHangingMoss(int flame)
 	{
 		super(Material.vine);
 		setDefaultState(blockState.getBaseState().withProperty(BOTTOM, Boolean.valueOf(false)));
 		this.setTickRandomly(true);
+		this.flammability = flame;
 	}
 
 	public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos)
@@ -205,5 +208,21 @@ public class BlockHangingMoss extends Block {
     {
         return Block.EnumOffsetType.XZ;
     }
+    
+    @Override
+	public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face)
+	{
+		return this.flammability;
+	}
+    
+    @Override
+    public boolean canEntityDestroy(IBlockAccess world, BlockPos pos, Entity entity)
+    {
+        if (entity instanceof net.minecraft.entity.boss.EntityDragon && this == MBlocks.hanging_glow_moss)
+        {
+            return false;
+        }
 
+        return true;
+    }
 }

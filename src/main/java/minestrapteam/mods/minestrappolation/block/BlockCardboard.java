@@ -7,6 +7,8 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 public class BlockCardboard extends MBlock
@@ -32,5 +34,11 @@ public class BlockCardboard extends MBlock
 		{
 			worldIn.setBlockState(pos, MBlocks.wet_cardboard_block.getDefaultState());
 		}
+	}
+	
+	@Override
+	public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face)
+	{
+		return 1200;
 	}
 }

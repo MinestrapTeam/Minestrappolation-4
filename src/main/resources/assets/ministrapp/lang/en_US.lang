@@ -553,6 +553,7 @@ tile.hanging_glow_moss.name=Hanging Glow Moss
 tile.glow_mossy_netherrack.name=Glow-Mossy Netherrack
 tile.glow_mossy_nether_bricks.name=Glow-Mossy Nether Bricks
 tile.glow_mossy_end_stone=Glow-Mossy End Stone
+tile.shrub_grass.name=Shrub Grass
 
 item.dough.name=Dough
 item.bun.name=Bun

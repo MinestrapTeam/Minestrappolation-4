@@ -54,6 +54,7 @@ import minestrapteam.mods.minestrappolation.block.BlockRope;
 import minestrapteam.mods.minestrappolation.block.BlockSawmill;
 import minestrapteam.mods.minestrappolation.block.BlockSeaweed;
 import minestrapteam.mods.minestrappolation.block.BlockSheep;
+import minestrapteam.mods.minestrappolation.block.BlockShrubGrass;
 import minestrapteam.mods.minestrappolation.block.BlockSoul;
 import minestrapteam.mods.minestrappolation.block.BlockSunstoneBlock;
 import minestrapteam.mods.minestrappolation.block.BlockTiles;
@@ -185,6 +186,7 @@ public class MBlocks
 	public static Block	ministrapp_leaves;
 	public static Block	ministrapp_sapling;
 	public static Block dead_branch;
+	public static Block shrub_grass;
 	public static Block moss;
 	public static Block hanging_moss;
 	public static Block hanging_glow_moss;
@@ -551,9 +553,10 @@ public class MBlocks
 		ministrapp_leaves = new MBlockLeaves(600).setUnlocalizedName("ministrapp_leaves");
 		ministrapp_sapling = new MBlockSapling(600);
 		dead_branch = new BlockDeadBranch(Material.vine, MapColor.woodColor).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("dead_branch");
+		shrub_grass = new BlockShrubGrass().setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("shrub_grass");
 		moss = new BlockMoss(MapColor.greenColor).setHardness(0.3F).setStepSound(Block.soundTypeCloth).setUnlocalizedName("moss").setCreativeTab(Minestrappolation.tabMDecor);
-		hanging_moss = new BlockHangingMoss().setStepSound(Block.soundTypeGrass).setUnlocalizedName("hanging_moss").setCreativeTab(Minestrappolation.tabMDecor);
-		hanging_glow_moss = new BlockHangingMoss().setStepSound(Block.soundTypeGrass).setLightLevel(0.8F).setUnlocalizedName("hanging_glow_moss").setCreativeTab(Minestrappolation.tabMDecor);
+		hanging_moss = new BlockHangingMoss(600).setStepSound(Block.soundTypeGrass).setUnlocalizedName("hanging_moss").setCreativeTab(Minestrappolation.tabMDecor);
+		hanging_glow_moss = new BlockHangingMoss(0).setStepSound(Block.soundTypeGrass).setLightLevel(0.8F).setUnlocalizedName("hanging_glow_moss").setCreativeTab(Minestrappolation.tabMDecor);
 		blueberry_bush = new BlockBush(Material.leaves, MItems.blueberry, MapColor.greenColor).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("blueberry_bush");
 		blackberry_bush = new BlockBush(Material.leaves, MItems.blackberry, MapColor.greenColor).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("blackberry_bush");
 		raspberry_bush = new BlockBush(Material.leaves, MItems.raspberry, MapColor.greenColor).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("raspberry_bush");
@@ -743,13 +746,13 @@ public class MBlocks
 		icestone_wall_mossy = new MBlockWall(biome_cobble, 2.0F, 10.0F).setUnlocalizedName("icestone_wall_mossy");
 		oceanstone_wall = new MBlockWall(biome_cobble, 2.0F, 10.0F).setUnlocalizedName("oceanstone_wall");
 		oceanstone_wall_mossy = new MBlockWall(biome_cobble, 2.0F, 10.0F).setUnlocalizedName("oceanstone_wall_mossy");
-		refined_glass_pane = new BlockMPane(Material.glass, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setUnlocalizedName("refined_pane");
-		bricked_glass_pane = new BlockMPane(Material.glass, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setUnlocalizedName("bricked_pane");
-		tiled_glass_pane = new BlockMPane(Material.glass, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setUnlocalizedName("tiled_pane");
-		framed_glass_pane = new BlockMPane(Material.iron, true).setHardness(3.0F).setStepSound(Block.soundTypeGlass).setUnlocalizedName("framed_pane");
-		glow_glass_pane = new BlockMPane(Material.glass, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setLightLevel(0.9F).setUnlocalizedName("glow_glass_pane");
-		steel_mesh = new BlockMPane(Material.iron, true).setHardness(5.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("steel_mesh");
-		cardboard = new BlockMPane(Material.cloth, true).setHardness(0.1F).setResistance(0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("cardboard");
+		refined_glass_pane = new BlockMPane(Material.glass, false, 0).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setUnlocalizedName("refined_pane");
+		bricked_glass_pane = new BlockMPane(Material.glass, false, 0).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setUnlocalizedName("bricked_pane");
+		tiled_glass_pane = new BlockMPane(Material.glass, false, 0).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setUnlocalizedName("tiled_pane");
+		framed_glass_pane = new BlockMPane(Material.iron, true, 0).setHardness(3.0F).setStepSound(Block.soundTypeGlass).setUnlocalizedName("framed_pane");
+		glow_glass_pane = new BlockMPane(Material.glass, false, 0).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setLightLevel(0.9F).setUnlocalizedName("glow_glass_pane");
+		steel_mesh = new BlockMPane(Material.iron, true, 0).setHardness(5.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("steel_mesh");
+		cardboard = new BlockMPane(Material.cloth, true, 1200).setHardness(0.1F).setResistance(0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("cardboard");
 		
 		//Doors
 		redwood_door = new BlockMDoor(Material.wood).setHardness(3.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("redwood_door");
@@ -917,7 +920,6 @@ public class MBlocks
 		
 		MinecraftForge.addGrassSeed(new ItemStack(pepper_seed), Config.pepperSeedChance);
 		MinecraftForge.addGrassSeed(new ItemStack(rice), Config.riceSeedChance);
-		MinecraftForge.addGrassSeed(new ItemStack(celery_seed), Config.celerySeedChance);
 	}
 	
 	private static void register()
@@ -1094,6 +1096,7 @@ public class MBlocks
 		register(invincium);
 		
 		//Decor Tab
+		register(shrub_grass);
 		register(moss);
 		register(hanging_moss);
 		register(hanging_glow_moss);

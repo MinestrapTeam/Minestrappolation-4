@@ -14,6 +14,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumWorldBlockLayer;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -113,5 +114,11 @@ public class BlockDeadBranch extends MBlock implements IGrowable, net.minecraftf
 		this.dropBlockAsItem(worldIn, pos, this.getDefaultState(), 1);
 		super.onEntityCollidedWithBlock(worldIn, pos, entityIn);
 		worldIn.setBlockState(pos, Blocks.air.getDefaultState());
+	}
+	
+	@Override
+	public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face)
+	{
+		return 1200;
 	}
 }

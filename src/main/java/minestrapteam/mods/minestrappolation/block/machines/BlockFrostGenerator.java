@@ -59,7 +59,7 @@ public class BlockFrostGenerator extends MBlock
 		
 		for(int i = 0 ; i < 16 ; i++)
 		{
-			this.canFreeze.put(Blocks.tallgrass.getStateFromMeta(i), Blocks.deadbush.getDefaultState());
+			this.canFreeze.put(Blocks.tallgrass.getStateFromMeta(i), MBlocks.shrub_grass.getDefaultState());
 		}
 		this.canFreeze.put(Blocks.deadbush.getDefaultState(), Blocks.air.getDefaultState());
 		for(int i = 0 ; i < 16 ; i++)

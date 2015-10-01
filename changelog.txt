@@ -34,10 +34,14 @@
  - Added Mooshroom Gene Blocks. Acts like a Cow Block, plus it can be right-clicked with a Bowl to get Mushroom Stew, or sheared to harvest the Red Mushroom on its top.
  - Added Sheep Gene Blocks. Can be sheared for Wool, and comes in 16 vivid technicolors!
  - Added Wolf Gene Blocks. Can be sheared for Wolf Hide.
+ - Added Shrub Grass. Drops Celery Seeds and replaces all the Tall Grass and Flowers in snowy biomes.
  - Added an achievement for obtaining Diamond Dust.
  - Added an achievement for activating a Crystal Heart.
  - Added an achievement for creating any type of Gene Block.
  - Added an achievement for getting  a Pink Sheep Gene Block by random chance while creating Sheep Gene Blocks.
+ - All Dirt, Coarse Dirt, Podzol, Grass, Sand, Red Sand, and Cobwebs in snowy biomes are now replaced with their frozen counterparts.
+ - Frost Generators now freeze Tall Grass and Ferns into Shrub Grass rather than Dead Shrubs.
+ - Celery Seeds can no longer be found by breaking Tall Grass, and are instead only obtainable via Shrub Grass.
  - Nerfed Tin, Meurodite, and Torite Armor.
  - Buffed Fire and Ice Armor.
  - Ice Charges now deal more damage.
@@ -57,6 +61,7 @@
  - Moss and Hanging Moss can now be used as fuel to smelt up to two items. Not very useful early-game, but it does allow for automated infinite fuel farms in the late game.
  - Improved Vanilla Netherrack and Nether Quartz Ore textures.
  - Changed Blazium Ore texture to match the new Netherrack texture.
+ - Fixed Godstone and Obsidian Bricks being destroyable by the Ender Dragon.
  - Fixed Meurodite Armor not taking durability damage while the player is in Lava.
  - Fixed Frost Generators being instantly minable.
  - Fixed Bowl Ice Cream dupe glitch.
@@ -69,6 +74,9 @@
  - Fixed Mana Leaves' burn time being just barely less than 2 items in the Splitter.
  - Fixed Minestrapp Saplings not being plantable in Flower Pots. WARNING: Break and re-craft all your Flower Pots in existing worlds. We had to code in an entirely new replacement Flower Pot block to do this, so old ones won't work.
  - Fixed Redwood Leaves decaying so much. They'll still decay sometimes, but not as much, and they have less chance to drop Saplings, so the lag should be reduced in Redwood biomes.
+ - Fixed Backpack/Satchel item duplication glitch.
+ - Fixed a number of plant/wood-based Minestrapp blocks not being flammable.
+ - Fixed Glacierite Blocks not being usable as Beacon Bases.
 
 4.1.0
  - Added Mud blocks. Can be crafted, and also generate in Rivers and Swamps.

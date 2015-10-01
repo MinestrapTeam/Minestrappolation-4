@@ -6,6 +6,7 @@ import java.util.Random;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.util.AxisAlignedBB;
@@ -60,4 +61,19 @@ public class BlockGodstone extends MBlock
 	{
 		return true;
 	}
+	
+	@Override
+    public boolean canEntityDestroy(IBlockAccess world, BlockPos pos, Entity entity)
+    {
+        if (entity instanceof net.minecraft.entity.boss.EntityWither)
+        {
+            return false;
+        }
+        else if (entity instanceof net.minecraft.entity.boss.EntityDragon)
+        {
+            return false;
+        }
+
+        return true;
+    }
 }
