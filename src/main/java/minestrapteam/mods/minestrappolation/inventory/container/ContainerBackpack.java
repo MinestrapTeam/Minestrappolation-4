@@ -130,14 +130,6 @@ public class ContainerBackpack extends MinestrappolationContainer
 	}
 
 	@Override
-	public ItemStack slotClick(int slotID, int buttonPressed, int flag, EntityPlayer player)
-	{
-		this.needsUpdate = true;
-
-		return super.slotClick(slotID, buttonPressed, flag, player);
-	}
-
-	@Override
 
 	protected boolean mergeItemStack(ItemStack par1ItemStack, int par2, int par3, boolean par4)
 
@@ -319,4 +311,16 @@ public class ContainerBackpack extends MinestrappolationContainer
 		return flag1;
 
 	}
+	
+	@Override
+	public ItemStack slotClick(int slotId, int clickedButton, int mode, EntityPlayer playerIn)
+    {
+		this.needsUpdate = true;
+		
+		if(slotId >= 0 && this.getSlot(slotId) != null && this.getSlot(slotId).getStack() == playerIn.getHeldItem())
+		{
+			return null;
+		}
+		return super.slotClick(slotId, clickedButton, mode, playerIn);
+    }
 }
