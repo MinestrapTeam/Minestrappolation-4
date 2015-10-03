@@ -1,2 +1,2 @@
-﻿version=1.8.0-4.2.0
+version=1.8.0-4.2.0
 motd=§9It's finally here! 4.2.0 is out with tons of new bugfixes and features. :D
