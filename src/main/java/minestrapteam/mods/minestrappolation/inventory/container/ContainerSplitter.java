@@ -3,6 +3,7 @@ package minestrapteam.mods.minestrappolation.inventory.container;
 import java.util.List;
 
 import minestrapteam.mods.minestrappolation.crafting.recipes.MelterRecipes;
+import minestrapteam.mods.minestrappolation.crafting.recipes.SplitterRecipes;
 import minestrapteam.mods.minestrappolation.inventory.slot.SlotSplitter;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntitySplitter;
 import net.minecraft.entity.player.EntityPlayer;
@@ -104,7 +105,7 @@ public class ContainerSplitter extends MinestrappolationContainer
 				if (!this.mergeItemStack(itemstack1, 4, 40, true))
 					return null;
 			}
-			else if (MelterRecipes.instance().getResult(itemstack1) != null)
+			else if (SplitterRecipes.instance().getResult(itemstack1) != null)
 			{
 				if (!this.mergeItemStack(itemstack1, 0, 1, false))
 					return null;
@@ -112,11 +113,6 @@ public class ContainerSplitter extends MinestrappolationContainer
 			else if (TileEntitySplitter.isItemFuel(itemstack1))
 			{
 				if (!this.mergeItemStack(itemstack1, 1, 2, false))
-					return null;
-			}
-			else if (itemstack1.getItem() == Items.bucket)
-			{
-				if (!this.mergeItemStack(itemstack1, 3, 4, false))
 					return null;
 			}
 			else if (slotID >= 3 && slotID < 31)
