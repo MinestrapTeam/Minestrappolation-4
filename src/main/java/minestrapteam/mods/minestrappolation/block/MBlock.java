@@ -18,7 +18,10 @@ public class MBlock extends Block
 	{
 		super(materialIn);
 		this.mapColor = mapColorIn;
-		this.setCreativeTab(Minestrappolation.tabMBuilding);
+		if (this != MBlocks.block_flesh_reactive)
+		{
+			this.setCreativeTab(Minestrappolation.tabMBuilding);
+		}
 	}
 	
 	@Override

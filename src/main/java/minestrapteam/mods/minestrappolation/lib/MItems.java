@@ -11,6 +11,7 @@ import minestrapteam.mods.minestrappolation.item.ItemBricks;
 import minestrapteam.mods.minestrappolation.item.ItemBricks2;
 import minestrapteam.mods.minestrappolation.item.ItemChargeGun;
 import minestrapteam.mods.minestrappolation.item.ItemChunk;
+import minestrapteam.mods.minestrappolation.item.ItemGuano;
 import minestrapteam.mods.minestrappolation.item.ItemHangGlider;
 import minestrapteam.mods.minestrappolation.item.ItemHeartContainer;
 import minestrapteam.mods.minestrappolation.item.ItemIceCharge;
@@ -147,6 +148,7 @@ public class MItems extends Item
 	public static Item							propeller;
 	public static Item							technological_doodad;
 	public static Item							ice_charge;
+	public static Item							guano;
 	public static Item							slime_core;
 	public static Item							diamond_dust;
 	public static Item							inert_crystal_heart;
@@ -157,6 +159,7 @@ public class MItems extends Item
 	public static Item							wolf_gene_sample;
 	public static Item							sheep_gene_sample;
 	public static Item							rabbit_gene_sample;
+	public static Item							bat_gene_sample;
 	
 	//Stonecutter
 	public static Item							chunks;
@@ -386,6 +389,7 @@ public class MItems extends Item
 		//Crafting Materials
 		mud_ball = new ItemMudBall().setUnlocalizedName("mud_ball");
 		crushed_ice = new ItemMFood(0, 0, 0).setMaxStackSize(16).setUnlocalizedName("crushed_ice").setCreativeTab(Minestrappolation.tabMFood);
+		guano = new ItemGuano().setUnlocalizedName("guano").setCreativeTab(Minestrappolation.tabMMaterials);
 		reinforced_stick = new Item().setUnlocalizedName("reinforced_stick").setCreativeTab(Minestrappolation.tabMMaterials);
 		propeller = new Item().setUnlocalizedName("propeller").setCreativeTab(Minestrappolation.tabMMaterials);
 		animal_bones = new Item().setUnlocalizedName("animal_bones").setCreativeTab(Minestrappolation.tabMMaterials);
@@ -410,6 +414,7 @@ public class MItems extends Item
 		wolf_gene_sample = new Item().setUnlocalizedName("wolf_gene_sample").setCreativeTab(Minestrappolation.tabMMaterials);
 		sheep_gene_sample = new Item().setUnlocalizedName("sheep_gene_sample").setCreativeTab(Minestrappolation.tabMMaterials);
 		rabbit_gene_sample = new Item().setUnlocalizedName("rabbit_gene_sample").setCreativeTab(Minestrappolation.tabMMaterials);
+		bat_gene_sample = new Item().setUnlocalizedName("bat_gene_sample").setCreativeTab(Minestrappolation.tabMMaterials);
 		
 		//Stonecutter
 		chunks = new ItemChunk().setUnlocalizedName("chunks").setCreativeTab(Minestrappolation.tabMMaterials);	
@@ -544,10 +549,12 @@ public class MItems extends Item
 		register(sheep_foot);
 		register(chicken_foot);
 		register(wolf_hide);
+		register(guano);
 		register(wing_sinew);
 		register(wing_segment);
 		register(slime_core);
 		register(infectious_fungus);
+		register(bat_gene_sample);
 		register(rabbit_gene_sample);
 		register(chicken_gene_sample);
 		register(cow_gene_sample);

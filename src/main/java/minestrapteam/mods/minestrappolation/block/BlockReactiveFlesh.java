@@ -135,6 +135,23 @@ public class BlockReactiveFlesh extends BlockFlesh
 				return true;
 			}			
 		}
+		if(playerIn.getCurrentEquippedItem().getItem() == MItems.bat_gene_sample)
+		{
+			if(playerIn.getCurrentEquippedItem().stackSize > 1)
+			{
+				playerIn.addStat(MAchievements.gene_block, 1);
+				playerIn.getCurrentEquippedItem().stackSize--;
+				worldIn.setBlockState(pos, MBlocks.block_bat.getDefaultState());
+				return true;
+			}
+			else
+			{
+				playerIn.addStat(MAchievements.gene_block, 1);
+				playerIn.destroyCurrentEquippedItem();
+				worldIn.setBlockState(pos, MBlocks.block_bat.getDefaultState());
+				return true;
+			}			
+		}
 		if(playerIn.getCurrentEquippedItem().getItem() == MItems.sheep_gene_sample)
 		{
 			if(playerIn.getCurrentEquippedItem().stackSize > 1)

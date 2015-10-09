@@ -164,6 +164,10 @@ public class MDrops
 		{
 			living.dropItem(MItems.wing_sinew, random.nextInt(Config.sinewDropAmount + looting));
 		}
+		if (random.nextFloat() / looting < Config.guanoDropChance)
+		{
+			living.dropItem(MItems.guano, random.nextInt(Config.guanoDropAmount + looting));
+		}
 	}
 	private static void dropIronGolemItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{

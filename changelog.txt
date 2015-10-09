@@ -1,3 +1,19 @@
+4.2.1
+ - Added Magnetic Torches. When the block they're placed on is broken, they try to attatch to another neighboring block before dropping as an item. Idea taken from IntegerArray's Smart Torches mod with permission.
+ - Added Guano. Dropped by Bats, acts like Bonemeal, and can be used as an efficient fuel source.
+ - Added Fermented Bat Gene Samples.
+ - Added Bat Gene Blocks. Spawn Guano items around them over time.
+ - Blaze Shards now burn longer.
+ - Blazium Ingots burn longer.
+ - Blazium Blocks burn longer.
+ - Magma Buckets can be used as a fuel source, and are more efficient than Lava.
+ - Fixed Satchel dupe glitch.
+ - Fixed shift-clicking in Satchels and Backpacks.
+ - Fixed Alchemical Splitter's GUI texture showing a glitchy progress bar.
+ - Fixed not being able to shift-click items into the Splitter input slot.
+ - Fixed middle-clicking Minestrapp machines in Creative giving the active state.
+ - Fixed middle-clicking Minestrapp Doors in Creative giving Vanilla Oak Doors.
+
 4.2.0
  - Added Cardboard.
  - Added Cardboard Blocks. Very useful for temporary scaffolding.

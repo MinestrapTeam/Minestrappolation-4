@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import minestrapteam.mods.minestrappolation.Config;
 import minestrapteam.mods.minestrappolation.Minestrappolation;
+import minestrapteam.mods.minestrappolation.block.BlockBat;
 import minestrapteam.mods.minestrappolation.block.BlockBiomeBricks;
 import minestrapteam.mods.minestrappolation.block.BlockBlazium;
 import minestrapteam.mods.minestrappolation.block.BlockBoulder;
@@ -328,6 +329,7 @@ public class MBlocks
 	//Gene Blocks
 	public static Block block_flesh;
 	public static Block block_flesh_reactive;
+	public static Block block_bat;
 	public static Block block_rabbit;
 	public static Block block_cow;
 	public static Block block_mooshroom;
@@ -696,6 +698,7 @@ public class MBlocks
 		//Gene Blocks
 		block_flesh = new BlockFlesh(Material.cloth, MapColor.pinkColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_flesh");
 		block_flesh_reactive = new BlockReactiveFlesh(Material.cloth, MapColor.pinkColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setUnlocalizedName("block_flesh_reactive");
+		block_bat = new BlockBat(Material.cloth, MapColor.brownColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_bat");
 		block_rabbit = new BlockRabbit(Material.cloth, MapColor.brownColor).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_rabbit");
 		block_cow = new BlockCow(Material.cloth, MapColor.brownColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_cow");
 		block_mooshroom = new BlockMooshroom(Material.cloth, MapColor.redColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_mooshroom");
@@ -1180,6 +1183,7 @@ public class MBlocks
 		register(claimerator);
 		register(block_flesh);
 		register(block_flesh_reactive);
+		register(block_bat);
 		register(block_rabbit);
 		register(block_chicken);
 		register(block_cow);

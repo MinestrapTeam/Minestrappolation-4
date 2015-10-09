@@ -579,6 +579,8 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MItems.rabbit_gene_sample, 1), new ItemStack(Items.rabbit_foot, 1), new ItemStack(MItems.slime_core, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.sheep_gene_sample, 1), new ItemStack(MItems.sheep_foot, 1), new ItemStack(MItems.slime_core, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.wolf_gene_sample, 1), new ItemStack(MItems.wolf_hide, 1), new ItemStack(MItems.slime_core, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.bat_gene_sample, 1), new ItemStack(MItems.wing_sinew, 1), new ItemStack(MItems.slime_core, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.block_bat, 1), new ItemStack(MBlocks.block_flesh, 1), new ItemStack(MItems.bat_gene_sample, 1), 0.1F);
 	}
 	
 	public void addRecipe(Block input, ItemStack stack, ItemStack stack2, float experience)

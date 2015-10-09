@@ -61,6 +61,7 @@ public class Config
 	public static int		tentacleDropAmount;
 	public static int		doodadDropAmount;
 	public static int		fungusDropAmount;
+	public static int		guanoDropAmount;
 	
 	
 	// ********* Floats **********
@@ -75,6 +76,7 @@ public class Config
 	public static float		tentacleDropChance;
 	public static float		doodadDropChance;
 	public static float		fungusDropChance;
+	public static float		guanoDropChance;
 	
 	
 	// ********* Doubles **********
@@ -102,7 +104,7 @@ public class Config
 		healthIncreaseMax = config.get("Mechanics", "MaxHealthIncrease", 40D, "The maximum amount of health players can get from using Heart Containers.").getDouble();
 		healthStarting = config.get("Mechanics", "StartingHealth", 10D, "The amount of health players have when entering the world (Vanilla players have 20).").getDouble();
 		
-		bushGrowChance = config.get("Plants", "BushGrowthChance", 4, "The growth rate of Bushes. Increasing this will cause Bushes to grow slower.").getInt();
+		bushGrowChance = config.get("Plants", "BushGrowthChance", 4, "The growth rate of Bushes, Glacieric Ice Deposits, and Gene Blocks. Increasing this will cause these blocks to grow slower.").getInt();
 		seaweedGrowChance = config.get("Plants", "SeaweedGrowthChance", 20, "The growth rate of Seaweed. Increasing this will cause Seaweed to grow slower.").getInt();
 		pepperSeedChance = config.get("Plants", "PepperSeedChance", 10, "The percentage chance of finding Peppercorns when breaking Tall Grass.").getInt();
 		onionSeedChance = config.get("Plants", "OnionSeedChance", 10, "The percentage chance of finding Onions when breaking Allium flowers.").getInt();
@@ -127,6 +129,8 @@ public class Config
 		doodadDropAmount = config.get("Drops", "TechnologicalDoodadDropQuantity", 1, "The maximum amount of Technological Doodads dropped when killing Iron Golems.").getInt();
 		fungusDropChance = config.get("Drops", "InfectiousFungusDropChance", 15, "The percentage chance of finding Infectious Fungus when killing Mooshrooms.").getInt();
 		fungusDropAmount = config.get("Drops", "InfectiousFungusDropQuantity", 1, "The maximum amount of Infectious Fungus dropped when killing Mooshrooms.").getInt();
+		guanoDropChance = config.get("Drops", "GuanoDropChance", 30, "The percentage chance of finding Guano when killing Bats.").getInt();
+		guanoDropAmount = config.get("Drops", "GuanoDropQuantity", 3, "The maximum amount of Guano dropped when killing Bats.").getInt();
 		
 		genCopper = config.get("Ores", "GenerateCopper", true, "Set to False to prevent Copper Ore from generating.").getBoolean();
 		genTin = config.get("Ores", "GenerateTin", true, "Set to False to prevent Tin Ore from generating.").getBoolean();

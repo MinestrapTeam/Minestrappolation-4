@@ -217,6 +217,7 @@ public class MRecipes
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.sheep_gene_sample, 1), new Object[] { MItems.sheep_foot, MItems.slime_core, Items.sugar, Blocks.brown_mushroom});
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.wolf_gene_sample, 1), new Object[] { MItems.wolf_hide, MItems.slime_core, Items.sugar, Blocks.brown_mushroom});
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.rabbit_gene_sample, 1), new Object[] { Items.rabbit_foot, MItems.slime_core, Items.sugar, Blocks.brown_mushroom});
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.bat_gene_sample, 1), new Object[] { MItems.wing_sinew, MItems.slime_core, Items.sugar, Blocks.brown_mushroom});
 		
 		// Tools and Weapons
 		GameRegistry.addRecipe(new ItemStack(MItems.copper_pickaxe), new Object[] { "III", " S ", " S ", 'I', MItems.copper_ingot, 'S', Items.stick });

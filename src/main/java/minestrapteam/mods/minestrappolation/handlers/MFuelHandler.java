@@ -35,11 +35,15 @@ public class MFuelHandler implements IFuelHandler
 		if (fuel.getItem() == Item.getItemFromBlock(MBlocks.hanging_moss))
 			return 400;
 		if (fuel.getItem() == MItems.blaze_shard)
-			return 1200;
+			return 1600;
+		if (fuel.getItem() == MItems.guano)
+			return 2400;
 		if (fuel.getItem() == MItems.blazium_ingot)
-			return 4800;
+			return 6800;
 		if (fuel.getItem() == Item.getItemFromBlock(MBlocks.blazium_block))
-			return 48000;
+			return 68000;
+		if (fuel.getItem() == MBlocks.magmaBucket)
+			return 25000;
 		if (fuel.getItem() == MItems.fire_axe)
 			return 14400;
 		if (fuel.getItem() == MItems.fire_pickaxe)
