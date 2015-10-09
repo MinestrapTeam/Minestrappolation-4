@@ -36,6 +36,7 @@ import minestrapteam.mods.minestrappolation.block.BlockMSand;
 import minestrapteam.mods.minestrappolation.block.BlockMSlab;
 import minestrapteam.mods.minestrappolation.block.BlockMStorage;
 import minestrapteam.mods.minestrappolation.block.BlockMagma;
+import minestrapteam.mods.minestrappolation.block.BlockMagneticTorch;
 import minestrapteam.mods.minestrappolation.block.BlockMooshroom;
 import minestrapteam.mods.minestrappolation.block.BlockMoss;
 import minestrapteam.mods.minestrappolation.block.BlockMossyBricks;
@@ -309,6 +310,7 @@ public class MBlocks
 	public static Block lamp_prismarine;
 	
 	//Utility Decor Blocks
+	public static Block magnetic_torch;
 	public static Block	stone_boulder;
 	public static Block	red_rock_boulder;
 	public static Block	coldstone_boulder;
@@ -676,6 +678,7 @@ public class MBlocks
 		lamp_prismarine = new BlockLamp(Material.rock, MapColor.stoneColor, "prismarine").setHardness(1.5F).setResistance(10.0F).setLightLevel(1.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_lamp_prismarine");
 		
 		//Utility Decor Blocks
+		magnetic_torch = new BlockMagneticTorch().setLightLevel(0.9375F).setStepSound(Block.soundTypeWood).setUnlocalizedName("magnetic_torch").setCreativeTab(Minestrappolation.tabMDecor);
 		stone_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
 		red_rock_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("red_rock_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
 		coldstone_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("coldstone_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
@@ -1126,6 +1129,7 @@ public class MBlocks
 		
 		register(dead_branch);
 		register(cold_cobweb);
+		register(magnetic_torch);
 		register(ministrapp_flower_pot);
 		register(glacieric_ice_vein);
 		register(redwood_fence);

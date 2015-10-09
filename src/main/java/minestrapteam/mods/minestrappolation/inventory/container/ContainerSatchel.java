@@ -87,7 +87,7 @@ public class ContainerSatchel extends MinestrappolationContainer
 				if (par2 >= INV_START && par2 < HOTBAR_START)
 				{
 
-					if (!this.mergeItemStack(itemstack1, HOTBAR_START, HOTBAR_END + 1, false))
+					if (!this.mergeItemStack(itemstack1, 0, INV_START - 1, false))
 
 					{
 
@@ -100,7 +100,7 @@ public class ContainerSatchel extends MinestrappolationContainer
 				else if (par2 >= HOTBAR_START && par2 < HOTBAR_END + 1)
 				{
 
-					if (!this.mergeItemStack(itemstack1, INV_START, INV_END + 1, false))
+					if (!this.mergeItemStack(itemstack1, 0, INV_START - 1, false))
 
 					{
 
@@ -109,7 +109,6 @@ public class ContainerSatchel extends MinestrappolationContainer
 					}
 
 				}
-
 			}
 
 			if (itemstack1.stackSize == 0)
@@ -146,7 +145,21 @@ public class ContainerSatchel extends MinestrappolationContainer
 	public ItemStack slotClick(int slotID, int buttonPressed, int flag, EntityPlayer player)
 	{
 		this.needsUpdate = true;
-
+		InventoryPlayer inventoryplayer = player.inventory;
+		
+		if(slotID >= 0 && this.getSlot(slotID) != null && this.getSlot(slotID).getStack() == player.getHeldItem())
+		{
+			return null;
+		}
+		if (flag == 2 && buttonPressed >= 0 && buttonPressed < 9)
+        {
+			Slot slot2 = (Slot)this.inventorySlots.get(slotID);
+			ItemStack itemstack3 = inventoryplayer.getStackInSlot(buttonPressed);
+			if(slot2.getStack() == player.getHeldItem() || itemstack3 == player.getHeldItem())
+			{
+				return null;
+			}
+        }
 		return super.slotClick(slotID, buttonPressed, flag, player);
 	}
 

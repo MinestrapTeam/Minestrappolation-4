@@ -1,4 +1,4 @@
-4.1.1
+4.2.0
  - Added Cardboard.
  - Added Cardboard Blocks. Very useful for temporary scaffolding.
  - Added Wet Cardboard Blocks. Created when Cardboard Blocks are touched by Rain or Water, and collapse when you try to walk on them.

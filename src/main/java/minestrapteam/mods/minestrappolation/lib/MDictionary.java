@@ -139,6 +139,28 @@ public class MDictionary
 		OreDictionary.registerOre("meatRaw", new ItemStack(Items.rabbit));
 		OreDictionary.registerOre("meatRaw", new ItemStack(Items.rotten_flesh));
 		
+		OreDictionary.registerOre("berrybushRasp", new ItemStack(MBlocks.raspberry_bush));
+		OreDictionary.registerOre("berrybushBlue", new ItemStack(MBlocks.blueberry_bush));
+		OreDictionary.registerOre("berrybushBlack", new ItemStack(MBlocks.blackberry_bush));
+		OreDictionary.registerOre("berrybushStraw", new ItemStack(MBlocks.strawberry_bush));
+		OreDictionary.registerOre("berrybushMana", new ItemStack(MBlocks.mana_bush));
+		
+		OreDictionary.registerOre("foodRaspberry", new ItemStack(MItems.raspberry));
+		OreDictionary.registerOre("foodBlueberry", new ItemStack(MItems.blueberry));
+		OreDictionary.registerOre("foodBlackberry", new ItemStack(MItems.blackberry));
+		OreDictionary.registerOre("foodStrawberry", new ItemStack(MItems.strawberry));
+		
+		OreDictionary.registerOre("foodCelery", new ItemStack(MItems.celery));
+		OreDictionary.registerOre("seedCelery", new ItemStack(MBlocks.celery_seed));
+		OreDictionary.registerOre("foodLettuce", new ItemStack(MBlocks.lettuce));
+		OreDictionary.registerOre("foodCabbage", new ItemStack(MBlocks.cabbage));
+		OreDictionary.registerOre("foodOnion", new ItemStack(MBlocks.onion));
+		OreDictionary.registerOre("foodPepper", new ItemStack(MItems.pepper));
+		OreDictionary.registerOre("seedPepper", new ItemStack(MBlocks.pepper_seed));
+		OreDictionary.registerOre("seedRice", new ItemStack(MBlocks.rice));
+		OreDictionary.registerOre("foodRice", new ItemStack(MBlocks.rice));
+		OreDictionary.registerOre("foodPeanuts", new ItemStack(MBlocks.peanuts));
+		
 		//Minerals
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.copper_block), new Object[] { "III", "III", "III", 'I', "ingotCopper" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.tin_block), new Object[] { "III", "III", "III", 'I', "ingotTin" }));
@@ -174,6 +196,7 @@ public class MDictionary
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.meat_block, 1), new Object[] { "MMM", "MMM", "MMM", 'M', "meatRaw" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.glass_door_item, 3), new Object[] { "II", "GG", "II", 'I', Blocks.iron_bars, 'G', "paneGlassColorless"}));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.steel_mesh, 16), new Object[] { "SSS", "SSS", 'S', "ingotSteel" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.magnetic_torch, 6), new Object[] {"C", "S", "R", 'C', Items.coal, 'S', "stickWood", 'R', Items.redstone}));
 		
 		//Food
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(MItems.rice_bowl, 1), new Object[] { "stickWood", MBlocks.rice, Items.bowl, new ItemStack(Items.potionitem, 1, 0)}));
