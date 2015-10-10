@@ -7,6 +7,7 @@
  - Blazium Ingots burn longer.
  - Blazium Blocks burn longer.
  - Magma Buckets can be used as a fuel source, and are more efficient than Lava.
+ - Improved Glow Glass texture.
  - Fixed Satchel dupe glitch.
  - Fixed shift-clicking in Satchels and Backpacks.
  - Fixed Alchemical Splitter's GUI texture showing a glitchy progress bar.
