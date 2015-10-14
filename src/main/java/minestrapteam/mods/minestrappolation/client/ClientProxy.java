@@ -2,6 +2,7 @@ package minestrapteam.mods.minestrappolation.client;
 
 import minestrapteam.mods.minestrappolation.Minestrappolation;
 import minestrapteam.mods.minestrappolation.block.BlockBiomeBricks;
+import minestrapteam.mods.minestrappolation.block.BlockCarvedPumpkin;
 import minestrapteam.mods.minestrappolation.block.BlockChiseled;
 import minestrapteam.mods.minestrappolation.block.BlockCrackedBricks;
 import minestrapteam.mods.minestrappolation.block.BlockLamp;
@@ -105,6 +106,7 @@ public class ClientProxy extends CommonProxy
 		BlockLamp.inventoryRender("prismarine");
 		MBlockLeaves.inventoryRender();
 		MBlockSapling.inventoryRender();
+		BlockCarvedPumpkin.inventoryRender("neutral");
 		
 		ItemChunk.inventoryRender();
 		ItemBricks.inventoryRender();
