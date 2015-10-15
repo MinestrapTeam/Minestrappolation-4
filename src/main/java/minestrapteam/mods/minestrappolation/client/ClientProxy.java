@@ -106,7 +106,7 @@ public class ClientProxy extends CommonProxy
 		BlockLamp.inventoryRender("prismarine");
 		MBlockLeaves.inventoryRender();
 		MBlockSapling.inventoryRender();
-		BlockCarvedPumpkin.inventoryRender("neutral");
+		BlockCarvedPumpkin.inventoryRender();
 		
 		ItemChunk.inventoryRender();
 		ItemBricks.inventoryRender();

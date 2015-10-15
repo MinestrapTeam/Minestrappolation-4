@@ -135,6 +135,7 @@ import minestrapteam.mods.minestrappolation.item.biomeitems.ItemBlockBiomeTitani
 import minestrapteam.mods.minestrappolation.item.biomeitems.ItemBlockBiomeTorite;
 import minestrapteam.mods.minestrappolation.item.biomeitems.ItemBlockBiomeUranium;
 import minestrapteam.mods.minestrappolation.item.blocks.ItemBlockBiomeBricks;
+import minestrapteam.mods.minestrappolation.item.blocks.ItemBlockCarvedPumpkin;
 import minestrapteam.mods.minestrappolation.item.blocks.ItemBlockChiseled;
 import minestrapteam.mods.minestrappolation.item.blocks.ItemBlockColdSand;
 import minestrapteam.mods.minestrappolation.item.blocks.ItemBlockCrackedBricks;
@@ -214,7 +215,7 @@ public class MBlocks
 	public static Block celery_crop;
 	public static Item	celery_seed;
 	
-	public static Block pumpkin_carved_neutral;
+	public static Block pumpkin_carved;
 	
 	//Food Blocks
 	public static Block	sugar_block;
@@ -584,7 +585,7 @@ public class MBlocks
 		lettuce = new ItemSeedFood(1, 0F, lettuce_crop, Blocks.farmland).setUnlocalizedName("lettuce").setCreativeTab(Minestrappolation.tabMFood);
 		celery_crop = new BlockCelery().setUnlocalizedName("celery_crop");
 		celery_seed = new ItemSeeds(celery_crop, Blocks.farmland).setUnlocalizedName("celery_seeds").setCreativeTab(Minestrappolation.tabMFood);
-		pumpkin_carved_neutral = new BlockCarvedPumpkin().setHardness(1F).setStepSound(Block.soundTypeWood).setUnlocalizedName("pumpkin_carved_neutral").setCreativeTab(Minestrappolation.tabMDecor);
+		pumpkin_carved = new BlockCarvedPumpkin().setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
 		
 		//Food Blocks
 		sugar_block = new BlockMFalling(Material.sand, MapColor.snowColor).setHardness(0.5F).setStepSound(Block.soundTypeGravel).setUnlocalizedName("sugar_block").setCreativeTab(Minestrappolation.tabMBuilding);
@@ -1136,7 +1137,7 @@ public class MBlocks
 		
 		register(dead_branch);
 		register(cold_cobweb);
-		register(pumpkin_carved_neutral);
+		register(pumpkin_carved, ItemBlockCarvedPumpkin.class);
 		register(magnetic_torch);
 		register(ministrapp_flower_pot);
 		register(glacieric_ice_vein);

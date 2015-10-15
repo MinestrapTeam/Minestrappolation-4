@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.google.common.base.Predicate;
 
-import minestrapteam.mods.minestrappolation.block.BlockCarvedPumpkin.EnumType;
+import minestrapteam.mods.minestrappolation.enumtypes.MPumpkinType;
 import minestrapteam.mods.minestrappolation.enumtypes.MStoneType;
 import minestrapteam.mods.minestrappolation.lib.MReference;
 import net.minecraft.block.BlockPlanks;
@@ -43,22 +43,30 @@ public class BlockCarvedPumpkin extends net.minecraft.block.BlockDirectional
     private BlockPattern golemBasePattern;
     private BlockPattern golemPattern;
 
-    public static final PropertyEnum VARIANT = PropertyEnum.create("variant", BlockCarvedPumpkin.EnumType.class);
+    private static final PropertyEnum	VARIANT	= PropertyEnum.create("variant", MPumpkinType.class);
 
     public BlockCarvedPumpkin()
     {
         super(Material.gourd);
-        this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, BlockCarvedPumpkin.EnumType.MINIMAL).withProperty(FACING, EnumFacing.NORTH));
+        this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, MPumpkinType.NEUTRAL).withProperty(FACING, EnumFacing.NORTH));
         this.setTickRandomly(true);
+        this.setUnlocalizedName("pumpkin_minestrapp");
     }
     
-    @SideOnly(Side.CLIENT)
-    public void getSubBlocks(Item itemIn, CreativeTabs tab, List list)
-    {
-        list.add(new ItemStack(itemIn, 1, BlockCarvedPumpkin.EnumType.MINIMAL.getMetadata()));
-        list.add(new ItemStack(itemIn, 1, BlockCarvedPumpkin.EnumType.AVERAGE.getMetadata()));
-        list.add(new ItemStack(itemIn, 1, BlockCarvedPumpkin.EnumType.MAXIMAL.getMetadata()));
-    }
+    @Override
+	@SideOnly(Side.CLIENT)
+	public void getSubBlocks(Item itemIn, CreativeTabs tab, List list)
+	{
+		MPumpkinType[] aenumtype = MPumpkinType.values();
+		int i = aenumtype.length;
+		
+		for (int j = 0; j < i; ++j)
+		{
+			MPumpkinType enumtype = aenumtype[j];
+			list.add(new ItemStack(itemIn, 1, enumtype.getMetadata()));
+		}
+		
+	}
 
     public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state)
     {
@@ -141,11 +149,11 @@ public class BlockCarvedPumpkin extends net.minecraft.block.BlockDirectional
     public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
     {
     	if(placer.getHeldItem().getMetadata() == 0)
-    		return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite()).withProperty(VARIANT, EnumType.MINIMAL);
+    		return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite()).withProperty(VARIANT, MPumpkinType.NEUTRAL);
     	else if(placer.getHeldItem().getMetadata() == 1)
-    		return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite()).withProperty(VARIANT, EnumType.AVERAGE);
+    		return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite()).withProperty(VARIANT, MPumpkinType.GOLEM);
     	else
-    		return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite()).withProperty(VARIANT, EnumType.MAXIMAL);
+    		return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite()).withProperty(VARIANT, MPumpkinType.SNOWMAN);
     }
 
     /**
@@ -153,7 +161,7 @@ public class BlockCarvedPumpkin extends net.minecraft.block.BlockDirectional
      */
     public IBlockState getStateFromMeta(int meta)
     {
-        IBlockState iblockstate = this.getDefaultState().withProperty(VARIANT, BlockCarvedPumpkin.EnumType.byMetadata((meta & 3) % 4));
+        IBlockState iblockstate = this.getDefaultState().withProperty(VARIANT, MPumpkinType.byMetadata((meta & 3) % 4));
 
         switch (meta & 12)
         {
@@ -179,7 +187,7 @@ public class BlockCarvedPumpkin extends net.minecraft.block.BlockDirectional
     public int getMetaFromState(IBlockState state)
     {
         byte b0 = 0;
-        int i = b0 | ((BlockCarvedPumpkin.EnumType)state.getValue(VARIANT)).getMetadata();
+        int i = b0 | ((MPumpkinType)state.getValue(VARIANT)).getMetadata();
 
         switch (((EnumFacing)state.getValue(FACING)).getHorizontalIndex())
         {
@@ -203,12 +211,12 @@ public class BlockCarvedPumpkin extends net.minecraft.block.BlockDirectional
     
     protected ItemStack createStackedBlock(IBlockState state)
     {
-    	return new ItemStack(Item.getItemFromBlock(this), 1, ((EnumType)state.getValue(VARIANT)).getMetadata());
+    	return new ItemStack(Item.getItemFromBlock(this), 1, ((MPumpkinType)state.getValue(VARIANT)).getMetadata());
     }
     
     public int damageDropped(IBlockState state)
     {
-        return ((EnumType)state.getValue(VARIANT)).getMetadata();
+        return ((MPumpkinType)state.getValue(VARIANT)).getMetadata();
     }
 
     protected BlockPattern getSnowmanBasePattern()
@@ -251,87 +259,23 @@ public class BlockCarvedPumpkin extends net.minecraft.block.BlockDirectional
         return this.golemPattern;
     }
     
-    public static enum EnumType implements IStringSerializable
-    {
-        MINIMAL(0, "minimal"),
-        AVERAGE(1, "average"),
-        MAXIMAL(2, "maximal");
-        private static final BlockCarvedPumpkin.EnumType[] META_LOOKUP = new BlockCarvedPumpkin.EnumType[values().length];
-        private final int meta;
-        private final String name;
-        private final String unlocalizedName;
-
-        private EnumType(int meta, String name)
-        {
-            this(meta, name, name);
-        }
-
-        private EnumType(int meta, String name, String unlocalizedName)
-        {
-            this.meta = meta;
-            this.name = name;
-            this.unlocalizedName = unlocalizedName;
-        }
-
-        public int getMetadata()
-        {
-            return this.meta;
-        }
-
-        public String toString()
-        {
-            return this.name;
-        }
-
-        public static BlockCarvedPumpkin.EnumType byMetadata(int meta)
-        {
-            if (meta < 0 || meta >= META_LOOKUP.length)
-            {
-                meta = 0;
-            }
-
-            return META_LOOKUP[meta];
-        }
-
-        public String getName()
-        {
-            return this.name;
-        }
-
-        public String getUnlocalizedName()
-        {
-            return this.unlocalizedName + this.name();
-        }
-
-        static
-        {
-            BlockCarvedPumpkin.EnumType[] var0 = values();
-            int var1 = var0.length;
-
-            for (int var2 = 0; var2 < var1; ++var2)
-            {
-                BlockCarvedPumpkin.EnumType var3 = var0[var2];
-                META_LOOKUP[var3.getMetadata()] = var3;
-            }
-        }
-    }
-    
-    public static void inventoryRender(String pumpkinType)
+   
+    public static void inventoryRender()
 	{
-		Item itemPumpkinVariants = GameRegistry.findItem(MReference.MODID, "pumpkin_carved_" + pumpkinType);
+		Item itemBlockpVariants = GameRegistry.findItem(MReference.MODID, "pumpkin_minestrapp");
 		
-		ModelBakery.addVariantName(itemPumpkinVariants, "ministrapp:pumpkin_carved_" + pumpkinType + "_" + "0");
-		ModelBakery.addVariantName(itemPumpkinVariants, "ministrapp:pumpkin_carved_" + pumpkinType + "_" + "1");
-		ModelBakery.addVariantName(itemPumpkinVariants, "ministrapp:pumpkin_carved_" + pumpkinType + "_" + "2");
+		ModelBakery.addVariantName(itemBlockpVariants, "ministrapp:pumpkin_golem_carved");
+		ModelBakery.addVariantName(itemBlockpVariants, "ministrapp:pumpkin_neutral_carved");
+		ModelBakery.addVariantName(itemBlockpVariants, "ministrapp:pumpkin_snow_carved");
 		
-		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "pumpkin_carved_" + pumpkinType);
-		EnumType[] aenumtype = EnumType.values();
+		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "pumpkin_minestrapp");
+		MPumpkinType[] aenumtype = MPumpkinType.values();
 		int i = aenumtype.length;
 		
 		for (int j = 0; j < i; ++j)
 		{
-			EnumType enumtype = aenumtype[j];
-			ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(MReference.MODID + ":" + "pumpkin_carved_" + pumpkinType + "_" + enumtype.getMetadata(), "inventory");
+			MPumpkinType enumtype = aenumtype[j];
+			ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(MReference.MODID + ":" + enumtype.getUnlocalizedName() + "_carved", "inventory");
 			Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, enumtype.getMetadata(), itemModelResourceLocation);
 		}
 	}
