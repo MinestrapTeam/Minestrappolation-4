@@ -6,6 +6,7 @@ import com.google.common.base.Predicate;
 
 import minestrapteam.mods.minestrappolation.enumtypes.MPumpkinType;
 import minestrapteam.mods.minestrappolation.enumtypes.MStoneType;
+import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import minestrapteam.mods.minestrappolation.lib.MReference;
 import net.minecraft.block.BlockPlanks;
 import net.minecraft.block.material.Material;
@@ -42,15 +43,18 @@ public class BlockCarvedPumpkin extends net.minecraft.block.BlockDirectional
     private BlockPattern snowmanPattern;
     private BlockPattern golemBasePattern;
     private BlockPattern golemPattern;
+    
+    public String type;
 
     private static final PropertyEnum	VARIANT	= PropertyEnum.create("variant", MPumpkinType.class);
 
-    public BlockCarvedPumpkin()
+    public BlockCarvedPumpkin(String type)
     {
         super(Material.gourd);
-        this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, MPumpkinType.NEUTRAL).withProperty(FACING, EnumFacing.NORTH));
+        this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, MPumpkinType.SIMPLE).withProperty(FACING, EnumFacing.NORTH));
         this.setTickRandomly(true);
-        this.setUnlocalizedName("pumpkin_minestrapp");
+        this.setUnlocalizedName("pumpkin_minestrapp_" + type);
+        this.type = type;
     }
     
     @Override
@@ -149,11 +153,11 @@ public class BlockCarvedPumpkin extends net.minecraft.block.BlockDirectional
     public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
     {
     	if(placer.getHeldItem().getMetadata() == 0)
-    		return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite()).withProperty(VARIANT, MPumpkinType.NEUTRAL);
+    		return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite()).withProperty(VARIANT, MPumpkinType.SIMPLE);
     	else if(placer.getHeldItem().getMetadata() == 1)
-    		return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite()).withProperty(VARIANT, MPumpkinType.GOLEM);
+    		return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite()).withProperty(VARIANT, MPumpkinType.AVERAGE);
     	else
-    		return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite()).withProperty(VARIANT, MPumpkinType.SNOWMAN);
+    		return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite()).withProperty(VARIANT, MPumpkinType.COMPLEX);
     }
 
     /**
@@ -233,7 +237,7 @@ public class BlockCarvedPumpkin extends net.minecraft.block.BlockDirectional
     {
         if (this.snowmanPattern == null)
         {
-            this.snowmanPattern = FactoryBlockPattern.start().aisle(new String[] {"^", "#", "#"}).where('^', BlockWorldState.hasState(BlockStateHelper.forBlock(Blocks.pumpkin))).where('#', BlockWorldState.hasState(BlockStateHelper.forBlock(Blocks.snow))).build();
+            this.snowmanPattern = FactoryBlockPattern.start().aisle(new String[] {"^", "#", "#"}).where('^', BlockWorldState.hasState(BlockStateHelper.forBlock(MBlocks.pumpkin_carved))).where('#', BlockWorldState.hasState(BlockStateHelper.forBlock(Blocks.snow))).build();
         }
 
         return this.snowmanPattern;
@@ -253,22 +257,22 @@ public class BlockCarvedPumpkin extends net.minecraft.block.BlockDirectional
     {
         if (this.golemPattern == null)
         {
-            this.golemPattern = FactoryBlockPattern.start().aisle(new String[] {"~^~", "###", "~#~"}).where('^', BlockWorldState.hasState(BlockStateHelper.forBlock(Blocks.pumpkin))).where('#', BlockWorldState.hasState(BlockStateHelper.forBlock(Blocks.iron_block))).where('~', BlockWorldState.hasState(BlockStateHelper.forBlock(Blocks.air))).build();
+            this.golemPattern = FactoryBlockPattern.start().aisle(new String[] {"~^~", "###", "~#~"}).where('^', BlockWorldState.hasState(BlockStateHelper.forBlock(MBlocks.pumpkin_carved))).where('#', BlockWorldState.hasState(BlockStateHelper.forBlock(Blocks.iron_block))).where('~', BlockWorldState.hasState(BlockStateHelper.forBlock(Blocks.air))).build();
         }
 
         return this.golemPattern;
     }
     
    
-    public static void inventoryRender()
+    public static void inventoryRender(String type)
 	{
-		Item itemBlockpVariants = GameRegistry.findItem(MReference.MODID, "pumpkin_minestrapp");
+		Item itemBlockpVariants = GameRegistry.findItem(MReference.MODID, "pumpkin_minestrapp_" + type);
 		
-		ModelBakery.addVariantName(itemBlockpVariants, "ministrapp:pumpkin_golem_carved");
-		ModelBakery.addVariantName(itemBlockpVariants, "ministrapp:pumpkin_neutral_carved");
-		ModelBakery.addVariantName(itemBlockpVariants, "ministrapp:pumpkin_snow_carved");
+		ModelBakery.addVariantName(itemBlockpVariants, "ministrapp:pumpkin_simple_carved_" + type);
+		ModelBakery.addVariantName(itemBlockpVariants, "ministrapp:pumpkin_average_carved_" + type);
+		ModelBakery.addVariantName(itemBlockpVariants, "ministrapp:pumpkin_complex_carved_" + type);
 		
-		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "pumpkin_minestrapp");
+		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "pumpkin_minestrapp_" + type);
 		MPumpkinType[] aenumtype = MPumpkinType.values();
 		int i = aenumtype.length;
 		

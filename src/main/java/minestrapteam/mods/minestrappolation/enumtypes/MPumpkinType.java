@@ -4,9 +4,9 @@ import net.minecraft.util.IStringSerializable;
 
 public enum MPumpkinType implements IStringSerializable
 {
-	NEUTRAL(0, "neutral"),
-	GOLEM(1, "golem"),
-	SNOWMAN(2, "snowman");
+	SIMPLE(0, "simple"),
+	AVERAGE(1, "average"),
+	COMPLEX(2, "complex");
 	private static final MPumpkinType[]	META_LOOKUP	= new MPumpkinType[values().length];
 	private final int					meta;
 	private final String				name;

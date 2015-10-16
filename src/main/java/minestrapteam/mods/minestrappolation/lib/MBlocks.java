@@ -585,7 +585,7 @@ public class MBlocks
 		lettuce = new ItemSeedFood(1, 0F, lettuce_crop, Blocks.farmland).setUnlocalizedName("lettuce").setCreativeTab(Minestrappolation.tabMFood);
 		celery_crop = new BlockCelery().setUnlocalizedName("celery_crop");
 		celery_seed = new ItemSeeds(celery_crop, Blocks.farmland).setUnlocalizedName("celery_seeds").setCreativeTab(Minestrappolation.tabMFood);
-		pumpkin_carved = new BlockCarvedPumpkin().setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
+		pumpkin_carved = new BlockCarvedPumpkin("neutral").setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
 		
 		//Food Blocks
 		sugar_block = new BlockMFalling(Material.sand, MapColor.snowColor).setHardness(0.5F).setStepSound(Block.soundTypeGravel).setUnlocalizedName("sugar_block").setCreativeTab(Minestrappolation.tabMBuilding);
