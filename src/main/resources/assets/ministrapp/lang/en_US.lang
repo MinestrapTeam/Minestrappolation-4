@@ -558,7 +558,8 @@ tile.shrub_grass.name=Shrub Grass
 tile.magnetic_torch.name=Magnetic Torch
 tile.block_bat.name=Bat Gene Block
 
-
+tile.candle.name=Candle
+tile.lit_candle.name=Lit Candle
 
 item.dough.name=Dough
 item.bun.name=Bun
@@ -810,6 +811,10 @@ item.bat_gene_sample.name=Fermented Bat Gene Sample
 
 sandstone_brick.name=Sandstone Brick
 red_sandstone_brick.name=Red Sandstone Brick
+
+item.fat.name=Fat
+item.grease.name=Grease
+item.tallow.name=Tallow
 
 itemGroup.tabMBuilding=Minestrapp Building Blocks
 itemGroup.tabMDecor=Minestrapp Decoration Blocks
