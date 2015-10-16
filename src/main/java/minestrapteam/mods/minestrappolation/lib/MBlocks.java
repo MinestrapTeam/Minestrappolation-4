@@ -158,8 +158,6 @@ import minestrapteam.mods.minestrappolation.item.blocks.ItemBlockTiles;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.BlockFenceGate;
-import net.minecraft.block.BlockFlowerPot;
-import net.minecraft.block.BlockWall;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -332,6 +330,8 @@ public class MBlocks
 	public static Block cold_cobweb;
 	public static Block glacieric_ice;
 	public static Block	godstone;
+	public static Block candle;
+	public static Block candle_lit;
 	
 	//Gene Blocks
 	public static Block block_flesh;
@@ -588,7 +588,7 @@ public class MBlocks
 		lettuce = new ItemSeedFood(1, 0F, lettuce_crop, Blocks.farmland).setUnlocalizedName("lettuce").setCreativeTab(Minestrappolation.tabMFood);
 		celery_crop = new BlockCelery().setUnlocalizedName("celery_crop");
 		celery_seed = new ItemSeeds(celery_crop, Blocks.farmland).setUnlocalizedName("celery_seeds").setCreativeTab(Minestrappolation.tabMFood);
-		pumpkin_carved = new BlockCarvedPumpkin("neutral").setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
+		pumpkin_carved = new BlockCarvedPumpkin().setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
 		
 		//Food Blocks
 		sugar_block = new BlockMFalling(Material.sand, MapColor.snowColor).setHardness(0.5F).setStepSound(Block.soundTypeGravel).setUnlocalizedName("sugar_block").setCreativeTab(Minestrappolation.tabMBuilding);
@@ -630,6 +630,8 @@ public class MBlocks
 		mud_bricks = new MBlock(Material.ground, MapColor.brownColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setUnlocalizedName("mud_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
 		invincium = new BlockInvincium(Material.rock).setUnlocalizedName("invincium").setBlockUnbreakable().setHardness(50000F).setResistance(50000F).setCreativeTab(Minestrappolation.tabMBuilding);
 		glaical_invincium = new BlockGlacialInvincium(Material.rock, MapColor.blueColor).setUnlocalizedName("glaical_invincium").setBlockUnbreakable().setHardness(50000F).setResistance(50000F).setCreativeTab(Minestrappolation.tabMBuilding);
+		candle = new BlockCandle(Material.wood, MapColor.snowColor, false).setUnlocalizedName("candle").setCreativeTab(Minestrappolation.tabMBuilding);
+		candle_lit = new BlockCandle(Material.wood, MapColor.snowColor, true).setUnlocalizedName("candle_lit").setCreativeTab(Minestrappolation.tabMBuilding);
 		
 		//Misc. Stone Decor Blocks
 		slate = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("slate").setCreativeTab(Minestrappolation.tabMBuilding);
@@ -1177,6 +1179,9 @@ public class MBlocks
 		register(crate);
 		register(barrel);
 		register(chimney);
+		
+		register(candle);
+		register(candle_lit);
 		
 		//Tech Tab
 		register(fan);
