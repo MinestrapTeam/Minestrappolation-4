@@ -29,6 +29,9 @@ public class MRecipes
 		GameRegistry.addRecipe(new ItemStack(MItems.satchel, 1), new Object[] {"HRH", "HCH", "HHH", 'H', Items.rabbit_hide, 'R', MBlocks.rope, 'C', MBlocks.crate });
 		GameRegistry.addRecipe(new ItemStack(MItems.backpack, 1), new Object[] {"HGH", "RBR", "HHH", 'H', MItems.wolf_hide, 'R', MBlocks.rope, 'B', MBlocks.barrel, 'G', Items.gold_ingot });
 		
+		GameRegistry.addSmelting(new ItemStack(MItems.fat), new ItemStack(MItems.tallow), 0.5F);
+		GameRegistry.addRecipe(new ItemStack(MBlocks.candle, 2), new Object[] { "R", "T", 'R', MBlocks.rope, 'T', MItems.tallow });
+		
 		// Food
 		GameRegistry.addRecipe(new ItemStack(MItems.dough, 2), new Object[] { "WW", "WW", 'W', Items.wheat });
 		GameRegistry.addSmelting(new ItemStack(MItems.dough), new ItemStack(Items.bread), 0.3F);

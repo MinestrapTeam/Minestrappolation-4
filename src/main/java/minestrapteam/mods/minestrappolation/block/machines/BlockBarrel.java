@@ -99,4 +99,10 @@ public class BlockBarrel extends BlockFalling implements ITileEntityProvider
 	{
 		return false;
 	}
+	
+	@Override
+	public boolean isFullCube()
+    {
+        return false;
+    }
 }

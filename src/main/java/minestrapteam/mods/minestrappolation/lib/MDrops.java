@@ -105,6 +105,10 @@ public class MDrops
 		{
 			living.dropItem(MItems.pig_foot, random.nextInt(Config.animalFeetDropAmount + looting));
 		}
+		if (random.nextFloat() / looting < Config.fatDropChance)
+		{
+			living.dropItem(MItems.fat, random.nextInt(Config.fatDropAmount + looting));
+		}
 	}
 	private static void dropCowItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{

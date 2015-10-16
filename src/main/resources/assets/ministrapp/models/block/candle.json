@@ -1,9 +1,9 @@
 {
 "__comment": "Designed by Delocuro with BDcraft Cubik PRO 0.95 Beta - http://bdcraft.net",
 "textures": {
-    "particle": "blocks/wax",
-    "texture": "blocks/wax",
-    "pumpkin_rim": "blocks/rope_side"
+    "particle": "ministrapp:blocks/wax",
+    "texture": "ministrapp:blocks/wax",
+    "pumpkin_rim": "ministrapp:blocks/rope_side"
 },
 "elements": [ 
 {

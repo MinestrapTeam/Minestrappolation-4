@@ -99,6 +99,7 @@ public class MItems extends Item
 	public static Item							hot_sauce;
 	
 	//Meats
+	public static Item							fat;
 	public static Item							squid_tentacle;
 	public static Item							calamari;
 	public static Item							sushi;
@@ -135,6 +136,8 @@ public class MItems extends Item
 	//Crafting Materials
 	public static Item							mud_ball;
 	public static Item							crushed_ice;
+	public static Item							tallow;
+	public static Item							grease;
 	public static Item							reinforced_stick;
 	public static Item							animal_bones;
 	public static Item							wing_sinew;
@@ -353,6 +356,7 @@ public class MItems extends Item
 		peanut_butter_bottle = new ItemMSoup(6, 1F, Items.glass_bottle, 0).setUnlocalizedName("peanut_butter_bottle").setCreativeTab(Minestrappolation.tabMFood);
 		
 		//Meats
+		fat = new ItemFood(2, 3.0F, false).setPotionEffect(Potion.hunger.id, 10, 0, 0.7F).setUnlocalizedName("fat").setCreativeTab(Minestrappolation.tabMFood);
 		squid_tentacle = new ItemFood(2, 0.3F, false).setPotionEffect(Potion.poison.id, 5, 1, 0.7F).setUnlocalizedName("squid_tentacle").setCreativeTab(Minestrappolation.tabMFood);
 		calamari = new ItemFood(5, 0.6F, false).setUnlocalizedName("calimari").setCreativeTab(Minestrappolation.tabMFood);
 		sushi = new ItemFood(14, 1.8F, false).setUnlocalizedName("sushi").setCreativeTab(Minestrappolation.tabMFood);
@@ -389,6 +393,8 @@ public class MItems extends Item
 		//Crafting Materials
 		mud_ball = new ItemMudBall().setUnlocalizedName("mud_ball");
 		crushed_ice = new ItemMFood(0, 0, 0).setMaxStackSize(16).setUnlocalizedName("crushed_ice").setCreativeTab(Minestrappolation.tabMFood);
+		tallow = new Item().setUnlocalizedName("tallow").setCreativeTab(Minestrappolation.tabMMaterials);
+		grease = new Item().setUnlocalizedName("grease").setCreativeTab(Minestrappolation.tabMMaterials);
 		guano = new ItemGuano().setUnlocalizedName("guano").setCreativeTab(Minestrappolation.tabMMaterials);
 		reinforced_stick = new Item().setUnlocalizedName("reinforced_stick").setCreativeTab(Minestrappolation.tabMMaterials);
 		propeller = new Item().setUnlocalizedName("propeller").setCreativeTab(Minestrappolation.tabMMaterials);
@@ -544,6 +550,8 @@ public class MItems extends Item
 		register(propeller);
 		register(technological_doodad);
 		register(animal_bones);
+		register(tallow);
+		register(grease);
 		register(pig_foot);
 		register(cow_foot);
 		register(sheep_foot);
@@ -593,6 +601,7 @@ public class MItems extends Item
 		register(crystal_heart);
 		
 		//Foods Tab
+		register(fat);
 		register(blueberry);
 		register(blackberry);
 		register(strawberry);

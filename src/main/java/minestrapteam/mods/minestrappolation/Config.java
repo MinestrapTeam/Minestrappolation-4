@@ -53,6 +53,7 @@ public class Config
 	
 	//Drops
 	public static int		animalBoneDropAmount;
+	public static int		fatDropAmount;
 	public static int 		sinewDropAmount;
 	public static int		animalFeetDropAmount;
 	public static int		wolfHideDropAmount;
@@ -68,6 +69,7 @@ public class Config
 	
 	//Drops
 	public static float		animalBoneDropChance;
+	public static float		fatDropChance;
 	public static float 	sinewDropChance;
 	public static float		animalFeetDropChance;
 	public static float		wolfHideDropChance;
@@ -113,6 +115,8 @@ public class Config
 		
 		animalBoneDropChance = config.get("Drops", "AnimalBoneDropChance", 20, "The percentage chance of finding Animal Bones when killing any farm animal.").getInt();
 		animalBoneDropAmount = config.get("Drops", "AnimalBoneDropQuantity", 2, "The maximum amount of Animal Bones dropped when killing any farm animal.").getInt();
+		fatDropChance = config.get("Drops", "FatDropChance", 40, "The percentage chance of finding Fat when killing Pigs or Zombie Pigmen.").getInt();
+		fatDropAmount = config.get("Drops", "FatDropQuantity", 1, "The maximum amount of Animal Bones dropped when killing Pigs or Zombie Pigmen.").getInt();
 		animalFeetDropChance = config.get("Drops", "AnimalFeetDropChance", 8, "The percentage chance of finding animal feet when killing any farm animal.").getInt();
 		animalFeetDropAmount = config.get("Drops", "AnimalFeetDropQuantity", 1, "The maximum amount of animal feet dropped when killing any farm animal.").getInt();
 		wolfHideDropChance = config.get("Drops", "WolfHideDropChance", 10, "The percentage chance of finding Wolf Hide when killing Wolves.").getInt();

@@ -9,6 +9,7 @@ import minestrapteam.mods.minestrappolation.block.BlockBiomeBricks;
 import minestrapteam.mods.minestrappolation.block.BlockBlazium;
 import minestrapteam.mods.minestrappolation.block.BlockBoulder;
 import minestrapteam.mods.minestrappolation.block.BlockBush;
+import minestrapteam.mods.minestrappolation.block.BlockCandle;
 import minestrapteam.mods.minestrappolation.block.BlockCardboard;
 import minestrapteam.mods.minestrappolation.block.BlockCarvedPumpkin;
 import minestrapteam.mods.minestrappolation.block.BlockChicken;
@@ -316,6 +317,8 @@ public class MBlocks
 	
 	//Utility Decor Blocks
 	public static Block magnetic_torch;
+	public static Block candle;
+	public static Block lit_candle;
 	public static Block	stone_boulder;
 	public static Block	red_rock_boulder;
 	public static Block	coldstone_boulder;
@@ -686,6 +689,8 @@ public class MBlocks
 		
 		//Utility Decor Blocks
 		magnetic_torch = new BlockMagneticTorch().setLightLevel(0.9375F).setStepSound(Block.soundTypeWood).setUnlocalizedName("magnetic_torch").setCreativeTab(Minestrappolation.tabMDecor);
+		candle = new BlockCandle(Material.coral, false).setHardness(0.2F).setStepSound(Block.soundTypeStone).setUnlocalizedName("candle").setCreativeTab(Minestrappolation.tabMDecor);
+		lit_candle = new BlockCandle(Material.coral, true).setHardness(0.2F).setStepSound(Block.soundTypeStone).setLightLevel(0.7F).setUnlocalizedName("lit_candle");
 		stone_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
 		red_rock_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("red_rock_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
 		coldstone_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("coldstone_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
@@ -1137,6 +1142,8 @@ public class MBlocks
 		
 		register(dead_branch);
 		register(cold_cobweb);
+		register(candle);
+		register(lit_candle);
 		register(pumpkin_carved, ItemBlockCarvedPumpkin.class);
 		register(magnetic_torch);
 		register(ministrapp_flower_pot);
