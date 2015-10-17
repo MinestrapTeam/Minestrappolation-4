@@ -1,2 +1,2 @@
 version=1.8.0-4.2.1
-motd=§9We messed up! 4.2.1 is out to fix a bunch of bugs and stuff.
+motd=§9Welcome Cork55 to the team!
