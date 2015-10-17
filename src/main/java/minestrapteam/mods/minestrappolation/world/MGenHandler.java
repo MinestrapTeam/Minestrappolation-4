@@ -175,6 +175,7 @@ public class MGenHandler implements IWorldGenerator
 		this.generateOre(MBlocks.glow_mossy_nether_bricks, world, rand, x1, z1, 5, 20, 30, 0, 100, BlockHelper.forBlock(Blocks.nether_brick), true);
 		this.generateOre(MBlocks.soul_ore, world, rand, x1, z1, 3, 8, 30, 0, 128, BlockHelper.forBlock(Blocks.soul_sand), true);
 		this.generateHangingMoss(world, rand, x1, z1, MBlocks.hanging_glow_moss);
+		this.genGlowShrooms(world, rand, x1, z1);
 	}
 	
 	private void generateOre(Block block, World world, Random rand, int chunkX, int chunkZ, int minVienSize, int maxVienSize, int chance, int minY, int maxY, Predicate blockType, boolean generate)
@@ -277,6 +278,19 @@ public class MGenHandler implements IWorldGenerator
 		{
 			int xRand = chunkX * 16 + rand.nextInt(16);
 			int yRand = rand.nextInt(128);
+			int zRand = chunkZ * 16 + rand.nextInt(16);
+			BlockPos position = new BlockPos(xRand, yRand, zRand);
+			gen.generate(world, rand, position);
+		}
+	}
+	
+	private void genGlowShrooms(World world, Random rand, int chunkX, int chunkZ)
+	{
+		WorldGenGlowShrooms gen = new WorldGenGlowShrooms();
+		for (int i = 0; i < 10; i++)
+		{
+			int xRand = chunkX * 16 + rand.nextInt(16);
+			int yRand = rand.nextInt(256);
 			int zRand = chunkZ * 16 + rand.nextInt(16);
 			BlockPos position = new BlockPos(xRand, yRand, zRand);
 			gen.generate(world, rand, position);

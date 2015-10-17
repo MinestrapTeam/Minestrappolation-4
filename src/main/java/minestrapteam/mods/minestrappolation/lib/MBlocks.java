@@ -25,8 +25,10 @@ import minestrapteam.mods.minestrappolation.block.BlockFlesh;
 import minestrapteam.mods.minestrappolation.block.BlockGlacialInvincium;
 import minestrapteam.mods.minestrappolation.block.BlockGlaciericIce;
 import minestrapteam.mods.minestrappolation.block.BlockGlacierite;
+import minestrapteam.mods.minestrappolation.block.BlockGlowShrooms;
 import minestrapteam.mods.minestrappolation.block.BlockGodstone;
 import minestrapteam.mods.minestrappolation.block.BlockHangingMoss;
+import minestrapteam.mods.minestrappolation.block.BlockHugeGlowShroom;
 import minestrapteam.mods.minestrappolation.block.BlockIceDeposit;
 import minestrapteam.mods.minestrappolation.block.BlockInvincium;
 import minestrapteam.mods.minestrappolation.block.BlockLamp;
@@ -213,6 +215,10 @@ public class MBlocks
 	public static Item	lettuce;
 	public static Block celery_crop;
 	public static Item	celery_seed;
+	public static Block green_glowshroom;
+	public static Block huge_green_glowshroom;
+	public static Block purple_glowshroom;
+	public static Block huge_purple_glowshroom;
 	
 	public static Block pumpkin_carved;
 	
@@ -586,6 +592,10 @@ public class MBlocks
 		lettuce = new ItemSeedFood(1, 0F, lettuce_crop, Blocks.farmland).setUnlocalizedName("lettuce").setCreativeTab(Minestrappolation.tabMFood);
 		celery_crop = new BlockCelery().setUnlocalizedName("celery_crop");
 		celery_seed = new ItemSeeds(celery_crop, Blocks.farmland).setUnlocalizedName("celery_seeds").setCreativeTab(Minestrappolation.tabMFood);
+		green_glowshroom = new BlockGlowShrooms().setUnlocalizedName("green_glowshroom").setCreativeTab(Minestrappolation.tabMFood);
+		huge_green_glowshroom = new BlockHugeGlowShroom(Material.grass, green_glowshroom).setUnlocalizedName("huge_green_glowshroom").setCreativeTab(Minestrappolation.tabMDecor);
+		purple_glowshroom = new BlockGlowShrooms().setUnlocalizedName("purple_glowshroom").setCreativeTab(Minestrappolation.tabMFood);
+		huge_purple_glowshroom = new BlockHugeGlowShroom(Material.grass, purple_glowshroom).setUnlocalizedName("huge_purple_glowshroom").setCreativeTab(Minestrappolation.tabMDecor);
 		pumpkin_carved = new BlockCarvedPumpkin("neutral").setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
 		
 		//Food Blocks
@@ -1134,6 +1144,10 @@ public class MBlocks
 		GameRegistry.registerItem(lettuce, lettuce.getUnlocalizedName().substring(5));
 		register(celery_crop);
 		GameRegistry.registerItem(celery_seed, celery_seed.getUnlocalizedName().substring(5));
+		register(green_glowshroom);
+		register(huge_green_glowshroom);
+		register(purple_glowshroom);
+		register(huge_purple_glowshroom);
 		
 		register(ministrapp_sapling, ItemBlockSapling.class);
 		register(ministrapp_leaves, ItemBlockLeaves.class);
