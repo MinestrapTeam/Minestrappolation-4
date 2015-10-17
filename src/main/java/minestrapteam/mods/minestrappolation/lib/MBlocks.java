@@ -330,7 +330,6 @@ public class MBlocks
 	public static Block glacieric_ice;
 	public static Block	godstone;
 	public static Block candle;
-	public static Block candle_lit;
 	
 	//Gene Blocks
 	public static Block block_flesh;
@@ -629,8 +628,6 @@ public class MBlocks
 		mud_bricks = new MBlock(Material.ground, MapColor.brownColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setUnlocalizedName("mud_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
 		invincium = new BlockInvincium(Material.rock).setUnlocalizedName("invincium").setBlockUnbreakable().setHardness(50000F).setResistance(50000F).setCreativeTab(Minestrappolation.tabMBuilding);
 		glaical_invincium = new BlockGlacialInvincium(Material.rock, MapColor.blueColor).setUnlocalizedName("glaical_invincium").setBlockUnbreakable().setHardness(50000F).setResistance(50000F).setCreativeTab(Minestrappolation.tabMBuilding);
-		candle = new BlockCandle(Material.wood, false).setUnlocalizedName("candle").setCreativeTab(Minestrappolation.tabMBuilding);
-		candle_lit = new BlockCandle(Material.wood, true).setUnlocalizedName("candle_lit").setCreativeTab(Minestrappolation.tabMBuilding);
 		
 		//Misc. Stone Decor Blocks
 		slate = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("slate").setCreativeTab(Minestrappolation.tabMBuilding);
@@ -1178,9 +1175,6 @@ public class MBlocks
 		register(crate);
 		register(barrel);
 		register(chimney);
-		
-		register(candle);
-		register(candle_lit);
 		
 		//Tech Tab
 		register(fan);
