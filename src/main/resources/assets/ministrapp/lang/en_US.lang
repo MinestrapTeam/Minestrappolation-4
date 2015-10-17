@@ -815,6 +815,7 @@ red_sandstone_brick.name=Red Sandstone Brick
 item.fat.name=Fat
 item.grease.name=Grease
 item.tallow.name=Tallow
+item.corn_cob.name=Ear of Corn
 
 itemGroup.tabMBuilding=Minestrapp Building Blocks
 itemGroup.tabMDecor=Minestrapp Decoration Blocks
