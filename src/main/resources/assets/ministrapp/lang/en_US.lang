@@ -560,6 +560,10 @@ tile.block_bat.name=Bat Gene Block
 
 tile.candle.name=Candle
 tile.lit_candle.name=Lit Candle
+tile.purple_glowshroom.name=Glowshroom
+tile.huge_purple_glowshroom.name=Glowshroom
+tile.green_glowshroom.name=Glowshroom
+tile.huge_green_glowshroom.name=Glowshroom
 
 item.dough.name=Dough
 item.bun.name=Bun

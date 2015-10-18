@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "particle": "ministrapp:blocks/giant_glowshroom_pores",
+        "down": "ministrapp:blocks/giant_glowshroom_pores",
+        "up": "ministrapp:blocks/giant_purple_mushroom",
+        "north": "ministrapp:blocks/giant_purple_mushroom",
+        "east": "ministrapp:blocks/giant_purple_mushroom",
+        "south": "ministrapp:blocks/giant_glowshroom_pores",
+        "west": "ministrapp:blocks/giant_glowshroom_pores"
+    }
+}

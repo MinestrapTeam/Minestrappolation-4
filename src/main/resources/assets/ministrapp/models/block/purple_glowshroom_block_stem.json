@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "side": "ministrapp:blocks/giant_glowshroom_stem",
+        "end": "ministrapp:blocks/giant_glowshroom_pores"
+    }
+}
