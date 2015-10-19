@@ -1145,8 +1145,8 @@ public class MBlocks
 		register(celery_crop);
 		GameRegistry.registerItem(celery_seed, celery_seed.getUnlocalizedName().substring(5));
 		register(green_glowshroom);
-		register(huge_green_glowshroom);
 		register(purple_glowshroom);
+		register(huge_green_glowshroom);
 		register(huge_purple_glowshroom);
 		
 		register(ministrapp_sapling, ItemBlockSapling.class);

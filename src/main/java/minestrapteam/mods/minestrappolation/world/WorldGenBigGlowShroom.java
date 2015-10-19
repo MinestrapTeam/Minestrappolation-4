@@ -11,17 +11,18 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class WorldGenBigGlowShroom extends WorldGenerator
 {
+    /** The mushroom type. 0 for brown, 1 for red. */
     private int mushroomType = -1;
 
     public WorldGenBigGlowShroom(int p_i2017_1_)
     {
-    	super(true);
+        super(true);
         this.mushroomType = p_i2017_1_;
     }
-    
+
     public WorldGenBigGlowShroom()
     {
-    	super(false);
+        super(false);
     }
 
     public boolean generate(World worldIn, Random rand, BlockPos position)
@@ -192,7 +193,15 @@ public class WorldGenBigGlowShroom extends WorldGenerator
 
                                     if (worldIn.getBlockState(blockpos1).getBlock().canBeReplacedByLeaves(worldIn, blockpos1))
                                     {
-                                        this.setBlock(worldIn, blockpos1, Block.getBlockById(Block.getIdFromBlock(MBlocks.huge_green_glowshroom) + i), k1);
+                                    	if(this.mushroomType == 0)
+                                    	{
+                                    		this.setBlock(worldIn, blockpos1, Block.getBlockById(Block.getIdFromBlock(MBlocks.huge_green_glowshroom)), k1);
+                                    	}
+                                    	else
+                                    	{
+                                    		this.setBlock(worldIn, blockpos1, Block.getBlockById(Block.getIdFromBlock(MBlocks.huge_purple_glowshroom)), k1);
+                                    	}
+                                        
                                     }
                                 }
                             }
@@ -206,7 +215,15 @@ public class WorldGenBigGlowShroom extends WorldGenerator
 
                         if (state.getBlock().canBeReplacedByLeaves(worldIn, upN))
                         {
-                            this.setBlock(worldIn, position.up(l), Block.getBlockById(Block.getIdFromBlock(MBlocks.huge_green_glowshroom) + i), 10);
+                        	if(this.mushroomType == 0)
+                        	{
+                        		this.setBlock(worldIn, position.up(l), Block.getBlockById(Block.getIdFromBlock(MBlocks.huge_green_glowshroom)), 10);
+                        	}
+                        	else
+                        	{
+                        		this.setBlock(worldIn, position.up(l), Block.getBlockById(Block.getIdFromBlock(MBlocks.huge_purple_glowshroom)), 10);
+                        	}
+                            
                         }
                     }
 

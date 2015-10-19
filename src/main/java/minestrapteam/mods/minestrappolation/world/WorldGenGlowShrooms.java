@@ -43,15 +43,15 @@ public class WorldGenGlowShrooms extends WorldGenerator
 				
 				if (d <= radius1)
 				{
-					if (d <= radius2 || random.nextInt(2) == 0)
+					if (d <= radius2)
 					{
 						if(world.isAirBlock(pos.add(xfr, 0, zfr)))
 						{
-							if(MBlocks.green_glowshroom.canPlaceBlockAt(world, pos))
+							if(MBlocks.green_glowshroom.canPlaceBlockAt(world, pos.add(xfr, 0, zfr)))
 							{
 								world.setBlockState(pos.add(xfr, 0, zfr), block.getDefaultState(), 2);
-							}	
-						}
+							}
+						}	
 					}
 				}
 			}

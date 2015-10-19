@@ -26,7 +26,7 @@ public class BlockGlowShrooms extends BlockMushroom
         if (pos.getY() >= 0 && pos.getY() < 256)
         {
             IBlockState iblockstate1 = worldIn.getBlockState(pos.down());
-            return iblockstate1.getBlock() == Blocks.netherrack || iblockstate1.getBlock() == Blocks.soul_sand && worldIn.getBlockState(pos.add(0, -1, 0)).getBlock() != Blocks.air;
+            return iblockstate1.getBlock() == Blocks.netherrack || iblockstate1.getBlock() == Blocks.soul_sand && !worldIn.isAirBlock(pos.add(0, -1, 0));
         }
         else
         {
