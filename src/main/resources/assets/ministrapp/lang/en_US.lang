@@ -820,6 +820,8 @@ item.fat.name=Fat
 item.grease.name=Grease
 item.tallow.name=Tallow
 item.corn_cob.name=Ear of Corn
+item.glowshroom_stew.name=Hallucinogenic Glowshroom Stew
+item.bread_glowshroom_stew.name=Hallucinogenic Glowshroom Stew
 
 itemGroup.tabMBuilding=Minestrapp Building Blocks
 itemGroup.tabMDecor=Minestrapp Decoration Blocks
@@ -871,6 +873,8 @@ achievement.gene_block=What hath science wrought???
 achievement.gene_block.desc=Mutate a block of flesh into a gene block.
 achievement.pink_sheep=What are the odds?
 achievement.pink_sheep.desc=Create a pink sheep gene block by random chance.
+achievement.reflux=Acid Reflux
+achievement.reflux.desc=Sample the glowshroom stew.
 
 recipe.melting=Melting
 recipe.sawmill.shaped=Shaped Milling

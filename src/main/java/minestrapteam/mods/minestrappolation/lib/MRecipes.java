@@ -78,6 +78,9 @@ public class MRecipes
 		GameRegistry.addRecipe(new ItemStack(MItems.onigiri, 3), new Object[] { " R ", "RCR", "RSR", 'R', MBlocks.rice, 'C', MItems.calamari, 'S', MBlocks.seaweed });
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.ice_cream, 1), new Object[] { MItems.strawberry, new ItemStack(Items.dye, 1, EnumDyeColor.BROWN.getDyeDamage()), MItems.crushed_ice, Items.bowl, Items.sugar, Items.milk_bucket.setContainerItem(Items.bucket) });
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.ice_cream, 1), new Object[] { MItems.strawberry, new ItemStack(Items.dye, 1, EnumDyeColor.BROWN.getDyeDamage()), MItems.crushed_ice, MItems.bread_bowl, Items.sugar, Items.milk_bucket.setContainerItem(Items.bucket) });
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.glowshroom_stew, 1), new Object[] { Items.bowl, MBlocks.purple_glowshroom, MBlocks.green_glowshroom, MItems.mana_leaf, Items.ghast_tear});
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.bread_glowshroom_stew, 1), new Object[] { MItems.bread_bowl, MBlocks.purple_glowshroom, MBlocks.green_glowshroom, MItems.mana_leaf, Items.ghast_tear});
+		
 		
 		// Minerals
 		GameRegistry.addSmelting(MBlocks.copper_ore, new ItemStack(MItems.copper_ingot), 0.5F);

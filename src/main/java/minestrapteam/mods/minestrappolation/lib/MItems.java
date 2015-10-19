@@ -81,6 +81,8 @@ public class MItems extends Item
 	public static Item							bread_stir_fry;
 	public static Item							ice_cream;
 	public static Item							bread_ice_cream;
+	public static Item							glowshroom_stew;
+	public static Item							bread_glowshroom_stew;
 	
 	public static Item							salad;
 	public static Item							bread_salad;
@@ -349,6 +351,8 @@ public class MItems extends Item
 		bread_strength_salad = new ItemFood(9, 0.1F, false).setPotionEffect(Potion.damageBoost.id, 20, 1, 1F).setUnlocalizedName("bread_strength_salad").setCreativeTab(Minestrappolation.tabMFood);
 		ice_cream = new ItemMSoup(6, 0.6F, Items.bowl, 0).setUnlocalizedName("icecream").setCreativeTab(Minestrappolation.tabMFood);
 		bread_ice_cream = new ItemMFood(8, 0.6F, 0).setUnlocalizedName("bread_icecream").setCreativeTab(Minestrappolation.tabMFood);
+		glowshroom_stew = new ItemMSoup(6, 0.4F, Items.bowl, 0).setUnlocalizedName("glowshroom_stew").setCreativeTab(Minestrappolation.tabMFood);
+		bread_glowshroom_stew = new ItemMFood(8, 0.4F, 0).setUnlocalizedName("bread_glowshroom_stew").setCreativeTab(Minestrappolation.tabMFood);
 		
 		//Bottle-Based Foods
 		hot_sauce = new ItemMSoup(0, 0.2F, Items.glass_bottle, 10).setPotionEffect(Potion.moveSpeed.id, 40, 2, 1F).setAlwaysEdible().setUnlocalizedName("hot_sauce").setCreativeTab(Minestrappolation.tabMFood);
@@ -648,6 +652,8 @@ public class MItems extends Item
 		register(crushed_ice);
 		register(ice_cream);
 		register(bread_ice_cream);
+		register(glowshroom_stew);
+		register(bread_glowshroom_stew);
 		
 		//Tools Tab
 		register(sifter);

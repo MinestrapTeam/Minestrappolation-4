@@ -70,7 +70,7 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(Items.item_frame, 1), new ItemStack(Items.leather, 1), new ItemStack(Items.stick, 8), 0.1F);
 		this.addRecipe(new ItemStack(Items.sign, 1), new ItemStack(Blocks.planks, 1), new ItemStack(Blocks.planks, 1), 0.1F);
 		this.addRecipe(new ItemStack(Items.bed, 1), new ItemStack(Blocks.planks, 3), new ItemStack(Blocks.wool, 3), 0.1F);
-		this.addRecipe(new ItemStack(Items.flower_pot, 1), new ItemStack(Items.brick, 3), new ItemStack(Blocks.dirt, 1, 0), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.ministrapp_flower_pot, 1), new ItemStack(Items.brick, 3), new ItemStack(Blocks.dirt, 1, 0), 0.1F);
 		this.addRecipe(new ItemStack(Items.banner, 1), new ItemStack(Blocks.wool, 1), new ItemStack(Blocks.wool, 1), 0.1F);
 		this.addRecipe(new ItemStack(Items.armor_stand, 1), new ItemStack(Blocks.stone_slab, 1), new ItemStack(Items.stick, 6), 0.1F);
 		this.addRecipe(new ItemStack(Items.oak_door, 1), new ItemStack(Blocks.planks, 1, 0), new ItemStack(Blocks.planks, 1, 0), 0.1F);
@@ -581,6 +581,8 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MItems.wolf_gene_sample, 1), new ItemStack(MItems.wolf_hide, 1), new ItemStack(MItems.slime_core, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.bat_gene_sample, 1), new ItemStack(MItems.wing_sinew, 1), new ItemStack(MItems.slime_core, 1), 0.1F);
 		this.addRecipe(new ItemStack(MBlocks.block_bat, 1), new ItemStack(MBlocks.block_flesh, 1), new ItemStack(MItems.bat_gene_sample, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.glowshroom_stew, 1), new ItemStack(MBlocks.purple_glowshroom, 1), new ItemStack(MBlocks.green_glowshroom, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.bread_glowshroom_stew, 1), new ItemStack(MBlocks.purple_glowshroom, 1), new ItemStack(MBlocks.green_glowshroom, 1), 0.1F);
 	}
 	
 	public void addRecipe(Block input, ItemStack stack, ItemStack stack2, float experience)

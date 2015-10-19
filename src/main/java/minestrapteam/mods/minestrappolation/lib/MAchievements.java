@@ -27,10 +27,11 @@ public class MAchievements {
 	public static Achievement crystal_heart = new Achievement("achievement.crystal_heart", "crystal_heart", 4, 6, MItems.crystal_heart, (Achievement)heart);
 	public static Achievement gene_block = new Achievement("achievement.gene_block", "gene_block", 6, 7, MBlocks.block_cow, (Achievement)crystal_heart);
 	public static Achievement pink_sheep = new Achievement("achievement.pink_sheep", "pink_sheep", 6, 5, MBlocks.block_sheep_pink, (Achievement)gene_block);
+	public static Achievement reflux = new Achievement("achievement.reflux", "reflux", -5, 0, MItems.glowshroom_stew, (Achievement)minestrapp);
 	
 	public static void load()
 	{
-		AchievementPage.registerAchievementPage( new AchievementPage("Minestrappolation", new Achievement[] {heart, stonecutter, sawmill, alloy, melter, titanium, frost, glacieric_ice, frost_gen, bedrock, minestrapp, sifter, god, jam, crusher, icecream, splitter, diamond_dust, crystal_heart, gene_block, pink_sheep}));
+		AchievementPage.registerAchievementPage( new AchievementPage("Minestrappolation", new Achievement[] {heart, stonecutter, sawmill, alloy, melter, titanium, frost, glacieric_ice, frost_gen, bedrock, minestrapp, reflux, sifter, god, jam, crusher, icecream, splitter, diamond_dust, crystal_heart, gene_block, pink_sheep}));
 		preInit();
 	}
 	
@@ -48,6 +49,7 @@ public class MAchievements {
 		frost_gen.registerStat();
 		bedrock.registerStat();
 		minestrapp.registerStat();
+		reflux.registerStat();
 		sifter.registerStat();
 		god.registerStat();
 		jam.registerStat();

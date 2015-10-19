@@ -84,6 +84,15 @@ public class ItemMFood extends ItemFood
         	playerIn.addPotionEffect(new PotionEffect(Potion.damageBoost.id, 30 * 20, 1));
         	playerIn.addPotionEffect(new PotionEffect(Potion.heal.id, 1, 1));
         }
+        if (this == MItems.bread_glowshroom_stew && !worldIn.isRemote)
+        {
+        	playerIn.addStat(MAchievements.reflux, 1);
+        	playerIn.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 30 * 20, 3));
+            playerIn.addPotionEffect(new PotionEffect(Potion.digSpeed.id, 30 * 20, 3));
+            playerIn.addPotionEffect(new PotionEffect(Potion.regeneration.id, 30 * 20, 1));
+            playerIn.addPotionEffect(new PotionEffect(Potion.blindness.id, 30 * 20, 0));
+            playerIn.addPotionEffect(new PotionEffect(Potion.nightVision.id, 30 * 20, 0));
+        }
         super.onItemUseFinish(stack, worldIn, playerIn);
         return stack;
     }

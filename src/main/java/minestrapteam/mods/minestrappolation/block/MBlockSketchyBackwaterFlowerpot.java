@@ -137,7 +137,7 @@ public class MBlockSketchyBackwaterFlowerpot extends BlockContainer
 
     private boolean canNotContain(Block blockIn, int meta)
     {
-        return blockIn != Blocks.yellow_flower && blockIn != Blocks.red_flower && blockIn != Blocks.cactus && blockIn != Blocks.brown_mushroom && blockIn != Blocks.red_mushroom && blockIn != Blocks.sapling && blockIn != MBlocks.ministrapp_sapling && blockIn != Blocks.deadbush ? blockIn == Blocks.tallgrass && meta == BlockTallGrass.EnumType.FERN.getMeta() : true;
+        return blockIn != Blocks.yellow_flower && blockIn != Blocks.red_flower && blockIn != Blocks.cactus && blockIn != Blocks.brown_mushroom && blockIn != Blocks.red_mushroom && blockIn != Blocks.sapling && blockIn != MBlocks.ministrapp_sapling && blockIn != MBlocks.purple_glowshroom && blockIn != MBlocks.green_glowshroom && blockIn != Blocks.deadbush ? blockIn == Blocks.tallgrass && meta == BlockTallGrass.EnumType.FERN.getMeta() : true;
     }
 
     @SideOnly(Side.CLIENT)
@@ -271,12 +271,21 @@ public class MBlockSketchyBackwaterFlowerpot extends BlockContainer
             case 13:
                 object = Blocks.sapling;
                 j = BlockPlanks.EnumType.DARK_OAK.getMetadata();
+                break;
             case 14:
             	object = MBlocks.ministrapp_sapling;
             	j = MWoodType.REDWOOD.getMetadata();
+            	break;
             case 15:
             	object = MBlocks.ministrapp_sapling;
             	j = MWoodType.FROZEN.getMetadata();
+            	break;
+            case 16:
+            	object = MBlocks.purple_glowshroom;
+            	break;
+            case 17:
+            	object = MBlocks.green_glowshroom;
+            	break;
         }
 
         return new TileEntityFlowerPot(Item.getItemFromBlock((Block)object), j);
@@ -423,6 +432,14 @@ public class MBlockSketchyBackwaterFlowerpot extends BlockContainer
                 {
                     enumflowertype = MBlockSketchyBackwaterFlowerpot.EnumFlowerType.CACTUS;
                 }
+                else if (block == MBlocks.purple_glowshroom)
+                {
+                    enumflowertype = MBlockSketchyBackwaterFlowerpot.EnumFlowerType.PURPLE_GLOWSHROOM;
+                }
+                else if (block == MBlocks.green_glowshroom)
+                {
+                    enumflowertype = MBlockSketchyBackwaterFlowerpot.EnumFlowerType.GREEN_GLOWSHROOM;
+                }
             }
         }
 
@@ -485,7 +502,9 @@ public class MBlockSketchyBackwaterFlowerpot extends BlockContainer
         FERN("fern"),
         CACTUS("cactus"),
         REDWOOD_SAPLING("redwood_sapling"),
-        FROZEN_OAK_SAPLING("frozen_oak_sapling");
+        FROZEN_OAK_SAPLING("frozen_oak_sapling"),
+    	PURPLE_GLOWSHROOM("purple_glowshroom"),
+    	GREEN_GLOWSHROOM("green_glowshroom");
         private final String name;
 
         private static final String __OBFID = "CL_00002115";

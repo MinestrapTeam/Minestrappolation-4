@@ -592,9 +592,9 @@ public class MBlocks
 		lettuce = new ItemSeedFood(1, 0F, lettuce_crop, Blocks.farmland).setUnlocalizedName("lettuce").setCreativeTab(Minestrappolation.tabMFood);
 		celery_crop = new BlockCelery().setUnlocalizedName("celery_crop");
 		celery_seed = new ItemSeeds(celery_crop, Blocks.farmland).setUnlocalizedName("celery_seeds").setCreativeTab(Minestrappolation.tabMFood);
-		green_glowshroom = new BlockGlowShrooms().setLightLevel(0.6F).setUnlocalizedName("green_glowshroom").setCreativeTab(Minestrappolation.tabMFood);
+		green_glowshroom = new BlockGlowShrooms().setLightLevel(0.6F).setUnlocalizedName("green_glowshroom").setCreativeTab(Minestrappolation.tabMDecor);
 		huge_green_glowshroom = new BlockHugeGlowShroom(Material.grass, green_glowshroom).setLightLevel(0.8F).setUnlocalizedName("huge_green_glowshroom").setCreativeTab(Minestrappolation.tabMDecor);
-		purple_glowshroom = new BlockGlowShrooms().setLightLevel(0.6F).setUnlocalizedName("purple_glowshroom").setCreativeTab(Minestrappolation.tabMFood);
+		purple_glowshroom = new BlockGlowShrooms().setLightLevel(0.6F).setUnlocalizedName("purple_glowshroom").setCreativeTab(Minestrappolation.tabMDecor);
 		huge_purple_glowshroom = new BlockHugeGlowShroom(Material.grass, purple_glowshroom).setLightLevel(0.8F).setUnlocalizedName("huge_purple_glowshroom").setCreativeTab(Minestrappolation.tabMDecor);
 		pumpkin_carved = new BlockCarvedPumpkin("neutral").setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
 		
