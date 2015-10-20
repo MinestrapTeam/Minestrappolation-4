@@ -160,6 +160,7 @@ public class MDictionary
 		OreDictionary.registerOre("seedRice", new ItemStack(MBlocks.rice));
 		OreDictionary.registerOre("foodRice", new ItemStack(MBlocks.rice));
 		OreDictionary.registerOre("foodPeanuts", new ItemStack(MBlocks.peanuts));
+		OreDictionary.registerOre("foodCorn", new ItemStack(MBlocks.corn));
 		
 		//Minerals
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.copper_block), new Object[] { "III", "III", "III", 'I', "ingotCopper" }));
@@ -201,6 +202,7 @@ public class MDictionary
 		//Food
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(MItems.rice_bowl, 1), new Object[] { "stickWood", MBlocks.rice, Items.bowl, new ItemStack(Items.potionitem, 1, 0)}));
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(MItems.bread_rice_bowl, 1), new Object[] { "stickWood", MBlocks.rice, MItems.bread_bowl, new ItemStack(Items.potionitem, 1, 0)}));
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(MItems.corn_on_stick, 1), new Object[] { "stickWood", MBlocks.corn, MBlocks.pepper_seed }));
 		
 		//Vanilla
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.flint_and_steel), new Object[] { "S ", " F", 'S', "ingotSteel", 'F', new ItemStack(Items.flint) }));

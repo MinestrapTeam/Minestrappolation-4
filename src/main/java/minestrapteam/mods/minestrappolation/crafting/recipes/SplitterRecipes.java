@@ -551,6 +551,7 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MItems.charge_gun, 1), new ItemStack(MItems.titanium_ingot, 2), new ItemStack(MItems.steel_plating, 2), 0.1F);
 		this.addRecipe(new ItemStack(MItems.satchel, 1), new ItemStack(Items.rabbit_hide, 7), new ItemStack(MBlocks.crate, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.backpack, 1), new ItemStack(MItems.wolf_hide, 5), new ItemStack(MBlocks.barrel, 1), 0.1F);
+
 		this.addRecipe(new ItemStack(MItems.crystal_heart, 1), new ItemStack(MItems.diamond_dust, 4), new ItemStack(MItems.heart_piece, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.inert_crystal_heart, 1), new ItemStack(MItems.diamond_dust, 4), new ItemStack(MItems.heart_piece, 1), 0.1F);
 		this.addRecipe(new ItemStack(MBlocks.block_cow, 1), new ItemStack(MBlocks.block_flesh, 1), new ItemStack(MItems.cow_gene_sample, 1), 0.1F);
@@ -581,8 +582,17 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MItems.wolf_gene_sample, 1), new ItemStack(MItems.wolf_hide, 1), new ItemStack(MItems.slime_core, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.bat_gene_sample, 1), new ItemStack(MItems.wing_sinew, 1), new ItemStack(MItems.slime_core, 1), 0.1F);
 		this.addRecipe(new ItemStack(MBlocks.block_bat, 1), new ItemStack(MBlocks.block_flesh, 1), new ItemStack(MItems.bat_gene_sample, 1), 0.1F);
+
 		this.addRecipe(new ItemStack(MItems.glowshroom_stew, 1), new ItemStack(MBlocks.purple_glowshroom, 1), new ItemStack(MBlocks.green_glowshroom, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.bread_glowshroom_stew, 1), new ItemStack(MBlocks.purple_glowshroom, 1), new ItemStack(MBlocks.green_glowshroom, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.corn_on_stick, 1), new ItemStack(MBlocks.corn, 1), new ItemStack(Items.stick, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.grilled_corn, 1), new ItemStack(MItems.corn_on_stick, 1), new ItemStack(MItems.fat, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.popcorn, 1), new ItemStack(MBlocks.corn, 1), new ItemStack(Items.bowl, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.bread_popcorn, 1), new ItemStack(MBlocks.corn, 1), new ItemStack(MItems.bread_bowl, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.corn_meal, 1), new ItemStack(MBlocks.corn, 1), new ItemStack(MBlocks.corn, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.fries, 1), new ItemStack(Items.potato, 1), new ItemStack(MItems.grease, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.fried_fish, 1), new ItemStack(Items.cooked_fish, 1, 0), new ItemStack(MItems.grease, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.fried_salmon, 1), new ItemStack(Items.cooked_fish, 1, 1), new ItemStack(MItems.grease, 1), 0.1F);
 	}
 	
 	public void addRecipe(Block input, ItemStack stack, ItemStack stack2, float experience)

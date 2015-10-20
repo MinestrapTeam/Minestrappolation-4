@@ -46,13 +46,22 @@ public class AlloyRecipes
 		this.addRecipe(new ItemStack(MItems.blaze_shard, 4), new ItemStack(Items.gold_ingot, 1), new ItemStack(MItems.blazium_ingot), 1F);
 		this.addRecipe(new ItemStack(MItems.glacieric_ice_shard, 4), new ItemStack(MItems.torite_ingot, 1), new ItemStack(MItems.glacierite_ingot), 1F);
 		
-		//Misc
+		//Food
 		this.addRecipe(new ItemStack(MItems.dough, 1), new ItemStack(Items.bowl, 1), new ItemStack(MItems.bread_bowl, 1), 0.2F);
+		this.addRecipe(new ItemStack(MItems.corn_meal, 1), new ItemStack(Items.bowl, 1), new ItemStack(MItems.bread_bowl, 1), 0.2F);
 		this.addRecipe(new ItemStack(MItems.dough, 1), new ItemStack(MBlocks.pepper_seed, 1), new ItemStack(MItems.bun, 2), 0.2F);
-		this.addRecipe(new ItemStack(Blocks.pumpkin, 1), new ItemStack(MItems.pie_crust, 2), new ItemStack(Items.pumpkin_pie, 2), 0.3F);
-		this.addRecipe(new ItemStack(Items.apple, 2), new ItemStack(MItems.pie_crust, 2), new ItemStack(MItems.apple_pie, 2), 0.3F);
+		this.addRecipe(new ItemStack(Blocks.pumpkin, 1), new ItemStack(MItems.pie_crust, 2), new ItemStack(Items.pumpkin_pie, 2), 0.4F);
+		this.addRecipe(new ItemStack(Items.apple, 2), new ItemStack(MItems.pie_crust, 2), new ItemStack(MItems.apple_pie, 2), 0.4F);
 		this.addRecipe(new ItemStack(Items.egg, 1), new ItemStack(MItems.bread_bowl, 1), new ItemStack(MItems.bread_fried_egg, 1), 0.3F);
 		this.addRecipe(new ItemStack(Items.egg, 1), new ItemStack(Items.bowl, 1), new ItemStack(MItems.fried_egg, 1), 0.3F);
+		this.addRecipe(new ItemStack(MItems.corn_on_stick, 1), new ItemStack(MItems.fat, 1), new ItemStack(MItems.grilled_corn), 0.4F);
+		this.addRecipe(new ItemStack(MBlocks.corn, 1), new ItemStack(Items.bowl, 1), new ItemStack(MItems.popcorn, 1), 0.3F);
+		this.addRecipe(new ItemStack(MBlocks.corn, 1), new ItemStack(MItems.bread_bowl, 1), new ItemStack(MItems.bread_popcorn, 1), 0.3F);
+		this.addRecipe(new ItemStack(Items.potato, 1), new ItemStack(MItems.grease, 1), new ItemStack(MItems.fries, 1), 0.3F);
+		this.addRecipe(new ItemStack(Items.cooked_fish, 1, 0), new ItemStack(MItems.grease, 1), new ItemStack(MItems.fried_fish, 1), 0.3F);
+		this.addRecipe(new ItemStack(Items.cooked_fish, 1, 1), new ItemStack(MItems.grease, 1), new ItemStack(MItems.fried_salmon, 1), 0.3F);
+		
+		//Misc
 		this.addRecipe(new ItemStack(Blocks.sand, 1), new ItemStack(Blocks.sand, 1), new ItemStack(MBlocks.glass_refined, 2), 0.3F);
 		this.addRecipe(new ItemStack(Items.blaze_powder, 1), new ItemStack(Items.ender_pearl, 1), new ItemStack(Items.ender_eye, 1), 1.0F);
 		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(Blocks.log, 2, OreDictionary.WILDCARD_VALUE), new ItemStack(Items.leather, 1), 0.3F);

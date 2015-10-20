@@ -151,7 +151,7 @@ public class MelterRecipes
 		this.addRecipe(Blocks.glowstone, new ItemStack(MBlocks.glow_glass), 1.0F, false);
 		this.addDictionaryRecipes("oreTitanium", new ItemStack(MItems.titanium_ingot), 2.0F, false);
 		this.addRecipe(new ItemStack(MItems.chunks, 1, 10), new ItemStack(MItems.titanium_ingot), 2.0F, false);
-		this.addRecipe(MItems.fat, new ItemStack(MItems.grease), 0.7F, false);
+		this.addRecipe(MItems.fat, new ItemStack(MItems.grease, 2), 1.0F, false);
 	}
 	
 	public void addRecipe(Block input, ItemStack stack, float experience, boolean bucket)

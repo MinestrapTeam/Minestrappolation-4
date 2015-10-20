@@ -57,8 +57,12 @@ public class MItems extends Item
 	public static Item							strawberry;
 	public static Item							pepper;
 	public static Item							celery;
+	public static Item							corn_on_stick;
+	public static Item							grilled_corn;
 	
 	//Bread-Based Foods
+	public static Item							corn_meal;
+	public static Item							corn_bread;
 	public static Item							dough;
 	public static Item							sugar_dough;
 	public static Item							chocolate_dough;
@@ -81,6 +85,8 @@ public class MItems extends Item
 	public static Item							bread_stir_fry;
 	public static Item							ice_cream;
 	public static Item							bread_ice_cream;
+	public static Item							popcorn;
+	public static Item							bread_popcorn;
 	public static Item							glowshroom_stew;
 	public static Item							bread_glowshroom_stew;
 	
@@ -108,6 +114,16 @@ public class MItems extends Item
 	public static Item							lucky_sushi;
 	public static Item							onigiri;
 	public static Item							flesh;
+	
+	//Fried Foods
+	public static Item							fries;
+	public static Item							fried_fish;
+	public static Item							fried_salmon;
+	
+	//Misc Foods
+	public static Item							candy_red;
+	public static Item							candy_blue;
+	public static Item							candy_yellow;
 	
 	//Plant Products
 	public static Item							mana_leaf;
@@ -317,8 +333,12 @@ public class MItems extends Item
 		strawberry = new ItemFood(2, 0.5F, false).setPotionEffect(Potion.damageBoost.id, 10, 0, 0.3F).setUnlocalizedName("strawberry").setCreativeTab(Minestrappolation.tabMFood);
 		pepper = new ItemFood(4, 0.4F, false).setPotionEffect(Potion.moveSpeed.id, 20, 1, 0.5F).setUnlocalizedName("pepper").setCreativeTab(Minestrappolation.tabMFood);
 		celery = new ItemFood(2, 0.4F, false).setUnlocalizedName("celery").setCreativeTab(Minestrappolation.tabMFood);
+		corn_on_stick = new ItemMFood(3, 0.5F, 0).setUnlocalizedName("corn_on_stick").setCreativeTab(Minestrappolation.tabMFood);
+		grilled_corn = new ItemMFood(6, 3.0F, 0).setUnlocalizedName("grilled_corn").setCreativeTab(Minestrappolation.tabMFood);
 		
 		//Bread-Based Foods
+		corn_meal = new ItemFood(1, 0.5F, false).setUnlocalizedName("corn_meal").setCreativeTab(Minestrappolation.tabMFood);
+		corn_bread = new ItemFood(4, 1F, false).setUnlocalizedName("corn_bread").setCreativeTab(Minestrappolation.tabMFood);
 		dough = new ItemFood(1, 0.2F, false).setUnlocalizedName("dough").setCreativeTab(Minestrappolation.tabMFood);
 		sugar_dough = new ItemFood(1, 0.2F, false).setPotionEffect(Potion.moveSpeed.id, 5, 0, 0.3F).setUnlocalizedName("sugar_dough").setCreativeTab(Minestrappolation.tabMFood);
 		chocolate_dough = new ItemFood(1, 0.3F, false).setUnlocalizedName("chocolate_dough").setCreativeTab(Minestrappolation.tabMFood);
@@ -351,6 +371,8 @@ public class MItems extends Item
 		bread_strength_salad = new ItemFood(9, 0.1F, false).setPotionEffect(Potion.damageBoost.id, 20, 1, 1F).setUnlocalizedName("bread_strength_salad").setCreativeTab(Minestrappolation.tabMFood);
 		ice_cream = new ItemMSoup(6, 0.6F, Items.bowl, 0).setUnlocalizedName("icecream").setCreativeTab(Minestrappolation.tabMFood);
 		bread_ice_cream = new ItemMFood(8, 0.6F, 0).setUnlocalizedName("bread_icecream").setCreativeTab(Minestrappolation.tabMFood);
+		popcorn = new ItemMSoup(5, 0.2F, Items.bowl, 0).setUnlocalizedName("popcorn").setCreativeTab(Minestrappolation.tabMFood);
+		bread_popcorn = new ItemFood(7, 0.2F, false).setUnlocalizedName("bread_popcorn").setCreativeTab(Minestrappolation.tabMFood);
 		glowshroom_stew = new ItemMSoup(6, 0.4F, Items.bowl, 0).setUnlocalizedName("glowshroom_stew").setCreativeTab(Minestrappolation.tabMFood);
 		bread_glowshroom_stew = new ItemMFood(8, 0.4F, 0).setUnlocalizedName("bread_glowshroom_stew").setCreativeTab(Minestrappolation.tabMFood);
 		
@@ -367,6 +389,16 @@ public class MItems extends Item
 		lucky_sushi = new ItemMFood(12, 1.0F, 0).setUnlocalizedName("lucky_sushi").setCreativeTab(Minestrappolation.tabMFood);
 		onigiri = new ItemFood(7, 1.0F, false).setUnlocalizedName("onigiri").setCreativeTab(Minestrappolation.tabMFood);
 		flesh = new ItemFood(4, 0.4F, true).setUnlocalizedName("flesh").setCreativeTab(Minestrappolation.tabMFood);
+		
+		//Fried Foods
+		fries = new ItemFood(7, 0.4F, false).setPotionEffect(Potion.hunger.id, 15, 0, 0.10F).setUnlocalizedName("fries").setCreativeTab(Minestrappolation.tabMFood);
+		fried_fish = new ItemFood(7, 0.5F, false).setPotionEffect(Potion.hunger.id, 15, 0, 0.8F).setUnlocalizedName("fried_fish").setCreativeTab(Minestrappolation.tabMFood);
+		fried_salmon = new ItemFood(9, 0.7F, false).setPotionEffect(Potion.hunger.id, 15, 0, 0.8F).setUnlocalizedName("fried_salmon").setCreativeTab(Minestrappolation.tabMFood);
+		
+		//Misc Foods
+		candy_red = new ItemMFood(0, 0, 0).setAlwaysEdible().setUnlocalizedName("candy_red").setCreativeTab(Minestrappolation.tabMFood);
+		candy_blue = new ItemMFood(0, 0, 0).setAlwaysEdible().setUnlocalizedName("candy_blue").setCreativeTab(Minestrappolation.tabMFood);
+		candy_yellow = new ItemMFood(0, 0, 0).setAlwaysEdible().setUnlocalizedName("candy_yellow").setCreativeTab(Minestrappolation.tabMFood);
 		
 		//Plant Products
 		mana_leaf = new Item().setUnlocalizedName("mana_leaf").setCreativeTab(Minestrappolation.tabMMaterials);
@@ -612,15 +644,22 @@ public class MItems extends Item
 		register(raspberry);
 		register(pepper);
 		register(celery);
+		register(corn_on_stick);
+		register(grilled_corn);
+		register(corn_meal);
 		register(dough);
 		register(sugar_dough);
 		register(chocolate_dough);
+		register(corn_bread);
 		register(bun);
 		register(pbj_sandwich);
 		register(hamburger);
 		register(sugar_cookie);
 		register(pie_crust);
 		register(apple_pie);
+		register(fries);
+		register(fried_fish);
+		register(fried_salmon);
 		register(bread_bowl);
 		register(bread_mushroom_stew);
 		register(bread_rabbit_stew);
@@ -628,6 +667,8 @@ public class MItems extends Item
 		register(bread_rice_bowl);
 		register(stir_fry);
 		register(bread_stir_fry);
+		register(popcorn);
+		register(bread_popcorn);
 		register(fried_egg);
 		register(bread_fried_egg);
 		register(salad);
@@ -654,6 +695,9 @@ public class MItems extends Item
 		register(bread_ice_cream);
 		register(glowshroom_stew);
 		register(bread_glowshroom_stew);
+		register(candy_red);
+		register(candy_blue);
+		register(candy_yellow);
 		
 		//Tools Tab
 		register(sifter);

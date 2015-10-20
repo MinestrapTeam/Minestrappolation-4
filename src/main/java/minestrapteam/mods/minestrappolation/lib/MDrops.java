@@ -1,5 +1,6 @@
 package minestrapteam.mods.minestrappolation.lib;
 
+import java.util.Calendar;
 import java.util.Random;
 
 import minestrapteam.mods.minestrappolation.Config;
@@ -8,7 +9,10 @@ import net.minecraft.entity.monster.EntityGuardian;
 import net.minecraft.entity.monster.EntityIronGolem;
 import net.minecraft.entity.monster.EntityMagmaCube;
 import net.minecraft.entity.monster.EntityPigZombie;
+import net.minecraft.entity.monster.EntitySkeleton;
 import net.minecraft.entity.monster.EntitySlime;
+import net.minecraft.entity.monster.EntityWitch;
+import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.entity.passive.EntityBat;
 import net.minecraft.entity.passive.EntityChicken;
 import net.minecraft.entity.passive.EntityCow;
@@ -24,6 +28,8 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class MDrops 
 {
+	public boolean isHalloween = false;
+	
 	@SubscribeEvent
 	public void mobDrops(LivingDropsEvent event)
 	{
@@ -32,6 +38,12 @@ public class MDrops
 		boolean onFire = living.isBurning();
 		int looting = event.lootingLevel + 1;
 		
+		Calendar calendar = Calendar.getInstance();
+
+        if (calendar.get(2) + 1 == 10 && calendar.get(5) >= 20 && calendar.get(5) <= 31)
+        {
+            this.isHalloween = true;
+        }
 		if(living instanceof EntityBat)
 		{
 			dropBatItems(living, random, onFire, looting);
@@ -85,6 +97,27 @@ public class MDrops
 		{
 			dropIronGolemItems(living, random, onFire, looting);
 		}
+		if(living instanceof EntityZombie)
+		{
+			if(this.isHalloween == true)
+			{
+				dropHalloweenItems(living, random, onFire, looting);
+			}
+		}
+		if(living instanceof EntitySkeleton)
+		{
+			if(this.isHalloween == true)
+			{
+				dropHalloweenItems(living, random, onFire, looting);
+			}
+		}
+		if(living instanceof EntityWitch)
+		{
+			if(this.isHalloween == true)
+			{
+				dropHalloweenItems(living, random, onFire, looting);
+			}
+		}
 		if(living instanceof EntityPigZombie)
 		{
 			dropPigItems(living, random, onFire, looting);
@@ -96,6 +129,10 @@ public class MDrops
 		if(living instanceof EntityVillager)
 		{
 			dropVillagerItems(living, random, onFire, looting);
+			if(this.isHalloween == true)
+			{
+				dropHalloweenItems(living, random, onFire, looting);
+			}
 		}
 	}
 	
@@ -201,6 +238,19 @@ public class MDrops
 		if (random.nextFloat() / looting < Config.animalBoneDropChance)
 		{
 			living.dropItem(MItems.animal_bones, random.nextInt(Config.animalBoneDropAmount + looting));
+		}
+	}
+	private static void dropHalloweenItems(EntityLivingBase living, Random random, boolean onFire, int looting)
+	{
+		if (random.nextFloat() / looting < Config.candyDropChance)
+		{
+			int type = random.nextInt(3);
+			if(type == 0)
+				living.dropItem(MItems.candy_red, random.nextInt(Config.candyDropAmount + looting));
+			else if(type == 1)
+				living.dropItem(MItems.candy_blue, random.nextInt(Config.candyDropAmount + looting));
+			else
+				living.dropItem(MItems.candy_yellow, random.nextInt(Config.candyDropAmount + looting));
 		}
 	}
 }

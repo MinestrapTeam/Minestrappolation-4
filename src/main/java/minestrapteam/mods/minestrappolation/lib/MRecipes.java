@@ -33,7 +33,9 @@ public class MRecipes
 		GameRegistry.addRecipe(new ItemStack(MBlocks.candle, 2), new Object[] { "R", "T", 'R', MBlocks.rope, 'T', MItems.tallow });
 		
 		// Food
+		GameRegistry.addRecipe(new ItemStack(MItems.corn_meal, 2), new Object[] { "WW", "WW", 'W', MBlocks.corn });
 		GameRegistry.addRecipe(new ItemStack(MItems.dough, 2), new Object[] { "WW", "WW", 'W', Items.wheat });
+		GameRegistry.addSmelting(new ItemStack(MItems.corn_meal), new ItemStack(MItems.corn_bread), 0.3F);
 		GameRegistry.addSmelting(new ItemStack(MItems.dough), new ItemStack(Items.bread), 0.3F);
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.pbj_sandwich, 1), new Object[] { MItems.bun, MItems.bun, MItems.peanut_butter_bottle.setContainerItem(Items.glass_bottle), MItems.jam_bottle.setContainerItem(Items.glass_bottle) });
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.hamburger, 1), new Object[] { MItems.bun, MItems.bun, MBlocks.lettuce, MBlocks.onion, Items.cooked_beef });

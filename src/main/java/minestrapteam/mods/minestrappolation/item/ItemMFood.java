@@ -25,10 +25,26 @@ public class ItemMFood extends ItemFood
 
     public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityPlayer playerIn)
     {
-        if(this == MItems.bread_rice_bowl || this == MItems.bread_stir_fry)
+        if(this == MItems.bread_rice_bowl || this == MItems.bread_stir_fry || this == MItems.corn_on_stick || this == MItems.grilled_corn)
         {
     		playerIn.inventory.addItemStackToInventory(new ItemStack(Items.stick));
     	}
+        if (this == MItems.candy_red && !worldIn.isRemote)
+        {
+            playerIn.addPotionEffect(new PotionEffect(Potion.heal.id, 1 * 20, 0));
+            playerIn.addPotionEffect(new PotionEffect(Potion.regeneration.id, 10 * 20, 0));
+        }
+        if (this == MItems.candy_blue && !worldIn.isRemote)
+        {
+            playerIn.addPotionEffect(new PotionEffect(Potion.heal.id, 1 * 20, 0));
+            playerIn.addPotionEffect(new PotionEffect(Potion.invisibility.id, 10 * 20, 0));
+            playerIn.addPotionEffect(new PotionEffect(Potion.nightVision.id, 10 * 20, 0));
+        }
+        if (this == MItems.candy_yellow && !worldIn.isRemote)
+        {
+            playerIn.addPotionEffect(new PotionEffect(Potion.healthBoost.id, 20 * 20, 2));
+            playerIn.addPotionEffect(new PotionEffect(Potion.heal.id, 1 * 20, 0));
+        }
         if (this == MItems.pbj_sandwich && !worldIn.isRemote)
         {
         	playerIn.addPotionEffect(new PotionEffect(Potion.healthBoost.id, 10 * 20, 0));
