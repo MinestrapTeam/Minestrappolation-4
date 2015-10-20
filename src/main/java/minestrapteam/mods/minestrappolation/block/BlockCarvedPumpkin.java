@@ -268,9 +268,9 @@ public class BlockCarvedPumpkin extends net.minecraft.block.BlockDirectional
 	{
 		Item itemBlockpVariants = GameRegistry.findItem(MReference.MODID, "pumpkin_minestrapp_" + type);
 		
-		ModelBakery.addVariantName(itemBlockpVariants, "ministrapp:pumpkin_simple_carved_" + type);
-		ModelBakery.addVariantName(itemBlockpVariants, "ministrapp:pumpkin_average_carved_" + type);
-		ModelBakery.addVariantName(itemBlockpVariants, "ministrapp:pumpkin_complex_carved_" + type);
+		ModelBakery.addVariantName(itemBlockpVariants, "ministrapp:simple_carved_" + type);
+		ModelBakery.addVariantName(itemBlockpVariants, "ministrapp:average_carved_" + type);
+		ModelBakery.addVariantName(itemBlockpVariants, "ministrapp:complex_carved_" + type);
 		
 		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "pumpkin_minestrapp_" + type);
 		MPumpkinType[] aenumtype = MPumpkinType.values();
@@ -279,7 +279,7 @@ public class BlockCarvedPumpkin extends net.minecraft.block.BlockDirectional
 		for (int j = 0; j < i; ++j)
 		{
 			MPumpkinType enumtype = aenumtype[j];
-			ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(MReference.MODID + ":" + enumtype.getUnlocalizedName() + "_carved", "inventory");
+			ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(MReference.MODID + ":" + enumtype.getUnlocalizedName() + "_carved_" + type, "inventory");
 			Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, enumtype.getMetadata(), itemModelResourceLocation);
 		}
 	}
