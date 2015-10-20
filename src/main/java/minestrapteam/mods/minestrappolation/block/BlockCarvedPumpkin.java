@@ -1,6 +1,7 @@
 package minestrapteam.mods.minestrappolation.block;
 
 import java.util.List;
+import java.util.Random;
 
 import com.google.common.base.Predicate;
 
@@ -237,7 +238,7 @@ public class BlockCarvedPumpkin extends net.minecraft.block.BlockDirectional
     {
         if (this.snowmanPattern == null)
         {
-            this.snowmanPattern = FactoryBlockPattern.start().aisle(new String[] {"^", "#", "#"}).where('^', BlockWorldState.hasState(BlockStateHelper.forBlock(MBlocks.pumpkin_carved))).where('#', BlockWorldState.hasState(BlockStateHelper.forBlock(Blocks.snow))).build();
+            this.snowmanPattern = FactoryBlockPattern.start().aisle(new String[] {"^", "#", "#"}).where('^', BlockWorldState.hasState(BlockStateHelper.forBlock(this))).where('#', BlockWorldState.hasState(BlockStateHelper.forBlock(Blocks.snow))).build();
         }
 
         return this.snowmanPattern;
@@ -257,10 +258,25 @@ public class BlockCarvedPumpkin extends net.minecraft.block.BlockDirectional
     {
         if (this.golemPattern == null)
         {
-            this.golemPattern = FactoryBlockPattern.start().aisle(new String[] {"~^~", "###", "~#~"}).where('^', BlockWorldState.hasState(BlockStateHelper.forBlock(MBlocks.pumpkin_carved))).where('#', BlockWorldState.hasState(BlockStateHelper.forBlock(Blocks.iron_block))).where('~', BlockWorldState.hasState(BlockStateHelper.forBlock(Blocks.air))).build();
+            this.golemPattern = FactoryBlockPattern.start().aisle(new String[] {"~^~", "###", "~#~"}).where('^', BlockWorldState.hasState(BlockStateHelper.forBlock(this))).where('#', BlockWorldState.hasState(BlockStateHelper.forBlock(Blocks.iron_block))).where('~', BlockWorldState.hasState(BlockStateHelper.forBlock(Blocks.air))).build();
         }
 
         return this.golemPattern;
+    }
+    
+    @SideOnly(Side.CLIENT)
+    public void randomDisplayTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
+    {
+    	if(this.getUnlocalizedName().contains("lit"))
+    	{
+    		double d0 = (double)pos.getX() + 0.5D;
+    		double d1 = (double)pos.getY() + 0.5D;
+    		double d2 = (double)pos.getZ() + 0.5D;
+    		double d3 = 0.22D;
+    		double d4 = 0.27D;
+
+    		worldIn.spawnParticle(EnumParticleTypes.FLAME, d0, d1, d2, 0.0D, 0.0D, 0.0D, new int[0]);
+    	}
     }
     
    

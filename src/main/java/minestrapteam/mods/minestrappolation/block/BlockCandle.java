@@ -11,6 +11,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
@@ -127,15 +128,32 @@ public class BlockCandle extends Block
 		}
 		if(this.isLit == false && (playerIn.getCurrentEquippedItem() != null) && (playerIn.getCurrentEquippedItem().getItem() == Items.flint_and_steel || playerIn.getCurrentEquippedItem().getItem() == MItems.fire_axe  || playerIn.getCurrentEquippedItem().getItem() == MItems.fire_hoe || playerIn.getCurrentEquippedItem().getItem() == MItems.fire_pickaxe || playerIn.getCurrentEquippedItem().getItem() == MItems.fire_shovel || playerIn.getCurrentEquippedItem().getItem() == MItems.fire_sword || playerIn.getCurrentEquippedItem().getItem() == Items.fire_charge))
 		{
-			if((playerIn.getCurrentEquippedItem().getItemDamage() < playerIn.getCurrentEquippedItem().getMaxDamage()) || playerIn.getCurrentEquippedItem().getMaxDamage() == 0)
+			if((playerIn.getCurrentEquippedItem().getItemDamage() < playerIn.getCurrentEquippedItem().getMaxDamage()))
 			{
 				playerIn.getCurrentEquippedItem().damageItem(1, playerIn);
 			}
 			else
 			{
-				playerIn.destroyCurrentEquippedItem();
+				playerIn.getCurrentEquippedItem().stackSize--;
 			}
 			worldIn.setBlockState(pos, MBlocks.lit_candle.getDefaultState());
+			return true;
+		}
+		else if(this.isLit == true && (playerIn.getCurrentEquippedItem() != null) && (playerIn.getCurrentEquippedItem().getItem() == Items.potionitem || playerIn.getCurrentEquippedItem().getItem() == Items.water_bucket || playerIn.getCurrentEquippedItem().getItem() == Items.snowball || playerIn.getCurrentEquippedItem().getItem() == MItems.crushed_ice || playerIn.getCurrentEquippedItem().getItem() == MItems.ice_charge))
+		{
+			if((playerIn.getCurrentEquippedItem().getItem() == Items.potionitem))
+			{
+				playerIn.setCurrentItemOrArmor(0, new ItemStack(Items.glass_bottle, 1));
+			}
+			else if((playerIn.getCurrentEquippedItem().getItem() == Items.water_bucket))
+			{
+				playerIn.setCurrentItemOrArmor(0, new ItemStack(Items.bucket, 1));
+			}
+			else
+			{
+				playerIn.getCurrentEquippedItem().stackSize--;
+			}
+			worldIn.setBlockState(pos, MBlocks.candle.getDefaultState());
 			return true;
 		}
 		return false;

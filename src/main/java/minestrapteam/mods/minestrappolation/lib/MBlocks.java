@@ -83,7 +83,16 @@ public class MBlocks
 	public static Block purple_glowshroom;
 	public static Block huge_purple_glowshroom;
 	
-	public static Block pumpkin_carved;
+	public static Block pumpkin_carved_0;
+	public static Block pumpkin_carved_1;
+	public static Block pumpkin_carved_2;
+	public static Block pumpkin_carved_3;
+	public static Block pumpkin_carved_4;
+	public static Block pumpkin_carved_0_lit;
+	public static Block pumpkin_carved_1_lit;
+	public static Block pumpkin_carved_2_lit;
+	public static Block pumpkin_carved_3_lit;
+	public static Block pumpkin_carved_4_lit;
 	
 	//Food Blocks
 	public static Block	sugar_block;
@@ -461,7 +470,16 @@ public class MBlocks
 		huge_green_glowshroom = new BlockHugeGlowShroom(Material.grass, green_glowshroom).setLightLevel(0.8F).setUnlocalizedName("huge_green_glowshroom").setCreativeTab(Minestrappolation.tabMDecor);
 		purple_glowshroom = new BlockGlowShrooms().setLightLevel(0.6F).setUnlocalizedName("purple_glowshroom").setCreativeTab(Minestrappolation.tabMDecor);
 		huge_purple_glowshroom = new BlockHugeGlowShroom(Material.grass, purple_glowshroom).setLightLevel(0.8F).setUnlocalizedName("huge_purple_glowshroom").setCreativeTab(Minestrappolation.tabMDecor);
-		pumpkin_carved = new BlockCarvedPumpkin("neutral").setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
+		pumpkin_carved_0 = new BlockCarvedPumpkin("neutral").setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
+		pumpkin_carved_1 = new BlockCarvedPumpkin("grin").setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
+		pumpkin_carved_2 = new BlockCarvedPumpkin("creepy").setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
+		pumpkin_carved_3 = new BlockCarvedPumpkin("grump").setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
+		pumpkin_carved_4 = new BlockCarvedPumpkin("dumpy").setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
+		pumpkin_carved_0_lit = new BlockCarvedPumpkin("neutral_lit").setLightLevel(0.9F).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
+		pumpkin_carved_1_lit = new BlockCarvedPumpkin("grin_lit").setLightLevel(0.9F).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
+		pumpkin_carved_2_lit = new BlockCarvedPumpkin("creepy_lit").setLightLevel(0.9F).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
+		pumpkin_carved_3_lit = new BlockCarvedPumpkin("grump_lit").setLightLevel(0.9F).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
+		pumpkin_carved_4_lit = new BlockCarvedPumpkin("dumpy_lit").setLightLevel(0.9F).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
 		
 		//Food Blocks
 		sugar_block = new BlockMFalling(Material.sand, MapColor.snowColor).setHardness(0.5F).setStepSound(Block.soundTypeGravel).setUnlocalizedName("sugar_block").setCreativeTab(Minestrappolation.tabMBuilding);
@@ -1023,7 +1041,16 @@ public class MBlocks
 		register(cold_cobweb);
 		register(candle);
 		register(lit_candle);
-		register(pumpkin_carved, ItemBlockCarvedPumpkin.class);
+		register(pumpkin_carved_0, ItemBlockCarvedPumpkin.class);
+		register(pumpkin_carved_1, ItemBlockCarvedPumpkin.class);
+		register(pumpkin_carved_2, ItemBlockCarvedPumpkin.class);
+		register(pumpkin_carved_3, ItemBlockCarvedPumpkin.class);
+		register(pumpkin_carved_4, ItemBlockCarvedPumpkin.class);
+		register(pumpkin_carved_0_lit, ItemBlockCarvedPumpkin.class);
+		register(pumpkin_carved_1_lit, ItemBlockCarvedPumpkin.class);
+		register(pumpkin_carved_2_lit, ItemBlockCarvedPumpkin.class);
+		register(pumpkin_carved_3_lit, ItemBlockCarvedPumpkin.class);
+		register(pumpkin_carved_4_lit, ItemBlockCarvedPumpkin.class);
 		register(magnetic_torch);
 		register(ministrapp_flower_pot);
 		register(glacieric_ice_vein);

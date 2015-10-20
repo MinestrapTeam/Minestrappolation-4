@@ -108,6 +108,15 @@ public class ClientProxy extends CommonProxy
 		MBlockLeaves.inventoryRender();
 		MBlockSapling.inventoryRender();
 		BlockCarvedPumpkin.inventoryRender("neutral");
+		BlockCarvedPumpkin.inventoryRender("grin");
+		BlockCarvedPumpkin.inventoryRender("creepy");
+		BlockCarvedPumpkin.inventoryRender("grump");
+		BlockCarvedPumpkin.inventoryRender("dumpy");
+		BlockCarvedPumpkin.inventoryRender("neutral_lit");
+		BlockCarvedPumpkin.inventoryRender("grin_lit");
+		BlockCarvedPumpkin.inventoryRender("creepy_lit");
+		BlockCarvedPumpkin.inventoryRender("grump_lit");
+		BlockCarvedPumpkin.inventoryRender("dumpy_lit");
 		
 		ItemChunk.inventoryRender();
 		ItemBricks.inventoryRender();
