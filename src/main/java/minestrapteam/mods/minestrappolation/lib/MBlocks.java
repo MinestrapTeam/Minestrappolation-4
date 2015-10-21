@@ -21,6 +21,7 @@ import minestrapteam.mods.minestrappolation.item.blocks.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.BlockFenceGate;
+import net.minecraft.block.BlockPumpkin;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -93,6 +94,8 @@ public class MBlocks
 	public static Block pumpkin_carved_2_lit;
 	public static Block pumpkin_carved_3_lit;
 	public static Block pumpkin_carved_4_lit;
+	public static Block pumpkin_smashed;
+	public static Block pumpkin_smashed_lit;
 	
 	//Food Blocks
 	public static Block	sugar_block;
@@ -470,16 +473,23 @@ public class MBlocks
 		huge_green_glowshroom = new BlockHugeGlowShroom(Material.grass, green_glowshroom).setLightLevel(0.8F).setUnlocalizedName("huge_green_glowshroom").setCreativeTab(Minestrappolation.tabMDecor);
 		purple_glowshroom = new BlockGlowShrooms().setLightLevel(0.6F).setUnlocalizedName("purple_glowshroom").setCreativeTab(Minestrappolation.tabMDecor);
 		huge_purple_glowshroom = new BlockHugeGlowShroom(Material.grass, purple_glowshroom).setLightLevel(0.8F).setUnlocalizedName("huge_purple_glowshroom").setCreativeTab(Minestrappolation.tabMDecor);
-		pumpkin_carved_0 = new BlockCarvedPumpkin("neutral").setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
-		pumpkin_carved_1 = new BlockCarvedPumpkin("grin").setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
-		pumpkin_carved_2 = new BlockCarvedPumpkin("creepy").setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
-		pumpkin_carved_3 = new BlockCarvedPumpkin("grump").setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
-		pumpkin_carved_4 = new BlockCarvedPumpkin("dumpy").setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
-		pumpkin_carved_0_lit = new BlockCarvedPumpkin("neutral_lit").setLightLevel(0.9F).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
-		pumpkin_carved_1_lit = new BlockCarvedPumpkin("grin_lit").setLightLevel(0.9F).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
-		pumpkin_carved_2_lit = new BlockCarvedPumpkin("creepy_lit").setLightLevel(0.9F).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
-		pumpkin_carved_3_lit = new BlockCarvedPumpkin("grump_lit").setLightLevel(0.9F).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
-		pumpkin_carved_4_lit = new BlockCarvedPumpkin("dumpy_lit").setLightLevel(0.9F).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
+		pumpkin_carved_0 = new BlockCarvedPumpkin("neutral", pumpkin_carved_0_lit).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
+		pumpkin_carved_1 = new BlockCarvedPumpkin("grin", pumpkin_carved_1_lit).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
+		pumpkin_carved_2 = new BlockCarvedPumpkin("creepy", pumpkin_carved_2_lit).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
+		pumpkin_carved_3 = new BlockCarvedPumpkin("grump", pumpkin_carved_3_lit).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
+		pumpkin_carved_4 = new BlockCarvedPumpkin("dumpy", pumpkin_carved_4_lit).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
+		pumpkin_carved_0_lit = new BlockCarvedPumpkin("neutral_lit", pumpkin_carved_0).setLightLevel(0.9F).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
+		pumpkin_carved_1_lit = new BlockCarvedPumpkin("grin_lit", pumpkin_carved_1).setLightLevel(0.9F).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
+		pumpkin_carved_2_lit = new BlockCarvedPumpkin("creepy_lit", pumpkin_carved_2).setLightLevel(0.9F).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
+		pumpkin_carved_3_lit = new BlockCarvedPumpkin("grump_lit", pumpkin_carved_3).setLightLevel(0.9F).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
+		pumpkin_carved_4_lit = new BlockCarvedPumpkin("dumpy_lit", pumpkin_carved_4).setLightLevel(0.9F).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
+		((BlockCarvedPumpkin)pumpkin_carved_0).changeResultBlock(pumpkin_carved_0_lit);
+		((BlockCarvedPumpkin)pumpkin_carved_1).changeResultBlock(pumpkin_carved_1_lit);
+		((BlockCarvedPumpkin)pumpkin_carved_2).changeResultBlock(pumpkin_carved_2_lit);
+		((BlockCarvedPumpkin)pumpkin_carved_3).changeResultBlock(pumpkin_carved_3_lit);
+		((BlockCarvedPumpkin)pumpkin_carved_4).changeResultBlock(pumpkin_carved_4_lit);
+		pumpkin_smashed = new BlockSmashedPumpkin().setHardness(1F).setStepSound(Block.soundTypeWood).setUnlocalizedName("pumpkin_smashed").setCreativeTab(Minestrappolation.tabMDecor);
+		pumpkin_smashed_lit = new BlockSmashedPumpkin().setHardness(1F).setStepSound(Block.soundTypeWood).setLightLevel(0.9F).setUnlocalizedName("pumpkin_smashed_lit").setCreativeTab(Minestrappolation.tabMDecor);
 		
 		//Food Blocks
 		sugar_block = new BlockMFalling(Material.sand, MapColor.snowColor).setHardness(0.5F).setStepSound(Block.soundTypeGravel).setUnlocalizedName("sugar_block").setCreativeTab(Minestrappolation.tabMBuilding);
@@ -1046,11 +1056,13 @@ public class MBlocks
 		register(pumpkin_carved_2, ItemBlockCarvedPumpkin.class);
 		register(pumpkin_carved_3, ItemBlockCarvedPumpkin.class);
 		register(pumpkin_carved_4, ItemBlockCarvedPumpkin.class);
+		register(pumpkin_smashed);
 		register(pumpkin_carved_0_lit, ItemBlockCarvedPumpkin.class);
 		register(pumpkin_carved_1_lit, ItemBlockCarvedPumpkin.class);
 		register(pumpkin_carved_2_lit, ItemBlockCarvedPumpkin.class);
 		register(pumpkin_carved_3_lit, ItemBlockCarvedPumpkin.class);
 		register(pumpkin_carved_4_lit, ItemBlockCarvedPumpkin.class);
+		register(pumpkin_smashed_lit);
 		register(magnetic_torch);
 		register(ministrapp_flower_pot);
 		register(glacieric_ice_vein);

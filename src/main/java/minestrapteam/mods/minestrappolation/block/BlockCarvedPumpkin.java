@@ -8,8 +8,11 @@ import com.google.common.base.Predicate;
 import minestrapteam.mods.minestrappolation.enumtypes.MPumpkinType;
 import minestrapteam.mods.minestrappolation.enumtypes.MStoneType;
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
+import minestrapteam.mods.minestrappolation.lib.MItems;
 import minestrapteam.mods.minestrappolation.lib.MReference;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockPlanks;
+import net.minecraft.block.BlockPumpkin;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
@@ -26,7 +29,9 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntityIronGolem;
 import net.minecraft.entity.monster.EntitySnowman;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
@@ -49,13 +54,21 @@ public class BlockCarvedPumpkin extends net.minecraft.block.BlockDirectional
 
     private static final PropertyEnum	VARIANT	= PropertyEnum.create("variant", MPumpkinType.class);
 
-    public BlockCarvedPumpkin(String type)
+    public Block changeTo;
+    
+    public BlockCarvedPumpkin(String type, Block changeTo)
     {
         super(Material.gourd);
         this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, MPumpkinType.SIMPLE).withProperty(FACING, EnumFacing.NORTH));
         this.setTickRandomly(true);
         this.setUnlocalizedName("pumpkin_minestrapp_" + type);
         this.type = type;
+        this.changeTo = changeTo;
+    }
+    
+    public void changeResultBlock(Block block)
+    {
+    	this.changeTo = block;
     }
     
     @Override
@@ -298,5 +311,68 @@ public class BlockCarvedPumpkin extends net.minecraft.block.BlockDirectional
 			ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(MReference.MODID + ":" + enumtype.getUnlocalizedName() + "_carved_" + type, "inventory");
 			Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, enumtype.getMetadata(), itemModelResourceLocation);
 		}
+	}
+    
+    @Override
+	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ)
+	{
+		if(worldIn.isRemote)
+		{
+			return true;
+		}
+		if(playerIn.getCurrentEquippedItem() != null && playerIn.getCurrentEquippedItem().getItem() == Items.shears)
+		{
+			if((playerIn.getCurrentEquippedItem().getItemDamage() < playerIn.getCurrentEquippedItem().getMaxDamage()))
+			{
+				playerIn.getCurrentEquippedItem().damageItem(1, playerIn);
+			}
+			else
+			{
+				playerIn.getCurrentEquippedItem().stackSize--;
+			}
+			if(worldIn.getBlockState(pos).getValue(VARIANT) == MPumpkinType.SIMPLE)
+				worldIn.setBlockState(pos, ((BlockCarvedPumpkin)this).getDefaultState().withProperty(FACING, this.getActualState(state, worldIn, pos).getValue(FACING)).withProperty(VARIANT, MPumpkinType.AVERAGE));
+			else if(worldIn.getBlockState(pos).getValue(VARIANT) == MPumpkinType.AVERAGE)
+				worldIn.setBlockState(pos, ((BlockCarvedPumpkin)this).getDefaultState().withProperty(FACING, this.getActualState(state, worldIn, pos).getValue(FACING)).withProperty(VARIANT, MPumpkinType.COMPLEX));
+			else if(worldIn.getBlockState(pos).getValue(VARIANT) == MPumpkinType.COMPLEX)
+			{
+				if(this.getUnlocalizedName().contains("lit"))
+					worldIn.setBlockState(pos, ((BlockSmashedPumpkin)MBlocks.pumpkin_smashed_lit).getDefaultState().withProperty(FACING, this.getActualState(state, worldIn, pos).getValue(FACING)));
+				else
+					worldIn.setBlockState(pos, ((BlockSmashedPumpkin)MBlocks.pumpkin_smashed).getDefaultState().withProperty(FACING, this.getActualState(state, worldIn, pos).getValue(FACING)));
+			}
+			return true;
+		}
+		else if(this.getUnlocalizedName().contains("lit") == false && (playerIn.getCurrentEquippedItem() != null) && (playerIn.getCurrentEquippedItem().getItem() == Items.flint_and_steel || playerIn.getCurrentEquippedItem().getItem() == MItems.fire_axe  || playerIn.getCurrentEquippedItem().getItem() == MItems.fire_hoe || playerIn.getCurrentEquippedItem().getItem() == MItems.fire_pickaxe || playerIn.getCurrentEquippedItem().getItem() == MItems.fire_shovel || playerIn.getCurrentEquippedItem().getItem() == MItems.fire_sword || playerIn.getCurrentEquippedItem().getItem() == Items.fire_charge))
+		{
+			if((playerIn.getCurrentEquippedItem().getItemDamage() < playerIn.getCurrentEquippedItem().getMaxDamage()))
+			{
+				playerIn.getCurrentEquippedItem().damageItem(1, playerIn);
+			}
+			else
+			{
+				playerIn.getCurrentEquippedItem().stackSize--;
+			}
+			worldIn.setBlockState(pos, ((BlockCarvedPumpkin)this.changeTo).getDefaultState().withProperty(FACING, this.getActualState(state, worldIn, pos).getValue(FACING)).withProperty(VARIANT, this.getActualState(state, worldIn, pos).getValue(VARIANT)));
+			return true;
+		}
+		else if(this.getUnlocalizedName().contains("lit") == true && (playerIn.getCurrentEquippedItem() != null) && (playerIn.getCurrentEquippedItem().getItem() == Items.potionitem || playerIn.getCurrentEquippedItem().getItem() == Items.water_bucket || playerIn.getCurrentEquippedItem().getItem() == Items.snowball || playerIn.getCurrentEquippedItem().getItem() == MItems.crushed_ice || playerIn.getCurrentEquippedItem().getItem() == MItems.ice_charge))
+		{
+			if((playerIn.getCurrentEquippedItem().getItem() == Items.potionitem))
+			{
+				playerIn.setCurrentItemOrArmor(0, new ItemStack(Items.glass_bottle, 1));
+			}
+			else if((playerIn.getCurrentEquippedItem().getItem() == Items.water_bucket))
+			{
+				playerIn.setCurrentItemOrArmor(0, new ItemStack(Items.bucket, 1));
+			}
+			else
+			{
+				playerIn.getCurrentEquippedItem().stackSize--;
+			}
+			worldIn.setBlockState(pos, ((BlockCarvedPumpkin)this.changeTo).getDefaultState().withProperty(FACING, this.getActualState(state, worldIn, pos).getValue(FACING)).withProperty(VARIANT, this.getActualState(state, worldIn, pos).getValue(VARIANT)));
+			return true;
+		}
+		return false;
 	}
 }
