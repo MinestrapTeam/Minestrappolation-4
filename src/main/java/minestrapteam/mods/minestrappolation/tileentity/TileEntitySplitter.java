@@ -243,10 +243,13 @@ public class TileEntitySplitter extends TileEntityInventory implements ISidedInv
 		{
 			item = stack.getItem();
 		}
+		if(item == Item.getItemFromBlock(MBlocks.hanging_glow_moss)) return 410;
 		if(item == MItems.mana_leaf) return 820;
 		if(item == Items.gold_nugget) return 960;
+		if(item == Item.getItemFromBlock(MBlocks.purple_glowshroom) || item == Item.getItemFromBlock(MBlocks.green_glowshroom)) return 1640;
 		if(item == Items.dye && item.getMetadata(stack) == 4) return 3200;
 		if(item == Items.gold_ingot) return 6400;
+		if(item == Item.getItemFromBlock(MBlocks.huge_purple_glowshroom) || item == Item.getItemFromBlock(MBlocks.huge_green_glowshroom)) return 6560;
 		if(item == MItems.soul_gem) return 9600;
 		if(item == MItems.radiant_quartz) return 12800;
 		if(item == Item.getItemFromBlock(Blocks.lapis_block))return 32000;

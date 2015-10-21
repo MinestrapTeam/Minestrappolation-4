@@ -110,6 +110,16 @@ public class MEventHandler
 			}
 		}
 		
+		if(event.state == Blocks.double_plant.getStateFromMeta(2) || event.state == Blocks.double_plant.getStateFromMeta(10))
+		{
+			ItemStack item = new ItemStack(MBlocks.corn);
+			EntityItem eitem = new EntityItem(event.world, event.pos.getX(), event.pos.getY(), event.pos.getZ(), item);
+			if (rand.nextInt(100) < Config.cornSeedChance)
+			{
+				event.world.spawnEntityInWorld(eitem);
+			}
+		}
+		
 		if (event.state.getBlock() == Blocks.bedrock)
 		{
 			ItemStack stack = event.getPlayer().getHeldItem();
