@@ -404,6 +404,7 @@ public class MRecipes
 			RecipeHelper.removeRecipeContaining(Blocks.quartz_block);
 			RecipeHelper.removeRecipeContaining(Items.ender_eye);
 			RecipeHelper.removeRecipeContaining(Items.flower_pot);
+			RecipeHelper.removeRecipeContaining(Blocks.lit_pumpkin);
 		}
 	}
 	
