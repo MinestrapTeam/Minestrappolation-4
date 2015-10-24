@@ -55,6 +55,7 @@ public class ItemMSoup extends ItemFood
             playerIn.addPotionEffect(new PotionEffect(Potion.regeneration.id, 30 * 20, 1));
             playerIn.addPotionEffect(new PotionEffect(Potion.blindness.id, 30 * 20, 0));
             playerIn.addPotionEffect(new PotionEffect(Potion.nightVision.id, 30 * 20, 0));
+            playerIn.addPotionEffect(new PotionEffect(Potion.confusion.id, 30 * 20, 0));
         }
         if(fireTime != 0)
         {

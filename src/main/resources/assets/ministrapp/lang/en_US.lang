@@ -867,6 +867,8 @@ item.grilled_corn.name=Grilled Corn
 item.fries.name=French Fries
 item.fried_fish.name=Fried Fish
 item.fried_salmon.name=Fried Salmon
+item.fish_and_chips.name=Fish and Chips
+item.salmon_burger.name=Salmon Burger
 
 itemGroup.tabMBuilding=Minestrapp Building Blocks
 itemGroup.tabMDecor=Minestrapp Decoration Blocks

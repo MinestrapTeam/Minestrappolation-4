@@ -49,7 +49,7 @@ public class SplitterRecipes
 		
 		//Vanilla Decor Blocks
 		this.addRecipe(new ItemStack(Blocks.bookshelf, 1, 0), new ItemStack(Items.book, 3), new ItemStack(Blocks.planks, 6), 0.1F);
-		this.addRecipe(new ItemStack(Blocks.lit_pumpkin, 1), new ItemStack(Blocks.pumpkin, 1), new ItemStack(Blocks.torch, 1), 0.1F);
+		this.addRecipe(new ItemStack(Blocks.lit_pumpkin, 1), new ItemStack(Blocks.pumpkin, 1), new ItemStack(MBlocks.purple_glowshroom, 8), 0.1F);
 		this.addRecipe(new ItemStack(Blocks.sandstone, 1, 0), new ItemStack(Blocks.sand, 2, 0), new ItemStack(Blocks.sand, 2, 0), 0.1F);
 		this.addRecipe(new ItemStack(Blocks.red_sandstone, 1, 0), new ItemStack(Blocks.sand, 2, 1), new ItemStack(Blocks.sand, 2, 1), 0.1F);
 		this.addRecipe(new ItemStack(Blocks.sea_lantern, 1, 0), new ItemStack(Items.prismarine_shard, 5), new ItemStack(Items.prismarine_crystals, 4), 0.1F);
@@ -593,6 +593,20 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MItems.fries, 1), new ItemStack(Items.potato, 1), new ItemStack(MItems.grease, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.fried_fish, 1), new ItemStack(Items.cooked_fish, 1, 0), new ItemStack(MItems.grease, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.fried_salmon, 1), new ItemStack(Items.cooked_fish, 1, 1), new ItemStack(MItems.grease, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.salmon_burger, 1), new ItemStack(MItems.bun, 2), new ItemStack(MItems.fried_salmon, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.fish_and_chips, 1), new ItemStack(MItems.fries, 1), new ItemStack(MItems.fried_fish, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.pumpkin_carved_0, 1), new ItemStack(Blocks.pumpkin, 1), new ItemStack(MBlocks.candle, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.pumpkin_carved_1, 1), new ItemStack(Blocks.pumpkin, 1), new ItemStack(MBlocks.candle, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.pumpkin_carved_2, 1), new ItemStack(Blocks.pumpkin, 1), new ItemStack(MBlocks.candle, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.pumpkin_carved_3, 1), new ItemStack(Blocks.pumpkin, 1), new ItemStack(MBlocks.candle, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.pumpkin_carved_4, 1), new ItemStack(Blocks.pumpkin, 1), new ItemStack(MBlocks.candle, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.pumpkin_smashed, 1), new ItemStack(Blocks.pumpkin, 1), new ItemStack(MBlocks.candle, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.pumpkin_carved_0_lit, 1), new ItemStack(Blocks.pumpkin, 1), new ItemStack(MBlocks.candle, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.pumpkin_carved_1_lit, 1), new ItemStack(Blocks.pumpkin, 1), new ItemStack(MBlocks.candle, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.pumpkin_carved_2_lit, 1), new ItemStack(Blocks.pumpkin, 1), new ItemStack(MBlocks.candle, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.pumpkin_carved_3_lit, 1), new ItemStack(Blocks.pumpkin, 1), new ItemStack(MBlocks.candle, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.pumpkin_carved_4_lit, 1), new ItemStack(Blocks.pumpkin, 1), new ItemStack(MBlocks.candle, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.pumpkin_smashed_lit, 1), new ItemStack(Blocks.pumpkin, 1), new ItemStack(MBlocks.candle, 1), 0.1F);
 	}
 	
 	public void addRecipe(Block input, ItemStack stack, ItemStack stack2, float experience)

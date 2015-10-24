@@ -1,2 +1,2 @@
-version=1.8.0-4.2.1
-motd=§9Welcome Cork55 to the team!
+﻿version=1.8.0-4.2.666
+motd=§9The Halloween Update is out, with lots of spoopy new content!

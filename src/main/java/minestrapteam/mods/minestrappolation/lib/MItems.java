@@ -69,6 +69,7 @@ public class MItems extends Item
 	public static Item							sugar_cookie;
 	public static Item							bun;
 	public static Item							pbj_sandwich;
+	public static Item							salmon_burger;
 	public static Item							hamburger;
 	public static Item							pie_crust;
 	public static Item							apple_pie;
@@ -119,6 +120,7 @@ public class MItems extends Item
 	public static Item							fries;
 	public static Item							fried_fish;
 	public static Item							fried_salmon;
+	public static Item							fish_and_chips;
 	
 	//Misc Foods
 	public static Item							candy_red;
@@ -345,6 +347,7 @@ public class MItems extends Item
 		sugar_cookie = new ItemFood(1, 0.4F, false).setPotionEffect(Potion.moveSpeed.id, 10, 0, 0.5F).setUnlocalizedName("sugar_cookie").setCreativeTab(Minestrappolation.tabMFood);
 		bun = new ItemFood(2, 0.3F, false).setUnlocalizedName("bun").setCreativeTab(Minestrappolation.tabMFood);
 		pbj_sandwich = new ItemMFood(14, 2.5F, 0).setUnlocalizedName("pbj_sandwich").setCreativeTab(Minestrappolation.tabMFood);
+		salmon_burger = new ItemFood(20, 2.2F, false).setPotionEffect(Potion.hunger.id, 15, 0, 0.8F).setUnlocalizedName("salmon_burger").setCreativeTab(Minestrappolation.tabMFood);
 		hamburger = new ItemFood(18, 2F, false).setUnlocalizedName("hamburger").setCreativeTab(Minestrappolation.tabMFood);
 		pie_crust = new ItemFood(2, 0.2F, false).setUnlocalizedName("pie_crust").setCreativeTab(Minestrappolation.tabMFood);
 		apple_pie = new ItemFood(6, 0.7F, false).setUnlocalizedName("apple_pie").setCreativeTab(Minestrappolation.tabMFood);
@@ -394,6 +397,7 @@ public class MItems extends Item
 		fries = new ItemFood(7, 0.4F, false).setPotionEffect(Potion.hunger.id, 15, 0, 0.10F).setUnlocalizedName("fries").setCreativeTab(Minestrappolation.tabMFood);
 		fried_fish = new ItemFood(7, 0.5F, false).setPotionEffect(Potion.hunger.id, 15, 0, 0.8F).setUnlocalizedName("fried_fish").setCreativeTab(Minestrappolation.tabMFood);
 		fried_salmon = new ItemFood(9, 0.7F, false).setPotionEffect(Potion.hunger.id, 15, 0, 0.8F).setUnlocalizedName("fried_salmon").setCreativeTab(Minestrappolation.tabMFood);
+		fish_and_chips = new ItemFood(14, 0.8F, false).setPotionEffect(Potion.hunger.id, 15, 0, 0.8F).setUnlocalizedName("fish_and_chips").setCreativeTab(Minestrappolation.tabMFood);
 		
 		//Misc Foods
 		candy_red = new ItemMFood(0, 0, 0).setAlwaysEdible().setUnlocalizedName("candy_red").setCreativeTab(Minestrappolation.tabMFood);
@@ -654,12 +658,14 @@ public class MItems extends Item
 		register(bun);
 		register(pbj_sandwich);
 		register(hamburger);
+		register(salmon_burger);
 		register(sugar_cookie);
 		register(pie_crust);
 		register(apple_pie);
 		register(fries);
 		register(fried_fish);
 		register(fried_salmon);
+		register(fish_and_chips);
 		register(bread_bowl);
 		register(bread_mushroom_stew);
 		register(bread_rabbit_stew);

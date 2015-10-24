@@ -32,13 +32,13 @@ public class ItemMFood extends ItemFood
         if (this == MItems.candy_red && !worldIn.isRemote)
         {
             playerIn.addPotionEffect(new PotionEffect(Potion.heal.id, 1 * 20, 0));
-            playerIn.addPotionEffect(new PotionEffect(Potion.regeneration.id, 10 * 20, 0));
+            playerIn.addPotionEffect(new PotionEffect(Potion.regeneration.id, 20 * 20, 0));
         }
         if (this == MItems.candy_blue && !worldIn.isRemote)
         {
             playerIn.addPotionEffect(new PotionEffect(Potion.heal.id, 1 * 20, 0));
-            playerIn.addPotionEffect(new PotionEffect(Potion.invisibility.id, 10 * 20, 0));
-            playerIn.addPotionEffect(new PotionEffect(Potion.nightVision.id, 10 * 20, 0));
+            playerIn.addPotionEffect(new PotionEffect(Potion.invisibility.id, 30 * 20, 0));
+            playerIn.addPotionEffect(new PotionEffect(Potion.nightVision.id, 30 * 20, 0));
         }
         if (this == MItems.candy_yellow && !worldIn.isRemote)
         {
@@ -108,6 +108,7 @@ public class ItemMFood extends ItemFood
             playerIn.addPotionEffect(new PotionEffect(Potion.regeneration.id, 30 * 20, 1));
             playerIn.addPotionEffect(new PotionEffect(Potion.blindness.id, 30 * 20, 0));
             playerIn.addPotionEffect(new PotionEffect(Potion.nightVision.id, 30 * 20, 0));
+            playerIn.addPotionEffect(new PotionEffect(Potion.confusion.id, 30 * 20, 0));
         }
         super.onItemUseFinish(stack, worldIn, playerIn);
         return stack;

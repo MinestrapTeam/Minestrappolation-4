@@ -1,3 +1,33 @@
+4.2.666
+ - Added Corn! A new crop obtained occasionally when breaking the BOTTOM HALF of Double-Tall Grass.
+ - Added Corn on a Stick.
+ - Added Grilled Corn.
+ - Added Corn Meal.
+ - Added Corn Bread.
+ - Added Popcorn.
+ - Added Glowshrooms! Luminescent Mushrooms that generate in the Nether. They can be used in crafting Hallucinogenic Glowshroom Stew, or can be used as Splitter fuel.
+ - Added Huge Glowshroom blocks. Huge Glowshrooms are created by Bone-Mealing Glowshrooms. They're a good decorative lighting source, and can also be used as Splitter fuel.
+ - Added Hallucinogenic Glowshroom Stew. Gives you Speed IV, Haste IV, and Regeneration II, making it useful for strip-mining, but it also gives you Nausea, Blindness, and Night Vision, making it very hard to see...
+ - Added Fat. Dropped from Pigs and Zombie Pigmen. Can be smelted into Tallow or melted into Grease.
+ - Added Tallow. Used for crafting Candles.
+ - Added Grease. Used for frying certain foods.
+ - Added French Fries.
+ - Added Fried Fish.
+ - Added Fried Salmon.
+ - Added Salmon Burgers.
+ - Added Fish and Chips.
+ - Added Candy! Comes in three varieties, and is dropped by most mobs any time between October 20th and October 31st. Doesn't restore Hunger, but gives you free Potion effects!
+ - Added Candles! Purely decorative, but do emit light. Aren't lit when placed, so you'll have to right-click them with something that creates Fire...
+ - Lit Candles can also be extinguished in a similar manner.
+ - Added the new Pumpkin Carving system! Place a Pumpkin in the center of the crafting grid, a Candle at the bottom, and some Shears anywhere in the top 5 empty slots to craft a Simple Carved Pumpkin.
+ - Once placed, Simple Carved Pumpkins can be right-clicked with Shears to carve them further. They can also be lit or extinguished in the same way as Candles.
+ - Carving a Pumpkin too far will turn it into a Smashed Pumpkin. Smashed Pumpkins can still be lit, though.
+ - There are 15 Carving patterns total (16 if you count Smashed Pumpkins).
+ - Vanilla Pumpkins no longer have a carved face by default.
+ - Vanilla Jack o'Lanterns have been replaced with "Glowpumpkins" -- alloyed with 8 Purple Glowshrooms and a Pumpkin. Purely decorative.
+ - Hanging Glow Moss can now be used as Splitter fuel.
+ - Fixed Panes, Fences, etc connecting to Crates and Barrels.
+
 4.2.1
  - Added Magnetic Torches. When the block they're placed on is broken, they try to attatch to another neighboring block before dropping as an item. Idea taken from IntegerArray's Smart Torches mod with permission.
  - Added Guano. Dropped by Bats, acts like Bonemeal, and can be used as an efficient fuel source.
