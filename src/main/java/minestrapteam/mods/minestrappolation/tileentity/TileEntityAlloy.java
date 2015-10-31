@@ -69,8 +69,6 @@ public class TileEntityAlloy extends TileEntityInventory implements ISidedInvent
 		
 		nbt.setShort("BurnTime", (short) this.burnTime);
 		nbt.setShort("CookTime", (short) this.meltTime);
-		nbt.setShort("BurnTime", (short) this.burnTime);
-		nbt.setShort("CookTime", (short) this.meltTime);
 		NBTTagList nbttaglist = new NBTTagList();
 		for (int i = 0; i < this.itemStacks.length; ++i)
 		{

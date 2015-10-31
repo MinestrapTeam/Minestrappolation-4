@@ -22,7 +22,7 @@ public class WorldGenRedWoodTreeSmall extends WorldGenBaseTree
 	{
 		world.setBlockState(pos.add(0, this.topHeight, 0), this.leaves, 2);
 		
-		double thickness = 4D;
+		double thickness = 3.5D;
 		for (int r = this.leafStart; r < this.topHeight; r++)
 		{
 			if (r % this.leafSpacing == 0)

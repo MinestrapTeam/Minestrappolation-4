@@ -35,7 +35,7 @@ public class BiomeRedwood extends BiomeGenBase
 		this.fillerBlock = Blocks.stone.getDefaultState();
 		
 		this.theBiomeDecorator.flowersPerChunk = 5;
-		this.theBiomeDecorator.treesPerChunk = 6;
+		this.theBiomeDecorator.treesPerChunk = 5;
 		this.theBiomeDecorator.grassPerChunk = 11;
 		this.theBiomeDecorator.deadBushPerChunk = 4;
 	}

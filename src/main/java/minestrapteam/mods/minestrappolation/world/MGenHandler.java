@@ -55,7 +55,10 @@ public class MGenHandler implements IWorldGenerator
 		if (chunkGenerator instanceof ChunkProviderGenerate)
 		{
 			this.generateOverworld(world, random, chunkX, chunkZ);
-			this.genBiomeStone(world, chunkX, chunkZ, random);
+			if(Config.genBiomeStones == true)
+			{
+				this.genBiomeStone(world, chunkX, chunkZ, random);
+			}
 		}
 		else if (chunkGenerator instanceof ChunkProviderHell)
 		{

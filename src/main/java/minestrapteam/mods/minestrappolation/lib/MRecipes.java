@@ -336,6 +336,20 @@ public class MRecipes
 		GameRegistry.addRecipe(new ItemStack(MItems.rad_leggings), new Object[] { "SDS", "P P", "T T", 'S', MItems.steel_plating, 'D', MItems.technological_doodad, 'P', MItems.plutonium, 'T', MItems.torite_ingot });
 		GameRegistry.addRecipe(new ItemStack(MItems.rad_boots), new Object[] { "S S", "P P", "T T", 'S', MItems.steel_plating, 'P', MItems.plutonium, 'T', MItems.torite_ingot });
 		
+		
+		if(Config.genBiomeStones == false)
+		{
+			GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.biome_stones, 0), new Object[] { Blocks.cobblestone, Blocks.stone});
+			GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.biome_stones, 1), new Object[] { Blocks.sand, Blocks.stone});
+			GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.biome_stones, 2), new Object[] { Blocks.sandstone, Blocks.stone});
+			GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.biome_stones, 3), new Object[] { Items.snowball, Blocks.stone});
+			GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.biome_stones, 4), new Object[] { Blocks.snow, Blocks.stone});
+			GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.biome_stones, 5), new Object[] { Blocks.ice, Blocks.stone});
+			GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.biome_stones, 6), new Object[] { Blocks.packed_ice, Blocks.stone});
+			GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.biome_stones, 7), new Object[] { Items.fish, Blocks.stone});
+			GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.biome_stones, 8), new Object[] { MBlocks.seaweed, Blocks.stone});
+		}
+		
 		//Vanilla
 		GameRegistry.addRecipe(new ItemStack(Blocks.redstone_lamp, 1, 0), new Object[] { " R ", "RSR", " R ", 'R', Items.redstone, 'S', MBlocks.sunstone_block});
 		GameRegistry.addRecipe(new ItemStack(MBlocks.ministrapp_flower_pot, 1, 0), new Object[] { "BDB", " B ", 'B', Items.brick, 'D', new ItemStack(Blocks.dirt, 1, 0)});

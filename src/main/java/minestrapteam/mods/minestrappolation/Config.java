@@ -31,6 +31,8 @@ public class Config
 	public static Boolean	genMud;
 	public static Boolean	genRubble;
 	
+	public static Boolean	genBiomeStones;
+	
 	//Biomes
 	public static Boolean   genRedwood;
 	public static Boolean   genFrost;
@@ -155,6 +157,8 @@ public class Config
 		genMud = config.get("Ores", "GenerateMud", true, "Set to False to prevent Mud from generating.").getBoolean();
 		genRubble = config.get("Ores", "GenerateRubble", true, "Set to False to prevent Rubble from generating.").getBoolean();
 
+		genBiomeStones = config.get("Mechanics", "GenerateBiomeStones", true, "Set to False to prevent Biome stones from generating.").getBoolean();
+		
 		genRedwood = config.get("Biomes", "GenerateRedwood", true, "Set to False to prevent Redwood biomes from generating.").getBoolean();
 		genFrost = config.get("Biomes", "GenerateTheFrost", true, "Set to False to prevent Frost biomes from generating.").getBoolean();
 		config.save();

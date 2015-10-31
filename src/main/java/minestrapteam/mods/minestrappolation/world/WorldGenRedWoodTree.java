@@ -25,7 +25,7 @@ public class WorldGenRedWoodTree extends WorldGenBaseTree
 		world.setBlockState(pos.add(1, this.topHeight, 1), this.leaves, 2);
 		world.setBlockState(pos.add(1, this.topHeight, 0), this.leaves, 2);
 		
-		double thinkness = 6.5D;
+		double thinkness = 5D;
 		for (int r = this.leafStart; r < this.topHeight; r++)
 		{
 			if (r % this.leafSpacing == 0)
