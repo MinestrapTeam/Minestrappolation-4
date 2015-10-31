@@ -100,7 +100,10 @@ public class ItemSifter extends Item{
          if(drop != null)
          {
         	 drop.stackSize = 1;
-             playerIn.inventory.addItemStackToInventory(drop);	
+        	 if(worldIn.isRemote)
+        	 {
+        		 playerIn.inventory.addItemStackToInventory(drop);	 
+        	 }
          }	
          if(isReusable == false)
          {

@@ -1,6 +1,7 @@
 package minestrapteam.mods.minestrappolation.lib;
 
 import minestrapteam.mods.minestrappolation.Config;
+import minestrapteam.mods.minestrappolation.crafting.recipes.MShapedRecipe;
 import minestrapteam.mods.minestrappolation.util.RecipeHelper;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -180,11 +181,11 @@ public class MRecipes
 		GameRegistry.addSmelting(new ItemStack(MBlocks.cold_sand, 1, 1), new ItemStack(Blocks.sand, 1, 1), 0.1F);
 		GameRegistry.addSmelting(new ItemStack(MBlocks.dirt_permafrost, 1, 0), new ItemStack(Blocks.dirt, 1, 0), 0.1F);
 		
-		GameRegistry.addRecipe(new ItemStack(MBlocks.pumpkin_carved_0, 1, 0), new Object[] { "   ", "SP ", " C ", 'S', Items.shears.setContainerItem(Items.shears), 'P', Blocks.pumpkin, 'C', MBlocks.candle });
-		GameRegistry.addRecipe(new ItemStack(MBlocks.pumpkin_carved_1, 1, 0), new Object[] { "S  ", " P ", " C ", 'S', Items.shears.setContainerItem(Items.shears), 'P', Blocks.pumpkin, 'C', MBlocks.candle });
-		GameRegistry.addRecipe(new ItemStack(MBlocks.pumpkin_carved_2, 1, 0), new Object[] { " S ", " P ", " C ", 'S', Items.shears.setContainerItem(Items.shears), 'P', Blocks.pumpkin, 'C', MBlocks.candle });
-		GameRegistry.addRecipe(new ItemStack(MBlocks.pumpkin_carved_3, 1, 0), new Object[] { "  S", " P ", " C ", 'S', Items.shears.setContainerItem(Items.shears), 'P', Blocks.pumpkin, 'C', MBlocks.candle });
-		GameRegistry.addRecipe(new ItemStack(MBlocks.pumpkin_carved_4, 1, 0), new Object[] { "   ", " PS", " C ", 'S', Items.shears.setContainerItem(Items.shears), 'P', Blocks.pumpkin, 'C', MBlocks.candle });
+		MShapedRecipe.addRecipe(new ItemStack(MBlocks.pumpkin_carved_0, 1, 0), new Object[] { "SP ", " C ", 'S', Items.shears.setContainerItem(Items.shears), 'P', Blocks.pumpkin, 'C', MBlocks.candle });
+		MShapedRecipe.addRecipe(new ItemStack(MBlocks.pumpkin_carved_1, 1, 0), new Object[] { "S  ", " P ", " C ", 'S', Items.shears.setContainerItem(Items.shears), 'P', Blocks.pumpkin, 'C', MBlocks.candle });
+		MShapedRecipe.addRecipe(new ItemStack(MBlocks.pumpkin_carved_2, 1, 0), new Object[] { " S ", " P ", " C ", 'S', Items.shears.setContainerItem(Items.shears), 'P', Blocks.pumpkin, 'C', MBlocks.candle });
+		MShapedRecipe.addRecipe(new ItemStack(MBlocks.pumpkin_carved_3, 1, 0), new Object[] { "  S", " P ", " C ", 'S', Items.shears.setContainerItem(Items.shears), 'P', Blocks.pumpkin, 'C', MBlocks.candle });
+		MShapedRecipe.addRecipe(new ItemStack(MBlocks.pumpkin_carved_4, 1, 0), new Object[] { " PS", " C ", 'S', Items.shears.setContainerItem(Items.shears), 'P', Blocks.pumpkin, 'C', MBlocks.candle });
 		
 		// Wood
 		GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.ministrapp_planks, 4, 0), new Object[] { new ItemStack(MBlocks.ministrapp_log, 1, 0) });

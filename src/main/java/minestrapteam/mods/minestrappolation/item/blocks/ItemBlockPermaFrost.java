@@ -27,7 +27,7 @@ public class ItemBlockPermaFrost extends ItemBlock
 	@SideOnly(Side.CLIENT)
 	public int getColorFromItemStack(ItemStack stack, int renderPass)
 	{
-		return 10420217;
+		return 11052399;
 	}
 	
 	@Override
