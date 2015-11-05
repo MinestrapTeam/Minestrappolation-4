@@ -24,7 +24,7 @@ if (ENV.DRONE_BUILD_NUMBER) {
 minecraft
 {
     version = "1.8-11.14.3.1543"
-    runDir = "run"    
+    runDir = "run"
     mappings = "snapshot_20150727"
 }
 
