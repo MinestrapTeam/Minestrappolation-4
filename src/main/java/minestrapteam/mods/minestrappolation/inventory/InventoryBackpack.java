@@ -18,7 +18,7 @@ public class InventoryBackpack implements IInventory
 
 	public ItemStack[] inventory = new ItemStack[INV_SIZE];
 
-	private final ItemStack invStack;
+	public final ItemStack invStack;
 
 	public InventoryBackpack(ItemStack stack)
 	{

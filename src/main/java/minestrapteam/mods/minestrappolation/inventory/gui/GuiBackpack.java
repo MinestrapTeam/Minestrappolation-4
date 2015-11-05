@@ -24,7 +24,7 @@ public class GuiBackpack extends GuiContainer
 	@Override
 	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY)
 	{
-		this.fontRendererObj.drawString(StatCollector.translateToLocal("Backpack"), 7, 7, 4210752);
+		this.fontRendererObj.drawString(StatCollector.translateToLocal(backpack.invStack.getDisplayName()), 7, 7, 4210752);
 		this.fontRendererObj.drawString(StatCollector.translateToLocal("container.inventory"), 7, this.ySize - 92, 4210752);
 	}
 	

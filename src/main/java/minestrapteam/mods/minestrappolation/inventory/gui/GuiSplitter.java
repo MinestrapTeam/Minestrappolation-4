@@ -42,7 +42,7 @@ public class GuiSplitter extends GuiContainer
 		if (this.splitter.isBurning())
 		{
 			int burn = this.splitter.getBurnTimeRemainingScaled(12);
-			this.drawTexturedModalRect(j + 80, k + 48 - burn, 176, 12 - burn, 14, burn + 2);
+			this.drawTexturedModalRect(j + 80, k + 49 - burn, 176, 12 - burn, 14, burn + 2);
 		}
 		
 		int update = this.splitter.getProgressScaled(24);

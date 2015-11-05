@@ -59,6 +59,11 @@ public class ContainerBackpack extends MinestrappolationContainer
 			ItemStack itemstack1 = slot.getStack();
 
 			itemstack = itemstack1.copy();
+			
+			if(itemstack.isItemEqual(new ItemStack(MItems.backpack)) || itemstack.isItemEqual(new ItemStack(MItems.satchel)))
+			{
+				return null;
+			}
 
 			if (par2 < INV_START)
 			{
