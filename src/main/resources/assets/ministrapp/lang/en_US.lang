@@ -870,6 +870,9 @@ item.fried_salmon.name=Fried Salmon
 item.fish_and_chips.name=Fish and Chips
 item.salmon_burger.name=Salmon Burger
 
+item.tomato.name=Tomato
+item.tomato_seeds.name=Tomato Seeds
+
 itemGroup.tabMBuilding=Minestrapp Building Blocks
 itemGroup.tabMDecor=Minestrapp Decoration Blocks
 itemGroup.tabMTech=Minestrapp Tech Blocks

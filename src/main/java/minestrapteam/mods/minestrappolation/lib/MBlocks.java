@@ -77,6 +77,8 @@ public class MBlocks
 	public static Item	lettuce;
 	public static Block celery_crop;
 	public static Item	celery_seed;
+	public static Block tomato_crop;
+	public static Item	tomato_seed;
 	public static Block corn_crop;
 	public static Item  corn;
 	public static Block green_glowshroom;
@@ -467,6 +469,8 @@ public class MBlocks
 		lettuce = new ItemSeedFood(1, 0F, lettuce_crop, Blocks.farmland).setUnlocalizedName("lettuce").setCreativeTab(Minestrappolation.tabMFood);
 		celery_crop = new BlockCelery().setUnlocalizedName("celery_crop");
 		celery_seed = new ItemSeeds(celery_crop, Blocks.farmland).setUnlocalizedName("celery_seeds").setCreativeTab(Minestrappolation.tabMFood);
+		tomato_crop = new BlockTomato().setUnlocalizedName("tomato_crop");
+		tomato_seed = new ItemSeeds(tomato_crop, Blocks.farmland).setUnlocalizedName("tomato_seeds").setCreativeTab(Minestrappolation.tabMFood);
 		corn_crop = new BlockCorn().setUnlocalizedName("corn_crop");
 		corn = new ItemSeeds(corn_crop, Blocks.farmland).setUnlocalizedName("corn").setCreativeTab(Minestrappolation.tabMFood);
 		green_glowshroom = new BlockGlowShrooms().setLightLevel(0.6F).setUnlocalizedName("green_glowshroom").setCreativeTab(Minestrappolation.tabMDecor);
@@ -1036,6 +1040,8 @@ public class MBlocks
 		register(lettuce_crop);
 		GameRegistry.registerItem(lettuce, lettuce.getUnlocalizedName().substring(5));
 		register(celery_crop);
+		GameRegistry.registerItem(tomato_seed, tomato_seed.getUnlocalizedName().substring(5));
+		register(tomato_crop);
 		GameRegistry.registerItem(celery_seed, celery_seed.getUnlocalizedName().substring(5));
 		register(corn_crop);
 		GameRegistry.registerItem(corn, corn.getUnlocalizedName().substring(5));
@@ -1194,6 +1200,7 @@ public class MBlocks
 		registerRender(cabbage);
 		registerRender(lettuce);
 		registerRender(celery_seed);
+		registerRender(tomato_seed);
 		registerRender(corn);
 	}
 	

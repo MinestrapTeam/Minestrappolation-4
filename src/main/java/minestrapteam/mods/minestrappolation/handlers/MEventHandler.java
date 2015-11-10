@@ -110,6 +110,16 @@ public class MEventHandler
 			}
 		}
 		
+		if(event.state == Blocks.tallgrass.getStateFromMeta(2))
+		{
+			ItemStack item = new ItemStack(MBlocks.tomato_seed);
+			EntityItem eitem = new EntityItem(event.world, event.pos.getX(), event.pos.getY(), event.pos.getZ(), item);
+			if (rand.nextInt(100) < Config.tomatoSeedChance)
+			{
+				event.world.spawnEntityInWorld(eitem);
+			}
+		}
+		
 		if(event.state == Blocks.double_plant.getStateFromMeta(2) || event.state == Blocks.double_plant.getStateFromMeta(10))
 		{
 			ItemStack item = new ItemStack(MBlocks.corn);

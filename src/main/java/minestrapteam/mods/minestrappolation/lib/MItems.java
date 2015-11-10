@@ -57,6 +57,7 @@ public class MItems extends Item
 	public static Item							strawberry;
 	public static Item							pepper;
 	public static Item							celery;
+	public static Item							tomato;
 	public static Item							corn_on_stick;
 	public static Item							grilled_corn;
 	
@@ -335,6 +336,7 @@ public class MItems extends Item
 		strawberry = new ItemFood(2, 0.5F, false).setPotionEffect(Potion.damageBoost.id, 10, 0, 0.3F).setUnlocalizedName("strawberry").setCreativeTab(Minestrappolation.tabMFood);
 		pepper = new ItemFood(4, 0.4F, false).setPotionEffect(Potion.moveSpeed.id, 20, 1, 0.5F).setUnlocalizedName("pepper").setCreativeTab(Minestrappolation.tabMFood);
 		celery = new ItemFood(2, 0.4F, false).setUnlocalizedName("celery").setCreativeTab(Minestrappolation.tabMFood);
+		tomato = new ItemFood(3, 0.4F, false).setUnlocalizedName("tomato").setCreativeTab(Minestrappolation.tabMFood);
 		corn_on_stick = new ItemMFood(3, 0.5F, 0).setUnlocalizedName("corn_on_stick").setCreativeTab(Minestrappolation.tabMFood);
 		grilled_corn = new ItemMFood(6, 3.0F, 0).setUnlocalizedName("grilled_corn").setCreativeTab(Minestrappolation.tabMFood);
 		
@@ -648,6 +650,7 @@ public class MItems extends Item
 		register(raspberry);
 		register(pepper);
 		register(celery);
+		register(tomato);
 		register(corn_on_stick);
 		register(grilled_corn);
 		register(corn_meal);

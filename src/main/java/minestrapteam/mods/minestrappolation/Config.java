@@ -52,6 +52,7 @@ public class Config
 	public static int		onionSeedChance;
 	public static int		riceSeedChance;
 	public static int		celerySeedChance;
+	public static int		tomatoSeedChance;
 	public static int		cornSeedChance;
 	
 	//Drops
@@ -117,6 +118,7 @@ public class Config
 		onionSeedChance = config.get("Plants", "OnionSeedChance", 10, "The percentage chance of finding Onions when breaking Allium flowers.").getInt();
 		riceSeedChance = config.get("Plants", "RiceSeedChance", 10, "The percentage chance of finding Rice when breaking Tall Grass.").getInt();
 		celerySeedChance = config.get("Plants", "CelerySeedChance", 10, "The percentage chance of finding Celery Seeds when breaking Shrub Grass.").getInt();
+		tomatoSeedChance = config.get("Plants", "TomatoSeedChance", 10, "The percentage chance of finding Tomato Seeds when breaking Ferns.").getInt();
 		cornSeedChance = config.get("Plants", "CornSeedChance", 10, "The percentage chance of finding Corn when breaking Double Tall Grass.").getInt();
 		
 		animalBoneDropChance = config.get("Drops", "AnimalBoneDropChance", 20, "The percentage chance of finding Animal Bones when killing any farm animal.").getInt();
