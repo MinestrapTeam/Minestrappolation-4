@@ -1,0 +1,21 @@
+[01:25:08] [Client thread/INFO]: Setting user: Player815
+[01:25:12] [Client thread/INFO]: LWJGL Version: 2.9.1
+[01:25:17] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Minestrappolation Mod
+[01:25:18] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[01:25:18] [Thread-8/INFO]: Initializing LWJGL OpenAL
+[01:25:18] [Thread-8/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[01:25:19] [Thread-8/INFO]: OpenAL initialized.
+[01:25:19] [Sound Library Loader/INFO]: Sound engine started
+[01:25:25] [Client thread/INFO]: Created: 16x16 textures-atlas
+[01:25:26] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Minestrappolation Mod
+[01:25:26] [Client thread/INFO]: SoundSystem shutting down...
+[01:25:26] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[01:25:26] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[01:25:27] [Thread-11/INFO]: Initializing LWJGL OpenAL
+[01:25:27] [Thread-11/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[01:25:27] [Thread-11/INFO]: OpenAL initialized.
+[01:25:27] [Sound Library Loader/INFO]: Sound engine started
+[01:25:32] [Client thread/INFO]: Created: 1024x512 textures-atlas
+[01:26:18] [Client thread/INFO]: Stopping!
+[01:26:18] [Client thread/INFO]: SoundSystem shutting down...
+[01:26:18] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
