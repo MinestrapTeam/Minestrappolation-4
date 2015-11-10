@@ -1,21 +1,68 @@
-[01:25:08] [Client thread/INFO]: Setting user: Player815
-[01:25:12] [Client thread/INFO]: LWJGL Version: 2.9.1
-[01:25:17] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Minestrappolation Mod
-[01:25:18] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[01:25:18] [Thread-8/INFO]: Initializing LWJGL OpenAL
-[01:25:18] [Thread-8/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[01:25:19] [Thread-8/INFO]: OpenAL initialized.
-[01:25:19] [Sound Library Loader/INFO]: Sound engine started
-[01:25:25] [Client thread/INFO]: Created: 16x16 textures-atlas
-[01:25:26] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Minestrappolation Mod
-[01:25:26] [Client thread/INFO]: SoundSystem shutting down...
-[01:25:26] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
-[01:25:26] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[01:25:27] [Thread-11/INFO]: Initializing LWJGL OpenAL
-[01:25:27] [Thread-11/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[01:25:27] [Thread-11/INFO]: OpenAL initialized.
-[01:25:27] [Sound Library Loader/INFO]: Sound engine started
-[01:25:32] [Client thread/INFO]: Created: 1024x512 textures-atlas
-[01:26:18] [Client thread/INFO]: Stopping!
-[01:26:18] [Client thread/INFO]: SoundSystem shutting down...
-[01:26:18] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[18:11:18] [Client thread/INFO]: Setting user: Player700
+[18:11:21] [Client thread/INFO]: LWJGL Version: 2.9.1
+[18:11:25] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Minestrappolation Mod
+[18:11:26] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[18:11:27] [Thread-9/INFO]: Initializing LWJGL OpenAL
+[18:11:27] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[18:11:27] [Thread-9/INFO]: OpenAL initialized.
+[18:11:27] [Sound Library Loader/INFO]: Sound engine started
+[18:11:31] [Client thread/INFO]: Created: 16x16 textures-atlas
+[18:11:32] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Minestrappolation Mod
+[18:11:32] [Client thread/INFO]: SoundSystem shutting down...
+[18:11:32] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[18:11:32] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[18:11:32] [Thread-12/INFO]: Initializing LWJGL OpenAL
+[18:11:32] [Thread-12/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[18:11:33] [Thread-12/INFO]: OpenAL initialized.
+[18:11:33] [Sound Library Loader/INFO]: Sound engine started
+[18:11:37] [Client thread/INFO]: Created: 1024x512 textures-atlas
+[18:11:42] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[18:11:42] [Server thread/INFO]: Generating keypair
+[18:11:42] [Server thread/INFO]: Preparing start region for level 0
+[18:11:43] [Server thread/INFO]: Preparing spawn area: 89%
+[18:11:44] [Server thread/INFO]: Changing view distance to 12, from 10
+[18:11:45] [Server thread/INFO]: Player700[local:E:325e5f45] logged in with entity id 530 at (268.348912322829, 118.0, 307.1169555313003)
+[18:11:45] [Server thread/INFO]: Player700 joined the game
+[18:11:46] [Server thread/INFO]: Player700 has just earned the achievement [Minestrappolation!]
+[18:11:46] [Client thread/INFO]: [CHAT] §2Minestrappolation Mod is the current version
+[18:11:46] [Client thread/INFO]: [CHAT] §9The Halloween Update is out, with lots of spoopy new content!
+[18:11:46] [Client thread/INFO]: [CHAT] Player700 has just earned the achievement [Minestrappolation!]
+[18:11:52] [Server thread/INFO]: Saving and pausing game...
+[18:11:52] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[18:11:52] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[18:11:52] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[18:11:53] [Server thread/INFO]: Saving and pausing game...
+[18:11:53] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[18:11:53] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[18:11:53] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[18:12:01] [Server thread/INFO]: Stopping server
+[18:12:01] [Server thread/INFO]: Saving players
+[18:12:01] [Server thread/INFO]: Saving worlds
+[18:12:01] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[18:12:01] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[18:12:01] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[18:12:02] [Client thread/FATAL]: Reported exception thrown!
+net.minecraft.util.ReportedException: Rendering screen
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1169) ~[EntityRenderer.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1114) ~[Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:376) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:117) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_65]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_65]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_65]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_65]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_65]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_65]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_65]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_65]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source) [start/:?]
+	at GradleStart.main(Unknown Source) [start/:?]
+Caused by: java.lang.IllegalArgumentException: bound must be positive
+	at java.util.Random.nextInt(Unknown Source) ~[?:1.8.0_65]
+	at net.minecraft.client.gui.achievement.GuiAchievements.drawAchievementScreen(GuiAchievements.java:338) ~[GuiAchievements.class:?]
+	at net.minecraft.client.gui.achievement.GuiAchievements.drawScreen(GuiAchievements.java:224) ~[GuiAchievements.class:?]
+	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:470) ~[ForgeHooksClient.class:?]
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1139) ~[EntityRenderer.class:?]
+	... 15 more

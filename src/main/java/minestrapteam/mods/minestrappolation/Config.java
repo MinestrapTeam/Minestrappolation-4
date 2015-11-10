@@ -68,6 +68,7 @@ public class Config
 	public static int		fungusDropAmount;
 	public static int		guanoDropAmount;
 	public static int		candyDropAmount;
+	public static int		nyehHehHehAmount;
 	
 	
 	// ********* Floats **********
@@ -85,6 +86,7 @@ public class Config
 	public static float		fungusDropChance;
 	public static float		guanoDropChance;
 	public static float		candyDropChance;
+	public static float		nyehHehHehChance;
 	
 	
 	// ********* Doubles **********
@@ -145,6 +147,8 @@ public class Config
 		guanoDropAmount = config.get("Drops", "GuanoDropQuantity", 3, "The maximum amount of Guano dropped when killing Bats.").getInt();
 		candyDropChance = config.get("Drops", "CandyDropChance", 30, "The percentage chance of finding Candy when killing various mobs during late October.").getInt();
 		candyDropAmount = config.get("Drops", "CandyDropQuantity", 2, "The maximum amount of Candy dropped when killing various mobs during late October.").getInt();
+		nyehHehHehChance = config.get("Drops", "NyehHehHehChance", 1, "NyehHehHEH!!!").getInt();
+		nyehHehHehAmount = config.get("Drops", "NyehHehHehAmount", 1, "-Papyrus").getInt();
 		
 		genCopper = config.get("Ores", "GenerateCopper", true, "Set to False to prevent Copper Ore from generating.").getBoolean();
 		genTin = config.get("Ores", "GenerateTin", true, "Set to False to prevent Tin Ore from generating.").getBoolean();

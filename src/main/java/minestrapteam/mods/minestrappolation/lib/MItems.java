@@ -72,6 +72,7 @@ public class MItems extends Item
 	public static Item							pbj_sandwich;
 	public static Item							salmon_burger;
 	public static Item							hamburger;
+	public static Item							dry_spaghetti;
 	public static Item							pie_crust;
 	public static Item							apple_pie;
 	
@@ -85,6 +86,12 @@ public class MItems extends Item
 	public static Item							bread_rice_bowl;
 	public static Item							stir_fry;
 	public static Item							bread_stir_fry;
+	public static Item							tomato_sauce;
+	public static Item							bread_tomato_sauce;
+	public static Item							tomato_soup;
+	public static Item							bread_tomato_soup;
+	public static Item							spaghetti;
+	public static Item							bread_spaghetti;
 	public static Item							ice_cream;
 	public static Item							bread_ice_cream;
 	public static Item							popcorn;
@@ -351,6 +358,7 @@ public class MItems extends Item
 		pbj_sandwich = new ItemMFood(14, 2.5F, 0).setUnlocalizedName("pbj_sandwich").setCreativeTab(Minestrappolation.tabMFood);
 		salmon_burger = new ItemFood(20, 2.2F, false).setPotionEffect(Potion.hunger.id, 15, 0, 0.8F).setUnlocalizedName("salmon_burger").setCreativeTab(Minestrappolation.tabMFood);
 		hamburger = new ItemFood(18, 2F, false).setUnlocalizedName("hamburger").setCreativeTab(Minestrappolation.tabMFood);
+		dry_spaghetti = new Item().setUnlocalizedName("dry_spaghetti").setCreativeTab(Minestrappolation.tabMFood);
 		pie_crust = new ItemFood(2, 0.2F, false).setUnlocalizedName("pie_crust").setCreativeTab(Minestrappolation.tabMFood);
 		apple_pie = new ItemFood(6, 0.7F, false).setUnlocalizedName("apple_pie").setCreativeTab(Minestrappolation.tabMFood);
 		
@@ -364,6 +372,12 @@ public class MItems extends Item
 		bread_rice_bowl = new ItemMFood(7, 0.8F, 0).setUnlocalizedName("bread_rice_bowl").setCreativeTab(Minestrappolation.tabMFood);
 		stir_fry = new ItemMSoup(8, 1F, Items.bowl, 6).setPotionEffect(Potion.moveSpeed.id, 40, 2, 1F).setUnlocalizedName("stir_fry").setCreativeTab(Minestrappolation.tabMFood);
 		bread_stir_fry = new ItemMFood(10, 1F, 6).setUnlocalizedName("bread_stir_fry").setCreativeTab(Minestrappolation.tabMFood);
+		tomato_sauce = new ItemMSoup(6, 0.4F, Items.bowl, 0).setUnlocalizedName("tomato_sauce").setCreativeTab(Minestrappolation.tabMFood);
+		bread_tomato_sauce = new ItemFood(8, 0.4F, false).setUnlocalizedName("bread_tomato_sauce").setCreativeTab(Minestrappolation.tabMFood);
+		tomato_soup = new ItemMSoup(8, 3.4F, Items.bowl, 0).setUnlocalizedName("tomato_soup").setCreativeTab(Minestrappolation.tabMFood);
+		bread_tomato_soup = new ItemFood(10, 3.4F, false).setUnlocalizedName("bread_tomato_soup").setCreativeTab(Minestrappolation.tabMFood);
+		spaghetti = new ItemMSoup(12, 1.5F, Items.bowl, 0).setUnlocalizedName("spaghetti").setCreativeTab(Minestrappolation.tabMFood);
+		bread_spaghetti = new ItemFood(14, 1.5F, false).setUnlocalizedName("bread_spaghetti").setCreativeTab(Minestrappolation.tabMFood);
 		salad = new ItemMSoup(8, 0.2F, Items.bowl, 0).setUnlocalizedName("salad").setCreativeTab(Minestrappolation.tabMFood);
 		bread_salad = new ItemFood(10, 0.2F, false).setUnlocalizedName("bread_salad").setCreativeTab(Minestrappolation.tabMFood);
 		health_salad = new ItemMSoup(5, 0.1F, Items.bowl, 0).setPotionEffect(Potion.heal.id, 1, 1, 1F).setUnlocalizedName("health_salad").setCreativeTab(Minestrappolation.tabMFood);
@@ -658,6 +672,7 @@ public class MItems extends Item
 		register(sugar_dough);
 		register(chocolate_dough);
 		register(corn_bread);
+		register(dry_spaghetti);
 		register(bun);
 		register(pbj_sandwich);
 		register(hamburger);
@@ -680,6 +695,12 @@ public class MItems extends Item
 		register(bread_popcorn);
 		register(fried_egg);
 		register(bread_fried_egg);
+		register(tomato_sauce);
+		register(bread_tomato_sauce);
+		register(tomato_soup);
+		register(bread_tomato_soup);
+		register(spaghetti);
+		register(bread_spaghetti);
 		register(salad);
 		register(bread_salad);
 		register(health_salad);

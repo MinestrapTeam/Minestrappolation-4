@@ -60,6 +60,11 @@ public class AlloyRecipes
 		this.addRecipe(new ItemStack(Items.potato, 1), new ItemStack(MItems.grease, 1), new ItemStack(MItems.fries, 1), 0.3F);
 		this.addRecipe(new ItemStack(Items.cooked_fish, 1, 0), new ItemStack(MItems.grease, 1), new ItemStack(MItems.fried_fish, 1), 0.3F);
 		this.addRecipe(new ItemStack(Items.cooked_fish, 1, 1), new ItemStack(MItems.grease, 1), new ItemStack(MItems.fried_salmon, 1), 0.3F);
+		this.addRecipe(new ItemStack(MItems.tomato_sauce, 1), new ItemStack(MItems.fat, 1), new ItemStack(MItems.tomato_soup, 1), 0.3F);
+		this.addRecipe(new ItemStack(MItems.bread_tomato_sauce, 1), new ItemStack(MItems.fat, 1), new ItemStack(MItems.bread_tomato_soup, 1), 0.3F);
+		this.addRecipe(new ItemStack(MItems.tomato_sauce, 1), new ItemStack(MItems.dry_spaghetti, 1), new ItemStack(MItems.spaghetti, 1), 0.3F);
+		this.addRecipe(new ItemStack(MItems.bread_tomato_sauce, 1), new ItemStack(MItems.dry_spaghetti, 1), new ItemStack(MItems.bread_spaghetti, 1), 0.3F);
+		this.addRecipe(new ItemStack(MItems.dough, 1), new ItemStack(MBlocks.steel_mesh, 0), new ItemStack(MItems.dry_spaghetti, 1), 0.2F);
 		
 		//Misc
 		this.addRecipe(new ItemStack(Blocks.sand, 1), new ItemStack(Blocks.sand, 1), new ItemStack(MBlocks.glass_refined, 2), 0.3F);

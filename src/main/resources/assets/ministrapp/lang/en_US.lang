@@ -872,6 +872,13 @@ item.salmon_burger.name=Salmon Burger
 
 item.tomato.name=Tomato
 item.tomato_seeds.name=Tomato Seeds
+item.tomato_sauce.name=Tomato Sauce
+item.bread_tomato_sauce.name=Tomato Sauce
+item.tomato_soup.name=Tomato Soup
+item.bread_tomato_soup.name=Tomato Soup
+item.dry_spaghetti.name=Dried Spaghetti
+item.spaghetti.name=Spaghetti
+item.bread_spaghetti.name=Spaghetti
 
 itemGroup.tabMBuilding=Minestrapp Building Blocks
 itemGroup.tabMDecor=Minestrapp Decoration Blocks
@@ -925,6 +932,8 @@ achievement.pink_sheep=What are the odds?
 achievement.pink_sheep.desc=Create a pink sheep gene block by random chance.
 achievement.reflux=Acid Reflux
 achievement.reflux.desc=Sample the glowshroom stew.
+achievement.bonetrousle=Bonetrousle
+achievement.bonetrousle.desc=NYEH HEH HEH!!!
 
 recipe.melting=Melting
 recipe.sawmill.shaped=Shaped Milling

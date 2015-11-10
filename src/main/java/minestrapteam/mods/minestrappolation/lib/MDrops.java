@@ -23,6 +23,8 @@ import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.entity.passive.EntitySquid;
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.passive.EntityWolf;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.DamageSource;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
@@ -37,6 +39,11 @@ public class MDrops
 		Random random = living.getRNG();
 		boolean onFire = living.isBurning();
 		int looting = event.lootingLevel + 1;
+		EntityPlayer player = null;
+		if (event.source.getSourceOfDamage() instanceof EntityPlayer)
+		{
+			player = ((EntityPlayer)event.source.getSourceOfDamage());
+		}
 		
 		Calendar calendar = Calendar.getInstance();
 
@@ -110,6 +117,7 @@ public class MDrops
 			{
 				dropHalloweenItems(living, random, onFire, looting);
 			}
+			dropSkeletonItems(living, random, onFire, looting, player);
 		}
 		if(living instanceof EntityWitch)
 		{
@@ -231,6 +239,15 @@ public class MDrops
 		if (random.nextFloat() / looting < Config.fleshDropChance)
 		{
 			living.dropItem(MItems.flesh, random.nextInt(Config.fleshDropAmount + looting));
+		}
+	}
+	private static void dropSkeletonItems(EntityLivingBase living, Random random, boolean onFire, int looting, EntityPlayer player)
+	{
+		if ((random.nextFloat() * 100) < Config.nyehHehHehChance)
+		{
+			living.dropItem(MItems.spaghetti, random.nextInt(Config.nyehHehHehAmount + 1));
+			if(player != null)
+				player.addStat(MAchievements.bonetrousle, 1);
 		}
 	}
 	private static void dropQuadripedItems(EntityLivingBase living, Random random, boolean onFire, int looting)

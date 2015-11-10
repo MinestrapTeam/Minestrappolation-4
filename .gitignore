@@ -22,6 +22,8 @@ Minestrappolation-4.iml
 build
 wrapper
 classes
+run
+Minestrapp.cfg
 
 # Windows image file caches
 Thumbs.db
