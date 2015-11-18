@@ -139,7 +139,7 @@ public class Config
 		fleshDropAmount = config.get("Drops", "FleshDropQuantity", 3, "The maximum amount of Flesh dropped when killing Villagers.").getInt();
 		tentacleDropChance = config.get("Drops", "SquidTentacleDropChance", 55, "The percentage chance of finding Squid Tentacles when killing Squids or Guardians.").getInt();
 		tentacleDropAmount = config.get("Drops", "SquidTentacleDropQuantity", 3, "The maximum amount of Squid Tentacles dropped when killing Squids or Guardians.").getInt();
-		doodadDropChance = config.get("Drops", "TechnologicalDoodadDropChance", 100, "The percentage chance of finding Technological Doodads when killing Iron Golems.").getInt();
+		doodadDropChance = config.get("Drops", "TechnologicalDoodadDropChance", 90, "The percentage chance of finding Technological Doodads when killing Iron Golems.").getInt();
 		doodadDropAmount = config.get("Drops", "TechnologicalDoodadDropQuantity", 1, "The maximum amount of Technological Doodads dropped when killing Iron Golems.").getInt();
 		fungusDropChance = config.get("Drops", "InfectiousFungusDropChance", 15, "The percentage chance of finding Infectious Fungus when killing Mooshrooms.").getInt();
 		fungusDropAmount = config.get("Drops", "InfectiousFungusDropQuantity", 1, "The maximum amount of Infectious Fungus dropped when killing Mooshrooms.").getInt();

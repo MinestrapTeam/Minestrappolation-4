@@ -146,53 +146,56 @@ public class MDrops
 	
 	private static void dropPigItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
-		if (random.nextFloat() / looting < Config.animalFeetDropChance)
+		if ((random.nextFloat() * 100) / looting < Config.animalFeetDropChance)
 		{
 			living.dropItem(MItems.pig_foot, random.nextInt(Config.animalFeetDropAmount + looting));
 		}
-		if (random.nextFloat() / looting < Config.fatDropChance)
+		if ((random.nextFloat() * 100) / looting < Config.fatDropChance)
 		{
-			living.dropItem(MItems.fat, random.nextInt(Config.fatDropAmount + looting));
+			if(onFire == false)
+				living.dropItem(MItems.fat, random.nextInt(Config.fatDropAmount + looting));
+			else
+				living.dropItem(MItems.tallow, random.nextInt(Config.fatDropAmount + looting));
 		}
 	}
 	private static void dropCowItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
-		if (random.nextFloat() / looting < Config.animalFeetDropChance)
+		if ((random.nextFloat() * 100) / looting < Config.animalFeetDropChance)
 		{
 			living.dropItem(MItems.cow_foot, random.nextInt(Config.animalFeetDropAmount + looting));
 		}
 	}
 	private static void dropMooshroomItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
-		if (random.nextFloat() / looting < Config.fungusDropChance)
+		if ((random.nextFloat() * 100) / looting < Config.fungusDropChance)
 		{
 			living.dropItem(MItems.infectious_fungus, random.nextInt(Config.fungusDropAmount + looting));
 		}
 	}
 	private static void dropSheepItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
-		if (random.nextFloat() / looting < Config.animalFeetDropChance)
+		if ((random.nextFloat() * 100) / looting < Config.animalFeetDropChance)
 		{
 			living.dropItem(MItems.sheep_foot, random.nextInt(Config.animalFeetDropAmount + looting));
 		}
 	}
 	private static void dropChickenItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
-		if (random.nextFloat() / looting < Config.animalFeetDropChance)
+		if ((random.nextFloat() * 100) / looting < Config.animalFeetDropChance)
 		{
 			living.dropItem(MItems.chicken_foot, random.nextInt(Config.animalFeetDropAmount + looting));
 		}
 	}
 	private static void dropWolfItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
-		if (random.nextFloat() / looting < Config.wolfHideDropChance)
+		if ((random.nextFloat() * 100) / looting < Config.wolfHideDropChance)
 		{
 			living.dropItem(MItems.wolf_hide, random.nextInt(Config.wolfHideDropAmount + looting));
 		}
 	}
 	private static void dropSquidItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
-		if (random.nextFloat() / looting < Config.tentacleDropChance)
+		if ((random.nextFloat() * 100) / looting < Config.tentacleDropChance)
 		{
 			if(onFire == false)
 				living.dropItem(MItems.squid_tentacle, random.nextInt(Config.tentacleDropAmount + looting));
@@ -202,32 +205,32 @@ public class MDrops
 	}
 	private static void dropElderGuardianItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
-		if (random.nextFloat() / looting < 70)
+		if ((random.nextFloat() * 100) / looting < 70)
 		{
 			living.dropItem(MItems.heart_piece, 1);
 		}
 	}
 	private static void dropBatItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
-		if (random.nextFloat() / looting < Config.sinewDropChance)
+		if ((random.nextFloat() * 100) / looting < Config.sinewDropChance)
 		{
 			living.dropItem(MItems.wing_sinew, random.nextInt(Config.sinewDropAmount + looting));
 		}
-		if (random.nextFloat() / looting < Config.guanoDropChance)
+		if ((random.nextFloat() * 100) / looting < Config.guanoDropChance)
 		{
 			living.dropItem(MItems.guano, random.nextInt(Config.guanoDropAmount + looting));
 		}
 	}
 	private static void dropIronGolemItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
-		if (random.nextFloat() / looting < Config.doodadDropChance)
+		if ((random.nextFloat() * 100) / looting < Config.doodadDropChance)
 		{
 			living.dropItem(MItems.technological_doodad, random.nextInt(Config.doodadDropAmount + looting));
 		}
 	}
 	private static void dropSlimeItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
-		if (random.nextFloat() / looting < Config.slimeCoreDropChance)
+		if ((random.nextFloat() * 100) / looting < Config.slimeCoreDropChance)
 		{
 			if(looting > 1)
 				looting = 1;
@@ -236,7 +239,7 @@ public class MDrops
 	}
 	private static void dropVillagerItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
-		if (random.nextFloat() / looting < Config.fleshDropChance)
+		if ((random.nextFloat() * 100) / looting < Config.fleshDropChance)
 		{
 			living.dropItem(MItems.flesh, random.nextInt(Config.fleshDropAmount + looting));
 		}
@@ -252,14 +255,14 @@ public class MDrops
 	}
 	private static void dropQuadripedItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
-		if (random.nextFloat() / looting < Config.animalBoneDropChance)
+		if ((random.nextFloat() * 100) / looting < Config.animalBoneDropChance)
 		{
 			living.dropItem(MItems.animal_bones, random.nextInt(Config.animalBoneDropAmount + looting));
 		}
 	}
 	private static void dropHalloweenItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
-		if (random.nextFloat() / looting < Config.candyDropChance)
+		if ((random.nextFloat() * 100) / looting < Config.candyDropChance)
 		{
 			int type = random.nextInt(3);
 			if(type == 0)

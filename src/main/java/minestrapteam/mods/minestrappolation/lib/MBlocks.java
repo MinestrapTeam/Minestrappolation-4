@@ -12,6 +12,7 @@ import minestrapteam.mods.minestrappolation.block.ore.BlockPlutoniumOre;
 import minestrapteam.mods.minestrappolation.block.ore.BlockSoulOre;
 import minestrapteam.mods.minestrappolation.block.ore.BlockUraniumOre;
 import minestrapteam.mods.minestrappolation.block.ore.MBlockOre;
+import minestrapteam.mods.minestrappolation.enumtypes.MCreepType;
 import minestrapteam.mods.minestrappolation.enumtypes.MRoadType;
 import minestrapteam.mods.minestrappolation.enumtypes.MStoneType;
 import minestrapteam.mods.minestrappolation.enumtypes.MWoodType;
@@ -213,6 +214,7 @@ public class MBlocks
 	public static Block glacieric_ice;
 	public static Block	godstone;
 	public static Block candle;
+	public static Block terracreep;
 	
 	//Gene Blocks
 	public static Block block_flesh;
@@ -609,6 +611,7 @@ public class MBlocks
 		cold_cobweb = new BlockColdCobweb().setLightOpacity(1).setHardness(5.0F).setUnlocalizedName("cold_cobweb");
 		glacieric_ice = new BlockGlaciericIce(Material.ice, MapColor.iceColor).setHardness(0.5F).setLightOpacity(3).setStepSound(Block.soundTypeGlass).setUnlocalizedName("glacieric_ice").setCreativeTab(Minestrappolation.tabMBuilding);
 		godstone = new BlockGodstone(Material.rock, MapColor.sandColor).setHardness(3F).setResistance(15F).setUnlocalizedName("godstone").setCreativeTab(Minestrappolation.tabMBuilding);
+		terracreep = new BlockTerraCreep().setHardness(3.0F).setResistance(20.0F).setStepSound(Block.SLIME_SOUND).setLightLevel(0.6F).setUnlocalizedName("terracreep");
 		
 		//Gene Blocks
 		block_flesh = new BlockFlesh(Material.cloth, MapColor.pinkColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_flesh");
@@ -978,6 +981,7 @@ public class MBlocks
 		register(blazium_block);
 		register(soul_gem_block);
 		register(godstone);
+		register(terracreep, ItemBlockTerraCreep.class);
 		
 		register(stone_boulder);
 		register(red_rock_boulder);
@@ -1450,6 +1454,13 @@ public class MBlocks
 		roads.setHarvestLevel("pickaxe", 0, roads.getStateFromMeta(MRoadType.GRAVEL.getMetadata()));
 		roads.setHarvestLevel("pickaxe", 1, roads.getStateFromMeta(MRoadType.NETHER.getMetadata()));
 		roads.setHarvestLevel("pickaxe", 3, roads.getStateFromMeta(MRoadType.SOUL.getMetadata()));
+		
+		// Terracreep
+		terracreep.setHarvestLevel("pickaxe", 2, terracreep.getStateFromMeta(MCreepType.DEEPSTONE.getMetadata()));
+		terracreep.setHarvestLevel("pickaxe", 2, terracreep.getStateFromMeta(MCreepType.DEEPREDROCK.getMetadata()));
+		terracreep.setHarvestLevel("pickaxe", 2, terracreep.getStateFromMeta(MCreepType.DEEPCOLDSTONE.getMetadata()));
+		terracreep.setHarvestLevel("pickaxe", 2, terracreep.getStateFromMeta(MCreepType.GLACIERSTONE.getMetadata()));
+		terracreep.setHarvestLevel("pickaxe", 2, terracreep.getStateFromMeta(MCreepType.POCEANSTONE.getMetadata()));
 	}
 	
 	public static void registerSlab(String name, String name2, BlockMSlab one, BlockMDoubleSlab two)

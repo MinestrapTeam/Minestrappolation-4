@@ -23,7 +23,6 @@ build
 wrapper
 classes
 run
-Minestrapp.cfg
 
 # Windows image file caches
 Thumbs.db
