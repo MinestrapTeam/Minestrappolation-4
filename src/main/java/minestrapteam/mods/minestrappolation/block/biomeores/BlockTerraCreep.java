@@ -43,44 +43,122 @@ public class BlockTerraCreep extends Block
 	
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
     {
-        int Chance = rand.nextInt(100);
-        if(Chance == 1)
+        int Chance = rand.nextInt(150);
+        if(Chance >= 50 && Chance <= 54)
         {
         	this.dropBlockAsItem(worldIn, pos, state, 0);
 			worldIn.setBlockState(pos, Blocks.air.getDefaultState());
         }
-        else if(Chance == 2 || Chance == 3)
+        else if(Chance == 1)
         {
         	this.tryReplaceBlock(worldIn, pos.up(), pos, state, rand);
         }
-        else if(Chance == 4 || Chance == 5)
+        else if(Chance == 2)
         {
         	this.tryReplaceBlock(worldIn, pos.down(), pos, state, rand);
         }
-        else if(Chance == 6 || Chance == 7)
+        else if(Chance == 3)
         {
         	this.tryReplaceBlock(worldIn, pos.north(), pos, state, rand);
         }
-        else if(Chance == 8 || Chance == 9)
+        else if(Chance == 4)
         {
         	this.tryReplaceBlock(worldIn, pos.east(), pos, state, rand);
         }
-        else if(Chance == 10 || Chance == 11)
+        else if(Chance == 5)
         {
         	this.tryReplaceBlock(worldIn, pos.south(), pos, state, rand);
         }
-        else if(Chance == 11 || Chance == 12)
+        else if(Chance == 6)
         {
         	this.tryReplaceBlock(worldIn, pos.west(), pos, state, rand);
         }
-        	
-        	
+        else if(Chance == 7)
+        {
+        	this.tryReplaceBlock(worldIn, pos.north().up(), pos, state, rand);
+        }
+        else if(Chance == 8)
+        {
+        	this.tryReplaceBlock(worldIn, pos.east().up(), pos, state, rand);
+        }
+        else if(Chance == 9)
+        {
+        	this.tryReplaceBlock(worldIn, pos.south().up(), pos, state, rand);
+        }
+        else if(Chance == 10)
+        {
+        	this.tryReplaceBlock(worldIn, pos.west().up(), pos, state, rand);
+        }
+        else if(Chance == 11)
+        {
+        	this.tryReplaceBlock(worldIn, pos.north().down(), pos, state, rand);
+        }
+        else if(Chance == 12)
+        {
+        	this.tryReplaceBlock(worldIn, pos.east().down(), pos, state, rand);
+        }
+        else if(Chance == 13)
+        {
+        	this.tryReplaceBlock(worldIn, pos.south().down(), pos, state, rand);
+        }
+        else if(Chance == 14)
+        {
+        	this.tryReplaceBlock(worldIn, pos.west().down(), pos, state, rand);
+        }
+        else if(Chance == 15)
+        {
+        	this.tryReplaceBlock(worldIn, pos.north().east(), pos, state, rand);
+        }
+        else if(Chance == 16)
+        {
+        	this.tryReplaceBlock(worldIn, pos.north().west(), pos, state, rand);
+        }
+        else if(Chance == 17)
+        {
+        	this.tryReplaceBlock(worldIn, pos.south().east(), pos, state, rand);
+        }
+        else if(Chance == 18)
+        {
+        	this.tryReplaceBlock(worldIn, pos.south().west(), pos, state, rand);
+        }
+        else if(Chance == 19)
+        {
+        	this.tryReplaceBlock(worldIn, pos.north().east().up(), pos, state, rand);
+        }
+        else if(Chance == 20)
+        {
+        	this.tryReplaceBlock(worldIn, pos.north().east().down(), pos, state, rand);
+        }
+        else if(Chance == 21)
+        {
+        	this.tryReplaceBlock(worldIn, pos.north().west().up(), pos, state, rand);
+        }
+        else if(Chance == 22)
+        {
+        	this.tryReplaceBlock(worldIn, pos.north().west().down(), pos, state, rand);
+        }
+        else if(Chance == 23)
+        {
+        	this.tryReplaceBlock(worldIn, pos.south().east().up(), pos, state, rand);
+        }
+        else if(Chance == 24)
+        {
+        	this.tryReplaceBlock(worldIn, pos.south().east().down(), pos, state, rand);
+        }
+        else if(Chance == 25)
+        {
+        	this.tryReplaceBlock(worldIn, pos.south().west().up(), pos, state, rand);
+        }
+        else if(Chance == 26)
+        {
+        	this.tryReplaceBlock(worldIn, pos.south().west().down(), pos, state, rand);
+        }
     }
 	
 	public void tryReplaceBlock(World worldIn, BlockPos pos, BlockPos originPos, IBlockState state, Random rand)
 	{
 		int meta = 0;
-		int splitChance = rand.nextInt(5);
+		int splitChance = rand.nextInt(3);
 		if(worldIn.getBlockState(pos) == Blocks.stone.getDefaultState())
 		{
 			worldIn.setBlockState(pos, this.getStateFromMeta(MCreepType.STONE.getMetadata()));
