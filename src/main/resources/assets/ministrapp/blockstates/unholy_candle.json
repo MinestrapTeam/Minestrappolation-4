@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": [
+			{ "model": "ministrapp:candle" },
+			{ "model": "ministrapp:candle", "y": 90 },
+			{ "model": "ministrapp:candle", "y": 180 },
+			{ "model": "ministrapp:candle", "y": 270 }
+		]
+    }
+}

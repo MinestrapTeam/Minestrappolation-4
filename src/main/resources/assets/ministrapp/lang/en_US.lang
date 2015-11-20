@@ -597,6 +597,18 @@ complex_carved_neutral_lit.name=Intricate Neutral Jack o'Lantern
 tile.pumpkin_smashed.name=Smashed Pumpkin
 tile.pumpkin_smashed_lit.name=Smashed Jack o'Lantern
 
+tile.unholy_candle.name=Unholy Lit Candle
+tile.compressed_dirt.name=Compressed Dirt
+tile.compressed_netherrack.name=Compressed Netherrack
+tile.compressed_endstone.name=Compressed End Stone
+tile.compressed_glowshrooms.name=Compressed Glowshrooms
+tile.dimensium_ore.name=Dimensium Ore
+tile.continurum_ore.name=Continurum Ore
+tile.hourglass.name=Empty Hourglass
+tile.sand_hourglass.name=Sand Hourglass
+tile.redstone_hourglass.name=Redstone Hourglass
+tile.continurum_hourglass.name=Continurum Hourglass
+
 item.dough.name=Dough
 item.bun.name=Bun
 item.pbj_sandwich.name=Peanut Butter and Jelly Sandwich

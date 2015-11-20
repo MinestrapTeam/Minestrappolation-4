@@ -24,11 +24,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class BlockCandle extends Block
 {
 	public boolean isLit;
+	public boolean isUnholy;
 	
-	public BlockCandle(Material materialIn, boolean lit)
+	public BlockCandle(Material materialIn, boolean lit, boolean unholy)
 	{
 		super(materialIn);
 		isLit = lit;
+		isUnholy = unholy;
 	}
 	
 	public AxisAlignedBB getCollisionBoundingBox(World worldIn, BlockPos pos, IBlockState state)
@@ -99,13 +101,26 @@ public class BlockCandle extends Block
     {
     	if(this.isLit == true)
     	{
-    		double d0 = (double)pos.getX() + 0.5D;
-    		double d1 = (double)pos.getY() + 0.5D;
-    		double d2 = (double)pos.getZ() + 0.5D;
-    		double d3 = 0.22D;
-    		double d4 = 0.27D;
+    		if(isUnholy == false)
+    		{
+    			double d0 = (double)pos.getX() + 0.5D;
+    			double d1 = (double)pos.getY() + 0.5D;
+    			double d2 = (double)pos.getZ() + 0.5D;
+    			double d3 = 0.22D;
+    			double d4 = 0.27D;
 
-    		worldIn.spawnParticle(EnumParticleTypes.FLAME, d0, d1, d2, 0.0D, 0.0D, 0.0D, new int[0]);
+    			worldIn.spawnParticle(EnumParticleTypes.FLAME, d0, d1, d2, 0.0D, 0.0D, 0.0D, new int[0]);
+    		}
+    		else
+    		{
+    			double d0 = (double)pos.getX() + 0.5D;
+    			double d1 = (double)pos.getY() + 0.5D;
+    			double d2 = (double)pos.getZ() + 0.5D;
+    			double d3 = 0.22D;
+    			double d4 = 0.27D;
+
+    			worldIn.spawnParticle(EnumParticleTypes.REDSTONE, d0, d1, d2, 1.0D, 0.0D, 1.0D, new int[0]);
+    		}
     	}
     }
     
