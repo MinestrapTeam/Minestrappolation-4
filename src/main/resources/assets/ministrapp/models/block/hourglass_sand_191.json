@@ -1,11 +1,11 @@
 {
 "__comment": "Designed by Delocuro with BDcraft Cubik PRO 0.95 Beta - http://bdcraft.net",
 "textures": {
-    "particle": "blocks/hourglass_top",
-    "texture": "blocks/bronze_block",
-    "hourglass_top": "blocks/hourglass_top",
-    "glass_bricks": "blocks/glass_refined",
-    "hourglass_sand": "blocks/hourglass_sand"
+    "particle": "ministrapp:blocks/hourglass_top",
+    "texture": "ministrapp:blocks/bronze_block",
+    "hourglass_top": "ministrapp:blocks/hourglass_top",
+    "glass_bricks": "ministrapp:blocks/glass_refined",
+    "hourglass_sand": "ministrapp:blocks/hourglass_sand"
 },
 "elements": [ 
 {

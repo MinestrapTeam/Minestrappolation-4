@@ -605,6 +605,7 @@ tile.compressed_glowshrooms.name=Compressed Glowshrooms
 tile.dimensium_ore.name=Dimensium Ore
 tile.continurum_ore.name=Continurum Ore
 tile.hourglass.name=Empty Hourglass
+tile.hourglass_sand.name=Sand-Filled Hourglass
 tile.sand_hourglass.name=Sand Hourglass
 tile.redstone_hourglass.name=Redstone Hourglass
 tile.continurum_hourglass.name=Continurum Hourglass

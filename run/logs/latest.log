@@ -1,73 +1,68 @@
-[21:50:07] [Client thread/INFO]: Setting user: Player709
-[21:50:10] [Client thread/INFO]: LWJGL Version: 2.9.1
-[21:50:14] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Minestrappolation Mod
-[21:50:15] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[21:50:16] [Thread-9/INFO]: Initializing LWJGL OpenAL
-[21:50:16] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[21:50:16] [Thread-9/INFO]: OpenAL initialized.
-[21:50:16] [Sound Library Loader/INFO]: Sound engine started
-[21:50:20] [Client thread/INFO]: Created: 16x16 textures-atlas
-[21:50:21] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Minestrappolation Mod
-[21:50:21] [Client thread/INFO]: SoundSystem shutting down...
-[21:50:22] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
-[21:50:22] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[21:50:22] [Thread-12/INFO]: Initializing LWJGL OpenAL
-[21:50:22] [Thread-12/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[21:50:22] [Thread-12/INFO]: OpenAL initialized.
-[21:50:22] [Sound Library Loader/INFO]: Sound engine started
-[21:50:27] [Client thread/INFO]: Created: 1024x512 textures-atlas
-[21:50:34] [Server thread/INFO]: Starting integrated minecraft server version 1.8
-[21:50:34] [Server thread/INFO]: Generating keypair
-[21:50:34] [Server thread/INFO]: Preparing start region for level 0
-[21:50:35] [Server thread/INFO]: Changing view distance to 12, from 10
-[21:50:36] [Server thread/INFO]: Player709[local:E:54cd5c18] logged in with entity id 116 at (-339.5423348609027, 66.0, -106.5328367504363)
-[21:50:36] [Server thread/INFO]: Player709 joined the game
-[21:50:37] [Server thread/INFO]: Player709 has just earned the achievement [Minestrappolation!]
-[21:50:37] [Client thread/INFO]: [CHAT] §2Minestrappolation Mod is the current version
-[21:50:37] [Client thread/INFO]: [CHAT] §9The Halloween Update is out, with lots of spoopy new content!
-[21:50:37] [Client thread/INFO]: [CHAT] Player709 has just earned the achievement [Minestrappolation!]
-[21:50:42] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4672ms behind, skipping 93 tick(s)
-[21:51:06] [Server thread/INFO]: Player709 has just earned the achievement [Taking Inventory]
-[21:51:06] [Client thread/INFO]: [CHAT] Player709 has just earned the achievement [Taking Inventory]
-[21:51:28] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 27412ms behind, skipping 548 tick(s)
-[21:51:32] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4238ms behind, skipping 84 tick(s)
-[21:52:02] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 17702ms behind, skipping 354 tick(s)
-[21:52:07] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4104ms behind, skipping 82 tick(s)
-[21:52:38] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 18309ms behind, skipping 366 tick(s)
-[21:52:42] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4038ms behind, skipping 80 tick(s)
-[21:53:10] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 16322ms behind, skipping 326 tick(s)
-[21:53:15] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4031ms behind, skipping 80 tick(s)
-[21:53:43] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 16436ms behind, skipping 328 tick(s)
-[21:53:47] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4204ms behind, skipping 84 tick(s)
-[21:54:16] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 16388ms behind, skipping 327 tick(s)
-[21:54:20] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4043ms behind, skipping 80 tick(s)
-[21:54:49] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 16430ms behind, skipping 328 tick(s)
-[21:54:53] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 3987ms behind, skipping 79 tick(s)
-[21:55:21] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 16505ms behind, skipping 330 tick(s)
-[21:55:25] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4069ms behind, skipping 81 tick(s)
-[21:55:54] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 16683ms behind, skipping 333 tick(s)
-[21:55:59] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4176ms behind, skipping 83 tick(s)
-[21:56:30] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 18674ms behind, skipping 373 tick(s)
-[21:56:35] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4263ms behind, skipping 85 tick(s)
-[21:57:05] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 18004ms behind, skipping 360 tick(s)
-[21:57:10] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4221ms behind, skipping 84 tick(s)
-[21:57:40] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 17627ms behind, skipping 352 tick(s)
-[21:57:44] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4182ms behind, skipping 83 tick(s)
-[21:58:13] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 17035ms behind, skipping 340 tick(s)
-[21:58:17] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4068ms behind, skipping 81 tick(s)
-[21:58:47] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 17224ms behind, skipping 344 tick(s)
-[21:58:51] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4105ms behind, skipping 82 tick(s)
-[21:59:20] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 16857ms behind, skipping 337 tick(s)
-[21:59:25] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4080ms behind, skipping 81 tick(s)
-[21:59:54] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 17388ms behind, skipping 347 tick(s)
-[21:59:59] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4230ms behind, skipping 84 tick(s)
-[22:00:29] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 17257ms behind, skipping 345 tick(s)
-[22:00:33] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4154ms behind, skipping 83 tick(s)
-[22:01:02] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 16827ms behind, skipping 336 tick(s)
-[22:01:06] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4113ms behind, skipping 82 tick(s)
-[22:01:37] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 18014ms behind, skipping 360 tick(s)
-[22:01:41] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4177ms behind, skipping 83 tick(s)
-[22:01:45] [Client thread/INFO]: Stopping!
-[22:01:45] [Client thread/INFO]: SoundSystem shutting down...
-[22:01:46] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
-[22:01:46] [Client Shutdown Thread/INFO]: Stopping server
+[18:58:07] [Client thread/INFO]: Setting user: Player177
+[18:58:10] [Client thread/INFO]: LWJGL Version: 2.9.1
+[18:58:15] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Minestrappolation Mod
+[18:58:16] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[18:58:16] [Thread-9/INFO]: Initializing LWJGL OpenAL
+[18:58:16] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[18:58:16] [Thread-9/INFO]: OpenAL initialized.
+[18:58:17] [Sound Library Loader/INFO]: Sound engine started
+[18:58:21] [Client thread/INFO]: Created: 16x16 textures-atlas
+[18:58:22] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Minestrappolation Mod
+[18:58:22] [Client thread/INFO]: SoundSystem shutting down...
+[18:58:23] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[18:58:23] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[18:58:23] [Thread-12/INFO]: Initializing LWJGL OpenAL
+[18:58:23] [Thread-12/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[18:58:23] [Thread-12/INFO]: OpenAL initialized.
+[18:58:23] [Sound Library Loader/INFO]: Sound engine started
+[18:58:28] [Client thread/INFO]: Created: 1024x512 textures-atlas
+[18:58:36] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[18:58:36] [Server thread/INFO]: Generating keypair
+[18:58:36] [Server thread/INFO]: Preparing start region for level 0
+[18:58:37] [Server thread/INFO]: Changing view distance to 12, from 10
+[18:58:38] [Server thread/INFO]: Player177[local:E:c16954c5] logged in with entity id 82 at (-330.47122766533306, 65.315954186048, -122.46201194197428)
+[18:58:38] [Server thread/INFO]: Player177 joined the game
+[18:58:38] [Server thread/INFO]: Player177 has just earned the achievement [Minestrappolation!]
+[18:58:39] [Client thread/INFO]: [CHAT] §2Minestrappolation Mod is the current version
+[18:58:39] [Client thread/INFO]: [CHAT] §9The Halloween Update is out, with lots of spoopy new content!
+[18:58:39] [Client thread/INFO]: [CHAT] Player177 has just earned the achievement [Minestrappolation!]
+[18:58:44] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4485ms behind, skipping 89 tick(s)
+[18:59:00] [Server thread/INFO]: Saving and pausing game...
+[18:59:00] [Server thread/INFO]: Saving chunks for level 'Copy of New World'/Overworld
+[18:59:00] [Server thread/INFO]: Saving chunks for level 'Copy of New World'/Nether
+[18:59:00] [Server thread/INFO]: Saving chunks for level 'Copy of New World'/The End
+[18:59:01] [Server thread/INFO]: Stopping server
+[18:59:01] [Server thread/INFO]: Saving players
+[18:59:01] [Server thread/INFO]: Saving worlds
+[18:59:01] [Server thread/INFO]: Saving chunks for level 'Copy of New World'/Overworld
+[18:59:01] [Server thread/INFO]: Saving chunks for level 'Copy of New World'/Nether
+[18:59:01] [Server thread/INFO]: Saving chunks for level 'Copy of New World'/The End
+[18:59:05] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[18:59:05] [Server thread/INFO]: Generating keypair
+[18:59:06] [Server thread/INFO]: Preparing start region for level 0
+[18:59:06] [Server thread/INFO]: Changing view distance to 12, from 10
+[18:59:06] [Server thread/INFO]: Player177[local:E:2d64b4bc] logged in with entity id 1503 at (-330.9108007157587, 64.0, -122.7942437194677)
+[18:59:06] [Server thread/INFO]: Player177 joined the game
+[18:59:11] [Server thread/ERROR]: Encountered an unexpected exception
+net.minecraft.util.ReportedException: Exception ticking world
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:770) ~[MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:669) ~[MinecraftServer.class:?]
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:171) ~[IntegratedServer.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:540) [MinecraftServer.class:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_65]
+Caused by: java.lang.NullPointerException
+	at net.minecraft.world.World.setBlockState(World.java:384) ~[World.class:?]
+	at net.minecraft.world.World.setBlockState(World.java:473) ~[World.class:?]
+	at minestrapteam.mods.minestrappolation.block.BlockHourglass.updateTick(BlockHourglass.java:117) ~[BlockHourglass.class:?]
+	at net.minecraft.block.Block.randomTick(Block.java:529) ~[Block.class:?]
+	at net.minecraft.world.WorldServer.updateBlocks(WorldServer.java:467) ~[WorldServer.class:?]
+	at net.minecraft.world.WorldServer.tick(WorldServer.java:228) ~[WorldServer.class:?]
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:764) ~[MinecraftServer.class:?]
+	... 4 more
+[18:59:11] [Server thread/ERROR]: This crash report has been saved to: C:\Users\Erik\Documents\My Games\Minecraft\Mods\Minestrappolation-4\run\.\crash-reports\crash-2015-11-22_18.59.11-server.txt
+[18:59:11] [Server thread/INFO]: Stopping server
+[18:59:11] [Server thread/INFO]: Saving players
+[18:59:11] [Server thread/INFO]: Saving worlds
+[18:59:11] [Server thread/INFO]: Saving chunks for level 'Copy of New World'/Overworld
+[18:59:12] [Server thread/INFO]: Saving chunks for level 'Copy of New World'/Nether
+[18:59:12] [Server thread/INFO]: Saving chunks for level 'Copy of New World'/The End
