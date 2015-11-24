@@ -508,3 +508,183 @@
 [18:58:04] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
 [18:58:04] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
 [18:58:04] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:39:13] [main/INFO] [GradleStart]: Extra: []
+[00:39:14] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[00:39:14] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[00:39:14] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[00:39:14] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[00:39:14] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Erik/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:39:14] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:39:14] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:39:14] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:39:14] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:40:22] [main/INFO] [GradleStart]: Extra: []
+[00:40:22] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[00:40:22] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[00:40:22] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[00:40:22] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[00:40:22] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Erik/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:40:22] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:40:22] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:40:22] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:40:22] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:40:56] [main/INFO] [GradleStart]: Extra: []
+[00:40:56] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[00:40:56] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[00:40:56] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[00:40:56] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[00:40:56] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Erik/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:40:56] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:40:56] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:40:56] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:40:56] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:43:55] [main/INFO] [GradleStart]: Extra: []
+[00:43:55] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[00:43:55] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[00:43:55] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[00:43:55] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[00:43:55] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Erik/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:43:55] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:43:55] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:43:55] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:43:55] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:45:57] [main/INFO] [GradleStart]: Extra: []
+[00:45:57] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[00:45:57] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[00:45:57] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[00:45:57] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[00:45:57] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Erik/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:45:57] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:45:57] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:45:57] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:45:57] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:52:06] [main/INFO] [GradleStart]: Extra: []
+[00:52:06] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[00:52:06] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[00:52:06] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[00:52:06] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[00:52:06] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Erik/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:52:06] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:52:06] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:52:06] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:52:06] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:55:06] [main/INFO] [GradleStart]: Extra: []
+[00:55:06] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[00:55:06] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[00:55:06] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[00:55:06] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[00:55:06] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Erik/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:55:06] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:55:06] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:55:06] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:55:06] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:58:54] [main/INFO] [GradleStart]: Extra: []
+[00:58:54] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[00:58:54] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[00:58:54] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[00:58:54] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[00:58:54] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Erik/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[00:58:54] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:58:54] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[00:58:54] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[00:58:54] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[01:03:11] [main/INFO] [GradleStart]: Extra: []
+[01:03:11] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[01:03:11] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[01:03:11] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[01:03:11] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[01:03:11] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Erik/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[01:03:12] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[01:03:12] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[01:03:12] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[01:03:12] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[15:58:16] [main/INFO] [GradleStart]: Extra: []
+[15:58:16] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[15:58:16] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[15:58:16] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[15:58:16] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[15:58:16] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Erik/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[15:58:16] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[15:58:16] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[15:58:16] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[15:58:16] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[16:02:11] [main/INFO] [GradleStart]: Extra: []
+[16:02:11] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[16:02:11] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[16:02:11] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[16:02:11] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[16:02:11] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Erik/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[16:02:11] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[16:02:11] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[16:02:11] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[16:02:11] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[16:04:36] [main/INFO] [GradleStart]: Extra: []
+[16:04:37] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[16:04:37] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[16:04:37] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[16:04:37] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[16:04:37] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Erik/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[16:04:37] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[16:04:37] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[16:04:37] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[16:04:37] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[16:07:37] [main/INFO] [GradleStart]: Extra: []
+[16:07:37] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[16:07:37] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[16:07:37] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[16:07:37] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[16:07:37] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Erik/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[16:07:37] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[16:07:37] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[16:07:37] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[16:07:37] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[16:09:50] [main/INFO] [GradleStart]: Extra: []
+[16:09:50] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[16:09:50] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[16:09:50] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[16:09:50] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[16:09:50] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Erik/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[16:09:50] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[16:09:50] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[16:09:50] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[16:09:50] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[16:11:50] [main/INFO] [GradleStart]: Extra: []
+[16:11:50] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[16:11:50] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[16:11:50] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[16:11:50] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[16:11:50] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Erik/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[16:11:50] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[16:11:50] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[16:11:50] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[16:11:50] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[16:13:15] [main/INFO] [GradleStart]: Extra: []
+[16:13:15] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[16:13:15] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[16:13:15] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[16:13:15] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[16:13:15] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Erik/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[16:13:15] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[16:13:15] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[16:13:15] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[16:13:15] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[16:19:14] [main/INFO] [GradleStart]: Extra: []
+[16:19:14] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[16:19:14] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[16:19:14] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[16:19:14] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[16:19:14] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Erik/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[16:19:14] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[16:19:14] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[16:19:14] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[16:19:14] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[16:21:54] [main/INFO] [GradleStart]: Extra: []
+[16:21:54] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[16:21:54] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[16:21:54] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[16:21:54] [main/INFO] [GradleStart]: Found and added coremod: codechicken.lib.asm.CCLCorePlugin
+[16:21:54] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Erik/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[16:21:54] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[16:21:54] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[16:21:54] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[16:21:54] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker

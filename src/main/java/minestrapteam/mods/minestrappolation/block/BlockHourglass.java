@@ -11,9 +11,11 @@ import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumWorldBlockLayer;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -111,20 +113,41 @@ public class BlockHourglass extends Block
     
     public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
     {
-        if(this.isFilled != false && fillLevel < 217) 
+        if(((BlockHourglass)worldIn.getBlockState(pos).getBlock()).isFilled != false && ((BlockHourglass)worldIn.getBlockState(pos).getBlock()).fillLevel < 217) 
         {
-        	fillLevel ++;
-        	worldIn.setBlockState(pos, state.withProperty(FILL_LEVEL, fillLevel));
+        	((BlockHourglass)worldIn.getBlockState(pos).getBlock()).fillLevel++;
+        	worldIn.setBlockState(pos, state.withProperty(FILL_LEVEL, ((BlockHourglass)worldIn.getBlockState(pos).getBlock()).fillLevel));
         }
     }
     
     public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos)
     {
-        return state.withProperty(FILL_LEVEL, fillLevel);
+        return state.withProperty(FILL_LEVEL, ((BlockHourglass)worldIn.getBlockState(pos).getBlock()).fillLevel);
     }
 
     protected BlockState createBlockState()
     {
         return new BlockState(this, new IProperty[] {FILL_LEVEL});
+    }
+    
+    @Override
+	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ)
+	{
+    	if(worldIn.isRemote)
+		{
+			return true;
+		}
+    	if(this.isFilled != false)
+    	{
+    		worldIn.setBlockState(pos, state.withProperty(FILL_LEVEL, 218 - ((Integer)state.getValue(FILL_LEVEL)).intValue()));
+    		return true;
+    	}
+    	return false;
+	}
+    
+    @SideOnly(Side.CLIENT)
+    public EnumWorldBlockLayer getBlockLayer()
+    {
+    	return EnumWorldBlockLayer.CUTOUT;
     }
 }
