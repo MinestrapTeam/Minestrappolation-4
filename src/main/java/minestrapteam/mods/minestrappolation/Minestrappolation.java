@@ -22,6 +22,7 @@ import minestrapteam.mods.minestrappolation.tileentity.TileEntityAlloy;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntityBarrel;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntityCrate;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntityCrusher;
+import minestrapteam.mods.minestrappolation.tileentity.TileEntityHourglass;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntityMelter;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntitySawMill;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntitySplitter;
@@ -118,6 +119,7 @@ public class Minestrappolation
 		GameRegistry.registerTileEntity(TileEntitySawMill.class, "tile_entity_sawmill");
 		GameRegistry.registerTileEntity(TileEntityCrusher.class, "tile_entity_crusher");
 		GameRegistry.registerTileEntity(TileEntitySplitter.class, "tile_entity_splitter");
+		GameRegistry.registerTileEntity(TileEntityHourglass.class, "tile_entity_hourglass");
 		
 		GameRegistry.registerFuelHandler(new MFuelHandler());
 		
