@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "ministrapp:items/lit_candle"
+        "layer0": "ministrapp:items/unholy_candle"
     },
     "display": {
         "thirdperson": {
