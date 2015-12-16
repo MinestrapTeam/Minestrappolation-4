@@ -22,6 +22,7 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -197,10 +198,12 @@ public class MEventHandler
 				}
 				
 			}
+			
 			if(player.inventory.hasItem(MItems.diamond_dust))
 			{
 				player.addStat(MAchievements.diamond_dust, 1);
 			}
+			
 		}
 		else
 		{
