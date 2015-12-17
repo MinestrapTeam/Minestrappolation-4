@@ -1,7 +1,10 @@
 package minestrapteam.mods.minestrappolation;
 
 import java.io.File;
+import java.util.HashMap;
 
+import minestrapteam.mods.minestrappolation.lib.MBlocks;
+import net.minecraft.block.Block;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
@@ -9,13 +12,15 @@ public class Config
 {
 	
 	// ********** Booleans **********
+	public static HashMap<Block, Boolean> blocks = new HashMap<Block, Boolean>();
+	
 	public static Boolean	radiationEffects;
 	public static Boolean	blaziumFireEffect;
 	public static Boolean   frostSpeedEffect;
 	
-	public static Boolean checkForUpdates;
+	public static Boolean 	checkForUpdates;
 	
-	public static Boolean removeRecipes;
+	public static Boolean 	removeRecipes;
 	
 	//Ores
 	public static Boolean   genCopper;
@@ -93,9 +98,9 @@ public class Config
 	public static double    healthIncreaseMax;
 	public static double    healthStarting;
 	
-	public static void configInit(FMLPreInitializationEvent event)
+	public static void configMain(FMLPreInitializationEvent event)
 	{
-		Configuration config = new Configuration(new File("config/Minestrapp.cfg"));
+		Configuration config = new Configuration(new File("config/M4/Main.cfg"));
 		config.load();
 		radiationEffects = config.get("Mechanics", "RadiationEffects", true, "Set to False to prevent Uranium and Plutonium Ore from giving you Poison/Wither effects while mining.").getBoolean();
 		blaziumFireEffect = config.get("Mechanics", "BlaziumFireEffect", true, "Set to False to prevent Blocks of Blazium from igniting nearby flammable blocks.").getBoolean();
@@ -168,6 +173,5 @@ public class Config
 		genRedwood = config.get("Biomes", "GenerateRedwood", true, "Set to False to prevent Redwood biomes from generating.").getBoolean();
 		genFrost = config.get("Biomes", "GenerateTheFrost", true, "Set to False to prevent Frost biomes from generating.").getBoolean();
 		config.save();
-	}
-	
+	}	
 }

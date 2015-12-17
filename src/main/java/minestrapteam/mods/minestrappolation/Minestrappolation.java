@@ -14,6 +14,7 @@ import minestrapteam.mods.minestrappolation.lib.MDictionary;
 import minestrapteam.mods.minestrappolation.lib.MDrops;
 import minestrapteam.mods.minestrappolation.lib.MFluid;
 import minestrapteam.mods.minestrappolation.lib.MItems;
+import minestrapteam.mods.minestrappolation.lib.MLoot;
 import minestrapteam.mods.minestrappolation.lib.MRecipes;
 import minestrapteam.mods.minestrappolation.lib.MReference;
 import minestrapteam.mods.minestrappolation.network.CommonProxy;
@@ -68,11 +69,12 @@ public class Minestrappolation
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{	
-		Config.configInit(event);
+		Config.configMain(event);
+		
 		MFluid.init();
 		MItems.init();
 		MBlocks.init();
-		MItems.addItemsToChests();
+		MLoot.addItemsToChests();
 		
 		MItems.register();
 		MRecipes.register();
