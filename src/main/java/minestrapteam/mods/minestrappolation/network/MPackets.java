@@ -12,6 +12,6 @@ public class MPackets
 {
 	public static void registerPackets(SimpleNetworkWrapper network)
 	{
-	    network.registerMessage(OpenGuiPacket.Handler.class, OpenGuiPacket.class, 0, Side.SERVER);
+
 	}
 }

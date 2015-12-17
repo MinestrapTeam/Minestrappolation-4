@@ -40,7 +40,8 @@ public class ItemMSword extends ItemSword
 		{
 			target.setFire(5);
 		}
-		else if(this.freezes)
+		
+		if(this.freezes)
 		{
 			target.addPotionEffect(new PotionEffect(Potion.moveSlowdown.id, 4 * 20, 10));
 		}

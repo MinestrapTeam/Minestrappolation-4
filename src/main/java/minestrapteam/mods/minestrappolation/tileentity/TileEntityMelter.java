@@ -127,9 +127,17 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 		
 		if (burning)
 		{
+			
 			if (this.hasPower)
 			{
-				this.burnTime -= 16;
+				if(this.burnTime - 16 < 0)
+				{
+					this.burnTime = 0;
+				}
+				else
+				{
+					this.burnTime -= 16;
+				}
 			}
 			else
 			{

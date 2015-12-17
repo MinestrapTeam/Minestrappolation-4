@@ -25,6 +25,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
@@ -142,6 +143,22 @@ public class MEventHandler
 			player.addStat(MAchievements.bedrock, 1);
 		}
 		
+	}
+	
+	@SubscribeEvent
+	public void onBlockHarvest(BlockEvent.HarvestDropsEvent event)
+	{
+		EntityPlayer player = event.harvester;
+		
+		if(player.getHeldItem().getItem() != null && player.getHeldItem().getItem() == MItems.fire_pickaxe)
+		{
+			if(FurnaceRecipes.instance().getSmeltingResult(new ItemStack(event.state.getBlock())) != null)
+			{
+				ItemStack stack = FurnaceRecipes.instance().getSmeltingResult(new ItemStack(event.state.getBlock()));
+				event.drops.clear();
+				event.drops.add(stack.copy());
+			}
+		}
 	}
 	
 	@SubscribeEvent

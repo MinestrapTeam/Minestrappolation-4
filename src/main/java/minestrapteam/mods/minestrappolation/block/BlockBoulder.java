@@ -29,10 +29,6 @@ public class BlockBoulder extends BlockFalling
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
 	{
 		ItemStack stack;
-		if (fortune > 3)
-		{
-			fortune = 3;
-		}
 		if(this == MBlocks.stone_boulder)
 		{
 			stack = (ItemStack) Chance.getRandomFromTable("boulder_stone");
