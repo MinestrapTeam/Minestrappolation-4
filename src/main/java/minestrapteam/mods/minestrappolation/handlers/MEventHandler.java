@@ -150,7 +150,7 @@ public class MEventHandler
 	{
 		EntityPlayer player = event.harvester;
 		
-		if(player.getHeldItem().getItem() != null && player.getHeldItem().getItem() == MItems.fire_pickaxe)
+		if(player != null && player.getHeldItem().getItem() != null && player.getHeldItem().getItem() == MItems.fire_pickaxe)
 		{
 			if(FurnaceRecipes.instance().getSmeltingResult(new ItemStack(event.state.getBlock())) != null)
 			{
