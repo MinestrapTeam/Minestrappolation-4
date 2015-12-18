@@ -215,7 +215,13 @@ public class MBlocks
 	public static Block glacieric_ice;
 	public static Block	godstone;
 	public static Block candle;
+	public static Block hourglass_empty;
 	public static Block hourglass_sand;
+	public static Block hourglass_red_sand;
+	public static Block hourglass_cold_sand;
+	public static Block hourglass_cold_red_sand;
+	public static Block hourglass_redstone;
+	public static Block hourglass_continurum;
 	public static Block terracreep;
 	
 	//Gene Blocks
@@ -601,7 +607,13 @@ public class MBlocks
 		candle = new BlockCandle(Material.coral, false, false).setHardness(0.2F).setStepSound(Block.soundTypeStone).setUnlocalizedName("candle").setCreativeTab(Minestrappolation.tabMDecor);
 		lit_candle = new BlockCandle(Material.coral, true, false).setHardness(0.2F).setStepSound(Block.soundTypeStone).setLightLevel(0.7F).setUnlocalizedName("lit_candle");
 		unholy_candle = new BlockCandle(Material.coral, true, true).setHardness(0.2F).setStepSound(Block.soundTypeStone).setLightLevel(0.5F).setUnlocalizedName("unholy_candle");
-		hourglass_sand = new BlockHourglass(Material.wood, MapColor.woodColor, false, false).setHardness(0.2F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("hourglass_sand");
+		hourglass_empty = new BlockHourglass(Material.wood, MapColor.woodColor, false, false, false, 0).setHardness(0.2F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("hourglass_empty");
+		hourglass_sand = new BlockHourglass(Material.wood, MapColor.woodColor, true, false, false, 10).setHardness(0.2F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("hourglass_sand");
+		hourglass_red_sand = new BlockHourglass(Material.wood, MapColor.woodColor, true, false, false, 5).setHardness(0.2F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("hourglass_red_sand");
+		hourglass_cold_sand = new BlockHourglass(Material.wood, MapColor.woodColor, true, false, false, 30).setHardness(0.2F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("hourglass_cold_sand");
+		hourglass_cold_red_sand = new BlockHourglass(Material.wood, MapColor.woodColor, true, false, false, 20).setHardness(0.2F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("hourglass_cold_red_sand");
+		hourglass_redstone = new BlockHourglass(Material.wood, MapColor.woodColor, true, true, false, 10).setHardness(0.2F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("hourglass_redstone");
+		hourglass_continurum = new BlockHourglass(Material.wood, MapColor.woodColor, true, false, true, 1).setHardness(0.2F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("hourglass_continurum");
 		stone_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
 		red_rock_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("red_rock_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
 		coldstone_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("coldstone_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
@@ -1066,7 +1078,13 @@ public class MBlocks
 		register(candle);
 		register(lit_candle);
 		register(unholy_candle);
+		register(hourglass_empty);
 		register(hourglass_sand);
+		register(hourglass_red_sand);
+		register(hourglass_cold_sand);
+		register(hourglass_cold_red_sand);
+		register(hourglass_redstone);
+		register(hourglass_continurum);
 		register(pumpkin_carved_0, ItemBlockCarvedPumpkin.class);
 		register(pumpkin_carved_1, ItemBlockCarvedPumpkin.class);
 		register(pumpkin_carved_2, ItemBlockCarvedPumpkin.class);

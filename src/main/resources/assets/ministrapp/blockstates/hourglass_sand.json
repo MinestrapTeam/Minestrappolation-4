@@ -47,6 +47,9 @@
       },
 	  "level=15":{
          "model":"ministrapp:hourglass_sand_216"
+      },
+	  "level=16":{
+         "model":"ministrapp:hourglass_sand_216"
       }
    }
 }

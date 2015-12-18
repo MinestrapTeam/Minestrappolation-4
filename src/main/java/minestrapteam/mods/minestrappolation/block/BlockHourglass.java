@@ -26,19 +26,23 @@ public class BlockHourglass extends MBlock
 	public boolean isFilled 	 =    false;
 	public boolean emitsPower;
 	public boolean infiniteCycle = 	  false;
+	public int tickRate			 =	  1;
 	
-	public BlockHourglass(Material materialIn, MapColor mapColorIn, boolean power, boolean cycle)
+	public BlockHourglass(Material materialIn, MapColor mapColorIn, boolean filled, boolean power, boolean cycle, int tickRate)
 	{
 		super(materialIn, mapColorIn);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FILL_LEVEL, 0));
+		this.isFilled = filled;
 		this.infiniteCycle = cycle;
 		this.emitsPower = power;
+		this.tickRate = tickRate;
 	}
 	
 	@Override
 	public void onBlockAdded(World world, BlockPos pos, IBlockState state)
 	{
-		this.updateTick(world, pos, state, world.rand);
+		if(this.isFilled == true)
+			this.updateTick(world, pos, state, world.rand);
 	}
 	
 	
@@ -136,7 +140,7 @@ public class BlockHourglass extends MBlock
     @Override
     public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
     {
-    	worldIn.scheduleUpdate(pos, this, 20);
+    	worldIn.scheduleUpdate(pos, this, 20 * tickRate);
         
     	int fillChance = rand.nextInt(1);
         if(fillChance == 0)

@@ -47,6 +47,9 @@
       },
 	  "level=15":{
          "model":"ministrapp:hourglass_empty"
+      },
+	  "level=16":{
+         "model":"ministrapp:hourglass_empty"
       }
    }
 }
