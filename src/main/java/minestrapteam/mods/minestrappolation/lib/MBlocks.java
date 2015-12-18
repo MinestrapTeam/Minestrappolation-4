@@ -601,7 +601,7 @@ public class MBlocks
 		candle = new BlockCandle(Material.coral, false, false).setHardness(0.2F).setStepSound(Block.soundTypeStone).setUnlocalizedName("candle").setCreativeTab(Minestrappolation.tabMDecor);
 		lit_candle = new BlockCandle(Material.coral, true, false).setHardness(0.2F).setStepSound(Block.soundTypeStone).setLightLevel(0.7F).setUnlocalizedName("lit_candle");
 		unholy_candle = new BlockCandle(Material.coral, true, true).setHardness(0.2F).setStepSound(Block.soundTypeStone).setLightLevel(0.5F).setUnlocalizedName("unholy_candle");
-		hourglass_sand = new BlockHourglass(Material.wood, MapColor.woodColor, true, false, false).setHardness(0.2F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("hourglass_sand");
+		hourglass_sand = new BlockHourglass(Material.wood, MapColor.woodColor, false).setHardness(0.2F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("hourglass_sand");
 		stone_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
 		red_rock_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("red_rock_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
 		coldstone_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("coldstone_boulder").setCreativeTab(Minestrappolation.tabMBuilding);

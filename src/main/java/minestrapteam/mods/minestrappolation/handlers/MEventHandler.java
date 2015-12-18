@@ -150,13 +150,16 @@ public class MEventHandler
 	{
 		EntityPlayer player = event.harvester;
 		
-		if(player != null && player.getHeldItem().getItem() != null && player.getHeldItem().getItem() == MItems.fire_pickaxe)
+		if(player != null)
 		{
-			if(FurnaceRecipes.instance().getSmeltingResult(new ItemStack(event.state.getBlock())) != null)
+			if(player.getHeldItem() != null && player.getHeldItem().getItem() == MItems.fire_pickaxe)
 			{
-				ItemStack stack = FurnaceRecipes.instance().getSmeltingResult(new ItemStack(event.state.getBlock()));
-				event.drops.clear();
-				event.drops.add(stack.copy());
+				if(FurnaceRecipes.instance().getSmeltingResult(new ItemStack(event.state.getBlock())) != null)
+				{
+					ItemStack stack = FurnaceRecipes.instance().getSmeltingResult(new ItemStack(event.state.getBlock()));
+					event.drops.clear();
+					event.drops.add(stack.copy());
+				}
 			}
 		}
 	}

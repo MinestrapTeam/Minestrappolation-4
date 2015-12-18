@@ -3,14 +3,7 @@ package minestrapteam.mods.minestrappolation.block;
 import java.util.Random;
 
 import minestrapteam.mods.minestrappolation.Config;
-import minestrapteam.mods.minestrappolation.enumtypes.MWoodType;
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
-import minestrapteam.mods.minestrappolation.tileentity.TileEntityHourglass;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockContainer;
-import net.minecraft.block.BlockFlower;
-import net.minecraft.block.BlockPlanks;
-import net.minecraft.block.BlockTallGrass;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -18,11 +11,6 @@ import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityFlowerPot;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
@@ -32,33 +20,33 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockHourglass extends BlockContainer
+public class BlockHourglass extends MBlock
 {
-	public static final PropertyInteger FILL_LEVEL = PropertyInteger.create("level", 0, 217);
-	public boolean isFilled;
+	public static final PropertyInteger FILL_LEVEL = PropertyInteger.create("level", 0, 16);
+	public boolean isFilled 	 =    false;
 	public boolean emitsPower;
-	public boolean infiniteCycle;
-	public MapColor mapColor;
+	public boolean infiniteCycle = 	  false;
 	
-	public BlockHourglass(Material materialIn, MapColor mapColorIn, Boolean isFilled, Boolean emitsPower, Boolean infiniteCycle)
+	public BlockHourglass(Material materialIn, MapColor mapColorIn, boolean power)
 	{
-		super(materialIn);
+		super(materialIn, mapColorIn);
 		if(isFilled == false)
+		{
 			this.setDefaultState(this.blockState.getBaseState().withProperty(FILL_LEVEL, 0));
+		}
 		else
+		{
 			this.setDefaultState(this.blockState.getBaseState().withProperty(FILL_LEVEL, 1));
-		this.isFilled = isFilled;
-		this.emitsPower = emitsPower;
-		this.infiniteCycle = infiniteCycle;
-		this.mapColor = mapColorIn;
-		this.setTickRandomly(true);
+		}
+		this.emitsPower = power;
 	}
 	
 	@Override
-	public MapColor getMapColor(IBlockState state)
+	public void onBlockAdded(World world, BlockPos pos, IBlockState state)
 	{
-		return this.mapColor;
+		this.updateTick(world, pos, state, world.rand);
 	}
+	
 	
 	public AxisAlignedBB getCollisionBoundingBox(World worldIn, BlockPos pos, IBlockState state)
     {
@@ -104,25 +92,9 @@ public class BlockHourglass extends BlockContainer
         return worldIn.isSideSolid(pos.offset(EnumFacing.DOWN), EnumFacing.UP, true);
     }
     
-    public void onNeighborBlockChange(World worldIn, BlockPos pos, IBlockState state, Block neighborBlock)
-    {
-    	if (!this.canBlockStay(worldIn, pos, EnumFacing.DOWN))
-        {
-            this.dropBlockAsItem(worldIn, pos, state, 0);
-            worldIn.setBlockToAir(pos);
-        }
-
-        super.onNeighborBlockChange(worldIn, pos, state, neighborBlock);
-    }
-    
     protected boolean canBlockStay(World worldIn, BlockPos pos, EnumFacing facing)
     {
         return worldIn.isSideSolid(pos.offset(facing), facing.getOpposite(), true) || worldIn.getBlockState(pos.offset(EnumFacing.UP)) == MBlocks.rope.getDefaultState();
-    }
-    
-    public int getMetaFromState(IBlockState state)
-    {
-        return 0;
     }
     
     public void breakBlock(World worldIn, BlockPos pos, IBlockState state)
@@ -133,33 +105,16 @@ public class BlockHourglass extends BlockContainer
     public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player)
     {
         super.onBlockHarvested(worldIn, pos, state, player);
-    }
+    }    
     
-    public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
+    public IBlockState getStateFromMeta(int meta)
     {
-        if(((BlockHourglass)worldIn.getBlockState(pos).getBlock()).isFilled != false && ((Integer)state.getValue(FILL_LEVEL)).intValue() < 217) 
-        {
-        	TileEntityHourglass tileentityhourglass = this.getTileEntity(worldIn, pos);
-        	if (tileentityhourglass != null)
-            {
-        		tileentityhourglass.setHourglassData(((Integer)state.getValue(FILL_LEVEL)) + 1);
-                tileentityhourglass.markDirty();
-                worldIn.markBlockForUpdate(pos);
-            }
-        }
+        return this.getDefaultState().withProperty(FILL_LEVEL, Integer.valueOf(meta));
     }
-    
-    public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos)
-    {
-        int level = 0;
-        TileEntity tileentity = worldIn.getTileEntity(pos);
 
-        if (tileentity instanceof TileEntityHourglass)
-        {
-            TileEntityHourglass tileentityhourglass = (TileEntityHourglass)tileentity;
-            level = tileentityhourglass.getHourglassData();
-        }
-        return state.withProperty(FILL_LEVEL, level);
+    public int getMetaFromState(IBlockState state)
+    {
+        return ((Integer)state.getValue(FILL_LEVEL)).intValue();
     }
 
     protected BlockState createBlockState()
@@ -167,38 +122,55 @@ public class BlockHourglass extends BlockContainer
         return new BlockState(this, new IProperty[] {FILL_LEVEL});
     }
     
-    /*@Override
+    @Override
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ)
 	{
-    	if(worldIn.isRemote)
+    	System.out.println(state.getValue(FILL_LEVEL));
+    	if(!worldIn.isRemote)
 		{
+    		if(this.isFilled == true)
+        	{
+        		worldIn.setBlockState(pos, state.withProperty(FILL_LEVEL, 15 - ((Integer)state.getValue(FILL_LEVEL)).intValue()), 2);
+        	}
 			return true;
 		}
-    	if(this.isFilled != false)
-    	{
-    		worldIn.setBlockState(pos, state.withProperty(FILL_LEVEL, 218 - ((Integer)state.getValue(FILL_LEVEL)).intValue()));
-    		return true;
-    	}
     	return false;
-	}*/
+	}
+    
+    @Override
+    public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
+    {
+    	worldIn.scheduleUpdate(pos, this, 20);
+        
+    	int fillChance = rand.nextInt(1);
+        if(fillChance == 0)
+        {
+        	int level = ((Integer)state.getValue(FILL_LEVEL)).intValue();
+        	isFilled = true;
+        	if(level < 15)
+        	{
+        		worldIn.setBlockState(pos, state.withProperty(FILL_LEVEL, Integer.valueOf(level + 1)), 2);
+        	}
+        }
+    }
+    
+    @Override
+    public int isProvidingWeakPower(IBlockAccess worldIn, BlockPos pos, IBlockState state, EnumFacing side)
+    {
+    	if(this.emitsPower == true)
+    	{
+    		return ((Integer)state.getValue(FILL_LEVEL)).intValue();
+    	}
+    	else
+    	{
+    		return 0;
+    	}
+       
+    }
     
     @SideOnly(Side.CLIENT)
     public EnumWorldBlockLayer getBlockLayer()
     {
     	return EnumWorldBlockLayer.CUTOUT;
-    }
-
-	private TileEntityHourglass getTileEntity(World worldIn, BlockPos pos)
-    {
-        TileEntity tileentity = worldIn.getTileEntity(pos);
-        return tileentity instanceof TileEntityHourglass ? (TileEntityHourglass)tileentity : null;
-    }
-	
-	public TileEntity createNewTileEntity(World worldIn, int meta)
-    {
-		if(this.isFilled == false)
-			return new TileEntityHourglass(0);
-		else
-			return new TileEntityHourglass(1);
     }
 }
