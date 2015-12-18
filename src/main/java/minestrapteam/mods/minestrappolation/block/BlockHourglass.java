@@ -125,6 +125,7 @@ public class BlockHourglass extends MBlock
     		if(this.isFilled == true)
         	{
         		worldIn.setBlockState(pos, state.withProperty(FILL_LEVEL, 15 - ((Integer)state.getValue(FILL_LEVEL)).intValue()), 2);
+        		worldIn.notifyNeighborsOfStateChange(pos, this);
         	}
  
 			return true;
@@ -145,12 +146,30 @@ public class BlockHourglass extends MBlock
         	if(level < 15)
         	{
         		worldIn.setBlockState(pos, state.withProperty(FILL_LEVEL, Integer.valueOf(level + 1)), 2);
+        		worldIn.notifyNeighborsOfStateChange(pos, this);
         	}
         	else if(this.infiniteCycle == true)
         	{
         		worldIn.setBlockState(pos, state.withProperty(FILL_LEVEL, Integer.valueOf(0)), 2);
+        		worldIn.notifyNeighborsOfStateChange(pos, this);
         	}
         }
+    }
+    
+    @Override
+    public boolean hasComparatorInputOverride()
+    {
+    	if(this.emitsPower == false)
+    	{
+    		return true;
+    	}
+        return false;
+    }
+
+    @Override
+    public int getComparatorInputOverride(World worldIn, BlockPos pos)
+    {
+        return ((Integer)worldIn.getBlockState(pos).getValue(FILL_LEVEL)).intValue();
     }
     
     @Override
