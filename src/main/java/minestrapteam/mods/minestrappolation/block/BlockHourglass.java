@@ -22,11 +22,14 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockHourglass extends MBlock
 {
-	public static final PropertyInteger FILL_LEVEL = PropertyInteger.create("level", 0, 16);
+	public static final PropertyInteger FILL_LEVEL = PropertyInteger.create("level", 0, 15);
 	public boolean isFilled 	 =    false;
 	public boolean emitsPower;
 	public boolean infiniteCycle = 	  false;
 	public int tickRate			 =	  1;
+	
+	//Only used by continnium 
+	boolean reverse = false;
 	
 	public BlockHourglass(Material materialIn, MapColor mapColorIn, boolean filled, boolean power, boolean cycle, int tickRate)
 	{
@@ -123,13 +126,13 @@ public class BlockHourglass extends MBlock
     @Override
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ)
 	{
-    	System.out.println(state.getValue(FILL_LEVEL));
+    	System.out.println(((Integer)state.getValue(FILL_LEVEL)).intValue());
     	if(!worldIn.isRemote)
 		{
     		if(this.isFilled == true)
         	{
-        		worldIn.setBlockState(pos, state.withProperty(FILL_LEVEL, 15 - ((Integer)state.getValue(FILL_LEVEL)).intValue()), 2);
-        		worldIn.notifyNeighborsOfStateChange(pos, this);
+    			worldIn.setBlockState(pos, state.withProperty(FILL_LEVEL, 15 - ((Integer)state.getValue(FILL_LEVEL)).intValue()), 2);
+            	worldIn.notifyNeighborsOfStateChange(pos, this);
         	}
  
 			return true;
@@ -141,21 +144,37 @@ public class BlockHourglass extends MBlock
     public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
     {
     	worldIn.scheduleUpdate(pos, this, 20 * tickRate);
-        
-    	int fillChance = rand.nextInt(1);
-        if(fillChance == 0)
+        int level = ((Integer)state.getValue(FILL_LEVEL)).intValue();
+        isFilled = true;
+        if(level < 15 && this.infiniteCycle == false)
         {
-        	int level = ((Integer)state.getValue(FILL_LEVEL)).intValue();
-        	isFilled = true;
-        	if(level < 15)
+        	worldIn.setBlockState(pos, state.withProperty(FILL_LEVEL, Integer.valueOf(level + 1)), 2);
+        	worldIn.notifyNeighborsOfStateChange(pos, this);
+        }
+        else if(this.infiniteCycle == true)
+        {
+        		
+        	if(level < 15 && reverse == false)
         	{
         		worldIn.setBlockState(pos, state.withProperty(FILL_LEVEL, Integer.valueOf(level + 1)), 2);
-        		worldIn.notifyNeighborsOfStateChange(pos, this);
+            	worldIn.notifyNeighborsOfStateChange(pos, this);
         	}
-        	else if(this.infiniteCycle == true)
+        	else
         	{
-        		worldIn.setBlockState(pos, state.withProperty(FILL_LEVEL, Integer.valueOf(0)), 2);
-        		worldIn.notifyNeighborsOfStateChange(pos, this);
+        		reverse = true;
+        	}
+        		
+        	if(reverse == true)
+        	{
+        		if(level == 0)
+            	{
+            		reverse = false;
+            	}
+        		else
+        		{
+        			worldIn.setBlockState(pos, state.withProperty(FILL_LEVEL, Integer.valueOf(level - 1)), 2);
+                	worldIn.notifyNeighborsOfStateChange(pos, this);
+        		}
         	}
         }
     }
