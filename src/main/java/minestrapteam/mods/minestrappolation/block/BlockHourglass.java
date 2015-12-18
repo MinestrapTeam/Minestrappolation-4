@@ -27,17 +27,11 @@ public class BlockHourglass extends MBlock
 	public boolean emitsPower;
 	public boolean infiniteCycle = 	  false;
 	
-	public BlockHourglass(Material materialIn, MapColor mapColorIn, boolean power)
+	public BlockHourglass(Material materialIn, MapColor mapColorIn, boolean power, boolean cycle)
 	{
 		super(materialIn, mapColorIn);
-		if(isFilled == false)
-		{
-			this.setDefaultState(this.blockState.getBaseState().withProperty(FILL_LEVEL, 0));
-		}
-		else
-		{
-			this.setDefaultState(this.blockState.getBaseState().withProperty(FILL_LEVEL, 1));
-		}
+		this.setDefaultState(this.blockState.getBaseState().withProperty(FILL_LEVEL, 0));
+		this.infiniteCycle = cycle;
 		this.emitsPower = power;
 	}
 	
@@ -132,6 +126,7 @@ public class BlockHourglass extends MBlock
         	{
         		worldIn.setBlockState(pos, state.withProperty(FILL_LEVEL, 15 - ((Integer)state.getValue(FILL_LEVEL)).intValue()), 2);
         	}
+ 
 			return true;
 		}
     	return false;
@@ -150,6 +145,10 @@ public class BlockHourglass extends MBlock
         	if(level < 15)
         	{
         		worldIn.setBlockState(pos, state.withProperty(FILL_LEVEL, Integer.valueOf(level + 1)), 2);
+        	}
+        	else if(this.infiniteCycle == true)
+        	{
+        		worldIn.setBlockState(pos, state.withProperty(FILL_LEVEL, Integer.valueOf(0)), 2);
         	}
         }
     }
