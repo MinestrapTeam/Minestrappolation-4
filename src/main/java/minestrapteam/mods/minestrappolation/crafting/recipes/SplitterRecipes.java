@@ -607,6 +607,21 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MBlocks.pumpkin_carved_3_lit, 1), new ItemStack(Blocks.pumpkin, 1), new ItemStack(MBlocks.candle, 1), 0.1F);
 		this.addRecipe(new ItemStack(MBlocks.pumpkin_carved_4_lit, 1), new ItemStack(Blocks.pumpkin, 1), new ItemStack(MBlocks.candle, 1), 0.1F);
 		this.addRecipe(new ItemStack(MBlocks.pumpkin_smashed_lit, 1), new ItemStack(Blocks.pumpkin, 1), new ItemStack(MBlocks.candle, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.hourglass_empty, 1), new ItemStack(MItems.bronze_ingot, 4), new ItemStack(Items.glass_bottle, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.hourglass_sand, 1), new ItemStack(MBlocks.hourglass_empty, 1), new ItemStack(Blocks.sand, 1, 0), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.hourglass_red_sand, 1), new ItemStack(MBlocks.hourglass_empty, 1), new ItemStack(Blocks.sand, 1, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.hourglass_cold_sand, 1), new ItemStack(MBlocks.hourglass_empty, 1), new ItemStack(MBlocks.cold_sand, 1, 0), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.hourglass_cold_red_sand, 1), new ItemStack(MBlocks.hourglass_empty, 1), new ItemStack(MBlocks.cold_sand, 1, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.hourglass_redstone, 1), new ItemStack(MBlocks.hourglass_empty, 1), new ItemStack(Items.redstone, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.ritual_conduit, 1), new ItemStack(Items.iron_ingot, 7), new ItemStack(MItems.bronze_plating, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.bronze_plating, 1), new ItemStack(MItems.bronze_ingot, 3), new ItemStack(MItems.bronze_ingot, 3), 0.1F);
+		this.addRecipe(new ItemStack(MItems.advanced_tech_doodad, 1), new ItemStack(MItems.technological_doodad, 4), new ItemStack(MItems.titanium_ingot, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.tomato_sauce, 1), new ItemStack(MItems.tomato, 2), new ItemStack(Items.bowl, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.bread_tomato_sauce, 1), new ItemStack(MItems.tomato, 2), new ItemStack(MItems.bread_bowl, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.tomato_soup, 1), new ItemStack(MItems.tomato_sauce, 1), new ItemStack(MItems.fat, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.bread_tomato_soup, 1), new ItemStack(MItems.bread_tomato_sauce, 1), new ItemStack(MItems.fat, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.spaghetti, 1), new ItemStack(MItems.tomato_sauce, 1), new ItemStack(MItems.dry_spaghetti, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.bread_spaghetti, 1), new ItemStack(MItems.bread_tomato_sauce, 1), new ItemStack(MItems.dry_spaghetti, 1), 0.1F);
 	}
 	
 	public void addRecipe(Block input, ItemStack stack, ItemStack stack2, float experience)

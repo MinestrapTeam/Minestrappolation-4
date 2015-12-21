@@ -179,6 +179,7 @@ public class MItems extends Item
 	public static Item							wolf_hide;
 	public static Item							propeller;
 	public static Item							technological_doodad;
+	public static Item							advanced_tech_doodad;
 	public static Item							ice_charge;
 	public static Item							guano;
 	public static Item							slime_core;
@@ -465,6 +466,7 @@ public class MItems extends Item
 		chicken_foot = new Item().setUnlocalizedName("chicken_foot").setCreativeTab(Minestrappolation.tabMMaterials);
 		wolf_hide = new Item().setUnlocalizedName("wolf_hide").setCreativeTab(Minestrappolation.tabMMaterials);
 		technological_doodad = new Item().setUnlocalizedName("technological_doodad").setCreativeTab(Minestrappolation.tabMMaterials);
+		advanced_tech_doodad = new Item().setUnlocalizedName("advanced_tech_doodad").setCreativeTab(Minestrappolation.tabMMaterials);
 		empty_titanium_sifter = new Item().setMaxStackSize(1).setUnlocalizedName("empty_titanium_sifter").setCreativeTab(Minestrappolation.tabMTools);
 		heart_piece = new Item().setUnlocalizedName("heart_piece").setCreativeTab(Minestrappolation.tabMTools);
 		ice_charge = new ItemIceCharge().setUnlocalizedName("ice_charge");
@@ -607,6 +609,7 @@ public class MItems extends Item
 		register(reinforced_stick);
 		register(propeller);
 		register(technological_doodad);
+		register(advanced_tech_doodad);
 		register(animal_bones);
 		register(tallow);
 		register(grease);

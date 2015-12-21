@@ -49,6 +49,7 @@ public class MBlocks
 	public static Block	dirt_permafrost;
 	public static Block mud;
 	public static Block rubble;
+	public static Block wither_ash;
 	
 	//Plants
 	public static Block	ministrapp_leaves;
@@ -452,6 +453,7 @@ public class MBlocks
 		dirt_permafrost = new BlockPermaFrostDirt(Material.ground, MapColor.cyanColor).setHardness(0.9F).setStepSound(Block.soundTypeGravel).setUnlocalizedName("dirt_permafrost").setCreativeTab(Minestrappolation.tabMBuilding);
 		mud = new BlockMud(Material.ground, MapColor.brownColor).setHardness(0.5F).setStepSound(Block.SLIME_SOUND).setUnlocalizedName("mud").setCreativeTab(Minestrappolation.tabMBuilding);
 		rubble = new BlockMFalling(Material.rock, MapColor.grayColor).setHardness(0.7F).setStepSound(Block.soundTypePiston).setUnlocalizedName("rubble").setCreativeTab(Minestrappolation.tabMBuilding);
+		wither_ash = new BlockWitherAsh().setHardness(0.1F).setStepSound(Block.soundTypeSand).setUnlocalizedName("wither_ash").setCreativeTab(Minestrappolation.tabMMaterials);
 		
 		//Plants
 		ministrapp_leaves = new MBlockLeaves(600).setUnlocalizedName("ministrapp_leaves");
@@ -875,6 +877,7 @@ public class MBlocks
 		register(dirt_permafrost);
 		register(lichen_permafrost, ItemBlockPermaFrost.class);
 		register(cold_sand, ItemBlockColdSand.class);
+		register(wither_ash);
 		
 		register(cardboard_block);
 		register(wet_cardboard_block);
@@ -1270,6 +1273,7 @@ public class MBlocks
 		cold_sand.setHarvestLevel("shovel", 0);
 		dirt_permafrost.setHarvestLevel("shovel", 0);
 		lichen_permafrost.setHarvestLevel("shovel", 0);
+		wither_ash.setHarvestLevel("shovel", 0);
 		
 		slate.setHarvestLevel("pickaxe", 0);
 		slate_bricks.setHarvestLevel("pickaxe", 0);

@@ -614,6 +614,7 @@ tile.hourglass_continurum.name=Continnium-Filled Hourglass
 tile.ritual_conduit.name=Ritual Conduit
 tile.dimensional_fishery.name=Interdimensional Item Fishery
 tile.radiant_pedestal.name=Radiant Quartz Pedestal
+tile.wither_ash.name=Wither Ash
 
 item.dough.name=Dough
 item.bun.name=Bun
@@ -899,9 +900,10 @@ item.spaghetti.name=Spaghetti
 item.bread_spaghetti.name=Spaghetti
 item.dimensium_ingot.name=Dimensium Ingot
 item.advanced_tech_doodad.name=Advanced Technological Doodad
-item.wither_ash.name=Wither Ash
 item.will_o_wisp.name=Bottled Will-o'-the-Wisp
 item.bronze_plating.name=Bronze Plating
+item.wither_bone.name=Withered Bone
+item.deathmeal.name=Deathmeal
 
 itemGroup.tabMBuilding=Minestrapp Building Blocks
 itemGroup.tabMDecor=Minestrapp Decoration Blocks
