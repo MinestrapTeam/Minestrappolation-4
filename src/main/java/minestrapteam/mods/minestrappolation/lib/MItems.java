@@ -158,6 +158,7 @@ public class MItems extends Item
 	public static Item							glacierite_ingot;
 	
 	public static Item							tin_plating;
+	public static Item							bronze_plating;
 	public static Item							steel_plating;
 	public static Item							meurodite_plating;
 	
@@ -443,6 +444,7 @@ public class MItems extends Item
 		glacierite_ingot = new Item().setUnlocalizedName("glacierite_ingot").setCreativeTab(Minestrappolation.tabMMaterials);
 		
 		tin_plating = new Item().setUnlocalizedName("tin_plating").setCreativeTab(Minestrappolation.tabMMaterials);
+		bronze_plating = new Item().setUnlocalizedName("bronze_plating").setCreativeTab(Minestrappolation.tabMMaterials);
 		steel_plating = new Item().setUnlocalizedName("steel_plating").setCreativeTab(Minestrappolation.tabMMaterials);
 		meurodite_plating = new Item().setUnlocalizedName("meurodite_plating").setCreativeTab(Minestrappolation.tabMMaterials);
 		
@@ -651,6 +653,7 @@ public class MItems extends Item
 		register(blazium_ingot);
 		register(soul_gem);
 		register(tin_plating);
+		register(bronze_plating);
 		register(steel_plating);
 		register(meurodite_plating);
 		register(inert_crystal_heart);

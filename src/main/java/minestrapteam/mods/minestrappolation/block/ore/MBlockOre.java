@@ -3,10 +3,12 @@ package minestrapteam.mods.minestrappolation.block.ore;
 import java.util.Random;
 
 import minestrapteam.mods.minestrappolation.block.MBlock;
+import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -156,4 +158,15 @@ public class MBlockOre extends MBlock
 		
 		return this.silkHarvest;
 	}
+	
+	@Override
+    public boolean canEntityDestroy(IBlockAccess world, BlockPos pos, Entity entity)
+    {
+        if (entity instanceof net.minecraft.entity.boss.EntityDragon && this == MBlocks.continnium_ore)
+        {
+            return false;
+        }
+
+        return true;
+    }
 }

@@ -378,6 +378,7 @@ public class StonecuttingManager
 		this.addRecipe(new ItemStack(MItems.tin_plating, 1), null, new Object[] { "III", "III", 'I', MItems.tin_ingot});
 		this.addRecipe(new ItemStack(MItems.steel_plating, 1), null, new Object[] { "III", "III", 'I', MItems.steel_ingot});
 		this.addRecipe(new ItemStack(MItems.meurodite_plating, 1), null, new Object[] { "III", "III", 'I', MItems.meurodite_gem});
+		this.addRecipe(new ItemStack(MItems.bronze_plating, 1), null, new Object[] { "III", "III", 'I', MItems.bronze_ingot});
 	}
 	
 	public ShapedCuttingRecipe addRecipe(ItemStack output, ItemStack extraSlot, Object... data)

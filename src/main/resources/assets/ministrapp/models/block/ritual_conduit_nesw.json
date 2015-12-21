@@ -1,11 +1,11 @@
 {
 "__comment": "Designed by Delocuro with BDcraft Cubik PRO 0.95 Beta - http://bdcraft.net",
 "textures": {
-    "particle": "blocks/ritual_conduit_side",
-    "texture": "blocks/ritual_conduit_side",
-    "liquid": "blocks/crusher_piston_shaft_side_inactive",
-    "top": "blocks/ritual_conduit_nesw",
-    "bronze_block": "blocks/bronze_block"
+    "particle": "ministrapp:blocks/ritual_conduit_side",
+    "texture": "ministrapp:blocks/ritual_conduit_side",
+    "liquid": "ministrapp:blocks/crusher_piston_shaft_side_inactive",
+    "top": "ministrapp:blocks/ritual_conduit_nesw",
+    "bronze_block": "ministrapp:blocks/bronze_block"
 },
 "elements": [ 
 {

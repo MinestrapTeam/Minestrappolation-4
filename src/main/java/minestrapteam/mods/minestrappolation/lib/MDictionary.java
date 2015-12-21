@@ -164,6 +164,12 @@ public class MDictionary
 		OreDictionary.registerOre("seedTomato", new ItemStack(MBlocks.tomato_seed));
 		OreDictionary.registerOre("foodTomato", new ItemStack(MItems.tomato));
 		
+		OreDictionary.registerOre("stoneDeepSmooth", new ItemStack(MBlocks.biome_stones, 1, 0));
+		OreDictionary.registerOre("stoneDeepSmooth", new ItemStack(MBlocks.biome_stones, 1, 2));
+		OreDictionary.registerOre("stoneDeepSmooth", new ItemStack(MBlocks.biome_stones, 1, 4));
+		OreDictionary.registerOre("stoneDeepSmooth", new ItemStack(MBlocks.biome_stones, 1, 6));
+		OreDictionary.registerOre("stoneDeepSmooth", new ItemStack(MBlocks.biome_stones, 1, 8));
+		
 		//Minerals
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.copper_block), new Object[] { "III", "III", "III", 'I', "ingotCopper" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.tin_block), new Object[] { "III", "III", "III", 'I', "ingotTin" }));
@@ -200,6 +206,8 @@ public class MDictionary
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.glass_door_item, 3), new Object[] { "II", "GG", "II", 'I', Blocks.iron_bars, 'G', "paneGlassColorless"}));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.steel_mesh, 16), new Object[] { "SSS", "SSS", 'S', "ingotSteel" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.magnetic_torch, 6), new Object[] {"C", "S", "R", 'C', Items.coal, 'S', "stickWood", 'R', Items.redstone}));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.hourglass_empty, 1), new Object[] {"IWI", " B ", "IWI", 'W', MBlocks.redwood_slab, 'I', "ingotBronze", 'B', Items.glass_bottle}));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.ritual_conduit, 1), new Object[] { "I I", "IBI", "III", 'I', "ingotIron", 'B', MItems.bronze_plating}));
 		
 		//Food
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(MItems.rice_bowl, 1), new Object[] { "stickWood", "foodRice", Items.bowl, new ItemStack(Items.potionitem, 1, 0)}));

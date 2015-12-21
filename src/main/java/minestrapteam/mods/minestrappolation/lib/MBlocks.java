@@ -222,6 +222,7 @@ public class MBlocks
 	public static Block hourglass_cold_red_sand;
 	public static Block hourglass_redstone;
 	public static Block hourglass_continurum;
+	public static Block ritual_conduit;
 	public static Block terracreep;
 	
 	//Gene Blocks
@@ -614,7 +615,8 @@ public class MBlocks
 		hourglass_cold_sand = new BlockHourglass(Material.wood, MapColor.woodColor, true, false, false, 30).setHardness(0.2F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("hourglass_cold_sand");
 		hourglass_cold_red_sand = new BlockHourglass(Material.wood, MapColor.woodColor, true, false, false, 20).setHardness(0.2F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("hourglass_cold_red_sand");
 		hourglass_redstone = new BlockHourglass(Material.wood, MapColor.woodColor, true, true, false, 10).setHardness(0.2F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("hourglass_redstone");
-		hourglass_continurum = new BlockHourglass(Material.wood, MapColor.woodColor, true, false, true, 1).setHardness(0.2F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("hourglass_continurum");
+		hourglass_continurum = new BlockHourglass(Material.wood, MapColor.woodColor, true, false, true, 1).setHardness(0.2F).setLightLevel(0.6F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("hourglass_continurum");
+		ritual_conduit = new BlockRitualConduit(Material.rock, 1).setStepSound(Block.soundTypeStone).setHardness(20F).setResistance(30F).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("ritual_conduit");
 		stone_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
 		red_rock_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("red_rock_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
 		coldstone_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("coldstone_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
@@ -734,7 +736,7 @@ public class MBlocks
 		soul_ore = new BlockSoulOre(Material.ground, MapColor.stoneColor, MItems.soul_gem, 0, 1, 7, 1, 0, "shovel", 2, true).setHardness(2.0F).setStepSound(Block.soundTypeSand).setResistance(3.0F).setUnlocalizedName("soul_ore").setCreativeTab(Minestrappolation.tabMBuilding);
 		titanium_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 3, false).setHardness(5.0F).setResistance(100.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("titanium_ore").setCreativeTab(Minestrappolation.tabMBuilding);
 		biome_titanium = new BlockBiomeTitanium(0, 0, Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 3, false).setHardness(5.0F).setResistance(100.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_titanium").setCreativeTab(Minestrappolation.tabMBuilding);
-		continnium_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 2, false).setHardness(5.0F).setResistance(100.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("continnium_ore").setCreativeTab(Minestrappolation.tabMBuilding);
+		continnium_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 4, false).setHardness(4.0F).setResistance(20.0F).setLightLevel(0.5F).setStepSound(Block.soundTypePiston).setUnlocalizedName("continnium_ore").setCreativeTab(Minestrappolation.tabMBuilding);
 		
 		//Stairs
 		redwood_stairs = new MBlockStairs(ministrapp_planks.getStateFromMeta(MWoodType.REDWOOD.getMetadata()), 300).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("redwood_stairs");
@@ -1088,6 +1090,7 @@ public class MBlocks
 		register(hourglass_cold_red_sand);
 		register(hourglass_redstone);
 		register(hourglass_continurum);
+		register(ritual_conduit);
 		register(pumpkin_carved_0, ItemBlockCarvedPumpkin.class);
 		register(pumpkin_carved_1, ItemBlockCarvedPumpkin.class);
 		register(pumpkin_carved_2, ItemBlockCarvedPumpkin.class);
@@ -1330,6 +1333,7 @@ public class MBlocks
 		godstone.setHarvestLevel("pickaxe", 0);
 		claimerator.setHarvestLevel("pickaxe", 2);
 		frost_generator.setHarvestLevel("pickaxe", 2);
+		ritual_conduit.setHarvestLevel("pickaxe", 2);
 		
 		glass_door.setHarvestLevel("pickaxe", 0);
 		

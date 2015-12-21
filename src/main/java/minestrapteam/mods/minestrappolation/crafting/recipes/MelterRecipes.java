@@ -58,6 +58,7 @@ public class MelterRecipes
 		this.addRecipe(Blocks.packed_ice, new ItemStack(Items.water_bucket), 0.9F, true);
 		this.addRecipe(Blocks.prismarine, new ItemStack(Items.water_bucket), 0.5F, true);
 		this.addRecipe(Blocks.cactus, new ItemStack(Items.water_bucket), 0.3F, true);
+		this.addRecipe(Items.snowball, new ItemStack(Items.potionitem, 1, 0), 0.2F, Items.glass_bottle, true);
 		
 		//Vanilla Milk
 		this.addRecipe(Items.cake, new ItemStack(Items.milk_bucket), 0.4F, true);
@@ -152,6 +153,7 @@ public class MelterRecipes
 		this.addDictionaryRecipes("oreTitanium", new ItemStack(MItems.titanium_ingot), 2.0F, false);
 		this.addRecipe(new ItemStack(MItems.chunks, 1, 10), new ItemStack(MItems.titanium_ingot), 2.0F, false);
 		this.addRecipe(MItems.fat, new ItemStack(MItems.grease, 2), 1.0F, false);
+		this.addRecipe(MBlocks.continnium_ore, new ItemStack(MBlocks.hourglass_continurum, 1), 3.0F, Item.getItemFromBlock(MBlocks.hourglass_empty), true);
 	}
 	
 	public void addRecipe(Block input, ItemStack stack, float experience, boolean bucket)
@@ -166,6 +168,13 @@ public class MelterRecipes
 		this.addRecipe(Item.getItemFromBlock(input), stack, experience, bucket);
 		this.needBucket.put(Item.getItemFromBlock(input), bucket);
 		this.container.put(Item.getItemFromBlock(input), container);
+	}
+	
+	public void addRecipe(Item input, ItemStack stack, float experience, Item container, boolean bucket)
+	{
+		this.addRecipe(input, stack, experience, bucket);
+		this.needBucket.put(input, bucket);
+		this.container.put(input, container);
 	}
 	
 	public void addRecipe(Item input, ItemStack stack, float experience, boolean bucket)

@@ -187,6 +187,12 @@ public class MRecipes
 		MShapedRecipe.addRecipe(new ItemStack(MBlocks.pumpkin_carved_3, 1, 0), new Object[] { "  S", " P ", " C ", 'S', Items.shears.setContainerItem(Items.shears), 'P', Blocks.pumpkin, 'C', MBlocks.candle });
 		MShapedRecipe.addRecipe(new ItemStack(MBlocks.pumpkin_carved_4, 1, 0), new Object[] { " PS", " C ", 'S', Items.shears.setContainerItem(Items.shears), 'P', Blocks.pumpkin, 'C', MBlocks.candle });
 		
+		GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.hourglass_sand, 1), new Object[] {MBlocks.hourglass_empty, new ItemStack(Blocks.sand, 1, 0)});
+		GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.hourglass_red_sand, 1), new Object[] {MBlocks.hourglass_empty, new ItemStack(Blocks.sand, 1, 1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.hourglass_cold_sand, 1), new Object[] {MBlocks.hourglass_empty, new ItemStack(MBlocks.cold_sand, 1, 0)});
+		GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.hourglass_cold_red_sand, 1), new Object[] {MBlocks.hourglass_empty, new ItemStack(MBlocks.cold_sand, 1, 1)});
+		GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.hourglass_redstone, 1), new Object[] {MBlocks.hourglass_empty, Items.redstone});
+		
 		// Wood
 		GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.ministrapp_planks, 4, 0), new Object[] { new ItemStack(MBlocks.ministrapp_log, 1, 0) });
 		GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.ministrapp_planks, 4, 1), new Object[] { new ItemStack(MBlocks.ministrapp_log, 1, 1) });

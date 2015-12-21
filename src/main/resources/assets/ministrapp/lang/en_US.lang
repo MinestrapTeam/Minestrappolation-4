@@ -603,15 +603,15 @@ tile.compressed_netherrack.name=Compressed Netherrack
 tile.compressed_endstone.name=Compressed End Stone
 tile.compressed_glowshrooms.name=Compressed Glowshrooms
 tile.dimensium_ore.name=Dimensium Ore
-tile.continurum_ore.name=Continnium Ore
-tile.hourglass.name=Empty Hourglass
+tile.continnium_ore.name=Continnium Ore
+tile.hourglass_empty.name=Empty Hourglass
 tile.hourglass_sand.name=Sand-Filled Hourglass
 tile.hourglass_cold_sand.name=Cold Sand-Filled Hourglass
 tile.hourglass_red_sand.name=Red Sand-Filled Hourglass
 tile.hourglass_cold_red_sand.name=Cold Red Sand-Filled Hourglass
 tile.hourglass_redstone.name=Redstone-Filled Hourglass
 tile.hourglass_continurum.name=Continnium-Filled Hourglass
-tile.liquid_conduit.name=Liquid Conduit
+tile.ritual_conduit.name=Ritual Conduit
 tile.dimensional_fishery.name=Interdimensional Item Fishery
 tile.radiant_pedestal.name=Radiant Quartz Pedestal
 
@@ -901,6 +901,7 @@ item.dimensium_ingot.name=Dimensium Ingot
 item.advanced_tech_doodad.name=Advanced Technological Doodad
 item.wither_ash.name=Wither Ash
 item.will_o_wisp.name=Bottled Will-o'-the-Wisp
+item.bronze_plating.name=Bronze Plating
 
 itemGroup.tabMBuilding=Minestrapp Building Blocks
 itemGroup.tabMDecor=Minestrapp Decoration Blocks

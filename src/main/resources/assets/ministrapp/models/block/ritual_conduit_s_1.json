@@ -1,11 +1,11 @@
 {
 "__comment": "Designed by Delocuro with BDcraft Cubik PRO 0.95 Beta - http://bdcraft.net",
 "textures": {
-    "particle": "blocks/ritual_conduit_side",
-    "texture": "blocks/ritual_conduit_side",
-    "liquid": "blocks/ghast_tears",
-    "top": "blocks/ritual_conduit_s",
-    "bronze_block": "blocks/bronze_block"
+    "particle": "ministrapp:blocks/ritual_conduit_side",
+    "texture": "ministrapp:blocks/ritual_conduit_side",
+    "liquid": "ministrapp:blocks/ghast_tears",
+    "top": "ministrapp:blocks/ritual_conduit_s",
+    "bronze_block": "ministrapp:blocks/bronze_block"
 },
 "elements": [ 
 {
@@ -36,10 +36,7 @@
     "to": [ 16, 11, 16 ],
     "faces": {
         "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#liquid" },
-        "north": { "uv": [ 0, 5, 16, 6 ], "texture": "#liquid" },
-        "south": { "uv": [ 0, 5, 16, 6 ], "texture": "#liquid" },
-        "west":  { "uv": [ 0, 5, 16, 6 ], "texture": "#liquid" },
-        "east":  { "uv": [ 0, 5, 16, 6 ], "texture": "#liquid" }
+        "south": { "uv": [ 0, 5, 16, 6 ], "texture": "#liquid" }
     }
 },
 {
