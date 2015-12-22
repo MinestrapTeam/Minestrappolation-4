@@ -15,6 +15,7 @@ import minestrapteam.mods.minestrappolation.lib.MDrops;
 import minestrapteam.mods.minestrappolation.lib.MFluid;
 import minestrapteam.mods.minestrappolation.lib.MItems;
 import minestrapteam.mods.minestrappolation.lib.MLoot;
+import minestrapteam.mods.minestrappolation.lib.MPotions;
 import minestrapteam.mods.minestrappolation.lib.MRecipes;
 import minestrapteam.mods.minestrappolation.lib.MReference;
 import minestrapteam.mods.minestrappolation.network.CommonProxy;
@@ -73,6 +74,7 @@ public class Minestrappolation
 		MFluid.init();
 		MItems.init();
 		MBlocks.init();
+		MPotions.loadPotions();
 		MLoot.addItemsToChests();
 		
 		MItems.register();
