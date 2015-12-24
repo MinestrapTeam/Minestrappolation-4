@@ -9,6 +9,6 @@ public class MPotions
 {
 	public static void loadPotions()
 	{
-		BrewingRecipeRegistry.addRecipe(new ItemStack(Items.potionitem, 1, 0), new ItemStack(MBlocks.wither_ash, 1, 0), new ItemStack(Items.potionitem, 1, 20));
+		//BrewingRecipeRegistry.addRecipe(new ItemStack(Items.potionitem, 1, 0), new ItemStack(MBlocks.wither_ash, 1, 0), new ItemStack(Items.potionitem, 1, 30));
 	}
 }

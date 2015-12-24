@@ -11,6 +11,7 @@ import minestrapteam.mods.minestrappolation.item.ItemBricks;
 import minestrapteam.mods.minestrappolation.item.ItemBricks2;
 import minestrapteam.mods.minestrappolation.item.ItemChargeGun;
 import minestrapteam.mods.minestrappolation.item.ItemChunk;
+import minestrapteam.mods.minestrappolation.item.ItemDeathmeal;
 import minestrapteam.mods.minestrappolation.item.ItemGuano;
 import minestrapteam.mods.minestrappolation.item.ItemHangGlider;
 import minestrapteam.mods.minestrappolation.item.ItemHeartContainer;
@@ -183,6 +184,7 @@ public class MItems extends Item
 	public static Item							ice_charge;
 	public static Item							guano;
 	public static Item							slime_core;
+	public static Item							deathmeal;
 	public static Item							diamond_dust;
 	public static Item							inert_crystal_heart;
 	public static Item							crystal_heart;
@@ -471,6 +473,7 @@ public class MItems extends Item
 		heart_piece = new Item().setUnlocalizedName("heart_piece").setCreativeTab(Minestrappolation.tabMTools);
 		ice_charge = new ItemIceCharge().setUnlocalizedName("ice_charge");
 		slime_core = new Item().setUnlocalizedName("slime_core").setCreativeTab(Minestrappolation.tabMMaterials);
+		deathmeal = new ItemDeathmeal().setUnlocalizedName("deathmeal").setCreativeTab(Minestrappolation.tabMMaterials);
 		diamond_dust = new Item().setUnlocalizedName("diamond_dust").setCreativeTab(Minestrappolation.tabMMaterials);
 		inert_crystal_heart = new ItemInertCrystalHeart().setMaxStackSize(1).setUnlocalizedName("inert_crystal_heart").setCreativeTab(Minestrappolation.tabMMaterials);
 		crystal_heart = new MItemFoiled().setMaxStackSize(1).setUnlocalizedName("crystal_heart").setCreativeTab(Minestrappolation.tabMMaterials);
@@ -621,6 +624,7 @@ public class MItems extends Item
 		register(guano);
 		register(wing_sinew);
 		register(wing_segment);
+		register(deathmeal);
 		register(slime_core);
 		register(infectious_fungus);
 		register(bat_gene_sample);

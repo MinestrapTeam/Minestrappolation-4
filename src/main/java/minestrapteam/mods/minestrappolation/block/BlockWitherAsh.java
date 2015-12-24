@@ -98,10 +98,10 @@ public class BlockWitherAsh extends BlockFalling
     /**
      * Called when a neighboring block changes.
      */
-    /*public void onNeighborBlockChange(World worldIn, BlockPos pos, IBlockState state, Block neighborBlock)
+    public void onNeighborBlockChange(World worldIn, BlockPos pos, IBlockState state, Block neighborBlock)
     {
-        this.checkAndDropBlock(worldIn, pos, state);
-    }*/
+    	worldIn.scheduleUpdate(pos, this, this.tickRate(worldIn));
+    }
 
     private boolean checkAndDropBlock(World worldIn, BlockPos pos, IBlockState state)
     {
