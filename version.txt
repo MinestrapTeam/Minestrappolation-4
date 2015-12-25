@@ -1,2 +1,2 @@
 version=1.8.0-4.2.666
-motd=§9Sorry about the lack of updates, we have been busy..
+motd=§2Merry Christmas!
