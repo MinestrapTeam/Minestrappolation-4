@@ -30,6 +30,7 @@ import minestrapteam.mods.minestrappolation.item.ItemPortableCrafting;
 import minestrapteam.mods.minestrappolation.item.ItemSifter;
 import minestrapteam.mods.minestrappolation.item.ItemSoulBottle;
 import minestrapteam.mods.minestrappolation.item.ItemSoulGem;
+import minestrapteam.mods.minestrappolation.item.ItemWrench;
 import minestrapteam.mods.minestrappolation.item.MItemFoiled;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
@@ -254,6 +255,8 @@ public class MItems extends Item
 	public static Item							bedrock_axe;
 	public static Item							bedrock_shovel;
 	public static Item							bedrock_hoe;
+	
+	public static Item							wrench;
 	
 	//Armor
 	public static Item							rad_helmet;
@@ -543,6 +546,8 @@ public class MItems extends Item
 		bedrock_axe = new ItemMAxe(BEDROCK, Item.getItemFromBlock(Blocks.bedrock), false, false).setUnlocalizedName("bedrock_axe").setCreativeTab(Minestrappolation.tabMTools);
 		bedrock_shovel = new ItemMShovel(BEDROCK, Item.getItemFromBlock(Blocks.bedrock), false, false).setUnlocalizedName("bedrock_shovel").setCreativeTab(Minestrappolation.tabMTools);
 		bedrock_hoe = new ItemMHoe(BEDROCK, Item.getItemFromBlock(Blocks.bedrock), false, false).setUnlocalizedName("bedrock_hoe").setCreativeTab(Minestrappolation.tabMTools);
+		
+		wrench = new ItemWrench().setUnlocalizedName("minestrapp_wrench").setCreativeTab(Minestrappolation.tabMTools);
 		
 		//Armor
 		rad_helmet = new ItemMArmor(ARMOR_STEEL, 0, 0, uranium, "rad").setUnlocalizedName("rad_helmet").setCreativeTab(Minestrappolation.tabMCombat);
@@ -857,6 +862,8 @@ public class MItems extends Item
 		register(bedrock_axe);
 		register(bedrock_shovel);
 		register(bedrock_hoe);
+		
+		register(wrench);
 	}
 	
 	public static void register(Item item)

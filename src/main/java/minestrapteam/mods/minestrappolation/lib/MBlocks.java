@@ -270,6 +270,7 @@ public class MBlocks
 	public static Block splitter_active;
 	public static Block	frost_generator;
 	public static Block claimerator;
+	public static Block enderporter;
 	
 	//Fences and Panes
 	public static Block cardboard;
@@ -678,6 +679,7 @@ public class MBlocks
 		plutonium_insulated = new BlockRadiationInsulated(1, 20, Material.iron, MapColor.clayColor, null, 0, 0, 1, 0, "pickaxe", 2, false).setUnlocalizedName("plutonium_insulated").setStepSound(Block.soundTypeMetal).setCreativeTab(Minestrappolation.tabMTech).setHardness(7F).setResistance(10.0F);
 		uranium_insulated = new BlockRadiationInsulated(1, 20, Material.iron, MapColor.clayColor, null, 0, 0, 1, 0, "pickaxe", 2, false).setHardness(7F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("uranium_insulated").setCreativeTab(Minestrappolation.tabMTech);
 		claimerator = new BlockClaimerator(Material.rock, MapColor.obsidianColor).setHardness(50.0F).setResistance(2000.0F).setUnlocalizedName("claimerator").setCreativeTab(Minestrappolation.tabMTech);
+		enderporter = new BlockEnderPorter().setUnlocalizedName("enderporter").setCreativeTab(Minestrappolation.tabMTech);
 		
 		//Fences and Panes
 		redwood_fence = new BlockFence(Material.wood).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("redwood_fence");
@@ -871,6 +873,8 @@ public class MBlocks
 	
 	private static void register()
 	{
+		register(enderporter);
+		
 		//Building Tab
 		register(mud);
 		register(mud_bricks);
