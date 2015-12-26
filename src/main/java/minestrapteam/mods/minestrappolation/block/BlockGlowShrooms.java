@@ -42,11 +42,11 @@ public class BlockGlowShrooms extends BlockMushroom
 
         if (this == MBlocks.green_glowshroom)
         {
-            worldgenbigmushroom = new WorldGenBigGlowShroom(0);
+            worldgenbigmushroom = new WorldGenBigGlowShroom(MBlocks.huge_green_glowshroom);
         }
         else if (this == MBlocks.purple_glowshroom)
         {
-            worldgenbigmushroom = new WorldGenBigGlowShroom(1);
+            worldgenbigmushroom = new WorldGenBigGlowShroom(MBlocks.huge_purple_glowshroom);
         }
 
         if (worldgenbigmushroom != null && worldgenbigmushroom.generate(worldIn, rand, pos))

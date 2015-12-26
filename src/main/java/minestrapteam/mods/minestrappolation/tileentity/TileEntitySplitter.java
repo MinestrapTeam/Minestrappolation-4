@@ -12,10 +12,10 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
-import net.minecraft.server.gui.IUpdatePlayerListBox;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.ITickable;
 
-public class TileEntitySplitter extends TileEntityInventory implements ISidedInventory, IUpdatePlayerListBox
+public class TileEntitySplitter extends TileEntityInventory implements ISidedInventory, ITickable
 {
 	public int					burnTime;
 	public int					maxBurnTime;

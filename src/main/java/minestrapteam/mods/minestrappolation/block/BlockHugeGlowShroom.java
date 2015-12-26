@@ -3,6 +3,7 @@ package minestrapteam.mods.minestrappolation.block;
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockHugeMushroom;
+import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.BlockPos;
@@ -17,7 +18,7 @@ public class BlockHugeGlowShroom extends BlockHugeMushroom
 
 	public BlockHugeGlowShroom(Material materialIn, Block smallBlock) 
 	{
-		super(materialIn, smallBlock);
+		super(materialIn, MapColor.purpleColor, smallBlock);
 	}
 	
 	@Override

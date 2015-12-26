@@ -22,6 +22,7 @@ import minestrapteam.mods.minestrappolation.item.blocks.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.BlockFenceGate;
+import net.minecraft.block.BlockPlanks;
 import net.minecraft.block.BlockPumpkin;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -680,9 +681,9 @@ public class MBlocks
 		
 		//Fences and Panes
 		redwood_fence = new BlockFence(Material.wood).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("redwood_fence");
-		redwood_fence_gate = new BlockFenceGate().setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("redwood_fence_gate");
+		redwood_fence_gate = new BlockFenceGate(BlockPlanks.EnumType.OAK).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("redwood_fence_gate");
 		frozen_oak_fence = new BlockFence(Material.wood).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("frozen_oak_fence");
-		frozen_oak_fence_gate = new BlockFenceGate().setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("frozen_oak_fence_gate");
+		frozen_oak_fence_gate = new BlockFenceGate(BlockPlanks.EnumType.OAK).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("frozen_oak_fence_gate");
 		red_rock_wall = new MBlockWall(biome_cobble, 2.0F, 10.0F).setUnlocalizedName("red_rock_wall");
 		red_rock_wall_mossy = new MBlockWall(biome_cobble, 2.0F, 10.0F).setUnlocalizedName("red_rock_wall_mossy");
 		coldstone_wall = new MBlockWall(biome_cobble, 2.0F, 10.0F).setUnlocalizedName("coldstone_wall");

@@ -2,6 +2,7 @@ package minestrapteam.mods.minestrappolation.world;
 
 import java.util.Random;
 
+import minestrapteam.mods.minestrappolation.block.BlockHugeGlowShroom;
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
@@ -12,12 +13,12 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 public class WorldGenBigGlowShroom extends WorldGenerator
 {
     /** The mushroom type. 0 for brown, 1 for red. */
-    private int mushroomType = -1;
+    private Block mushroomType;
 
-    public WorldGenBigGlowShroom(int p_i2017_1_)
+    public WorldGenBigGlowShroom(Block p_i46449_1_)
     {
         super(true);
-        this.mushroomType = p_i2017_1_;
+        this.mushroomType = p_i46449_1_;
     }
 
     public WorldGenBigGlowShroom()
@@ -27,40 +28,36 @@ public class WorldGenBigGlowShroom extends WorldGenerator
 
     public boolean generate(World worldIn, Random rand, BlockPos position)
     {
-        int i = rand.nextInt(2);
-
-        if (this.mushroomType >= 0)
+        if (this.mushroomType == null)
         {
-            i = this.mushroomType;
+            this.mushroomType = rand.nextBoolean() ? MBlocks.green_glowshroom : MBlocks.purple_glowshroom;
         }
 
-        int j = rand.nextInt(3) + 4;
+        int i = rand.nextInt(3) + 4;
         boolean flag = true;
 
-        if (position.getY() >= 1 && position.getY() + j + 1 < 256)
+        if (position.getY() >= 1 && position.getY() + i + 1 < 256)
         {
-            int l;
-            int i1;
-
-            for (int k = position.getY(); k <= position.getY() + 1 + j; ++k)
+            for (int j = position.getY(); j <= position.getY() + 1 + i; ++j)
             {
-                byte b0 = 3;
+                int k = 3;
 
-                if (k <= position.getY() + 3)
+                if (j <= position.getY() + 3)
                 {
-                    b0 = 0;
+                    k = 0;
                 }
 
-                for (l = position.getX() - b0; l <= position.getX() + b0 && flag; ++l)
-                {
-                    for (i1 = position.getZ() - b0; i1 <= position.getZ() + b0 && flag; ++i1)
-                    {
-                        if (k >= 0 && k < 256)
-                        {
-                            BlockPos pos = new BlockPos(l, k, i1);
-                            net.minecraft.block.state.IBlockState state = worldIn.getBlockState(pos);
+                BlockPos.MutableBlockPos blockpos$mutableblockpos = new BlockPos.MutableBlockPos();
 
-                            if (!state.getBlock().isAir(worldIn, pos) && !state.getBlock().isLeaves(worldIn, pos))
+                for (int l = position.getX() - k; l <= position.getX() + k && flag; ++l)
+                {
+                    for (int i1 = position.getZ() - k; i1 <= position.getZ() + k && flag; ++i1)
+                    {
+                        if (j >= 0 && j < 256)
+                        {
+                            Block block = worldIn.getBlockState(blockpos$mutableblockpos.func_181079_c(l, j, i1)).getBlock();
+
+                            if (!block.isAir(worldIn, blockpos$mutableblockpos) && !block.isLeaves(worldIn, blockpos$mutableblockpos))
                             {
                                 flag = false;
                             }
@@ -87,143 +84,132 @@ public class WorldGenBigGlowShroom extends WorldGenerator
                 }
                 else
                 {
-                    int l1 = position.getY() + j;
+                    int k2 = position.getY() + i;
 
-                    if (i == 1)
+                    if (this.mushroomType == MBlocks.purple_glowshroom)
                     {
-                        l1 = position.getY() + j - 3;
+                        k2 = position.getY() + i - 3;
                     }
 
-                    for (l = l1; l <= position.getY() + j; ++l)
+                    for (int l2 = k2; l2 <= position.getY() + i; ++l2)
                     {
-                        i1 = 1;
+                        int j3 = 1;
 
-                        if (l < position.getY() + j)
+                        if (l2 < position.getY() + i)
                         {
-                            ++i1;
+                            ++j3;
                         }
 
-                        if (i == 0)
+                        if (this.mushroomType == MBlocks.green_glowshroom)
                         {
-                            i1 = 3;
+                            j3 = 3;
                         }
 
-                        for (int i2 = position.getX() - i1; i2 <= position.getX() + i1; ++i2)
+                        int k3 = position.getX() - j3;
+                        int l3 = position.getX() + j3;
+                        int j1 = position.getZ() - j3;
+                        int k1 = position.getZ() + j3;
+
+                        for (int l1 = k3; l1 <= l3; ++l1)
                         {
-                            for (int j1 = position.getZ() - i1; j1 <= position.getZ() + i1; ++j1)
+                            for (int i2 = j1; i2 <= k1; ++i2)
                             {
-                                int k1 = 5;
+                                int j2 = 5;
 
-                                if (i2 == position.getX() - i1)
+                                if (l1 == k3)
                                 {
-                                    --k1;
+                                    --j2;
+                                }
+                                else if (l1 == l3)
+                                {
+                                    ++j2;
                                 }
 
-                                if (i2 == position.getX() + i1)
+                                if (i2 == j1)
                                 {
-                                    ++k1;
+                                    j2 -= 3;
+                                }
+                                else if (i2 == k1)
+                                {
+                                    j2 += 3;
                                 }
 
-                                if (j1 == position.getZ() - i1)
-                                {
-                                    k1 -= 3;
-                                }
+                                BlockHugeGlowShroom.EnumType BlockHugeGlowShroom$enumtype = BlockHugeGlowShroom.EnumType.byMetadata(j2);
 
-                                if (j1 == position.getZ() + i1)
+                                if (this.mushroomType == MBlocks.green_glowshroom || l2 < position.getY() + i)
                                 {
-                                    k1 += 3;
-                                }
-
-                                if (i == 0 || l < position.getY() + j)
-                                {
-                                    if ((i2 == position.getX() - i1 || i2 == position.getX() + i1) && (j1 == position.getZ() - i1 || j1 == position.getZ() + i1))
+                                    if ((l1 == k3 || l1 == l3) && (i2 == j1 || i2 == k1))
                                     {
                                         continue;
                                     }
 
-                                    if (i2 == position.getX() - (i1 - 1) && j1 == position.getZ() - i1)
+                                    if (l1 == position.getX() - (j3 - 1) && i2 == j1)
                                     {
-                                        k1 = 1;
+                                        BlockHugeGlowShroom$enumtype = BlockHugeGlowShroom.EnumType.NORTH_WEST;
                                     }
 
-                                    if (i2 == position.getX() - i1 && j1 == position.getZ() - (i1 - 1))
+                                    if (l1 == k3 && i2 == position.getZ() - (j3 - 1))
                                     {
-                                        k1 = 1;
+                                        BlockHugeGlowShroom$enumtype = BlockHugeGlowShroom.EnumType.NORTH_WEST;
                                     }
 
-                                    if (i2 == position.getX() + (i1 - 1) && j1 == position.getZ() - i1)
+                                    if (l1 == position.getX() + (j3 - 1) && i2 == j1)
                                     {
-                                        k1 = 3;
+                                        BlockHugeGlowShroom$enumtype = BlockHugeGlowShroom.EnumType.NORTH_EAST;
                                     }
 
-                                    if (i2 == position.getX() + i1 && j1 == position.getZ() - (i1 - 1))
+                                    if (l1 == l3 && i2 == position.getZ() - (j3 - 1))
                                     {
-                                        k1 = 3;
+                                        BlockHugeGlowShroom$enumtype = BlockHugeGlowShroom.EnumType.NORTH_EAST;
                                     }
 
-                                    if (i2 == position.getX() - (i1 - 1) && j1 == position.getZ() + i1)
+                                    if (l1 == position.getX() - (j3 - 1) && i2 == k1)
                                     {
-                                        k1 = 7;
+                                        BlockHugeGlowShroom$enumtype = BlockHugeGlowShroom.EnumType.SOUTH_WEST;
                                     }
 
-                                    if (i2 == position.getX() - i1 && j1 == position.getZ() + (i1 - 1))
+                                    if (l1 == k3 && i2 == position.getZ() + (j3 - 1))
                                     {
-                                        k1 = 7;
+                                        BlockHugeGlowShroom$enumtype = BlockHugeGlowShroom.EnumType.SOUTH_WEST;
                                     }
 
-                                    if (i2 == position.getX() + (i1 - 1) && j1 == position.getZ() + i1)
+                                    if (l1 == position.getX() + (j3 - 1) && i2 == k1)
                                     {
-                                        k1 = 9;
+                                        BlockHugeGlowShroom$enumtype = BlockHugeGlowShroom.EnumType.SOUTH_EAST;
                                     }
 
-                                    if (i2 == position.getX() + i1 && j1 == position.getZ() + (i1 - 1))
+                                    if (l1 == l3 && i2 == position.getZ() + (j3 - 1))
                                     {
-                                        k1 = 9;
+                                        BlockHugeGlowShroom$enumtype = BlockHugeGlowShroom.EnumType.SOUTH_EAST;
                                     }
                                 }
 
-                                if (k1 == 5 && l < position.getY() + j)
+                                if (BlockHugeGlowShroom$enumtype == BlockHugeGlowShroom.EnumType.CENTER && l2 < position.getY() + i)
                                 {
-                                    k1 = 0;
+                                    BlockHugeGlowShroom$enumtype = BlockHugeGlowShroom.EnumType.ALL_INSIDE;
                                 }
 
-                                if (k1 != 0 || position.getY() >= position.getY() + j - 1)
+                                if (position.getY() >= position.getY() + i - 1 || BlockHugeGlowShroom$enumtype != BlockHugeGlowShroom.EnumType.ALL_INSIDE)
                                 {
-                                    BlockPos blockpos1 = new BlockPos(i2, l, j1);
+                                    BlockPos blockpos = new BlockPos(l1, l2, i2);
 
-                                    if (worldIn.getBlockState(blockpos1).getBlock().canBeReplacedByLeaves(worldIn, blockpos1))
+                                    if (worldIn.getBlockState(blockpos).getBlock().canBeReplacedByLeaves(worldIn, blockpos))
                                     {
-                                    	if(this.mushroomType == 0)
-                                    	{
-                                    		this.setBlock(worldIn, blockpos1, Block.getBlockById(Block.getIdFromBlock(MBlocks.huge_green_glowshroom)), k1);
-                                    	}
-                                    	else
-                                    	{
-                                    		this.setBlock(worldIn, blockpos1, Block.getBlockById(Block.getIdFromBlock(MBlocks.huge_purple_glowshroom)), k1);
-                                    	}
-                                        
+                                        this.setBlockAndNotifyAdequately(worldIn, blockpos, this.mushroomType.getDefaultState().withProperty(BlockHugeGlowShroom.VARIANT, BlockHugeGlowShroom$enumtype));
                                     }
                                 }
                             }
                         }
                     }
 
-                    for (l = 0; l < j; ++l)
+                    for (int i3 = 0; i3 < i; ++i3)
                     {
-                        BlockPos upN = position.up(l);
+                        BlockPos upN = position.up(i3);
                         net.minecraft.block.state.IBlockState state = worldIn.getBlockState(upN);
 
                         if (state.getBlock().canBeReplacedByLeaves(worldIn, upN))
                         {
-                        	if(this.mushroomType == 0)
-                        	{
-                        		this.setBlock(worldIn, position.up(l), Block.getBlockById(Block.getIdFromBlock(MBlocks.huge_green_glowshroom)), 10);
-                        	}
-                        	else
-                        	{
-                        		this.setBlock(worldIn, position.up(l), Block.getBlockById(Block.getIdFromBlock(MBlocks.huge_purple_glowshroom)), 10);
-                        	}
-                            
+                            this.setBlockAndNotifyAdequately(worldIn, position.up(i3), this.mushroomType.getDefaultState().withProperty(BlockHugeGlowShroom.VARIANT, BlockHugeGlowShroom.EnumType.STEM));
                         }
                     }
 
