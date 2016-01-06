@@ -1,5 +1,6 @@
 package minestrapteam.mods.minestrappolation.block.machines;
 
+import minestrapteam.mods.minestrappolation.block.BlockDirectional;
 import minestrapteam.mods.minestrappolation.lib.MItems;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntityEnderPorter;
 import net.minecraft.block.BlockContainer;
@@ -14,7 +15,7 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 
-public class BlockEnderPorter extends BlockContainer
+public class BlockEnderPorter extends BlockDirectional
 {
 
 	
@@ -68,6 +69,24 @@ public class BlockEnderPorter extends BlockContainer
 		
 		
 		return true;
+	}
+	
+	@Override
+	public boolean isOpaqueCube()
+	{
+		return false;
+	}
+	
+	@Override
+	public boolean isFullCube()
+    {
+        return false;
+    }
+	
+	@Override
+	public int getRenderType()
+	{
+		return 3;
 	}
 
 }
