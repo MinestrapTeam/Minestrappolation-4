@@ -121,6 +121,7 @@ public class MBlocks
 	public static Block glacierite_block;
 	public static Block	blazium_block;
 	public static Block	soul_gem_block;
+	public static Block dimensium_block;
 	
 	//Wood Blocks
 	public static Block	ministrapp_log;
@@ -333,6 +334,7 @@ public class MBlocks
 	public static Block	blazium_ore;
 	public static Block	soul_ore;
 	public static Block continnium_ore;
+	public static Block dimensium_ore;
 	
 	// Stairs
 	public static Block	redwood_stairs;
@@ -530,6 +532,7 @@ public class MBlocks
 		glacierite_block = new BlockGlacierite(Material.iron, MapColor.blueColor).setHardness(5.0F).setResistance(10.0F).setLightLevel(0.3F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("glacierite_block").setCreativeTab(Minestrappolation.tabMBuilding);
 		soul_gem_block = new BlockSoul(Material.iron, MapColor.cyanColor).setHardness(10.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("soul_gem_block").setCreativeTab(Minestrappolation.tabMBuilding);
 		titanium_block = new MBlock(Material.iron, MapColor.grayColor).setHardness(10.0F).setResistance(9999.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("titanium_block").setCreativeTab(Minestrappolation.tabMBuilding);
+		dimensium_block = new MBlock(Material.iron, MapColor.magentaColor).setHardness(10.0F).setResistance(9999.0F).setStepSound(Block.soundTypeAnvil).setLightLevel(0.7F).setUnlocalizedName("dimensium_block").setCreativeTab(Minestrappolation.tabMBuilding);
 		
 		//Wood Blocks
 		ministrapp_log = new MBlockLog(300).setUnlocalizedName("ministrapp_log");
@@ -737,11 +740,12 @@ public class MBlocks
 		biome_radiant = new BlockBiomeRadiant(0, 0, Material.rock, MapColor.stoneColor, MItems.radiant_quartz, 0, 1, 5, 1, 2, "pickaxe", 3, true).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_radiant").setCreativeTab(Minestrappolation.tabMBuilding);
 		biome_diamond = new BlockBiomeDiamond(0, 0, Material.rock, MapColor.stoneColor, Items.diamond, 0, 3, 7, 1, 0, "pickaxe", 2, true).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_diamond").setCreativeTab(Minestrappolation.tabMBuilding);
 		biome_emerald = new BlockBiomeEmerald(0, 0, Material.rock, MapColor.stoneColor, Items.emerald, 0, 3, 7, 1, 0, "pickaxe", 2, true).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_emerald").setCreativeTab(Minestrappolation.tabMBuilding);
-		blazium_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.blaze_shard, 0, 1, 2, 1, 4, "pickaxe", 2, true).setHardness(3.0F).setStepSound(Block.soundTypePiston).setResistance(5.0F).setUnlocalizedName("blazium_ore").setCreativeTab(Minestrappolation.tabMBuilding);
+		blazium_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.blaze_shard, 0, 1, 2, 1, 4, "pickaxe", 2, true).setHardness(3.0F).setStepSound(Block.soundTypePiston).setResistance(5.0F).setLightLevel(0.5F).setUnlocalizedName("blazium_ore").setCreativeTab(Minestrappolation.tabMBuilding);
 		soul_ore = new BlockSoulOre(Material.ground, MapColor.stoneColor, MItems.soul_gem, 0, 1, 7, 1, 0, "shovel", 2, true).setHardness(2.0F).setStepSound(Block.soundTypeSand).setResistance(3.0F).setUnlocalizedName("soul_ore").setCreativeTab(Minestrappolation.tabMBuilding);
 		titanium_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 3, false).setHardness(5.0F).setResistance(100.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("titanium_ore").setCreativeTab(Minestrappolation.tabMBuilding);
 		biome_titanium = new BlockBiomeTitanium(0, 0, Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 3, false).setHardness(5.0F).setResistance(100.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_titanium").setCreativeTab(Minestrappolation.tabMBuilding);
 		continnium_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 4, false).setHardness(4.0F).setResistance(20.0F).setLightLevel(0.5F).setStepSound(Block.soundTypePiston).setUnlocalizedName("continnium_ore").setCreativeTab(Minestrappolation.tabMBuilding);
+		dimensium_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 4, false).setHardness(4.0F).setResistance(20.0F).setLightLevel(0.5F).setStepSound(Block.soundTypePiston).setUnlocalizedName("dimensium_ore").setCreativeTab(Minestrappolation.tabMBuilding);
 		
 		//Stairs
 		redwood_stairs = new MBlockStairs(ministrapp_planks.getStateFromMeta(MWoodType.REDWOOD.getMetadata()), 300).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("redwood_stairs");
@@ -1009,6 +1013,7 @@ public class MBlocks
 		register(blazium_block);
 		register(soul_gem_block);
 		register(godstone);
+		register(dimensium_block);
 		register(terracreep, ItemBlockTerraCreep.class);
 		
 		register(stone_boulder);
@@ -1048,6 +1053,7 @@ public class MBlocks
 		register(glaical_invincium);
 		register(invincium);
 		register(continnium_ore);
+		register(dimensium_ore);
 		
 		//Decor Tab
 		register(shrub_grass);
@@ -1325,6 +1331,7 @@ public class MBlocks
 		glacierite_block.setHarvestLevel("pickaxe", 2);
 		blazium_block.setHarvestLevel("pickaxe", 2);
 		soul_gem_block.setHarvestLevel("pickaxe", 3);
+		titanium_block.setHarvestLevel("pickaxe", 4);
 		glass_window.setHarvestLevel("pickaxe", 0);
 		framed_glass_pane.setHarvestLevel("pickaxe", 0);
 		steel_mesh.setHarvestLevel("pickaxe", 0);

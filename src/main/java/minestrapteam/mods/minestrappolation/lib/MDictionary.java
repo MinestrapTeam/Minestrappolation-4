@@ -36,6 +36,7 @@ public class MDictionary
 		OreDictionary.registerOre("gemQuartzAny", MItems.radiant_quartz);
 		OreDictionary.registerOre("gemSoul", MItems.soul_gem);
 		OreDictionary.registerOre("dustDiamond", MItems.diamond_dust);
+		OreDictionary.registerOre("ingotDimensium", MItems.dimensium_ingot);
 		
 		OreDictionary.registerOre("blockCopper", MBlocks.copper_block);
 		OreDictionary.registerOre("blockTin", MBlocks.tin_block);
@@ -50,6 +51,7 @@ public class MDictionary
 		OreDictionary.registerOre("blockPlutonium", MBlocks.plutonium_block);
 		OreDictionary.registerOre("blockUranium", MBlocks.uranium_block);
 		OreDictionary.registerOre("blockSoulGem", MBlocks.soul_gem_block);
+		OreDictionary.registerOre("blockDimensium", MBlocks.dimensium_block);
 		
 		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 0));
 		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 1));
@@ -183,6 +185,7 @@ public class MDictionary
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.titanium_block), new Object[] { "III", "III", "III", 'I', "ingotTitanium" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.blazium_block), new Object[] { "III", "III", "III", 'I', "ingotBlazium" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.soul_gem_block), new Object[] { "III", "III", "III", 'I', "gemSoul" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.dimensium_block), new Object[] { "III", "III", "III", 'I', "ingotDimensium" }));
 		
 		//Tech
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.crate, 1), new Object[] { "WWW", "SSS", "WWW", 'W', "plankWood", 'S', "stickWood" }));

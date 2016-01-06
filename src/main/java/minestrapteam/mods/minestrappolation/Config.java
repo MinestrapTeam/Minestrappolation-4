@@ -36,6 +36,7 @@ public class Config
 	public static Boolean	genMud;
 	public static Boolean	genRubble;
 	public static Boolean   genContinnium;
+	public static Boolean   genDimensium;
 	
 	public static Boolean	genBiomeStones;
 	
@@ -169,6 +170,7 @@ public class Config
 		genMud = config.get("Ores", "GenerateMud", true, "Set to False to prevent Mud from generating.").getBoolean();
 		genRubble = config.get("Ores", "GenerateRubble", true, "Set to False to prevent Rubble from generating.").getBoolean();
 		genContinnium = config.get("Ores", "GenerateContinnium", true, "Set to False to prevent Continnium Ore from generating.").getBoolean();
+		genDimensium = config.get("Ores", "GenerateDimensium", true, "Set to False to prevent Dimensium Ore from generating.").getBoolean();
 
 		genBiomeStones = config.get("Mechanics", "GenerateBiomeStones", true, "Set to False to prevent Biome stones from generating.").getBoolean();
 		

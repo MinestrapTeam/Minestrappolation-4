@@ -78,6 +78,7 @@ public class MGenHandler implements IWorldGenerator
 		this.generateHangingMoss(world, rand, x1, z1, MBlocks.hanging_glow_moss);
 		
 		this.generateOre(MBlocks.continnium_ore, world, rand, x1, z1, 3, 12, 3, 15, 100, BlockHelper.forBlock(Blocks.end_stone), Config.genContinnium);
+		this.generateOre(MBlocks.dimensium_ore, world, rand, x1, z1, 3, 12, 3, 15, 100, BlockHelper.forBlock(Blocks.end_stone), Config.genDimensium);
 	}
 	
 	public void generateOverworld(World world, Random rand, int x, int z)
