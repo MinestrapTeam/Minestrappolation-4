@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "ministrapp:items/steel_wrench”
+        "layer0": "ministrapp:items/steel_wrench"
     },
     "display": {
         "thirdperson": {

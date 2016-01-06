@@ -37,6 +37,9 @@ public class Tables {
 		Chance.createChanceTable("boulder_cold", new ArrayList<ItemStack>());
 		Chance.createChanceTable("boulder_ice", new ArrayList<ItemStack>());
 		Chance.createChanceTable("boulder_ocean", new ArrayList<ItemStack>());
+		
+		//Dimensional Fishery
+		Chance.createChanceTable("overworld_items", new ArrayList<ItemStack>());
 	}
 	
 	private static void populateTables()
@@ -227,5 +230,9 @@ public class Tables {
     	Chance.addToChanceTable("boulder_ocean", new ItemStack(Items.prismarine_crystals, 1, 0), 4);
     	Chance.addToChanceTable("boulder_ocean", new ItemStack(Items.diamond, 1, 0), 2);
     	Chance.addToChanceTable("boulder_ocean", new ItemStack(Blocks.sea_lantern, 1, 0), 2);
+    	
+    	//Dimensional Fishery -- Overworld
+    	Chance.addToChanceTable("overworld_items", new ItemStack(Blocks.dirt, 1, 0), 50);
+    	Chance.addToChanceTable("overworld_items", new ItemStack(Blocks.cobblestone, 1, 0), 50);
 	}
 }

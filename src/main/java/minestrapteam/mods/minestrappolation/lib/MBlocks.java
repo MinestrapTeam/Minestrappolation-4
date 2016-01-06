@@ -201,6 +201,7 @@ public class MBlocks
 	public static Block lamp_prismarine;
 	
 	//Utility Decor Blocks
+	public static Block decaying_compacted_dirt;
 	public static Block magnetic_torch;
 	public static Block lit_candle;
 	public static Block unholy_candle;
@@ -612,6 +613,7 @@ public class MBlocks
 		lamp_prismarine = new BlockLamp(Material.rock, MapColor.stoneColor, "prismarine").setHardness(1.5F).setResistance(10.0F).setLightLevel(1.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_lamp_prismarine");
 		
 		//Utility Decor Blocks
+		decaying_compacted_dirt = new BlockDecayingCompacted(Material.rock, "overworld").setStepSound(Block.soundTypeGravel).setBlockUnbreakable().setUnlocalizedName("decaying_compacted_dirt");
 		magnetic_torch = new BlockMagneticTorch().setLightLevel(0.9375F).setStepSound(Block.soundTypeWood).setUnlocalizedName("magnetic_torch").setCreativeTab(Minestrappolation.tabMDecor);
 		candle = new BlockCandle(Material.coral, false, false).setHardness(0.2F).setStepSound(Block.soundTypeStone).setUnlocalizedName("candle").setCreativeTab(Minestrappolation.tabMDecor);
 		lit_candle = new BlockCandle(Material.coral, true, false).setHardness(0.2F).setStepSound(Block.soundTypeStone).setLightLevel(0.7F).setUnlocalizedName("lit_candle");
@@ -1193,6 +1195,9 @@ public class MBlocks
 		
 		//Foods Tab
 		register(meat_block);
+		
+		//Unobtainable
+		register(decaying_compacted_dirt);
 		
 		//Building Tab (Slabs)
 		registerSlab("deepstone_slab", "deepstone_double_slab", deepstone_slab, deepstone_double_slab);
