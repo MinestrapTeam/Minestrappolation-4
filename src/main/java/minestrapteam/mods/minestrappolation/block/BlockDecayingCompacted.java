@@ -65,7 +65,9 @@ public class BlockDecayingCompacted extends Block
         else
         {
         	stack = (ItemStack) Chance.getRandomFromTable(dimension + "_items");
-        	item = new EntityItem(worldIn, pos.getX(), pos.getY(), pos.getZ(), stack);
+        	int quantity = rand.nextInt(stack.stackSize);
+        	ItemStack newstack = new ItemStack(stack.getItem(), quantity + 1, stack.getItemDamage());
+        	item = new EntityItem(worldIn, pos.getX(), pos.getY(), pos.getZ(), newstack.copy());
         	worldIn.spawnEntityInWorld(item);
         	worldIn.setBlockState(pos, Blocks.air.getDefaultState(), 2);
         }

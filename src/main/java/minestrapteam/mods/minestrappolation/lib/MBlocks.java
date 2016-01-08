@@ -202,6 +202,9 @@ public class MBlocks
 	
 	//Utility Decor Blocks
 	public static Block decaying_compacted_dirt;
+	public static Block decaying_compacted_netherrack;
+	public static Block decaying_compacted_endstone;
+	public static Block decaying_compacted_glowshrooms;
 	public static Block magnetic_torch;
 	public static Block lit_candle;
 	public static Block unholy_candle;
@@ -614,6 +617,9 @@ public class MBlocks
 		
 		//Utility Decor Blocks
 		decaying_compacted_dirt = new BlockDecayingCompacted(Material.rock, "overworld").setStepSound(Block.soundTypeGravel).setBlockUnbreakable().setUnlocalizedName("decaying_compacted_dirt");
+		decaying_compacted_netherrack = new BlockDecayingCompacted(Material.rock, "nether").setStepSound(Block.soundTypeStone).setBlockUnbreakable().setUnlocalizedName("decaying_compacted_netherrack");
+		decaying_compacted_endstone = new BlockDecayingCompacted(Material.rock, "end").setStepSound(Block.soundTypeStone).setBlockUnbreakable().setUnlocalizedName("decaying_compacted_endstone");
+		decaying_compacted_glowshrooms = new BlockDecayingCompacted(Material.rock, "virtious").setLightLevel(0.6F).setStepSound(Block.soundTypeStone).setBlockUnbreakable().setUnlocalizedName("decaying_compacted_glowshrooms");
 		magnetic_torch = new BlockMagneticTorch().setLightLevel(0.9375F).setStepSound(Block.soundTypeWood).setUnlocalizedName("magnetic_torch").setCreativeTab(Minestrappolation.tabMDecor);
 		candle = new BlockCandle(Material.coral, false, false).setHardness(0.2F).setStepSound(Block.soundTypeStone).setUnlocalizedName("candle").setCreativeTab(Minestrappolation.tabMDecor);
 		lit_candle = new BlockCandle(Material.coral, true, false).setHardness(0.2F).setStepSound(Block.soundTypeStone).setLightLevel(0.7F).setUnlocalizedName("lit_candle");
@@ -1198,6 +1204,9 @@ public class MBlocks
 		
 		//Unobtainable
 		register(decaying_compacted_dirt);
+		register(decaying_compacted_netherrack);
+		register(decaying_compacted_endstone);
+		register(decaying_compacted_glowshrooms);
 		
 		//Building Tab (Slabs)
 		registerSlab("deepstone_slab", "deepstone_double_slab", deepstone_slab, deepstone_double_slab);

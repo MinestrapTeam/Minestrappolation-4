@@ -1,0 +1,20 @@
+{
+    "variants": {
+       "age=0": { "model": "ministrapp:compacted_end_stone_0" },
+	   "age=1": { "model": "ministrapp:compacted_end_stone_1" },
+       "age=2": { "model": "ministrapp:compacted_end_stone_2" },
+       "age=3": { "model": "ministrapp:compacted_end_stone_3" },
+       "age=4": { "model": "ministrapp:compacted_end_stone_4" },
+       "age=5": { "model": "ministrapp:compacted_end_stone_5" },
+	   "age=6": { "model": "ministrapp:compacted_end_stone_6" },
+	   "age=7": { "model": "ministrapp:compacted_end_stone_7" },
+	   "age=8": { "model": "ministrapp:compacted_end_stone_8" },
+	   "age=9": { "model": "ministrapp:compacted_end_stone_9" },
+	   "age=10": { "model": "ministrapp:compacted_end_stone_10" },
+	   "age=11": { "model": "ministrapp:compacted_end_stone_11" },
+	   "age=12": { "model": "ministrapp:compacted_end_stone_12" },
+	   "age=13": { "model": "ministrapp:compacted_end_stone_13" },
+	   "age=14": { "model": "ministrapp:compacted_end_stone_14" },
+	   "age=15": { "model": "ministrapp:compacted_end_stone_15" }
+    }
+}

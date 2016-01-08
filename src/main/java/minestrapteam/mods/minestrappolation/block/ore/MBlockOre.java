@@ -162,7 +162,7 @@ public class MBlockOre extends MBlock
 	@Override
     public boolean canEntityDestroy(IBlockAccess world, BlockPos pos, Entity entity)
     {
-        if (entity instanceof net.minecraft.entity.boss.EntityDragon && this == MBlocks.continnium_ore)
+        if (entity instanceof net.minecraft.entity.boss.EntityDragon && (this == MBlocks.continnium_ore || this == MBlocks.dimensium_ore))
         {
             return false;
         }

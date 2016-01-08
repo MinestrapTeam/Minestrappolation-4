@@ -615,6 +615,15 @@ tile.ritual_conduit.name=Ritual Conduit
 tile.dimensional_fishery.name=Interdimensional Item Fishery
 tile.radiant_pedestal.name=Radiant Quartz Pedestal
 tile.wither_ash.name=Wither Ash
+tile.jadachite.name=Polished Jadachite
+tile.jadachite_bricks.name=Jadachite Bricks
+tile.jadachite_tiles.name=Jadachite Tiles
+tile.jadachite_brick_stairs.name=Jadachite Brick Stairs
+tile.jadachite_brick_slab.name=Jadachite Brick Slab
+tile.decaying_compacted_dirt.name=Decaying Compressed Dirt
+tile.decaying_compacted_netherrack.name=Decaying Compressed Netherrack
+tile.decaying_compacted_endstone.name=Decaying Compressed End Stone
+tile.decaying_compacted_glowshrooms.name=Decaying Compressed Glowshrooms
 
 item.dough.name=Dough
 item.bun.name=Bun
@@ -904,6 +913,8 @@ item.will_o_wisp.name=Bottled Will-o'-the-Wisp
 item.bronze_plating.name=Bronze Plating
 item.wither_bone.name=Withered Bone
 item.deathmeal.name=Deathmeal
+item.jadachite_shard.name=Jadachite Shard
+item.dimensium_dust.name=Dimensium Dust
 
 itemGroup.tabMBuilding=Minestrapp Building Blocks
 itemGroup.tabMDecor=Minestrapp Decoration Blocks
