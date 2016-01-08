@@ -31,6 +31,7 @@ import minestrapteam.mods.minestrappolation.item.ItemPosChip;
 import minestrapteam.mods.minestrappolation.item.ItemSifter;
 import minestrapteam.mods.minestrappolation.item.ItemSoulBottle;
 import minestrapteam.mods.minestrappolation.item.ItemSoulGem;
+import minestrapteam.mods.minestrappolation.item.ItemUpgradeChips;
 import minestrapteam.mods.minestrappolation.item.ItemWrench;
 import minestrapteam.mods.minestrappolation.item.MItemFoiled;
 import net.minecraft.client.Minecraft;
@@ -322,6 +323,7 @@ public class MItems extends Item
 	public static Item							backpack;
 	public static Item							satchel;
 	public static Item							poschip;
+	public static Item							upgradechip;
 
 	//Tool Enums
 	public static final Item.ToolMaterial		COPPER			= EnumHelper.addToolMaterial("COPPER", 1, 186, 4.5F, 1.5F, 18);
@@ -614,6 +616,7 @@ public class MItems extends Item
 		amuletOves = new ItemAmulet(36, "damnum praesidium").setUnlocalizedName("amulet_oves").setCreativeTab(Minestrappolation.tabMTools);
 		amuletPullum = new ItemAmulet(26, "libramen praesidium").setUnlocalizedName("amulet_pullum").setCreativeTab(Minestrappolation.tabMTools);
 		poschip = new ItemPosChip().setUnlocalizedName("position_chip").setCreativeTab(Minestrappolation.tabMTech);
+		upgradechip = new ItemUpgradeChips().setUnlocalizedName("chips").setCreativeTab(Minestrappolation.tabMTech);
 	}
 	
 	public static void register()
@@ -871,6 +874,7 @@ public class MItems extends Item
 		
 		register(wrench);
 		register(poschip);
+		register(upgradechip);
 	}
 	
 	public static void register(Item item)

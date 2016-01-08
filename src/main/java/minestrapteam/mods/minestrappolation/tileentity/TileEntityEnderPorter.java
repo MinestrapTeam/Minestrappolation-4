@@ -1,15 +1,13 @@
 package minestrapteam.mods.minestrappolation.tileentity;
 
+import java.util.Random;
+
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
+import minestrapteam.mods.minestrappolation.lib.MItems;
 import net.minecraft.block.Block;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.network.Packet;
-import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.util.BlockPos;
-import net.minecraft.world.World;
 
 public class TileEntityEnderPorter extends TileEntityInventory
 {
@@ -32,12 +30,32 @@ public class TileEntityEnderPorter extends TileEntityInventory
 	
 	public boolean canActivate()
 	{
+		Random rand = new Random();
 		if(this.itemStacks[0] != null && this.itemStacks[0].stackSize > 0 && getChipBlock() == MBlocks.enderporter)
 		{
-			this.itemStacks[0].stackSize --;
-			if(this.itemStacks[0].stackSize == 0)
+			int chance;
+			
+			if(this.getUpgrade() != null && this.getUpgrade().getIsItemStackEqual(new ItemStack(MItems.upgradechip, 1, 0)))
 			{
-				this.itemStacks[0] = null;
+				chance = 4;
+			}
+			else
+			{
+				chance = 1;
+			}
+
+			int num = rand.nextInt(chance);
+			if(num == 0)
+			{
+				num = 1;
+			}
+			if(num == 1)
+			{
+				this.itemStacks[0].stackSize --;
+				if(this.itemStacks[0].stackSize == 0)
+				{
+					this.itemStacks[0] = null;
+				}
 			}
 			return true;
 		}
@@ -63,11 +81,16 @@ public class TileEntityEnderPorter extends TileEntityInventory
 		}
 		return this.worldObj.getBlockState(this.pos).getBlock();
 	}
+	
+	public ItemStack getUpgrade()
+	{
+		return this.itemStacks[2];
+	}
 
 	@Override
 	public int getSizeInventory() 
 	{
-		return 2;
+		return 3;
 	}
 	
 }

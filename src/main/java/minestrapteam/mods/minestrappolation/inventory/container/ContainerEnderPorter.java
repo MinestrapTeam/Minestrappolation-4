@@ -25,6 +25,7 @@ public class ContainerEnderPorter extends MinestrappolationContainer
 		this.porter = porter;
 		this.addSlotToContainer(new SlotAccept(porter, 0, 80, 17, Items.ender_pearl));
 		this.addSlotToContainer(new SlotAccept(porter, 1, 80, 53, MItems.poschip));
+		this.addSlotToContainer(new SlotAccept(porter, 2, 80, 73, MItems.upgradechip));
 		this.addInventorySlots();
 	}
 	
