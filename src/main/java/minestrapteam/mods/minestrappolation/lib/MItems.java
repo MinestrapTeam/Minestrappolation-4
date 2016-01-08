@@ -27,6 +27,7 @@ import minestrapteam.mods.minestrappolation.item.ItemMSoup;
 import minestrapteam.mods.minestrappolation.item.ItemMSword;
 import minestrapteam.mods.minestrappolation.item.ItemMudBall;
 import minestrapteam.mods.minestrappolation.item.ItemPortableCrafting;
+import minestrapteam.mods.minestrappolation.item.ItemPosChip;
 import minestrapteam.mods.minestrappolation.item.ItemSifter;
 import minestrapteam.mods.minestrappolation.item.ItemSoulBottle;
 import minestrapteam.mods.minestrappolation.item.ItemSoulGem;
@@ -320,6 +321,7 @@ public class MItems extends Item
 	public static Item							portable_crafting_table;
 	public static Item							backpack;
 	public static Item							satchel;
+	public static Item							poschip;
 
 	//Tool Enums
 	public static final Item.ToolMaterial		COPPER			= EnumHelper.addToolMaterial("COPPER", 1, 186, 4.5F, 1.5F, 18);
@@ -611,6 +613,7 @@ public class MItems extends Item
 		amuletVaccam = new ItemAmuletVaccam("damnum incrementum").setUnlocalizedName("amulet_vaccam").setCreativeTab(Minestrappolation.tabMTools);
 		amuletOves = new ItemAmulet(36, "damnum praesidium").setUnlocalizedName("amulet_oves").setCreativeTab(Minestrappolation.tabMTools);
 		amuletPullum = new ItemAmulet(26, "libramen praesidium").setUnlocalizedName("amulet_pullum").setCreativeTab(Minestrappolation.tabMTools);
+		poschip = new ItemPosChip().setUnlocalizedName("position_chip").setCreativeTab(Minestrappolation.tabMTech);
 	}
 	
 	public static void register()
@@ -867,6 +870,7 @@ public class MItems extends Item
 		register(bedrock_hoe);
 		
 		register(wrench);
+		register(poschip);
 	}
 	
 	public static void register(Item item)

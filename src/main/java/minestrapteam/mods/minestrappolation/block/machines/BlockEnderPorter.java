@@ -1,13 +1,22 @@
 package minestrapteam.mods.minestrappolation.block.machines;
 
+import minestrapteam.mods.minestrappolation.Minestrappolation;
 import minestrapteam.mods.minestrappolation.block.BlockDirectional;
+import minestrapteam.mods.minestrappolation.handlers.MGuiHandler;
+import minestrapteam.mods.minestrappolation.item.ItemWrench;
+import minestrapteam.mods.minestrappolation.lib.MAchievements;
+import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import minestrapteam.mods.minestrappolation.lib.MItems;
+import minestrapteam.mods.minestrappolation.tileentity.TileEntityCrusher;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntityEnderPorter;
+import minestrapteam.mods.minestrappolation.util.PlayerHelper;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
+import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
@@ -29,46 +38,40 @@ public class BlockEnderPorter extends BlockDirectional
 	{
 		return new TileEntityEnderPorter();
 	}
-	
-	@Override
-	public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack)
-    {
-		TileEntityEnderPorter te = (TileEntityEnderPorter) worldIn.getTileEntity(pos);
-		te.setLinkPos(pos.getX(), pos.getY(), pos.getZ());
-		te.getDescriptionPacket();
-    }
-	
+
 	@Override
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ)
 	{
-		if (worldIn.isRemote)
-			return true;
-		
-		if(playerIn.getHeldItem() != null && playerIn.getHeldItem().getItem() == MItems.wrench)
+		if(!worldIn.isRemote)
 		{
-			ItemStack stack = playerIn.getHeldItem();
-			NBTTagCompound nbt = stack.getTagCompound();
-			
-			if(nbt.hasKey("x"))
+			if(playerIn.getHeldItem() != null)
+			{
+					playerIn.openGui(Minestrappolation.instance, MGuiHandler.GUIID_ENDERPORTER, worldIn, pos.getX(), pos.getY(), pos.getZ());
+			}
+			else
 			{
 				TileEntityEnderPorter te = (TileEntityEnderPorter) worldIn.getTileEntity(pos);
-				te.setLinkPos(nbt.getInteger("x"), nbt.getInteger("y"), nbt.getInteger("z"));
-				te.getDescriptionPacket();
-				
-				TileEntityEnderPorter te2 = (TileEntityEnderPorter) worldIn.getTileEntity(new BlockPos(nbt.getInteger("x"), nbt.getInteger("y"), nbt.getInteger("z")));
-				te2.setLinkPos(pos.getX(), pos.getY(), pos.getZ());
-				te2.getDescriptionPacket();
+				if(te.canActivate())
+				{
+					playerIn.setPositionAndUpdate(te.getChipPos().getX() + .5, te.getChipPos().getY() + 1, te.getChipPos().getZ() + .5);
+				}
 			}
 		}
-		else
-		{
-			TileEntityEnderPorter te = (TileEntityEnderPorter) worldIn.getTileEntity(pos);
+		return true;
+	}
+	
+	@Override
+	public void breakBlock(World worldIn, BlockPos pos, IBlockState state)
+	{
+		TileEntity tileentity = worldIn.getTileEntity(pos);
 			
-			playerIn.setPositionAndUpdate(te.x + .5, te.y + 1, te.z + .5);
+		if (tileentity instanceof TileEntityCrusher)
+		{
+			InventoryHelper.dropInventoryItems(worldIn, pos, (TileEntityEnderPorter) tileentity);
+			worldIn.updateComparatorOutputLevel(pos, this);
 		}
 		
-		
-		return true;
+		super.breakBlock(worldIn, pos, state);
 	}
 	
 	@Override
@@ -89,4 +92,6 @@ public class BlockEnderPorter extends BlockDirectional
 		return 3;
 	}
 
+
 }
+
