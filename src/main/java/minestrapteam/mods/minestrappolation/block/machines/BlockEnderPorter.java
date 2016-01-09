@@ -65,6 +65,13 @@ public class BlockEnderPorter extends BlockDirectional
 				{
 					entityIn.setPositionAndUpdate(te.getChipPos().getX() + .5, te.getChipPos().getY() + hasInversionUpgrade(worldIn, pos), te.getChipPos().getZ() + .5);
 				}
+				else
+				{
+					if(te.canActivate())
+					{
+						entityIn.setPositionAndUpdate(te.getChipPos().getX() + .5, te.getChipPos().getY() + hasInversionUpgrade(worldIn, pos), te.getChipPos().getZ() + .5);
+					}
+				}
 			}
 		}
 		
