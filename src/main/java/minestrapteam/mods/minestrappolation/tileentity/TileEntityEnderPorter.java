@@ -49,6 +49,7 @@ public class TileEntityEnderPorter extends TileEntityInventory
 			{
 				num = 1;
 			}
+			
 			if(num == 1)
 			{
 				this.itemStacks[0].stackSize --;

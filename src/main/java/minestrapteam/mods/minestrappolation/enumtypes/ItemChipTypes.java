@@ -4,7 +4,9 @@ import net.minecraft.util.IStringSerializable;
 
 public enum ItemChipTypes implements IStringSerializable
 {
-	PRESERVER(0, "preserver");
+	PRESERVER(0, "preserver"),
+	COLLISION(1, "collision"),
+	INVERSION(2, "inversion");
 	
 	private static final ItemChipTypes[]	META_LOOKUP	= new ItemChipTypes[values().length];
 	private final int						meta;

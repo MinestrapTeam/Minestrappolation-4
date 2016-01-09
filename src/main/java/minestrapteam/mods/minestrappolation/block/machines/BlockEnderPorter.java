@@ -1,5 +1,7 @@
 package minestrapteam.mods.minestrappolation.block.machines;
 
+import java.util.List;
+
 import minestrapteam.mods.minestrappolation.Minestrappolation;
 import minestrapteam.mods.minestrappolation.block.BlockDirectional;
 import minestrapteam.mods.minestrappolation.handlers.MGuiHandler;
@@ -13,13 +15,16 @@ import minestrapteam.mods.minestrappolation.util.PlayerHelper;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
@@ -31,6 +36,7 @@ public class BlockEnderPorter extends BlockDirectional
 	public BlockEnderPorter() 
 	{
 		super(Material.rock);
+		setBlockBounds();
 	}
 
 	@Override
@@ -38,7 +44,32 @@ public class BlockEnderPorter extends BlockDirectional
 	{
 		return new TileEntityEnderPorter();
 	}
-
+	
+	private void setBlockBounds() 
+	{
+		float min = 0.01F;
+		float max = 1 - min;
+		setBlockBounds(min, min, min, max, max, max);
+	}
+	
+	@Override
+	public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) 
+    {
+		super.onEntityCollidedWithBlock(worldIn, pos, state, entityIn);
+		if(!worldIn.isRemote)
+		{
+			TileEntityEnderPorter te = (TileEntityEnderPorter) worldIn.getTileEntity(pos);
+			if(te.getUpgrade() != null && te.getUpgrade().isItemEqual(new ItemStack(MItems.upgradechip, 1, 1)))
+			{
+				if(!(entityIn instanceof EntityPlayer))
+				{
+					entityIn.setPositionAndUpdate(te.getChipPos().getX() + .5, te.getChipPos().getY() + hasInversionUpgrade(worldIn, pos), te.getChipPos().getZ() + .5);
+				}
+			}
+		}
+		
+    }
+	
 	@Override
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ)
 	{
@@ -53,7 +84,7 @@ public class BlockEnderPorter extends BlockDirectional
 				TileEntityEnderPorter te = (TileEntityEnderPorter) worldIn.getTileEntity(pos);
 				if(te.canActivate())
 				{
-					playerIn.setPositionAndUpdate(te.getChipPos().getX() + .5, te.getChipPos().getY() + 1, te.getChipPos().getZ() + .5);
+					playerIn.setPositionAndUpdate(te.getChipPos().getX() + .5, te.getChipPos().getY() + hasInversionUpgrade(worldIn, pos), te.getChipPos().getZ() + .5);
 				}
 			}
 		}
@@ -72,6 +103,18 @@ public class BlockEnderPorter extends BlockDirectional
 		}
 		
 		super.breakBlock(worldIn, pos, state);
+	}
+	
+	private int hasInversionUpgrade(World world, BlockPos pos)
+	{
+		TileEntityEnderPorter te = (TileEntityEnderPorter) world.getTileEntity(pos);
+		TileEntityEnderPorter te2 = (TileEntityEnderPorter) world.getTileEntity(new BlockPos(te.getChipPos().getX(), te.getChipPos().getY(), te.getChipPos().getZ()));
+		
+		if(te2.getUpgrade() != null && te2.getUpgrade().getIsItemStackEqual(new ItemStack(MItems.upgradechip, 1, 2)))
+		{
+			return -1;
+		}
+		return 1;
 	}
 	
 	@Override

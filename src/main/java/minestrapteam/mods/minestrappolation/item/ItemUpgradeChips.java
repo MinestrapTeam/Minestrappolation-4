@@ -33,6 +33,8 @@ public class ItemUpgradeChips extends Item
 		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "chips");
 		
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:preserver_chip");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:collision_chip");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:inversion_chip");
 		
 		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "chips");
 		ItemChipTypes[] aenumtype = ItemChipTypes.values();
