@@ -27,7 +27,7 @@ public class GuiEnderPorter extends GuiContainer
 	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY)
 	{
 		this.fontRendererObj.drawString(StatCollector.translateToLocal("EnderPorter"), 55, 7, 4210752);
-		if(porter.getChipBlock() != MBlocks.enderporter)
+		if(porter.getChipBlock() != MBlocks.enderporter && !porter.hasSelfSufficient())
 		{
 			this.fontRendererObj.drawString("Wrong Block Type!", 7, 40, 4210752);
 		}

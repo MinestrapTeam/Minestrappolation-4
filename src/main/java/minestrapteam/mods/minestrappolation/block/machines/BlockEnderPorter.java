@@ -63,13 +63,13 @@ public class BlockEnderPorter extends BlockDirectional
 			{
 				if(!(entityIn instanceof EntityPlayer))
 				{
-					entityIn.setPositionAndUpdate(te.getChipPos().getX() + .5, te.getChipPos().getY() + hasInversionUpgrade(worldIn, pos), te.getChipPos().getZ() + .5);
+					te.transportEnity(worldIn, entityIn, pos);
 				}
 				else
 				{
 					if(te.canActivate())
 					{
-						entityIn.setPositionAndUpdate(te.getChipPos().getX() + .5, te.getChipPos().getY() + hasInversionUpgrade(worldIn, pos), te.getChipPos().getZ() + .5);
+						te.transportEnity(worldIn, entityIn, pos);
 					}
 				}
 			}
@@ -91,7 +91,7 @@ public class BlockEnderPorter extends BlockDirectional
 				TileEntityEnderPorter te = (TileEntityEnderPorter) worldIn.getTileEntity(pos);
 				if(te.canActivate())
 				{
-					playerIn.setPositionAndUpdate(te.getChipPos().getX() + .5, te.getChipPos().getY() + hasInversionUpgrade(worldIn, pos), te.getChipPos().getZ() + .5);
+					te.transportEnity(worldIn, playerIn, pos);
 				}
 			}
 		}
@@ -103,25 +103,13 @@ public class BlockEnderPorter extends BlockDirectional
 	{
 		TileEntity tileentity = worldIn.getTileEntity(pos);
 			
-		if (tileentity instanceof TileEntityCrusher)
+		if (tileentity instanceof TileEntityEnderPorter)
 		{
 			InventoryHelper.dropInventoryItems(worldIn, pos, (TileEntityEnderPorter) tileentity);
 			worldIn.updateComparatorOutputLevel(pos, this);
 		}
 		
 		super.breakBlock(worldIn, pos, state);
-	}
-	
-	private int hasInversionUpgrade(World world, BlockPos pos)
-	{
-		TileEntityEnderPorter te = (TileEntityEnderPorter) world.getTileEntity(pos);
-		TileEntityEnderPorter te2 = (TileEntityEnderPorter) world.getTileEntity(new BlockPos(te.getChipPos().getX(), te.getChipPos().getY(), te.getChipPos().getZ()));
-		
-		if(te2.getUpgrade() != null && te2.getUpgrade().getIsItemStackEqual(new ItemStack(MItems.upgradechip, 1, 2)))
-		{
-			return -1;
-		}
-		return 1;
 	}
 	
 	@Override

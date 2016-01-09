@@ -5,12 +5,15 @@ import java.util.Random;
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import minestrapteam.mods.minestrappolation.lib.MItems;
 import net.minecraft.block.Block;
+import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.BlockPos;
+import net.minecraft.world.World;
 
 public class TileEntityEnderPorter extends TileEntityInventory
 {
+
 	public TileEntityEnderPorter()
 	{
 
@@ -31,7 +34,7 @@ public class TileEntityEnderPorter extends TileEntityInventory
 	public boolean canActivate()
 	{
 		Random rand = new Random();
-		if(this.itemStacks[0] != null && this.itemStacks[0].stackSize > 0 && getChipBlock() == MBlocks.enderporter)
+		if(this.itemStacks[0] != null && this.itemStacks[0].stackSize > 0 && this.getChipBlock() == MBlocks.enderporter || this.hasSelfSufficient())
 		{
 			int chance;
 			
@@ -52,12 +55,56 @@ public class TileEntityEnderPorter extends TileEntityInventory
 			
 			if(num == 1)
 			{
-				this.itemStacks[0].stackSize --;
+				if(this.hasSelfSufficient())
+				{
+					if(this.itemStacks[0].stackSize >= 2)
+					{
+						this.itemStacks[0].stackSize -= 2;
+					}
+					else
+					{
+						return false;
+					}
+				}
+				else
+				{
+					this.itemStacks[0].stackSize --;
+				}
+				
 				if(this.itemStacks[0].stackSize == 0)
 				{
 					this.itemStacks[0] = null;
 				}
 			}
+			return true;
+		}
+		return false;
+	}
+	
+	public void transportEnity(World world, Entity entity, BlockPos pos)
+	{
+		entity.setPositionAndUpdate(getChipPos().getX() + .5, getChipPos().getY() + hasInversionUpgrade(world, pos), getChipPos().getZ() + .5);
+	}
+	
+	private int hasInversionUpgrade(World world, BlockPos pos)
+	{
+		if(!this.hasSelfSufficient())
+		{
+			TileEntityEnderPorter te = (TileEntityEnderPorter) world.getTileEntity(new BlockPos(getChipPos().getX(), getChipPos().getY(), getChipPos().getZ()));
+			
+			if(te.getUpgrade() != null && te.getUpgrade().getIsItemStackEqual(new ItemStack(MItems.upgradechip, 1, 2)))
+			{
+				return -1;
+			}
+			return 1;
+		}
+		return 1;
+	}
+	
+	public boolean hasSelfSufficient()
+	{
+		if(this.getUpgrade() != null && this.getUpgrade().getIsItemStackEqual(new ItemStack(MItems.upgradechip, 1, 3)))
+		{
 			return true;
 		}
 		return false;
