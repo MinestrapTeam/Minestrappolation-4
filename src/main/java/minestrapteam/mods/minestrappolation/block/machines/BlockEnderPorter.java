@@ -59,7 +59,7 @@ public class BlockEnderPorter extends BlockDirectional
 		if(!worldIn.isRemote)
 		{
 			TileEntityEnderPorter te = (TileEntityEnderPorter) worldIn.getTileEntity(pos);
-			if(te.getUpgrade() != null && te.getUpgrade().isItemEqual(new ItemStack(MItems.upgradechip, 1, 1)))
+			if(te.hasUpgradeChip(new ItemStack(MItems.upgradechip, 1, 1)))
 			{
 				if(!(entityIn instanceof EntityPlayer))
 				{

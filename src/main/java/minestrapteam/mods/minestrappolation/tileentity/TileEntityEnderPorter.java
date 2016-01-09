@@ -1,5 +1,8 @@
 package minestrapteam.mods.minestrappolation.tileentity;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Random;
 
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
@@ -14,6 +17,8 @@ import net.minecraft.world.World;
 public class TileEntityEnderPorter extends TileEntityInventory
 {
 
+	public HashMap<Integer, ItemStack> map = new HashMap<Integer, ItemStack>();
+	
 	public TileEntityEnderPorter()
 	{
 
@@ -38,9 +43,9 @@ public class TileEntityEnderPorter extends TileEntityInventory
 		{
 			int chance;
 			
-			if(this.getUpgrade() != null && this.getUpgrade().getIsItemStackEqual(new ItemStack(MItems.upgradechip, 1, 0)))
+			if(this.hasUpgradeChip(new ItemStack(MItems.upgradechip, 1, 0)))
 			{
-				chance = 4;
+				chance = 3;
 			}
 			else
 			{
@@ -57,26 +62,37 @@ public class TileEntityEnderPorter extends TileEntityInventory
 			{
 				if(this.hasSelfSufficient())
 				{
-					if(this.itemStacks[0].stackSize >= 2)
+					if(this.itemStacks[0] != null && this.itemStacks[0].stackSize >= 2)
 					{
 						this.itemStacks[0].stackSize -= 2;
-					}
-					else
-					{
-						return false;
+						if(this.itemStacks[0] != null && this.itemStacks[0].stackSize == 0)
+						{
+							this.itemStacks[0] = null;
+						}
+						return true;
 					}
 				}
 				else
 				{
 					this.itemStacks[0].stackSize --;
-				}
-				
-				if(this.itemStacks[0].stackSize == 0)
-				{
-					this.itemStacks[0] = null;
+					if(this.itemStacks[0] != null && this.itemStacks[0].stackSize == 0)
+					{
+						this.itemStacks[0] = null;
+					}
+					return true;
 				}
 			}
-			return true;
+			
+			if(this.hasSelfSufficient() && this.itemStacks[0] != null && this.itemStacks[0].stackSize >= 2)
+			{
+				return true;
+			}
+			
+			if(!this.hasSelfSufficient() && this.itemStacks[0] != null && this.itemStacks[0].stackSize >= 1)
+			{
+				return true;
+			}
+			
 		}
 		return false;
 	}
@@ -92,10 +108,11 @@ public class TileEntityEnderPorter extends TileEntityInventory
 		{
 			TileEntityEnderPorter te = (TileEntityEnderPorter) world.getTileEntity(new BlockPos(getChipPos().getX(), getChipPos().getY(), getChipPos().getZ()));
 			
-			if(te.getUpgrade() != null && te.getUpgrade().getIsItemStackEqual(new ItemStack(MItems.upgradechip, 1, 2)))
+			if(te.hasUpgradeChip(new ItemStack(MItems.upgradechip, 1, 2)))
 			{
 				return -1;
 			}
+			
 			return 1;
 		}
 		return 1;
@@ -103,7 +120,7 @@ public class TileEntityEnderPorter extends TileEntityInventory
 	
 	public boolean hasSelfSufficient()
 	{
-		if(this.getUpgrade() != null && this.getUpgrade().getIsItemStackEqual(new ItemStack(MItems.upgradechip, 1, 3)))
+		if(this.hasUpgradeChip(new ItemStack(MItems.upgradechip, 1, 3)))
 		{
 			return true;
 		}
@@ -130,15 +147,48 @@ public class TileEntityEnderPorter extends TileEntityInventory
 		return this.worldObj.getBlockState(this.pos).getBlock();
 	}
 	
-	public ItemStack getUpgrade()
+	public void getUpgrades()
 	{
-		return this.itemStacks[2];
+		if(this.itemStacks[2] == null)
+		{
+			map.remove(0);
+		}
+		else
+		{
+			map.put(0, this.itemStacks[2]);
+		}
+		
+		if(this.itemStacks[3] == null)
+		{
+			map.remove(1);
+		}
+		else
+		{
+			map.put(1, this.itemStacks[3]);
+		}
+	}
+	
+	public boolean hasUpgradeChip(ItemStack stack)
+	{
+		getUpgrades();
+		ItemStack up1 = map.get(0);
+		ItemStack up2 = map.get(1);
+		
+		if(up1 != null && up1.getIsItemStackEqual(stack))
+		{
+			return true;
+		}
+		if(up2 != null && up2.getIsItemStackEqual(stack))
+		{
+			return true;
+		}
+		return false;
 	}
 
 	@Override
 	public int getSizeInventory() 
 	{
-		return 3;
+		return 4;
 	}
 	
 }
