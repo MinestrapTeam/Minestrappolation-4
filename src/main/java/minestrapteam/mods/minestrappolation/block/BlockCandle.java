@@ -7,6 +7,7 @@ import minestrapteam.mods.minestrappolation.lib.MItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -152,6 +153,19 @@ public class BlockCandle extends Block
 				playerIn.getCurrentEquippedItem().stackSize--;
 			}
 			worldIn.setBlockState(pos, MBlocks.lit_candle.getDefaultState());
+			return true;
+		}
+		else if(this.isLit == false && playerIn.getCurrentEquippedItem() != null && playerIn.getCurrentEquippedItem().getItem() == MItems.will_o_wisp)
+		{
+			playerIn.getCurrentEquippedItem().setItem(Items.glass_bottle);
+			worldIn.setBlockState(pos, MBlocks.unholy_candle.getDefaultState());
+			return true;
+		}
+		else if(this.isLit == true && this.isUnholy == true && playerIn.getCurrentEquippedItem() != null && playerIn.getCurrentEquippedItem().getItem() == Items.glass_bottle)
+		{
+			playerIn.getCurrentEquippedItem().stackSize--;
+			worldIn.spawnEntityInWorld(new EntityItem(worldIn, playerIn.posX, playerIn.posY, playerIn.posZ, new ItemStack(MItems.will_o_wisp, 1)));
+			worldIn.setBlockState(pos, MBlocks.candle.getDefaultState());
 			return true;
 		}
 		else if(this.isLit == true && (playerIn.getCurrentEquippedItem() != null) && (playerIn.getCurrentEquippedItem().getItem() == Items.potionitem || playerIn.getCurrentEquippedItem().getItem() == Items.water_bucket || playerIn.getCurrentEquippedItem().getItem() == Items.snowball || playerIn.getCurrentEquippedItem().getItem() == MItems.crushed_ice || playerIn.getCurrentEquippedItem().getItem() == MItems.ice_charge))

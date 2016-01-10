@@ -161,6 +161,8 @@ public class MItems extends Item
 	public static Item							glacieric_ice_shard;
 	public static Item							glacierite_ingot;
 	public static Item							dimensium_ingot;
+	public static Item							dimensium_dust;
+	public static Item							jadachite_shard;
 	
 	public static Item							tin_plating;
 	public static Item							bronze_plating;
@@ -188,7 +190,10 @@ public class MItems extends Item
 	public static Item							ice_charge;
 	public static Item							guano;
 	public static Item							slime_core;
+	public static Item							ender_aura;
+	public static Item							wither_bone;
 	public static Item							deathmeal;
+	public static Item							will_o_wisp;
 	public static Item							diamond_dust;
 	public static Item							inert_crystal_heart;
 	public static Item							crystal_heart;
@@ -202,6 +207,8 @@ public class MItems extends Item
 	
 	//Stonecutter
 	public static Item							chunks;
+	public static Item							dimensium_chunk;
+	public static Item							continnium_chunk;
 	public static Item							bricks;
 	public static Item							bricks2;
 	
@@ -454,6 +461,8 @@ public class MItems extends Item
 		glacieric_ice_shard = new Item().setUnlocalizedName("glacieric_ice_shard").setCreativeTab(Minestrappolation.tabMMaterials);
 		glacierite_ingot = new Item().setUnlocalizedName("glacierite_ingot").setCreativeTab(Minestrappolation.tabMMaterials);
 		dimensium_ingot = new Item().setUnlocalizedName("dimensium_ingot").setCreativeTab(Minestrappolation.tabMMaterials);
+		dimensium_dust = new Item().setUnlocalizedName("dimensium_dust").setCreativeTab(Minestrappolation.tabMMaterials);
+		jadachite_shard = new Item().setUnlocalizedName("jadachite_shard").setCreativeTab(Minestrappolation.tabMMaterials);
 		
 		tin_plating = new Item().setUnlocalizedName("tin_plating").setCreativeTab(Minestrappolation.tabMMaterials);
 		bronze_plating = new Item().setUnlocalizedName("bronze_plating").setCreativeTab(Minestrappolation.tabMMaterials);
@@ -482,7 +491,10 @@ public class MItems extends Item
 		heart_piece = new Item().setUnlocalizedName("heart_piece").setCreativeTab(Minestrappolation.tabMTools);
 		ice_charge = new ItemIceCharge().setUnlocalizedName("ice_charge");
 		slime_core = new Item().setUnlocalizedName("slime_core").setCreativeTab(Minestrappolation.tabMMaterials);
+		ender_aura = new Item().setUnlocalizedName("ender_aura").setCreativeTab(Minestrappolation.tabMMaterials);
+		wither_bone = new Item().setUnlocalizedName("wither_bone").setCreativeTab(Minestrappolation.tabMMaterials);
 		deathmeal = new ItemDeathmeal().setUnlocalizedName("deathmeal").setCreativeTab(Minestrappolation.tabMMaterials);
+		will_o_wisp = new Item().setMaxStackSize(1).setUnlocalizedName("will_o_wisp").setCreativeTab(Minestrappolation.tabMMaterials);
 		diamond_dust = new Item().setUnlocalizedName("diamond_dust").setCreativeTab(Minestrappolation.tabMMaterials);
 		inert_crystal_heart = new ItemInertCrystalHeart().setMaxStackSize(1).setUnlocalizedName("inert_crystal_heart").setCreativeTab(Minestrappolation.tabMMaterials);
 		crystal_heart = new MItemFoiled().setMaxStackSize(1).setUnlocalizedName("crystal_heart").setCreativeTab(Minestrappolation.tabMMaterials);
@@ -495,7 +507,9 @@ public class MItems extends Item
 		bat_gene_sample = new Item().setUnlocalizedName("bat_gene_sample").setCreativeTab(Minestrappolation.tabMMaterials);
 		
 		//Stonecutter
-		chunks = new ItemChunk().setUnlocalizedName("chunks").setCreativeTab(Minestrappolation.tabMMaterials);	
+		chunks = new ItemChunk().setUnlocalizedName("chunks").setCreativeTab(Minestrappolation.tabMMaterials);
+		dimensium_chunk = new Item().setUnlocalizedName("dimensium_chunk").setCreativeTab(Minestrappolation.tabMMaterials);
+		continnium_chunk = new Item().setUnlocalizedName("continnium_chunk").setCreativeTab(Minestrappolation.tabMMaterials);
 		bricks = new ItemBricks().setUnlocalizedName("bricks").setCreativeTab(Minestrappolation.tabMMaterials);
 		bricks2 = new ItemBricks2().setUnlocalizedName("bricks2").setCreativeTab(Minestrappolation.tabMMaterials);
 		
@@ -637,7 +651,10 @@ public class MItems extends Item
 		register(guano);
 		register(wing_sinew);
 		register(wing_segment);
+		register(ender_aura);
+		register(wither_bone);
 		register(deathmeal);
+		register(will_o_wisp);
 		register(slime_core);
 		register(infectious_fungus);
 		register(bat_gene_sample);
@@ -654,7 +671,10 @@ public class MItems extends Item
 		
 		register(mud_ball);
 		register(chunks);
+		register(dimensium_chunk);
+		register(continnium_chunk);
 		register(diamond_dust);
+		register(dimensium_dust);
 		register(desert_quartz_item);
 		register(copper_ingot);
 		register(tin_ingot);
@@ -673,6 +693,7 @@ public class MItems extends Item
 		register(blazium_ingot);
 		register(soul_gem);
 		register(dimensium_ingot);
+		register(jadachite_shard);
 		register(tin_plating);
 		register(bronze_plating);
 		register(steel_plating);

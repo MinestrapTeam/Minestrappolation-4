@@ -33,6 +33,9 @@ public class MRecipes
 		GameRegistry.addSmelting(new ItemStack(MItems.fat), new ItemStack(MItems.tallow), 0.5F);
 		GameRegistry.addRecipe(new ItemStack(MBlocks.candle, 2), new Object[] { "R", "T", 'R', MBlocks.rope, 'T', MItems.tallow });
 		
+		GameRegistry.addRecipe(new ItemStack(MItems.deathmeal, 3), new Object[] { "B", 'B', MItems.wither_bone });
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.will_o_wisp, 1), new Object[] { Items.glass_bottle, Items.blaze_powder, MItems.ender_aura, MBlocks.wither_ash, MItems.animal_bones, MItems.grease });
+		
 		// Food
 		GameRegistry.addRecipe(new ItemStack(MItems.corn_meal, 2), new Object[] { "WW", "WW", 'W', MBlocks.corn });
 		GameRegistry.addRecipe(new ItemStack(MItems.dough, 2), new Object[] { "WW", "WW", 'W', Items.wheat });

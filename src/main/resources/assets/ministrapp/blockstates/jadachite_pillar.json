@@ -1,0 +1,7 @@
+{
+   "variants": {
+        "axis=y": { "model": "ministrapp:jadachite_pillar" },
+        "axis=z": { "model": "ministrapp:jadachite_pillar_side" },
+        "axis=x": { "model": "ministrapp:jadachite_pillar_side", "y": 90 }
+   }
+}

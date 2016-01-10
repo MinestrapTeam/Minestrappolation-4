@@ -503,6 +503,7 @@ public class Tables {
     	Chance.addToChanceTable("overworld_items", new ItemStack(Items.rabbit_foot, 3, 0), 5);
     	Chance.addToChanceTable("overworld_items", new ItemStack(MItems.infectious_fungus, 1, 0), 5);
     	Chance.addToChanceTable("overworld_items", new ItemStack(Items.fish, 7, 2), 3);
+    	Chance.addToChanceTable("overworld_items", new ItemStack(MItems.ender_aura, 1, 0), 3);
     	Chance.addToChanceTable("overworld_items", new ItemStack(MItems.heart_piece, 1, 0), 1);
     	
     	//Dimensional Fishery -- Nether Blocks
@@ -535,6 +536,7 @@ public class Tables {
     	Chance.addToChanceTable("nether_items", new ItemStack(MItems.fat, 2, 0), 22);
     	Chance.addToChanceTable("nether_items", new ItemStack(Items.gunpowder, 2, 0), 20);
     	Chance.addToChanceTable("nether_items", new ItemStack(Items.magma_cream, 2, 0), 20);
+    	Chance.addToChanceTable("nether_items", new ItemStack(MItems.wither_bone, 1, 0), 18);
     	Chance.addToChanceTable("nether_items", new ItemStack(Items.fire_charge, 1, 0), 15);
     	Chance.addToChanceTable("nether_items", new ItemStack(Items.ghast_tear, 1, 0), 10);
     	Chance.addToChanceTable("nether_items", new ItemStack(MItems.pig_foot, 1, 0), 7);
@@ -552,8 +554,13 @@ public class Tables {
     	
     	//Dimensional Fishery -- End Items
     	Chance.addToChanceTable("end_items", new ItemStack(Items.ender_pearl, 10, 0), 100);
+    	Chance.addToChanceTable("end_items", new ItemStack(MItems.ender_aura, 1, 0), 15);
     	
     	//Dimensional Fishery -- Virtious
     	Chance.addToChanceTable("virtious_items", new ItemStack(Blocks.bedrock, 13, 0), 130);
+    	Chance.addToChanceTable("virtious_items", new ItemStack(MBlocks.green_glowshroom, 8, 0), 40);
+    	Chance.addToChanceTable("virtious_items", new ItemStack(MBlocks.purple_glowshroom, 8, 0), 40);
+    	Chance.addToChanceTable("virtious_items", new ItemStack(MBlocks.huge_green_glowshroom, 3), 18);
+    	Chance.addToChanceTable("virtious_items", new ItemStack(MBlocks.huge_purple_glowshroom, 3), 18);
 	}
 }

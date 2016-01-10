@@ -196,6 +196,9 @@ public class CrusherRecipes
 		
 		this.addRecipe(MBlocks.soul_ore, new ItemStack(MItems.soul_gem, 2, 0), 0.5F, new ItemStack(Items.nether_wart), 2);
 		
+		this.addRecipe(MBlocks.dimensium_ore, new ItemStack(MItems.dimensium_chunk, 2), 0.5F, new ItemStack(MItems.continnium_chunk, 1), 10);
+		this.addRecipe(MBlocks.continnium_ore, new ItemStack(MItems.continnium_chunk, 2), 0.5F, new ItemStack(MItems.dimensium_chunk, 1), 10);
+		
 		//Misc
 		this.addRecipe(Blocks.clay, new ItemStack(Blocks.sand, 1, 0), 0.1F, new ItemStack(Items.clay_ball, 2, 0), 50);
 		this.addRecipe(MBlocks.mud, new ItemStack(Blocks.dirt, 1, 0), 0.1F, new ItemStack(MItems.mud_ball, 1, 0), 10);
@@ -231,6 +234,7 @@ public class CrusherRecipes
 		this.addRecipe(Blocks.packed_ice, new ItemStack(MItems.crushed_ice, 1), 0.1F, new ItemStack(MItems.crushed_ice, 1), 50);
 		this.addRecipe(MBlocks.glacieric_ice, new ItemStack(MItems.crushed_ice, 4), 0.1F, new ItemStack(MItems.glacieric_ice_shard, 1), 100);
 		this.addRecipe(Items.diamond, new ItemStack(MItems.diamond_dust, 4), 0.1F, new ItemStack(MItems.radiant_quartz, 1), 5);
+		this.addRecipe(MItems.dimensium_ingot, new ItemStack(MItems.dimensium_dust, 8), 0.1F, new ItemStack(MItems.dimensium_dust, 1), 10);
 		this.addRecipe(MBlocks.hanging_glow_moss, new ItemStack(Items.glowstone_dust, 1), 0.1F, new ItemStack(Items.glowstone_dust), 20);
 		
 		//Dyes
@@ -249,6 +253,8 @@ public class CrusherRecipes
 		this.addRecipe(new ItemStack(Blocks.red_flower, 1, 1), new ItemStack(Items.dye, 3, 12), 0.1F, new ItemStack(Items.dye, 1, 12), 10);
 		this.addRecipe(new ItemStack(Blocks.red_flower, 1, 2), new ItemStack(Items.dye, 3, 13), 0.1F, new ItemStack(Items.dye, 1, 13), 10);
 		this.addRecipe(new ItemStack(Blocks.double_plant, 1, 1), new ItemStack(Items.dye, 5, 13), 0.1F, new ItemStack(Items.dye, 1, 13), 10);
+		
+		this.addRecipe(MItems.wither_bone, new ItemStack(MItems.deathmeal, 5), 0.1F, new ItemStack(MItems.deathmeal, 1), 10);
 	}
 	
 	public void addRecipe(Block input, ItemStack stack, float experience, ItemStack extra, int chance)

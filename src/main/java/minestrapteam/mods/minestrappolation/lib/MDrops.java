@@ -5,6 +5,7 @@ import java.util.Random;
 
 import minestrapteam.mods.minestrappolation.Config;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.monster.EntityEndermite;
 import net.minecraft.entity.monster.EntityGuardian;
 import net.minecraft.entity.monster.EntityIronGolem;
 import net.minecraft.entity.monster.EntityMagmaCube;
@@ -117,6 +118,10 @@ public class MDrops
 			{
 				dropHalloweenItems(living, random, onFire, looting);
 			}
+			if(((EntitySkeleton)living).getSkeletonType() == 1)
+			{
+				dropWitherSkeletonItems(living, random, onFire, looting);
+			}
 			dropSkeletonItems(living, random, onFire, looting, player);
 		}
 		if(living instanceof EntityWitch)
@@ -129,6 +134,10 @@ public class MDrops
 		if(living instanceof EntityPigZombie)
 		{
 			dropPigItems(living, random, onFire, looting);
+		}
+		if(living instanceof EntityEndermite)
+		{
+			dropEndermiteItems(living, random, onFire, looting);
 		}
 		if(living instanceof EntitySlime || living instanceof EntityMagmaCube)
 		{
@@ -251,6 +260,20 @@ public class MDrops
 			living.dropItem(MItems.spaghetti, random.nextInt(Config.nyehHehHehAmount + 1));
 			if(player != null)
 				player.addStat(MAchievements.bonetrousle, 1);
+		}
+	}
+	private static void dropWitherSkeletonItems(EntityLivingBase living, Random random, boolean onFire, int looting)
+	{
+		if ((random.nextFloat() * 100) < Config.witherBoneDropChance)
+		{
+			living.dropItem(MItems.wither_bone, random.nextInt(Config.witherBoneDropAmount + 1));
+		}
+	}
+	private static void dropEndermiteItems(EntityLivingBase living, Random random, boolean onFire, int looting)
+	{
+		if ((random.nextFloat() * 100) < Config.enderAuraDropChance)
+		{
+			living.dropItem(MItems.ender_aura, random.nextInt(Config.enderAuraDropAmount + 1));
 		}
 	}
 	private static void dropQuadripedItems(EntityLivingBase living, Random random, boolean onFire, int looting)

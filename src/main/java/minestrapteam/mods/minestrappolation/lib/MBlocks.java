@@ -178,6 +178,10 @@ public class MBlocks
 	public static Block glow_mossy_netherrack;
 	public static Block glow_mossy_nether_bricks;
 	public static Block glow_mossy_end_stone;
+	public static Block jadachite_block;
+	public static Block jadachite_bricks;
+	public static Block jadachite_tiles;
+	public static Block jadachite_pillar;
 	
 	//Biome Stone Decor Blocks
 	public static Block	stone_lamp_glowstone;
@@ -201,6 +205,10 @@ public class MBlocks
 	public static Block lamp_prismarine;
 	
 	//Utility Decor Blocks
+	public static Block compacted_dirt;
+	public static Block compacted_netherrack;
+	public static Block compacted_endstone;
+	public static Block compacted_glowshrooms;
 	public static Block decaying_compacted_dirt;
 	public static Block decaying_compacted_netherrack;
 	public static Block decaying_compacted_endstone;
@@ -275,6 +283,7 @@ public class MBlocks
 	public static Block splitter_active;
 	public static Block	frost_generator;
 	public static Block claimerator;
+	public static Block dimensional_fishery;
 	public static Block enderporter;
 	
 	//Fences and Panes
@@ -370,6 +379,7 @@ public class MBlocks
 	public static Block	deep_redrock_brick_stairs;
 	public static Block	deep_coldstone_brick_stairs;
 	public static Block prismarine_stairs;
+	public static Block jadachite_brick_stairs;
 	
 	//Slabs
 	public static BlockMSlab       redwood_slab;
@@ -448,6 +458,8 @@ public class MBlocks
 	public static BlockMDoubleSlab poceanstone_brick_double_slab;
 	public static BlockMSlab	   prismarine_slab;
 	public static BlockMDoubleSlab prismarine_double_slab;
+	public static BlockMSlab	   jadachite_brick_slab;
+	public static BlockMDoubleSlab jadachite_brick_double_slab;
 	
 	//Fluid
 	public static Block magma;
@@ -593,6 +605,10 @@ public class MBlocks
 		glow_mossy_netherrack = new MBlock(Material.rock, MapColor.netherrackColor).setHardness(0.4F).setStepSound(Block.soundTypePiston).setLightLevel(0.5F).setUnlocalizedName("glow_mossy_netherrack").setCreativeTab(Minestrappolation.tabMBuilding);
 		glow_mossy_nether_bricks = new MBlock(Material.rock, MapColor.netherrackColor).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setLightLevel(0.5F).setUnlocalizedName("glow_mossy_nether_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
 		glow_mossy_end_stone = new MBlock(Material.rock, MapColor.stoneColor).setHardness(3.0F).setResistance(15.0F).setStepSound(Block.soundTypePiston).setLightLevel(0.5F).setUnlocalizedName("glow_mossy_end_stone").setCreativeTab(Minestrappolation.tabMBuilding);
+		jadachite_block = new MBlock(Material.rock, MapColor.greenColor).setHardness(1.8F).setResistance(10F).setStepSound(Block.soundTypePiston).setUnlocalizedName("jadachite_block").setCreativeTab(Minestrappolation.tabMBuilding);
+		jadachite_bricks = new MBlock(Material.rock, MapColor.greenColor).setHardness(1.8F).setResistance(10F).setStepSound(Block.soundTypePiston).setUnlocalizedName("jadachite_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
+		jadachite_tiles = new MBlock(Material.rock, MapColor.greenColor).setHardness(1.8F).setResistance(10F).setStepSound(Block.soundTypePiston).setUnlocalizedName("jadachite_tiles").setCreativeTab(Minestrappolation.tabMBuilding);
+		jadachite_pillar = new MBlockPillar(Material.rock, MapColor.greenColor).setUnlocalizedName("jadachite_pillar").setHardness(1.8F).setResistance(10F);
 		
 		//Biome Stone Decor Blocks
 		stone_lamp_glowstone = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setLightLevel(1.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_lamp_glowstone").setCreativeTab(Minestrappolation.tabMBuilding);
@@ -616,6 +632,10 @@ public class MBlocks
 		lamp_prismarine = new BlockLamp(Material.rock, MapColor.stoneColor, "prismarine").setHardness(1.5F).setResistance(10.0F).setLightLevel(1.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_lamp_prismarine");
 		
 		//Utility Decor Blocks
+		compacted_dirt=new MBlock(Material.ground, MapColor.dirtColor).setHardness(4F).setStepSound(Block.soundTypeGravel).setUnlocalizedName("compacted_dirt").setCreativeTab(Minestrappolation.tabMBuilding);
+		compacted_netherrack=new MBlock(Material.rock, MapColor.redColor).setHardness(3.2F).setStepSound(Block.soundTypeStone).setUnlocalizedName("compacted_netherrack").setCreativeTab(Minestrappolation.tabMBuilding);
+		compacted_endstone=new MBlock(Material.rock, MapColor.sandColor).setHardness(12F).setResistance(60F).setStepSound(Block.soundTypeStone).setUnlocalizedName("compacted_endstone").setCreativeTab(Minestrappolation.tabMBuilding);
+		compacted_glowshrooms=new MBlock(Material.grass, MapColor.brownColor).setHardness(1.6F).setStepSound(Block.soundTypeWood).setLightLevel(0.6F).setUnlocalizedName("compacted_glowshrooms").setCreativeTab(Minestrappolation.tabMBuilding);
 		decaying_compacted_dirt = new BlockDecayingCompacted(Material.rock, "overworld").setStepSound(Block.soundTypeGravel).setBlockUnbreakable().setUnlocalizedName("decaying_compacted_dirt");
 		decaying_compacted_netherrack = new BlockDecayingCompacted(Material.rock, "nether").setStepSound(Block.soundTypeStone).setBlockUnbreakable().setUnlocalizedName("decaying_compacted_netherrack");
 		decaying_compacted_endstone = new BlockDecayingCompacted(Material.rock, "end").setStepSound(Block.soundTypeStone).setBlockUnbreakable().setUnlocalizedName("decaying_compacted_endstone");
@@ -690,6 +710,7 @@ public class MBlocks
 		plutonium_insulated = new BlockRadiationInsulated(1, 20, Material.iron, MapColor.clayColor, null, 0, 0, 1, 0, "pickaxe", 2, false).setUnlocalizedName("plutonium_insulated").setStepSound(Block.soundTypeMetal).setCreativeTab(Minestrappolation.tabMTech).setHardness(7F).setResistance(10.0F);
 		uranium_insulated = new BlockRadiationInsulated(1, 20, Material.iron, MapColor.clayColor, null, 0, 0, 1, 0, "pickaxe", 2, false).setHardness(7F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("uranium_insulated").setCreativeTab(Minestrappolation.tabMTech);
 		claimerator = new BlockClaimerator(Material.rock, MapColor.obsidianColor).setHardness(50.0F).setResistance(2000.0F).setUnlocalizedName("claimerator").setCreativeTab(Minestrappolation.tabMTech);
+		dimensional_fishery = new BlockDimensionalFishery(Material.rock, MapColor.cyanColor).setHardness(5F).setResistance(20F).setLightLevel(0.8F).setStepSound(Block.soundTypeStone).setUnlocalizedName("dimensional_fishery").setCreativeTab(Minestrappolation.tabMTech);
 		enderporter = new BlockEnderPorter().setUnlocalizedName("enderporter").setCreativeTab(Minestrappolation.tabMTech);
 		
 		//Fences and Panes
@@ -785,6 +806,7 @@ public class MBlocks
 		deep_redrock_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("deep_redrock_brick_stairs");
 		deep_coldstone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("deep_coldstone_brick_stairs");
 		prismarine_stairs = new MBlockStairs(Blocks.prismarine.getDefaultState(), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("prismarine_stairs");
+		jadachite_brick_stairs = new MBlockStairs(MBlocks.jadachite_bricks.getDefaultState(), 0).setHardness(1.8F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("jadachite_brick_stairs");
 		
 		//Slabs
 		redwood_slab = new BlockMSlab(Material.wood, "redwood_slab", 2F, 5F, "axe", 0, 300);
@@ -810,6 +832,8 @@ public class MBlocks
 		radiant_double_slab = new BlockMDoubleSlab(Material.rock, "radiant_quartz", 1F, 4F, "pickaxe", 3, 0, radiant_slab);
 		prismarine_slab = new BlockMSlab(Material.rock, "prismarine_slab", 1.5F, 10F, "pickaxe", 0, 0);
 		prismarine_double_slab = new BlockMDoubleSlab(Material.rock, "prismarine", 1.5F, 10F, "pickaxe", 0, 0, prismarine_slab);
+		jadachite_brick_slab = new BlockMSlab(Material.rock, "jadachite_brick_slab", 1.5F, 10F, "pickaxe", 1, 0);
+		jadachite_brick_double_slab = new BlockMDoubleSlab(Material.rock, "jadachite_brick", 1.8F, 10F, "pickaxe", 1, 0, jadachite_brick_slab);
 		
 		deepstone_slab = new BlockMSlab(Material.rock, "deepstone_slab", 2F, 10F, "pickaxe", 2, 0);
 		deepstone_double_slab = new BlockMDoubleSlab(Material.rock, "deepstone", 2F, 10F, "pickaxe", 2, 0, deepstone_slab);
@@ -896,6 +920,10 @@ public class MBlocks
 		register(cold_sand, ItemBlockColdSand.class);
 		register(wither_ash);
 		
+		register(compacted_dirt);
+		register(compacted_netherrack);
+		register(compacted_endstone);
+		register(compacted_glowshrooms);
 		register(cardboard_block);
 		register(wet_cardboard_block);
 		register(snow_bricks);
@@ -967,6 +995,12 @@ public class MBlocks
 		register(glow_mossy_netherrack);
 		register(glow_mossy_nether_bricks);
 		register(glow_mossy_end_stone);
+		register(jadachite_block);
+		register(jadachite_bricks);
+		register(jadachite_tiles);
+		register(jadachite_pillar);
+		registerSlab("jadachite_brick_slab", "jadachite_brick_double_slab", jadachite_brick_slab, jadachite_brick_double_slab);
+		register(jadachite_brick_stairs);
 		register(stone_pattern_bricks);
 		register(stone_refined);
 		register(stone_tiles);
@@ -1173,6 +1207,7 @@ public class MBlocks
 		register(crusher_active);
 		register(splitter);
 		register(splitter_active);
+		register(dimensional_fishery);
 		register(claimerator);
 		register(block_flesh);
 		register(block_flesh_reactive);
@@ -1291,6 +1326,8 @@ public class MBlocks
 	
 	private static void registerHarvestLevels()
 	{
+		compacted_glowshrooms.setHarvestLevel("axe", 0);
+		
 		moss.setHarvestLevel("shovel", 0);
 		mud.setHarvestLevel("shovel", 0);
 		mud_bricks.setHarvestLevel("shovel", 0);
@@ -1299,7 +1336,10 @@ public class MBlocks
 		dirt_permafrost.setHarvestLevel("shovel", 0);
 		lichen_permafrost.setHarvestLevel("shovel", 0);
 		wither_ash.setHarvestLevel("shovel", 0);
+		compacted_dirt.setHarvestLevel("shovel", 0);
 		
+		compacted_netherrack.setHarvestLevel("pickaxe", 1);
+		compacted_endstone.setHarvestLevel("pickaxe", 1);
 		slate.setHarvestLevel("pickaxe", 0);
 		slate_bricks.setHarvestLevel("pickaxe", 0);
 		slate_pattern_bricks.setHarvestLevel("pickaxe", 0);
@@ -1328,6 +1368,11 @@ public class MBlocks
 		radiant_pillar.setHarvestLevel("pickaxe", 3);
 		radiant_stairs.setHarvestLevel("pickaxe", 3);
 		obsidian_bricks.setHarvestLevel("pickaxe", 3);
+		jadachite_block.setHarvestLevel("pickaxe", 1);
+		jadachite_bricks.setHarvestLevel("pickaxe", 1);
+		jadachite_tiles.setHarvestLevel("pickaxe", 1);
+		jadachite_pillar.setHarvestLevel("pickaxe", 1);
+		jadachite_brick_stairs.setHarvestLevel("pickaxe", 1);
 		snow_refined.setHarvestLevel("shovel", 0);
 		snow_tiles.setHarvestLevel("shovel", 0);
 		snow_bricks.setHarvestLevel("shovel", 0);

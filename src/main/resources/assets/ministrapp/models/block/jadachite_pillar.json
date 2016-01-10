@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "ministrapp:blocks/jadachite_pillar_top",
+        "side": "Ministrapp:blocks/jadachite_pillar"
+    }
+}
