@@ -8,10 +8,21 @@ import java.util.Random;
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import minestrapteam.mods.minestrappolation.lib.MItems;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockChest;
+import net.minecraft.block.BlockHopper;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.item.EntityItem;
+import net.minecraft.inventory.IInventory;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.TileEntityChest;
+import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
+import net.minecraft.util.EntitySelectors;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
 public class TileEntityEnderPorter extends TileEntityInventory
@@ -99,7 +110,27 @@ public class TileEntityEnderPorter extends TileEntityInventory
 	
 	public void transportEnity(World world, Entity entity, BlockPos pos)
 	{
+		TileEntityEnderPorter te = (TileEntityEnderPorter) world.getTileEntity(new BlockPos(getChipPos().getX(), getChipPos().getY(), getChipPos().getZ()));
 		entity.setPositionAndUpdate(getChipPos().getX() + .5, getChipPos().getY() + hasInversionUpgrade(world, pos), getChipPos().getZ() + .5);
+		if(te.hasUpgradeChip(new ItemStack(MItems.upgradechip, 1, 4)))
+		{
+			if(entity instanceof EntityItem)
+			{
+				EntityItem entityitem = (EntityItem)entity;
+				ItemStack stack = entityitem.getEntityItem();
+				if(stack.getItem() instanceof ItemBlock)
+				{
+					entityitem.setDead();
+					Block block = Block.getBlockFromItem(stack.getItem());
+					
+					if(!world.isAirBlock(new BlockPos(getChipPos().getX() + .5, getChipPos().getY() + hasInversionUpgrade(world, pos), getChipPos().getZ() + .5)))
+					{
+						world.destroyBlock(new BlockPos(getChipPos().getX() + .5, getChipPos().getY() + hasInversionUpgrade(world, pos), getChipPos().getZ() + .5), true);
+					}
+					world.setBlockState(new BlockPos(getChipPos().getX() + .5, getChipPos().getY() + hasInversionUpgrade(world, pos), getChipPos().getZ() + .5), block.getStateFromMeta(stack.getItemDamage()), 2);
+				}
+			}
+		}
 	}
 	
 	private int hasInversionUpgrade(World world, BlockPos pos)

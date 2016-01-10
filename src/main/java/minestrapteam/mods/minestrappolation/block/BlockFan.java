@@ -22,12 +22,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockFan extends MBlock
 {
-	int	effectRate;
-	
 	public BlockFan(int rate, Material material, MapColor mapColor)
 	{
 		super(material, mapColor);
-		this.effectRate = rate;
 		this.setTickRandomly(true);
 	}
 	
@@ -45,28 +42,4 @@ public class BlockFan extends MBlock
 	    worldIn.spawnParticle(EnumParticleTypes.CLOUD, true, (double)((float)pos.getX() + rand.nextFloat()), (double)((float)pos.getY() + 1.1F), (double)((float)pos.getZ() + rand.nextFloat()), 0.0D, 0.3D, 0.0D, new int[0]);
 	    worldIn.spawnParticle(EnumParticleTypes.CLOUD, false, (double)((float)pos.getX() + rand.nextFloat()), (double)((float)pos.getY() + 1.1F), (double)((float)pos.getZ() + rand.nextFloat()), 0.0D, 0.3D, 0.0D, new int[0]);
 	}
-	
-	/*
-	@Override
-	public void onBlockAdded(World world, BlockPos pos, IBlockState state)
-	{
-		this.updateTick(world, pos, state, world.rand);
-	}
-	
-	@Override
-	public void updateTick(World world, BlockPos pos, IBlockState state, Random rand)
-	{
-		if (!world.isRemote)
-		{
-			world.scheduleUpdate(pos, this, this.effectRate);
-			AxisAlignedBB axisalignedbb = this.getCollisionBoundingBox(world, pos, state).expand(0, 10, 0).offset(0, 4, 0);
-			List<Entity> list = world.getEntitiesWithinAABB(Entity.class, axisalignedbb);
-			
-			for (Entity living : list)
-			{
-				living.motionY += (1 / (2*(living.posY - pos.getY())));
-			}
-		}
-	}
-	*/
 }

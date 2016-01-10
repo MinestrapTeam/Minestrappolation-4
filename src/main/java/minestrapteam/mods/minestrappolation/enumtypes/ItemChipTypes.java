@@ -7,7 +7,9 @@ public enum ItemChipTypes implements IStringSerializable
 	PRESERVER(0, "preserver"),
 	COLLISION(1, "collision"),
 	INVERSION(2, "inversion"),
-	SELFSUFFICIENT(3, "selfsufficient");
+	SELFSUFFICIENT(3, "selfsufficient"),
+	PLACER(4, "placer");
+	
 	
 	private static final ItemChipTypes[]	META_LOOKUP	= new ItemChipTypes[values().length];
 	private final int						meta;
