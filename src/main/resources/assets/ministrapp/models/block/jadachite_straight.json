@@ -1,10 +1,10 @@
 {
 "__comment": "Designed by Delocuro with BDcraft Cubik PRO 0.95 Beta - http://bdcraft.net",
 "textures": {
-    "particle": "blocks/jadachite_straight",
-    "texture": "blocks/jadachite_straight",
-    "jadachite_corner": "blocks/jadachite_corner",
-    "jadachite_end": "blocks/jadachite_end"
+    "particle": "ministrapp:blocks/jadachite_straight",
+    "texture": "ministrapp:blocks/jadachite_straight",
+    "jadachite_corner": "ministrapp:blocks/jadachite_corner",
+    "jadachite_end": "ministrapp:blocks/jadachite_end"
 },
 "elements": [ 
 {

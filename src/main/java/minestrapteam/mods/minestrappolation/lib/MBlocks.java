@@ -88,7 +88,7 @@ public class MBlocks
 	public static Block huge_green_glowshroom;
 	public static Block purple_glowshroom;
 	public static Block huge_purple_glowshroom;
-	//public static Block jadachite;
+	public static Block jadachite;
 	
 	public static Block pumpkin_carved_0;
 	public static Block pumpkin_carved_1;
@@ -512,7 +512,7 @@ public class MBlocks
 		huge_green_glowshroom = new BlockHugeGlowShroom(Material.grass, green_glowshroom).setLightLevel(0.8F).setUnlocalizedName("huge_green_glowshroom").setCreativeTab(Minestrappolation.tabMDecor);
 		purple_glowshroom = new BlockGlowShrooms().setLightLevel(0.6F).setUnlocalizedName("purple_glowshroom").setCreativeTab(Minestrappolation.tabMDecor);
 		huge_purple_glowshroom = new BlockHugeGlowShroom(Material.grass, purple_glowshroom).setLightLevel(0.8F).setUnlocalizedName("huge_purple_glowshroom").setCreativeTab(Minestrappolation.tabMDecor);
-		//jadachite = new BlockJadachite(Material.glass, MapColor.greenColor).setLightLevel(0.7F).setUnlocalizedName("jadachite").setCreativeTab(Minestrappolation.tabMDecor);
+		jadachite = new BlockJadachite(Material.glass, MapColor.greenColor).setLightLevel(0.7F).setUnlocalizedName("jadachite").setCreativeTab(Minestrappolation.tabMDecor);
 		pumpkin_carved_0 = new BlockCarvedPumpkin("neutral", pumpkin_carved_0_lit).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
 		pumpkin_carved_1 = new BlockCarvedPumpkin("grin", pumpkin_carved_1_lit).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
 		pumpkin_carved_2 = new BlockCarvedPumpkin("creepy", pumpkin_carved_2_lit).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
@@ -1132,7 +1132,7 @@ public class MBlocks
 		register(purple_glowshroom);
 		register(huge_green_glowshroom);
 		register(huge_purple_glowshroom);
-		//register(jadachite);
+		register(jadachite);
 		
 		register(ministrapp_sapling, ItemBlockSapling.class);
 		register(ministrapp_leaves, ItemBlockLeaves.class);

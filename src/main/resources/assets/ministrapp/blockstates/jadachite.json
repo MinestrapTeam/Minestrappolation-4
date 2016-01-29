@@ -28,22 +28,22 @@
          "model":"ministrapp:jadachite_corner", "y":270
       },
 	  "type=ne":{
-         "model":"ministrapp:jadachite_corner", "z":90
+         "model":"ministrapp:jadachite_corner_side"
       },
       "type=ns":{
          "model":"ministrapp:jadachite_straight", "x":90
       },
 	  "type=nw":{
-         "model":"ministrapp:jadachite_corner", "z":270
+         "model":"ministrapp:jadachite_corner_side", "y":270
       },
 	  "type=es":{
-         "model":"ministrapp:jadachite_corner", "y":90, "z":90
+         "model":"ministrapp:jadachite_corner_side", "y":90
       },
       "type=ew":{
-         "model":"ministrapp:jadachite_straight", "z":90
+         "model":"ministrapp:jadachite_straight", "x":90, "y":90
       },
 	  "type=sw":{
-         "model":"ministrapp:jadachite_corner", "y":180, "z":90
+         "model":"ministrapp:jadachite_corner_side", "y":180
       }
    }
 }
