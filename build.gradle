@@ -12,6 +12,12 @@ buildscript {
 }
 apply plugin: 'net.minecraftforge.gradle.forge'
 
+/*
+// for people who want stable - not yet functional for MC 1.8.8 - we require the forgegradle 2.1 snapshot
+plugins {
+    id "net.minecraftforge.gradle.forge" version "2.0.2"
+}
+*/
 version = "1.8-4.2.666"
 group= "minestrapteam"
 archivesBaseName = "Minestrappolation"
@@ -23,9 +29,9 @@ if (ENV.DRONE_BUILD_NUMBER) {
 
 minecraft
 {
-    version = "1.8-11.14.3.1543"
+    version = "1.8.9-11.15.1.1722"
     runDir = "run"
-    mappings = "snapshot_20150727"
+    mappings = "stable_20"
 }
 
 task textureZip(type: Zip)

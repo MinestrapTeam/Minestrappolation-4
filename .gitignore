@@ -2,6 +2,7 @@
 asm
 gradle
 gradlew
+gradlew.bat
 .gradle
 .classpath
 .settings
