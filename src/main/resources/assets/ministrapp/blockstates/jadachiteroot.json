@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": [
+            { "model": "ministrapp:jadachiteroot" },
+            { "model": "ministrapp:jadachiteroot", "y": 90 },
+            { "model": "ministrapp:jadachiteroot", "y": 180 },
+            { "model": "ministrapp:jadachiteroot", "y": 270 }
+        ]
+    }
+}

@@ -7,6 +7,7 @@ import minestrapteam.mods.minestrappolation.enumtypes.MBlockBiDirectional;
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import minestrapteam.mods.minestrappolation.lib.MItems;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -49,49 +50,49 @@ public class BlockJadachite extends MBlock
         Block east = worldIn.getBlockState(pos.east()).getBlock();
         Block south = worldIn.getBlockState(pos.south()).getBlock();
         Block west = worldIn.getBlockState(pos.west()).getBlock();
-        if(up == MBlocks.jadachite && down != MBlocks.jadachite && north != MBlocks.jadachite && east != MBlocks.jadachite && south != MBlocks.jadachite && west != MBlocks.jadachite)
+        if(up == MBlocks.jadachite && down != MBlocks.jadachite && down != MBlocks.jadachiteroot && north != MBlocks.jadachite && east != MBlocks.jadachite && south != MBlocks.jadachite && west != MBlocks.jadachite)
         	checking = true;
-        if(up != MBlocks.jadachite && (down == MBlocks.jadachite || down == Blocks.soul_sand) && north != MBlocks.jadachite && east != MBlocks.jadachite && south != MBlocks.jadachite && west != MBlocks.jadachite)
+        if(up != MBlocks.jadachite && (down == MBlocks.jadachite || down == MBlocks.jadachiteroot) && north != MBlocks.jadachite && east != MBlocks.jadachite && south != MBlocks.jadachite && west != MBlocks.jadachite)
         	checking = true;
-        if(up != MBlocks.jadachite && down != MBlocks.jadachite && north == MBlocks.jadachite && east != MBlocks.jadachite && south != MBlocks.jadachite && west != MBlocks.jadachite)
+        if(up != MBlocks.jadachite && down != MBlocks.jadachite && down != MBlocks.jadachiteroot && north == MBlocks.jadachite && east != MBlocks.jadachite && south != MBlocks.jadachite && west != MBlocks.jadachite)
         	checking = true;
-        if(up != MBlocks.jadachite && down != MBlocks.jadachite && north != MBlocks.jadachite && east == MBlocks.jadachite && south != MBlocks.jadachite && west != MBlocks.jadachite)
+        if(up != MBlocks.jadachite && down != MBlocks.jadachite && down != MBlocks.jadachiteroot && north != MBlocks.jadachite && east == MBlocks.jadachite && south != MBlocks.jadachite && west != MBlocks.jadachite)
         	checking = true;
-        if(up != MBlocks.jadachite && down != MBlocks.jadachite && north != MBlocks.jadachite && east != MBlocks.jadachite && south == MBlocks.jadachite && west != MBlocks.jadachite)
+        if(up != MBlocks.jadachite && down != MBlocks.jadachite && down != MBlocks.jadachiteroot && north != MBlocks.jadachite && east != MBlocks.jadachite && south == MBlocks.jadachite && west != MBlocks.jadachite)
         	checking = true;
-        if(up != MBlocks.jadachite && down != MBlocks.jadachite && north != MBlocks.jadachite && east != MBlocks.jadachite && south != MBlocks.jadachite && west == MBlocks.jadachite)
+        if(up != MBlocks.jadachite && down != MBlocks.jadachite && down != MBlocks.jadachiteroot && north != MBlocks.jadachite && east != MBlocks.jadachite && south != MBlocks.jadachite && west == MBlocks.jadachite)
         	checking = true;
         
         if(checking == true)
         {
         	if(dir == 0)
         	{
-        		if(up.isReplaceable(worldIn, pos.up()) && this.canPlaceBlockAt(worldIn, pos.up()))
+        		if(up.isReplaceable(worldIn, pos.up()) && this.canPlaceBlockAt(worldIn, pos.up()) && worldIn.getBlockState(pos.up().up()).getBlock() != MBlocks.jadachite && worldIn.getBlockState(pos.up().north()).getBlock() != MBlocks.jadachite && worldIn.getBlockState(pos.up().east()).getBlock() != MBlocks.jadachite && worldIn.getBlockState(pos.up().south()).getBlock() != MBlocks.jadachite && worldIn.getBlockState(pos.up().west()).getBlock() != MBlocks.jadachite)
         			worldIn.setBlockState(pos.up(), MBlocks.jadachite.getDefaultState());
         	}
-        	else if(dir == 1)
+        	/*else if(dir == 1)
         	{
-        		if(down.isReplaceable(worldIn, pos.down()) && this.canPlaceBlockAt(worldIn, pos.down()))
+        		if(down.isReplaceable(worldIn, pos.down()) && this.canPlaceBlockAt(worldIn, pos.down()) && worldIn.getBlockState(pos.down().down()).getBlock() != MBlocks.jadachite && worldIn.getBlockState(pos.down().north()).getBlock() != MBlocks.jadachite && worldIn.getBlockState(pos.down().east()).getBlock() != MBlocks.jadachite && worldIn.getBlockState(pos.down().south()).getBlock() != MBlocks.jadachite && worldIn.getBlockState(pos.down().west()).getBlock() != MBlocks.jadachite)
         			worldIn.setBlockState(pos.down(), MBlocks.jadachite.getDefaultState());
-        	}
+        	}*/
         	else if(dir == 2)
         	{
-        		if(north.isReplaceable(worldIn, pos.north()) && this.canPlaceBlockAt(worldIn, pos.north()))
+        		if(north.isReplaceable(worldIn, pos.north()) && this.canPlaceBlockAt(worldIn, pos.north()) && worldIn.getBlockState(pos.north().up()).getBlock() != MBlocks.jadachite && worldIn.getBlockState(pos.north().north()).getBlock() != MBlocks.jadachite && worldIn.getBlockState(pos.north().east()).getBlock() != MBlocks.jadachite && worldIn.getBlockState(pos.north().down()).getBlock() != MBlocks.jadachite && worldIn.getBlockState(pos.north().west()).getBlock() != MBlocks.jadachite)
         			worldIn.setBlockState(pos.north(), MBlocks.jadachite.getDefaultState());
         	}
         	else if(dir == 3)
         	{
-        		if(east.isReplaceable(worldIn, pos.east()) && this.canPlaceBlockAt(worldIn, pos.east()))
+        		if(east.isReplaceable(worldIn, pos.east()) && this.canPlaceBlockAt(worldIn, pos.east()) && worldIn.getBlockState(pos.east().up()).getBlock() != MBlocks.jadachite && worldIn.getBlockState(pos.east().north()).getBlock() != MBlocks.jadachite && worldIn.getBlockState(pos.east().east()).getBlock() != MBlocks.jadachite && worldIn.getBlockState(pos.east().south()).getBlock() != MBlocks.jadachite && worldIn.getBlockState(pos.east().down()).getBlock() != MBlocks.jadachite)
         			worldIn.setBlockState(pos.east(), MBlocks.jadachite.getDefaultState());
         	}
         	else if(dir == 4)
         	{
-        		if(south.isReplaceable(worldIn, pos.south()) && this.canPlaceBlockAt(worldIn, pos.south()))
+        		if(south.isReplaceable(worldIn, pos.south()) && this.canPlaceBlockAt(worldIn, pos.south()) && worldIn.getBlockState(pos.south().up()).getBlock() != MBlocks.jadachite && worldIn.getBlockState(pos.south().down()).getBlock() != MBlocks.jadachite && worldIn.getBlockState(pos.south().east()).getBlock() != MBlocks.jadachite && worldIn.getBlockState(pos.south().south()).getBlock() != MBlocks.jadachite && worldIn.getBlockState(pos.south().west()).getBlock() != MBlocks.jadachite)
         			worldIn.setBlockState(pos.south(), MBlocks.jadachite.getDefaultState());
         	}
         	else if(dir == 5)
         	{
-        		if(west.isReplaceable(worldIn, pos.west()) && this.canPlaceBlockAt(worldIn, pos.west()))
+        		if(west.isReplaceable(worldIn, pos.west()) && this.canPlaceBlockAt(worldIn, pos.west()) && worldIn.getBlockState(pos.west().up()).getBlock() != MBlocks.jadachite && worldIn.getBlockState(pos.west().north()).getBlock() != MBlocks.jadachite && worldIn.getBlockState(pos.west().down()).getBlock() != MBlocks.jadachite && worldIn.getBlockState(pos.west().south()).getBlock() != MBlocks.jadachite && worldIn.getBlockState(pos.west().west()).getBlock() != MBlocks.jadachite)
         			worldIn.setBlockState(pos.west(), MBlocks.jadachite.getDefaultState());
         	}
         }
@@ -108,7 +109,7 @@ public class BlockJadachite extends MBlock
         
         if(up == MBlocks.jadachite && down != MBlocks.jadachite && north != MBlocks.jadachite && east != MBlocks.jadachite && south != MBlocks.jadachite && west != MBlocks.jadachite)
         	return true;
-        if(up != MBlocks.jadachite && (down == MBlocks.jadachite || down == Blocks.soul_sand) && north != MBlocks.jadachite && east != MBlocks.jadachite && south != MBlocks.jadachite && west != MBlocks.jadachite)
+        if(up != MBlocks.jadachite && (down == MBlocks.jadachite || down == MBlocks.jadachiteroot) && north != MBlocks.jadachite && east != MBlocks.jadachite && south != MBlocks.jadachite && west != MBlocks.jadachite)
         	return true;
         if(up != MBlocks.jadachite && down != MBlocks.jadachite && north == MBlocks.jadachite && east != MBlocks.jadachite && south != MBlocks.jadachite && west != MBlocks.jadachite)
         	return true;
@@ -118,7 +119,7 @@ public class BlockJadachite extends MBlock
         	return true;
         if(up != MBlocks.jadachite && down != MBlocks.jadachite && north != MBlocks.jadachite && east != MBlocks.jadachite && south != MBlocks.jadachite && west == MBlocks.jadachite)
         	return true;
-        if(up == MBlocks.jadachite && (down == MBlocks.jadachite || down == Blocks.soul_sand) && north != MBlocks.jadachite && east != MBlocks.jadachite && south != MBlocks.jadachite && west != MBlocks.jadachite)
+        if(up == MBlocks.jadachite && (down == MBlocks.jadachite || down == MBlocks.jadachiteroot) && north != MBlocks.jadachite && east != MBlocks.jadachite && south != MBlocks.jadachite && west != MBlocks.jadachite)
         	return true;
         if(up == MBlocks.jadachite && down != MBlocks.jadachite && north == MBlocks.jadachite && east != MBlocks.jadachite && south != MBlocks.jadachite && west != MBlocks.jadachite)
         	return true;
@@ -128,13 +129,13 @@ public class BlockJadachite extends MBlock
         	return true;
         if(up == MBlocks.jadachite && down != MBlocks.jadachite && north != MBlocks.jadachite && east != MBlocks.jadachite && south != MBlocks.jadachite && west == MBlocks.jadachite)
         	return true;
-        if(up != MBlocks.jadachite && (down == MBlocks.jadachite || down == Blocks.soul_sand) && north == MBlocks.jadachite && east != MBlocks.jadachite && south != MBlocks.jadachite && west != MBlocks.jadachite)
+        if(up != MBlocks.jadachite && (down == MBlocks.jadachite || down == MBlocks.jadachiteroot) && north == MBlocks.jadachite && east != MBlocks.jadachite && south != MBlocks.jadachite && west != MBlocks.jadachite)
         	return true;
-        if(up != MBlocks.jadachite && (down == MBlocks.jadachite || down == Blocks.soul_sand) && north != MBlocks.jadachite && east == MBlocks.jadachite && south != MBlocks.jadachite && west != MBlocks.jadachite)
+        if(up != MBlocks.jadachite && (down == MBlocks.jadachite || down == MBlocks.jadachiteroot) && north != MBlocks.jadachite && east == MBlocks.jadachite && south != MBlocks.jadachite && west != MBlocks.jadachite)
         	return true;
-        if(up != MBlocks.jadachite && (down == MBlocks.jadachite || down == Blocks.soul_sand) && north != MBlocks.jadachite && east != MBlocks.jadachite && south == MBlocks.jadachite && west != MBlocks.jadachite)
+        if(up != MBlocks.jadachite && (down == MBlocks.jadachite || down == MBlocks.jadachiteroot) && north != MBlocks.jadachite && east != MBlocks.jadachite && south == MBlocks.jadachite && west != MBlocks.jadachite)
         	return true;
-        if(up != MBlocks.jadachite && (down == MBlocks.jadachite || down == Blocks.soul_sand) && north != MBlocks.jadachite && east != MBlocks.jadachite && south != MBlocks.jadachite && west == MBlocks.jadachite)
+        if(up != MBlocks.jadachite && (down == MBlocks.jadachite || down == MBlocks.jadachiteroot) && north != MBlocks.jadachite && east != MBlocks.jadachite && south != MBlocks.jadachite && west == MBlocks.jadachite)
         	return true;
         if(up != MBlocks.jadachite && down != MBlocks.jadachite && north == MBlocks.jadachite && east == MBlocks.jadachite && south != MBlocks.jadachite && west != MBlocks.jadachite)
         	return true;
@@ -207,7 +208,7 @@ public class BlockJadachite extends MBlock
 		
 		if (this == MBlocks.jadachite)
 		{
-			if (worldIn.getBlockState(pos.offset(side.getOpposite())) != iblockstate)
+			if (worldIn.getBlockState(pos.offset(side.getOpposite())).getBlock() != block)
 				return true;
 			
 			if (block == this)
@@ -220,7 +221,7 @@ public class BlockJadachite extends MBlock
     public boolean canConnectTo(IBlockAccess worldIn, BlockPos pos)
     {
         Block block = worldIn.getBlockState(pos).getBlock();
-        if (block instanceof BlockJadachite)
+        if (block instanceof BlockJadachite || (block instanceof BlockJadachiteRoot && worldIn.getBlockState(pos.up()).getBlock() == this))
         	return true;
         else
         	return false;
@@ -298,5 +299,21 @@ public class BlockJadachite extends MBlock
     protected BlockState createBlockState()
     {
         return new BlockState(this, new IProperty[] {TYPE});
+    }
+    
+    public void breakBlock(World worldIn, BlockPos pos, IBlockState state)
+    {
+        if(worldIn.getBlockState(pos.up()).getBlock() == MBlocks.jadachite)
+        	worldIn.destroyBlock(pos.up(), true);
+        if(worldIn.getBlockState(pos.down()).getBlock() == MBlocks.jadachite)
+        	worldIn.destroyBlock(pos.down(), true);
+        if(worldIn.getBlockState(pos.north()).getBlock() == MBlocks.jadachite)
+        	worldIn.destroyBlock(pos.north(), true);
+        if(worldIn.getBlockState(pos.east()).getBlock() == MBlocks.jadachite)
+        	worldIn.destroyBlock(pos.east(), true);
+        if(worldIn.getBlockState(pos.south()).getBlock() == MBlocks.jadachite)
+        	worldIn.destroyBlock(pos.south(), true);
+        if(worldIn.getBlockState(pos.west()).getBlock() == MBlocks.jadachite)
+        	worldIn.destroyBlock(pos.west(), true);
     }
 }

@@ -235,25 +235,25 @@ public class Tables {
     	Chance.addToChanceTable("boulder_ocean", new ItemStack(Blocks.sea_lantern, 1, 0), 2);
     	
     	//Dimensional Fishery -- Overworld Blocks
-    	Chance.addToChanceTable("overworld_items", new ItemStack(Blocks.sand, 64, 0), 700);
-    	Chance.addToChanceTable("overworld_items", new ItemStack(Blocks.dirt, 50, 0), 500);
-    	Chance.addToChanceTable("overworld_items", new ItemStack(Blocks.gravel, 30, 0), 300);
+    	Chance.addToChanceTable("overworld_items", new ItemStack(Blocks.sand, 64, 0), 500);
+    	Chance.addToChanceTable("overworld_items", new ItemStack(Blocks.dirt, 50, 0), 400);
+    	Chance.addToChanceTable("overworld_items", new ItemStack(Blocks.gravel, 30, 0), 200);
     	Chance.addToChanceTable("overworld_items", new ItemStack(Blocks.sandstone, 16, 0), 150);
     	Chance.addToChanceTable("overworld_items", new ItemStack(Blocks.bedrock, 13, 0), 130);
-    	Chance.addToChanceTable("overworld_items", new ItemStack(Blocks.stone, 64, 0), 100);
-    	Chance.addToChanceTable("overworld_items", new ItemStack(MBlocks.biome_stones, 64, 0), 100);
-    	Chance.addToChanceTable("overworld_items", new ItemStack(MBlocks.biome_stones, 64, 1), 100);
-    	Chance.addToChanceTable("overworld_items", new ItemStack(MBlocks.biome_stones, 64, 2), 100);
-    	Chance.addToChanceTable("overworld_items", new ItemStack(MBlocks.biome_stones, 64, 3), 100);
-    	Chance.addToChanceTable("overworld_items", new ItemStack(MBlocks.biome_stones, 64, 4), 100);
-    	Chance.addToChanceTable("overworld_items", new ItemStack(MBlocks.biome_stones, 64, 5), 100);
-    	Chance.addToChanceTable("overworld_items", new ItemStack(MBlocks.biome_stones, 64, 6), 100);
-    	Chance.addToChanceTable("overworld_items", new ItemStack(MBlocks.biome_stones, 64, 7), 100);
-    	Chance.addToChanceTable("overworld_items", new ItemStack(MBlocks.biome_stones, 64, 8), 100);
-    	Chance.addToChanceTable("overworld_items", new ItemStack(Blocks.stone, 40, 1), 100);
-    	Chance.addToChanceTable("overworld_items", new ItemStack(Blocks.stone, 40, 3), 100);
-    	Chance.addToChanceTable("overworld_items", new ItemStack(Blocks.stone, 40, 5), 100);
-    	Chance.addToChanceTable("overworld_items", new ItemStack(MBlocks.slate, 40, 0), 100);
+    	Chance.addToChanceTable("overworld_items", new ItemStack(Blocks.stone, 64, 0), 50);
+    	Chance.addToChanceTable("overworld_items", new ItemStack(MBlocks.biome_stones, 64, 0), 50);
+    	Chance.addToChanceTable("overworld_items", new ItemStack(MBlocks.biome_stones, 64, 1), 50);
+    	Chance.addToChanceTable("overworld_items", new ItemStack(MBlocks.biome_stones, 64, 2), 50);
+    	Chance.addToChanceTable("overworld_items", new ItemStack(MBlocks.biome_stones, 64, 3), 50);
+    	Chance.addToChanceTable("overworld_items", new ItemStack(MBlocks.biome_stones, 64, 4), 50);
+    	Chance.addToChanceTable("overworld_items", new ItemStack(MBlocks.biome_stones, 64, 5), 50);
+    	Chance.addToChanceTable("overworld_items", new ItemStack(MBlocks.biome_stones, 64, 6), 50);
+    	Chance.addToChanceTable("overworld_items", new ItemStack(MBlocks.biome_stones, 64, 7), 50);
+    	Chance.addToChanceTable("overworld_items", new ItemStack(MBlocks.biome_stones, 64, 8), 50);
+    	Chance.addToChanceTable("overworld_items", new ItemStack(Blocks.stone, 40, 1), 50);
+    	Chance.addToChanceTable("overworld_items", new ItemStack(Blocks.stone, 40, 3), 50);
+    	Chance.addToChanceTable("overworld_items", new ItemStack(Blocks.stone, 40, 5), 50);
+    	Chance.addToChanceTable("overworld_items", new ItemStack(MBlocks.slate, 40, 0), 50);
     	Chance.addToChanceTable("overworld_items", new ItemStack(Blocks.grass, 8, 0), 80);
     	Chance.addToChanceTable("overworld_items", new ItemStack(MBlocks.dirt_permafrost, 8, 0), 80);
     	Chance.addToChanceTable("overworld_items", new ItemStack(Blocks.leaves, 8, 0), 80);
@@ -543,7 +543,7 @@ public class Tables {
     	Chance.addToChanceTable("nether_items", new ItemStack(Items.feather, 1, 0), 5);
     	
     	//Dimensional Fishery -- End Blocks
-    	Chance.addToChanceTable("end_items", new ItemStack(Blocks.end_stone, 50, 0), 500);
+    	Chance.addToChanceTable("end_items", new ItemStack(Blocks.end_stone, 50, 0), 400);
     	Chance.addToChanceTable("end_items", new ItemStack(Blocks.obsidian, 10, 0), 100);
     	Chance.addToChanceTable("end_items", new ItemStack(MBlocks.glow_mossy_end_stone, 8, 0), 80);
     	Chance.addToChanceTable("end_items", new ItemStack(MBlocks.hanging_glow_moss, 3, 0), 30);
@@ -558,9 +558,10 @@ public class Tables {
     	
     	//Dimensional Fishery -- Virtious
     	Chance.addToChanceTable("virtious_items", new ItemStack(Blocks.bedrock, 13, 0), 130);
-    	Chance.addToChanceTable("virtious_items", new ItemStack(MBlocks.green_glowshroom, 8, 0), 40);
-    	Chance.addToChanceTable("virtious_items", new ItemStack(MBlocks.purple_glowshroom, 8, 0), 40);
-    	Chance.addToChanceTable("virtious_items", new ItemStack(MBlocks.huge_green_glowshroom, 3), 18);
-    	Chance.addToChanceTable("virtious_items", new ItemStack(MBlocks.huge_purple_glowshroom, 3), 18);
+    	Chance.addToChanceTable("virtious_items", new ItemStack(MBlocks.green_glowshroom, 4, 0), 40);
+    	Chance.addToChanceTable("virtious_items", new ItemStack(MBlocks.purple_glowshroom, 4, 0), 40);
+    	Chance.addToChanceTable("virtious_items", new ItemStack(MBlocks.huge_green_glowshroom, 1), 18);
+    	Chance.addToChanceTable("virtious_items", new ItemStack(MBlocks.huge_purple_glowshroom, 1), 18);
+    	Chance.addToChanceTable("virtious_items", new ItemStack(MBlocks.jadachiteroot, 1), 11);
 	}
 }

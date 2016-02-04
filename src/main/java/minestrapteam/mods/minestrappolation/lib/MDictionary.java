@@ -189,10 +189,10 @@ public class MDictionary
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.soul_gem_block), new Object[] { "III", "III", "III", 'I', "gemSoul" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.dimensium_block), new Object[] { "III", "III", "III", 'I', "ingotDimensium" }));
 		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.compacted_dirt), new Object[] { "BBB", "BDB", "BBB", 'B', new ItemStack(Blocks.dirt, 1, 0), 'D', "dustDimensium" }));
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.compacted_netherrack), new Object[] { "BBB", "BDB", "BBB", 'B', Blocks.netherrack, 'D', "dustDimensium" }));
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.compacted_endstone), new Object[] { "BBB", "BDB", "BBB", 'B', Blocks.end_stone, 'D', "dustDimensium" }));
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.compacted_glowshrooms), new Object[] { "PPG", "PDG", "PGG", 'P', MBlocks.huge_purple_glowshroom, 'G', MBlocks.huge_green_glowshroom, 'D', "dustDimensium" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.compacted_dirt), new Object[] { "BBB", "BBB", "BBB", 'B', new ItemStack(Blocks.dirt, 1, 0) }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.compacted_netherrack), new Object[] { "BBB", "BBB", "BBB", 'B', Blocks.netherrack }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.compacted_endstone), new Object[] { "BBB", "BBB", "BBB", 'B', Blocks.end_stone }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.compacted_glowshrooms), new Object[] { "GPG", "PGP", "GPG", 'P', MBlocks.huge_purple_glowshroom, 'G', MBlocks.huge_green_glowshroom }));
 		
 		//Tech
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.crate, 1), new Object[] { "WWW", "SSS", "WWW", 'W', "plankWood", 'S', "stickWood" }));

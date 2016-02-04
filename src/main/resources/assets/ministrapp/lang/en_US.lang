@@ -625,6 +625,8 @@ tile.decaying_compacted_netherrack.name=Decaying Compressed Netherrack
 tile.decaying_compacted_endstone.name=Decaying Compressed End Stone
 tile.decaying_compacted_glowshrooms.name=Decaying Compressed Glowshrooms
 tile.enderporter.name=Enderporter
+tile.jadachite.name=Jadachite Crystals
+tile.jadachiteroot.name=Jadachite Crystal Root
 
 item.dough.name=Dough
 item.bun.name=Bun

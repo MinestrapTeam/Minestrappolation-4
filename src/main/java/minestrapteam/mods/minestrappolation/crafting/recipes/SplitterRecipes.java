@@ -622,10 +622,10 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MItems.bread_tomato_soup, 1), new ItemStack(MItems.bread_tomato_sauce, 1), new ItemStack(MItems.fat, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.spaghetti, 1), new ItemStack(MItems.tomato_sauce, 1), new ItemStack(MItems.dry_spaghetti, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.bread_spaghetti, 1), new ItemStack(MItems.bread_tomato_sauce, 1), new ItemStack(MItems.dry_spaghetti, 1), 0.1F);
-		this.addRecipe(new ItemStack(MBlocks.compacted_dirt, 1), new ItemStack(Blocks.dirt, 8, 0), new ItemStack(MItems.dimensium_dust, 1), 0.1F);
-		this.addRecipe(new ItemStack(MBlocks.compacted_netherrack, 1), new ItemStack(Blocks.netherrack, 8), new ItemStack(MItems.dimensium_dust, 1), 0.1F);
-		this.addRecipe(new ItemStack(MBlocks.compacted_endstone, 1), new ItemStack(Blocks.end_stone, 8), new ItemStack(MItems.dimensium_dust, 1), 0.1F);
-		this.addRecipe(new ItemStack(MBlocks.compacted_glowshrooms, 1), new ItemStack(MBlocks.huge_purple_glowshroom, 4), new ItemStack(MBlocks.huge_green_glowshroom, 4), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.compacted_dirt, 1), new ItemStack(Blocks.dirt, 5, 0), new ItemStack(Blocks.dirt, 4, 0), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.compacted_netherrack, 1), new ItemStack(Blocks.netherrack, 5), new ItemStack(Blocks.netherrack, 4), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.compacted_endstone, 1), new ItemStack(Blocks.end_stone, 5), new ItemStack(Blocks.end_stone, 4), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.compacted_glowshrooms, 1), new ItemStack(MBlocks.huge_purple_glowshroom, 4), new ItemStack(MBlocks.huge_green_glowshroom, 5), 0.1F);
 		this.addRecipe(new ItemStack(MBlocks.dimensium_block, 1), new ItemStack(MItems.dimensium_ingot, 5), new ItemStack(MItems.dimensium_ingot, 4), 0.1F);
 		this.addRecipe(new ItemStack(MItems.will_o_wisp, 1), new ItemStack(Items.glass_bottle, 1), new ItemStack(MItems.ender_aura, 1), 0.1F);
 		this.addRecipe(new ItemStack(MBlocks.jadachite_block, 1), new ItemStack(MItems.jadachite_shard, 2), new ItemStack(MItems.jadachite_shard, 2), 0.1F);
