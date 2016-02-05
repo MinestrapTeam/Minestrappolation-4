@@ -208,6 +208,8 @@ public class MDictionary
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MItems.charge_gun, 1), new Object[] { "SBT", "DPE", "SCT", 'S', MItems.steel_plating, 'B', "ingotBronze", 'T', "ingotTitanium", 'D', Blocks.dispenser, 'P', MItems.propeller, 'E', MItems.technological_doodad, 'C', "ingotCopper" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.enderporter, 1), new Object[] { "JAJ", "OEO", "DCD", 'J', MBlocks.jadachite_block, 'A', MItems.advanced_tech_doodad, 'O', MBlocks.obsidian_bricks, 'E', MItems.ender_aura, 'D', "ingotDimensium", 'C', MItems.crystal_heart }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.dimensional_fishery, 1), new Object[] { "PRP", "OCO", "DAD", 'P', new ItemStack(Blocks.prismarine, 1, 1), 'R', "gemRadiantQuartz", 'O', MBlocks.obsidian_bricks, 'C', MBlocks.hourglass_continurum, 'D', "ingotDimensium", 'A', MItems.advanced_tech_doodad }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MItems.poschip, 1), new Object[] { "RDR", "DMD", "RTR", 'R', "dustRedstone", 'D', "dustDimensium", 'M', Items.map, 'T', MItems.technological_doodad }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MItems.inert_chip, 1), new Object[] { "CSC", "STS", "CSC", 'C', "ingotCopper", 'S', MItems.steel_plating, 'T', MItems.technological_doodad }));
 		
 		//Materials
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MItems.reinforced_stick, 8), new Object[] { "SSS", "STS", "SSS", 'S', "stickWood", 'T', new ItemStack(MItems.tin_plating) }));

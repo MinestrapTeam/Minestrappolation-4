@@ -141,6 +141,7 @@ public class MItems extends Item
 	
 	//Plant Products
 	public static Item							mana_leaf;
+	public static Item							terracreep_spore;
 	
 	//Minerals
 	public static Item							copper_ingot;
@@ -187,6 +188,7 @@ public class MItems extends Item
 	public static Item							propeller;
 	public static Item							technological_doodad;
 	public static Item							advanced_tech_doodad;
+	public static Item							inert_chip;
 	public static Item							ice_charge;
 	public static Item							guano;
 	public static Item							slime_core;
@@ -441,6 +443,7 @@ public class MItems extends Item
 		
 		//Plant Products
 		mana_leaf = new Item().setUnlocalizedName("mana_leaf").setCreativeTab(Minestrappolation.tabMMaterials);
+		terracreep_spore = new Item().setUnlocalizedName("terracreep_spore").setCreativeTab(Minestrappolation.tabMMaterials);
 		
 		//Minerals
 		copper_ingot = new Item().setUnlocalizedName("copper_ingot").setCreativeTab(Minestrappolation.tabMMaterials);
@@ -487,6 +490,7 @@ public class MItems extends Item
 		wolf_hide = new Item().setUnlocalizedName("wolf_hide").setCreativeTab(Minestrappolation.tabMMaterials);
 		technological_doodad = new Item().setUnlocalizedName("technological_doodad").setCreativeTab(Minestrappolation.tabMMaterials);
 		advanced_tech_doodad = new Item().setUnlocalizedName("advanced_tech_doodad").setCreativeTab(Minestrappolation.tabMMaterials);
+		inert_chip=new Item().setUnlocalizedName("inert_chip").setCreativeTab(Minestrappolation.tabMTech);
 		empty_titanium_sifter = new Item().setMaxStackSize(1).setUnlocalizedName("empty_titanium_sifter").setCreativeTab(Minestrappolation.tabMTools);
 		heart_piece = new Item().setUnlocalizedName("heart_piece").setCreativeTab(Minestrappolation.tabMTools);
 		ice_charge = new ItemIceCharge().setUnlocalizedName("ice_charge");
@@ -665,6 +669,7 @@ public class MItems extends Item
 		register(wolf_gene_sample);
 		register(mana_leaf);
 		register(ice_charge);
+		register(terracreep_spore);
 		
 		register(bricks);
 		register(bricks2);
@@ -894,7 +899,10 @@ public class MItems extends Item
 		register(bedrock_hoe);
 		
 		register(wrench);
+		
+		//Tech Tab
 		register(poschip);
+		register(inert_chip);
 		register(upgradechip);
 	}
 	

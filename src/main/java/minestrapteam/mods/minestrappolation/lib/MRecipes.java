@@ -237,6 +237,11 @@ public class MRecipes
 		GameRegistry.addRecipe(new ItemStack(MBlocks.melter, 1), new Object[] { "MMM", "MFM", "IBI", 'M', new ItemStack(MItems.meurodite_plating), 'F', new ItemStack(Blocks.furnace), 'I', new ItemStack(Blocks.iron_bars), 'B', MBlocks.blazium_block });
 		GameRegistry.addRecipe(new ItemStack(MBlocks.frost_generator, 1), new Object[] { "IPI", "QPQ", "GRG", 'I', new ItemStack(MBlocks.biome_cobble, 1, 5), 'G', new ItemStack(MBlocks.biome_stones, 1, 6), 'P', new ItemStack(MBlocks.glacieric_ice), 'R', Blocks.redstone_block, 'Q', MItems.radiant_quartz });
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.titanium_sifter, 1), new Object[] { MItems.empty_titanium_sifter, MBlocks.steel_mesh });
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.upgradechip, 1, 0), new Object[] { MItems.inert_chip, MItems.ender_aura });
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.upgradechip, 1, 1), new Object[] { MItems.inert_chip, Blocks.light_weighted_pressure_plate });
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.upgradechip, 1, 2), new Object[] { MItems.inert_chip, Items.compass });
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.upgradechip, 1, 3), new Object[] { MItems.inert_chip, MItems.advanced_tech_doodad });
+		GameRegistry.addShapelessRecipe(new ItemStack(MItems.upgradechip, 1, 4), new Object[] { MItems.inert_chip, Blocks.dispenser });
 		GameRegistry.addRecipe(new ItemStack(MBlocks.block_flesh, 8), new Object[] { "FFF", "FHF", "FFF", 'F', MItems.flesh, 'H', MItems.crystal_heart });
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.cow_gene_sample, 1), new Object[] { MItems.cow_foot, MItems.slime_core, Items.sugar, Blocks.brown_mushroom});
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.chicken_gene_sample, 1), new Object[] { MItems.chicken_foot, MItems.slime_core, Items.sugar, Blocks.brown_mushroom});

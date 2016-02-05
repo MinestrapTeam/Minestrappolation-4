@@ -922,10 +922,14 @@ item.ender_aura.name=Ender Aura
 item.dimensium_chunk.name=Dimensium Ore Chunk
 item.continnium_chunk.name=Continnium Ore Chunk
 item.position_chip.name=Positional Chip
-item.preserver_chips.name=Preserver Addon
-item.collision_chips.name=Collision Addon
-item.inversion_chips.name=Inversion Addon
-item.self_sufficient_chips.name=Sufficiency Addon
+preserver_chips.name=Preserver Upgrade
+collision_chips.name=Collision Upgrade
+inversion_chips.name=Inversion Upgrade
+selfsufficient_chips.name=Sufficiency Upgrade
+placer_chips.name=Placer Upgrade
+item.inert_chip.name=Inert Upgrade Chip
+item.terracreep_spore.name=Terracreep Spore
+
 
 itemGroup.tabMBuilding=Minestrapp Building Blocks
 itemGroup.tabMDecor=Minestrapp Decoration Blocks

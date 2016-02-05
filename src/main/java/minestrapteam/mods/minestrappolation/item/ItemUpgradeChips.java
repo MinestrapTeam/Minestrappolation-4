@@ -32,11 +32,11 @@ public class ItemUpgradeChips extends Item
 	{
 		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "chips");
 		
-		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:preserver_chip");
-		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:collision_chip");
-		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:inversion_chip");
-		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:selfsufficient_chip");
-		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:placer_chip");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:preserver_chips");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:collision_chips");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:inversion_chips");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:selfsufficient_chips");
+		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:placer_chips");
 		
 		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "chips");
 		ItemChipTypes[] aenumtype = ItemChipTypes.values();
@@ -69,5 +69,46 @@ public class ItemUpgradeChips extends Item
 	public String getUnlocalizedName(ItemStack item)
 	{
 		return ItemChipTypes.byMetadata(item.getItemDamage()) + "_chips";
+	}
+	
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void addInformation(ItemStack stack, EntityPlayer playerIn, List tooltip, boolean advanced)
+	{
+		if(stack.getItemDamage() == 0)
+		{
+			tooltip.add("Enderporter Upgrade.");
+			tooltip.add("Lowers the chance of the");
+			tooltip.add("Enderporter consuming an");
+			tooltip.add("Ender Pearl when used.");
+		}
+		if(stack.getItemDamage() == 1)
+		{
+			tooltip.add("Enderporter Upgrade.");
+			tooltip.add("Makes the Enderporter");
+			tooltip.add("teleport any entity that");
+			tooltip.add("touches it.");
+		}
+		if(stack.getItemDamage() == 2)
+		{
+			tooltip.add("Enderporter Upgrade.");
+			tooltip.add("Sends teleported entities");
+			tooltip.add("below the recieving Enderporter,");
+			tooltip.add("rather than above it.");
+		}
+		if(stack.getItemDamage() == 3)
+		{
+			tooltip.add("Enderporter Upgrade.");
+			tooltip.add("Allows the Enderporter to");
+			tooltip.add("teleport entities to locations");
+			tooltip.add("without another Enderporter.");
+		}
+		if(stack.getItemDamage() == 4)
+		{
+			tooltip.add("Enderporter Upgrade.");
+			tooltip.add("Makes the Enderporter place");
+			tooltip.add("teleported block entities at");
+			tooltip.add("the destination point.");
+		}
 	}
 }

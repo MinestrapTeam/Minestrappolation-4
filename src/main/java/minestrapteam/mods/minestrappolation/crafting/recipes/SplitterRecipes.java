@@ -631,6 +631,13 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MBlocks.jadachite_block, 1), new ItemStack(MItems.jadachite_shard, 2), new ItemStack(MItems.jadachite_shard, 2), 0.1F);
 		this.addRecipe(new ItemStack(MBlocks.jadachite_bricks, 1), new ItemStack(MItems.jadachite_shard, 2), new ItemStack(MItems.jadachite_shard, 2), 0.1F);
 		this.addRecipe(new ItemStack(MBlocks.dimensional_fishery, 1), new ItemStack(MBlocks.hourglass_continurum, 1), new ItemStack(MItems.advanced_tech_doodad, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.poschip, 1), new ItemStack(MItems.technological_doodad, 1), new ItemStack(MItems.dimensium_dust, 3), 0.1F);
+		this.addRecipe(new ItemStack(MItems.inert_chip, 1), new ItemStack(MItems.technological_doodad, 1), new ItemStack(MItems.steel_plating, 4), 0.1F);
+		this.addRecipe(new ItemStack(MItems.upgradechip, 1, 0), new ItemStack(MItems.inert_chip, 1), new ItemStack(MItems.ender_aura, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.upgradechip, 1, 1), new ItemStack(MItems.inert_chip, 1), new ItemStack(Blocks.light_weighted_pressure_plate, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.upgradechip, 1, 2), new ItemStack(MItems.inert_chip, 1), new ItemStack(Items.compass, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.upgradechip, 1, 3), new ItemStack(MItems.inert_chip, 1), new ItemStack(MItems.advanced_tech_doodad, 1), 0.1F);
+		this.addRecipe(new ItemStack(MItems.upgradechip, 1, 4), new ItemStack(MItems.inert_chip, 1), new ItemStack(Blocks.dispenser, 1), 0.1F);
 	}
 	
 	public void addRecipe(Block input, ItemStack stack, ItemStack stack2, float experience)

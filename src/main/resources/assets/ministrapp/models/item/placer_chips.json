@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "ministrapp:items/jadachite_root"
+        "layer0": "ministrapp:items/placer_chip"
     },
     "display": {
         "thirdperson": {

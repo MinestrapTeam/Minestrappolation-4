@@ -34,3 +34,4 @@ tile.quartzBlock.lines.name=Nether Quartz Pillar
 tile.stairsQuartz.name=Nether Quartz Stairs
 tile.whiteStone.name=Cobbled End Stone
 tile.litpumpkin.name=Glowpumpkin
+tile.air.name=Air
