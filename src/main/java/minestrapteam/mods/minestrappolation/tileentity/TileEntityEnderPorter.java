@@ -10,10 +10,13 @@ import minestrapteam.mods.minestrappolation.lib.MItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockChest;
 import net.minecraft.block.BlockHopper;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemSeedFood;
+import net.minecraft.item.ItemSeeds;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
@@ -120,14 +123,45 @@ public class TileEntityEnderPorter extends TileEntityInventory
 				ItemStack stack = entityitem.getEntityItem();
 				if(stack.getItem() instanceof ItemBlock)
 				{
-					entityitem.setDead();
+					
 					Block block = Block.getBlockFromItem(stack.getItem());
 					
 					if(!world.isAirBlock(new BlockPos(getChipPos().getX() + .5, getChipPos().getY() + hasInversionUpgrade(world, pos), getChipPos().getZ() + .5)))
 					{
 						world.destroyBlock(new BlockPos(getChipPos().getX() + .5, getChipPos().getY() + hasInversionUpgrade(world, pos), getChipPos().getZ() + .5), true);
 					}
-					world.setBlockState(new BlockPos(getChipPos().getX() + .5, getChipPos().getY() + hasInversionUpgrade(world, pos), getChipPos().getZ() + .5), block.getStateFromMeta(stack.getItemDamage()), 2);
+					
+					if(this.placeBlock(world, new BlockPos(getChipPos().getX() + .5, getChipPos().getY() + hasInversionUpgrade(world, pos), getChipPos().getZ() + .5), block.getStateFromMeta(stack.getItemDamage())))
+					{
+						entityitem.setDead();
+					}
+					
+				}
+				if(stack.getItem() instanceof ItemSeeds || stack.getItem() instanceof ItemSeedFood)
+				{
+					Object stack2 = null;
+					Block block = null;
+					if(stack.getItem() instanceof ItemSeeds)
+					{
+						stack2 = (ItemSeeds) stack.getItem();
+						block = ((ItemSeeds) stack2).getPlant(world, pos).getBlock();
+					}
+					if(stack.getItem() instanceof ItemSeedFood)
+					{
+						stack2 = (ItemSeedFood) stack.getItem();
+						block = ((ItemSeedFood) stack2).getPlant(world, pos).getBlock();
+					}
+
+					if(!world.isAirBlock(new BlockPos(getChipPos().getX() + .5, getChipPos().getY() + hasInversionUpgrade(world, pos), getChipPos().getZ() + .5)))
+					{
+						world.destroyBlock(new BlockPos(getChipPos().getX() + .5, getChipPos().getY() + hasInversionUpgrade(world, pos), getChipPos().getZ() + .5), true);
+					}
+					
+					if(this.placeBlock(world, new BlockPos(getChipPos().getX() + .5, getChipPos().getY() + hasInversionUpgrade(world, pos), getChipPos().getZ() + .5), block.getDefaultState()))
+					{
+						entityitem.setDead();
+					}
+					
 				}
 			}
 		}
@@ -211,6 +245,16 @@ public class TileEntityEnderPorter extends TileEntityInventory
 		}
 		if(up2 != null && up2.getIsItemStackEqual(stack))
 		{
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean placeBlock(World world, BlockPos pos, IBlockState state)
+	{
+		if(state.getBlock().canPlaceBlockAt(world, pos))
+		{
+			world.setBlockState(pos, state, 2);
 			return true;
 		}
 		return false;
