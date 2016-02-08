@@ -31,6 +31,7 @@ import minestrapteam.mods.minestrappolation.item.ItemPosChip;
 import minestrapteam.mods.minestrappolation.item.ItemSifter;
 import minestrapteam.mods.minestrappolation.item.ItemSoulBottle;
 import minestrapteam.mods.minestrappolation.item.ItemSoulGem;
+import minestrapteam.mods.minestrappolation.item.ItemTerracreepSpore;
 import minestrapteam.mods.minestrappolation.item.ItemUpgradeChips;
 import minestrapteam.mods.minestrappolation.item.ItemWrench;
 import minestrapteam.mods.minestrappolation.item.MItemFoiled;
@@ -443,7 +444,7 @@ public class MItems extends Item
 		
 		//Plant Products
 		mana_leaf = new Item().setUnlocalizedName("mana_leaf").setCreativeTab(Minestrappolation.tabMMaterials);
-		terracreep_spore = new Item().setUnlocalizedName("terracreep_spore").setCreativeTab(Minestrappolation.tabMMaterials);
+		terracreep_spore = new ItemTerracreepSpore().setUnlocalizedName("terracreep_spore").setCreativeTab(Minestrappolation.tabMMaterials);
 		
 		//Minerals
 		copper_ingot = new Item().setUnlocalizedName("copper_ingot").setCreativeTab(Minestrappolation.tabMMaterials);

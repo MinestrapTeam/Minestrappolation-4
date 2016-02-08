@@ -30,10 +30,9 @@ public class ItemTerracreepSpore extends Item
 	    }
 	    else
 	    {
-	    	if(worldIn.getBlockState(pos.offset(side)) == Blocks.stone.getDefaultState() || worldIn.getBlockState(pos) == Blocks.netherrack.getDefaultState() || worldIn.getBlockState(pos) == Blocks.end_stone.getDefaultState() || worldIn.getBlockState(pos).getBlock() == MBlocks.biome_stones)
+	    	if(worldIn.getBlockState(pos) == Blocks.stone.getDefaultState() || worldIn.getBlockState(pos) == Blocks.netherrack.getDefaultState() || worldIn.getBlockState(pos) == Blocks.end_stone.getDefaultState() || worldIn.getBlockState(pos).getBlock() == MBlocks.biome_stones)
 	    	{
-	    		System.out.println("Yes");
-	    		IBlockState block = worldIn.getBlockState(pos.offset(side));
+	    		IBlockState block = worldIn.getBlockState(pos);
 	    		if(block == Blocks.stone.getDefaultState())
 	    			worldIn.setBlockState(pos, MBlocks.terracreep.getDefaultState().withProperty(BlockTerraCreep.VARIANT, MCreepType.STONE));
 	    		else if(block == MBlocks.biome_stones.getDefaultState().withProperty(BlockBiomeStones.VARIANT, MStoneType.DEEPSTONE))

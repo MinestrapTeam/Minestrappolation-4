@@ -46,6 +46,7 @@ public class GuiSplitter extends GuiContainer
 		}
 		
 		int update = this.splitter.getProgressScaled(24);
-		this.drawTexturedModalRect(j + 79, k + 34, 176, 14, update + 1, 16);
+		this.drawTexturedModalRect(j + 55, k + 26, 176, 14, 16, update - 7);
+		this.drawTexturedModalRect(j + 110, k + 26, 176, 14, 16, update - 7);
 	}
 }
