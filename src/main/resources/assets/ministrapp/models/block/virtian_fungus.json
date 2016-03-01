@@ -1,0 +1,8 @@
+{
+    "parent": "block/cube_bottom_top",
+    "textures": {
+        "bottom": "ministrapp:blocks/virtian_soil",
+        "top": "ministrapp:blocks/virtian_fungus_top",
+        "side": "ministrapp:blocks/virtian_fungus_side"
+    }
+}

@@ -13,6 +13,7 @@ import minestrapteam.mods.minestrappolation.block.BlockPatternBricks;
 import minestrapteam.mods.minestrappolation.block.BlockRefined;
 import minestrapteam.mods.minestrappolation.block.BlockRoads;
 import minestrapteam.mods.minestrappolation.block.BlockTiles;
+import minestrapteam.mods.minestrappolation.block.BlockVirtianSoil;
 import minestrapteam.mods.minestrappolation.block.MBlockLeaves;
 import minestrapteam.mods.minestrappolation.block.MBlockLog;
 import minestrapteam.mods.minestrappolation.block.MBlockPlanks;
@@ -118,6 +119,7 @@ public class ClientProxy extends CommonProxy
 		BlockCarvedPumpkin.inventoryRender("creepy_lit");
 		BlockCarvedPumpkin.inventoryRender("grump_lit");
 		BlockCarvedPumpkin.inventoryRender("dumpy_lit");
+		BlockVirtianSoil.inventoryRender();
 		
 		ItemChunk.inventoryRender();
 		ItemBricks.inventoryRender();

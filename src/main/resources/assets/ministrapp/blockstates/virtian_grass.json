@@ -1,0 +1,11 @@
+{
+    "variants": {
+        "snowy=false": [
+            { "model": "ministrapp:virtian_grass_normal" },
+            { "model": "ministrapp:virtian_grass_normal", "y": 90 },
+            { "model": "ministrapp:virtian_grass_normal", "y": 180 },
+            { "model": "ministrapp:virtian_grass_normal", "y": 270 }
+        ],
+        "snowy=true":  { "model": "ministrapp:virtian_grass_snowed" }
+    }
+}

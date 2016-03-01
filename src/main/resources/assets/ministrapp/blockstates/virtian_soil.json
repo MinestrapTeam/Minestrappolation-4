@@ -1,0 +1,37 @@
+{
+    "variants": {
+        "snowy=true,variant=dirt": [
+            { "model": "ministrapp:virtian_soil" },
+            { "model": "ministrapp:virtian_soil", "y": 90 },
+            { "model": "ministrapp:virtian_soil", "y": 180 },
+            { "model": "ministrapp:virtian_soil", "y": 270 }
+        ],
+		"snowy=false,variant=dirt": [
+            { "model": "ministrapp:virtian_soil" },
+            { "model": "ministrapp:virtian_soil", "y": 90 },
+            { "model": "ministrapp:virtian_soil", "y": 180 },
+            { "model": "ministrapp:virtian_soil", "y": 270 }
+        ],
+		"snowy=true,variant=coarse_dirt": [
+            { "model": "ministrapp:virtian_soil_barren" },
+            { "model": "ministrapp:virtian_soil_barren", "y": 90 },
+            { "model": "ministrapp:virtian_soil_barren", "y": 180 },
+            { "model": "ministrapp:virtian_soil_barren", "y": 270 }
+        ],
+		"snowy=false,variant=coarse_dirt": [
+            { "model": "ministrapp:virtian_soil_barren" },
+            { "model": "ministrapp:virtian_soil_barren", "y": 90 },
+            { "model": "ministrapp:virtian_soil_barren", "y": 180 },
+            { "model": "ministrapp:virtian_soil_barren", "y": 270 }
+        ],
+		"snowy=true,variant=podzol": [
+			{ "model": "ministrapp:virtian_grass_snowed" }
+		],
+		"snowy=false,variant=podzol": [
+			{ "model": "ministrapp:virtian_soil_ash" },
+			{ "model": "ministrapp:virtian_soil_ash", "y": 90 },
+            { "model": "ministrapp:virtian_soil_ash", "y": 180 },
+            { "model": "ministrapp:virtian_soil_ash", "y": 270 }
+		]
+    }
+}

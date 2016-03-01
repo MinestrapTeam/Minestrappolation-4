@@ -627,6 +627,9 @@ tile.decaying_compacted_glowshrooms.name=Decaying Compressed Glowshrooms
 tile.enderporter.name=Enderporter
 tile.jadachite.name=Jadachite Crystals
 tile.jadachiteroot.name=Jadachite Crystal Root
+virtian_soil_dirt.name=Virtian Soil
+virtian_soil_coarse_dirt.name=Barren Virtian Soil
+virtian_soil_podzol.name=Ashen Virtian Soil
 
 item.dough.name=Dough
 item.bun.name=Bun
