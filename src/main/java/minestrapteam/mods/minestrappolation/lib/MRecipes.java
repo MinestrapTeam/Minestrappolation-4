@@ -35,6 +35,7 @@ public class MRecipes
 		
 		GameRegistry.addRecipe(new ItemStack(MItems.deathmeal, 3), new Object[] { "B", 'B', MItems.wither_bone });
 		GameRegistry.addShapelessRecipe(new ItemStack(MItems.will_o_wisp, 1), new Object[] { Items.glass_bottle, Items.blaze_powder, MItems.ender_aura, MBlocks.wither_ash, MItems.animal_bones, MItems.grease });
+		GameRegistry.addRecipe(new ItemStack(MBlocks.virtian_soil, 4, 1), new Object[] { "VG", "GV", 'V', new ItemStack(MBlocks.virtian_soil, 1, 0), 'G', Blocks.gravel });
 		
 		// Food
 		GameRegistry.addRecipe(new ItemStack(MItems.corn_meal, 2), new Object[] { "WW", "WW", 'W', MBlocks.corn });

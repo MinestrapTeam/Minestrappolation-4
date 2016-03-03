@@ -52,6 +52,7 @@ public class MBlocks
 	public static Block rubble;
 	public static Block wither_ash;
 	public static Block virtian_soil;
+	public static Block virtian_grass;
 	
 	//Plants
 	public static Block	ministrapp_leaves;
@@ -478,6 +479,7 @@ public class MBlocks
 		rubble = new BlockMFalling(Material.rock, MapColor.grayColor).setHardness(0.7F).setStepSound(Block.soundTypePiston).setUnlocalizedName("rubble").setCreativeTab(Minestrappolation.tabMBuilding);
 		wither_ash = new BlockWitherAsh().setHardness(0.1F).setStepSound(Block.soundTypeSand).setUnlocalizedName("wither_ash").setCreativeTab(Minestrappolation.tabMMaterials);
 		virtian_soil = new BlockVirtianSoil().setHardness(0.6F).setStepSound(Block.soundTypeGravel).setCreativeTab(Minestrappolation.tabMBuilding).setUnlocalizedName("virtian_soil");
+		virtian_grass = new BlockVirtianGrass().setHardness(0.6F).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMBuilding).setUnlocalizedName("virtian_grass");
 		
 		//Plants
 		ministrapp_leaves = new MBlockLeaves(600).setUnlocalizedName("ministrapp_leaves");
@@ -926,6 +928,7 @@ public class MBlocks
 		register(cold_sand, ItemBlockColdSand.class);
 		register(wither_ash);
 		register(virtian_soil, ItemBlockVirtianSoil.class);
+		register(virtian_grass, ItemBlockVirtianGrass.class);
 		
 		register(compacted_dirt);
 		register(compacted_netherrack);
@@ -1347,6 +1350,7 @@ public class MBlocks
 		wither_ash.setHarvestLevel("shovel", 0);
 		compacted_dirt.setHarvestLevel("shovel", 0);
 		virtian_soil.setHarvestLevel("shovel", 0);
+		virtian_grass.setHarvestLevel("shovel", 0);
 		
 		compacted_netherrack.setHarvestLevel("pickaxe", 1);
 		compacted_endstone.setHarvestLevel("pickaxe", 1);

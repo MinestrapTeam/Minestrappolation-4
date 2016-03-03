@@ -89,7 +89,7 @@ public class BlockMoss extends BlockBush implements IGrowable
 	
 	protected boolean canPlaceBlockOn(Block ground)
     {
-		 return ground == Blocks.grass || ground == Blocks.dirt || ground == Blocks.farmland || ground == Blocks.cobblestone || ground == Blocks.mossy_cobblestone || ground == Blocks.stonebrick || ground == MBlocks.biome_cobble || ground == MBlocks.biome_bricks || ground == MBlocks.mossy || ground == MBlocks.mossy_bricks || ground == MBlocks.cracked_bricks || ground == MBlocks.pattern_bricks || ground == MBlocks.stone_pattern_bricks || ground == MBlocks.chiseled || ground == MBlocks.dirt_permafrost || ground == MBlocks.lichen_permafrost;
+		 return ground == Blocks.grass || ground == Blocks.dirt || ground == Blocks.farmland || ground == Blocks.cobblestone || ground == Blocks.mossy_cobblestone || ground == Blocks.stonebrick || ground == MBlocks.biome_cobble || ground == MBlocks.biome_bricks || ground == MBlocks.mossy || ground == MBlocks.mossy_bricks || ground == MBlocks.cracked_bricks || ground == MBlocks.pattern_bricks || ground == MBlocks.stone_pattern_bricks || ground == MBlocks.chiseled || ground == MBlocks.dirt_permafrost || ground == MBlocks.lichen_permafrost || ground == MBlocks.mud;
     }
 	
 	public boolean canBlockStay(World worldIn, BlockPos pos, IBlockState state)
@@ -97,7 +97,7 @@ public class BlockMoss extends BlockBush implements IGrowable
         if (pos.getY() >= 0 && pos.getY() < 256)
         {
             IBlockState iblockstate1 = worldIn.getBlockState(pos.down());
-            return iblockstate1.getBlock() == Blocks.mycelium ? true : (iblockstate1.getBlock() == Blocks.dirt && iblockstate1.getValue(BlockDirt.VARIANT) == BlockDirt.DirtType.PODZOL ? true : (iblockstate1.getBlock() == MBlocks.lichen_permafrost ? true : (iblockstate1.getBlock() == MBlocks.dirt_permafrost ? true : worldIn.getLight(pos) < 13 && iblockstate1.getBlock().canSustainPlant(worldIn, pos.down(), net.minecraft.util.EnumFacing.UP, this))));
+            return iblockstate1.getBlock() == Blocks.mycelium ? true : (iblockstate1.getBlock() == Blocks.dirt && iblockstate1.getValue(BlockDirt.VARIANT) == BlockDirt.DirtType.PODZOL ? true : (iblockstate1.getBlock() == MBlocks.lichen_permafrost ? true : (iblockstate1.getBlock() == MBlocks.dirt_permafrost ? true : (iblockstate1.getBlock() == MBlocks.mud ? true : worldIn.getLight(pos) < 13 && iblockstate1.getBlock().canSustainPlant(worldIn, pos.down(), net.minecraft.util.EnumFacing.UP, this)))));
         }
         else
         {

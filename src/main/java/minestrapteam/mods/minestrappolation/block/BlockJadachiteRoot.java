@@ -33,7 +33,7 @@ public class BlockJadachiteRoot extends MBlock
 	
 	public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
     {
-		Block soil = Blocks.soul_sand;
+		Block soil = MBlocks.virtian_grass;
 		
 		if(		worldIn.getBlockState(pos.down().north().west()) == soil.getDefaultState() &&
 				worldIn.getBlockState(pos.down().north()) == soil.getDefaultState() &&

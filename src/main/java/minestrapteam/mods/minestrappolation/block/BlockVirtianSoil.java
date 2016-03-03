@@ -69,15 +69,18 @@ public class BlockVirtianSoil extends BlockDirt
 	
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ)
     {
-        if(playerIn.getHeldItem().getItem() instanceof ItemHoe && state.getValue(VARIANT).getMetadata() == 1)
+        if(playerIn.getHeldItem() != null)
         {
-        	if(playerIn.getHeldItem().getItemDamage() < playerIn.getHeldItem().getMaxDamage())
-        		playerIn.getHeldItem().damageItem(1, playerIn);
-        	else
-        		playerIn.destroyCurrentEquippedItem();
-        	worldIn.setBlockState(pos, MBlocks.virtian_soil.getDefaultState());
-        	worldIn.playSoundEffect((double)((float)pos.getX() + 0.5F), (double)((float)pos.getY() + 0.5F), (double)((float)pos.getZ() + 0.5F), MBlocks.virtian_soil.stepSound.getStepSound(), (MBlocks.virtian_soil.stepSound.getVolume() + 1.0F) / 2.0F, MBlocks.virtian_soil.stepSound.getFrequency() * 0.8F);
-        	return true;
+        	if(playerIn.getHeldItem().getItem() instanceof ItemHoe && state.getValue(VARIANT).getMetadata() == 1)
+        	{
+        		if(playerIn.getHeldItem().getItemDamage() < playerIn.getHeldItem().getMaxDamage())
+        			playerIn.getHeldItem().damageItem(1, playerIn);
+        		else
+        			playerIn.destroyCurrentEquippedItem();
+        		worldIn.setBlockState(pos, MBlocks.virtian_soil.getDefaultState());
+        		worldIn.playSoundEffect((double)((float)pos.getX() + 0.5F), (double)((float)pos.getY() + 0.5F), (double)((float)pos.getZ() + 0.5F), MBlocks.virtian_soil.stepSound.getStepSound(), (MBlocks.virtian_soil.stepSound.getVolume() + 1.0F) / 2.0F, MBlocks.virtian_soil.stepSound.getFrequency() * 0.8F);
+        		return true;
+        	}
         }
 		return false;
     }

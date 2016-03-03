@@ -630,6 +630,7 @@ tile.jadachiteroot.name=Jadachite Crystal Root
 virtian_soil_dirt.name=Virtian Soil
 virtian_soil_coarse_dirt.name=Barren Virtian Soil
 virtian_soil_podzol.name=Ashen Virtian Soil
+virtian_grass.name=Virtian Grass
 
 item.dough.name=Dough
 item.bun.name=Bun
@@ -932,7 +933,7 @@ selfsufficient_chips.name=Sufficiency Upgrade
 placer_chips.name=Placer Upgrade
 item.inert_chip.name=Inert Upgrade Chip
 item.terracreep_spore.name=Terracreep Spore
-
+item.minestrapp_wrench.name=Steel Wrench
 
 itemGroup.tabMBuilding=Minestrapp Building Blocks
 itemGroup.tabMDecor=Minestrapp Decoration Blocks
