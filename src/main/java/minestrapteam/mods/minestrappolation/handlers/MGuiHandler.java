@@ -8,6 +8,7 @@ import minestrapteam.mods.minestrappolation.inventory.container.ContainerCrate;
 import minestrapteam.mods.minestrappolation.inventory.container.ContainerCrusher;
 import minestrapteam.mods.minestrappolation.inventory.container.ContainerEnderPorter;
 import minestrapteam.mods.minestrappolation.inventory.container.ContainerMelter;
+import minestrapteam.mods.minestrappolation.inventory.container.ContainerPipe;
 import minestrapteam.mods.minestrappolation.inventory.container.ContainerSatchel;
 import minestrapteam.mods.minestrappolation.inventory.container.ContainerSawmill;
 import minestrapteam.mods.minestrappolation.inventory.container.ContainerSplitter;
@@ -19,6 +20,7 @@ import minestrapteam.mods.minestrappolation.inventory.gui.GuiCrate;
 import minestrapteam.mods.minestrappolation.inventory.gui.GuiCrusher;
 import minestrapteam.mods.minestrappolation.inventory.gui.GuiEnderPorter;
 import minestrapteam.mods.minestrappolation.inventory.gui.GuiMelter;
+import minestrapteam.mods.minestrappolation.inventory.gui.GuiPipe;
 import minestrapteam.mods.minestrappolation.inventory.gui.GuiSatchel;
 import minestrapteam.mods.minestrappolation.inventory.gui.GuiSawmill;
 import minestrapteam.mods.minestrappolation.inventory.gui.GuiSplitter;
@@ -29,6 +31,7 @@ import minestrapteam.mods.minestrappolation.tileentity.TileEntityCrate;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntityCrusher;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntityEnderPorter;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntityMelter;
+import minestrapteam.mods.minestrappolation.tileentity.TileEntityPipe;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntitySawMill;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntitySplitter;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntityStoneCutter;
@@ -51,6 +54,7 @@ public class MGuiHandler implements IGuiHandler
 	public static final int GUIID_BACKPACK		= 8;
 	public static final int GUIID_SATCHEL		= 9;
 	public static final int GUIID_ENDERPORTER	= 10;
+	public static final int GUIID_PIPE			= 11;
 
 	
 	@Override
@@ -123,6 +127,13 @@ public class MGuiHandler implements IGuiHandler
 			TileEntityEnderPorter tileEntityEnderPorter = (TileEntityEnderPorter) tileEntity;
 			return new ContainerEnderPorter(player, tileEntityEnderPorter);
 		}
+		
+		// Item Pipe
+				if (tileEntity instanceof TileEntityPipe)
+				{
+					TileEntityPipe tileEntityPipe = (TileEntityPipe) tileEntity;
+					return new ContainerPipe(player, tileEntityPipe);
+				}
 
 		if (ID == GUIID_BACKPACK)
 		{
@@ -206,6 +217,13 @@ public class MGuiHandler implements IGuiHandler
 			TileEntityEnderPorter tileEntityEnderPorter = (TileEntityEnderPorter) tileEntity;
 			return new GuiEnderPorter(player, tileEntityEnderPorter);
 		}
+		
+		// Pipe
+				if (tileEntity instanceof TileEntityPipe)
+				{
+					TileEntityPipe tileEntityPipe = (TileEntityPipe) tileEntity;
+					return new GuiPipe(player, tileEntityPipe);
+				}
 		
 		if (ID == GUIID_BACKPACK)
 		{

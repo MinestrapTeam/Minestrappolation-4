@@ -55,19 +55,36 @@ public class MDictionary
 		OreDictionary.registerOre("blockSoulGem", MBlocks.soul_gem_block);
 		OreDictionary.registerOre("blockDimensium", MBlocks.dimensium_block);
 		
-		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 0));
-		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 1));
-		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 2));
-		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 3));
-		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 4));
-		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 5));
-		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 6));
-		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 7));
-		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 8));
-		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 9));
+		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 1, 0));
+		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 1, 1));
+		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 1, 2));
+		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 1, 3));
+		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 1, 4));
+		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 1, 5));
+		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 1, 6));
+		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 1, 7));
+		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 1, 8));
+		OreDictionary.registerOre("ingotBrickStone", new ItemStack(MItems.bricks, 1, 9));
 		
 		OreDictionary.registerOre("logWood", new ItemStack(MBlocks.ministrapp_log, 1, WILDCARD_VALUE));
 		OreDictionary.registerOre("plankWood", new ItemStack(MBlocks.ministrapp_planks, 1, WILDCARD_VALUE));
+		OreDictionary.registerOre("plankWood", new ItemStack(MBlocks.ministrapp_boards, 1, WILDCARD_VALUE));
+		OreDictionary.registerOre("plankOak", new ItemStack(Blocks.planks, 1, 0));
+		OreDictionary.registerOre("plankSpruce", new ItemStack(Blocks.planks, 1, 1));
+		OreDictionary.registerOre("plankBirch", new ItemStack(Blocks.planks, 1, 2));
+		OreDictionary.registerOre("plankJungle", new ItemStack(Blocks.planks, 1, 3));
+		OreDictionary.registerOre("plankAcacia", new ItemStack(Blocks.planks, 1, 4));
+		OreDictionary.registerOre("plankDarkOak", new ItemStack(Blocks.planks, 1, 5));
+		OreDictionary.registerOre("plankRedwood", new ItemStack(MBlocks.ministrapp_planks, 1, 0));
+		OreDictionary.registerOre("plankFrozenOak", new ItemStack(MBlocks.ministrapp_planks, 1, 1));
+		OreDictionary.registerOre("plankOak", new ItemStack(MBlocks.ministrapp_boards, 1, 0));
+		OreDictionary.registerOre("plankSpruce", new ItemStack(MBlocks.ministrapp_boards, 1, 1));
+		OreDictionary.registerOre("plankBirch", new ItemStack(MBlocks.ministrapp_boards, 1, 2));
+		OreDictionary.registerOre("plankJungle", new ItemStack(MBlocks.ministrapp_boards, 1, 3));
+		OreDictionary.registerOre("plankAcacia", new ItemStack(MBlocks.ministrapp_boards, 1, 4));
+		OreDictionary.registerOre("plankDarkOak", new ItemStack(MBlocks.ministrapp_boards, 1, 5));
+		OreDictionary.registerOre("plankRedwood", new ItemStack(MBlocks.ministrapp_boards, 1, 0));
+		OreDictionary.registerOre("plankFrozenOak", new ItemStack(MBlocks.ministrapp_boards, 1, 1));
 		OreDictionary.registerOre("slabWood", new ItemStack(MBlocks.redwood_slab, 1, WILDCARD_VALUE));
 		OreDictionary.registerOre("slabWood", new ItemStack(MBlocks.frozen_oak_slab, 1, WILDCARD_VALUE));
 		OreDictionary.registerOre("stairWood", new ItemStack(MBlocks.redwood_stairs, 1, WILDCARD_VALUE));
@@ -196,6 +213,8 @@ public class MDictionary
 		
 		//Tech
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.crate, 1), new Object[] { "WWW", "SSS", "WWW", 'W', "plankWood", 'S', "stickWood" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.hopper, 1), new Object[] { "S S", "SCS", " S ", 'S', "ingotSteel", 'C', MBlocks.crate }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.pipe, 16), new Object[] { "SSS", "S S", " D ", 'S', "ingotSteel", 'D', Blocks.dropper }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.sawmill, 1), new Object[] { "CC", "WW", "WW", 'C', "ingotCopper", 'W', "plankWood" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.stonecutter, 1), new Object[] { "II", "CC", "CC", 'I', "ingotIron", 'C', "cobblestone" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.crusher, 1), new Object[] { "BPB", "BTB", "OOO", 'B', "blockBronze", 'P', Blocks.piston, 'T', "ingotTitanium", 'O', MBlocks.obsidian_bricks }));

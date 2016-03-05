@@ -2,6 +2,7 @@ package minestrapteam.mods.minestrappolation.client;
 
 import minestrapteam.mods.minestrappolation.Minestrappolation;
 import minestrapteam.mods.minestrappolation.block.BlockBiomeBricks;
+import minestrapteam.mods.minestrappolation.block.BlockBoards;
 import minestrapteam.mods.minestrappolation.block.BlockCarvedPumpkin;
 import minestrapteam.mods.minestrappolation.block.BlockChiseled;
 import minestrapteam.mods.minestrappolation.block.BlockCrackedBricks;
@@ -120,6 +121,9 @@ public class ClientProxy extends CommonProxy
 		BlockCarvedPumpkin.inventoryRender("grump_lit");
 		BlockCarvedPumpkin.inventoryRender("dumpy_lit");
 		BlockVirtianSoil.inventoryRender();
+		BlockBoards.inventoryRender("boards");
+		BlockBoards.inventoryRender("mossy_planks");
+		BlockBoards.inventoryRender("mossy_boards");
 		
 		ItemChunk.inventoryRender();
 		ItemBricks.inventoryRender();

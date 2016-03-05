@@ -97,7 +97,7 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(Blocks.noteblock, 1), new ItemStack(Blocks.planks, 8), new ItemStack(Items.redstone, 1), 0.1F);
 		this.addRecipe(new ItemStack(Blocks.jukebox, 1), new ItemStack(Blocks.planks, 8), new ItemStack(Items.diamond, 1), 0.1F);
 		this.addRecipe(new ItemStack(Blocks.enchanting_table, 1), new ItemStack(Blocks.obsidian, 4), new ItemStack(Items.diamond, 2), 0.1F);
-		this.addRecipe(new ItemStack(Blocks.hopper, 1), new ItemStack(Blocks.chest, 1), new ItemStack(Items.iron_ingot, 5), 0.1F);
+		this.addRecipe(new ItemStack(Blocks.hopper, 1), new ItemStack(MBlocks.crate, 1), new ItemStack(MItems.steel_ingot, 5), 0.1F);
 		this.addRecipe(new ItemStack(Blocks.tnt, 1), new ItemStack(Items.gunpowder, 5), new ItemStack(Blocks.sand, 4), 0.1F);
 		this.addRecipe(new ItemStack(Blocks.daylight_detector, 1), new ItemStack(Blocks.glass, 3), new ItemStack(MItems.desert_quartz_item, 3), 0.1F);
 		this.addRecipe(new ItemStack(Blocks.redstone_torch, 1), new ItemStack(Items.redstone, 1), new ItemStack(Items.stick, 1), 0.1F);

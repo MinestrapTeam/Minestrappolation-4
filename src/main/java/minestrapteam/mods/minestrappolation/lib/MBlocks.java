@@ -130,6 +130,9 @@ public class MBlocks
 	//Wood Blocks
 	public static Block	ministrapp_log;
 	public static Block	ministrapp_planks;	
+	public static Block ministrapp_boards;
+	public static Block ministrapp_mossy_planks;
+	public static Block ministrapp_mossy_boards;
 	
 	//Glass Decor Blocks
 	public static Block	glass_bricks;
@@ -273,6 +276,7 @@ public class MBlocks
 	//Tech Blocks
 	public static Block	crate;
 	public static Block	barrel;
+	public static Block pipe;
 	public static Block	sawmill;
 	public static Block	stonecutter;
 	public static Block	plutonium_insulated;
@@ -561,6 +565,9 @@ public class MBlocks
 		//Wood Blocks
 		ministrapp_log = new MBlockLog(300).setUnlocalizedName("ministrapp_log");
 		ministrapp_planks = new MBlockPlanks(300).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("ministrapp_planks");
+		ministrapp_boards = new BlockBoards(300, "boards").setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood);
+		ministrapp_mossy_planks = new BlockBoards(300, "mossy_planks").setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood);
+		ministrapp_mossy_boards = new BlockBoards(300, "mossy_boards").setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood);
 		
 		//Glass Decor Blocks
 		glass_bricks = new BlockTransparent(Material.glass, MapColor.airColor, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setLightOpacity(1).setUnlocalizedName("glass_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
@@ -704,6 +711,7 @@ public class MBlocks
 		//Tech Blocks
 		crate = new BlockCrate().setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("crate").setHardness(2.5F).setStepSound(Block.soundTypeWood);
 		barrel = new BlockBarrel().setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("barrel").setHardness(2.5F).setStepSound(Block.soundTypeWood);
+		pipe = new BlockPipe(Material.iron, MapColor.stoneColor).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("pipe").setHardness(3.0F).setResistance(8.0F).setStepSound(Block.soundTypeMetal);
 		sawmill = new BlockSawmill().setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("sawmill").setHardness(2.5F).setStepSound(Block.soundTypeWood);
 		stonecutter = new BlockStoneCutter().setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("stonecutter").setHardness(3.5F).setStepSound(Block.soundTypePiston);
 		alloy = new BlockAlloy(false).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("alloy").setHardness(4F).setStepSound(Block.soundTypePiston);
@@ -949,6 +957,9 @@ public class MBlocks
 		
 		register(ministrapp_log, ItemBlockLog.class);
 		register(ministrapp_planks, ItemBlockPlanks.class);
+		register(ministrapp_boards, ItemBlockBoards.class);
+		register(ministrapp_mossy_planks, ItemBlockMossyPlanks.class);
+		register(ministrapp_mossy_boards, ItemBlockMossyBoards.class);
 		registerSlab("redwood_slab", "redwood_double_slab", redwood_slab, redwood_double_slab);
 		registerSlab("frozen_oak_slab", "frozen_oak_double_slab", frozen_oak_slab, frozen_oak_double_slab);
 		register(redwood_stairs);
@@ -1206,6 +1217,7 @@ public class MBlocks
 		
 		//Tech Tab
 		register(fan);
+		register(pipe);
 		register(plutonium_insulated);
 		register(uranium_insulated);
 		register(sawmill);

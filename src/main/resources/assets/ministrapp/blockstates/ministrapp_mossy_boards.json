@@ -1,0 +1,29 @@
+{
+   "variants":{
+	"type=oak":{
+         "model":"ministrapp:mossy_oak_boards"
+      },
+	"type=spruce":{
+         "model":"ministrapp:mossy_spruce_boards"
+      },
+	"type=birch":{
+         "model":"ministrapp:mossy_birch_boards"
+      },
+	"type=jungle":{
+         "model":"ministrapp:mossy_jungle_boards"
+      },
+	"type=acacia":{
+         "model":"ministrapp:mossy_acacia_boards"
+      },
+	"type=dark_oak":{
+         "model":"ministrapp:mossy_dark_oak_boards"
+      },
+	"type=redwood":{
+         "model":"ministrapp:mossy_redwood_boards"
+      },
+	"type=frozen_oak":{
+         "model":"ministrapp:mossy_frozen_oak_boards"
+      }
+
+    }
+}
