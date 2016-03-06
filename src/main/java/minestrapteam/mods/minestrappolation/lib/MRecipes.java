@@ -200,10 +200,6 @@ public class MRecipes
 		// Wood
 		GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.ministrapp_planks, 4, 0), new Object[] { new ItemStack(MBlocks.ministrapp_log, 1, 0) });
 		GameRegistry.addShapelessRecipe(new ItemStack(MBlocks.ministrapp_planks, 4, 1), new Object[] { new ItemStack(MBlocks.ministrapp_log, 1, 1) });
-		GameRegistry.addRecipe(new ItemStack(MBlocks.redwood_slab, 6), new Object[] { "WWW", 'W', new ItemStack(MBlocks.ministrapp_planks, 1, 0)});
-		GameRegistry.addRecipe(new ItemStack(MBlocks.frozen_oak_slab, 6), new Object[] { "WWW", 'W', new ItemStack(MBlocks.ministrapp_planks, 1, 1)});
-		GameRegistry.addRecipe(new ItemStack(MBlocks.redwood_stairs, 4), new Object[] { "W  ", "WW ", "WWW", 'W', new ItemStack(MBlocks.ministrapp_planks, 1, 0) });
-		GameRegistry.addRecipe(new ItemStack(MBlocks.frozen_oak_stairs, 4), new Object[] { "W  ", "WW ", "WWW", 'W', new ItemStack(MBlocks.ministrapp_planks, 1, 1) });
 		GameRegistry.addSmelting(new ItemStack(MBlocks.ministrapp_log), new ItemStack(Items.coal, 1, 1), 0.15F);
 		
 		//Stone
@@ -438,6 +434,7 @@ public class MRecipes
 			RecipeHelper.removeRecipeContaining(Items.flower_pot);
 			RecipeHelper.removeRecipeContaining(Blocks.lit_pumpkin);
 			RecipeHelper.removeRecipeContaining(Blocks.hopper);
+			RecipeHelper.removeRecipeContaining(Items.boat);
 		}
 	}
 	

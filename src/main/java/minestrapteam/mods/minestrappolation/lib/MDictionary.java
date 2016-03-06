@@ -211,6 +211,25 @@ public class MDictionary
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.compacted_endstone), new Object[] { "BBB", "BBB", "BBB", 'B', Blocks.end_stone }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.compacted_glowshrooms), new Object[] { "GPG", "PGP", "GPG", 'P', MBlocks.huge_purple_glowshroom, 'G', MBlocks.huge_green_glowshroom }));
 		
+		//Wood
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.wooden_slab, 6, 0), new Object[] { "WWW", 'W', "plankOak" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.wooden_slab, 6, 1), new Object[] { "WWW", 'W', "plankSpruce" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.wooden_slab, 6, 2), new Object[] { "WWW", 'W', "plankBirch" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.wooden_slab, 6, 3), new Object[] { "WWW", 'W', "plankJungle" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.wooden_slab, 6, 4), new Object[] { "WWW", 'W', "plankAcacia" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.wooden_slab, 6, 5), new Object[] { "WWW", 'W', "plankDarkOak" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.redwood_slab, 6), new Object[] { "WWW", 'W', "plankRedwood" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.frozen_oak_slab, 6), new Object[] { "WWW", 'W', "plankFrozenOak" }));
+		
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.oak_stairs, 4, 0), new Object[] { "  W", " WW", "WWW", 'W', "plankOak" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.spruce_stairs, 4, 0), new Object[] { "  W", " WW", "WWW", 'W', "plankSpruce" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.birch_stairs, 4, 0), new Object[] { "  W", " WW", "WWW", 'W', "plankBirch" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.jungle_stairs, 4, 0), new Object[] { "  W", " WW", "WWW", 'W', "plankJungle" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.acacia_stairs, 4, 0), new Object[] { "  W", " WW", "WWW", 'W', "plankAcacia" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.dark_oak_stairs, 4, 0), new Object[] { "  W", " WW", "WWW", 'W', "plankDarkOak" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.redwood_stairs, 4, 0), new Object[] { "  W", " WW", "WWW", 'W', "plankRedwood" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.frozen_oak_stairs, 4, 0), new Object[] { "  W", " WW", "WWW", 'W', "plankFrozenOak" }));
+		
 		//Tech
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.crate, 1), new Object[] { "WWW", "SSS", "WWW", 'W', "plankWood", 'S', "stickWood" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.hopper, 1), new Object[] { "S S", "SCS", " S ", 'S', "ingotSteel", 'C', MBlocks.crate }));

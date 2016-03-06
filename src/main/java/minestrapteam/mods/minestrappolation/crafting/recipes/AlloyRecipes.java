@@ -86,6 +86,9 @@ public class AlloyRecipes
 		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(Items.poisonous_potato, 1), new ItemStack(Items.leather, 2), 0.3F);
 		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(Items.dye, 2, 1), new ItemStack(Items.leather, 1), 0.3F);	
 		this.addRecipe(new ItemStack(MBlocks.purple_glowshroom, 8), new ItemStack(Blocks.pumpkin, 1), new ItemStack(Blocks.lit_pumpkin, 1), 0.3F);
+		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(Items.potionitem, 1, 8193), new ItemStack(MItems.flesh, 1), 0.8F);
+		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(Items.potionitem, 1, 8257), new ItemStack(MItems.flesh, 1), 0.8F);
+		this.addRecipe(new ItemStack(Items.rotten_flesh, 1), new ItemStack(Items.potionitem, 1, 8225), new ItemStack(MItems.flesh, 1), 0.8F);
 	}
 	
 	public class AlloyRecipe

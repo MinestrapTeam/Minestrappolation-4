@@ -2,6 +2,7 @@ package minestrapteam.mods.minestrappolation.block;
 
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFence;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -60,7 +61,7 @@ public class BlockRope extends MBlock
     
     public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
     {
-        return worldIn.isSideSolid(pos.offset(EnumFacing.UP), EnumFacing.DOWN, true) || worldIn.getBlockState(pos.offset(EnumFacing.UP)) == MBlocks.rope.getDefaultState();
+        return worldIn.isSideSolid(pos.offset(EnumFacing.UP), EnumFacing.DOWN, true) || worldIn.getBlockState(pos.offset(EnumFacing.UP)) == MBlocks.rope.getDefaultState() || worldIn.getBlockState(pos.offset(EnumFacing.UP)).getBlock() instanceof BlockFence;
     }
     
     public void onNeighborBlockChange(World worldIn, BlockPos pos, IBlockState state, Block neighborBlock)
@@ -76,7 +77,7 @@ public class BlockRope extends MBlock
     
     protected boolean canBlockStay(World worldIn, BlockPos pos, EnumFacing facing)
     {
-        return worldIn.isSideSolid(pos.offset(facing), facing.getOpposite(), true) || worldIn.getBlockState(pos.offset(EnumFacing.UP)) == MBlocks.rope.getDefaultState();
+        return worldIn.isSideSolid(pos.offset(facing), facing.getOpposite(), true) || worldIn.getBlockState(pos.offset(EnumFacing.UP)) == MBlocks.rope.getDefaultState() || worldIn.getBlockState(pos.offset(EnumFacing.UP)).getBlock() instanceof BlockFence;
     }
     
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ)

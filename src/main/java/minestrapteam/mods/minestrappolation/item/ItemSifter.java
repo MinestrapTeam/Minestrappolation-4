@@ -5,6 +5,7 @@ import minestrapteam.mods.minestrappolation.lib.MAchievements;
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import minestrapteam.mods.minestrappolation.lib.MItems;
 import minestrapteam.mods.minestrappolation.util.Chance;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -12,6 +13,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
+import net.minecraftforge.common.util.FakePlayer;
 
 public class ItemSifter extends Item{
 	
@@ -95,31 +97,34 @@ public class ItemSifter extends Item{
 	
 	private void spawnDropFrom(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, String table)
 	{
-		 worldIn.destroyBlock(pos, false);       
-         ItemStack drop = (ItemStack)Chance.getRandomFromTable(table);
-         if(drop != null)
-         {
-        	 drop.stackSize = 1;
-        	 if(worldIn.isRemote)
-        	 {
-        		 playerIn.inventory.addItemStackToInventory(drop);	 
-        	 }
-         }	
-         if(isReusable == false)
-         {
-        	 stack.damageItem(1, playerIn);
-         }
-         else if(isReusable == true)
-         {
-        	 if(stack.getItemDamage() == stack.getMaxDamage())
-        	 {
+		worldIn.destroyBlock(pos, false);       
+        ItemStack drop = (ItemStack)Chance.getRandomFromTable(table);
+        if(drop != null)
+        {
+        	drop.stackSize = 1; 
+        	if(!worldIn.isRemote)
+        	{
+        		EntityItem ei = new EntityItem(worldIn, playerIn.posX, playerIn.posY, playerIn.posZ, drop);
+        		worldIn.spawnEntityInWorld(ei);
+        		if(playerIn instanceof FakePlayer)
+        			ei.onCollideWithPlayer(playerIn);
+        	}
+        }	
+        if(isReusable == false)
+        {
+        	stack.damageItem(1, playerIn);
+        }
+        else if(isReusable == true)
+        {
+        	if(stack.getItemDamage() == stack.getMaxDamage())
+        	{
         		stack.setItem(base);
         	 	stack.setItemDamage(0);
-        	 }
-        	 else
-        	 {
-        		 stack.damageItem(1, playerIn);
-        	 }
-         }
+        	}
+        	else
+        	{
+        		stack.damageItem(1, playerIn);
+        	}
+        }
 	}
 }

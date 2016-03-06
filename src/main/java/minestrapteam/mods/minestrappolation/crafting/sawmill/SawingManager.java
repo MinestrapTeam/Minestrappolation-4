@@ -101,6 +101,7 @@ public class SawingManager
 		this.addRecipe(new ItemStack(Items.item_frame, 1, 0), new Object[] { "SSS", "SLS", "SSS", 'S', "stickWood", 'L', Items.leather });
 		this.addRecipe(new ItemStack(Items.painting, 1, 0), new Object[] { "SSS", "SWS", "SSS", 'W', Blocks.wool, 'S', "stickWood" });
 		this.addRecipe(new ItemStack(Items.armor_stand, 1, 0), new Object[] { "SSS", " S ", "SHS", 'H', "slabSmoothStone", 'S', "stickWood" });
+		this.addRecipe(new ItemStack(Items.boat, 1), new Object[] { "W W", "WWW", 'W', "plankWood" });
 		
 		//Minestrapp Alternate Recipes
 		this.addRecipe(new ItemStack(MBlocks.crate, 1), new Object[] { "WWW", "SSS", "WWW", 'W', "plankWood", 'S', "stickWood" });
