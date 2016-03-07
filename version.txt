@@ -1,2 +1,2 @@
 version=1.8.0-4.2.666
-motd=§2Merry Christmas!
+motd=§2Update coming soon!
