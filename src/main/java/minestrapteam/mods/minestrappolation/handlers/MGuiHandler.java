@@ -11,6 +11,7 @@ import minestrapteam.mods.minestrappolation.inventory.container.ContainerMelter;
 import minestrapteam.mods.minestrappolation.inventory.container.ContainerPipe;
 import minestrapteam.mods.minestrappolation.inventory.container.ContainerSatchel;
 import minestrapteam.mods.minestrappolation.inventory.container.ContainerSawmill;
+import minestrapteam.mods.minestrappolation.inventory.container.ContainerSorter;
 import minestrapteam.mods.minestrappolation.inventory.container.ContainerSplitter;
 import minestrapteam.mods.minestrappolation.inventory.container.ContainerStoneCutter;
 import minestrapteam.mods.minestrappolation.inventory.gui.GuiAlloy;
@@ -23,6 +24,7 @@ import minestrapteam.mods.minestrappolation.inventory.gui.GuiMelter;
 import minestrapteam.mods.minestrappolation.inventory.gui.GuiPipe;
 import minestrapteam.mods.minestrappolation.inventory.gui.GuiSatchel;
 import minestrapteam.mods.minestrappolation.inventory.gui.GuiSawmill;
+import minestrapteam.mods.minestrappolation.inventory.gui.GuiSorter;
 import minestrapteam.mods.minestrappolation.inventory.gui.GuiSplitter;
 import minestrapteam.mods.minestrappolation.inventory.gui.GuiStoneCutter;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntityAlloy;
@@ -33,6 +35,7 @@ import minestrapteam.mods.minestrappolation.tileentity.TileEntityEnderPorter;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntityMelter;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntityPipe;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntitySawMill;
+import minestrapteam.mods.minestrappolation.tileentity.TileEntitySorter;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntitySplitter;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntityStoneCutter;
 import net.minecraft.entity.player.EntityPlayer;
@@ -55,6 +58,7 @@ public class MGuiHandler implements IGuiHandler
 	public static final int GUIID_SATCHEL		= 9;
 	public static final int GUIID_ENDERPORTER	= 10;
 	public static final int GUIID_PIPE			= 11;
+	public static final int GUIID_SORTER		= 12;
 
 	
 	@Override
@@ -129,11 +133,18 @@ public class MGuiHandler implements IGuiHandler
 		}
 		
 		// Item Pipe
-				if (tileEntity instanceof TileEntityPipe)
-				{
-					TileEntityPipe tileEntityPipe = (TileEntityPipe) tileEntity;
-					return new ContainerPipe(player, tileEntityPipe);
-				}
+		if (tileEntity instanceof TileEntityPipe)
+		{
+			TileEntityPipe tileEntityPipe = (TileEntityPipe) tileEntity;
+			return new ContainerPipe(player, tileEntityPipe);
+		}
+		
+		// Item Sorter
+		if (tileEntity instanceof TileEntitySorter)
+		{
+			TileEntitySorter tileEntitySorter = (TileEntitySorter) tileEntity;
+			return new ContainerSorter(player, tileEntitySorter);
+		}
 
 		if (ID == GUIID_BACKPACK)
 		{
@@ -219,11 +230,18 @@ public class MGuiHandler implements IGuiHandler
 		}
 		
 		// Pipe
-				if (tileEntity instanceof TileEntityPipe)
-				{
-					TileEntityPipe tileEntityPipe = (TileEntityPipe) tileEntity;
-					return new GuiPipe(player, tileEntityPipe);
-				}
+		if (tileEntity instanceof TileEntityPipe)
+		{
+			TileEntityPipe tileEntityPipe = (TileEntityPipe) tileEntity;
+			return new GuiPipe(player, tileEntityPipe);
+		}
+		
+		// Pipe
+		if (tileEntity instanceof TileEntitySorter)
+		{
+			TileEntitySorter tileEntitySorter = (TileEntitySorter) tileEntity;
+			return new GuiSorter(player, tileEntitySorter);
+		}
 		
 		if (ID == GUIID_BACKPACK)
 		{

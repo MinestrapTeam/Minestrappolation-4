@@ -28,6 +28,7 @@ import minestrapteam.mods.minestrappolation.tileentity.TileEntityEnderPorter;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntityMelter;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntityPipe;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntitySawMill;
+import minestrapteam.mods.minestrappolation.tileentity.TileEntitySorter;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntitySplitter;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntityStoneCutter;
 import minestrapteam.mods.minestrappolation.util.Tables;
@@ -126,6 +127,7 @@ public class Minestrappolation
 		GameRegistry.registerTileEntity(TileEntitySplitter.class, "tile_entity_splitter");
 		GameRegistry.registerTileEntity(TileEntityEnderPorter.class, "tile_entity_enderporter");
 		GameRegistry.registerTileEntity(TileEntityPipe.class, "tile_entity_pipe");
+		GameRegistry.registerTileEntity(TileEntitySorter.class, "tile_entity_sorter");
 		
 		GameRegistry.registerFuelHandler(new MFuelHandler());
 		

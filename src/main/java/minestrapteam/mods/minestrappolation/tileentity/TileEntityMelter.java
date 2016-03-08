@@ -295,7 +295,7 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 
 	public boolean canExtractItem(int index, ItemStack stack, EnumFacing direction)
 	{
-		if (direction == EnumFacing.DOWN && index == 1)
+		if (direction == EnumFacing.DOWN && index == 0)
         {
             Item item = stack.getItem();
 
@@ -304,6 +304,10 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
                 return false;
             }
         }
+		if (direction == EnumFacing.DOWN && index == 3)
+		{
+			return false;
+		}
 
         return true;
 	}

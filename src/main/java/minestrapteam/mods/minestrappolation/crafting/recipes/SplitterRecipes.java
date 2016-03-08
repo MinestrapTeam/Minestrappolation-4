@@ -97,7 +97,7 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(Blocks.noteblock, 1), new ItemStack(Blocks.planks, 8), new ItemStack(Items.redstone, 1), 0.1F);
 		this.addRecipe(new ItemStack(Blocks.jukebox, 1), new ItemStack(Blocks.planks, 8), new ItemStack(Items.diamond, 1), 0.1F);
 		this.addRecipe(new ItemStack(Blocks.enchanting_table, 1), new ItemStack(Blocks.obsidian, 4), new ItemStack(Items.diamond, 2), 0.1F);
-		this.addRecipe(new ItemStack(Blocks.hopper, 1), new ItemStack(MBlocks.crate, 1), new ItemStack(MItems.steel_ingot, 5), 0.1F);
+		this.addRecipe(new ItemStack(Blocks.hopper, 1), new ItemStack(MBlocks.pipe, 1), new ItemStack(MItems.steel_ingot, 5), 0.1F);
 		this.addRecipe(new ItemStack(Blocks.tnt, 1), new ItemStack(Items.gunpowder, 5), new ItemStack(Blocks.sand, 4), 0.1F);
 		this.addRecipe(new ItemStack(Blocks.daylight_detector, 1), new ItemStack(Blocks.glass, 3), new ItemStack(MItems.desert_quartz_item, 3), 0.1F);
 		this.addRecipe(new ItemStack(Blocks.redstone_torch, 1), new ItemStack(Items.redstone, 1), new ItemStack(Items.stick, 1), 0.1F);
@@ -638,6 +638,7 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MItems.upgradechip, 1, 2), new ItemStack(MItems.inert_chip, 1), new ItemStack(Items.compass, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.upgradechip, 1, 3), new ItemStack(MItems.inert_chip, 1), new ItemStack(MItems.advanced_tech_doodad, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.upgradechip, 1, 4), new ItemStack(MItems.inert_chip, 1), new ItemStack(Blocks.dispenser, 1), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.sorter, 1), new ItemStack(MItems.bronze_plating, 1), new ItemStack(Blocks.hopper), 0.1F);
 	}
 	
 	public void addRecipe(Block input, ItemStack stack, ItemStack stack2, float experience)

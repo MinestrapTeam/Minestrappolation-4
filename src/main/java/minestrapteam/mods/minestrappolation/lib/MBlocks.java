@@ -277,6 +277,7 @@ public class MBlocks
 	public static Block	crate;
 	public static Block	barrel;
 	public static Block pipe;
+	public static Block sorter;
 	public static Block	sawmill;
 	public static Block	stonecutter;
 	public static Block	plutonium_insulated;
@@ -712,6 +713,7 @@ public class MBlocks
 		crate = new BlockCrate().setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("crate").setHardness(2.5F).setStepSound(Block.soundTypeWood);
 		barrel = new BlockBarrel().setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("barrel").setHardness(2.5F).setStepSound(Block.soundTypeWood);
 		pipe = new BlockPipe(Material.iron, MapColor.stoneColor).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("pipe").setHardness(3.0F).setResistance(8.0F).setStepSound(Block.soundTypeMetal);
+		sorter = new BlockSorter(Material.iron, MapColor.goldColor).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("sorter").setHardness(3.0F).setResistance(8.0F).setStepSound(Block.soundTypeMetal);
 		sawmill = new BlockSawmill().setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("sawmill").setHardness(2.5F).setStepSound(Block.soundTypeWood);
 		stonecutter = new BlockStoneCutter().setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("stonecutter").setHardness(3.5F).setStepSound(Block.soundTypePiston);
 		alloy = new BlockAlloy(false).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("alloy").setHardness(4F).setStepSound(Block.soundTypePiston);
@@ -1218,6 +1220,7 @@ public class MBlocks
 		//Tech Tab
 		register(fan);
 		register(pipe);
+		register(sorter);
 		register(plutonium_insulated);
 		register(uranium_insulated);
 		register(sawmill);

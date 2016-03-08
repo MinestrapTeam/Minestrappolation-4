@@ -18,7 +18,7 @@ import net.minecraft.util.ITickable;
 public class TileEntityCrusher extends TileEntityInventory implements ITickable, ISidedInventory
 {
 	private static final int[] slotsTop = new int[] {0};
-    private static final int[] slotsBottom = new int[] {2, 1};
+    private static final int[] slotsBottom = new int[] {2, 1, 3};
     private static final int[] slotsSides = new int[] {1};
 	public int	burnTime;
 	public int	maxCrushTime;
@@ -247,7 +247,7 @@ public class TileEntityCrusher extends TileEntityInventory implements ITickable,
 	@Override
 	public boolean isItemValidForSlot(int index, ItemStack stack)
     {
-		return index == 2 ? false : (index != 1 ? true : isItemFuel(stack) || SlotFurnaceFuel.isBucket(stack));
+		return index == 2 || index == 3 ? false : (index != 1 ? true : isItemFuel(stack) || SlotFurnaceFuel.isBucket(stack));
     }
 
 	@Override

@@ -232,8 +232,8 @@ public class MDictionary
 		
 		//Tech
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.crate, 1), new Object[] { "WWW", "SSS", "WWW", 'W', "plankWood", 'S', "stickWood" }));
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.hopper, 1), new Object[] { "S S", "SCS", " S ", 'S', "ingotSteel", 'C', MBlocks.crate }));
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.pipe, 16), new Object[] { "SSS", "S S", " D ", 'S', "ingotSteel", 'D', Blocks.dropper }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.hopper, 1), new Object[] { "S S", "SCS", " S ", 'S', "ingotSteel", 'C', MBlocks.pipe }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.pipe, 16), new Object[] { "SSS", "S S", " D ", 'S', "ingotCopper", 'D', Blocks.dropper }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.sawmill, 1), new Object[] { "CC", "WW", "WW", 'C', "ingotCopper", 'W', "plankWood" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.stonecutter, 1), new Object[] { "II", "CC", "CC", 'I', "ingotIron", 'C', "cobblestone" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MBlocks.crusher, 1), new Object[] { "BPB", "BTB", "OOO", 'B', "blockBronze", 'P', Blocks.piston, 'T', "ingotTitanium", 'O', MBlocks.obsidian_bricks }));
@@ -283,6 +283,7 @@ public class MDictionary
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.sandstone, 1, 0), new Object[] { "SS", "SS", 'S', new ItemStack(Blocks.sand, 1, 0)}));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.red_sandstone, 1, 0), new Object[] { "SS", "SS", 'S', new ItemStack(Blocks.sand, 1, 1)}));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.prismarine, 1, 0), new Object[] { "PP", "PP", 'P', Items.prismarine_shard}));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.comparator, 1, 0), new Object[] { " R ", "RQR", "SSS", 'R', Blocks.redstone_torch, 'Q', "gemQuartzAny", 'S', "stone" }));
 		
 		//Tools
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MItems.hangglider, 1), new Object[] { "PRP", "WPW", " S ", 'P', "plankWood", 'R', MBlocks.rope, 'W', MItems.wing_segment, 'S', MItems.reinforced_stick }));

@@ -656,6 +656,7 @@ dark_oak_mossy_planks.name=Mossy Dark Oak Wood Planks
 redwood_mossy_planks.name=Mossy Redwood Planks
 frozen_oak_mossy_planks.name=Mossy Frozen Oak Wood Planks
 tile.pipe.name=Pipe
+tile.sorter.name=Filter
 
 item.dough.name=Dough
 item.bun.name=Bun

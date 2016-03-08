@@ -92,6 +92,14 @@ public class ItemSifter extends Item{
             {
 				this.spawnDropFrom(stack, playerIn, worldIn, pos, "sifter_soul_sand");
             }
+			else if (worldIn.getBlockState(pos) == MBlocks.virtian_soil.getStateFromMeta(0) || worldIn.getBlockState(pos) == MBlocks.virtian_soil.getStateFromMeta(1) || worldIn.getBlockState(pos).getBlock() == MBlocks.virtian_grass)
+            {
+				this.spawnDropFrom(stack, playerIn, worldIn, pos, "sifter_virtian_soil");
+            }
+			else if (worldIn.getBlockState(pos) == MBlocks.virtian_soil.getStateFromMeta(2))
+            {
+				this.spawnDropFrom(stack, playerIn, worldIn, pos, "sifter_viartian_ash");
+            }
             return true;
     }
 	

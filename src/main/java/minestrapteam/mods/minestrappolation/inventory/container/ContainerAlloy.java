@@ -105,16 +105,16 @@ public class ContainerAlloy extends MinestrappolationContainer
 				if (!this.mergeItemStack(itemstack1, 1, 2, false))
 					return null;
 			}
-			else if (slotID >= 3 && slotID < 31)
+			else if (slotID >= 3 && slotID < 40)
 			{
-				if (!this.mergeItemStack(itemstack1, 31, 40, false))
+				if (!this.mergeItemStack(itemstack1, 0, 1, false) && !this.mergeItemStack(itemstack1, 3, 4, false))
 					return null;
 			}
-			else if (slotID >= 30 && slotID < 40)
+			/*else if (slotID >= 30 && slotID < 40)
 			{
 				if (!this.mergeItemStack(itemstack1, 4, 31, false))
 					return null;
-			}
+			}*/
 			
 			if (itemstack1.stackSize == 0)
 			{

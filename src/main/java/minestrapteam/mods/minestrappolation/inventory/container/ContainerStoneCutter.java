@@ -2,6 +2,8 @@ package minestrapteam.mods.minestrappolation.inventory.container;
 
 import minestrapteam.mods.minestrappolation.crafting.stonecutter.StonecuttingManager;
 import minestrapteam.mods.minestrappolation.inventory.slot.SlotStoneCutter;
+import minestrapteam.mods.minestrappolation.lib.MBlocks;
+import minestrapteam.mods.minestrappolation.lib.MItems;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntityStoneCutter;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
@@ -9,6 +11,8 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.InventoryCraftResult;
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.inventory.Slot;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemDye;
 import net.minecraft.item.ItemStack;
 
 public class ContainerStoneCutter extends Container
@@ -102,22 +106,27 @@ public class ContainerStoneCutter extends Container
 			
 			if (slotID == 0)
 			{
-				if (!this.mergeItemStack(itemstack1, 10, 46, true))
+				if (!this.mergeItemStack(itemstack1, 11, 47, true))
 					return null;
 				
 				slot.onSlotChange(itemstack1, itemstack);
 			}
-			else if (slotID >= 10 && slotID < 37)
+			else if (this.isItemAddon(itemstack1) && slotID != 1)
 			{
-				if (!this.mergeItemStack(itemstack1, 37, 46, false))
+				if(!this.mergeItemStack(itemstack1, 1, 2, false))
 					return null;
 			}
-			else if (slotID >= 37 && slotID < 46)
+			else if (slotID >= 11 && slotID < 38)
 			{
-				if (!this.mergeItemStack(itemstack1, 10, 37, false))
+				if (!this.mergeItemStack(itemstack1, 38, 47, false))
 					return null;
 			}
-			else if (!this.mergeItemStack(itemstack1, 10, 46, false))
+			else if (slotID >= 38 && slotID < 47)
+			{
+				if (!this.mergeItemStack(itemstack1, 11, 38, false))
+					return null;
+			}
+			else if (!this.mergeItemStack(itemstack1, 11, 47, false))
 				return null;
 			
 			if (itemstack1.stackSize == 0)
@@ -136,6 +145,19 @@ public class ContainerStoneCutter extends Container
 		}
 		
 		return itemstack;
+	}
+	
+	public boolean isItemAddon(ItemStack itemStack)
+	{
+		Item item = itemStack.getItem();
+		if (item instanceof ItemDye ||
+			item == Item.getItemFromBlock(MBlocks.moss) ||
+			item == Item.getItemFromBlock(MBlocks.hanging_moss) ||
+			item == Item.getItemFromBlock(MBlocks.hanging_glow_moss) ||
+			item == MItems.crushed_ice)
+			return true;
+		else
+			return false;
 	}
 	
 	@Override
