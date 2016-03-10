@@ -22,7 +22,7 @@ public class TileEntitySplitter extends TileEntityInventory implements ISidedInv
 	public int					splitTime;
 	
 	private static final int[]	topInputSlot	= new int[] { 0 };
-	private static final int[]	outputSlots		= new int[] { 2, 1 };
+	private static final int[]	outputSlots		= new int[] { 2, 3 };
 	private static final int[]	inputSlots		= new int[] { 1 };
 	
 	public TileEntitySplitter()

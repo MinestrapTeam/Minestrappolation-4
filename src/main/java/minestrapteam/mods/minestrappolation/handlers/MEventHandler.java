@@ -15,6 +15,7 @@ import minestrapteam.mods.minestrappolation.util.NBTHelper;
 import minestrapteam.mods.minestrappolation.util.PlayerHelper;
 import minestrapteam.mods.minestrappolation.util.VersionChecker;
 import minestrapteam.mods.minestrappolation.world.MBiomeManager;
+import net.minecraft.block.BlockDoublePlant;
 import net.minecraft.block.BlockNetherWart;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
@@ -29,6 +30,8 @@ import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.stats.Achievement;
+import net.minecraft.stats.AchievementList;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
@@ -122,13 +125,16 @@ public class MEventHandler
 			}
 		}
 		
-		if(event.state == Blocks.double_plant.getStateFromMeta(2) || event.state == Blocks.double_plant.getStateFromMeta(10))
+		if(event.state.getBlock() == Blocks.double_plant)
 		{
-			ItemStack item = new ItemStack(MBlocks.corn);
-			EntityItem eitem = new EntityItem(event.world, event.pos.getX(), event.pos.getY(), event.pos.getZ(), item);
-			if (rand.nextInt(100) < Config.cornSeedChance)
+			if(event.state.getValue(BlockDoublePlant.VARIANT) == BlockDoublePlant.EnumPlantType.GRASS)
 			{
-				event.world.spawnEntityInWorld(eitem);
+				ItemStack item = new ItemStack(MBlocks.corn);
+				EntityItem eitem = new EntityItem(event.world, event.pos.getX(), event.pos.getY(), event.pos.getZ(), item);
+				if (rand.nextInt(100) < Config.cornSeedChance)
+				{
+					event.world.spawnEntityInWorld(eitem);
+				}
 			}
 		}
 		
@@ -152,13 +158,16 @@ public class MEventHandler
 		
 		if(player != null)
 		{
-			if(player.getHeldItem() != null && player.getHeldItem().getItem() == MItems.fire_pickaxe)
+			if(player.getHeldItem() != null && (player.getHeldItem().getItem() == MItems.fire_pickaxe || player.getHeldItem().getItem() == MItems.fire_axe || player.getHeldItem().getItem() == MItems.fire_shovel))
 			{
-				if(FurnaceRecipes.instance().getSmeltingResult(new ItemStack(event.state.getBlock())) != null)
+				if(FurnaceRecipes.instance().getSmeltingResult(new ItemStack(event.state.getBlock())) != null && FurnaceRecipes.instance().getSmeltingResult(new ItemStack(event.state.getBlock())).getItem() != event.drops.get(0).getItem())
 				{
-					ItemStack stack = FurnaceRecipes.instance().getSmeltingResult(new ItemStack(event.state.getBlock()));
-					event.drops.clear();
-					event.drops.add(stack.copy());
+					if((event.state.getBlock().getHarvestTool(event.state) == "pickaxe" && player.getHeldItem().getItem() == MItems.fire_pickaxe) || (event.state.getBlock().getHarvestTool(event.state) == "axe" && player.getHeldItem().getItem() == MItems.fire_axe) || (event.state.getBlock().getHarvestTool(event.state) == "shovel" && player.getHeldItem().getItem() == MItems.fire_shovel))
+					{
+						ItemStack stack = FurnaceRecipes.instance().getSmeltingResult(new ItemStack(event.state.getBlock()));
+						event.drops.clear();
+						event.drops.add(stack.copy());
+					}
 				}
 			}
 		}
@@ -222,6 +231,10 @@ public class MEventHandler
 			if(player.inventory.hasItem(MItems.diamond_dust))
 			{
 				player.addStat(MAchievements.diamond_dust, 1);
+			}
+			if(player.inventory.hasItem(Items.bread))
+			{
+				player.addStat(AchievementList.makeBread, 1);
 			}
 			
 		}

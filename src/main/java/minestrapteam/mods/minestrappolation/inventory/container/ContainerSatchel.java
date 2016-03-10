@@ -87,7 +87,7 @@ public class ContainerSatchel extends MinestrappolationContainer
 				if (par2 >= INV_START && par2 < HOTBAR_START)
 				{
 
-					if (!this.mergeItemStack(itemstack1, 0, INV_START - 1, false))
+					if (!this.mergeItemStack(itemstack1, 0, INV_START, false))
 
 					{
 
@@ -100,7 +100,7 @@ public class ContainerSatchel extends MinestrappolationContainer
 				else if (par2 >= HOTBAR_START && par2 < HOTBAR_END + 1)
 				{
 
-					if (!this.mergeItemStack(itemstack1, 0, INV_START - 1, false))
+					if (!this.mergeItemStack(itemstack1, 0, INV_START, false))
 
 					{
 

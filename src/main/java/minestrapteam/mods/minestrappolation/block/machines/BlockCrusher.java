@@ -9,6 +9,7 @@ import minestrapteam.mods.minestrappolation.tileentity.TileEntityCrusher;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.Container;
 import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
@@ -122,5 +123,15 @@ public class BlockCrusher extends BlockDirectional
 	public ItemStack getPickBlock(MovingObjectPosition target, World world, BlockPos pos, EntityPlayer player)
     {
         return new ItemStack(MBlocks.crusher);
+    }
+	
+	public boolean hasComparatorInputOverride()
+    {
+        return true;
+    }
+	
+	public int getComparatorInputOverride(World worldIn, BlockPos pos)
+    {
+        return Container.calcRedstone(worldIn.getTileEntity(pos));
     }
 }

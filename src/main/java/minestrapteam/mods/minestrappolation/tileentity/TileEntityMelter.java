@@ -2,6 +2,8 @@ package minestrapteam.mods.minestrappolation.tileentity;
 
 import minestrapteam.mods.minestrappolation.block.machines.BlockMelter;
 import minestrapteam.mods.minestrappolation.crafting.recipes.MelterRecipes;
+import minestrapteam.mods.minestrappolation.lib.MBlocks;
+import minestrapteam.mods.minestrappolation.lib.MItems;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.inventory.SlotFurnaceFuel;
@@ -21,9 +23,9 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 	
 	public boolean				hasPower;
 	
-	private static final int[]	topInputSlot	= new int[] { 0 };
-	private static final int[]	outputSlots		= new int[] { 2 };
-	private static final int[]	inputSlots		= new int[] { 1 , 3 };
+	private static final int[]	topInputSlot	= new int[] {0};
+	private static final int[]	outputSlots		= new int[] {1,2};
+	private static final int[]	inputSlots		= new int[] {1,3};
 	
 	public TileEntityMelter()
 	{
@@ -248,10 +250,13 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 			ItemStack bucket = this.itemStacks[3];
 			if (bucket != null && ItemStack.areItemsEqual(bucket, new ItemStack(MelterRecipes.instance().getRequiredContainer(input))))
 			{
-				--bucket.stackSize;
-				if (bucket.stackSize <= 0)
+				if(MelterRecipes.instance().needsBucket(input))
 				{
-					this.itemStacks[3] = null;
+					--bucket.stackSize;
+					if (bucket.stackSize <= 0)
+					{
+						this.itemStacks[3] = null;
+					}
 				}
 			}
 		}
@@ -279,11 +284,24 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 	@Override
 	public boolean isItemValidForSlot(int index, ItemStack stack)
     {
-		return index == 2 ? false : (index != 1 ? true : isItemFuel(stack) || SlotFurnaceFuel.isBucket(stack));	
+		if(index == 3)
+		{
+			if (stack.getItem() == Items.bucket ||
+				stack.getItem() == Items.glass_bottle ||
+				stack.getItem() == Items.bowl ||
+				stack.getItem() == MItems.bread_bowl ||
+				stack.getItem() == Item.getItemFromBlock(MBlocks.hourglass_empty))
+				return true;
+			else
+				return false;
+		}
+		else
+			return index == 2 ? false : (index != 1 ? true : isItemFuel(stack));
     }
 
 	@Override
-	public int[] getSlotsForFace(EnumFacing side) {
+	public int[] getSlotsForFace(EnumFacing side)
+	{
 		return side == EnumFacing.DOWN ? outputSlots : (side == EnumFacing.UP ? topInputSlot : inputSlots);
 	}
 
@@ -295,7 +313,7 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 
 	public boolean canExtractItem(int index, ItemStack stack, EnumFacing direction)
 	{
-		if (direction == EnumFacing.DOWN && index == 0)
+		if (direction == EnumFacing.DOWN && index == 1)
         {
             Item item = stack.getItem();
 

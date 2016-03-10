@@ -167,6 +167,7 @@ public class Tables {
     	Chance.addToChanceTable("sifter_permafrost", new ItemStack(MItems.crushed_ice, 1, 0), 1);
     	Chance.addToChanceTable("sifter_permafrost", new ItemStack(MItems.glacieric_ice_shard, 1, 0), 1);
     	
+    	//WIKI NOTE: 107 Cold Sand Entries as of 3/9/16
     	//Sifter - Cold Sand
     	Chance.addToChanceTable("sifter_cold_sand", null, 25);
     	Chance.addToChanceTable("sifter_cold_sand", new ItemStack(MItems.chunks, 1, 4), 20);
@@ -253,7 +254,8 @@ public class Tables {
     	Chance.addToChanceTable("boulder_ocean", new ItemStack(Items.diamond, 1, 0), 2);
     	Chance.addToChanceTable("boulder_ocean", new ItemStack(Blocks.sea_lantern, 1, 0), 2);
     	
-    	//Dimensional Fishery -- Overworld Blocks
+    	//WIKI NOTES: 6120 Total Overworld Entries as of 3/9/16
+    	//Dimensional Fishery -- Overworld Blocks 
     	Chance.addToChanceTable("overworld_items", new ItemStack(Blocks.sand, 64, 0), 500);
     	Chance.addToChanceTable("overworld_items", new ItemStack(Blocks.dirt, 50, 0), 400);
     	Chance.addToChanceTable("overworld_items", new ItemStack(Blocks.gravel, 30, 0), 200);

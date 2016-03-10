@@ -20,6 +20,7 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
+import net.minecraft.inventory.Container;
 import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -130,6 +131,14 @@ public class BlockEnderPorter extends BlockDirectional
 		return 3;
 	}
 
-
+	public boolean hasComparatorInputOverride()
+    {
+        return true;
+    }
+	
+	public int getComparatorInputOverride(World worldIn, BlockPos pos)
+    {
+        return Container.calcRedstone(worldIn.getTileEntity(pos));
+    }
 }
 

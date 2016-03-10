@@ -37,6 +37,14 @@ public class ItemSoulBottle extends Item{
 	@Override
 	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player)
 	{
+		if(stack.getTagCompound() == null)
+		{
+			stack.setTagCompound(new NBTTagCompound());
+			if(!world.isRemote)
+			{
+				stack.getTagCompound().setInteger("xp", 0);
+			}
+		}
 			if(player.isSneaking())
 			{
 				if(player.experienceLevel > 1)

@@ -118,7 +118,7 @@ public class Config
 		
 		soulGemDropChance = config.get("Mechanics", "SoulGemDropChance", 3, "The percentage chance that harvesting a fully-grown Nether Wart planted on Soul Ore will drop a Soul Gem.").getInt();
 		soulBlockDamage = config.get("Mechanics", "SoulBlockDamage", 200, "The amount of durability damage inflicted on a tool when mining a Soul Block.").getInt();
-		bedrockBlockDamage = config.get("Mechanics", "BedRockBlockDamage", 2000, "The amound of durability damage inflicted on a tool when mining Bedrock.").getInt();
+		bedrockBlockDamage = config.get("Mechanics", "BedRockBlockDamage", 2000, "The amount of durability damage inflicted on a tool when mining Bedrock.").getInt();
 		soulGemXPGain = config.get("Mechanics", "SoulGemXPGain", 20, "The amount of XP gained by right-clicking while holding a Soul Gem.").getInt();
 		soulBottleStorage = config.get("Mechanics", "SoulBottleStorage", 10, "The maximum number of XP levels a Soul Bottle can hold.").getInt();
 		

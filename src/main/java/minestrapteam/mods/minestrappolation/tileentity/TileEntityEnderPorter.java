@@ -13,7 +13,11 @@ import net.minecraft.block.BlockHopper;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityItem;
+import net.minecraft.init.Items;
 import net.minecraft.inventory.IInventory;
+import net.minecraft.inventory.ISidedInventory;
+import net.minecraft.inventory.SlotFurnaceFuel;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemSeedFood;
 import net.minecraft.item.ItemSeeds;
@@ -28,10 +32,14 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-public class TileEntityEnderPorter extends TileEntityInventory
+public class TileEntityEnderPorter extends TileEntityInventory implements ISidedInventory
 {
 
 	public HashMap<Integer, ItemStack> map = new HashMap<Integer, ItemStack>();
+
+	private static final int[]	topInputSlot	= new int[] { 0 };
+	private static final int[]	sideInputSlots	= new int[] { 1, 2, 3 };
+	private static final int[]  outputSlots		= new int[] { 2, 3 };
 	
 	public TileEntityEnderPorter()
 	{
@@ -264,6 +272,35 @@ public class TileEntityEnderPorter extends TileEntityInventory
 	public int getSizeInventory() 
 	{
 		return 4;
+	}
+
+	@Override
+	public boolean isItemValidForSlot(int index, ItemStack stack)
+    {
+		if(index == 0 && stack.getItem() == Items.ender_pearl)
+			return true;
+		else if(index == 1 && stack.getItem() == MItems.poschip)
+			return true;
+		else if((index == 2 || index == 3) && stack.getItem() == MItems.upgradechip)
+			return true;
+		else
+			return false;
+    }
+
+	@Override
+	public int[] getSlotsForFace(EnumFacing side) {
+		return side == EnumFacing.DOWN ? outputSlots : (side == EnumFacing.UP ? topInputSlot : sideInputSlots);
+	}
+
+	public boolean canInsertItem(int index, ItemStack itemStackIn, EnumFacing direction)
+	{
+	    return this.isItemValidForSlot(index, itemStackIn);
+	}
+
+
+	public boolean canExtractItem(int index, ItemStack stack, EnumFacing direction)
+	{
+	    return true;
 	}
 	
 }

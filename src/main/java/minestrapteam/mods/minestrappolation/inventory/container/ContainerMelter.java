@@ -26,9 +26,9 @@ public class ContainerMelter extends MinestrappolationContainer
 		this.lastMeltTime = 0;
 		this.lastBurnTime = 0;
 		this.lastMaxBurnTime = 0;
-		// fuel
-		this.addSlotToContainer(new Slot(melter, 0, 56, 17));
 		// burn
+		this.addSlotToContainer(new Slot(melter, 0, 56, 17));
+		// fuel
 		this.addSlotToContainer(new Slot(melter, 1, 47, 53));
 		// result
 		this.addSlotToContainer(new SlotMelter(player, melter, 2, 116, 35));

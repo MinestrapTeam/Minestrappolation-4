@@ -9,6 +9,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -115,4 +116,14 @@ public class BlockBarrel extends BlockFalling implements ITileEntityProvider
 	{
 		return EnumWorldBlockLayer.CUTOUT;
 	}
+	
+	public boolean hasComparatorInputOverride()
+    {
+        return true;
+    }
+	
+	public int getComparatorInputOverride(World worldIn, BlockPos pos)
+    {
+        return Container.calcRedstone(worldIn.getTileEntity(pos));
+    }
 }

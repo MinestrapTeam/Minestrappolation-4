@@ -284,6 +284,7 @@ public class MDictionary
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.red_sandstone, 1, 0), new Object[] { "SS", "SS", 'S', new ItemStack(Blocks.sand, 1, 1)}));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.prismarine, 1, 0), new Object[] { "PP", "PP", 'P', Items.prismarine_shard}));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.comparator, 1, 0), new Object[] { " R ", "RQR", "SSS", 'R', Blocks.redstone_torch, 'Q', "gemQuartzAny", 'S', "stone" }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.glass_bottle, 3), new Object[] { "G G", " G ", 'G', "blockGlassColorless" }));
 		
 		//Tools
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(MItems.hangglider, 1), new Object[] { "PRP", "WPW", " S ", 'P', "plankWood", 'R', MBlocks.rope, 'W', MItems.wing_segment, 'S', MItems.reinforced_stick }));

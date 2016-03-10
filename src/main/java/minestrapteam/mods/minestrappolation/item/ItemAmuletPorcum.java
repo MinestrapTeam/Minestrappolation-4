@@ -22,7 +22,10 @@ public class ItemAmuletPorcum extends ItemAmulet
 			if (player.getRNG().nextInt(60) == 0 && player.getFoodStats().needFood())
 			{
 				player.getFoodStats().addStats(1, 0F);
-				stack.damageItem(1, player);
+				if(stack.getItemDamage() < stack.getMaxDamage() && stack.stackSize > 0)
+					stack.damageItem(1, player);
+				else
+					player.destroyCurrentEquippedItem();
 			}
 		}
 	}
