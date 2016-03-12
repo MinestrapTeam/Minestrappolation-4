@@ -638,7 +638,8 @@ public class SplitterRecipes
 		this.addRecipe(new ItemStack(MItems.upgradechip, 1, 2), new ItemStack(MItems.inert_chip, 1), new ItemStack(Items.compass, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.upgradechip, 1, 3), new ItemStack(MItems.inert_chip, 1), new ItemStack(MItems.advanced_tech_doodad, 1), 0.1F);
 		this.addRecipe(new ItemStack(MItems.upgradechip, 1, 4), new ItemStack(MItems.inert_chip, 1), new ItemStack(Blocks.dispenser, 1), 0.1F);
-		this.addRecipe(new ItemStack(MBlocks.sorter, 1), new ItemStack(MItems.bronze_plating, 1), new ItemStack(Blocks.hopper), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.sorter, 1), new ItemStack(MItems.bronze_ingot, 3), new ItemStack(MItems.steel_ingot, 2), 0.1F);
+		this.addRecipe(new ItemStack(MBlocks.enderporter, 1), new ItemStack(MBlocks.jadachite, 1), new ItemStack(MItems.dimensium_ingot, 1), 0.1F);
 	}
 	
 	public void addRecipe(Block input, ItemStack stack, ItemStack stack2, float experience)

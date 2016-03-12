@@ -158,7 +158,7 @@ public class Config
 		guanoDropAmount = config.get("Drops", "GuanoDropQuantity", 3, "The maximum amount of Guano dropped when killing Bats.").getInt();
 		enderAuraDropChance = config.get("Drops", "EnderAuraDropChance", 50, "The percentage chance of finding Ender Aura when killing Endermites.").getInt();
 		enderAuraDropAmount = config.get("Drops", "EnderAuraDropQuantity", 1, "The maximum amount of Ender Aura dropped when killing Endermites.").getInt();
-		witherBoneDropChance = config.get("Drops", "WitherBoneDropChance", 20, "The percentage chance of finding Withered Bones when killing Wither Skeletons.").getInt();
+		witherBoneDropChance = config.get("Drops", "WitherBoneDropChance", 30, "The percentage chance of finding Withered Bones when killing Wither Skeletons.").getInt();
 		witherBoneDropAmount = config.get("Drops", "WitherBoneDropQuantity", 1, "The maximum amount of Withered Bones dropped when killing Wither Skeletons.").getInt();
 		candyDropChance = config.get("Drops", "CandyDropChance", 30, "The percentage chance of finding Candy when killing various mobs during late October.").getInt();
 		candyDropAmount = config.get("Drops", "CandyDropQuantity", 2, "The maximum amount of Candy dropped when killing various mobs during late October.").getInt();

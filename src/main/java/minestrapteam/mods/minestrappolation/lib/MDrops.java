@@ -118,7 +118,7 @@ public class MDrops
 			{
 				dropHalloweenItems(living, random, onFire, looting);
 			}
-			if(((EntitySkeleton)living).getSkeletonType() == 1)
+			if(((EntitySkeleton) living).getSkeletonType() == 1)
 			{
 				dropWitherSkeletonItems(living, random, onFire, looting);
 			}
@@ -264,16 +264,17 @@ public class MDrops
 	}
 	private static void dropWitherSkeletonItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
-		if ((random.nextFloat() * 100) < Config.witherBoneDropChance)
+		if ((random.nextFloat() * 100) / looting < Config.witherBoneDropChance)
 		{
-			living.dropItem(MItems.wither_bone, random.nextInt(Config.witherBoneDropAmount + 1));
+			living.dropItem(MItems.wither_bone, random.nextInt(Config.witherBoneDropAmount + looting));
+			System.out.println("Dropped");
 		}
 	}
 	private static void dropEndermiteItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
-		if ((random.nextFloat() * 100) < Config.enderAuraDropChance)
+		if ((random.nextFloat() * 100) / looting < Config.enderAuraDropChance)
 		{
-			living.dropItem(MItems.ender_aura, random.nextInt(Config.enderAuraDropAmount + 1));
+			living.dropItem(MItems.ender_aura, random.nextInt(Config.enderAuraDropAmount + looting));
 		}
 	}
 	private static void dropQuadripedItems(EntityLivingBase living, Random random, boolean onFire, int looting)

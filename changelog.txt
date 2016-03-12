@@ -1,3 +1,117 @@
+4.3.0
+ - Updated the mod to Minecraft 1.8.8.
+ - Added Wood Boards. Milled with four Logs in a 2x2 square and gives 24 per craft. Comes in all 8 wood types, and can replace Planks in any recipe.
+ - Added Mossy Wood Planks and Mossy Wood Boards. Milled with 8 PLanks/Boards of the same type surrounding a Moss or Hanging Moss. Purely cosmetic.
+ - Added Tomato Seeds. Dropped occasionally when breaking Ferns, or when sifting Mud.
+ - Added Tomatoes. Obtained by harvesting Tomato Crops and can be crafted into various foods.
+ - Added Tomato Sauce. Crafted with a Bowl, two Tomatoes, and some Peppercorns.
+ - Added Tomato Soup. Alloyed with Tomato Sauce and Fat.
+ - Added Dried Spaghetti. Alloyed with Dough and a Steel Mesh (the Steel Mesh isn't consumed in the process).
+ - Added Spaghetti. Alloyed with Tomato Sauce and Dried Spaghetti.
+ - Added a seecret Spaghetti achievement...
+ - Added Item Pipes! Crafted with 5 Copper Ingots and a Dropper, and gives 16 per craft, making long-range item transportation MUCH easier.
+ - Pipes behave similar to Hoppers, but can be placed facing all 6 directions. They also can't remove items from any container; only place their own items into the container they're facing into.
+ - Unlike Hoppers, Pipes also can't be locked by powering them (though they DO output a Comparator signal based on how many items are inside them).
+ - Added Filter Pipes! Crafted with a Pipe, a Bronze Plating, and a Hopper, and gives 2 per craft. Acts like a normal Pipe, but can only be placed facing all directions but down.
+ - Additionally, Filter Pipes have a bottom slot that isn't affected by any other Pipes or Hoppers. If there is an item in this slot, any item that enters the Filter will be placed into the container BELOW the Filter, rather than whatever one the Filter is facing towards. This allows for hyper-compact auto sorters, though Filters can get expensive if used in bulk.
+ - Added Dimensium Ore. Generates in the End, is mined with a Titanium Pickaxe or better, and can be melted into Ingots.
+ - Added Dimensium Chunks. Obtained by crushing Dimensium Ore, and can be melted into Ingots.
+ - Added Dimensium Ingots. Used in crafting most space-bending blocks and items.
+ - Added Dimensium Dust. Obtained by crushing Dimensium Ingots.
+ - Added Blocks of Dimensium. Storage for Dimensium Ingots.
+ - Added Continnium Ore. Generates in the End, is mined with a Titanium Pickaxe or better, and can be melted into Continnium Hourglasses.
+ - Added Continnium Chunks. Obtained by crushing Continnium Ore and can be melted into Hourglasses.
+ - Added Hourglasses! A new decorative block that has a few Redstone uses as well. Empty Hourglasses are crafted with two Redwood Slabs, four Bronze Ingots, and a Bottle.
+ - Hourglasses can be placed and "flipped" by right-clicking them, triggering a visual animation.
+ - Hourglasses can be filled with various blocks to change their appearance, as well as how fast they deplete. In order of fastest to slowest, the standard materials are Red Sand, Sand, Cold Red Sand, and Cold Sand.
+ - All Hourglasses output a Redstone Comparator signal based on their current level, making them useful for Redstone timers.
+ - Hourglasses can also be filled with Redstone Dust to output a Redstone signal without the use of a Comparator.
+ - Continnium Ore can be melted with an Empty Hourglass in the Bucket slot to produce a Continnium Hourglass, which will cycle endlessly when placed.
+ - Added Bronze Plating. Cut with 6 Ingots just like the other ones.
+ - Added Ritual Conduits. Crafted with 7 Iron Ingots and a Bronze Plating. Can be filled with Ghast Tears by right-clicking them. Required in constructing the Dimensional Fishery altar.
+ - Each Conduit can be filled with up to 3 Ghast Tears, and will output a Comparator signal based on how full it is. Layers of liquid Ghast Tears will also flow around between any connected Conduits, making them useful for Redstone randomizers and such.
+ - Added Wither Ash. Can be placed in layers like Snow. Unlike Snow, however, it is affected by gravity and will attempt to spread itself into a cone-shape if more than one layer is stacked.
+ - Added Withered Bones. Dropped rarely by Wither Skeletons.
+ - Added Deathmeal. Crafted with Withered Bones. Acts like anti-Bonemeal, turning most organic blocks into Wither Ash.
+ - Added Ender Aura. Dropped by Endermites (they finally have a use!). Used in crafting teleporty things, as well as Bottled Will o the Wisp.
+ - Added Bottled Will o' the Wisp. Crafted with a Glass Bottle, Wither Ash, Blaze Powder, Ender Aura, Grease, and Animal Bones. Used for creating Unholy Candles.
+ - Added Unholy Candles. Created by right-clicking a Candle with a Bottled Will o' the Wisp. Required for setting up the Dimensional Fishery altar.
+ - Added Advanced Technological Doodads. Crafted with four Diamond Dust, four Technological Doodads, and a Titanium Ingot.
+ - Added Compacted Dirt, Netherrack, End Stone, and Glowshrooms. Crafted with 9 of their respective block.
+ - Compacted blocks mostly serve as compact storage, but can also be used to get randomized loot from their respective dimensions via the Dimensional Fishery.
+ - Added the Dimensional Fishery! It's a new post-end-game tech block that can fish any naturally occurring item out of any dimension at a low cost. Crafted with 2 Prismarine Blocks, 2 Obsidian Brick blocks, 2 Dimensium Ingots, a Radiant Quartz, a Continnium Hourglass, and an Advanced Technological Doodad.
+ - The block itself is useless without its Altar. In order to create it, the player must place a Beacon in the center, four Ritual Conduits on each side of the Beacon, four prismarine in the corners of that 3x3 square of blocks, then surround that with a 5x5 ring of 16 Ritual Conduits, and then place 12 Obsidian Bricks on the outside of that ring, 3 on each side. After that, the player must fill all the Ritual Conduits with Ghast Tears (there should be 20 Conduits, and they can hold 3 Tears each, so you'll need 60 Ghast Tears. This is why this is SUPER end game, lol). Once that's done, you must then place four Chiseled Radiant Quartz blocks on top of each corner of the Conduit ring, and then place four Candles on top of each Chiseled Radiant Quartz. Then simply light the Candles with Bottled Will o' the Wisp, place the Dimensional Fishery in the center, and you should be good.
+ - You'll know if you made the altar correctly if the Dimensional Fishery gets little extended feet and spikes on top. If you're having trouble figuring it out, we've modified one of the Vanilla paintings to show what the final product should look like, sort of like that one that shows how to build the Wither.
+ - When the altar is set up and the Dimensional Fishery is active, simply place any Compacted block on top of the Fishery, and it will consume the block and drop a random item from that dimension.
+ - The item probabilities and quantities are loosely based on the frequency they are found in their respective dimension. I.e., you'll probably get Grass more often than Diamond Ore, but you have a chance to get either.
+ - The pool of potential drops is determined by which Compacted block you place: Compacted Dirt will drop Overworld items, Compacted Netherrack will drop Nether items, Compacted End Stone will drop End Stone items, and Compacted Glowshrooms will drop items from our upcoming dimension, the Virtia (see this page for the original ModJam mod we're basing it off of: https://www.youtube.com/watch?v=JVxE0C6phnE). We haven't had time to code the dimension itself yet, but many of the blocks and items are functional and integrated into the tech tree, and we'll be adding more over the next few updates. :D
+ - Added Terracreep! It's a new plant obtainable via the Dimensional Fishery's Virtia drops that effectively acts like a quarry. When right-clicked onto any Stone block, the Terracreep will very slowly eat away all the stone in the area, leaving only the ores and other blocks there for easy mining. It may take a few tries to get a good quarry going though, as the spores have a chance to decay without spreading.
+ - Added Jadachite Roots. Obtainable via the Dimensional Fishery's Virtia drops. They're a crystalline structure that can be planted on a 3x3 platform of Virtian Grass. When planted, they will grow upward and horizontal in a winding pattern sort of similar to that Windows XP pipes screensaver.
+ - Breaking one block of the Jadachite structure will break the rest, dropping Jadachite Shards which can be crafted into various decor blocks.
+ - Added Jadachite Blocks, Bricks, Tiles, Pillars, Brick Slabs, and Brick Stairs.
+ - Added Enderporters! They're a new GUI block that can teleport any entity across infinite distances instantaneously. Crafted with two Jadachite Blocks, an Advanced Technological Doodad, two Obsidian Brick blocks, an Ender Aura, a Crystal Heart, and two Dimensium Ingots.
+ - Enderporters require Ender Pearls in the top left slot to function, and consume one each time they are used (by default, players can right-click the Enderporter with an item in their hand to use it. Right clicking without an item opens the GUI).
+ - Added Positional Chips. Crafted with four Redstone Dust, three Dimensium Dust, an empty Map, and a Technological Doodad. When right-clicked, they store the current block position, as well as the type of block in that space.
+ - Positional Chips can be placed in the top right slot of the Enderporter to specify a different position to teleport to (it defaults to the block above the Enderporter itself). However, the block at the specified position must be another Enderporter in order for it to work, unless there is a Self-Sufficiency Chip in one of the upgrade slots.
+ - Added Inert Chips. Crafted with four Copper Ingots, four Steel Plating, and a Technological Doodad. Used in crafting all Upgrade Chips, which can be placed in either of the bottom two Enderporter slots to upgrade its abilities.
+ - Added Preserver Upgrade Chips. Crafted with an Inert Chip and an Ender Aura. Gives the Enderporter a chance to not destroy an Ender Pearl when used, allowing the player to waste less of them.
+ - Added Collision Upgrade Chips. Crafted with an Inert Chip and a Gold Weighted Pressure Plate. Makes entities auto-teleport upon touching the Enderporter, allowing it to teleport things like items and mobs instead of only players.
+ - Added Inversion Upgrade Chips. Crafted with an Inert Chip and a Compass. Makes teleported entities appear underneath the specified destination block, rather than above it (which is the default).
+ - Added Self-Sufficiency Chips. Crafted with an Inert Chip and an Advanced Technological Doodad. Allows the Enderporter to teleport entities to locations without another Enderporter.
+ - Added Placer Chips. Allows Enderporters to place teleported block entities at the destination.
+ - Added Virtian Soil. Obtainable via the Dimensional Fishery Virtia drops. Can be sifted to yield a few different Virtia blocks and items.
+ - Added Virtian Grass. Obtainable via the Dimensional Fishery Virtia drops. Can spread to Virtian Soil, as well as sustain Jadachite Roots (more Virtia plants coming in the future). Can be sifted as well.
+ - Added Barren Virtian Soil. Obtainable via the Dimensional Fishery or by crafting Virtian Soil with Gravel just like Course Dirt. Acts the same as Virtian Soil, but Virtian Grass can't spread to it. Can be tilled back into Virtian Soil.
+ - Added Ashen Virtian Soil. Obtainable via the Dimensional Fishery. Mostly cosmetic, but can drop Wither Ash when sifted.
+ - Added Wrenches. WIP item, doesn't currently have a use.
+ - Added a config option to disable biome-specific stone types (i.e.; Coldstone, Red Rock, Icestone, etc). Disabling them adds replacement crafting recipes for each one so you can still progress through the tech tree.
+ - Snowballs can be melted into Bottles of Water by placing a Glass Bottle in the Bucket slot.
+ - Changed Vanilla Hopper recipe to balance out their additional functionality in relativity to Pipes. They're crafted in the same shape, but with Steel Ingots instead of Iron Ingots, and with a Pipe instead of a Chest.
+ - Blazium Pickaxes now automatically smelt any stone block they mine.
+ - Blazium Axes now automatically smelt any wood block they break.
+ - Blazium Shovels now automatically smelt any soil block they dig.
+ - Decreased the leaf radius on Redwood trees.
+ - Decreased the tree density of Redwood biomes.
+ - Backpacks and Satchels with custom names now show their name in the GUI.
+ - Moss can now grow on Mud in full daylight.
+ - Rope can now be placed underneath Fences.
+ - Rotten Flesh can now be alloyed with any Regeneration Potion to produce Flesh.
+ - All Minestrappolation GUI blocks now output a Comparator signal based on how full their inventory is.
+ - Cleaned up Boulder drop code and (hopefully) fixed crashes when looking at boulders while using HUD block label mods.
+ - Fixed Boats being crafted instead of Milled.
+ - Fixed Splitters not having a progress bar in their GUI.
+ - Fixed Blazium Ore not emitting light.
+ - Fixed Minestrapp mob drops dropping way too frequently.
+ - Fixed Sifter drops not syncing between the client and server. They'll no longer change whenever you try to pull an item out of your inventory.
+ - Fixed Sifters not giving items if the player's inventory is full.
+ - Fixed Lichen-Coated Permafrost having the wrong top color in the inventory.
+ - Fixed only half of the Carved Pumpkin recipes giving the proper result.
+ - Fixed being able to shift-click Backpacks and Satchels into other Backpacks and Satchels.
+ - Fixed Melters getting stuck when switching between boosted and non-boosted states.
+ - Fixed Dirt having an abnormally high chance of dropping nothing when sifted.
+ - Fixed Podzol always dropping something when sifted.
+ - Fixed Minestrapp Saplings burning too long when used as fuel.
+ - Fixed Minestrapp Wood Slabs not being usable as fuel.
+ - Fixed Frozen Oak Fences, Fence Gates, and Stairs not being usable as fuel.
+ - Fixed Minestrapp Bricks being registered wrong in Ore Dictionary.
+ - Fixed Leaves and Logs not being alloyable with Rotten Flesh for producing Leather.
+ - Fixed not being able to shift-click items into Alloy Furnaces.
+ - Fixed shift-clicking issues with Stonecutters.
+ - Shift-clicking Moss, Hanging Moss, Glow Moss, Dyes, and Crushed Ice into a Stonecutter now places it in the add-on slot.
+ - Fixed Redstone Comparators not being craftable with all three types of Quartz.
+ - Fixed Hoppers not removing items from Crushers' bonus output slots.
+ - Fixed Hoppers not removing empty Buckets from the Melter fuel slot.
+ - Fixed Melters consuming items in the Bucket slot even if the recipe doesn't require them.
+ - Fixed Hoppers, Pipes, etc placing fuel into the Bucket slot and Buckets into the fuel slot if either of the two was full on the Melter.
+ - Fixed smelting Dough into Bread not giving the Bake Bread achievement (though as a consequence you can now also get it from taking Bread out of dungeon chests).
+ - Fixed only one half of Double-Tall Grass actually dropping Corn.
+ - Fixed some typos in the config.
+ - Fixed shift-clicking not working for the bottom-right slot of Satchels and Backpacks.
+ - Fixed Porcum Amulets never breaking.
+ - Fixed a crash when attempting to use a Soul Bottle that had been shift-clicked out of the crafting window.
+ - Fixed Glass Bottles not being craftable with all colorless Glass types.
+ - Fixed Hoppers not removing items from the second Splitter output slot.
+
 4.2.666
  - Added Corn! A new crop obtained occasionally when breaking the BOTTOM HALF of Double-Tall Grass.
  - Added Corn on a Stick.
