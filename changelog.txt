@@ -1,5 +1,5 @@
 4.3.0
- - Updated the mod to Minecraft 1.8.8.
+ - Updated the mod to Minecraft 1.8.8/1.8.9.
  - Added Wood Boards. Milled with four Logs in a 2x2 square and gives 24 per craft. Comes in all 8 wood types, and can replace Planks in any recipe.
  - Added Mossy Wood Planks and Mossy Wood Boards. Milled with 8 PLanks/Boards of the same type surrounding a Moss or Hanging Moss. Purely cosmetic.
  - Added Tomato Seeds. Dropped occasionally when breaking Ferns, or when sifting Mud.
