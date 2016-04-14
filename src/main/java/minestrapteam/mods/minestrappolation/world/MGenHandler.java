@@ -18,18 +18,20 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockOre;
 import net.minecraft.block.BlockRedstoneOre;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.block.state.pattern.BlockHelper;
+import net.minecraft.block.state.pattern.BlockMatcher;
+import net.minecraft.client.renderer.block.statemap.BlockStateMapper;
 import net.minecraft.init.Blocks;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.BiomeGenBase.TempCategory;
-import net.minecraft.world.biome.WorldChunkManager;
+import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.chunk.Chunk;
+import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.ChunkProviderEnd;
-import net.minecraft.world.gen.ChunkProviderGenerate;
 import net.minecraft.world.gen.ChunkProviderHell;
+import net.minecraft.world.gen.ChunkProviderServer;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
@@ -47,12 +49,12 @@ public class MGenHandler implements IWorldGenerator
 	}
 	
 	@Override
-	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider)
+	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider)
 	{
 		// chunkX <<= 4;
 		// chunkZ <<= 4;
 		BlockPos pos = new BlockPos(chunkX, 1, chunkZ);
-		if (chunkGenerator instanceof ChunkProviderGenerate)
+		if (chunkGenerator instanceof ChunkProviderServer)
 		{
 			this.generateOverworld(world, random, chunkX, chunkZ);
 			if(Config.genBiomeStones == true)
@@ -76,9 +78,9 @@ public class MGenHandler implements IWorldGenerator
 		int y1 = 0;
 		int z1 = z;
 		this.generateHangingMoss(world, rand, x1, z1, MBlocks.hanging_glow_moss);
-		
-		this.generateOre(MBlocks.continnium_ore, world, rand, x1, z1, 3, 12, 3, 15, 100, BlockHelper.forBlock(Blocks.end_stone), Config.genContinnium);
-		this.generateOre(MBlocks.dimensium_ore, world, rand, x1, z1, 3, 12, 3, 15, 100, BlockHelper.forBlock(Blocks.end_stone), Config.genDimensium);
+
+		this.generateOre(MBlocks.continnium_ore, world, rand, x1, z1, 3, 12, 3, 15, 100, BlockMatcher.forBlock(Blocks.end_stone), Config.genContinnium);
+		this.generateOre(MBlocks.dimensium_ore, world, rand, x1, z1, 3, 12, 3, 15, 100, BlockMatcher.forBlock(Blocks.end_stone), Config.genDimensium);
 	}
 	
 	public void generateOverworld(World world, Random rand, int x, int z)
@@ -88,66 +90,66 @@ public class MGenHandler implements IWorldGenerator
 		int z1 = z;
 		BlockPos pos = new BlockPos(x1 * 16, 0, z1 * 16);
 		Chunk chunk = world.getChunkFromBlockCoords(pos);
-		WorldChunkManager chunkManager = world.getWorldChunkManager();
-		BiomeGenBase biome = chunk.getBiome(pos, chunkManager);
+		BiomeProvider biomeProvider = world.getBiomeProvider();
+		BiomeGenBase biome = chunk.getBiome(pos, biomeProvider);
 		
-		this.generateOre(MBlocks.copper_ore, world, rand, x1, z1, 3, 12, 20, 15, 100, BlockHelper.forBlock(Blocks.stone), Config.genCopper);
-		this.generateOre(MBlocks.tin_ore, world, rand, x1, z1, 3, 12, 24, 15, 100, BlockHelper.forBlock(Blocks.stone), Config.genTin);
-		this.generateOre(MBlocks.meurodite_ore, world, rand, x1, z1, 1, 9, 10, 1, 32, BlockHelper.forBlock(Blocks.stone), Config.genMeurodite);
-		this.generateOre(MBlocks.sunstone_ore, world, rand, x1, z1, 2, 4, 20, 1, 200, BlockHelper.forBlock(Blocks.stone), Config.genSunstone);
+		this.generateOre(MBlocks.copper_ore, world, rand, x1, z1, 3, 12, 20, 15, 100, BlockMatcher.forBlock(Blocks.stone), Config.genCopper);
+		this.generateOre(MBlocks.tin_ore, world, rand, x1, z1, 3, 12, 24, 15, 100, BlockMatcher.forBlock(Blocks.stone), Config.genTin);
+		this.generateOre(MBlocks.meurodite_ore, world, rand, x1, z1, 1, 9, 10, 1, 32, BlockMatcher.forBlock(Blocks.stone), Config.genMeurodite);
+		this.generateOre(MBlocks.sunstone_ore, world, rand, x1, z1, 2, 4, 20, 1, 200, BlockMatcher.forBlock(Blocks.stone), Config.genSunstone);
 		
-		this.generateOre(MBlocks.plutonium_ore, world, rand, x1, z1, 1, 4, 15, 1, 32, BlockHelper.forBlock(Blocks.stone), Config.genPlutonium);
-		this.generateOre(MBlocks.uranium_ore, world, rand, x1, z1, 1, 4, 15, 1, 32, BlockHelper.forBlock(Blocks.stone), Config.genUranium);
-		this.generateOre(MBlocks.radiant_ore, world, rand, x1, z1, 1, 4, 10, 15, 128, BlockHelper.forBlock(Blocks.stone), Config.genRadiant);
-		this.generateOre(MBlocks.titanium_ore, world, rand, x1, z1, 1, 4, 12, 1, 10, BlockHelper.forBlock(Blocks.stone), Config.genTitanium);
-		this.generateOre(MBlocks.slate, world, rand, x1, z1, 10, 33, 18, 0, 80, BlockHelper.forBlock(Blocks.stone), Config.genSlate);
-		this.generateOre(MBlocks.rubble, world, rand, x1, z1, 1, 10, 90, 0, 256, BlockHelper.forBlock(Blocks.gravel), Config.genRubble);
-		this.generateOre(MBlocks.rubble, world, rand, x1, z1, 10, 50, 30, 0, 256, BlockHelper.forBlock(Blocks.stonebrick), Config.genRubble);
+		this.generateOre(MBlocks.plutonium_ore, world, rand, x1, z1, 1, 4, 15, 1, 32, BlockMatcher.forBlock(Blocks.stone), Config.genPlutonium);
+		this.generateOre(MBlocks.uranium_ore, world, rand, x1, z1, 1, 4, 15, 1, 32, BlockMatcher.forBlock(Blocks.stone), Config.genUranium);
+		this.generateOre(MBlocks.radiant_ore, world, rand, x1, z1, 1, 4, 10, 15, 128, BlockMatcher.forBlock(Blocks.stone), Config.genRadiant);
+		this.generateOre(MBlocks.titanium_ore, world, rand, x1, z1, 1, 4, 12, 1, 10, BlockMatcher.forBlock(Blocks.stone), Config.genTitanium);
+		this.generateOre(MBlocks.slate, world, rand, x1, z1, 10, 33, 18, 0, 80, BlockMatcher.forBlock(Blocks.stone), Config.genSlate);
+		this.generateOre(MBlocks.rubble, world, rand, x1, z1, 1, 10, 90, 0, 256, BlockMatcher.forBlock(Blocks.gravel), Config.genRubble);
+		this.generateOre(MBlocks.rubble, world, rand, x1, z1, 10, 50, 30, 0, 256, BlockMatcher.forBlock(Blocks.stonebrick), Config.genRubble);
 		this.generateBoulder(world, rand, x1, z1);
 		
-		if (biome == BiomeGenBase.ocean || biome == BiomeGenBase.river || biome == BiomeGenBase.deepOcean || biome == BiomeGenBase.swampland)
+		if (biome == BiomeGenBase.biomeRegistry.getObjectById(0) || biome == BiomeGenBase.biomeRegistry.getObjectById(7) || biome == BiomeGenBase.biomeRegistry.getObjectById(24) || biome == BiomeGenBase.biomeRegistry.getObjectById(6))
 		{
 			this.generateSeaweed(world, rand, x1, z1);
 		}
 		
-		if (biome == BiomeGenBase.jungle || biome == BiomeGenBase.jungleEdge || biome == BiomeGenBase.jungleHills || biome == BiomeGenBase.swampland || biome == BiomeGenBase.roofedForest || biome == MBiomeManager.redwood)
+		if (biome == BiomeGenBase.biomeRegistry.getObjectById(21) || biome == BiomeGenBase.biomeRegistry.getObjectById(23) || biome == BiomeGenBase.biomeRegistry.getObjectById(22) || biome == BiomeGenBase.biomeRegistry.getObjectById(6) || biome == BiomeGenBase.biomeRegistry.getObjectById(29) || biome == MBiomeManager.redwood)
 		{
-			this.generateOre(MBlocks.torite_ore, world, rand, x1, z1, 1, 6, 4, 1, 20, BlockHelper.forBlock(Blocks.stone), Config.genTorite);
+			this.generateOre(MBlocks.torite_ore, world, rand, x1, z1, 1, 6, 4, 1, 20, BlockMatcher.forBlock(Blocks.stone), Config.genTorite);
 			this.generateHangingMoss(world, rand, x1, z1, MBlocks.hanging_moss);
 		}
-		if (biome == BiomeGenBase.desert || biome == BiomeGenBase.desertHills || biome == MBiomeManager.redwood)
+		if (biome == BiomeGenBase.biomeRegistry.getObjectById(2) || biome == BiomeGenBase.biomeRegistry.getObjectById(17) || biome == MBiomeManager.redwood)
 		{
 			this.generateDesertQuartz(world, rand, x1, z1);
 		}
-		if (biome == BiomeGenBase.forest || biome == BiomeGenBase.megaTaiga || biome == BiomeGenBase.megaTaigaHills || biome == BiomeGenBase.swampland || biome == MBiomeManager.redwood)
+		if (biome == BiomeGenBase.biomeRegistry.getObjectById(4) || biome == BiomeGenBase.biomeRegistry.getObjectById(160) || biome == BiomeGenBase.biomeRegistry.getObjectById(161) || biome == BiomeGenBase.biomeRegistry.getObjectById(6) || biome == MBiomeManager.redwood)
 		{
 			this.generateMoss(world, rand, x1, z1);
 		}
 	
 		
 		//Berries
-		if(biome == BiomeGenBase.forest || biome == BiomeGenBase.forestHills || biome == BiomeGenBase.birchForest || biome == BiomeGenBase.birchForestHills)
+		if(biome == BiomeGenBase.biomeRegistry.getObjectById(4) || biome == BiomeGenBase.biomeRegistry.getObjectById(18) || biome == BiomeGenBase.biomeRegistry.getObjectById(27) || biome == BiomeGenBase.biomeRegistry.getObjectById(28))
 		{
 			this.generateBerries(world, rand, x1, z1, new WorldGenBush(MBlocks.blueberry_bush));
 		}
-		if(biome == BiomeGenBase.roofedForest || biome == BiomeGenBase.swampland)
+		if(biome == BiomeGenBase.biomeRegistry.getObjectById(29) || biome == BiomeGenBase.biomeRegistry.getObjectById(6))
 		{
 			this.generateBerries(world, rand, x1, z1, new WorldGenBush(MBlocks.strawberry_bush));
 		}
 		if(biome == BiomeGenBase.extremeHills || biome == BiomeGenBase.extremeHillsEdge || biome == BiomeGenBase.extremeHillsPlus || biome == BiomeGenBase.taiga || biome == BiomeGenBase.taigaHills || biome == BiomeGenBase.megaTaiga || biome == BiomeGenBase.megaTaigaHills)
 		{
 			this.generateBerries(world, rand, x1, z1, new WorldGenBush(MBlocks.blackberry_bush));
-			if (biome == BiomeGenBase.extremeHills || biome == BiomeGenBase.extremeHillsEdge || biome == BiomeGenBase.extremeHillsPlus || biome == BiomeGenBase.taigaHills)
+			if (biome == BiomeGenBase.biomeRegistry.getObjectById(3) || biome == BiomeGenBase.biomeRegistry.getObjectById(20) || biome == BiomeGenBase.biomeRegistry.getObjectById(34) || biome == BiomeGenBase.biomeRegistry.getObjectById(31))
 			{
 				new WorldGenRedWoodTreeSmall().generate(world, rand, pos);
 				this.generateHangingMoss(world, rand, x1, z1, MBlocks.hanging_moss);
 			}
 		}
-		if(biome == BiomeGenBase.savanna || biome == BiomeGenBase.savannaPlateau || biome == BiomeGenBase.mesa || biome == BiomeGenBase.mesaPlateau || biome == BiomeGenBase.mesaPlateau_F || biome== MBiomeManager.redwood)
+		if(biome == BiomeGenBase.biomeRegistry.getObjectById(35) || biome == BiomeGenBase.biomeRegistry.getObjectById(36) || biome == BiomeGenBase.biomeRegistry.getObjectById(37) || biome == BiomeGenBase.biomeRegistry.getObjectById(38) || biome == BiomeGenBase.biomeRegistry.getObjectById(39) || biome== MBiomeManager.redwood)
 		{
 			this.generateBerries(world, rand, x1, z1, new WorldGenBush(MBlocks.raspberry_bush));
 		}
-		if(biome == BiomeGenBase.mushroomIsland || biome == BiomeGenBase.mushroomIslandShore || biome == BiomeGenBase.deepOcean || biome == BiomeGenBase.ocean)
+		if(biome == BiomeGenBase.biomeRegistry.getObjectById(14) || biome == BiomeGenBase.biomeRegistry.getObjectById(15) || biome == BiomeGenBase.biomeRegistry.getObjectById(24) || biome == BiomeGenBase.biomeRegistry.getObjectById(0))
 		{
 			this.generateBerries(world, rand, x1, z1, new WorldGenBush(MBlocks.mana_bush));
 		}
@@ -157,7 +159,7 @@ public class MGenHandler implements IWorldGenerator
 			new WorldGenIceMound().generate(world, rand, pos);
 		}
 		
-		if (biome == BiomeGenBase.swampland || biome == BiomeGenBase.river || biome == BiomeGenBase.frozenRiver)
+		if (biome == BiomeGenBase.biomeRegistry.getObjectById(6) || biome == BiomeGenBase.biomeRegistry.getObjectById(7) || biome == BiomeGenBase.biomeRegistry.getObjectById(11))
 		{
 			this.generateMud(world, rand, x1, z1, 4, 10, 20, 50, 64, Config.genMud);
 		}
@@ -176,10 +178,10 @@ public class MGenHandler implements IWorldGenerator
 		int x1 = x;
 		int y1 = 0;
 		int z1 = z;
-		this.generateOre(MBlocks.blazium_ore, world, rand, x1, z1, 1, 10, 15, 0, 128, BlockHelper.forBlock(Blocks.netherrack), true);
-		this.generateOre(MBlocks.glow_mossy_netherrack, world, rand, x1, z1, 5, 20, 2, 0, 128, BlockHelper.forBlock(Blocks.netherrack), true);
-		this.generateOre(MBlocks.glow_mossy_nether_bricks, world, rand, x1, z1, 5, 20, 30, 0, 100, BlockHelper.forBlock(Blocks.nether_brick), true);
-		this.generateOre(MBlocks.soul_ore, world, rand, x1, z1, 3, 8, 30, 0, 128, BlockHelper.forBlock(Blocks.soul_sand), true);
+		this.generateOre(MBlocks.blazium_ore, world, rand, x1, z1, 1, 10, 15, 0, 128, BlockMatcher.forBlock(Blocks.netherrack), true);
+		this.generateOre(MBlocks.glow_mossy_netherrack, world, rand, x1, z1, 5, 20, 2, 0, 128, BlockMatcher.forBlock(Blocks.netherrack), true);
+		this.generateOre(MBlocks.glow_mossy_nether_bricks, world, rand, x1, z1, 5, 20, 30, 0, 100, BlockMatcher.forBlock(Blocks.nether_brick), true);
+		this.generateOre(MBlocks.soul_ore, world, rand, x1, z1, 3, 8, 30, 0, 128, BlockMatcher.forBlock(Blocks.soul_sand), true);
 		this.generateHangingMoss(world, rand, x1, z1, MBlocks.hanging_glow_moss);
 		this.genGlowShrooms(world, rand, x1, z1);
 	}
@@ -320,14 +322,14 @@ public class MGenHandler implements IWorldGenerator
 	{
 		BlockPos pos = new BlockPos(chunkX * 16, 0, chunkZ * 16);
 		Chunk chunk = world.getChunkFromBlockCoords(pos);
-		WorldChunkManager chunkManager = world.getWorldChunkManager();
+		BiomeProvider biomeProvider = world.getBiomeProvider();
 		
 		for (int x = 0; x < 16; x++)
 		{
 			for (int z = 0; z < 16; z++)
 			{
 				BlockPos subpos = new BlockPos(x, 0, z);
-				BiomeGenBase biome = chunk.getBiome(subpos, chunkManager);
+				BiomeGenBase biome = chunk.getBiome(subpos, biomeProvider);
 				IBlockState stoneBlock = MBlocks.biome_stones.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata());
 				IBlockState deepStoneBlock = MBlocks.biome_stones.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata());
 				MStoneType sType = MStoneType.DEEPSTONE;
@@ -337,7 +339,7 @@ public class MGenHandler implements IWorldGenerator
 				int deepOreMeta = MStoneType.DEEPSTONE.getMetadata();
 				Block ore;
 				
-				if (biome.temperature < 0.2F)
+				if (biome.getFloatTemperature(pos) < 0.2F)
 				{
 					stoneBlock = MBlocks.biome_stones.getStateFromMeta(MStoneType.ICESTONE.getMetadata());
 					deepStoneBlock = MBlocks.biome_stones.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata());
@@ -347,7 +349,7 @@ public class MGenHandler implements IWorldGenerator
 					oreMeta = MStoneType.ICESTONE.getMetadata();
 					deepOreMeta = MStoneType.GLACIERSTONE.getMetadata();
 				}
-				else if (biome.temperature < 0.4F)
+				else if (biome.getFloatTemperature(pos) < 0.4F)
 				{
 					stoneBlock = MBlocks.biome_stones.getStateFromMeta(MStoneType.COLDSTONE.getMetadata());
 					deepStoneBlock = MBlocks.biome_stones.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata());
@@ -368,7 +370,7 @@ public class MGenHandler implements IWorldGenerator
 					oreMeta = MStoneType.OCEANSTONE.getMetadata();
 					deepOreMeta = MStoneType.POCEANSTONE.getMetadata();
 				}
-				else if (biome.temperature >= 1.0F)
+				else if (biome.getFloatTemperature(pos) >= 1.0F)
 				{
 					stoneBlock = MBlocks.biome_stones.getStateFromMeta(MStoneType.REDROCK.getMetadata());
 					;
@@ -389,7 +391,7 @@ public class MGenHandler implements IWorldGenerator
 				for (int y = 256; y >= 0; y--)
 				{
 					BlockPos subpos2 = new BlockPos(x, y, z);
-					Block block = chunk.getBlock(x, y, z);
+					Block block = chunk.getBlockState(x, y, z).getBlock();
 					IBlockState state = chunk.getBlockState(subpos2);
 					
 					if (state == Blocks.stone.getDefaultState())
@@ -400,7 +402,7 @@ public class MGenHandler implements IWorldGenerator
 						}
 						else
 						{
-							if (biome.temperature >= 1.0F || biome.temperature < 0.4F || biome.getTempCategory() == TempCategory.OCEAN)
+							if (biome.getFloatTemperature(pos) >= 1.0F || biome.getFloatTemperature(pos) < 0.4F || biome.getTempCategory() == TempCategory.OCEAN)
 							{
 								chunk.setBlockState(subpos2, stoneBlock.withProperty(BlockBiomeStones.VARIANT, sType));
 							}
@@ -422,7 +424,7 @@ public class MGenHandler implements IWorldGenerator
 						}
 						else
 						{
-							if (biome.temperature >= 1.0F || biome.temperature < 0.4F || biome.getTempCategory() == TempCategory.OCEAN)
+							if (biome.getFloatTemperature(pos) >= 1.0F || biome.getFloatTemperature(pos) < 0.4F || biome.getTempCategory() == TempCategory.OCEAN)
 							{
 								chunk.setBlockState(subpos2, oreToReplace.getStateFromMeta(oreMeta));
 							}
@@ -437,7 +439,7 @@ public class MGenHandler implements IWorldGenerator
 						}
 						else
 						{
-							if (biome.temperature >= 1.0F || biome.temperature < 0.4F || biome.getTempCategory() == TempCategory.OCEAN)
+							if (biome.getFloatTemperature(pos) >= 1.0F || biome.getFloatTemperature(pos) < 0.4F || biome.getTempCategory() == TempCategory.OCEAN)
 							{
 								chunk.setBlockState(subpos2, MBlocks.biome_cobble.getStateFromMeta(oreMeta));
 							}
@@ -452,7 +454,7 @@ public class MGenHandler implements IWorldGenerator
 						}
 						else
 						{
-							if (biome.temperature >= 1.0F || biome.temperature < 0.4F || biome.getTempCategory() == TempCategory.OCEAN)
+							if (biome.getFloatTemperature(pos) >= 1.0F || biome.getFloatTemperature(pos) < 0.4F || biome.getTempCategory() == TempCategory.OCEAN)
 							{
 								chunk.setBlockState(subpos2, MBlocks.mossy.getStateFromMeta(oreMeta));
 							}
@@ -467,7 +469,7 @@ public class MGenHandler implements IWorldGenerator
 						}
 						else
 						{
-							if (biome.temperature >= 1.0F || biome.temperature < 0.4F || biome.getTempCategory() == TempCategory.OCEAN)
+							if (biome.getFloatTemperature(pos) >= 1.0F || biome.getFloatTemperature(pos) < 0.4F || biome.getTempCategory() == TempCategory.OCEAN)
 							{
 								chunk.setBlockState(subpos2, MBlocks.biome_bricks.getStateFromMeta(oreMeta));
 							}
@@ -482,7 +484,7 @@ public class MGenHandler implements IWorldGenerator
 						}
 						else
 						{
-							if (biome.temperature >= 1.0F || biome.temperature < 0.4F || biome.getTempCategory() == TempCategory.OCEAN)
+							if (biome.getFloatTemperature(pos) >= 1.0F || biome.getFloatTemperature(pos) < 0.4F || biome.getTempCategory() == TempCategory.OCEAN)
 							{
 								chunk.setBlockState(subpos2, MBlocks.cracked_bricks.getStateFromMeta(oreMeta));
 							}
@@ -497,13 +499,13 @@ public class MGenHandler implements IWorldGenerator
 						}
 						else
 						{
-							if (biome.temperature >= 1.0F || biome.temperature < 0.4F || biome.getTempCategory() == TempCategory.OCEAN)
+							if (biome.getFloatTemperature(pos) >= 1.0F || biome.getFloatTemperature(pos) < 0.4F || biome.getTempCategory() == TempCategory.OCEAN)
 							{
 								chunk.setBlockState(subpos2, MBlocks.mossy_bricks.getStateFromMeta(oreMeta));
 							}
 						}
 					}
-					else if (biome.temperature < 0.2F)
+					else if (biome.getFloatTemperature(pos) < 0.2F)
 					{
 						if(block == Blocks.dirt)
 							chunk.setBlockState(subpos2, MBlocks.dirt_permafrost.getDefaultState());
