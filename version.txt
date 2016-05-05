@@ -1,2 +1,2 @@
-version=1.8.0-4.2.666
-motd=§2Merry Christmas!
+version=1.8.0-4.3.0
+motd=§2Minestrappolation 4.3 out now more info soon!
