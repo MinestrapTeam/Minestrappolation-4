@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:red_sandstone_bricks" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:red_sandstone_bricks"
     }
+  }
 }

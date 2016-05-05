@@ -20,109 +20,129 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class BlockRope extends MBlock
 {
 
-	public BlockRope(Material materialIn, MapColor mapColorIn) 
+	public BlockRope(Material materialIn, MapColor mapColorIn)
 	{
 		super(materialIn, mapColorIn);
 	}
-	
+
+	@Override
 	public AxisAlignedBB getCollisionBoundingBox(World worldIn, BlockPos pos, IBlockState state)
-    {
+	{
 		this.setBlockBounds(0.375F, 0.0F, 0.375F, 0.625F, 1.0F, 0.625F);
-        return super.getCollisionBoundingBox(worldIn, pos, state);
-    }
-	
+		return super.getCollisionBoundingBox(worldIn, pos, state);
+	}
+
+	@Override
 	@SideOnly(Side.CLIENT)
-    public AxisAlignedBB getSelectedBoundingBox(World worldIn, BlockPos pos)
-    {
+	public AxisAlignedBB getSelectedBoundingBox(World worldIn, BlockPos pos)
+	{
 		this.setBlockBounds(0.375F, 0.0F, 0.375F, 0.625F, 1.0F, 0.625F);
-        return super.getSelectedBoundingBox(worldIn, pos);
-    }
-	
+		return super.getSelectedBoundingBox(worldIn, pos);
+	}
+
+	@Override
 	public boolean isOpaqueCube()
-    {
-        return false;
-    }
+	{
+		return false;
+	}
 
-    public boolean isFullCube()
-    {
-        return false;
-    }
+	@Override
+	public boolean isFullCube()
+	{
+		return false;
+	}
 
-    public boolean isPassable(IBlockAccess worldIn, BlockPos pos)
-    {
-        return false;
-    }
-    
-    @SideOnly(Side.CLIENT)
-    public boolean shouldSideBeRendered(IBlockAccess worldIn, BlockPos pos, EnumFacing side)
-    {
-        return true;
-    }
-    
-    public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
-    {
-        return worldIn.isSideSolid(pos.offset(EnumFacing.UP), EnumFacing.DOWN, true) || worldIn.getBlockState(pos.offset(EnumFacing.UP)) == MBlocks.rope.getDefaultState() || worldIn.getBlockState(pos.offset(EnumFacing.UP)).getBlock() instanceof BlockFence;
-    }
-    
-    public void onNeighborBlockChange(World worldIn, BlockPos pos, IBlockState state, Block neighborBlock)
-    {
-    	if (!this.canBlockStay(worldIn, pos, EnumFacing.UP))
-        {
-            this.dropBlockAsItem(worldIn, pos, state, 0);
-            worldIn.setBlockToAir(pos);
-        }
+	@Override
+	public boolean isPassable(IBlockAccess worldIn, BlockPos pos)
+	{
+		return false;
+	}
 
-        super.onNeighborBlockChange(worldIn, pos, state, neighborBlock);
-    }
-    
-    protected boolean canBlockStay(World worldIn, BlockPos pos, EnumFacing facing)
-    {
-        return worldIn.isSideSolid(pos.offset(facing), facing.getOpposite(), true) || worldIn.getBlockState(pos.offset(EnumFacing.UP)) == MBlocks.rope.getDefaultState() || worldIn.getBlockState(pos.offset(EnumFacing.UP)).getBlock() instanceof BlockFence;
-    }
-    
-    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ)
-    {
-        if (playerIn.getCurrentEquippedItem() != null)
-        {
-            Item item = playerIn.getCurrentEquippedItem().getItem();
+	@Override
+	@SideOnly(Side.CLIENT)
+	public boolean shouldSideBeRendered(IBlockAccess worldIn, BlockPos pos, EnumFacing side)
+	{
+		return true;
+	}
 
-            if (item == Item.getItemFromBlock(MBlocks.rope))
-            {
-                int yCheck = pos.getY();
-            	BlockPos pos1 = new BlockPos(pos.getX(), yCheck, pos.getZ());
-            	boolean isChecking = true;
-            	for(boolean checking = true ; checking == true ; checking = isChecking)
-            	{
-            		if(worldIn.getBlockState(pos1) == MBlocks.rope.getDefaultState())
-            		{
-            			yCheck--;
-            			pos1 = new BlockPos(pos.getX(), yCheck, pos.getZ());
-            			isChecking = true;
-            		}
-            		else if(worldIn.isAirBlock(pos1) == true)
-            		{
-            			worldIn.setBlockState(pos1, MBlocks.rope.getDefaultState());
-            			if (!playerIn.capabilities.isCreativeMode)
-            			{
-            				--playerIn.getCurrentEquippedItem().stackSize;
-            			}
-            			isChecking = false;
-            		}
-            		else
-            		{
-            			isChecking = false;
-            		}
-            	}
-                return true;
-            }
-        }
+	@Override
+	public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
+	{
+		return worldIn.isSideSolid(pos.offset(EnumFacing.UP), EnumFacing.DOWN, true)
+			       || worldIn.getBlockState(pos.offset(EnumFacing.UP)) == MBlocks.rope.getDefaultState() || worldIn
+				                                                                                                .getBlockState(
+					                                                                                                pos.offset(
+						                                                                                                EnumFacing.UP))
+				                                                                                                .getBlock() instanceof BlockFence;
+	}
 
-        return super.onBlockActivated(worldIn, pos, state, playerIn, side, hitX, hitY, hitZ);
-    }
-    
-    @Override public boolean isLadder(IBlockAccess world, BlockPos pos, EntityLivingBase entity) { return true; }
-    
-    @Override
+	@Override
+	public void onNeighborBlockChange(World worldIn, BlockPos pos, IBlockState state, Block neighborBlock)
+	{
+		if (!this.canBlockStay(worldIn, pos, EnumFacing.UP))
+		{
+			this.dropBlockAsItem(worldIn, pos, state, 0);
+			worldIn.setBlockToAir(pos);
+		}
+
+		super.onNeighborBlockChange(worldIn, pos, state, neighborBlock);
+	}
+
+	protected boolean canBlockStay(World worldIn, BlockPos pos, EnumFacing facing)
+	{
+		return worldIn.isSideSolid(pos.offset(facing), facing.getOpposite(), true)
+			       || worldIn.getBlockState(pos.offset(EnumFacing.UP)) == MBlocks.rope.getDefaultState() || worldIn
+				                                                                                                .getBlockState(
+					                                                                                                pos.offset(
+						                                                                                                EnumFacing.UP))
+				                                                                                                .getBlock() instanceof BlockFence;
+	}
+
+	@Override
+	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ)
+	{
+		if (playerIn.getCurrentEquippedItem() != null)
+		{
+			Item item = playerIn.getCurrentEquippedItem().getItem();
+
+			if (item == Item.getItemFromBlock(MBlocks.rope))
+			{
+				int yCheck = pos.getY();
+				BlockPos pos1 = new BlockPos(pos.getX(), yCheck, pos.getZ());
+				boolean isChecking = true;
+				for (boolean checking = true; checking == true; checking = isChecking)
+				{
+					if (worldIn.getBlockState(pos1) == MBlocks.rope.getDefaultState())
+					{
+						yCheck--;
+						pos1 = new BlockPos(pos.getX(), yCheck, pos.getZ());
+						isChecking = true;
+					}
+					else if (worldIn.isAirBlock(pos1) == true)
+					{
+						worldIn.setBlockState(pos1, MBlocks.rope.getDefaultState());
+						if (!playerIn.capabilities.isCreativeMode)
+						{
+							--playerIn.getCurrentEquippedItem().stackSize;
+						}
+						isChecking = false;
+					}
+					else
+					{
+						isChecking = false;
+					}
+				}
+				return true;
+			}
+		}
+
+		return super.onBlockActivated(worldIn, pos, state, playerIn, side, hitX, hitY, hitZ);
+	}
+
+	@Override
+	public boolean isLadder(IBlockAccess world, BlockPos pos, EntityLivingBase entity) { return true; }
+
+	@Override
 	public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face)
 	{
 		return 300;

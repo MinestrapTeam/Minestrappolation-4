@@ -1,23 +1,83 @@
 {
-"__comment": "Designed by Delocuro with BDcraft Cubik PRO 0.95 Beta - http://bdcraft.net",
-"textures": {
+  "__comment": "Designed by Delocuro with BDcraft Cubik PRO 0.95 Beta - http://bdcraft.net",
+  "textures": {
     "particle": "ministrapp:blocks/jadachite_straight",
     "texture": "ministrapp:blocks/jadachite_straight",
     "jadachite_corner": "ministrapp:blocks/jadachite_corner",
     "jadachite_end": "ministrapp:blocks/jadachite_end"
-},
-"elements": [ 
-{
-    "from": [ 0, 0, 0 ],
-    "to": [ 16, 16, 16 ],
-    "faces": {
-        "down":  { "uv": [ 16, 16, 3.5, 0 ], "rotation": 90, "texture": "#jadachite_corner" },
-        "up":    { "uv": [ 0, 0, 16, 16 ], "rotation": 180, "texture": "#jadachite_corner" },
-        "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#jadachite_end" },
-        "south": { "uv": [ 0, 0, 16, 16 ], "rotation": 90, "texture": "#texture" },
-        "west":  { "uv": [ 0, 0, 16, 16 ], "rotation": 90, "texture": "#texture" },
-        "east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#jadachite_end" }
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            16,
+            16,
+            3.5,
+            0
+          ],
+          "rotation": 90,
+          "texture": "#jadachite_corner"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "rotation": 180,
+          "texture": "#jadachite_corner"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#jadachite_end"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "rotation": 90,
+          "texture": "#texture"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "rotation": 90,
+          "texture": "#texture"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#jadachite_end"
+        }
+      }
     }
-}
-]
+  ]
 }

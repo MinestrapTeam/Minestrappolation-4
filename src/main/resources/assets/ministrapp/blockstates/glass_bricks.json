@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:glass_bricks" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:glass_bricks"
     }
+  }
 }

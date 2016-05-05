@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:plutonium_ore" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:plutonium_ore"
     }
+  }
 }

@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:frozen_oak_planks" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:frozen_oak_planks"
     }
+  }
 }

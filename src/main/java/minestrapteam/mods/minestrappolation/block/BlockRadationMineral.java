@@ -14,12 +14,13 @@ import net.minecraft.world.World;
 
 public class BlockRadationMineral extends BlockRadiation
 {
-	
+
 	public BlockRadationMineral(int range, int rate, Material material, MapColor mapColor, Item itemDrop, int expMin, int expMax, int dropAmount, int bonusAmount, String tool, int level, boolean silkHarvest)
 	{
-		super(range, rate, material, mapColor, itemDrop, expMin, expMax, dropAmount, bonusAmount, tool, level, silkHarvest);
+		super(range, rate, material, mapColor, itemDrop, expMin, expMax, dropAmount, bonusAmount, tool, level,
+		      silkHarvest);
 	}
-	
+
 	@Override
 	public void addPotionEffect(EntityLivingBase living, World world, BlockPos pos)
 	{
@@ -35,7 +36,7 @@ public class BlockRadationMineral extends BlockRadiation
 				living.addPotionEffect(new PotionEffect(Potion.wither.getId(), 20 * 2, 1, false, false));
 			}
 		}
-		
+
 		if (this == MBlocks.uranium_block)
 		{
 			if (living instanceof EntityZombie)
@@ -49,5 +50,4 @@ public class BlockRadationMineral extends BlockRadiation
 			}
 		}
 	}
-	
 }

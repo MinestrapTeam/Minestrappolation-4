@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:meurodite_ore" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:meurodite_ore"
     }
+  }
 }

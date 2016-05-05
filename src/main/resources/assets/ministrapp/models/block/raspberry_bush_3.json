@@ -1,7 +1,7 @@
 {
-    "parent": "ministrapp:block/bush_base_3",
-    "textures": {
-        "cross": "ministrapp:blocks/raspberry_stem",
-		"leaves": "ministrapp:blocks/raspberry_leaves"
-    }
+  "parent": "ministrapp:block/bush_base_3",
+  "textures": {
+    "cross": "ministrapp:blocks/raspberry_stem",
+    "leaves": "ministrapp:blocks/raspberry_leaves"
+  }
 }

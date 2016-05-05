@@ -1,7 +1,5 @@
 package minestrapteam.mods.minestrappolation.block;
 
-import java.util.List;
-
 import minestrapteam.mods.minestrappolation.Minestrappolation;
 import minestrapteam.mods.minestrappolation.enumtypes.MStoneType;
 import minestrapteam.mods.minestrappolation.lib.MReference;
@@ -21,58 +19,61 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockTiles extends MBlock{
+import java.util.List;
 
-	private static final PropertyEnum	VARIANT	= PropertyEnum.create("type", MStoneType.class);
-	public BlockTiles(Material materialIn, MapColor mapColorIn) 
+public class BlockTiles extends MBlock
+{
+
+	private static final PropertyEnum VARIANT = PropertyEnum.create("type", MStoneType.class);
+
+	public BlockTiles(Material materialIn, MapColor mapColorIn)
 	{
 		super(materialIn, mapColorIn);
 		this.setCreativeTab(Minestrappolation.tabMBuilding);
 	}
-	
+
 	@Override
 	protected BlockState createBlockState()
 	{
-		return new BlockState(this, new IProperty[] { VARIANT });
+		return new BlockState(this, VARIANT);
 	}
-	
+
 	@Override
 	public int damageDropped(IBlockState state)
 	{
 		return ((MStoneType) state.getValue(VARIANT)).getMetadata();
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item itemIn, CreativeTabs tab, List list)
 	{
 		MStoneType[] aenumtype = MStoneType.values();
 		int i = aenumtype.length;
-		
+
 		for (int j = 0; j < i; ++j)
 		{
 			MStoneType enumtype = aenumtype[j];
 			list.add(new ItemStack(itemIn, 1, enumtype.getMetadata()));
 		}
-		
 	}
-	
+
 	@Override
 	public IBlockState getStateFromMeta(int meta)
 	{
 		return this.getDefaultState().withProperty(VARIANT, MStoneType.byMetadata(meta));
 	}
-	
+
 	@Override
 	public int getMetaFromState(IBlockState state)
 	{
 		return ((MStoneType) state.getValue(VARIANT)).getMetadata();
 	}
-	
+
 	public static void inventoryRender()
 	{
 		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "biome_tiles");
-		
+
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:deepstone_tiles");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:coldstone_tiles");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:icestone_tiles");
@@ -82,17 +83,20 @@ public class BlockTiles extends MBlock{
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:deep_redrock_tiles");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:oceanstone_tiles");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:pressurized_oceanstone_tiles");
-		
+
 		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "biome_tiles");
 		MStoneType[] aenumtype = MStoneType.values();
 		int i = aenumtype.length;
-		
+
 		for (int j = 0; j < i; ++j)
 		{
 			MStoneType enumtype = aenumtype[j];
-			ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(MReference.MODID + ":" + enumtype.getUnlocalizedName() + "_tiles", "inventory");
-			Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, enumtype.getMetadata(), itemModelResourceLocation);
+			ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(MReference.MODID + ":"
+				                                                                            + enumtype
+					                                                                              .getUnlocalizedName()
+				                                                                            + "_tiles", "inventory");
+			Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
+			         .register(itemBlockVariants, enumtype.getMetadata(), itemModelResourceLocation);
 		}
 	}
-
 }

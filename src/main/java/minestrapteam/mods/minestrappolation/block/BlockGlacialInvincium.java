@@ -1,6 +1,5 @@
 package minestrapteam.mods.minestrappolation.block;
 
-import minestrapteam.mods.minestrappolation.Minestrappolation;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -16,14 +15,14 @@ public class BlockGlacialInvincium extends MBlock
 		super(material, mapcolor);
 		this.slipperiness = 0.98F;
 	}
-	
+
 	@Override
 	public void onEntityCollidedWithBlock(World world, BlockPos pos, IBlockState state, Entity entity)
 	{
 		super.onEntityCollidedWithBlock(world, pos, state, entity);
-		entity.extinguish();;
+		entity.extinguish();
 	}
-	
+
 	@Override
 	public boolean canEntityDestroy(IBlockAccess world, BlockPos pos, Entity entity)
 	{

@@ -1,6 +1,5 @@
 package minestrapteam.mods.minestrappolation.block;
 
-import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockHugeMushroom;
 import net.minecraft.block.material.MapColor;
@@ -16,34 +15,31 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class BlockHugeGlowShroom extends BlockHugeMushroom
 {
 
-	public BlockHugeGlowShroom(Material materialIn, Block smallBlock) 
+	public BlockHugeGlowShroom(Material materialIn, Block smallBlock)
 	{
 		super(materialIn, MapColor.purpleColor, smallBlock);
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public EnumWorldBlockLayer getBlockLayer()
 	{
 		return EnumWorldBlockLayer.TRANSLUCENT;
 	}
-	
+
 	@Override
 	public boolean isOpaqueCube()
 	{
 		return false;
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public boolean shouldSideBeRendered(IBlockAccess worldIn, BlockPos pos, EnumFacing side)
 	{
 		IBlockState iblockstate = worldIn.getBlockState(pos);
 		Block block = iblockstate.getBlock();
-		
-		if (block == this)
-			return false;
-		else
-			return true;
+
+		return block != this;
 	}
 }

@@ -10,11 +10,11 @@ public class ContainerPipe extends MinestrappolationContainer
 	public ContainerPipe(EntityPlayer player, TileEntityPipe pipe)
 	{
 		super(player, pipe);
-		
+
 		this.addSlotToContainer(new Slot(pipe, 0, 80, 17));
 		this.addInventorySlots(0, -36);
 	}
-	
+
 	@Override
 	public int[] merge(EntityPlayer player, int slot, ItemStack stack)
 	{

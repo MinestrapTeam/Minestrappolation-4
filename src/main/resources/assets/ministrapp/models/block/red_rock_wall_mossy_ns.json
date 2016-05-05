@@ -1,6 +1,6 @@
 {
-    "parent": "block/wall_ns",
-    "textures": {
-        "wall": "ministrapp:blocks/redrock_mossy"
-    }
+  "parent": "block/wall_ns",
+  "textures": {
+    "wall": "ministrapp:blocks/redrock_mossy"
+  }
 }

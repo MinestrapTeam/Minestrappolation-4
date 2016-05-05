@@ -1,29 +1,28 @@
 {
-   "variants":{
-	"type=oak":{
-         "model":"ministrapp:mossy_oak_planks"
-      },
-	"type=spruce":{
-         "model":"ministrapp:mossy_spruce_planks"
-      },
-	"type=birch":{
-         "model":"ministrapp:mossy_birch_planks"
-      },
-	"type=jungle":{
-         "model":"ministrapp:mossy_jungle_planks"
-      },
-	"type=acacia":{
-         "model":"ministrapp:mossy_acacia_planks"
-      },
-	"type=dark_oak":{
-         "model":"ministrapp:mossy_dark_oak_planks"
-      },
-	"type=redwood":{
-         "model":"ministrapp:mossy_redwood_planks"
-      },
-	"type=frozen_oak":{
-         "model":"ministrapp:mossy_frozen_oak_planks"
-      }
-
+  "variants": {
+    "type=oak": {
+      "model": "ministrapp:mossy_oak_planks"
+    },
+    "type=spruce": {
+      "model": "ministrapp:mossy_spruce_planks"
+    },
+    "type=birch": {
+      "model": "ministrapp:mossy_birch_planks"
+    },
+    "type=jungle": {
+      "model": "ministrapp:mossy_jungle_planks"
+    },
+    "type=acacia": {
+      "model": "ministrapp:mossy_acacia_planks"
+    },
+    "type=dark_oak": {
+      "model": "ministrapp:mossy_dark_oak_planks"
+    },
+    "type=redwood": {
+      "model": "ministrapp:mossy_redwood_planks"
+    },
+    "type=frozen_oak": {
+      "model": "ministrapp:mossy_frozen_oak_planks"
     }
+  }
 }

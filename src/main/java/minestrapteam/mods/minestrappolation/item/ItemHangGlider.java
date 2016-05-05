@@ -1,7 +1,5 @@
 package minestrapteam.mods.minestrappolation.item;
 
-import java.util.Random;
-
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import minestrapteam.mods.minestrappolation.util.Chance;
 import net.minecraft.entity.Entity;
@@ -12,49 +10,56 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 
+import java.util.Random;
+
 public class ItemHangGlider extends Item
 {
 	private double prevVelX;
 	private double prevVelZ;
-	
+
 	public ItemHangGlider()
 	{
 		this.maxStackSize = 1;
-        this.setMaxDamage(30);
-        this.isDamageable();
-        this.prevVelX = 0;
-        this.prevVelZ = 0;
+		this.setMaxDamage(30);
+		this.isDamageable();
+		this.prevVelX = 0;
+		this.prevVelZ = 0;
 	}
-	
+
+	@Override
 	public void onUpdate(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected)
 	{
-		
-		if(isSelected && entityIn instanceof EntityPlayer)
+
+		if (isSelected && entityIn instanceof EntityPlayer)
 		{
 			Random rand = new Random();
-			EntityPlayer entityplayer = (EntityPlayer)entityIn;
+			EntityPlayer entityplayer = (EntityPlayer) entityIn;
 			double absX = Math.abs(entityplayer.motionX);
 			double absZ = Math.abs(entityplayer.motionZ);
 			entityplayer.motionY *= 0.6D;
 			entityplayer.fallDistance = 0;
-			
-			for(int i = 5 ; i > 0 ; i--)
+
+			for (int i = 5; i > 0; i--)
 			{
 				BlockPos pos = new BlockPos(entityplayer.posX, entityplayer.posY - i, entityplayer.posZ);
-				if (worldIn.getBlockState(pos).getBlock() == Blocks.lava || worldIn.getBlockState(pos).getBlock() == Blocks.flowing_lava || worldIn.getBlockState(pos).getBlock() == MBlocks.magma || worldIn.getBlockState(pos).getBlock() == Blocks.fire || worldIn.getBlockState(pos).getBlock() == MBlocks.blazium_block)
+				if (worldIn.getBlockState(pos).getBlock() == Blocks.lava
+					    || worldIn.getBlockState(pos).getBlock() == Blocks.flowing_lava
+					    || worldIn.getBlockState(pos).getBlock() == MBlocks.magma
+					    || worldIn.getBlockState(pos).getBlock() == Blocks.fire
+					    || worldIn.getBlockState(pos).getBlock() == MBlocks.blazium_block)
 				{
 					entityplayer.motionY += (5 - i) * 0.01D;
-					if(rand.nextInt(100) == 1)
+					if (rand.nextInt(100) == 1)
 					{
-						if(stack.getItemDamage() < stack.getMaxDamage())
+						if (stack.getItemDamage() < stack.getMaxDamage())
 							stack.attemptDamageItem(1, rand);
 						else
 							entityplayer.destroyCurrentEquippedItem();
 					}
 				}
-				else if(worldIn.getBlockState(pos).getBlock() == MBlocks.fan)
+				else if (worldIn.getBlockState(pos).getBlock() == MBlocks.fan)
 				{
-					if(entityplayer.motionY <= 0)
+					if (entityplayer.motionY <= 0)
 						entityplayer.motionY += 0.1;
 					else
 						entityplayer.motionY += ((0.01 * Chance.randomNumber(i, 8)) * (5 - Chance.randomNumber(-i, i)));
@@ -68,7 +73,7 @@ public class ItemHangGlider extends Item
 			{
 				entityplayer.motionX *= 1.1D;
 			}
-			
+
 			if (absZ < 0.9D)
 			{
 				entityplayer.motionZ *= 1.06D;
@@ -77,7 +82,7 @@ public class ItemHangGlider extends Item
 			{
 				entityplayer.motionZ *= 1.1D;
 			}
-			
+
 			//TODO: Hang Gliders should take damage every time the player runs into a wall at high velocities. So far I have not found a way to make this work, since entityplayer.isCollidedHorizontally appears to be client-side only...
 		}
 	}

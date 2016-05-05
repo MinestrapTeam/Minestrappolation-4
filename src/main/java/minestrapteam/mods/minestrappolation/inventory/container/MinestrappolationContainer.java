@@ -9,29 +9,29 @@ import net.minecraft.item.ItemStack;
 
 public class MinestrappolationContainer extends Container
 {
-	public final IInventory		inventory;
-	public final EntityPlayer	player;
-	
+	public final IInventory   inventory;
+	public final EntityPlayer player;
+
 	public MinestrappolationContainer(EntityPlayer player, IInventory inventory)
 	{
 		this.inventory = inventory;
 		this.player = player;
 	}
-	
+
 	public final void addInventorySlots()
 	{
 		this.addInventorySlots(8, 84, 142);
 	}
-	
+
 	public final void addInventorySlots(int xOffset, int yOffset)
 	{
 		this.addInventorySlots(8 + xOffset, 84 + yOffset, 142 + yOffset);
 	}
-	
+
 	public final void addInventorySlots(int xOffset, int yOffset, int yHotbar)
 	{
 		InventoryPlayer inventory = this.player.inventory;
-		
+
 		for (int i = 0; i < 3; ++i)
 		{
 			for (int j = 0; j < 9; ++j)
@@ -39,19 +39,19 @@ public class MinestrappolationContainer extends Container
 				this.addSlotToContainer(new Slot(inventory, 9 + j + i * 9, xOffset + j * 18, yOffset + i * 18));
 			}
 		}
-		
+
 		for (int i = 0; i < 9; ++i)
 		{
 			this.addSlotToContainer(new Slot(inventory, i, xOffset + i * 18, yHotbar));
 		}
 	}
-	
+
 	@Override
 	public boolean canInteractWith(EntityPlayer player)
 	{
 		return this.inventory.isUseableByPlayer(player);
 	}
-	
+
 	@Override
 	public ItemStack transferStackInSlot(EntityPlayer player, int slotID)
 	{
@@ -59,16 +59,16 @@ public class MinestrappolationContainer extends Container
 		int inv_high = inv_low + 27;
 		int hotbar_low = inv_high;
 		int hotbar_high = hotbar_low + 9;
-		
+
 		ItemStack theStack = null;
-		Slot slot = (Slot) this.inventorySlots.get(slotID);
-		
+		Slot slot = this.inventorySlots.get(slotID);
+
 		if (slot != null && slot.getHasStack())
 		{
 			ItemStack stack = slot.getStack();
 			theStack = stack.copy();
 			int[] merge;
-			
+
 			if (slotID < inv_low)
 			{
 				if (!this.mergeItemStack(stack, inv_low, hotbar_high, false))
@@ -93,25 +93,25 @@ public class MinestrappolationContainer extends Container
 			}
 			else if (!this.mergeItemStack(stack, inv_low, hotbar_high, false))
 				return null;
-			
+
 			if (stack.stackSize == 0)
 			{
-				slot.putStack((ItemStack) null);
+				slot.putStack(null);
 			}
 			else
 			{
 				slot.onSlotChanged();
 			}
-			
+
 			if (stack.stackSize == theStack.stackSize)
 				return null;
-			
+
 			slot.onPickupFromSlot(player, stack);
 		}
-		
+
 		return theStack;
 	}
-	
+
 	public int[] merge(EntityPlayer player, int slot, ItemStack stack)
 	{
 		return null;

@@ -1,38 +1,20 @@
 package minestrapteam.mods.minestrappolation.lib;
 
-import java.util.Calendar;
-import java.util.Random;
-
 import minestrapteam.mods.minestrappolation.Config;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.monster.EntityEndermite;
-import net.minecraft.entity.monster.EntityGuardian;
-import net.minecraft.entity.monster.EntityIronGolem;
-import net.minecraft.entity.monster.EntityMagmaCube;
-import net.minecraft.entity.monster.EntityPigZombie;
-import net.minecraft.entity.monster.EntitySkeleton;
-import net.minecraft.entity.monster.EntitySlime;
-import net.minecraft.entity.monster.EntityWitch;
-import net.minecraft.entity.monster.EntityZombie;
-import net.minecraft.entity.passive.EntityBat;
-import net.minecraft.entity.passive.EntityChicken;
-import net.minecraft.entity.passive.EntityCow;
-import net.minecraft.entity.passive.EntityHorse;
-import net.minecraft.entity.passive.EntityMooshroom;
-import net.minecraft.entity.passive.EntityPig;
-import net.minecraft.entity.passive.EntitySheep;
-import net.minecraft.entity.passive.EntitySquid;
-import net.minecraft.entity.passive.EntityVillager;
-import net.minecraft.entity.passive.EntityWolf;
+import net.minecraft.entity.monster.*;
+import net.minecraft.entity.passive.*;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.DamageSource;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-public class MDrops 
+import java.util.Calendar;
+import java.util.Random;
+
+public class MDrops
 {
 	public boolean isHalloween = false;
-	
+
 	@SubscribeEvent
 	public void mobDrops(LivingDropsEvent event)
 	{
@@ -43,116 +25,116 @@ public class MDrops
 		EntityPlayer player = null;
 		if (event.source.getSourceOfDamage() instanceof EntityPlayer)
 		{
-			player = ((EntityPlayer)event.source.getSourceOfDamage());
+			player = ((EntityPlayer) event.source.getSourceOfDamage());
 		}
-		
+
 		Calendar calendar = Calendar.getInstance();
 
-        if (calendar.get(2) + 1 == 10 && calendar.get(5) >= 20 && calendar.get(5) <= 31)
-        {
-            this.isHalloween = true;
-        }
-		if(living instanceof EntityBat)
+		if (calendar.get(2) + 1 == 10 && calendar.get(5) >= 20 && calendar.get(5) <= 31)
+		{
+			this.isHalloween = true;
+		}
+		if (living instanceof EntityBat)
 		{
 			dropBatItems(living, random, onFire, looting);
 		}
-		if(living instanceof EntityPig)
+		if (living instanceof EntityPig)
 		{
 			dropQuadripedItems(living, random, onFire, looting);
 			dropPigItems(living, random, onFire, looting);
 		}
-		if(living instanceof EntityCow)
+		if (living instanceof EntityCow)
 		{
 			dropQuadripedItems(living, random, onFire, looting);
 			dropCowItems(living, random, onFire, looting);
 		}
-		if(living instanceof EntityMooshroom)
+		if (living instanceof EntityMooshroom)
 		{
 			dropQuadripedItems(living, random, onFire, looting);
 			dropCowItems(living, random, onFire, looting);
 			dropMooshroomItems(living, random, onFire, looting);
 		}
-		if(living instanceof EntitySheep)
+		if (living instanceof EntitySheep)
 		{
 			dropQuadripedItems(living, random, onFire, looting);
 			dropSheepItems(living, random, onFire, looting);
 		}
-		if(living instanceof EntityChicken)
+		if (living instanceof EntityChicken)
 		{
 			dropChickenItems(living, random, onFire, looting);
 		}
-		if(living instanceof EntityWolf)
+		if (living instanceof EntityWolf)
 		{
 			dropWolfItems(living, random, onFire, looting);
 		}
-		if(living instanceof EntityHorse)
+		if (living instanceof EntityHorse)
 		{
 			dropQuadripedItems(living, random, onFire, looting);
 		}
-		if(living instanceof EntitySquid)
+		if (living instanceof EntitySquid)
 		{
 			dropSquidItems(living, random, onFire, looting);
 		}
-		if(living instanceof EntityGuardian)
+		if (living instanceof EntityGuardian)
 		{
 			dropSquidItems(living, random, onFire, looting);
-			if(((EntityGuardian)living).isElder() == true)
+			if (((EntityGuardian) living).isElder() == true)
 			{
 				dropElderGuardianItems(living, random, onFire, looting);
 			}
 		}
-		if(living instanceof EntityIronGolem)
+		if (living instanceof EntityIronGolem)
 		{
 			dropIronGolemItems(living, random, onFire, looting);
 		}
-		if(living instanceof EntityZombie)
+		if (living instanceof EntityZombie)
 		{
-			if(this.isHalloween == true)
+			if (this.isHalloween == true)
 			{
 				dropHalloweenItems(living, random, onFire, looting);
 			}
 		}
-		if(living instanceof EntitySkeleton)
+		if (living instanceof EntitySkeleton)
 		{
-			if(this.isHalloween == true)
+			if (this.isHalloween == true)
 			{
 				dropHalloweenItems(living, random, onFire, looting);
 			}
-			if(((EntitySkeleton) living).getSkeletonType() == 1)
+			if (((EntitySkeleton) living).getSkeletonType() == 1)
 			{
 				dropWitherSkeletonItems(living, random, onFire, looting);
 			}
 			dropSkeletonItems(living, random, onFire, looting, player);
 		}
-		if(living instanceof EntityWitch)
+		if (living instanceof EntityWitch)
 		{
-			if(this.isHalloween == true)
+			if (this.isHalloween == true)
 			{
 				dropHalloweenItems(living, random, onFire, looting);
 			}
 		}
-		if(living instanceof EntityPigZombie)
+		if (living instanceof EntityPigZombie)
 		{
 			dropPigItems(living, random, onFire, looting);
 		}
-		if(living instanceof EntityEndermite)
+		if (living instanceof EntityEndermite)
 		{
 			dropEndermiteItems(living, random, onFire, looting);
 		}
-		if(living instanceof EntitySlime || living instanceof EntityMagmaCube)
+		if (living instanceof EntitySlime || living instanceof EntityMagmaCube)
 		{
 			dropSlimeItems(living, random, onFire, looting);
 		}
-		if(living instanceof EntityVillager)
+		if (living instanceof EntityVillager)
 		{
 			dropVillagerItems(living, random, onFire, looting);
-			if(this.isHalloween == true)
+			if (this.isHalloween == true)
 			{
 				dropHalloweenItems(living, random, onFire, looting);
 			}
 		}
 	}
-	
+
 	private static void dropPigItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
 		if ((random.nextFloat() * 100) / looting < Config.animalFeetDropChance)
@@ -161,12 +143,13 @@ public class MDrops
 		}
 		if ((random.nextFloat() * 100) / looting < Config.fatDropChance)
 		{
-			if(onFire == false)
+			if (onFire == false)
 				living.dropItem(MItems.fat, random.nextInt(Config.fatDropAmount + looting));
 			else
 				living.dropItem(MItems.tallow, random.nextInt(Config.fatDropAmount + looting));
 		}
 	}
+
 	private static void dropCowItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
 		if ((random.nextFloat() * 100) / looting < Config.animalFeetDropChance)
@@ -174,6 +157,7 @@ public class MDrops
 			living.dropItem(MItems.cow_foot, random.nextInt(Config.animalFeetDropAmount + looting));
 		}
 	}
+
 	private static void dropMooshroomItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
 		if ((random.nextFloat() * 100) / looting < Config.fungusDropChance)
@@ -181,6 +165,7 @@ public class MDrops
 			living.dropItem(MItems.infectious_fungus, random.nextInt(Config.fungusDropAmount + looting));
 		}
 	}
+
 	private static void dropSheepItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
 		if ((random.nextFloat() * 100) / looting < Config.animalFeetDropChance)
@@ -188,6 +173,7 @@ public class MDrops
 			living.dropItem(MItems.sheep_foot, random.nextInt(Config.animalFeetDropAmount + looting));
 		}
 	}
+
 	private static void dropChickenItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
 		if ((random.nextFloat() * 100) / looting < Config.animalFeetDropChance)
@@ -195,6 +181,7 @@ public class MDrops
 			living.dropItem(MItems.chicken_foot, random.nextInt(Config.animalFeetDropAmount + looting));
 		}
 	}
+
 	private static void dropWolfItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
 		if ((random.nextFloat() * 100) / looting < Config.wolfHideDropChance)
@@ -202,16 +189,18 @@ public class MDrops
 			living.dropItem(MItems.wolf_hide, random.nextInt(Config.wolfHideDropAmount + looting));
 		}
 	}
+
 	private static void dropSquidItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
 		if ((random.nextFloat() * 100) / looting < Config.tentacleDropChance)
 		{
-			if(onFire == false)
+			if (onFire == false)
 				living.dropItem(MItems.squid_tentacle, random.nextInt(Config.tentacleDropAmount + looting));
 			else
 				living.dropItem(MItems.calamari, random.nextInt(Config.tentacleDropAmount + looting));
 		}
 	}
+
 	private static void dropElderGuardianItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
 		if ((random.nextFloat() * 100) / looting < 70)
@@ -219,6 +208,7 @@ public class MDrops
 			living.dropItem(MItems.heart_piece, 1);
 		}
 	}
+
 	private static void dropBatItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
 		if ((random.nextFloat() * 100) / looting < Config.sinewDropChance)
@@ -230,6 +220,7 @@ public class MDrops
 			living.dropItem(MItems.guano, random.nextInt(Config.guanoDropAmount + looting));
 		}
 	}
+
 	private static void dropIronGolemItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
 		if ((random.nextFloat() * 100) / looting < Config.doodadDropChance)
@@ -237,15 +228,17 @@ public class MDrops
 			living.dropItem(MItems.technological_doodad, random.nextInt(Config.doodadDropAmount + looting));
 		}
 	}
+
 	private static void dropSlimeItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
 		if ((random.nextFloat() * 100) / looting < Config.slimeCoreDropChance)
 		{
-			if(looting > 1)
+			if (looting > 1)
 				looting = 1;
 			living.dropItem(MItems.slime_core, random.nextInt(Config.slimeCoreDropAmount + looting));
 		}
 	}
+
 	private static void dropVillagerItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
 		if ((random.nextFloat() * 100) / looting < Config.fleshDropChance)
@@ -253,15 +246,17 @@ public class MDrops
 			living.dropItem(MItems.flesh, random.nextInt(Config.fleshDropAmount + looting));
 		}
 	}
+
 	private static void dropSkeletonItems(EntityLivingBase living, Random random, boolean onFire, int looting, EntityPlayer player)
 	{
 		if ((random.nextFloat() * 100) < Config.nyehHehHehChance)
 		{
 			living.dropItem(MItems.spaghetti, random.nextInt(Config.nyehHehHehAmount + 1));
-			if(player != null)
+			if (player != null)
 				player.addStat(MAchievements.bonetrousle, 1);
 		}
 	}
+
 	private static void dropWitherSkeletonItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
 		if ((random.nextFloat() * 100) / looting < Config.witherBoneDropChance)
@@ -270,6 +265,7 @@ public class MDrops
 			System.out.println("Dropped");
 		}
 	}
+
 	private static void dropEndermiteItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
 		if ((random.nextFloat() * 100) / looting < Config.enderAuraDropChance)
@@ -277,6 +273,7 @@ public class MDrops
 			living.dropItem(MItems.ender_aura, random.nextInt(Config.enderAuraDropAmount + looting));
 		}
 	}
+
 	private static void dropQuadripedItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
 		if ((random.nextFloat() * 100) / looting < Config.animalBoneDropChance)
@@ -284,14 +281,15 @@ public class MDrops
 			living.dropItem(MItems.animal_bones, random.nextInt(Config.animalBoneDropAmount + looting));
 		}
 	}
+
 	private static void dropHalloweenItems(EntityLivingBase living, Random random, boolean onFire, int looting)
 	{
 		if ((random.nextFloat() * 100) / looting < Config.candyDropChance)
 		{
 			int type = random.nextInt(3);
-			if(type == 0)
+			if (type == 0)
 				living.dropItem(MItems.candy_red, random.nextInt(Config.candyDropAmount + looting));
-			else if(type == 1)
+			else if (type == 1)
 				living.dropItem(MItems.candy_blue, random.nextInt(Config.candyDropAmount + looting));
 			else
 				living.dropItem(MItems.candy_yellow, random.nextInt(Config.candyDropAmount + looting));

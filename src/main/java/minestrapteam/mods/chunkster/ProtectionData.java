@@ -7,37 +7,32 @@ import java.util.List;
 public class ProtectionData implements Serializable
 {
 	public String owner;
-	public List editors = new ArrayList<String>();
+	public List    editors         = new ArrayList<String>();
 	public boolean redstoneUseable = false;
-	
+
 	public ProtectionData(String owner)
 	{
 		this.owner = owner;
 		this.editors.add(owner);
 	}
-	
+
 	public boolean canEdit(String playerName)
 	{
-		if(this.editors.contains(playerName))
-		{
-			return true;
-		}
-		return false;
+		return this.editors.contains(playerName);
 	}
-	
+
 	public boolean addTrustedPlayer(String playerName)
 	{
-		if(!this.editors.contains(playerName))
+		if (!this.editors.contains(playerName))
 		{
 			this.editors.add(playerName);
 			return true;
 		}
 		return false;
 	}
-	
+
 	public void setUseRedstoneObjects(boolean b)
 	{
 		this.redstoneUseable = b;
 	}
-	
 }

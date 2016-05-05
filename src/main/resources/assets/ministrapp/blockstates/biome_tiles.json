@@ -1,31 +1,31 @@
 {
-   "variants":{
-      "type=deepstone":{
-         "model":"ministrapp:deepstone_tiles"
-      },
-      "type=red_rock":{
-         "model":"ministrapp:red_rock_tiles"
-      },
-      "type=deep_redrock":{
-         "model":"ministrapp:deep_red_rock_tiles"
-      },
-      "type=coldstone":{
-         "model":"ministrapp:coldstone_tiles"
-      },
-      "type=deep_coldstone":{
-         "model":"ministrapp:deep_coldstone_tiles"
-      },
-      "type=icestone":{
-         "model":"ministrapp:icestone_tiles"
-      },
-      "type=glacierrock":{
-         "model":"ministrapp:glacierrock_tiles"
-      },
-      "type=oceanstone":{
-         "model":"ministrapp:oceanstone_tiles"
-      },
-      "type=pressurized_oceanstone":{
-         "model":"ministrapp:pressurized_oceanstone_tiles"
-      }
-   }
+  "variants": {
+    "type=deepstone": {
+      "model": "ministrapp:deepstone_tiles"
+    },
+    "type=red_rock": {
+      "model": "ministrapp:red_rock_tiles"
+    },
+    "type=deep_redrock": {
+      "model": "ministrapp:deep_red_rock_tiles"
+    },
+    "type=coldstone": {
+      "model": "ministrapp:coldstone_tiles"
+    },
+    "type=deep_coldstone": {
+      "model": "ministrapp:deep_coldstone_tiles"
+    },
+    "type=icestone": {
+      "model": "ministrapp:icestone_tiles"
+    },
+    "type=glacierrock": {
+      "model": "ministrapp:glacierrock_tiles"
+    },
+    "type=oceanstone": {
+      "model": "ministrapp:oceanstone_tiles"
+    },
+    "type=pressurized_oceanstone": {
+      "model": "ministrapp:pressurized_oceanstone_tiles"
+    }
+  }
 }

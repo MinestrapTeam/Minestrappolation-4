@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:dirt_permafrost" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:dirt_permafrost"
     }
+  }
 }

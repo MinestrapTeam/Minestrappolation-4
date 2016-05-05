@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:glow_mossy_end_stone" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:glow_mossy_end_stone"
     }
+  }
 }

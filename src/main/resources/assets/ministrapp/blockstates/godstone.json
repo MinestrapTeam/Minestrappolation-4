@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:godstone" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:godstone"
     }
+  }
 }

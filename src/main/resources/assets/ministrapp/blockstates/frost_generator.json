@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:frost_generator" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:frost_generator"
     }
+  }
 }

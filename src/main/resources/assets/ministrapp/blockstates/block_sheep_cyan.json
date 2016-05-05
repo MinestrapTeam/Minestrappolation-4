@@ -1,25 +1,81 @@
 {
-    "variants": {
-       "age=0": { "model": "ministrapp:block_sheep_bare" },
-	   "age=1": { "model": "ministrapp:block_sheep_bare" },
-       "age=2": { "model": "ministrapp:block_sheep_bare" },
-       "age=3": { "model": "ministrapp:block_sheep_bare" },
-       "age=4": { "model": "ministrapp:block_sheep_bare" },
-       "age=5":[
-	       { "model": "ministrapp:block_sheep_wool_cyan" },
-		   { "model": "ministrapp:block_sheep_wool_cyan", "x": 90 },
-		   { "model": "ministrapp:block_sheep_wool_cyan", "x": 180 },
-		   { "model": "ministrapp:block_sheep_wool_cyan", "x": 270 },
-		   { "model": "ministrapp:block_sheep_wool_cyan", "y": 90 },
-		   { "model": "ministrapp:block_sheep_wool_cyan", "y": 180 },
-		   { "model": "ministrapp:block_sheep_wool_cyan", "y": 270 },
-		   { "model": "ministrapp:block_sheep_wool_cyan", "z": 90 },
-		   { "model": "ministrapp:block_sheep_wool_cyan", "z": 180 },
-		   { "model": "ministrapp:block_sheep_wool_cyan", "z": 270 },
-		   { "model": "ministrapp:block_sheep_wool_cyan", "x": 90, "y": 90 },
-		   { "model": "ministrapp:block_sheep_wool_cyan", "x": 90, "z": 90 },
-		   { "model": "ministrapp:block_sheep_wool_cyan", "y": 90, "z": 90 },
-		   { "model": "ministrapp:block_sheep_wool_cyan", "x": 90, "y": 90, "z": 90 }
-	   ]
-    }
+  "variants": {
+    "age=0": {
+      "model": "ministrapp:block_sheep_bare"
+    },
+    "age=1": {
+      "model": "ministrapp:block_sheep_bare"
+    },
+    "age=2": {
+      "model": "ministrapp:block_sheep_bare"
+    },
+    "age=3": {
+      "model": "ministrapp:block_sheep_bare"
+    },
+    "age=4": {
+      "model": "ministrapp:block_sheep_bare"
+    },
+    "age=5": [
+      {
+        "model": "ministrapp:block_sheep_wool_cyan"
+      },
+      {
+        "model": "ministrapp:block_sheep_wool_cyan",
+        "x": 90
+      },
+      {
+        "model": "ministrapp:block_sheep_wool_cyan",
+        "x": 180
+      },
+      {
+        "model": "ministrapp:block_sheep_wool_cyan",
+        "x": 270
+      },
+      {
+        "model": "ministrapp:block_sheep_wool_cyan",
+        "y": 90
+      },
+      {
+        "model": "ministrapp:block_sheep_wool_cyan",
+        "y": 180
+      },
+      {
+        "model": "ministrapp:block_sheep_wool_cyan",
+        "y": 270
+      },
+      {
+        "model": "ministrapp:block_sheep_wool_cyan",
+        "z": 90
+      },
+      {
+        "model": "ministrapp:block_sheep_wool_cyan",
+        "z": 180
+      },
+      {
+        "model": "ministrapp:block_sheep_wool_cyan",
+        "z": 270
+      },
+      {
+        "model": "ministrapp:block_sheep_wool_cyan",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "ministrapp:block_sheep_wool_cyan",
+        "x": 90,
+        "z": 90
+      },
+      {
+        "model": "ministrapp:block_sheep_wool_cyan",
+        "y": 90,
+        "z": 90
+      },
+      {
+        "model": "ministrapp:block_sheep_wool_cyan",
+        "x": 90,
+        "y": 90,
+        "z": 90
+      }
+    ]
+  }
 }

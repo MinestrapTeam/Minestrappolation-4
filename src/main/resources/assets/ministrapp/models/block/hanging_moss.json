@@ -1,6 +1,6 @@
 {
-    "parent": "block/cross",
-    "textures": {
-        "cross": "ministrapp:blocks/hanging_moss"
-    }
+  "parent": "block/cross",
+  "textures": {
+    "cross": "ministrapp:blocks/hanging_moss"
+  }
 }

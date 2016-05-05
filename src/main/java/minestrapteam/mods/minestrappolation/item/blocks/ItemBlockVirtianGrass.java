@@ -8,32 +8,30 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemBlockVirtianGrass extends ItemBlock
 {
-	
+
 	public ItemBlockVirtianGrass(Block block)
 	{
 		super(block);
 		this.setHasSubtypes(false);
 		this.setMaxDamage(0);
-		
 	}
-	
+
 	@Override
 	public int getMetadata(int damageValue)
 	{
 		return damageValue;
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public int getColorFromItemStack(ItemStack stack, int renderPass)
 	{
 		return 8494438;
 	}
-	
+
 	@Override
 	public String getUnlocalizedName(ItemStack item)
 	{
 		return "virtian_grass";
 	}
-	
 }

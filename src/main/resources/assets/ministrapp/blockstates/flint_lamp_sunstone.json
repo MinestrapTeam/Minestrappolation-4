@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:flint_lamp_sunstone" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:flint_lamp_sunstone"
     }
+  }
 }

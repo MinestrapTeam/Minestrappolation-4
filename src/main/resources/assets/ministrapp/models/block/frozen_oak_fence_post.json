@@ -1,6 +1,6 @@
 {
-    "parent": "block/fence_post",
-    "textures": {
-        "texture": "ministrapp:blocks/frozen_oak_planks"
-    }
+  "parent": "block/fence_post",
+  "textures": {
+    "texture": "ministrapp:blocks/frozen_oak_planks"
+  }
 }

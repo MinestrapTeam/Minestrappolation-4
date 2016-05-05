@@ -1,36 +1,140 @@
 {
-    "variants": {
-        "east=false,north=false,south=false,up=false,west=false": { "model": "ministrapp:icestone_wall_mossy_post" },
-        "east=false,north=true,south=false,up=false,west=false":  { "model": "ministrapp:icestone_wall_mossy_n" },
-        "east=true,north=false,south=false,up=false,west=false":  { "model": "ministrapp:icestone_wall_mossy_n", "y": 90, "uvlock": true },
-        "east=false,north=false,south=true,up=false,west=false":  { "model": "ministrapp:icestone_wall_mossy_n", "y": 180, "uvlock": true },
-        "east=false,north=false,south=false,up=false,west=true":  { "model": "ministrapp:icestone_wall_mossy_n", "y": 270, "uvlock": true },
-        "east=true,north=true,south=false,up=false,west=false":   { "model": "ministrapp:icestone_wall_mossy_ne" },
-        "east=true,north=false,south=true,up=false,west=false":   { "model": "ministrapp:icestone_wall_mossy_ne", "y": 90, "uvlock": true },
-        "east=false,north=false,south=true,up=false,west=true":   { "model": "ministrapp:icestone_wall_mossy_ne", "y": 180, "uvlock": true },
-        "east=false,north=true,south=false,up=false,west=true":   { "model": "ministrapp:icestone_wall_mossy_ne", "y": 270, "uvlock": true },
-        "east=false,north=true,south=true,up=false,west=false":   { "model": "ministrapp:icestone_wall_mossy_ns" },
-        "east=true,north=false,south=false,up=false,west=true":   { "model": "ministrapp:icestone_wall_mossy_ns", "y": 90, "uvlock": true },
-        "east=true,north=true,south=true,up=false,west=false":    { "model": "ministrapp:icestone_wall_mossy_nse" },
-        "east=true,north=false,south=true,up=false,west=true":    { "model": "ministrapp:icestone_wall_mossy_nse", "y": 90, "uvlock": true },
-        "east=false,north=true,south=true,up=false,west=true":    { "model": "ministrapp:icestone_wall_mossy_nse", "y": 180, "uvlock": true },
-        "east=true,north=true,south=false,up=false,west=true":    { "model": "ministrapp:icestone_wall_mossy_nse", "y": 270, "uvlock": true },
-        "east=true,north=true,south=true,up=false,west=true":     { "model": "ministrapp:icestone_wall_mossy_nsew" },
-        "east=false,north=false,south=false,up=true,west=false":  { "model": "ministrapp:icestone_wall_mossy_post" },
-        "east=false,north=true,south=false,up=true,west=false":   { "model": "ministrapp:icestone_wall_mossy_n" },
-        "east=true,north=false,south=false,up=true,west=false":   { "model": "ministrapp:icestone_wall_mossy_n", "y": 90, "uvlock": true },
-        "east=false,north=false,south=true,up=true,west=false":   { "model": "ministrapp:icestone_wall_mossy_n", "y": 180, "uvlock": true },
-        "east=false,north=false,south=false,up=true,west=true":   { "model": "ministrapp:icestone_wall_mossy_n", "y": 270, "uvlock": true },
-        "east=true,north=true,south=false,up=true,west=false":    { "model": "ministrapp:icestone_wall_mossy_ne" },
-        "east=true,north=false,south=true,up=true,west=false":    { "model": "ministrapp:icestone_wall_mossy_ne", "y": 90, "uvlock": true },
-        "east=false,north=false,south=true,up=true,west=true":    { "model": "ministrapp:icestone_wall_mossy_ne", "y": 180, "uvlock": true },
-        "east=false,north=true,south=false,up=true,west=true":    { "model": "ministrapp:icestone_wall_mossy_ne", "y": 270, "uvlock": true },
-        "east=false,north=true,south=true,up=true,west=false":    { "model": "ministrapp:icestone_wall_mossy_ns_above" },
-        "east=true,north=false,south=false,up=true,west=true":    { "model": "ministrapp:icestone_wall_mossy_ns_above", "y": 90, "uvlock": true },
-        "east=true,north=true,south=true,up=true,west=false":     { "model": "ministrapp:icestone_wall_mossy_nse" },
-        "east=true,north=false,south=true,up=true,west=true":     { "model": "ministrapp:icestone_wall_mossy_nse", "y": 90, "uvlock": true },
-        "east=false,north=true,south=true,up=true,west=true":     { "model": "ministrapp:icestone_wall_mossy_nse", "y": 180, "uvlock": true },
-        "east=true,north=true,south=false,up=true,west=true":     { "model": "ministrapp:icestone_wall_mossy_nse", "y": 270, "uvlock": true },
-        "east=true,north=true,south=true,up=true,west=true":      { "model": "ministrapp:icestone_wall_mossy_nsew" }
+  "variants": {
+    "east=false,north=false,south=false,up=false,west=false": {
+      "model": "ministrapp:icestone_wall_mossy_post"
+    },
+    "east=false,north=true,south=false,up=false,west=false": {
+      "model": "ministrapp:icestone_wall_mossy_n"
+    },
+    "east=true,north=false,south=false,up=false,west=false": {
+      "model": "ministrapp:icestone_wall_mossy_n",
+      "y": 90,
+      "uvlock": true
+    },
+    "east=false,north=false,south=true,up=false,west=false": {
+      "model": "ministrapp:icestone_wall_mossy_n",
+      "y": 180,
+      "uvlock": true
+    },
+    "east=false,north=false,south=false,up=false,west=true": {
+      "model": "ministrapp:icestone_wall_mossy_n",
+      "y": 270,
+      "uvlock": true
+    },
+    "east=true,north=true,south=false,up=false,west=false": {
+      "model": "ministrapp:icestone_wall_mossy_ne"
+    },
+    "east=true,north=false,south=true,up=false,west=false": {
+      "model": "ministrapp:icestone_wall_mossy_ne",
+      "y": 90,
+      "uvlock": true
+    },
+    "east=false,north=false,south=true,up=false,west=true": {
+      "model": "ministrapp:icestone_wall_mossy_ne",
+      "y": 180,
+      "uvlock": true
+    },
+    "east=false,north=true,south=false,up=false,west=true": {
+      "model": "ministrapp:icestone_wall_mossy_ne",
+      "y": 270,
+      "uvlock": true
+    },
+    "east=false,north=true,south=true,up=false,west=false": {
+      "model": "ministrapp:icestone_wall_mossy_ns"
+    },
+    "east=true,north=false,south=false,up=false,west=true": {
+      "model": "ministrapp:icestone_wall_mossy_ns",
+      "y": 90,
+      "uvlock": true
+    },
+    "east=true,north=true,south=true,up=false,west=false": {
+      "model": "ministrapp:icestone_wall_mossy_nse"
+    },
+    "east=true,north=false,south=true,up=false,west=true": {
+      "model": "ministrapp:icestone_wall_mossy_nse",
+      "y": 90,
+      "uvlock": true
+    },
+    "east=false,north=true,south=true,up=false,west=true": {
+      "model": "ministrapp:icestone_wall_mossy_nse",
+      "y": 180,
+      "uvlock": true
+    },
+    "east=true,north=true,south=false,up=false,west=true": {
+      "model": "ministrapp:icestone_wall_mossy_nse",
+      "y": 270,
+      "uvlock": true
+    },
+    "east=true,north=true,south=true,up=false,west=true": {
+      "model": "ministrapp:icestone_wall_mossy_nsew"
+    },
+    "east=false,north=false,south=false,up=true,west=false": {
+      "model": "ministrapp:icestone_wall_mossy_post"
+    },
+    "east=false,north=true,south=false,up=true,west=false": {
+      "model": "ministrapp:icestone_wall_mossy_n"
+    },
+    "east=true,north=false,south=false,up=true,west=false": {
+      "model": "ministrapp:icestone_wall_mossy_n",
+      "y": 90,
+      "uvlock": true
+    },
+    "east=false,north=false,south=true,up=true,west=false": {
+      "model": "ministrapp:icestone_wall_mossy_n",
+      "y": 180,
+      "uvlock": true
+    },
+    "east=false,north=false,south=false,up=true,west=true": {
+      "model": "ministrapp:icestone_wall_mossy_n",
+      "y": 270,
+      "uvlock": true
+    },
+    "east=true,north=true,south=false,up=true,west=false": {
+      "model": "ministrapp:icestone_wall_mossy_ne"
+    },
+    "east=true,north=false,south=true,up=true,west=false": {
+      "model": "ministrapp:icestone_wall_mossy_ne",
+      "y": 90,
+      "uvlock": true
+    },
+    "east=false,north=false,south=true,up=true,west=true": {
+      "model": "ministrapp:icestone_wall_mossy_ne",
+      "y": 180,
+      "uvlock": true
+    },
+    "east=false,north=true,south=false,up=true,west=true": {
+      "model": "ministrapp:icestone_wall_mossy_ne",
+      "y": 270,
+      "uvlock": true
+    },
+    "east=false,north=true,south=true,up=true,west=false": {
+      "model": "ministrapp:icestone_wall_mossy_ns_above"
+    },
+    "east=true,north=false,south=false,up=true,west=true": {
+      "model": "ministrapp:icestone_wall_mossy_ns_above",
+      "y": 90,
+      "uvlock": true
+    },
+    "east=true,north=true,south=true,up=true,west=false": {
+      "model": "ministrapp:icestone_wall_mossy_nse"
+    },
+    "east=true,north=false,south=true,up=true,west=true": {
+      "model": "ministrapp:icestone_wall_mossy_nse",
+      "y": 90,
+      "uvlock": true
+    },
+    "east=false,north=true,south=true,up=true,west=true": {
+      "model": "ministrapp:icestone_wall_mossy_nse",
+      "y": 180,
+      "uvlock": true
+    },
+    "east=true,north=true,south=false,up=true,west=true": {
+      "model": "ministrapp:icestone_wall_mossy_nse",
+      "y": 270,
+      "uvlock": true
+    },
+    "east=true,north=true,south=true,up=true,west=true": {
+      "model": "ministrapp:icestone_wall_mossy_nsew"
     }
+  }
 }

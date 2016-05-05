@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:coldstone_bricks" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:coldstone_bricks"
     }
+  }
 }

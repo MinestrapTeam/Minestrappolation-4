@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:glow_glass" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:glow_glass"
     }
+  }
 }

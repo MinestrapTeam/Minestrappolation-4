@@ -1,6 +1,6 @@
 {
-    "parent": "block/wall_n",
-    "textures": {
-        "wall": "ministrapp:blocks/cobbled_red_rock"
-    }
+  "parent": "block/wall_n",
+  "textures": {
+    "wall": "ministrapp:blocks/cobbled_red_rock"
+  }
 }

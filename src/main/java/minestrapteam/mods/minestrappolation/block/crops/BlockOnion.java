@@ -4,16 +4,17 @@ import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.item.Item;
 
-public class BlockOnion extends BlockCrops{
+public class BlockOnion extends BlockCrops
+{
 	@Override
 	protected Item getSeed()
-    {
-        return MBlocks.onion;
-    }
+	{
+		return MBlocks.onion;
+	}
 
 	@Override
-    protected Item getCrop()
-    {
-        return MBlocks.onion;
-    }
+	protected Item getCrop()
+	{
+		return MBlocks.onion;
+	}
 }

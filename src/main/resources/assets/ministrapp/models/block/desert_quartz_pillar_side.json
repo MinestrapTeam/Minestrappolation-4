@@ -1,7 +1,7 @@
 {
-    "parent": "block/column_side",
-    "textures": {
-        "end": "ministrapp:blocks/desert_quartz_pillar_top_1",
-        "side": "Ministrapp:blocks/desert_quartz_pillar_side_1"
-    }
+  "parent": "block/column_side",
+  "textures": {
+    "end": "ministrapp:blocks/desert_quartz_pillar_top_1",
+    "side": "Ministrapp:blocks/desert_quartz_pillar_side_1"
+  }
 }

@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:tin_ore" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:tin_ore"
     }
+  }
 }

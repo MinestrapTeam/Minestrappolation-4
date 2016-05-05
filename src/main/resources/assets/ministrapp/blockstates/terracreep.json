@@ -1,51 +1,108 @@
 {
-   "variants":{
-      "variant=deepstone":[
-         { "model": "ministrapp:terracreep_deepstone" },
-         { "model": "ministrapp:terracreep_deepstone", "y": 180 }
-      ],
-      "variant=red_rock":[
-         { "model": "ministrapp:terracreep_red_rock" },
-         { "model": "ministrapp:terracreep_red_rock", "y": 180 }
-      ],
-      "variant=deep_redrock":[
-         { "model": "ministrapp:terracreep_deep_red_rock" },
-         { "model": "ministrapp:terracreep_deep_red_rock", "y": 180 }
-      ],
-      "variant=coldstone":[
-         { "model": "ministrapp:terracreep_coldstone" },
-         { "model": "ministrapp:terracreep_coldstone", "y": 180 }
-      ],
-      "variant=deep_coldstone":[
-         { "model": "ministrapp:terracreep_deep_coldstone" },
-         { "model": "ministrapp:terracreep_deep_coldstone", "y": 180 }
-      ],
-      "variant=icestone":[
-         { "model": "ministrapp:terracreep_icestone" },
-         { "model": "ministrapp:terracreep_icestone", "y": 180 }
-      ],
-      "variant=glacierrock":[
-         { "model": "ministrapp:terracreep_glacierrock" },
-         { "model": "ministrapp:terracreep_glacierrock", "y": 180 }
-      ],
-      "variant=oceanstone":[
-         { "model": "ministrapp:terracreep_oceanstone" },
-         { "model": "ministrapp:terracreep_oceanstone", "y": 180 }
-      ],
-      "variant=pressurized_oceanstone":[
-         { "model": "ministrapp:terracreep_poceanstone" },
-         { "model": "ministrapp:terracreep_poceanstone", "y": 180 }
-      ],
-	  "variant=stone":[
-         { "model": "ministrapp:terracreep_stone" },
-         { "model": "ministrapp:terracreep_stone", "y": 180 }
-      ],
-	  "variant=netherrack":[
-         { "model": "ministrapp:terracreep_netherrack" },
-         { "model": "ministrapp:terracreep_netherrack", "y": 180 }
-      ],
-	  "variant=endstone":[
-         { "model": "ministrapp:terracreep_endstone" }
-      ]
-   }
+  "variants": {
+    "variant=deepstone": [
+      {
+        "model": "ministrapp:terracreep_deepstone"
+      },
+      {
+        "model": "ministrapp:terracreep_deepstone",
+        "y": 180
+      }
+    ],
+    "variant=red_rock": [
+      {
+        "model": "ministrapp:terracreep_red_rock"
+      },
+      {
+        "model": "ministrapp:terracreep_red_rock",
+        "y": 180
+      }
+    ],
+    "variant=deep_redrock": [
+      {
+        "model": "ministrapp:terracreep_deep_red_rock"
+      },
+      {
+        "model": "ministrapp:terracreep_deep_red_rock",
+        "y": 180
+      }
+    ],
+    "variant=coldstone": [
+      {
+        "model": "ministrapp:terracreep_coldstone"
+      },
+      {
+        "model": "ministrapp:terracreep_coldstone",
+        "y": 180
+      }
+    ],
+    "variant=deep_coldstone": [
+      {
+        "model": "ministrapp:terracreep_deep_coldstone"
+      },
+      {
+        "model": "ministrapp:terracreep_deep_coldstone",
+        "y": 180
+      }
+    ],
+    "variant=icestone": [
+      {
+        "model": "ministrapp:terracreep_icestone"
+      },
+      {
+        "model": "ministrapp:terracreep_icestone",
+        "y": 180
+      }
+    ],
+    "variant=glacierrock": [
+      {
+        "model": "ministrapp:terracreep_glacierrock"
+      },
+      {
+        "model": "ministrapp:terracreep_glacierrock",
+        "y": 180
+      }
+    ],
+    "variant=oceanstone": [
+      {
+        "model": "ministrapp:terracreep_oceanstone"
+      },
+      {
+        "model": "ministrapp:terracreep_oceanstone",
+        "y": 180
+      }
+    ],
+    "variant=pressurized_oceanstone": [
+      {
+        "model": "ministrapp:terracreep_poceanstone"
+      },
+      {
+        "model": "ministrapp:terracreep_poceanstone",
+        "y": 180
+      }
+    ],
+    "variant=stone": [
+      {
+        "model": "ministrapp:terracreep_stone"
+      },
+      {
+        "model": "ministrapp:terracreep_stone",
+        "y": 180
+      }
+    ],
+    "variant=netherrack": [
+      {
+        "model": "ministrapp:terracreep_netherrack"
+      },
+      {
+        "model": "ministrapp:terracreep_netherrack",
+        "y": 180
+      }
+    ],
+    "variant=endstone": [
+      {
+        "model": "ministrapp:terracreep_endstone"
+      }
+    ]
+  }
 }

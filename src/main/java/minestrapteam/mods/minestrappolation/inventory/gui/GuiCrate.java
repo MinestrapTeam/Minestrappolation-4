@@ -12,23 +12,24 @@ import net.minecraft.util.StatCollector;
 
 public class GuiCrate extends GuiContainer
 {
-	private static final ResourceLocation	texture	= new ResourceLocation(MReference.MODID, "textures/gui/crate.png");
-	private TileEntityCrate					crate;
-	
+	private static final ResourceLocation texture = new ResourceLocation(MReference.MODID, "textures/gui/crate.png");
+	private TileEntityCrate crate;
+
 	public GuiCrate(EntityPlayer player, TileEntityCrate crate)
 	{
 		super(new ContainerCrate(player, crate));
 		this.crate = crate;
 		this.ySize = 148;
 	}
-	
+
 	@Override
 	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY)
 	{
 		this.fontRendererObj.drawString(StatCollector.translateToLocal("Crate"), 7, 7, 4210752);
-		this.fontRendererObj.drawString(StatCollector.translateToLocal("container.inventory"), 7, this.ySize - 92, 4210752);
+		this.fontRendererObj
+			.drawString(StatCollector.translateToLocal("container.inventory"), 7, this.ySize - 92, 4210752);
 	}
-	
+
 	@Override
 	protected void drawGuiContainerBackgroundLayer(float partialTickTime, int mouseX, int mouseY)
 	{

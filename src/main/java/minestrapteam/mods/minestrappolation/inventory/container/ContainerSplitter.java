@@ -1,33 +1,31 @@
 package minestrapteam.mods.minestrappolation.inventory.container;
 
-import java.util.List;
-
-import minestrapteam.mods.minestrappolation.crafting.recipes.MelterRecipes;
 import minestrapteam.mods.minestrappolation.crafting.recipes.SplitterRecipes;
 import minestrapteam.mods.minestrappolation.inventory.slot.SlotSplitter;
 import minestrapteam.mods.minestrappolation.tileentity.TileEntitySplitter;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
+import java.util.List;
+
 public class ContainerSplitter extends MinestrappolationContainer
 {
-	private TileEntitySplitter	splitter;
-	private int					lastSplitTime;
-	private int					lastBurnTime;
-	private int					lastMaxBurnTime;
-	
+	private TileEntitySplitter splitter;
+	private int                lastSplitTime;
+	private int                lastBurnTime;
+	private int                lastMaxBurnTime;
+
 	public ContainerSplitter(EntityPlayer player, TileEntitySplitter splitter)
 	{
 		super(player, splitter);
-		
+
 		this.splitter = splitter;
 		this.lastSplitTime = 0;
 		this.lastBurnTime = 0;
 		this.lastMaxBurnTime = 0;
-		
+
 		// input
 		this.addSlotToContainer(new Slot(splitter, 0, 79, 17));
 		// fuel
@@ -36,15 +34,15 @@ public class ContainerSplitter extends MinestrappolationContainer
 		this.addSlotToContainer(new SlotSplitter(player, splitter, 2, 56, 46));
 		// right_result
 		this.addSlotToContainer(new SlotSplitter(player, splitter, 3, 102, 46));
-		
+
 		this.addInventorySlots();
 	}
-	
+
 	@Override
 	public void detectAndSendChanges()
 	{
 		super.detectAndSendChanges();
-		for (ICrafting crafting : (List<ICrafting>) this.crafters)
+		for (ICrafting crafting : this.crafters)
 		{
 			if (this.lastSplitTime != this.splitter.splitTime)
 			{
@@ -63,7 +61,7 @@ public class ContainerSplitter extends MinestrappolationContainer
 		this.lastBurnTime = this.splitter.burnTime;
 		this.lastMaxBurnTime = this.splitter.maxBurnTime;
 	}
-	
+
 	@Override
 	public void updateProgressBar(int id, int time)
 	{
@@ -71,35 +69,35 @@ public class ContainerSplitter extends MinestrappolationContainer
 		{
 			this.splitter.splitTime = time;
 		}
-		
+
 		if (id == 1)
 		{
 			this.splitter.burnTime = time;
 		}
-		
+
 		if (id == 2)
 		{
 			this.splitter.maxBurnTime = time;
 		}
 	}
-	
+
 	@Override
 	public boolean canInteractWith(EntityPlayer player)
 	{
 		return this.splitter.isUseableByPlayer(player);
 	}
-	
+
 	@Override
 	public ItemStack transferStackInSlot(EntityPlayer player, int slotID)
 	{
 		ItemStack itemstack = null;
-		Slot slot = (Slot) this.inventorySlots.get(slotID);
-		
+		Slot slot = this.inventorySlots.get(slotID);
+
 		if (slot != null && slot.getHasStack())
 		{
 			ItemStack itemstack1 = slot.getStack();
 			itemstack = itemstack1.copy();
-			
+
 			if (slotID < 4)
 			{
 				if (!this.mergeItemStack(itemstack1, 4, 40, true))
@@ -125,7 +123,7 @@ public class ContainerSplitter extends MinestrappolationContainer
 				if (!this.mergeItemStack(itemstack1, 4, 31, false))
 					return null;
 			}
-			
+
 			if (itemstack1.stackSize == 0)
 			{
 				slot.putStack(null);
@@ -134,13 +132,13 @@ public class ContainerSplitter extends MinestrappolationContainer
 			{
 				slot.onSlotChanged();
 			}
-			
+
 			if (itemstack1.stackSize == itemstack.stackSize)
 				return null;
-			
+
 			slot.onPickupFromSlot(player, itemstack);
 		}
-		
+
 		return itemstack;
 	}
 }

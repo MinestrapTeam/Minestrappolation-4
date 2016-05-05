@@ -12,8 +12,8 @@ import net.minecraft.world.IBlockAccess;
 
 public class MBlock extends Block
 {
-	private final MapColor	mapColor;
-	
+	private final MapColor mapColor;
+
 	public MBlock(Material materialIn, MapColor mapColorIn)
 	{
 		super(materialIn);
@@ -23,30 +23,25 @@ public class MBlock extends Block
 			this.setCreativeTab(Minestrappolation.tabMBuilding);
 		}
 	}
-	
+
 	@Override
 	public MapColor getMapColor(IBlockState state)
 	{
 		return this.mapColor;
 	}
-	
+
 	@Override
 	public boolean isBeaconBase(IBlockAccess worldObj, BlockPos pos, BlockPos beacon)
 	{
-		if (this == MBlocks.bronze_block || this == MBlocks.steel_block || this == MBlocks.meurodite_block || this == MBlocks.torite_block || this == MBlocks.titanium_block || this == MBlocks.blazium_block || this == MBlocks.soul_gem_block || this == MBlocks.radiant_block || this == MBlocks.radiant_chiseled)
-			return true;
-		else
-			return false;
+		return this == MBlocks.bronze_block || this == MBlocks.steel_block || this == MBlocks.meurodite_block
+			       || this == MBlocks.torite_block || this == MBlocks.titanium_block || this == MBlocks.blazium_block
+			       || this == MBlocks.soul_gem_block || this == MBlocks.radiant_block
+			       || this == MBlocks.radiant_chiseled;
 	}
-	
-	@Override
-    public boolean canEntityDestroy(IBlockAccess world, BlockPos pos, Entity entity)
-    {
-        if (entity instanceof net.minecraft.entity.boss.EntityDragon && this == MBlocks.obsidian_bricks)
-        {
-            return false;
-        }
 
-        return true;
-    }
+	@Override
+	public boolean canEntityDestroy(IBlockAccess world, BlockPos pos, Entity entity)
+	{
+		return !(entity instanceof net.minecraft.entity.boss.EntityDragon && this == MBlocks.obsidian_bricks);
+	}
 }

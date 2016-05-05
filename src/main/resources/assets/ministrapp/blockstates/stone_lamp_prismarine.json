@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:stone_lamp_prismarine" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:stone_lamp_prismarine"
     }
+  }
 }

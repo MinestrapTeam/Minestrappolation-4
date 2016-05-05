@@ -1,6 +1,6 @@
 {
-    "parent": "block/cube_all",
-    "textures": {
-        "all": "ministrapp:blocks/deepstone_tiles"
-    }
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "ministrapp:blocks/deepstone_tiles"
+  }
 }

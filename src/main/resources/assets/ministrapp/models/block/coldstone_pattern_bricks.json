@@ -1,6 +1,6 @@
 {
-    "parent": "block/cube_all",
-    "textures": {
-        "all": "ministrapp:blocks/coldstone_pattern_bricks"
-    }
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "ministrapp:blocks/coldstone_pattern_bricks"
+  }
 }

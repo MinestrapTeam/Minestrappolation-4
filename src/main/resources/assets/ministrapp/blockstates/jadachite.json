@@ -1,49 +1,65 @@
 {
-   "variants":{
-      "type=ud":{
-         "model":"ministrapp:jadachite_straight"
-      },
-	  "type=un":{
-         "model":"ministrapp:jadachite_corner", "x":180, "y":180
-      },
-      "type=ue":{
-         "model":"ministrapp:jadachite_corner", "x":180, "y":270
-      },
-      "type=us":{
-         "model":"ministrapp:jadachite_corner", "x":180
-      },
-      "type=uw":{
-         "model":"ministrapp:jadachite_corner", "x":180, "y":90
-      },
-	  "type=dn":{
-         "model":"ministrapp:jadachite_corner"
-      },
-      "type=de":{
-         "model":"ministrapp:jadachite_corner", "y":90
-      },
-      "type=ds":{
-         "model":"ministrapp:jadachite_corner", "y":180
-      },
-      "type=dw":{
-         "model":"ministrapp:jadachite_corner", "y":270
-      },
-	  "type=ne":{
-         "model":"ministrapp:jadachite_corner_side"
-      },
-      "type=ns":{
-         "model":"ministrapp:jadachite_straight", "x":90
-      },
-	  "type=nw":{
-         "model":"ministrapp:jadachite_corner_side", "y":270
-      },
-	  "type=es":{
-         "model":"ministrapp:jadachite_corner_side", "y":90
-      },
-      "type=ew":{
-         "model":"ministrapp:jadachite_straight", "x":90, "y":90
-      },
-	  "type=sw":{
-         "model":"ministrapp:jadachite_corner_side", "y":180
-      }
-   }
+  "variants": {
+    "type=ud": {
+      "model": "ministrapp:jadachite_straight"
+    },
+    "type=un": {
+      "model": "ministrapp:jadachite_corner",
+      "x": 180,
+      "y": 180
+    },
+    "type=ue": {
+      "model": "ministrapp:jadachite_corner",
+      "x": 180,
+      "y": 270
+    },
+    "type=us": {
+      "model": "ministrapp:jadachite_corner",
+      "x": 180
+    },
+    "type=uw": {
+      "model": "ministrapp:jadachite_corner",
+      "x": 180,
+      "y": 90
+    },
+    "type=dn": {
+      "model": "ministrapp:jadachite_corner"
+    },
+    "type=de": {
+      "model": "ministrapp:jadachite_corner",
+      "y": 90
+    },
+    "type=ds": {
+      "model": "ministrapp:jadachite_corner",
+      "y": 180
+    },
+    "type=dw": {
+      "model": "ministrapp:jadachite_corner",
+      "y": 270
+    },
+    "type=ne": {
+      "model": "ministrapp:jadachite_corner_side"
+    },
+    "type=ns": {
+      "model": "ministrapp:jadachite_straight",
+      "x": 90
+    },
+    "type=nw": {
+      "model": "ministrapp:jadachite_corner_side",
+      "y": 270
+    },
+    "type=es": {
+      "model": "ministrapp:jadachite_corner_side",
+      "y": 90
+    },
+    "type=ew": {
+      "model": "ministrapp:jadachite_straight",
+      "x": 90,
+      "y": 90
+    },
+    "type=sw": {
+      "model": "ministrapp:jadachite_corner_side",
+      "y": 180
+    }
+  }
 }

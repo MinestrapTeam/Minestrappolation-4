@@ -1,11 +1,24 @@
 {
-    "variants": {
-        "snowy=false": [
-            { "model": "ministrapp:perma_normal" },
-            { "model": "ministrapp:perma_normal", "y": 90 },
-            { "model": "ministrapp:perma_normal", "y": 180 },
-            { "model": "ministrapp:perma_normal", "y": 270 }
-        ],
-        "snowy=true":  { "model": "ministrapp:perma_snowed" }
+  "variants": {
+    "snowy=false": [
+      {
+        "model": "ministrapp:perma_normal"
+      },
+      {
+        "model": "ministrapp:perma_normal",
+        "y": 90
+      },
+      {
+        "model": "ministrapp:perma_normal",
+        "y": 180
+      },
+      {
+        "model": "ministrapp:perma_normal",
+        "y": 270
+      }
+    ],
+    "snowy=true": {
+      "model": "ministrapp:perma_snowed"
     }
+  }
 }

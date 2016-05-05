@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:jadachite_tiles" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:jadachite_tiles"
     }
+  }
 }

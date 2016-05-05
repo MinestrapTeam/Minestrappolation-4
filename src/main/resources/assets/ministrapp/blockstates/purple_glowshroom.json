@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:purple_glowshroom" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:purple_glowshroom"
     }
+  }
 }

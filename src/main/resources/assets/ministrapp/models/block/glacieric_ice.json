@@ -1,34 +1,146 @@
 {
-"__comment": "Designed by Delocuro with BDcraft Cubik PRO 0.93 Beta - http://bdcraft.net",
-"textures": {
+  "__comment": "Designed by Delocuro with BDcraft Cubik PRO 0.93 Beta - http://bdcraft.net",
+  "textures": {
     "particle": "ministrapp:blocks/glacieric_ice_outside",
     "Inside": "ministrapp:blocks/glacieric_ice_inside",
     "Outside": "ministrapp:blocks/glacieric_ice_outside"
-},
-"elements": [ 
-{
-    "from": [ 2, 2, 2 ],
-    "to": [ 14, 14, 14 ],
-    "faces": {
-        "down":  { "uv": [ 14, 14, 2, 2 ], "texture": "#Inside" },
-        "up":    { "uv": [ 2, 2, 14, 14 ], "texture": "#Inside" },
-        "north": { "uv": [ 2, 2, 14, 14 ], "texture": "#Inside" },
-        "south": { "uv": [ 2, 2, 14, 14 ], "texture": "#Inside" },
-        "west":  { "uv": [ 2, 2, 14, 14 ], "texture": "#Inside" },
-        "east":  { "uv": [ 2, 2, 14, 14 ], "texture": "#Inside" }
+  },
+  "elements": [
+    {
+      "from": [
+        2,
+        2,
+        2
+      ],
+      "to": [
+        14,
+        14,
+        14
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            14,
+            14,
+            2,
+            2
+          ],
+          "texture": "#Inside"
+        },
+        "up": {
+          "uv": [
+            2,
+            2,
+            14,
+            14
+          ],
+          "texture": "#Inside"
+        },
+        "north": {
+          "uv": [
+            2,
+            2,
+            14,
+            14
+          ],
+          "texture": "#Inside"
+        },
+        "south": {
+          "uv": [
+            2,
+            2,
+            14,
+            14
+          ],
+          "texture": "#Inside"
+        },
+        "west": {
+          "uv": [
+            2,
+            2,
+            14,
+            14
+          ],
+          "texture": "#Inside"
+        },
+        "east": {
+          "uv": [
+            2,
+            2,
+            14,
+            14
+          ],
+          "texture": "#Inside"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            16,
+            16,
+            0,
+            0
+          ],
+          "texture": "#Outside"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#Outside"
+        },
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#Outside"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#Outside"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#Outside"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#Outside"
+        }
+      }
     }
-},
-{
-    "from": [ 0, 0, 0 ],
-    "to": [ 16, 16, 16 ],
-    "faces": {
-        "down":  { "uv": [ 16, 16, 0, 0 ], "texture": "#Outside" },
-        "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#Outside" },
-        "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#Outside" },
-        "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#Outside" },
-        "west":  { "uv": [ 0, 0, 16, 16 ], "texture": "#Outside" },
-        "east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#Outside" }
-    }
-}
-]
+  ]
 }

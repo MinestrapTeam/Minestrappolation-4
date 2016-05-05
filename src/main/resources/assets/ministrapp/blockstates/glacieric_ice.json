@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:glacieric_ice" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:glacieric_ice"
     }
+  }
 }

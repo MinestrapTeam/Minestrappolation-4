@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:continnium_ore" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:continnium_ore"
     }
+  }
 }

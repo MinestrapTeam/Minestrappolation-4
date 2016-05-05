@@ -1,7 +1,5 @@
 package minestrapteam.mods.minestrappolation.lib;
 
-import java.util.ArrayList;
-
 import minestrapteam.mods.minestrappolation.Config;
 import minestrapteam.mods.minestrappolation.Minestrappolation;
 import minestrapteam.mods.minestrappolation.block.*;
@@ -23,40 +21,36 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.BlockFenceGate;
 import net.minecraft.block.BlockPlanks;
-import net.minecraft.block.BlockPumpkin;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemBucket;
-import net.minecraft.item.ItemSeedFood;
-import net.minecraft.item.ItemSeeds;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraft.potion.Potion;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
+import java.util.ArrayList;
+
 public class MBlocks
 {
 	public static ArrayList<Block> blockList = new ArrayList<Block>();
-	
+
 	//Soil
-	public static Block	cold_sand;
-	public static Block	lichen_permafrost;
-	public static Block	dirt_permafrost;
+	public static Block cold_sand;
+	public static Block lichen_permafrost;
+	public static Block dirt_permafrost;
 	public static Block mud;
 	public static Block rubble;
 	public static Block wither_ash;
 	public static Block virtian_soil;
 	public static Block virtian_grass;
-	
+
 	//Plants
-	public static Block	ministrapp_leaves;
-	public static Block	ministrapp_sapling;
+	public static Block ministrapp_leaves;
+	public static Block ministrapp_sapling;
 	public static Block dead_branch;
 	public static Block shrub_grass;
 	public static Block moss;
@@ -69,21 +63,21 @@ public class MBlocks
 	public static Block mana_bush;
 	public static Block seaweed;
 	public static Block rice_crop;
-	public static Item	rice;
+	public static Item  rice;
 	public static Block pepper_crop;
-	public static Item	pepper_seed;
+	public static Item  pepper_seed;
 	public static Block peanut_crop;
-	public static Item	peanuts;
+	public static Item  peanuts;
 	public static Block cabbage_crop;
-	public static Item	cabbage;
+	public static Item  cabbage;
 	public static Block onion_crop;
-	public static Item	onion;
+	public static Item  onion;
 	public static Block lettuce_crop;
-	public static Item	lettuce;
+	public static Item  lettuce;
 	public static Block celery_crop;
-	public static Item	celery_seed;
+	public static Item  celery_seed;
 	public static Block tomato_crop;
-	public static Item	tomato_seed;
+	public static Item  tomato_seed;
 	public static Block corn_crop;
 	public static Item  corn;
 	public static Block green_glowshroom;
@@ -92,7 +86,7 @@ public class MBlocks
 	public static Block huge_purple_glowshroom;
 	public static Block jadachite;
 	public static Block jadachiteroot;
-	
+
 	public static Block pumpkin_carved_0;
 	public static Block pumpkin_carved_1;
 	public static Block pumpkin_carved_2;
@@ -105,81 +99,81 @@ public class MBlocks
 	public static Block pumpkin_carved_4_lit;
 	public static Block pumpkin_smashed;
 	public static Block pumpkin_smashed_lit;
-	
+
 	//Food Blocks
-	public static Block	sugar_block;
-	public static Block	meat_block;
+	public static Block sugar_block;
+	public static Block meat_block;
 	public static Block melon_bricks;
-	
+
 	//Mineral Blocks
-	public static Block	copper_block;
-	public static Block	tin_block;
-	public static Block	bronze_block;
-	public static Block	steel_block;
-	public static Block	meurodite_block;
-	public static Block	torite_block;
-	public static Block	sunstone_block;
-	public static Block	uranium_block;
-	public static Block	plutonium_block;
-	public static Block	titanium_block;
+	public static Block copper_block;
+	public static Block tin_block;
+	public static Block bronze_block;
+	public static Block steel_block;
+	public static Block meurodite_block;
+	public static Block torite_block;
+	public static Block sunstone_block;
+	public static Block uranium_block;
+	public static Block plutonium_block;
+	public static Block titanium_block;
 	public static Block glacierite_block;
-	public static Block	blazium_block;
-	public static Block	soul_gem_block;
+	public static Block blazium_block;
+	public static Block soul_gem_block;
 	public static Block dimensium_block;
-	
+
 	//Wood Blocks
-	public static Block	ministrapp_log;
-	public static Block	ministrapp_planks;	
+	public static Block ministrapp_log;
+	public static Block ministrapp_planks;
 	public static Block ministrapp_boards;
 	public static Block ministrapp_mossy_planks;
 	public static Block ministrapp_mossy_boards;
-	
+
 	//Glass Decor Blocks
-	public static Block	glass_bricks;
-	public static Block	glass_refined;
-	public static Block	glass_tiles;
-	public static Block	glass_window;
+	public static Block glass_bricks;
+	public static Block glass_refined;
+	public static Block glass_tiles;
+	public static Block glass_window;
 	public static Block glow_glass;
-	
+
 	//Misc. Decor Blocks
-	public static Block	snow_refined;
-	public static Block	snow_bricks;
-	public static Block	snow_tiles;
+	public static Block snow_refined;
+	public static Block snow_bricks;
+	public static Block snow_tiles;
 	public static Block mud_bricks;
 	public static Block cardboard_block;
 	public static Block wet_cardboard_block;
-	public static Block	invincium;
-	public static Block	glaical_invincium;
-	
+	public static Block invincium;
+	public static Block glaical_invincium;
+
 	//Misc. Stone Decor Blocks
-	public static Block	slate;
-	public static Block	slate_bricks;
-	public static Block	slate_pattern_bricks;
-	public static Block	slate_refined;
-	public static Block	granite_bricks;
-	public static Block	granite_pattern_bricks;
-	public static Block	diorite_bricks;
-	public static Block	diorite_pattern_bricks;
-	public static Block	andesite_bricks;
-	public static Block	andesite_pattern_bricks;
+	public static Block slate;
+	public static Block slate_bricks;
+	public static Block slate_pattern_bricks;
+	public static Block slate_refined;
+	public static Block granite_bricks;
+	public static Block granite_pattern_bricks;
+	public static Block diorite_bricks;
+	public static Block diorite_pattern_bricks;
+	public static Block andesite_bricks;
+	public static Block andesite_pattern_bricks;
 	public static Block sandstone_bricks;
 	public static Block sandstone_pattern_bricks;
 	public static Block red_sandstone_bricks;
 	public static Block red_sandstone_pattern_bricks;
-	public static Block	flint_block;
-	public static Block	flint_bricks;
-	public static Block	flint_pattern_bricks;
-	public static Block	flint_refined;
-	public static Block	flint_tiles;
-	public static Block	flint_chiseled;
-	public static Block	flint_lamp_sunstone;
-	public static Block	flint_lamp_glowstone;
-	public static Block	flint_lamp_prismarine;
-	public static Block	desert_quartz_block;
-	public static Block	desert_quartz_chiseled;
+	public static Block flint_block;
+	public static Block flint_bricks;
+	public static Block flint_pattern_bricks;
+	public static Block flint_refined;
+	public static Block flint_tiles;
+	public static Block flint_chiseled;
+	public static Block flint_lamp_sunstone;
+	public static Block flint_lamp_glowstone;
+	public static Block flint_lamp_prismarine;
+	public static Block desert_quartz_block;
+	public static Block desert_quartz_chiseled;
 	public static Block desert_pillar;
-	public static Block	radiant_block;
-	public static Block	radiant_chiseled;
+	public static Block radiant_block;
+	public static Block radiant_chiseled;
 	public static Block radiant_pillar;
 	public static Block obsidian_bricks;
 	public static Block glow_mossy_netherrack;
@@ -189,17 +183,17 @@ public class MBlocks
 	public static Block jadachite_bricks;
 	public static Block jadachite_tiles;
 	public static Block jadachite_pillar;
-	
+
 	//Biome Stone Decor Blocks
-	public static Block	stone_lamp_glowstone;
-	public static Block	stone_lamp_prismarine;
-	public static Block	stone_lamp_sunstone;
-	public static Block	stone_pattern_bricks;
-	public static Block	stone_refined;
-	public static Block	stone_tiles;
-	public static Block	biome_stones;
-	public static Block	biome_cobble;
-	public static Block	biome_bricks;
+	public static Block stone_lamp_glowstone;
+	public static Block stone_lamp_prismarine;
+	public static Block stone_lamp_sunstone;
+	public static Block stone_pattern_bricks;
+	public static Block stone_refined;
+	public static Block stone_tiles;
+	public static Block biome_stones;
+	public static Block biome_cobble;
+	public static Block biome_bricks;
 	public static Block chiseled;
 	public static Block mossy;
 	public static Block mossy_bricks;
@@ -210,7 +204,7 @@ public class MBlocks
 	public static Block lamp_sunstone;
 	public static Block lamp_glowstone;
 	public static Block lamp_prismarine;
-	
+
 	//Utility Decor Blocks
 	public static Block compacted_dirt;
 	public static Block compacted_netherrack;
@@ -223,19 +217,19 @@ public class MBlocks
 	public static Block magnetic_torch;
 	public static Block lit_candle;
 	public static Block unholy_candle;
-	public static Block	stone_boulder;
-	public static Block	red_rock_boulder;
-	public static Block	coldstone_boulder;
-	public static Block	icestone_boulder;
-	public static Block	oceanstone_boulder;
+	public static Block stone_boulder;
+	public static Block red_rock_boulder;
+	public static Block coldstone_boulder;
+	public static Block icestone_boulder;
+	public static Block oceanstone_boulder;
 	public static Block ministrapp_flower_pot;
-	public static Block	roads;
+	public static Block roads;
 	public static Block fan;
 	public static Block rope;
 	public static Block chimney;
 	public static Block cold_cobweb;
 	public static Block glacieric_ice;
-	public static Block	godstone;
+	public static Block godstone;
 	public static Block candle;
 	public static Block hourglass_empty;
 	public static Block hourglass_sand;
@@ -246,7 +240,7 @@ public class MBlocks
 	public static Block hourglass_continurum;
 	public static Block ritual_conduit;
 	public static Block terracreep;
-	
+
 	//Gene Blocks
 	public static Block block_flesh;
 	public static Block block_flesh_reactive;
@@ -272,35 +266,35 @@ public class MBlocks
 	public static Block block_sheep_blue;
 	public static Block block_sheep_purple;
 	public static Block block_sheep_magenta;
-	
+
 	//Tech Blocks
-	public static Block	crate;
-	public static Block	barrel;
+	public static Block crate;
+	public static Block barrel;
 	public static Block pipe;
 	public static Block sorter;
-	public static Block	sawmill;
-	public static Block	stonecutter;
-	public static Block	plutonium_insulated;
-	public static Block	uranium_insulated;
-	public static Block	alloy;
-	public static Block	alloy_active;
-	public static Block	melter;
-	public static Block	melter_active;
-	public static Block	crusher;
-	public static Block	crusher_active;
+	public static Block sawmill;
+	public static Block stonecutter;
+	public static Block plutonium_insulated;
+	public static Block uranium_insulated;
+	public static Block alloy;
+	public static Block alloy_active;
+	public static Block melter;
+	public static Block melter_active;
+	public static Block crusher;
+	public static Block crusher_active;
 	public static Block splitter;
 	public static Block splitter_active;
-	public static Block	frost_generator;
+	public static Block frost_generator;
 	public static Block claimerator;
 	public static Block dimensional_fishery;
 	public static Block enderporter;
-	
+
 	//Fences and Panes
 	public static Block cardboard;
-	public static Block	redwood_fence;
-	public static Block	redwood_fence_gate;
-	public static Block	frozen_oak_fence;
-	public static Block	frozen_oak_fence_gate;
+	public static Block redwood_fence;
+	public static Block redwood_fence_gate;
+	public static Block frozen_oak_fence;
+	public static Block frozen_oak_fence_gate;
 	public static Block red_rock_wall;
 	public static Block red_rock_wall_mossy;
 	public static Block coldstone_wall;
@@ -309,107 +303,107 @@ public class MBlocks
 	public static Block icestone_wall_mossy;
 	public static Block oceanstone_wall;
 	public static Block oceanstone_wall_mossy;
-	public static Block	refined_glass_pane;
-	public static Block	bricked_glass_pane;
-	public static Block	tiled_glass_pane;
-	public static Block	framed_glass_pane;
+	public static Block refined_glass_pane;
+	public static Block bricked_glass_pane;
+	public static Block tiled_glass_pane;
+	public static Block framed_glass_pane;
 	public static Block glow_glass_pane;
-	public static Block	steel_mesh;
-	
+	public static Block steel_mesh;
+
 	//Doors
-	public static Block	redwood_door;
-	public static Block	frozen_door;
+	public static Block redwood_door;
+	public static Block frozen_door;
 	public static Block glass_door;
-	
-	public static Item	redwood_door_item;
-	public static Item  frozen_door_item;
-	public static Item  glass_door_item;
-	
+
+	public static Item redwood_door_item;
+	public static Item frozen_door_item;
+	public static Item glass_door_item;
+
 	//Ores
-	public static Block	desert_quartz;
+	public static Block desert_quartz;
 	public static Block glacieric_ice_vein;
-	public static Block	biome_coal;
-	public static Block	copper_ore;
-	public static Block	biome_copper;
-	public static Block	tin_ore;
-	public static Block	biome_tin;
-	public static Block	biome_iron;
-	public static Block	biome_gold;
-	public static Block	meurodite_ore;
-	public static Block	biome_meurodite;
-	public static Block	torite_ore;
-	public static Block	biome_torite;
-	public static Block	biome_redstone;
-	public static Block	biome_lapis;
-	public static Block	sunstone_ore;
-	public static Block	biome_sunstone;
-	public static Block	plutonium_ore;
-	public static Block	biome_plutonium;
-	public static Block	uranium_ore;
-	public static Block	biome_uranium;
-	public static Block	radiant_ore;
-	public static Block	biome_radiant;
-	public static Block	biome_diamond;
-	public static Block	biome_emerald;
-	public static Block	titanium_ore;
-	public static Block	biome_titanium;
-	public static Block	blazium_ore;
-	public static Block	soul_ore;
+	public static Block biome_coal;
+	public static Block copper_ore;
+	public static Block biome_copper;
+	public static Block tin_ore;
+	public static Block biome_tin;
+	public static Block biome_iron;
+	public static Block biome_gold;
+	public static Block meurodite_ore;
+	public static Block biome_meurodite;
+	public static Block torite_ore;
+	public static Block biome_torite;
+	public static Block biome_redstone;
+	public static Block biome_lapis;
+	public static Block sunstone_ore;
+	public static Block biome_sunstone;
+	public static Block plutonium_ore;
+	public static Block biome_plutonium;
+	public static Block uranium_ore;
+	public static Block biome_uranium;
+	public static Block radiant_ore;
+	public static Block biome_radiant;
+	public static Block biome_diamond;
+	public static Block biome_emerald;
+	public static Block titanium_ore;
+	public static Block biome_titanium;
+	public static Block blazium_ore;
+	public static Block soul_ore;
 	public static Block continnium_ore;
 	public static Block dimensium_ore;
-	
+
 	// Stairs
-	public static Block	redwood_stairs;
-	public static Block	frozen_oak_stairs;
+	public static Block redwood_stairs;
+	public static Block frozen_oak_stairs;
 	public static Block andesite_brick_stairs;
 	public static Block diorite_brick_stairs;
 	public static Block granite_brick_stairs;
 	public static Block slate_brick_stairs;
 	public static Block sandstone_brick_stairs;
 	public static Block red_sandstone_brick_stairs;
-	public static Block	desert_quartz_stairs;
+	public static Block desert_quartz_stairs;
 	public static Block radiant_stairs;
-	public static Block	deepstone_stairs;
-	public static Block	coldstone_stairs;
-	public static Block	redrock_stairs;
-	public static Block	oceanstone_stairs;
-	public static Block	icestone_stairs;
-	public static Block	poceanstone_stairs;
-	public static Block	glacierstone_stairs;
-	public static Block	deep_redrock_stairs;
-	public static Block	deep_coldstone_stairs;
-	public static Block	deepstone_brick_stairs;
-	public static Block	coldstone_brick_stairs;
-	public static Block	redrock_brick_stairs;
-	public static Block	oceanstone_brick_stairs;
-	public static Block	icestone_brick_stairs;
-	public static Block	poceanstone_brick_stairs;
-	public static Block	glacierstone_brick_stairs;
-	public static Block	deep_redrock_brick_stairs;
-	public static Block	deep_coldstone_brick_stairs;
+	public static Block deepstone_stairs;
+	public static Block coldstone_stairs;
+	public static Block redrock_stairs;
+	public static Block oceanstone_stairs;
+	public static Block icestone_stairs;
+	public static Block poceanstone_stairs;
+	public static Block glacierstone_stairs;
+	public static Block deep_redrock_stairs;
+	public static Block deep_coldstone_stairs;
+	public static Block deepstone_brick_stairs;
+	public static Block coldstone_brick_stairs;
+	public static Block redrock_brick_stairs;
+	public static Block oceanstone_brick_stairs;
+	public static Block icestone_brick_stairs;
+	public static Block poceanstone_brick_stairs;
+	public static Block glacierstone_brick_stairs;
+	public static Block deep_redrock_brick_stairs;
+	public static Block deep_coldstone_brick_stairs;
 	public static Block prismarine_stairs;
 	public static Block jadachite_brick_stairs;
-	
+
 	//Slabs
 	public static BlockMSlab       redwood_slab;
 	public static BlockMDoubleSlab redwood_double_slab;
 	public static BlockMSlab       frozen_oak_slab;
 	public static BlockMDoubleSlab frozen_oak_double_slab;
-	public static BlockMSlab	   andesite_brick_slab;
+	public static BlockMSlab       andesite_brick_slab;
 	public static BlockMDoubleSlab andesite_brick_double_slab;
-	public static BlockMSlab	   diorite_brick_slab;
+	public static BlockMSlab       diorite_brick_slab;
 	public static BlockMDoubleSlab diorite_brick_double_slab;
-	public static BlockMSlab	   granite_brick_slab;
+	public static BlockMSlab       granite_brick_slab;
 	public static BlockMDoubleSlab granite_brick_double_slab;
-	public static BlockMSlab	   slate_brick_slab;
+	public static BlockMSlab       slate_brick_slab;
 	public static BlockMDoubleSlab slate_brick_double_slab;
-	public static BlockMSlab	   sandstone_brick_slab;
+	public static BlockMSlab       sandstone_brick_slab;
 	public static BlockMDoubleSlab sandstone_brick_double_slab;
-	public static BlockMSlab	   red_sandstone_brick_slab;
+	public static BlockMSlab       red_sandstone_brick_slab;
 	public static BlockMDoubleSlab red_sandstone_brick_double_slab;
-	public static BlockMSlab	   desert_quartz_slab;
+	public static BlockMSlab       desert_quartz_slab;
 	public static BlockMDoubleSlab desert_quartz_double_slab;
-	public static BlockMSlab	   radiant_slab;
+	public static BlockMSlab       radiant_slab;
 	public static BlockMDoubleSlab radiant_double_slab;
 	public static BlockMSlab       deepstone_slab;
 	public static BlockMDoubleSlab deepstone_double_slab;
@@ -465,277 +459,938 @@ public class MBlocks
 	public static BlockMDoubleSlab oceanstone_brick_double_slab;
 	public static BlockMSlab       poceanstone_brick_slab;
 	public static BlockMDoubleSlab poceanstone_brick_double_slab;
-	public static BlockMSlab	   prismarine_slab;
+	public static BlockMSlab       prismarine_slab;
 	public static BlockMDoubleSlab prismarine_double_slab;
-	public static BlockMSlab	   jadachite_brick_slab;
+	public static BlockMSlab       jadachite_brick_slab;
 	public static BlockMDoubleSlab jadachite_brick_double_slab;
-	
+
 	//Fluid
 	public static Block magma;
-	public static Item	magmaBucket;
-	
+	public static Item  magmaBucket;
+
 	public static void init()
 	{
 		//Soil Blocks
-		cold_sand = new BlockMSand().setUnlocalizedName("cold_sand").setHardness(0.7F).setStepSound(Block.soundTypeSand).setCreativeTab(Minestrappolation.tabMBuilding);
-		lichen_permafrost = new BlockPermaFrost().setUnlocalizedName("permafrost").setHardness(1F).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMBuilding);
-		dirt_permafrost = new BlockPermaFrostDirt(Material.ground, MapColor.cyanColor).setHardness(0.9F).setStepSound(Block.soundTypeGravel).setUnlocalizedName("dirt_permafrost").setCreativeTab(Minestrappolation.tabMBuilding);
-		mud = new BlockMud(Material.ground, MapColor.brownColor).setHardness(0.5F).setStepSound(Block.SLIME_SOUND).setUnlocalizedName("mud").setCreativeTab(Minestrappolation.tabMBuilding);
-		rubble = new BlockMFalling(Material.rock, MapColor.grayColor).setHardness(0.7F).setStepSound(Block.soundTypePiston).setUnlocalizedName("rubble").setCreativeTab(Minestrappolation.tabMBuilding);
-		wither_ash = new BlockWitherAsh().setHardness(0.1F).setStepSound(Block.soundTypeSand).setUnlocalizedName("wither_ash").setCreativeTab(Minestrappolation.tabMMaterials);
-		virtian_soil = new BlockVirtianSoil().setHardness(0.6F).setStepSound(Block.soundTypeGravel).setCreativeTab(Minestrappolation.tabMBuilding).setUnlocalizedName("virtian_soil");
-		virtian_grass = new BlockVirtianGrass().setHardness(0.6F).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMBuilding).setUnlocalizedName("virtian_grass");
-		
+		cold_sand = new BlockMSand().setUnlocalizedName("cold_sand").setHardness(0.7F).setStepSound(Block.soundTypeSand)
+		                            .setCreativeTab(Minestrappolation.tabMBuilding);
+		lichen_permafrost = new BlockPermaFrost().setUnlocalizedName("permafrost").setHardness(1F)
+		                                         .setStepSound(Block.soundTypeGrass)
+		                                         .setCreativeTab(Minestrappolation.tabMBuilding);
+		dirt_permafrost = new BlockPermaFrostDirt(Material.ground, MapColor.cyanColor).setHardness(0.9F).setStepSound(
+			Block.soundTypeGravel).setUnlocalizedName("dirt_permafrost").setCreativeTab(Minestrappolation.tabMBuilding);
+		mud = new BlockMud(Material.ground, MapColor.brownColor).setHardness(0.5F).setStepSound(Block.SLIME_SOUND)
+		                                                        .setUnlocalizedName("mud")
+		                                                        .setCreativeTab(Minestrappolation.tabMBuilding);
+		rubble = new BlockMFalling(Material.rock, MapColor.grayColor).setHardness(0.7F)
+		                                                             .setStepSound(Block.soundTypePiston)
+		                                                             .setUnlocalizedName("rubble")
+		                                                             .setCreativeTab(Minestrappolation.tabMBuilding);
+		wither_ash = new BlockWitherAsh().setHardness(0.1F).setStepSound(Block.soundTypeSand)
+		                                 .setUnlocalizedName("wither_ash")
+		                                 .setCreativeTab(Minestrappolation.tabMMaterials);
+		virtian_soil = new BlockVirtianSoil().setHardness(0.6F).setStepSound(Block.soundTypeGravel)
+		                                     .setCreativeTab(Minestrappolation.tabMBuilding)
+		                                     .setUnlocalizedName("virtian_soil");
+		virtian_grass = new BlockVirtianGrass().setHardness(0.6F).setStepSound(Block.soundTypeGrass)
+		                                       .setCreativeTab(Minestrappolation.tabMBuilding)
+		                                       .setUnlocalizedName("virtian_grass");
+
 		//Plants
 		ministrapp_leaves = new MBlockLeaves(600).setUnlocalizedName("ministrapp_leaves");
 		ministrapp_sapling = new MBlockSapling(600);
-		dead_branch = new BlockDeadBranch(Material.vine, MapColor.woodColor).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("dead_branch");
-		shrub_grass = new BlockShrubGrass().setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("shrub_grass");
-		moss = new BlockMoss(MapColor.greenColor).setHardness(0.3F).setStepSound(Block.soundTypeCloth).setUnlocalizedName("moss").setCreativeTab(Minestrappolation.tabMDecor);
-		hanging_moss = new BlockHangingMoss(600).setStepSound(Block.soundTypeGrass).setUnlocalizedName("hanging_moss").setCreativeTab(Minestrappolation.tabMDecor);
-		hanging_glow_moss = new BlockHangingMoss(0).setStepSound(Block.soundTypeGrass).setLightLevel(0.8F).setUnlocalizedName("hanging_glow_moss").setCreativeTab(Minestrappolation.tabMDecor);
-		blueberry_bush = new BlockBush(Material.leaves, MItems.blueberry, MapColor.greenColor).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("blueberry_bush");
-		blackberry_bush = new BlockBush(Material.leaves, MItems.blackberry, MapColor.greenColor).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("blackberry_bush");
-		raspberry_bush = new BlockBush(Material.leaves, MItems.raspberry, MapColor.greenColor).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("raspberry_bush");
-		strawberry_bush = new BlockBush(Material.leaves, MItems.strawberry, MapColor.greenColor).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("strawberry_bush");
-		mana_bush = new BlockBush(Material.leaves, MItems.mana_leaf, MapColor.lightBlueColor).setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("mana_bush");
-		seaweed = new BlockSeaweed().setStepSound(Block.soundTypeGrass).setUnlocalizedName("seaweed").setCreativeTab(Minestrappolation.tabMDecor);
+		dead_branch = new BlockDeadBranch(Material.vine, MapColor.woodColor).setStepSound(Block.soundTypeGrass)
+		                                                                    .setCreativeTab(Minestrappolation.tabMDecor)
+		                                                                    .setUnlocalizedName("dead_branch");
+		shrub_grass = new BlockShrubGrass().setStepSound(Block.soundTypeGrass)
+		                                   .setCreativeTab(Minestrappolation.tabMDecor)
+		                                   .setUnlocalizedName("shrub_grass");
+		moss = new BlockMoss(MapColor.greenColor).setHardness(0.3F).setStepSound(Block.soundTypeCloth)
+		                                         .setUnlocalizedName("moss")
+		                                         .setCreativeTab(Minestrappolation.tabMDecor);
+		hanging_moss = new BlockHangingMoss(600).setStepSound(Block.soundTypeGrass).setUnlocalizedName("hanging_moss")
+		                                        .setCreativeTab(Minestrappolation.tabMDecor);
+		hanging_glow_moss = new BlockHangingMoss(0).setStepSound(Block.soundTypeGrass).setLightLevel(0.8F)
+		                                           .setUnlocalizedName("hanging_glow_moss")
+		                                           .setCreativeTab(Minestrappolation.tabMDecor);
+		blueberry_bush = new BlockBush(Material.leaves, MItems.blueberry, MapColor.greenColor)
+			                 .setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor)
+			                 .setUnlocalizedName("blueberry_bush");
+		blackberry_bush = new BlockBush(Material.leaves, MItems.blackberry, MapColor.greenColor)
+			                  .setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor)
+			                  .setUnlocalizedName("blackberry_bush");
+		raspberry_bush = new BlockBush(Material.leaves, MItems.raspberry, MapColor.greenColor)
+			                 .setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor)
+			                 .setUnlocalizedName("raspberry_bush");
+		strawberry_bush = new BlockBush(Material.leaves, MItems.strawberry, MapColor.greenColor)
+			                  .setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor)
+			                  .setUnlocalizedName("strawberry_bush");
+		mana_bush = new BlockBush(Material.leaves, MItems.mana_leaf, MapColor.lightBlueColor)
+			            .setStepSound(Block.soundTypeGrass).setCreativeTab(Minestrappolation.tabMDecor)
+			            .setUnlocalizedName("mana_bush");
+		seaweed = new BlockSeaweed().setStepSound(Block.soundTypeGrass).setUnlocalizedName("seaweed")
+		                            .setCreativeTab(Minestrappolation.tabMDecor);
 		rice_crop = new BlockRice().setUnlocalizedName("rice_crop");
-		rice = new ItemSeeds(rice_crop, Blocks.farmland).setUnlocalizedName("rice").setCreativeTab(Minestrappolation.tabMFood);
+		rice = new ItemSeeds(rice_crop, Blocks.farmland).setUnlocalizedName("rice")
+		                                                .setCreativeTab(Minestrappolation.tabMFood);
 		pepper_crop = new BlockPepper().setUnlocalizedName("pepper_crop");
-		pepper_seed = new ItemSeeds(pepper_crop, Blocks.farmland).setUnlocalizedName("pepper_seeds").setCreativeTab(Minestrappolation.tabMFood);
+		pepper_seed = new ItemSeeds(pepper_crop, Blocks.farmland).setUnlocalizedName("pepper_seeds")
+		                                                         .setCreativeTab(Minestrappolation.tabMFood);
 		peanut_crop = new BlockPeanuts().setUnlocalizedName("peanut_crop");
-		peanuts = new ItemSeedFood(1, 0.2F, peanut_crop, Blocks.farmland).setUnlocalizedName("peanuts").setCreativeTab(Minestrappolation.tabMFood);
+		peanuts = new ItemSeedFood(1, 0.2F, peanut_crop, Blocks.farmland).setUnlocalizedName("peanuts")
+		                                                                 .setCreativeTab(Minestrappolation.tabMFood);
 		cabbage_crop = new BlockCabbage().setUnlocalizedName("cabbage_crop");
-		cabbage = new ItemSeedFood(3, 0.1F, cabbage_crop, Blocks.farmland).setUnlocalizedName("cabbage").setCreativeTab(Minestrappolation.tabMFood);
+		cabbage = new ItemSeedFood(3, 0.1F, cabbage_crop, Blocks.farmland).setUnlocalizedName("cabbage")
+		                                                                  .setCreativeTab(Minestrappolation.tabMFood);
 		onion_crop = new BlockOnion().setUnlocalizedName("onion_crop");
-		onion = new ItemSeedFood(2, 0.2F, onion_crop, Blocks.farmland).setPotionEffect(Potion.blindness.id, 10, 0, 0.1F).setUnlocalizedName("onion").setCreativeTab(Minestrappolation.tabMFood);
+		onion = new ItemSeedFood(2, 0.2F, onion_crop, Blocks.farmland).setPotionEffect(Potion.blindness.id, 10, 0, 0.1F)
+		                                                              .setUnlocalizedName("onion")
+		                                                              .setCreativeTab(Minestrappolation.tabMFood);
 		lettuce_crop = new BlockLettuce().setUnlocalizedName("lettuce_crop");
-		lettuce = new ItemSeedFood(1, 0F, lettuce_crop, Blocks.farmland).setUnlocalizedName("lettuce").setCreativeTab(Minestrappolation.tabMFood);
+		lettuce = new ItemSeedFood(1, 0F, lettuce_crop, Blocks.farmland).setUnlocalizedName("lettuce")
+		                                                                .setCreativeTab(Minestrappolation.tabMFood);
 		celery_crop = new BlockCelery().setUnlocalizedName("celery_crop");
-		celery_seed = new ItemSeeds(celery_crop, Blocks.farmland).setUnlocalizedName("celery_seeds").setCreativeTab(Minestrappolation.tabMFood);
+		celery_seed = new ItemSeeds(celery_crop, Blocks.farmland).setUnlocalizedName("celery_seeds")
+		                                                         .setCreativeTab(Minestrappolation.tabMFood);
 		tomato_crop = new BlockTomato().setUnlocalizedName("tomato_crop");
-		tomato_seed = new ItemSeeds(tomato_crop, Blocks.farmland).setUnlocalizedName("tomato_seeds").setCreativeTab(Minestrappolation.tabMFood);
+		tomato_seed = new ItemSeeds(tomato_crop, Blocks.farmland).setUnlocalizedName("tomato_seeds")
+		                                                         .setCreativeTab(Minestrappolation.tabMFood);
 		corn_crop = new BlockCorn().setUnlocalizedName("corn_crop");
-		corn = new ItemSeeds(corn_crop, Blocks.farmland).setUnlocalizedName("corn").setCreativeTab(Minestrappolation.tabMFood);
-		green_glowshroom = new BlockGlowShrooms().setLightLevel(0.6F).setUnlocalizedName("green_glowshroom").setCreativeTab(Minestrappolation.tabMDecor);
-		huge_green_glowshroom = new BlockHugeGlowShroom(Material.grass, green_glowshroom).setLightLevel(0.8F).setUnlocalizedName("huge_green_glowshroom").setCreativeTab(Minestrappolation.tabMDecor);
-		purple_glowshroom = new BlockGlowShrooms().setLightLevel(0.6F).setUnlocalizedName("purple_glowshroom").setCreativeTab(Minestrappolation.tabMDecor);
-		huge_purple_glowshroom = new BlockHugeGlowShroom(Material.grass, purple_glowshroom).setLightLevel(0.8F).setUnlocalizedName("huge_purple_glowshroom").setCreativeTab(Minestrappolation.tabMDecor);
-		jadachite = new BlockJadachite(Material.glass, MapColor.greenColor).setLightLevel(0.7F).setUnlocalizedName("jadachite").setCreativeTab(Minestrappolation.tabMDecor);
-		jadachiteroot = new BlockJadachiteRoot(Material.glass, MapColor.greenColor).setLightLevel(1.0F).setUnlocalizedName("jadachiteroot").setCreativeTab(Minestrappolation.tabMDecor);
-		pumpkin_carved_0 = new BlockCarvedPumpkin("neutral", pumpkin_carved_0_lit).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
-		pumpkin_carved_1 = new BlockCarvedPumpkin("grin", pumpkin_carved_1_lit).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
-		pumpkin_carved_2 = new BlockCarvedPumpkin("creepy", pumpkin_carved_2_lit).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
-		pumpkin_carved_3 = new BlockCarvedPumpkin("grump", pumpkin_carved_3_lit).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
-		pumpkin_carved_4 = new BlockCarvedPumpkin("dumpy", pumpkin_carved_4_lit).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
-		pumpkin_carved_0_lit = new BlockCarvedPumpkin("neutral_lit", pumpkin_carved_0).setLightLevel(0.9F).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
-		pumpkin_carved_1_lit = new BlockCarvedPumpkin("grin_lit", pumpkin_carved_1).setLightLevel(0.9F).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
-		pumpkin_carved_2_lit = new BlockCarvedPumpkin("creepy_lit", pumpkin_carved_2).setLightLevel(0.9F).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
-		pumpkin_carved_3_lit = new BlockCarvedPumpkin("grump_lit", pumpkin_carved_3).setLightLevel(0.9F).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
-		pumpkin_carved_4_lit = new BlockCarvedPumpkin("dumpy_lit", pumpkin_carved_4).setLightLevel(0.9F).setHardness(1F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor);
-		((BlockCarvedPumpkin)pumpkin_carved_0).changeResultBlock(pumpkin_carved_0_lit);
-		((BlockCarvedPumpkin)pumpkin_carved_1).changeResultBlock(pumpkin_carved_1_lit);
-		((BlockCarvedPumpkin)pumpkin_carved_2).changeResultBlock(pumpkin_carved_2_lit);
-		((BlockCarvedPumpkin)pumpkin_carved_3).changeResultBlock(pumpkin_carved_3_lit);
-		((BlockCarvedPumpkin)pumpkin_carved_4).changeResultBlock(pumpkin_carved_4_lit);
-		pumpkin_smashed = new BlockSmashedPumpkin().setHardness(1F).setStepSound(Block.soundTypeWood).setUnlocalizedName("pumpkin_smashed").setCreativeTab(Minestrappolation.tabMDecor);
-		pumpkin_smashed_lit = new BlockSmashedPumpkin().setHardness(1F).setStepSound(Block.soundTypeWood).setLightLevel(0.9F).setUnlocalizedName("pumpkin_smashed_lit").setCreativeTab(Minestrappolation.tabMDecor);
-		
+		corn = new ItemSeeds(corn_crop, Blocks.farmland).setUnlocalizedName("corn")
+		                                                .setCreativeTab(Minestrappolation.tabMFood);
+		green_glowshroom = new BlockGlowShrooms().setLightLevel(0.6F).setUnlocalizedName("green_glowshroom")
+		                                         .setCreativeTab(Minestrappolation.tabMDecor);
+		huge_green_glowshroom = new BlockHugeGlowShroom(Material.grass, green_glowshroom).setLightLevel(0.8F)
+		                                                                                 .setUnlocalizedName(
+			                                                                                 "huge_green_glowshroom").setCreativeTab(
+			                                                                                 Minestrappolation.tabMDecor);
+		purple_glowshroom = new BlockGlowShrooms().setLightLevel(0.6F).setUnlocalizedName("purple_glowshroom")
+		                                          .setCreativeTab(Minestrappolation.tabMDecor);
+		huge_purple_glowshroom = new BlockHugeGlowShroom(Material.grass, purple_glowshroom).setLightLevel(0.8F)
+		                                                                                   .setUnlocalizedName(
+			                                                                                   "huge_purple_glowshroom")
+		                                                                                   .setCreativeTab(
+			                                                                                   Minestrappolation.tabMDecor);
+		jadachite = new BlockJadachite(Material.glass, MapColor.greenColor).setLightLevel(0.7F)
+		                                                                   .setUnlocalizedName("jadachite")
+		                                                                   .setCreativeTab(Minestrappolation.tabMDecor);
+		jadachiteroot = new BlockJadachiteRoot(Material.glass, MapColor.greenColor).setLightLevel(1.0F)
+		                                                                           .setUnlocalizedName("jadachiteroot")
+		                                                                           .setCreativeTab(
+			                                                                           Minestrappolation.tabMDecor);
+		pumpkin_carved_0 = new BlockCarvedPumpkin("neutral", pumpkin_carved_0_lit).setHardness(1F)
+		                                                                          .setStepSound(Block.soundTypeWood)
+		                                                                          .setCreativeTab(
+			                                                                          Minestrappolation.tabMDecor);
+		pumpkin_carved_1 = new BlockCarvedPumpkin("grin", pumpkin_carved_1_lit).setHardness(1F)
+		                                                                       .setStepSound(Block.soundTypeWood)
+		                                                                       .setCreativeTab(
+			                                                                       Minestrappolation.tabMDecor);
+		pumpkin_carved_2 = new BlockCarvedPumpkin("creepy", pumpkin_carved_2_lit).setHardness(1F)
+		                                                                         .setStepSound(Block.soundTypeWood)
+		                                                                         .setCreativeTab(
+			                                                                         Minestrappolation.tabMDecor);
+		pumpkin_carved_3 = new BlockCarvedPumpkin("grump", pumpkin_carved_3_lit).setHardness(1F)
+		                                                                        .setStepSound(Block.soundTypeWood)
+		                                                                        .setCreativeTab(
+			                                                                        Minestrappolation.tabMDecor);
+		pumpkin_carved_4 = new BlockCarvedPumpkin("dumpy", pumpkin_carved_4_lit).setHardness(1F)
+		                                                                        .setStepSound(Block.soundTypeWood)
+		                                                                        .setCreativeTab(
+			                                                                        Minestrappolation.tabMDecor);
+		pumpkin_carved_0_lit = new BlockCarvedPumpkin("neutral_lit", pumpkin_carved_0).setLightLevel(0.9F)
+		                                                                              .setHardness(1F)
+		                                                                              .setStepSound(Block.soundTypeWood)
+		                                                                              .setCreativeTab(
+			                                                                              Minestrappolation.tabMDecor);
+		pumpkin_carved_1_lit = new BlockCarvedPumpkin("grin_lit", pumpkin_carved_1).setLightLevel(0.9F).setHardness(1F)
+		                                                                           .setStepSound(Block.soundTypeWood)
+		                                                                           .setCreativeTab(
+			                                                                           Minestrappolation.tabMDecor);
+		pumpkin_carved_2_lit = new BlockCarvedPumpkin("creepy_lit", pumpkin_carved_2).setLightLevel(0.9F)
+		                                                                             .setHardness(1F)
+		                                                                             .setStepSound(Block.soundTypeWood)
+		                                                                             .setCreativeTab(
+			                                                                             Minestrappolation.tabMDecor);
+		pumpkin_carved_3_lit = new BlockCarvedPumpkin("grump_lit", pumpkin_carved_3).setLightLevel(0.9F).setHardness(1F)
+		                                                                            .setStepSound(Block.soundTypeWood)
+		                                                                            .setCreativeTab(
+			                                                                            Minestrappolation.tabMDecor);
+		pumpkin_carved_4_lit = new BlockCarvedPumpkin("dumpy_lit", pumpkin_carved_4).setLightLevel(0.9F).setHardness(1F)
+		                                                                            .setStepSound(Block.soundTypeWood)
+		                                                                            .setCreativeTab(
+			                                                                            Minestrappolation.tabMDecor);
+		((BlockCarvedPumpkin) pumpkin_carved_0).changeResultBlock(pumpkin_carved_0_lit);
+		((BlockCarvedPumpkin) pumpkin_carved_1).changeResultBlock(pumpkin_carved_1_lit);
+		((BlockCarvedPumpkin) pumpkin_carved_2).changeResultBlock(pumpkin_carved_2_lit);
+		((BlockCarvedPumpkin) pumpkin_carved_3).changeResultBlock(pumpkin_carved_3_lit);
+		((BlockCarvedPumpkin) pumpkin_carved_4).changeResultBlock(pumpkin_carved_4_lit);
+		pumpkin_smashed = new BlockSmashedPumpkin().setHardness(1F).setStepSound(Block.soundTypeWood)
+		                                           .setUnlocalizedName("pumpkin_smashed")
+		                                           .setCreativeTab(Minestrappolation.tabMDecor);
+		pumpkin_smashed_lit = new BlockSmashedPumpkin().setHardness(1F).setStepSound(Block.soundTypeWood)
+		                                               .setLightLevel(0.9F).setUnlocalizedName("pumpkin_smashed_lit")
+		                                               .setCreativeTab(Minestrappolation.tabMDecor);
+
 		//Food Blocks
-		sugar_block = new BlockMFalling(Material.sand, MapColor.snowColor).setHardness(0.5F).setStepSound(Block.soundTypeGravel).setUnlocalizedName("sugar_block").setCreativeTab(Minestrappolation.tabMBuilding);
-		meat_block = new BlockMStorage(Material.clay, MapColor.pinkColor).setHardness(0.8F).setStepSound(Block.SLIME_SOUND).setUnlocalizedName("meat_block").setCreativeTab(Minestrappolation.tabMFood);
-		melon_bricks = new BlockMMelon().setHardness(1.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMFood).setUnlocalizedName("melon_bricks");
-		
+		sugar_block = new BlockMFalling(Material.sand, MapColor.snowColor).setHardness(0.5F)
+		                                                                  .setStepSound(Block.soundTypeGravel)
+		                                                                  .setUnlocalizedName("sugar_block")
+		                                                                  .setCreativeTab(
+			                                                                  Minestrappolation.tabMBuilding);
+		meat_block = new BlockMStorage(Material.clay, MapColor.pinkColor).setHardness(0.8F)
+		                                                                 .setStepSound(Block.SLIME_SOUND)
+		                                                                 .setUnlocalizedName("meat_block")
+		                                                                 .setCreativeTab(Minestrappolation.tabMFood);
+		melon_bricks = new BlockMMelon().setHardness(1.0F).setStepSound(Block.soundTypeWood)
+		                                .setCreativeTab(Minestrappolation.tabMFood).setUnlocalizedName("melon_bricks");
+
 		//Mineral Blocks
-		copper_block = new MBlock(Material.iron, MapColor.adobeColor).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("copper_block").setCreativeTab(Minestrappolation.tabMBuilding);
-		tin_block = new MBlock(Material.iron, MapColor.ironColor).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("tin_block").setCreativeTab(Minestrappolation.tabMBuilding);
-		bronze_block = new MBlock(Material.iron, MapColor.goldColor).setHardness(5.0F).setResistance(20.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("bronze_block").setCreativeTab(Minestrappolation.tabMBuilding);
-		steel_block = new MBlock(Material.iron, MapColor.clayColor).setHardness(7.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("steel_block").setCreativeTab(Minestrappolation.tabMBuilding);
-		meurodite_block = new MBlock(Material.iron, MapColor.obsidianColor).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("meurodite_block").setCreativeTab(Minestrappolation.tabMBuilding);
-		torite_block = new MBlock(Material.iron, MapColor.limeColor).setHardness(5.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("torite_block").setCreativeTab(Minestrappolation.tabMBuilding);
-		sunstone_block = new BlockSunstoneBlock(Material.glass, MapColor.sandColor).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setLightLevel(0.9F).setUnlocalizedName("sunstone_block").setCreativeTab(Minestrappolation.tabMBuilding);
-		plutonium_block = new BlockRadationMineral(4, 20, Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 2, false).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("plutonium_block").setCreativeTab(Minestrappolation.tabMBuilding);
-		uranium_block = new BlockRadationMineral(4, 20, Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 2, false).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("uranium_block").setCreativeTab(Minestrappolation.tabMBuilding);
-		blazium_block = new BlockBlazium(Material.iron, MapColor.redColor).setHardness(5.0F).setResistance(10.0F).setLightLevel(0.5F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("blazium_block").setCreativeTab(Minestrappolation.tabMBuilding);
-		glacierite_block = new BlockGlacierite(Material.iron, MapColor.blueColor).setHardness(5.0F).setResistance(10.0F).setLightLevel(0.3F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("glacierite_block").setCreativeTab(Minestrappolation.tabMBuilding);
-		soul_gem_block = new BlockSoul(Material.iron, MapColor.cyanColor).setHardness(10.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("soul_gem_block").setCreativeTab(Minestrappolation.tabMBuilding);
-		titanium_block = new MBlock(Material.iron, MapColor.grayColor).setHardness(10.0F).setResistance(9999.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("titanium_block").setCreativeTab(Minestrappolation.tabMBuilding);
-		dimensium_block = new MBlock(Material.iron, MapColor.magentaColor).setHardness(10.0F).setResistance(9999.0F).setStepSound(Block.soundTypeAnvil).setLightLevel(0.7F).setUnlocalizedName("dimensium_block").setCreativeTab(Minestrappolation.tabMBuilding);
-		
+		copper_block = new MBlock(Material.iron, MapColor.adobeColor).setHardness(5.0F).setResistance(10.0F)
+		                                                             .setStepSound(Block.soundTypeMetal)
+		                                                             .setUnlocalizedName("copper_block")
+		                                                             .setCreativeTab(Minestrappolation.tabMBuilding);
+		tin_block = new MBlock(Material.iron, MapColor.ironColor).setHardness(3.0F).setResistance(5.0F)
+		                                                         .setStepSound(Block.soundTypeMetal)
+		                                                         .setUnlocalizedName("tin_block")
+		                                                         .setCreativeTab(Minestrappolation.tabMBuilding);
+		bronze_block = new MBlock(Material.iron, MapColor.goldColor).setHardness(5.0F).setResistance(20.0F)
+		                                                            .setStepSound(Block.soundTypeMetal)
+		                                                            .setUnlocalizedName("bronze_block")
+		                                                            .setCreativeTab(Minestrappolation.tabMBuilding);
+		steel_block = new MBlock(Material.iron, MapColor.clayColor).setHardness(7.0F).setResistance(10.0F)
+		                                                           .setStepSound(Block.soundTypeMetal)
+		                                                           .setUnlocalizedName("steel_block")
+		                                                           .setCreativeTab(Minestrappolation.tabMBuilding);
+		meurodite_block = new MBlock(Material.iron, MapColor.obsidianColor).setHardness(5.0F).setResistance(10.0F)
+		                                                                   .setStepSound(Block.soundTypeMetal)
+		                                                                   .setUnlocalizedName("meurodite_block")
+		                                                                   .setCreativeTab(
+			                                                                   Minestrappolation.tabMBuilding);
+		torite_block = new MBlock(Material.iron, MapColor.limeColor).setHardness(5.0F).setResistance(10.0F)
+		                                                            .setStepSound(Block.soundTypeMetal)
+		                                                            .setUnlocalizedName("torite_block")
+		                                                            .setCreativeTab(Minestrappolation.tabMBuilding);
+		sunstone_block = new BlockSunstoneBlock(Material.glass, MapColor.sandColor).setHardness(0.3F)
+		                                                                           .setStepSound(Block.soundTypeGlass)
+		                                                                           .setLightLevel(0.9F)
+		                                                                           .setUnlocalizedName("sunstone_block")
+		                                                                           .setCreativeTab(
+			                                                                           Minestrappolation.tabMBuilding);
+		plutonium_block = new BlockRadationMineral(4, 20, Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0,
+		                                           "pickaxe", 2, false).setHardness(3.0F).setResistance(5.0F)
+		                                                               .setStepSound(Block.soundTypeMetal)
+		                                                               .setUnlocalizedName("plutonium_block")
+		                                                               .setCreativeTab(Minestrappolation.tabMBuilding);
+		uranium_block = new BlockRadationMineral(4, 20, Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe",
+		                                         2, false).setHardness(3.0F).setResistance(5.0F)
+		                                                  .setStepSound(Block.soundTypeMetal)
+		                                                  .setUnlocalizedName("uranium_block")
+		                                                  .setCreativeTab(Minestrappolation.tabMBuilding);
+		blazium_block = new BlockBlazium(Material.iron, MapColor.redColor).setHardness(5.0F).setResistance(10.0F)
+		                                                                  .setLightLevel(0.5F)
+		                                                                  .setStepSound(Block.soundTypeMetal)
+		                                                                  .setUnlocalizedName("blazium_block")
+		                                                                  .setCreativeTab(
+			                                                                  Minestrappolation.tabMBuilding);
+		glacierite_block = new BlockGlacierite(Material.iron, MapColor.blueColor).setHardness(5.0F).setResistance(10.0F)
+		                                                                         .setLightLevel(0.3F)
+		                                                                         .setStepSound(Block.soundTypeMetal)
+		                                                                         .setUnlocalizedName("glacierite_block")
+		                                                                         .setCreativeTab(
+			                                                                         Minestrappolation.tabMBuilding);
+		soul_gem_block = new BlockSoul(Material.iron, MapColor.cyanColor).setHardness(10.0F).setResistance(10.0F)
+		                                                                 .setStepSound(Block.soundTypeMetal)
+		                                                                 .setUnlocalizedName("soul_gem_block")
+		                                                                 .setCreativeTab(
+			                                                                 Minestrappolation.tabMBuilding);
+		titanium_block = new MBlock(Material.iron, MapColor.grayColor).setHardness(10.0F).setResistance(9999.0F)
+		                                                              .setStepSound(Block.soundTypeMetal)
+		                                                              .setUnlocalizedName("titanium_block")
+		                                                              .setCreativeTab(Minestrappolation.tabMBuilding);
+		dimensium_block = new MBlock(Material.iron, MapColor.magentaColor).setHardness(10.0F).setResistance(9999.0F)
+		                                                                  .setStepSound(Block.soundTypeAnvil)
+		                                                                  .setLightLevel(0.7F)
+		                                                                  .setUnlocalizedName("dimensium_block")
+		                                                                  .setCreativeTab(
+			                                                                  Minestrappolation.tabMBuilding);
+
 		//Wood Blocks
 		ministrapp_log = new MBlockLog(300).setUnlocalizedName("ministrapp_log");
-		ministrapp_planks = new MBlockPlanks(300).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("ministrapp_planks");
-		ministrapp_boards = new BlockBoards(300, "boards").setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood);
-		ministrapp_mossy_planks = new BlockBoards(300, "mossy_planks").setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood);
-		ministrapp_mossy_boards = new BlockBoards(300, "mossy_boards").setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood);
-		
+		ministrapp_planks = new MBlockPlanks(300).setHardness(2.0F).setResistance(5.0F)
+		                                         .setStepSound(Block.soundTypeWood)
+		                                         .setUnlocalizedName("ministrapp_planks");
+		ministrapp_boards = new BlockBoards(300, "boards").setHardness(2.0F).setResistance(5.0F)
+		                                                  .setStepSound(Block.soundTypeWood);
+		ministrapp_mossy_planks = new BlockBoards(300, "mossy_planks").setHardness(2.0F).setResistance(5.0F)
+		                                                              .setStepSound(Block.soundTypeWood);
+		ministrapp_mossy_boards = new BlockBoards(300, "mossy_boards").setHardness(2.0F).setResistance(5.0F)
+		                                                              .setStepSound(Block.soundTypeWood);
+
 		//Glass Decor Blocks
-		glass_bricks = new BlockTransparent(Material.glass, MapColor.airColor, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setLightOpacity(1).setUnlocalizedName("glass_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
-		glass_refined = new BlockTransparent(Material.glass, MapColor.airColor, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setUnlocalizedName("glass_refined").setCreativeTab(Minestrappolation.tabMBuilding);
-		glass_tiles = new BlockTransparent(Material.glass, MapColor.airColor, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setLightOpacity(1).setUnlocalizedName("glass_tiles").setCreativeTab(Minestrappolation.tabMBuilding);
-		glass_window = new BlockTransparent(Material.iron, MapColor.airColor, true).setHardness(0.8F).setResistance(2.0F).setStepSound(Block.soundTypeGlass).setLightOpacity(2).setUnlocalizedName("glass_window").setCreativeTab(Minestrappolation.tabMBuilding);
-		glow_glass = new BlockTranslucent(Material.iron, MapColor.airColor, false).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setLightOpacity(0).setLightLevel(0.9F).setUnlocalizedName("glow_glass").setCreativeTab(Minestrappolation.tabMBuilding);
-		
+		glass_bricks = new BlockTransparent(Material.glass, MapColor.airColor, false).setHardness(0.3F)
+		                                                                             .setStepSound(Block.soundTypeGlass)
+		                                                                             .setLightOpacity(1)
+		                                                                             .setUnlocalizedName("glass_bricks")
+		                                                                             .setCreativeTab(
+			                                                                             Minestrappolation.tabMBuilding);
+		glass_refined = new BlockTransparent(Material.glass, MapColor.airColor, false).setHardness(0.3F).setStepSound(
+			Block.soundTypeGlass).setUnlocalizedName("glass_refined").setCreativeTab(Minestrappolation.tabMBuilding);
+		glass_tiles = new BlockTransparent(Material.glass, MapColor.airColor, false).setHardness(0.3F)
+		                                                                            .setStepSound(Block.soundTypeGlass)
+		                                                                            .setLightOpacity(1)
+		                                                                            .setUnlocalizedName("glass_tiles")
+		                                                                            .setCreativeTab(
+			                                                                            Minestrappolation.tabMBuilding);
+		glass_window = new BlockTransparent(Material.iron, MapColor.airColor, true).setHardness(0.8F)
+		                                                                           .setResistance(2.0F)
+		                                                                           .setStepSound(Block.soundTypeGlass)
+		                                                                           .setLightOpacity(2)
+		                                                                           .setUnlocalizedName("glass_window")
+		                                                                           .setCreativeTab(
+			                                                                           Minestrappolation.tabMBuilding);
+		glow_glass = new BlockTranslucent(Material.iron, MapColor.airColor, false).setHardness(0.3F)
+		                                                                          .setStepSound(Block.soundTypeGlass)
+		                                                                          .setLightOpacity(0)
+		                                                                          .setLightLevel(0.9F)
+		                                                                          .setUnlocalizedName("glow_glass")
+		                                                                          .setCreativeTab(
+			                                                                          Minestrappolation.tabMBuilding);
+
 		//Misc. Decor Blocks
-		snow_refined = new MBlockSnow(Material.snow, MapColor.snowColor).setHardness(0.4F).setStepSound(Block.soundTypeSnow).setUnlocalizedName("snow_refined").setCreativeTab(Minestrappolation.tabMBuilding);
-		snow_bricks = new MBlockSnow(Material.snow, MapColor.snowColor).setHardness(0.6F).setStepSound(Block.soundTypeSnow).setUnlocalizedName("snow_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
-		snow_tiles = new MBlockSnow(Material.snow, MapColor.snowColor).setHardness(0.6F).setStepSound(Block.soundTypeSnow).setUnlocalizedName("snow_tiles").setCreativeTab(Minestrappolation.tabMBuilding);
-		cardboard_block = new BlockCardboard(Material.cloth, MapColor.brownColor).setHardness(0.1F).setResistance(0F).setUnlocalizedName("cardboard_block").setStepSound(Block.soundTypePiston).setCreativeTab(Minestrappolation.tabMBuilding);
-		wet_cardboard_block = new BlockWetCardboard(Material.cloth, MapColor.brownColor).setHardness(0F).setResistance(0F).setUnlocalizedName("wet_cardboard_block").setStepSound(Block.soundTypePiston).setCreativeTab(Minestrappolation.tabMBuilding);
-		mud_bricks = new MBlock(Material.ground, MapColor.brownColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setUnlocalizedName("mud_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
-		invincium = new BlockInvincium(Material.rock).setUnlocalizedName("invincium").setBlockUnbreakable().setHardness(50000F).setResistance(50000F).setCreativeTab(Minestrappolation.tabMBuilding);
-		glaical_invincium = new BlockGlacialInvincium(Material.rock, MapColor.blueColor).setUnlocalizedName("glaical_invincium").setBlockUnbreakable().setHardness(50000F).setResistance(50000F).setCreativeTab(Minestrappolation.tabMBuilding);
-		
+		snow_refined = new MBlockSnow(Material.snow, MapColor.snowColor).setHardness(0.4F)
+		                                                                .setStepSound(Block.soundTypeSnow)
+		                                                                .setUnlocalizedName("snow_refined")
+		                                                                .setCreativeTab(Minestrappolation.tabMBuilding);
+		snow_bricks = new MBlockSnow(Material.snow, MapColor.snowColor).setHardness(0.6F)
+		                                                               .setStepSound(Block.soundTypeSnow)
+		                                                               .setUnlocalizedName("snow_bricks")
+		                                                               .setCreativeTab(Minestrappolation.tabMBuilding);
+		snow_tiles = new MBlockSnow(Material.snow, MapColor.snowColor).setHardness(0.6F)
+		                                                              .setStepSound(Block.soundTypeSnow)
+		                                                              .setUnlocalizedName("snow_tiles")
+		                                                              .setCreativeTab(Minestrappolation.tabMBuilding);
+		cardboard_block = new BlockCardboard(Material.cloth, MapColor.brownColor).setHardness(0.1F).setResistance(0F)
+		                                                                         .setUnlocalizedName("cardboard_block")
+		                                                                         .setStepSound(Block.soundTypePiston)
+		                                                                         .setCreativeTab(
+			                                                                         Minestrappolation.tabMBuilding);
+		wet_cardboard_block = new BlockWetCardboard(Material.cloth, MapColor.brownColor).setHardness(0F)
+		                                                                                .setResistance(0F)
+		                                                                                .setUnlocalizedName(
+			                                                                                "wet_cardboard_block")
+		                                                                                .setStepSound(
+			                                                                                Block.soundTypePiston)
+		                                                                                .setCreativeTab(
+			                                                                                Minestrappolation.tabMBuilding);
+		mud_bricks = new MBlock(Material.ground, MapColor.brownColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND)
+		                                                             .setUnlocalizedName("mud_bricks")
+		                                                             .setCreativeTab(Minestrappolation.tabMBuilding);
+		invincium = new BlockInvincium(Material.rock).setUnlocalizedName("invincium").setBlockUnbreakable()
+		                                             .setHardness(50000F).setResistance(50000F)
+		                                             .setCreativeTab(Minestrappolation.tabMBuilding);
+		glaical_invincium = new BlockGlacialInvincium(Material.rock, MapColor.blueColor)
+			                    .setUnlocalizedName("glaical_invincium").setBlockUnbreakable().setHardness(50000F)
+			                    .setResistance(50000F).setCreativeTab(Minestrappolation.tabMBuilding);
+
 		//Misc. Stone Decor Blocks
-		slate = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("slate").setCreativeTab(Minestrappolation.tabMBuilding);
-		slate_refined = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("slate_refined").setCreativeTab(Minestrappolation.tabMBuilding);
-		slate_bricks = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("slate_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
-		slate_pattern_bricks = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("slate_pattern_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
-		diorite_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("diorite_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
-		diorite_pattern_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("diorite_pattern_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
-		granite_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("granite_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
-		granite_pattern_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("granite_pattern_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
-		andesite_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("andesite_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
-		andesite_pattern_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("andesite_pattern_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
-		sandstone_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(0.8F).setStepSound(Block.soundTypePiston).setUnlocalizedName("sandstone_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
-		sandstone_pattern_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(0.8F).setStepSound(Block.soundTypePiston).setUnlocalizedName("sandstone_pattern_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
-		red_sandstone_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(0.8F).setStepSound(Block.soundTypePiston).setUnlocalizedName("red_sandstone_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
-		red_sandstone_pattern_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(0.8F).setStepSound(Block.soundTypePiston).setUnlocalizedName("red_sandstone_pattern_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
-		flint_block = new BlockMStorage(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("flint_block").setCreativeTab(Minestrappolation.tabMBuilding);
-		flint_bricks = new MBlock(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("flint_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
-		flint_pattern_bricks = new MBlock(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("flint_pattern_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
-		flint_refined = new MBlock(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("flint_refined").setCreativeTab(Minestrappolation.tabMBuilding);
-		flint_tiles = new MBlock(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("flint_tiles").setCreativeTab(Minestrappolation.tabMBuilding);
-		flint_chiseled = new MBlock(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("flint_chiseled").setCreativeTab(Minestrappolation.tabMBuilding);
-		flint_lamp_sunstone = new MBlock(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F).setLightLevel(0.7F).setStepSound(Block.soundTypePiston).setUnlocalizedName("flint_lamp_sunstone").setCreativeTab(Minestrappolation.tabMBuilding);
-		flint_lamp_glowstone = new MBlock(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F).setLightLevel(0.8F).setStepSound(Block.soundTypePiston).setUnlocalizedName("flint_lamp_glowstone").setCreativeTab(Minestrappolation.tabMBuilding);
-		flint_lamp_prismarine = new MBlock(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F).setLightLevel(0.8F).setStepSound(Block.soundTypePiston).setUnlocalizedName("flint_lamp_prismarine").setCreativeTab(Minestrappolation.tabMBuilding);
-		desert_quartz_block = new MBlock(Material.rock, MapColor.adobeColor).setHardness(1.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("desert_quartz_block").setCreativeTab(Minestrappolation.tabMBuilding);
-		desert_quartz_chiseled = new MBlock(Material.rock, MapColor.adobeColor).setHardness(1.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("desert_quartz_chiseled").setCreativeTab(Minestrappolation.tabMBuilding);
-		desert_pillar = new MBlockPillar(Material.rock, MapColor.adobeColor).setUnlocalizedName("desert_pillar").setHardness(1F).setResistance(4F);
-		radiant_block = new MBlock(Material.rock, MapColor.pinkColor).setHardness(1.0F).setLightLevel(0.6F).setStepSound(Block.soundTypePiston).setUnlocalizedName("radiant_quartz_block").setCreativeTab(Minestrappolation.tabMBuilding);
-		radiant_chiseled = new MBlock(Material.rock, MapColor.pinkColor).setHardness(1.0F).setLightLevel(0.6F).setStepSound(Block.soundTypePiston).setUnlocalizedName("radiant_quartz_chiseled").setCreativeTab(Minestrappolation.tabMBuilding);
-		radiant_pillar = new MBlockPillar(Material.rock, MapColor.pinkColor).setLightLevel(0.6F).setUnlocalizedName("radiant_pillar").setHardness(1F).setResistance(4F);
-		obsidian_bricks =  new MBlock(Material.rock, MapColor.obsidianColor).setHardness(50.0F).setResistance(2000.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("obsidian_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
-		glow_mossy_netherrack = new MBlock(Material.rock, MapColor.netherrackColor).setHardness(0.4F).setStepSound(Block.soundTypePiston).setLightLevel(0.5F).setUnlocalizedName("glow_mossy_netherrack").setCreativeTab(Minestrappolation.tabMBuilding);
-		glow_mossy_nether_bricks = new MBlock(Material.rock, MapColor.netherrackColor).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setLightLevel(0.5F).setUnlocalizedName("glow_mossy_nether_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
-		glow_mossy_end_stone = new MBlock(Material.rock, MapColor.stoneColor).setHardness(3.0F).setResistance(15.0F).setStepSound(Block.soundTypePiston).setLightLevel(0.5F).setUnlocalizedName("glow_mossy_end_stone").setCreativeTab(Minestrappolation.tabMBuilding);
-		jadachite_block = new MBlock(Material.rock, MapColor.greenColor).setHardness(1.8F).setResistance(10F).setStepSound(Block.soundTypePiston).setUnlocalizedName("jadachite_block").setCreativeTab(Minestrappolation.tabMBuilding);
-		jadachite_bricks = new MBlock(Material.rock, MapColor.greenColor).setHardness(1.8F).setResistance(10F).setStepSound(Block.soundTypePiston).setUnlocalizedName("jadachite_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
-		jadachite_tiles = new MBlock(Material.rock, MapColor.greenColor).setHardness(1.8F).setResistance(10F).setStepSound(Block.soundTypePiston).setUnlocalizedName("jadachite_tiles").setCreativeTab(Minestrappolation.tabMBuilding);
-		jadachite_pillar = new MBlockPillar(Material.rock, MapColor.greenColor).setUnlocalizedName("jadachite_pillar").setHardness(1.8F).setResistance(10F);
-		
+		slate = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F)
+		                                                     .setStepSound(Block.soundTypePiston)
+		                                                     .setUnlocalizedName("slate")
+		                                                     .setCreativeTab(Minestrappolation.tabMBuilding);
+		slate_refined = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F)
+		                                                             .setStepSound(Block.soundTypePiston)
+		                                                             .setUnlocalizedName("slate_refined")
+		                                                             .setCreativeTab(Minestrappolation.tabMBuilding);
+		slate_bricks = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F)
+		                                                            .setStepSound(Block.soundTypePiston)
+		                                                            .setUnlocalizedName("slate_bricks")
+		                                                            .setCreativeTab(Minestrappolation.tabMBuilding);
+		slate_pattern_bricks = new MBlock(Material.rock, MapColor.grayColor).setHardness(1.5F).setResistance(10.0F)
+		                                                                    .setStepSound(Block.soundTypePiston)
+		                                                                    .setUnlocalizedName("slate_pattern_bricks")
+		                                                                    .setCreativeTab(
+			                                                                    Minestrappolation.tabMBuilding);
+		diorite_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F)
+		                                                               .setStepSound(Block.soundTypePiston)
+		                                                               .setUnlocalizedName("diorite_bricks")
+		                                                               .setCreativeTab(Minestrappolation.tabMBuilding);
+		diorite_pattern_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F)
+		                                                                       .setStepSound(Block.soundTypePiston)
+		                                                                       .setUnlocalizedName(
+			                                                                       "diorite_pattern_bricks")
+		                                                                       .setCreativeTab(
+			                                                                       Minestrappolation.tabMBuilding);
+		granite_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F)
+		                                                               .setStepSound(Block.soundTypePiston)
+		                                                               .setUnlocalizedName("granite_bricks")
+		                                                               .setCreativeTab(Minestrappolation.tabMBuilding);
+		granite_pattern_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F)
+		                                                                       .setStepSound(Block.soundTypePiston)
+		                                                                       .setUnlocalizedName(
+			                                                                       "granite_pattern_bricks")
+		                                                                       .setCreativeTab(
+			                                                                       Minestrappolation.tabMBuilding);
+		andesite_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F)
+		                                                                .setStepSound(Block.soundTypePiston)
+		                                                                .setUnlocalizedName("andesite_bricks")
+		                                                                .setCreativeTab(Minestrappolation.tabMBuilding);
+		andesite_pattern_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F)
+		                                                                        .setStepSound(Block.soundTypePiston)
+		                                                                        .setUnlocalizedName(
+			                                                                        "andesite_pattern_bricks")
+		                                                                        .setCreativeTab(
+			                                                                        Minestrappolation.tabMBuilding);
+		sandstone_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(0.8F)
+		                                                                 .setStepSound(Block.soundTypePiston)
+		                                                                 .setUnlocalizedName("sandstone_bricks")
+		                                                                 .setCreativeTab(
+			                                                                 Minestrappolation.tabMBuilding);
+		sandstone_pattern_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(0.8F)
+		                                                                         .setStepSound(Block.soundTypePiston)
+		                                                                         .setUnlocalizedName(
+			                                                                         "sandstone_pattern_bricks")
+		                                                                         .setCreativeTab(
+			                                                                         Minestrappolation.tabMBuilding);
+		red_sandstone_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(0.8F)
+		                                                                     .setStepSound(Block.soundTypePiston)
+		                                                                     .setUnlocalizedName("red_sandstone_bricks")
+		                                                                     .setCreativeTab(
+			                                                                     Minestrappolation.tabMBuilding);
+		red_sandstone_pattern_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(0.8F).setStepSound(
+			Block.soundTypePiston).setUnlocalizedName("red_sandstone_pattern_bricks").setCreativeTab(
+			Minestrappolation.tabMBuilding);
+		flint_block = new BlockMStorage(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F)
+		                                                                   .setStepSound(Block.soundTypePiston)
+		                                                                   .setUnlocalizedName("flint_block")
+		                                                                   .setCreativeTab(
+			                                                                   Minestrappolation.tabMBuilding);
+		flint_bricks = new MBlock(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F)
+		                                                             .setStepSound(Block.soundTypePiston)
+		                                                             .setUnlocalizedName("flint_bricks")
+		                                                             .setCreativeTab(Minestrappolation.tabMBuilding);
+		flint_pattern_bricks = new MBlock(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F)
+		                                                                     .setStepSound(Block.soundTypePiston)
+		                                                                     .setUnlocalizedName("flint_pattern_bricks")
+		                                                                     .setCreativeTab(
+			                                                                     Minestrappolation.tabMBuilding);
+		flint_refined = new MBlock(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F)
+		                                                              .setStepSound(Block.soundTypePiston)
+		                                                              .setUnlocalizedName("flint_refined")
+		                                                              .setCreativeTab(Minestrappolation.tabMBuilding);
+		flint_tiles = new MBlock(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F)
+		                                                            .setStepSound(Block.soundTypePiston)
+		                                                            .setUnlocalizedName("flint_tiles")
+		                                                            .setCreativeTab(Minestrappolation.tabMBuilding);
+		flint_chiseled = new MBlock(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F)
+		                                                               .setStepSound(Block.soundTypePiston)
+		                                                               .setUnlocalizedName("flint_chiseled")
+		                                                               .setCreativeTab(Minestrappolation.tabMBuilding);
+		flint_lamp_sunstone = new MBlock(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F)
+		                                                                    .setLightLevel(0.7F)
+		                                                                    .setStepSound(Block.soundTypePiston)
+		                                                                    .setUnlocalizedName("flint_lamp_sunstone")
+		                                                                    .setCreativeTab(
+			                                                                    Minestrappolation.tabMBuilding);
+		flint_lamp_glowstone = new MBlock(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F)
+		                                                                     .setLightLevel(0.8F)
+		                                                                     .setStepSound(Block.soundTypePiston)
+		                                                                     .setUnlocalizedName("flint_lamp_glowstone")
+		                                                                     .setCreativeTab(
+			                                                                     Minestrappolation.tabMBuilding);
+		flint_lamp_prismarine = new MBlock(Material.rock, MapColor.blackColor).setHardness(3F).setResistance(15.0F)
+		                                                                      .setLightLevel(0.8F)
+		                                                                      .setStepSound(Block.soundTypePiston)
+		                                                                      .setUnlocalizedName(
+			                                                                      "flint_lamp_prismarine")
+		                                                                      .setCreativeTab(
+			                                                                      Minestrappolation.tabMBuilding);
+		desert_quartz_block = new MBlock(Material.rock, MapColor.adobeColor).setHardness(1.0F)
+		                                                                    .setStepSound(Block.soundTypePiston)
+		                                                                    .setUnlocalizedName("desert_quartz_block")
+		                                                                    .setCreativeTab(
+			                                                                    Minestrappolation.tabMBuilding);
+		desert_quartz_chiseled = new MBlock(Material.rock, MapColor.adobeColor).setHardness(1.0F)
+		                                                                       .setStepSound(Block.soundTypePiston)
+		                                                                       .setUnlocalizedName(
+			                                                                       "desert_quartz_chiseled")
+		                                                                       .setCreativeTab(
+			                                                                       Minestrappolation.tabMBuilding);
+		desert_pillar = new MBlockPillar(Material.rock, MapColor.adobeColor).setUnlocalizedName("desert_pillar")
+		                                                                    .setHardness(1F).setResistance(4F);
+		radiant_block = new MBlock(Material.rock, MapColor.pinkColor).setHardness(1.0F).setLightLevel(0.6F)
+		                                                             .setStepSound(Block.soundTypePiston)
+		                                                             .setUnlocalizedName("radiant_quartz_block")
+		                                                             .setCreativeTab(Minestrappolation.tabMBuilding);
+		radiant_chiseled = new MBlock(Material.rock, MapColor.pinkColor).setHardness(1.0F).setLightLevel(0.6F)
+		                                                                .setStepSound(Block.soundTypePiston)
+		                                                                .setUnlocalizedName("radiant_quartz_chiseled")
+		                                                                .setCreativeTab(Minestrappolation.tabMBuilding);
+		radiant_pillar = new MBlockPillar(Material.rock, MapColor.pinkColor).setLightLevel(0.6F)
+		                                                                    .setUnlocalizedName("radiant_pillar")
+		                                                                    .setHardness(1F).setResistance(4F);
+		obsidian_bricks = new MBlock(Material.rock, MapColor.obsidianColor).setHardness(50.0F).setResistance(2000.0F)
+		                                                                   .setStepSound(Block.soundTypePiston)
+		                                                                   .setUnlocalizedName("obsidian_bricks")
+		                                                                   .setCreativeTab(
+			                                                                   Minestrappolation.tabMBuilding);
+		glow_mossy_netherrack = new MBlock(Material.rock, MapColor.netherrackColor).setHardness(0.4F)
+		                                                                           .setStepSound(Block.soundTypePiston)
+		                                                                           .setLightLevel(0.5F)
+		                                                                           .setUnlocalizedName(
+			                                                                           "glow_mossy_netherrack")
+		                                                                           .setCreativeTab(
+			                                                                           Minestrappolation.tabMBuilding);
+		glow_mossy_nether_bricks = new MBlock(Material.rock, MapColor.netherrackColor).setHardness(2.0F)
+		                                                                              .setResistance(10.0F)
+		                                                                              .setStepSound(
+			                                                                              Block.soundTypePiston)
+		                                                                              .setLightLevel(0.5F)
+		                                                                              .setUnlocalizedName(
+			                                                                              "glow_mossy_nether_bricks")
+		                                                                              .setCreativeTab(
+			                                                                              Minestrappolation.tabMBuilding);
+		glow_mossy_end_stone = new MBlock(Material.rock, MapColor.stoneColor).setHardness(3.0F).setResistance(15.0F)
+		                                                                     .setStepSound(Block.soundTypePiston)
+		                                                                     .setLightLevel(0.5F)
+		                                                                     .setUnlocalizedName("glow_mossy_end_stone")
+		                                                                     .setCreativeTab(
+			                                                                     Minestrappolation.tabMBuilding);
+		jadachite_block = new MBlock(Material.rock, MapColor.greenColor).setHardness(1.8F).setResistance(10F)
+		                                                                .setStepSound(Block.soundTypePiston)
+		                                                                .setUnlocalizedName("jadachite_block")
+		                                                                .setCreativeTab(Minestrappolation.tabMBuilding);
+		jadachite_bricks = new MBlock(Material.rock, MapColor.greenColor).setHardness(1.8F).setResistance(10F)
+		                                                                 .setStepSound(Block.soundTypePiston)
+		                                                                 .setUnlocalizedName("jadachite_bricks")
+		                                                                 .setCreativeTab(
+			                                                                 Minestrappolation.tabMBuilding);
+		jadachite_tiles = new MBlock(Material.rock, MapColor.greenColor).setHardness(1.8F).setResistance(10F)
+		                                                                .setStepSound(Block.soundTypePiston)
+		                                                                .setUnlocalizedName("jadachite_tiles")
+		                                                                .setCreativeTab(Minestrappolation.tabMBuilding);
+		jadachite_pillar = new MBlockPillar(Material.rock, MapColor.greenColor).setUnlocalizedName("jadachite_pillar")
+		                                                                       .setHardness(1.8F).setResistance(10F);
+
 		//Biome Stone Decor Blocks
-		stone_lamp_glowstone = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setLightLevel(1.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_lamp_glowstone").setCreativeTab(Minestrappolation.tabMBuilding);
-		stone_lamp_prismarine = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setLightLevel(1.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_lamp_prismarine").setCreativeTab(Minestrappolation.tabMBuilding);
-		stone_lamp_sunstone = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setLightLevel(0.9F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_lamp_sunstone").setCreativeTab(Minestrappolation.tabMBuilding);
-		stone_pattern_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_pattern_bricks").setCreativeTab(Minestrappolation.tabMBuilding);
-		stone_refined = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_refined").setCreativeTab(Minestrappolation.tabMBuilding);
-		stone_tiles = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_tiles").setCreativeTab(Minestrappolation.tabMBuilding);
-		biome_stones = new BlockBiomeStones().setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_stone");
-		biome_cobble = new BlockBiomeCobble().setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_cobble");
-		biome_bricks = new BlockBiomeBricks().setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_bricks");
-		chiseled = new BlockChiseled(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_chiseled");
-		mossy = new BlockMossyCobble(Material.rock, MapColor.stoneColor).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_mossy");
-		mossy_bricks = new BlockMossyBricks(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_mossy_bricks");
-		cracked_bricks = new BlockCrackedBricks(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_cracked_bricks");
-		pattern_bricks = new BlockPatternBricks(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_pattern_bricks");
-		refined = new BlockRefined(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_refined");
-		tiles = new BlockTiles(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_tiles");
-		lamp_sunstone = new BlockLamp(Material.rock, MapColor.stoneColor, "sunstone").setHardness(1.5F).setResistance(10.0F).setLightLevel(0.9F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_lamp_sunstone");
-		lamp_glowstone = new BlockLamp(Material.rock, MapColor.stoneColor, "glowstone").setHardness(1.5F).setResistance(10.0F).setLightLevel(1.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_lamp_glowstone");
-		lamp_prismarine = new BlockLamp(Material.rock, MapColor.stoneColor, "prismarine").setHardness(1.5F).setResistance(10.0F).setLightLevel(1.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_lamp_prismarine");
-		
+		stone_lamp_glowstone = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F)
+		                                                                     .setLightLevel(1.0F)
+		                                                                     .setStepSound(Block.soundTypePiston)
+		                                                                     .setUnlocalizedName("stone_lamp_glowstone")
+		                                                                     .setCreativeTab(
+			                                                                     Minestrappolation.tabMBuilding);
+		stone_lamp_prismarine = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F)
+		                                                                      .setLightLevel(1.0F)
+		                                                                      .setStepSound(Block.soundTypePiston)
+		                                                                      .setUnlocalizedName(
+			                                                                      "stone_lamp_prismarine")
+		                                                                      .setCreativeTab(
+			                                                                      Minestrappolation.tabMBuilding);
+		stone_lamp_sunstone = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F)
+		                                                                    .setLightLevel(0.9F)
+		                                                                    .setStepSound(Block.soundTypePiston)
+		                                                                    .setUnlocalizedName("stone_lamp_sunstone")
+		                                                                    .setCreativeTab(
+			                                                                    Minestrappolation.tabMBuilding);
+		stone_pattern_bricks = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F)
+		                                                                     .setStepSound(Block.soundTypePiston)
+		                                                                     .setUnlocalizedName("stone_pattern_bricks")
+		                                                                     .setCreativeTab(
+			                                                                     Minestrappolation.tabMBuilding);
+		stone_refined = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F)
+		                                                              .setStepSound(Block.soundTypePiston)
+		                                                              .setUnlocalizedName("stone_refined")
+		                                                              .setCreativeTab(Minestrappolation.tabMBuilding);
+		stone_tiles = new MBlock(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F)
+		                                                            .setStepSound(Block.soundTypePiston)
+		                                                            .setUnlocalizedName("stone_tiles")
+		                                                            .setCreativeTab(Minestrappolation.tabMBuilding);
+		biome_stones = new BlockBiomeStones().setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston)
+		                                     .setUnlocalizedName("biome_stone");
+		biome_cobble = new BlockBiomeCobble().setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston)
+		                                     .setUnlocalizedName("biome_cobble");
+		biome_bricks = new BlockBiomeBricks().setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston)
+		                                     .setUnlocalizedName("biome_bricks");
+		chiseled = new BlockChiseled(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F)
+		                                                                .setStepSound(Block.soundTypePiston)
+		                                                                .setUnlocalizedName("biome_chiseled");
+		mossy = new BlockMossyCobble(Material.rock, MapColor.stoneColor).setHardness(2.0F).setResistance(10.0F)
+		                                                                .setStepSound(Block.soundTypePiston)
+		                                                                .setUnlocalizedName("biome_mossy");
+		mossy_bricks = new BlockMossyBricks(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F)
+		                                                                       .setStepSound(Block.soundTypePiston)
+		                                                                       .setUnlocalizedName(
+			                                                                       "biome_mossy_bricks");
+		cracked_bricks = new BlockCrackedBricks(Material.rock, MapColor.stoneColor).setHardness(1.5F)
+		                                                                           .setResistance(10.0F)
+		                                                                           .setStepSound(Block.soundTypePiston)
+		                                                                           .setUnlocalizedName(
+			                                                                           "biome_cracked_bricks");
+		pattern_bricks = new BlockPatternBricks(Material.rock, MapColor.stoneColor).setHardness(1.5F)
+		                                                                           .setResistance(10.0F)
+		                                                                           .setStepSound(Block.soundTypePiston)
+		                                                                           .setUnlocalizedName(
+			                                                                           "biome_pattern_bricks");
+		refined = new BlockRefined(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F)
+		                                                              .setStepSound(Block.soundTypePiston)
+		                                                              .setUnlocalizedName("biome_refined");
+		tiles = new BlockTiles(Material.rock, MapColor.stoneColor).setHardness(1.5F).setResistance(10.0F)
+		                                                          .setStepSound(Block.soundTypePiston)
+		                                                          .setUnlocalizedName("biome_tiles");
+		lamp_sunstone = new BlockLamp(Material.rock, MapColor.stoneColor, "sunstone").setHardness(1.5F)
+		                                                                             .setResistance(10.0F)
+		                                                                             .setLightLevel(0.9F).setStepSound(
+				Block.soundTypePiston).setUnlocalizedName("biome_lamp_sunstone");
+		lamp_glowstone = new BlockLamp(Material.rock, MapColor.stoneColor, "glowstone").setHardness(1.5F)
+		                                                                               .setResistance(10.0F)
+		                                                                               .setLightLevel(1.0F)
+		                                                                               .setStepSound(
+			                                                                               Block.soundTypePiston)
+		                                                                               .setUnlocalizedName(
+			                                                                               "biome_lamp_glowstone");
+		lamp_prismarine = new BlockLamp(Material.rock, MapColor.stoneColor, "prismarine").setHardness(1.5F)
+		                                                                                 .setResistance(10.0F)
+		                                                                                 .setLightLevel(1.0F)
+		                                                                                 .setStepSound(
+			                                                                                 Block.soundTypePiston)
+		                                                                                 .setUnlocalizedName(
+			                                                                                 "biome_lamp_prismarine");
+
 		//Utility Decor Blocks
-		compacted_dirt=new MBlock(Material.ground, MapColor.dirtColor).setHardness(4F).setStepSound(Block.soundTypeGravel).setUnlocalizedName("compacted_dirt").setCreativeTab(Minestrappolation.tabMBuilding);
-		compacted_netherrack=new MBlock(Material.rock, MapColor.redColor).setHardness(3.2F).setStepSound(Block.soundTypeStone).setUnlocalizedName("compacted_netherrack").setCreativeTab(Minestrappolation.tabMBuilding);
-		compacted_endstone=new MBlock(Material.rock, MapColor.sandColor).setHardness(12F).setResistance(60F).setStepSound(Block.soundTypeStone).setUnlocalizedName("compacted_endstone").setCreativeTab(Minestrappolation.tabMBuilding);
-		compacted_glowshrooms=new MBlock(Material.grass, MapColor.brownColor).setHardness(1.6F).setStepSound(Block.soundTypeWood).setLightLevel(0.6F).setUnlocalizedName("compacted_glowshrooms").setCreativeTab(Minestrappolation.tabMBuilding);
-		decaying_compacted_dirt = new BlockDecayingCompacted(Material.rock, "overworld").setStepSound(Block.soundTypeGravel).setBlockUnbreakable().setUnlocalizedName("decaying_compacted_dirt");
-		decaying_compacted_netherrack = new BlockDecayingCompacted(Material.rock, "nether").setStepSound(Block.soundTypeStone).setBlockUnbreakable().setUnlocalizedName("decaying_compacted_netherrack");
-		decaying_compacted_endstone = new BlockDecayingCompacted(Material.rock, "end").setStepSound(Block.soundTypeStone).setBlockUnbreakable().setUnlocalizedName("decaying_compacted_endstone");
-		decaying_compacted_glowshrooms = new BlockDecayingCompacted(Material.rock, "virtious").setLightLevel(0.6F).setStepSound(Block.soundTypeStone).setBlockUnbreakable().setUnlocalizedName("decaying_compacted_glowshrooms");
-		magnetic_torch = new BlockMagneticTorch().setLightLevel(0.9375F).setStepSound(Block.soundTypeWood).setUnlocalizedName("magnetic_torch").setCreativeTab(Minestrappolation.tabMDecor);
-		candle = new BlockCandle(Material.coral, false, false).setHardness(0.2F).setStepSound(Block.soundTypeStone).setUnlocalizedName("candle").setCreativeTab(Minestrappolation.tabMDecor);
-		lit_candle = new BlockCandle(Material.coral, true, false).setHardness(0.2F).setStepSound(Block.soundTypeStone).setLightLevel(0.7F).setUnlocalizedName("lit_candle");
-		unholy_candle = new BlockCandle(Material.coral, true, true).setHardness(0.2F).setStepSound(Block.soundTypeStone).setLightLevel(0.5F).setUnlocalizedName("unholy_candle");
-		hourglass_empty = new BlockHourglass(Material.wood, MapColor.woodColor, false, false, false, 0).setHardness(0.2F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("hourglass_empty");
-		hourglass_sand = new BlockHourglass(Material.wood, MapColor.woodColor, true, false, false, 10).setHardness(0.2F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("hourglass_sand");
-		hourglass_red_sand = new BlockHourglass(Material.wood, MapColor.woodColor, true, false, false, 5).setHardness(0.2F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("hourglass_red_sand");
-		hourglass_cold_sand = new BlockHourglass(Material.wood, MapColor.woodColor, true, false, false, 30).setHardness(0.2F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("hourglass_cold_sand");
-		hourglass_cold_red_sand = new BlockHourglass(Material.wood, MapColor.woodColor, true, false, false, 20).setHardness(0.2F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("hourglass_cold_red_sand");
-		hourglass_redstone = new BlockHourglass(Material.wood, MapColor.woodColor, true, true, false, 10).setHardness(0.2F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("hourglass_redstone");
-		hourglass_continurum = new BlockHourglass(Material.wood, MapColor.woodColor, true, false, true, 1).setHardness(0.2F).setLightLevel(0.6F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("hourglass_continurum");
-		ritual_conduit = new BlockRitualConduit(Material.rock, 1).setStepSound(Block.soundTypeStone).setHardness(20F).setResistance(30F).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("ritual_conduit");
-		stone_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("stone_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
-		red_rock_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("red_rock_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
-		coldstone_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("coldstone_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
-		icestone_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("icestone_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
-		oceanstone_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("oceanstone_boulder").setCreativeTab(Minestrappolation.tabMBuilding);
-		ministrapp_flower_pot = new MBlockSketchyBackwaterFlowerpot().setHardness(0.0F).setStepSound(Block.soundTypeStone).setUnlocalizedName("ministrapp_flower_pot").setCreativeTab(Minestrappolation.tabMDecor);
-		roads = new BlockRoads(Material.rock, MapColor.blackColor).setHardness(3.0F).setResistance(10.0F).setUnlocalizedName("roads").setCreativeTab(Minestrappolation.tabMBuilding);
-		rope = new BlockRope(Material.cloth, MapColor.brownColor).setHardness(0.8F).setStepSound(Block.soundTypeCloth).setUnlocalizedName("rope").setCreativeTab(Minestrappolation.tabMDecor);
-		chimney = new BlockChimney(Material.rock, MapColor.blackColor).setHardness(1.5F).setResistance(10F).setUnlocalizedName("chimney").setCreativeTab(Minestrappolation.tabMDecor);
-		fan = new BlockFan(6, Material.rock, MapColor.pinkColor).setHardness(3F).setResistance(20F).setUnlocalizedName("fan").setCreativeTab(Minestrappolation.tabMTech);
+		compacted_dirt = new MBlock(Material.ground, MapColor.dirtColor).setHardness(4F)
+		                                                                .setStepSound(Block.soundTypeGravel)
+		                                                                .setUnlocalizedName("compacted_dirt")
+		                                                                .setCreativeTab(Minestrappolation.tabMBuilding);
+		compacted_netherrack = new MBlock(Material.rock, MapColor.redColor).setHardness(3.2F)
+		                                                                   .setStepSound(Block.soundTypeStone)
+		                                                                   .setUnlocalizedName("compacted_netherrack")
+		                                                                   .setCreativeTab(
+			                                                                   Minestrappolation.tabMBuilding);
+		compacted_endstone = new MBlock(Material.rock, MapColor.sandColor).setHardness(12F).setResistance(60F)
+		                                                                  .setStepSound(Block.soundTypeStone)
+		                                                                  .setUnlocalizedName("compacted_endstone")
+		                                                                  .setCreativeTab(
+			                                                                  Minestrappolation.tabMBuilding);
+		compacted_glowshrooms = new MBlock(Material.grass, MapColor.brownColor).setHardness(1.6F)
+		                                                                       .setStepSound(Block.soundTypeWood)
+		                                                                       .setLightLevel(0.6F).setUnlocalizedName(
+				"compacted_glowshrooms").setCreativeTab(Minestrappolation.tabMBuilding);
+		decaying_compacted_dirt = new BlockDecayingCompacted(Material.rock, "overworld")
+			                          .setStepSound(Block.soundTypeGravel).setBlockUnbreakable()
+			                          .setUnlocalizedName("decaying_compacted_dirt");
+		decaying_compacted_netherrack = new BlockDecayingCompacted(Material.rock, "nether")
+			                                .setStepSound(Block.soundTypeStone).setBlockUnbreakable()
+			                                .setUnlocalizedName("decaying_compacted_netherrack");
+		decaying_compacted_endstone = new BlockDecayingCompacted(Material.rock, "end")
+			                              .setStepSound(Block.soundTypeStone).setBlockUnbreakable()
+			                              .setUnlocalizedName("decaying_compacted_endstone");
+		decaying_compacted_glowshrooms = new BlockDecayingCompacted(Material.rock, "virtious").setLightLevel(0.6F)
+		                                                                                      .setStepSound(
+			                                                                                      Block.soundTypeStone)
+		                                                                                      .setBlockUnbreakable()
+		                                                                                      .setUnlocalizedName(
+			                                                                                      "decaying_compacted_glowshrooms");
+		magnetic_torch = new BlockMagneticTorch().setLightLevel(0.9375F).setStepSound(Block.soundTypeWood)
+		                                         .setUnlocalizedName("magnetic_torch")
+		                                         .setCreativeTab(Minestrappolation.tabMDecor);
+		candle = new BlockCandle(Material.coral, false, false).setHardness(0.2F).setStepSound(Block.soundTypeStone)
+		                                                      .setUnlocalizedName("candle")
+		                                                      .setCreativeTab(Minestrappolation.tabMDecor);
+		lit_candle = new BlockCandle(Material.coral, true, false).setHardness(0.2F).setStepSound(Block.soundTypeStone)
+		                                                         .setLightLevel(0.7F).setUnlocalizedName("lit_candle");
+		unholy_candle = new BlockCandle(Material.coral, true, true).setHardness(0.2F).setStepSound(Block.soundTypeStone)
+		                                                           .setLightLevel(0.5F)
+		                                                           .setUnlocalizedName("unholy_candle");
+		hourglass_empty = new BlockHourglass(Material.wood, MapColor.woodColor, false, false, false, 0)
+			                  .setHardness(0.2F).setStepSound(Block.soundTypeWood)
+			                  .setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("hourglass_empty");
+		hourglass_sand = new BlockHourglass(Material.wood, MapColor.woodColor, true, false, false, 10).setHardness(0.2F)
+		                                                                                              .setStepSound(
+			                                                                                              Block.soundTypeWood)
+		                                                                                              .setCreativeTab(
+			                                                                                              Minestrappolation.tabMDecor)
+		                                                                                              .setUnlocalizedName(
+			                                                                                              "hourglass_sand");
+		hourglass_red_sand = new BlockHourglass(Material.wood, MapColor.woodColor, true, false, false, 5)
+			                     .setHardness(0.2F).setStepSound(Block.soundTypeWood)
+			                     .setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("hourglass_red_sand");
+		hourglass_cold_sand = new BlockHourglass(Material.wood, MapColor.woodColor, true, false, false, 30)
+			                      .setHardness(0.2F).setStepSound(Block.soundTypeWood)
+			                      .setCreativeTab(Minestrappolation.tabMDecor)
+			                      .setUnlocalizedName("hourglass_cold_sand");
+		hourglass_cold_red_sand = new BlockHourglass(Material.wood, MapColor.woodColor, true, false, false, 20)
+			                          .setHardness(0.2F).setStepSound(Block.soundTypeWood)
+			                          .setCreativeTab(Minestrappolation.tabMDecor)
+			                          .setUnlocalizedName("hourglass_cold_red_sand");
+		hourglass_redstone = new BlockHourglass(Material.wood, MapColor.woodColor, true, true, false, 10)
+			                     .setHardness(0.2F).setStepSound(Block.soundTypeWood)
+			                     .setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("hourglass_redstone");
+		hourglass_continurum = new BlockHourglass(Material.wood, MapColor.woodColor, true, false, true, 1)
+			                       .setHardness(0.2F).setLightLevel(0.6F).setStepSound(Block.soundTypeWood)
+			                       .setCreativeTab(Minestrappolation.tabMDecor)
+			                       .setUnlocalizedName("hourglass_continurum");
+		ritual_conduit = new BlockRitualConduit(Material.rock, 1).setStepSound(Block.soundTypeStone).setHardness(20F)
+		                                                         .setResistance(30F)
+		                                                         .setCreativeTab(Minestrappolation.tabMDecor)
+		                                                         .setUnlocalizedName("ritual_conduit");
+		stone_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F)
+		                                                                    .setStepSound(Block.soundTypePiston)
+		                                                                    .setUnlocalizedName("stone_boulder")
+		                                                                    .setCreativeTab(
+			                                                                    Minestrappolation.tabMBuilding);
+		red_rock_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F)
+		                                                                       .setStepSound(Block.soundTypePiston)
+		                                                                       .setUnlocalizedName("red_rock_boulder")
+		                                                                       .setCreativeTab(
+			                                                                       Minestrappolation.tabMBuilding);
+		coldstone_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F)
+		                                                                        .setStepSound(Block.soundTypePiston)
+		                                                                        .setUnlocalizedName("coldstone_boulder")
+		                                                                        .setCreativeTab(
+			                                                                        Minestrappolation.tabMBuilding);
+		icestone_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F)
+		                                                                       .setStepSound(Block.soundTypePiston)
+		                                                                       .setUnlocalizedName("icestone_boulder")
+		                                                                       .setCreativeTab(
+			                                                                       Minestrappolation.tabMBuilding);
+		oceanstone_boulder = new BlockBoulder(Material.rock, MapColor.stoneColor).setHardness(8.0F).setResistance(20.0F)
+		                                                                         .setStepSound(Block.soundTypePiston)
+		                                                                         .setUnlocalizedName(
+			                                                                         "oceanstone_boulder")
+		                                                                         .setCreativeTab(
+			                                                                         Minestrappolation.tabMBuilding);
+		ministrapp_flower_pot = new MBlockSketchyBackwaterFlowerpot().setHardness(0.0F)
+		                                                             .setStepSound(Block.soundTypeStone)
+		                                                             .setUnlocalizedName("ministrapp_flower_pot")
+		                                                             .setCreativeTab(Minestrappolation.tabMDecor);
+		roads = new BlockRoads(Material.rock, MapColor.blackColor).setHardness(3.0F).setResistance(10.0F)
+		                                                          .setUnlocalizedName("roads")
+		                                                          .setCreativeTab(Minestrappolation.tabMBuilding);
+		rope = new BlockRope(Material.cloth, MapColor.brownColor).setHardness(0.8F).setStepSound(Block.soundTypeCloth)
+		                                                         .setUnlocalizedName("rope")
+		                                                         .setCreativeTab(Minestrappolation.tabMDecor);
+		chimney = new BlockChimney(Material.rock, MapColor.blackColor).setHardness(1.5F).setResistance(10F)
+		                                                              .setUnlocalizedName("chimney")
+		                                                              .setCreativeTab(Minestrappolation.tabMDecor);
+		fan = new BlockFan(6, Material.rock, MapColor.pinkColor).setHardness(3F).setResistance(20F)
+		                                                        .setUnlocalizedName("fan")
+		                                                        .setCreativeTab(Minestrappolation.tabMTech);
 		cold_cobweb = new BlockColdCobweb().setLightOpacity(1).setHardness(5.0F).setUnlocalizedName("cold_cobweb");
-		glacieric_ice = new BlockGlaciericIce(Material.ice, MapColor.iceColor).setHardness(0.5F).setLightOpacity(3).setStepSound(Block.soundTypeGlass).setUnlocalizedName("glacieric_ice").setCreativeTab(Minestrappolation.tabMBuilding);
-		godstone = new BlockGodstone(Material.rock, MapColor.sandColor).setHardness(3F).setResistance(15F).setUnlocalizedName("godstone").setCreativeTab(Minestrappolation.tabMBuilding);
-		terracreep = new BlockTerraCreep().setHardness(3.0F).setResistance(20.0F).setStepSound(Block.SLIME_SOUND).setLightLevel(0.6F).setUnlocalizedName("terracreep");
-		
+		glacieric_ice = new BlockGlaciericIce(Material.ice, MapColor.iceColor).setHardness(0.5F).setLightOpacity(3)
+		                                                                      .setStepSound(Block.soundTypeGlass)
+		                                                                      .setUnlocalizedName("glacieric_ice")
+		                                                                      .setCreativeTab(
+			                                                                      Minestrappolation.tabMBuilding);
+		godstone = new BlockGodstone(Material.rock, MapColor.sandColor).setHardness(3F).setResistance(15F)
+		                                                               .setUnlocalizedName("godstone")
+		                                                               .setCreativeTab(Minestrappolation.tabMBuilding);
+		terracreep = new BlockTerraCreep().setHardness(3.0F).setResistance(20.0F).setStepSound(Block.SLIME_SOUND)
+		                                  .setLightLevel(0.6F).setUnlocalizedName("terracreep");
+
 		//Gene Blocks
-		block_flesh = new BlockFlesh(Material.cloth, MapColor.pinkColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_flesh");
-		block_flesh_reactive = new BlockReactiveFlesh(Material.cloth, MapColor.pinkColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setUnlocalizedName("block_flesh_reactive");
-		block_bat = new BlockBat(Material.cloth, MapColor.brownColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_bat");
-		block_rabbit = new BlockRabbit(Material.cloth, MapColor.brownColor).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_rabbit");
-		block_cow = new BlockCow(Material.cloth, MapColor.brownColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_cow");
-		block_mooshroom = new BlockMooshroom(Material.cloth, MapColor.redColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_mooshroom");
-		block_chicken = new BlockChicken(Material.cloth, MapColor.ironColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_chicken");
-		block_wolf = new BlockWolf(Material.cloth, MapColor.silverColor).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_wolf");
-		block_sheep_white = new BlockSheep(Material.cloth, MapColor.ironColor, 0).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_white");
-		block_sheep_orange = new BlockSheep(Material.cloth, MapColor.ironColor, 1).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_orange");
-		block_sheep_magenta = new BlockSheep(Material.cloth, MapColor.ironColor, 2).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_magenta");
-		block_sheep_light_blue = new BlockSheep(Material.cloth, MapColor.ironColor, 3).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_light_blue");
-		block_sheep_yellow = new BlockSheep(Material.cloth, MapColor.ironColor, 4).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_yellow");
-		block_sheep_lime = new BlockSheep(Material.cloth, MapColor.ironColor, 5).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_lime");
-		block_sheep_pink = new BlockSheep(Material.cloth, MapColor.ironColor, 6).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_pink");
-		block_sheep_grey = new BlockSheep(Material.cloth, MapColor.ironColor, 7).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_grey");
-		block_sheep_silver = new BlockSheep(Material.cloth, MapColor.ironColor, 8).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_silver");
-		block_sheep_cyan = new BlockSheep(Material.cloth, MapColor.ironColor, 9).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_cyan");
-		block_sheep_purple = new BlockSheep(Material.cloth, MapColor.ironColor, 10).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_purple");
-		block_sheep_blue = new BlockSheep(Material.cloth, MapColor.ironColor, 11).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_blue");
-		block_sheep_brown = new BlockSheep(Material.cloth, MapColor.ironColor, 12).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_brown");
-		block_sheep_green = new BlockSheep(Material.cloth, MapColor.ironColor, 13).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_green");
-		block_sheep_red = new BlockSheep(Material.cloth, MapColor.ironColor, 14).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_red");
-		block_sheep_black = new BlockSheep(Material.cloth, MapColor.ironColor, 15).setHardness(0.7F).setStepSound(Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("block_sheep_black");
-		
+		block_flesh = new BlockFlesh(Material.cloth, MapColor.pinkColor).setHardness(0.7F)
+		                                                                .setStepSound(Block.SLIME_SOUND)
+		                                                                .setCreativeTab(Minestrappolation.tabMTech)
+		                                                                .setUnlocalizedName("block_flesh");
+		block_flesh_reactive = new BlockReactiveFlesh(Material.cloth, MapColor.pinkColor).setHardness(0.7F)
+		                                                                                 .setStepSound(
+			                                                                                 Block.SLIME_SOUND)
+		                                                                                 .setUnlocalizedName(
+			                                                                                 "block_flesh_reactive");
+		block_bat = new BlockBat(Material.cloth, MapColor.brownColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND)
+		                                                             .setCreativeTab(Minestrappolation.tabMTech)
+		                                                             .setUnlocalizedName("block_bat");
+		block_rabbit = new BlockRabbit(Material.cloth, MapColor.brownColor).setHardness(0.7F)
+		                                                                   .setStepSound(Block.soundTypeCloth)
+		                                                                   .setCreativeTab(Minestrappolation.tabMTech)
+		                                                                   .setUnlocalizedName("block_rabbit");
+		block_cow = new BlockCow(Material.cloth, MapColor.brownColor).setHardness(0.7F).setStepSound(Block.SLIME_SOUND)
+		                                                             .setCreativeTab(Minestrappolation.tabMTech)
+		                                                             .setUnlocalizedName("block_cow");
+		block_mooshroom = new BlockMooshroom(Material.cloth, MapColor.redColor).setHardness(0.7F)
+		                                                                       .setStepSound(Block.SLIME_SOUND)
+		                                                                       .setCreativeTab(
+			                                                                       Minestrappolation.tabMTech)
+		                                                                       .setUnlocalizedName("block_mooshroom");
+		block_chicken = new BlockChicken(Material.cloth, MapColor.ironColor).setHardness(0.7F)
+		                                                                    .setStepSound(Block.SLIME_SOUND)
+		                                                                    .setCreativeTab(Minestrappolation.tabMTech)
+		                                                                    .setUnlocalizedName("block_chicken");
+		block_wolf = new BlockWolf(Material.cloth, MapColor.silverColor).setHardness(0.7F)
+		                                                                .setStepSound(Block.soundTypeCloth)
+		                                                                .setCreativeTab(Minestrappolation.tabMTech)
+		                                                                .setUnlocalizedName("block_wolf");
+		block_sheep_white = new BlockSheep(Material.cloth, MapColor.ironColor, 0).setHardness(0.7F)
+		                                                                         .setStepSound(Block.soundTypeCloth)
+		                                                                         .setCreativeTab(
+			                                                                         Minestrappolation.tabMTech)
+		                                                                         .setUnlocalizedName(
+			                                                                         "block_sheep_white");
+		block_sheep_orange = new BlockSheep(Material.cloth, MapColor.ironColor, 1).setHardness(0.7F)
+		                                                                          .setStepSound(Block.soundTypeCloth)
+		                                                                          .setCreativeTab(
+			                                                                          Minestrappolation.tabMTech)
+		                                                                          .setUnlocalizedName(
+			                                                                          "block_sheep_orange");
+		block_sheep_magenta = new BlockSheep(Material.cloth, MapColor.ironColor, 2).setHardness(0.7F)
+		                                                                           .setStepSound(Block.soundTypeCloth)
+		                                                                           .setCreativeTab(
+			                                                                           Minestrappolation.tabMTech)
+		                                                                           .setUnlocalizedName(
+			                                                                           "block_sheep_magenta");
+		block_sheep_light_blue = new BlockSheep(Material.cloth, MapColor.ironColor, 3).setHardness(0.7F).setStepSound(
+			Block.soundTypeCloth).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName(
+			"block_sheep_light_blue");
+		block_sheep_yellow = new BlockSheep(Material.cloth, MapColor.ironColor, 4).setHardness(0.7F)
+		                                                                          .setStepSound(Block.soundTypeCloth)
+		                                                                          .setCreativeTab(
+			                                                                          Minestrappolation.tabMTech)
+		                                                                          .setUnlocalizedName(
+			                                                                          "block_sheep_yellow");
+		block_sheep_lime = new BlockSheep(Material.cloth, MapColor.ironColor, 5).setHardness(0.7F)
+		                                                                        .setStepSound(Block.soundTypeCloth)
+		                                                                        .setCreativeTab(
+			                                                                        Minestrappolation.tabMTech)
+		                                                                        .setUnlocalizedName("block_sheep_lime");
+		block_sheep_pink = new BlockSheep(Material.cloth, MapColor.ironColor, 6).setHardness(0.7F)
+		                                                                        .setStepSound(Block.soundTypeCloth)
+		                                                                        .setCreativeTab(
+			                                                                        Minestrappolation.tabMTech)
+		                                                                        .setUnlocalizedName("block_sheep_pink");
+		block_sheep_grey = new BlockSheep(Material.cloth, MapColor.ironColor, 7).setHardness(0.7F)
+		                                                                        .setStepSound(Block.soundTypeCloth)
+		                                                                        .setCreativeTab(
+			                                                                        Minestrappolation.tabMTech)
+		                                                                        .setUnlocalizedName("block_sheep_grey");
+		block_sheep_silver = new BlockSheep(Material.cloth, MapColor.ironColor, 8).setHardness(0.7F)
+		                                                                          .setStepSound(Block.soundTypeCloth)
+		                                                                          .setCreativeTab(
+			                                                                          Minestrappolation.tabMTech)
+		                                                                          .setUnlocalizedName(
+			                                                                          "block_sheep_silver");
+		block_sheep_cyan = new BlockSheep(Material.cloth, MapColor.ironColor, 9).setHardness(0.7F)
+		                                                                        .setStepSound(Block.soundTypeCloth)
+		                                                                        .setCreativeTab(
+			                                                                        Minestrappolation.tabMTech)
+		                                                                        .setUnlocalizedName("block_sheep_cyan");
+		block_sheep_purple = new BlockSheep(Material.cloth, MapColor.ironColor, 10).setHardness(0.7F)
+		                                                                           .setStepSound(Block.soundTypeCloth)
+		                                                                           .setCreativeTab(
+			                                                                           Minestrappolation.tabMTech)
+		                                                                           .setUnlocalizedName(
+			                                                                           "block_sheep_purple");
+		block_sheep_blue = new BlockSheep(Material.cloth, MapColor.ironColor, 11).setHardness(0.7F)
+		                                                                         .setStepSound(Block.soundTypeCloth)
+		                                                                         .setCreativeTab(
+			                                                                         Minestrappolation.tabMTech)
+		                                                                         .setUnlocalizedName(
+			                                                                         "block_sheep_blue");
+		block_sheep_brown = new BlockSheep(Material.cloth, MapColor.ironColor, 12).setHardness(0.7F)
+		                                                                          .setStepSound(Block.soundTypeCloth)
+		                                                                          .setCreativeTab(
+			                                                                          Minestrappolation.tabMTech)
+		                                                                          .setUnlocalizedName(
+			                                                                          "block_sheep_brown");
+		block_sheep_green = new BlockSheep(Material.cloth, MapColor.ironColor, 13).setHardness(0.7F)
+		                                                                          .setStepSound(Block.soundTypeCloth)
+		                                                                          .setCreativeTab(
+			                                                                          Minestrappolation.tabMTech)
+		                                                                          .setUnlocalizedName(
+			                                                                          "block_sheep_green");
+		block_sheep_red = new BlockSheep(Material.cloth, MapColor.ironColor, 14).setHardness(0.7F)
+		                                                                        .setStepSound(Block.soundTypeCloth)
+		                                                                        .setCreativeTab(
+			                                                                        Minestrappolation.tabMTech)
+		                                                                        .setUnlocalizedName("block_sheep_red");
+		block_sheep_black = new BlockSheep(Material.cloth, MapColor.ironColor, 15).setHardness(0.7F)
+		                                                                          .setStepSound(Block.soundTypeCloth)
+		                                                                          .setCreativeTab(
+			                                                                          Minestrappolation.tabMTech)
+		                                                                          .setUnlocalizedName(
+			                                                                          "block_sheep_black");
+
 		//Tech Blocks
-		crate = new BlockCrate().setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("crate").setHardness(2.5F).setStepSound(Block.soundTypeWood);
-		barrel = new BlockBarrel().setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("barrel").setHardness(2.5F).setStepSound(Block.soundTypeWood);
-		pipe = new BlockPipe(Material.iron, MapColor.stoneColor).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("pipe").setHardness(3.0F).setResistance(8.0F).setStepSound(Block.soundTypeMetal);
-		sorter = new BlockSorter(Material.iron, MapColor.goldColor).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("sorter").setHardness(3.0F).setResistance(8.0F).setStepSound(Block.soundTypeMetal);
-		sawmill = new BlockSawmill().setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("sawmill").setHardness(2.5F).setStepSound(Block.soundTypeWood);
-		stonecutter = new BlockStoneCutter().setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("stonecutter").setHardness(3.5F).setStepSound(Block.soundTypePiston);
-		alloy = new BlockAlloy(false).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("alloy").setHardness(4F).setStepSound(Block.soundTypePiston);
-		alloy_active = new BlockAlloy(true).setUnlocalizedName("alloy_active").setHardness(4F).setStepSound(Block.soundTypePiston);
-		melter = new BlockMelter(false).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("melter").setHardness(5F).setStepSound(Block.soundTypePiston);
-		melter_active = new BlockMelter(true).setUnlocalizedName("melter_active").setHardness(5F).setStepSound(Block.soundTypePiston);
-		crusher = new BlockCrusher(false).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("crusher").setHardness(7F).setResistance(100.0F).setStepSound(Block.soundTypePiston);
-		crusher_active = new BlockCrusher(true).setUnlocalizedName("crusher_active").setHardness(7F).setResistance(100.0F).setStepSound(Block.soundTypePiston);
+		crate = new BlockCrate().setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("crate")
+		                        .setHardness(2.5F).setStepSound(Block.soundTypeWood);
+		barrel = new BlockBarrel().setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("barrel")
+		                          .setHardness(2.5F).setStepSound(Block.soundTypeWood);
+		pipe = new BlockPipe(Material.iron, MapColor.stoneColor).setCreativeTab(Minestrappolation.tabMTech)
+		                                                        .setUnlocalizedName("pipe").setHardness(3.0F)
+		                                                        .setResistance(8.0F).setStepSound(Block.soundTypeMetal);
+		sorter = new BlockSorter(Material.iron, MapColor.goldColor).setCreativeTab(Minestrappolation.tabMTech)
+		                                                           .setUnlocalizedName("sorter").setHardness(3.0F)
+		                                                           .setResistance(8.0F)
+		                                                           .setStepSound(Block.soundTypeMetal);
+		sawmill = new BlockSawmill().setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("sawmill")
+		                            .setHardness(2.5F).setStepSound(Block.soundTypeWood);
+		stonecutter = new BlockStoneCutter().setCreativeTab(Minestrappolation.tabMTech)
+		                                    .setUnlocalizedName("stonecutter").setHardness(3.5F)
+		                                    .setStepSound(Block.soundTypePiston);
+		alloy = new BlockAlloy(false).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("alloy")
+		                             .setHardness(4F).setStepSound(Block.soundTypePiston);
+		alloy_active = new BlockAlloy(true).setUnlocalizedName("alloy_active").setHardness(4F)
+		                                   .setStepSound(Block.soundTypePiston);
+		melter = new BlockMelter(false).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("melter")
+		                               .setHardness(5F).setStepSound(Block.soundTypePiston);
+		melter_active = new BlockMelter(true).setUnlocalizedName("melter_active").setHardness(5F)
+		                                     .setStepSound(Block.soundTypePiston);
+		crusher = new BlockCrusher(false).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("crusher")
+		                                 .setHardness(7F).setResistance(100.0F).setStepSound(Block.soundTypePiston);
+		crusher_active = new BlockCrusher(true).setUnlocalizedName("crusher_active").setHardness(7F)
+		                                       .setResistance(100.0F).setStepSound(Block.soundTypePiston);
 		splitter = new BlockSplitter(false).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("splitter");
 		splitter_active = new BlockSplitter(true).setUnlocalizedName("splitter_active");
-		frost_generator = new BlockFrostGenerator(Material.rock, MapColor.iceColor).setHardness(50.0F).setResistance(2000.0F).setCreativeTab(Minestrappolation.tabMTech).setUnlocalizedName("frost_generator");
-		plutonium_insulated = new BlockRadiationInsulated(1, 20, Material.iron, MapColor.clayColor, null, 0, 0, 1, 0, "pickaxe", 2, false).setUnlocalizedName("plutonium_insulated").setStepSound(Block.soundTypeMetal).setCreativeTab(Minestrappolation.tabMTech).setHardness(7F).setResistance(10.0F);
-		uranium_insulated = new BlockRadiationInsulated(1, 20, Material.iron, MapColor.clayColor, null, 0, 0, 1, 0, "pickaxe", 2, false).setHardness(7F).setResistance(10.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("uranium_insulated").setCreativeTab(Minestrappolation.tabMTech);
-		claimerator = new BlockClaimerator(Material.rock, MapColor.obsidianColor).setHardness(50.0F).setResistance(2000.0F).setUnlocalizedName("claimerator").setCreativeTab(Minestrappolation.tabMTech);
-		dimensional_fishery = new BlockDimensionalFishery(Material.rock, MapColor.cyanColor).setHardness(5F).setResistance(20F).setLightLevel(0.8F).setStepSound(Block.soundTypeStone).setUnlocalizedName("dimensional_fishery").setCreativeTab(Minestrappolation.tabMTech);
-		enderporter = new BlockEnderPorter().setUnlocalizedName("enderporter").setCreativeTab(Minestrappolation.tabMTech);
-		
+		frost_generator = new BlockFrostGenerator(Material.rock, MapColor.iceColor).setHardness(50.0F)
+		                                                                           .setResistance(2000.0F)
+		                                                                           .setCreativeTab(
+			                                                                           Minestrappolation.tabMTech)
+		                                                                           .setUnlocalizedName(
+			                                                                           "frost_generator");
+		plutonium_insulated = new BlockRadiationInsulated(1, 20, Material.iron, MapColor.clayColor, null, 0, 0, 1, 0,
+		                                                  "pickaxe", 2, false).setUnlocalizedName("plutonium_insulated")
+		                                                                      .setStepSound(Block.soundTypeMetal)
+		                                                                      .setCreativeTab(
+			                                                                      Minestrappolation.tabMTech)
+		                                                                      .setHardness(7F).setResistance(10.0F);
+		uranium_insulated = new BlockRadiationInsulated(1, 20, Material.iron, MapColor.clayColor, null, 0, 0, 1, 0,
+		                                                "pickaxe", 2, false).setHardness(7F).setResistance(10.0F)
+		                                                                    .setStepSound(Block.soundTypeMetal)
+		                                                                    .setUnlocalizedName("uranium_insulated")
+		                                                                    .setCreativeTab(Minestrappolation.tabMTech);
+		claimerator = new BlockClaimerator(Material.rock, MapColor.obsidianColor).setHardness(50.0F)
+		                                                                         .setResistance(2000.0F)
+		                                                                         .setUnlocalizedName("claimerator")
+		                                                                         .setCreativeTab(
+			                                                                         Minestrappolation.tabMTech);
+		dimensional_fishery = new BlockDimensionalFishery(Material.rock, MapColor.cyanColor).setHardness(5F)
+		                                                                                    .setResistance(20F)
+		                                                                                    .setLightLevel(0.8F)
+		                                                                                    .setStepSound(
+			                                                                                    Block.soundTypeStone)
+		                                                                                    .setUnlocalizedName(
+			                                                                                    "dimensional_fishery")
+		                                                                                    .setCreativeTab(
+			                                                                                    Minestrappolation.tabMTech);
+		enderporter = new BlockEnderPorter().setUnlocalizedName("enderporter")
+		                                    .setCreativeTab(Minestrappolation.tabMTech);
+
 		//Fences and Panes
-		redwood_fence = new BlockFence(Material.wood).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("redwood_fence");
-		redwood_fence_gate = new BlockFenceGate(BlockPlanks.EnumType.OAK).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("redwood_fence_gate");
-		frozen_oak_fence = new BlockFence(Material.wood).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("frozen_oak_fence");
-		frozen_oak_fence_gate = new BlockFenceGate(BlockPlanks.EnumType.OAK).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("frozen_oak_fence_gate");
+		redwood_fence = new BlockFence(Material.wood).setHardness(2.0F).setResistance(5.0F)
+		                                             .setStepSound(Block.soundTypeWood)
+		                                             .setCreativeTab(Minestrappolation.tabMDecor)
+		                                             .setUnlocalizedName("redwood_fence");
+		redwood_fence_gate = new BlockFenceGate(BlockPlanks.EnumType.OAK).setHardness(2.0F).setResistance(5.0F)
+		                                                                 .setStepSound(Block.soundTypeWood)
+		                                                                 .setCreativeTab(Minestrappolation.tabMDecor)
+		                                                                 .setUnlocalizedName("redwood_fence_gate");
+		frozen_oak_fence = new BlockFence(Material.wood).setHardness(2.0F).setResistance(5.0F)
+		                                                .setStepSound(Block.soundTypeWood)
+		                                                .setCreativeTab(Minestrappolation.tabMDecor)
+		                                                .setUnlocalizedName("frozen_oak_fence");
+		frozen_oak_fence_gate = new BlockFenceGate(BlockPlanks.EnumType.OAK).setHardness(2.0F).setResistance(5.0F)
+		                                                                    .setStepSound(Block.soundTypeWood)
+		                                                                    .setCreativeTab(Minestrappolation.tabMDecor)
+		                                                                    .setUnlocalizedName(
+			                                                                    "frozen_oak_fence_gate");
 		red_rock_wall = new MBlockWall(biome_cobble, 2.0F, 10.0F).setUnlocalizedName("red_rock_wall");
 		red_rock_wall_mossy = new MBlockWall(biome_cobble, 2.0F, 10.0F).setUnlocalizedName("red_rock_wall_mossy");
 		coldstone_wall = new MBlockWall(biome_cobble, 2.0F, 10.0F).setUnlocalizedName("coldstone_wall");
@@ -744,191 +1399,431 @@ public class MBlocks
 		icestone_wall_mossy = new MBlockWall(biome_cobble, 2.0F, 10.0F).setUnlocalizedName("icestone_wall_mossy");
 		oceanstone_wall = new MBlockWall(biome_cobble, 2.0F, 10.0F).setUnlocalizedName("oceanstone_wall");
 		oceanstone_wall_mossy = new MBlockWall(biome_cobble, 2.0F, 10.0F).setUnlocalizedName("oceanstone_wall_mossy");
-		refined_glass_pane = new BlockMPane(Material.glass, false, 0).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setUnlocalizedName("refined_pane");
-		bricked_glass_pane = new BlockMPane(Material.glass, false, 0).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setUnlocalizedName("bricked_pane");
-		tiled_glass_pane = new BlockMPane(Material.glass, false, 0).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setUnlocalizedName("tiled_pane");
-		framed_glass_pane = new BlockMPane(Material.iron, true, 0).setHardness(3.0F).setStepSound(Block.soundTypeGlass).setUnlocalizedName("framed_pane");
-		glow_glass_pane = new BlockMPane(Material.glass, false, 0).setHardness(0.3F).setStepSound(Block.soundTypeGlass).setLightLevel(0.9F).setUnlocalizedName("glow_glass_pane");
-		steel_mesh = new BlockMPane(Material.iron, true, 0).setHardness(5.0F).setStepSound(Block.soundTypeMetal).setUnlocalizedName("steel_mesh");
-		cardboard = new BlockMPane(Material.cloth, true, 1200).setHardness(0.1F).setResistance(0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("cardboard");
-		
+		refined_glass_pane = new BlockMPane(Material.glass, false, 0).setHardness(0.3F)
+		                                                             .setStepSound(Block.soundTypeGlass)
+		                                                             .setUnlocalizedName("refined_pane");
+		bricked_glass_pane = new BlockMPane(Material.glass, false, 0).setHardness(0.3F)
+		                                                             .setStepSound(Block.soundTypeGlass)
+		                                                             .setUnlocalizedName("bricked_pane");
+		tiled_glass_pane = new BlockMPane(Material.glass, false, 0).setHardness(0.3F).setStepSound(Block.soundTypeGlass)
+		                                                           .setUnlocalizedName("tiled_pane");
+		framed_glass_pane = new BlockMPane(Material.iron, true, 0).setHardness(3.0F).setStepSound(Block.soundTypeGlass)
+		                                                          .setUnlocalizedName("framed_pane");
+		glow_glass_pane = new BlockMPane(Material.glass, false, 0).setHardness(0.3F).setStepSound(Block.soundTypeGlass)
+		                                                          .setLightLevel(0.9F)
+		                                                          .setUnlocalizedName("glow_glass_pane");
+		steel_mesh = new BlockMPane(Material.iron, true, 0).setHardness(5.0F).setStepSound(Block.soundTypeMetal)
+		                                                   .setUnlocalizedName("steel_mesh");
+		cardboard = new BlockMPane(Material.cloth, true, 1200).setHardness(0.1F).setResistance(0F)
+		                                                      .setStepSound(Block.soundTypePiston)
+		                                                      .setUnlocalizedName("cardboard");
+
 		//Doors
-		redwood_door = new BlockMDoor(Material.wood).setHardness(3.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("redwood_door");
-		frozen_door = new BlockMDoor(Material.wood).setHardness(3.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("frozen_oak_door");
-		glass_door = new BlockMDoor(Material.rock).setHardness(3.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("glass_door");
-		
+		redwood_door = new BlockMDoor(Material.wood).setHardness(3.0F).setStepSound(Block.soundTypeWood)
+		                                            .setUnlocalizedName("redwood_door");
+		frozen_door = new BlockMDoor(Material.wood).setHardness(3.0F).setStepSound(Block.soundTypeWood)
+		                                           .setUnlocalizedName("frozen_oak_door");
+		glass_door = new BlockMDoor(Material.rock).setHardness(3.0F).setStepSound(Block.soundTypePiston)
+		                                          .setUnlocalizedName("glass_door");
+
 		redwood_door_item = new ItemMDoor(redwood_door).setUnlocalizedName("redwood_door_item");
 		frozen_door_item = new ItemMDoor(frozen_door).setUnlocalizedName("frozen_oak_door_item");
 		glass_door_item = new ItemMDoor(glass_door).setUnlocalizedName("glass_door_item");
-		
+
 		//Ores
-		desert_quartz = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.desert_quartz_item, 0, 1, 2, 1, 2, "pickaxe", 0, true).setHardness(2.0F).setStepSound(Block.soundTypePiston).setResistance(3.0F).setUnlocalizedName("desert_quartz").setCreativeTab(Minestrappolation.tabMBuilding);
-		glacieric_ice_vein = new BlockIceDeposit(Material.glass, MItems.glacieric_ice_shard, MapColor.iceColor).setStepSound(Block.soundTypeGlass).setBlockUnbreakable().setHardness(50000F).setResistance(50000F).setCreativeTab(Minestrappolation.tabMDecor).setUnlocalizedName("glacieric_ice_vein");
-		biome_coal = new BlockBiomeCoal(0, 0, Material.rock, MapColor.stoneColor, Items.coal, 0, 0, 1, 1, 0, "pickaxe", 0, true).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_coal").setCreativeTab(Minestrappolation.tabMBuilding);
-		copper_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 0, false).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("copper_ore").setCreativeTab(Minestrappolation.tabMBuilding);
-		biome_copper = new BlockBiomeCopper(0, 0, Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 0, false).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_copper").setCreativeTab(Minestrappolation.tabMBuilding);
-		tin_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 0, false).setHardness(3.0F).setResistance(3.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("tin_ore").setCreativeTab(Minestrappolation.tabMBuilding);
-		biome_tin = new BlockBiomeTin(0, 0, Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 0, false).setHardness(3.0F).setResistance(3.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_tin").setCreativeTab(Minestrappolation.tabMBuilding);
-		biome_iron = new BlockBiomeIron(0, 0, Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 1, false).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_iron").setCreativeTab(Minestrappolation.tabMBuilding);
-		biome_gold = new BlockBiomeGold(0, 0, Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 2, false).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_gold").setCreativeTab(Minestrappolation.tabMBuilding);
-		meurodite_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.meurodite_gem, 0, 1, 2, 1, 0, "pickaxe", 2, true).setHardness(3.0F).setStepSound(Block.soundTypePiston).setResistance(5.0F).setUnlocalizedName("meurodite_ore").setCreativeTab(Minestrappolation.tabMBuilding);
-		biome_meurodite = new BlockBiomeMeurodite(0, 0, Material.rock, MapColor.stoneColor, MItems.meurodite_gem, 0, 1, 2, 1, 0, "pickaxe", 2, true).setHardness(3.0F).setStepSound(Block.soundTypePiston).setResistance(5.0F).setUnlocalizedName("biome_meurodite").setCreativeTab(Minestrappolation.tabMBuilding);
-		torite_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 2, false).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("torite_ore").setCreativeTab(Minestrappolation.tabMBuilding);
-		biome_torite = new BlockBiomeTorite(0, 0, Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 2, false).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_torite").setCreativeTab(Minestrappolation.tabMBuilding);
-		biome_redstone = new BlockBiomeRedstone(0, 0, Material.rock, MapColor.stoneColor, Items.redstone, 0, 1, 5, 4, 2, "pickaxe", 2, true).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_redstone").setCreativeTab(Minestrappolation.tabMBuilding);
-		biome_lapis = new BlockBiomeLapis(0, 0, Material.rock, MapColor.stoneColor, Items.dye, 4, 2, 5, 4, 5, "pickaxe", 1, true).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_lapis").setCreativeTab(Minestrappolation.tabMBuilding);
-		sunstone_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.sunstone_shard, 0, 2, 5, 1, 3, "pickaxe", 2, true).setHardness(2.6F).setResistance(4.0F).setStepSound(Block.soundTypePiston).setLightLevel(0.7F).setUnlocalizedName("sunstone_ore").setCreativeTab(Minestrappolation.tabMBuilding);
-		biome_sunstone = new BlockBiomeSunstone(0, 0, Material.rock, MapColor.stoneColor, MItems.sunstone_shard, 0, 2, 5, 1, 3, "pickaxe", 2, true).setHardness(2.6F).setResistance(4.0F).setStepSound(Block.soundTypePiston).setLightLevel(0.7F).setUnlocalizedName("biome_sunstone").setCreativeTab(Minestrappolation.tabMBuilding);
-		plutonium_ore = new BlockPlutoniumOre(2, 20, Material.rock, MapColor.stoneColor, MItems.plutonium, 1, 2, 1, 0, "pickaxe", 2, true).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("plutonium_ore").setCreativeTab(Minestrappolation.tabMBuilding);
-		biome_plutonium = new BlockBiomePlutonium(2, 20, Material.rock, MapColor.stoneColor, MItems.plutonium, 1, 2, 1, 0, "pickaxe", 2, true).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_plutonium").setCreativeTab(Minestrappolation.tabMBuilding);
-		uranium_ore = new BlockUraniumOre(2, 20, Material.rock, MapColor.stoneColor, MItems.uranium, 1, 2, 1, 0, "pickaxe", 2, true).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("uranium_ore").setCreativeTab(Minestrappolation.tabMBuilding);
-		biome_uranium = new BlockBiomeUranium(2, 20, Material.rock, MapColor.stoneColor, MItems.uranium, 1, 2, 1, 0, "pickaxe", 2, true).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_uranium").setCreativeTab(Minestrappolation.tabMBuilding);
-		radiant_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.radiant_quartz, 0, 1, 5, 1, 2, "pickaxe", 3, true).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("radiant_ore").setCreativeTab(Minestrappolation.tabMBuilding);
-		biome_radiant = new BlockBiomeRadiant(0, 0, Material.rock, MapColor.stoneColor, MItems.radiant_quartz, 0, 1, 5, 1, 2, "pickaxe", 3, true).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_radiant").setCreativeTab(Minestrappolation.tabMBuilding);
-		biome_diamond = new BlockBiomeDiamond(0, 0, Material.rock, MapColor.stoneColor, Items.diamond, 0, 3, 7, 1, 0, "pickaxe", 2, true).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_diamond").setCreativeTab(Minestrappolation.tabMBuilding);
-		biome_emerald = new BlockBiomeEmerald(0, 0, Material.rock, MapColor.stoneColor, Items.emerald, 0, 3, 7, 1, 0, "pickaxe", 2, true).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_emerald").setCreativeTab(Minestrappolation.tabMBuilding);
-		blazium_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.blaze_shard, 0, 1, 2, 1, 4, "pickaxe", 2, true).setHardness(3.0F).setStepSound(Block.soundTypePiston).setResistance(5.0F).setLightLevel(0.5F).setUnlocalizedName("blazium_ore").setCreativeTab(Minestrappolation.tabMBuilding);
-		soul_ore = new BlockSoulOre(Material.ground, MapColor.stoneColor, MItems.soul_gem, 0, 1, 7, 1, 0, "shovel", 2, true).setHardness(2.0F).setStepSound(Block.soundTypeSand).setResistance(3.0F).setUnlocalizedName("soul_ore").setCreativeTab(Minestrappolation.tabMBuilding);
-		titanium_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 3, false).setHardness(5.0F).setResistance(100.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("titanium_ore").setCreativeTab(Minestrappolation.tabMBuilding);
-		biome_titanium = new BlockBiomeTitanium(0, 0, Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 3, false).setHardness(5.0F).setResistance(100.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_titanium").setCreativeTab(Minestrappolation.tabMBuilding);
-		continnium_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 4, false).setHardness(4.0F).setResistance(20.0F).setLightLevel(0.5F).setStepSound(Block.soundTypePiston).setUnlocalizedName("continnium_ore").setCreativeTab(Minestrappolation.tabMBuilding);
-		dimensium_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 4, false).setHardness(4.0F).setResistance(20.0F).setLightLevel(0.5F).setStepSound(Block.soundTypePiston).setUnlocalizedName("dimensium_ore").setCreativeTab(Minestrappolation.tabMBuilding);
-		
+		desert_quartz = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.desert_quartz_item, 0, 1, 2, 1, 2,
+		                              "pickaxe", 0, true).setHardness(2.0F).setStepSound(Block.soundTypePiston)
+		                                                 .setResistance(3.0F).setUnlocalizedName("desert_quartz")
+		                                                 .setCreativeTab(Minestrappolation.tabMBuilding);
+		glacieric_ice_vein = new BlockIceDeposit(Material.glass, MItems.glacieric_ice_shard, MapColor.iceColor)
+			                     .setStepSound(Block.soundTypeGlass).setBlockUnbreakable().setHardness(50000F)
+			                     .setResistance(50000F).setCreativeTab(Minestrappolation.tabMDecor)
+			                     .setUnlocalizedName("glacieric_ice_vein");
+		biome_coal = new BlockBiomeCoal(0, 0, Material.rock, MapColor.stoneColor, Items.coal, 0, 0, 1, 1, 0, "pickaxe",
+		                                0, true).setHardness(3.0F).setResistance(5.0F)
+		                                        .setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_coal")
+		                                        .setCreativeTab(Minestrappolation.tabMBuilding);
+		copper_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 0, false)
+			             .setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston)
+			             .setUnlocalizedName("copper_ore").setCreativeTab(Minestrappolation.tabMBuilding);
+		biome_copper = new BlockBiomeCopper(0, 0, Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 0,
+		                                    false).setHardness(3.0F).setResistance(5.0F)
+		                                          .setStepSound(Block.soundTypePiston)
+		                                          .setUnlocalizedName("biome_copper")
+		                                          .setCreativeTab(Minestrappolation.tabMBuilding);
+		tin_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 0, false)
+			          .setHardness(3.0F).setResistance(3.0F).setStepSound(Block.soundTypePiston)
+			          .setUnlocalizedName("tin_ore").setCreativeTab(Minestrappolation.tabMBuilding);
+		biome_tin = new BlockBiomeTin(0, 0, Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 0, false)
+			            .setHardness(3.0F).setResistance(3.0F).setStepSound(Block.soundTypePiston)
+			            .setUnlocalizedName("biome_tin").setCreativeTab(Minestrappolation.tabMBuilding);
+		biome_iron = new BlockBiomeIron(0, 0, Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 1, false)
+			             .setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston)
+			             .setUnlocalizedName("biome_iron").setCreativeTab(Minestrappolation.tabMBuilding);
+		biome_gold = new BlockBiomeGold(0, 0, Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 2, false)
+			             .setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston)
+			             .setUnlocalizedName("biome_gold").setCreativeTab(Minestrappolation.tabMBuilding);
+		meurodite_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.meurodite_gem, 0, 1, 2, 1, 0,
+		                              "pickaxe", 2, true).setHardness(3.0F).setStepSound(Block.soundTypePiston)
+		                                                 .setResistance(5.0F).setUnlocalizedName("meurodite_ore")
+		                                                 .setCreativeTab(Minestrappolation.tabMBuilding);
+		biome_meurodite = new BlockBiomeMeurodite(0, 0, Material.rock, MapColor.stoneColor, MItems.meurodite_gem, 0, 1,
+		                                          2, 1, 0, "pickaxe", 2, true).setHardness(3.0F)
+		                                                                      .setStepSound(Block.soundTypePiston)
+		                                                                      .setResistance(5.0F)
+		                                                                      .setUnlocalizedName("biome_meurodite")
+		                                                                      .setCreativeTab(
+			                                                                      Minestrappolation.tabMBuilding);
+		torite_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 2, false)
+			             .setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston)
+			             .setUnlocalizedName("torite_ore").setCreativeTab(Minestrappolation.tabMBuilding);
+		biome_torite = new BlockBiomeTorite(0, 0, Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 2,
+		                                    false).setHardness(3.0F).setResistance(5.0F)
+		                                          .setStepSound(Block.soundTypePiston)
+		                                          .setUnlocalizedName("biome_torite")
+		                                          .setCreativeTab(Minestrappolation.tabMBuilding);
+		biome_redstone = new BlockBiomeRedstone(0, 0, Material.rock, MapColor.stoneColor, Items.redstone, 0, 1, 5, 4, 2,
+		                                        "pickaxe", 2, true).setHardness(3.0F).setResistance(5.0F)
+		                                                           .setStepSound(Block.soundTypePiston)
+		                                                           .setUnlocalizedName("biome_redstone")
+		                                                           .setCreativeTab(Minestrappolation.tabMBuilding);
+		biome_lapis = new BlockBiomeLapis(0, 0, Material.rock, MapColor.stoneColor, Items.dye, 4, 2, 5, 4, 5, "pickaxe",
+		                                  1, true).setHardness(3.0F).setResistance(5.0F)
+		                                          .setStepSound(Block.soundTypePiston).setUnlocalizedName("biome_lapis")
+		                                          .setCreativeTab(Minestrappolation.tabMBuilding);
+		sunstone_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.sunstone_shard, 0, 2, 5, 1, 3,
+		                             "pickaxe", 2, true).setHardness(2.6F).setResistance(4.0F)
+		                                                .setStepSound(Block.soundTypePiston).setLightLevel(0.7F)
+		                                                .setUnlocalizedName("sunstone_ore")
+		                                                .setCreativeTab(Minestrappolation.tabMBuilding);
+		biome_sunstone = new BlockBiomeSunstone(0, 0, Material.rock, MapColor.stoneColor, MItems.sunstone_shard, 0, 2,
+		                                        5, 1, 3, "pickaxe", 2, true).setHardness(2.6F).setResistance(4.0F)
+		                                                                    .setStepSound(Block.soundTypePiston)
+		                                                                    .setLightLevel(0.7F)
+		                                                                    .setUnlocalizedName("biome_sunstone")
+		                                                                    .setCreativeTab(
+			                                                                    Minestrappolation.tabMBuilding);
+		plutonium_ore = new BlockPlutoniumOre(2, 20, Material.rock, MapColor.stoneColor, MItems.plutonium, 1, 2, 1, 0,
+		                                      "pickaxe", 2, true).setHardness(3.0F).setResistance(5.0F)
+		                                                         .setStepSound(Block.soundTypePiston)
+		                                                         .setUnlocalizedName("plutonium_ore")
+		                                                         .setCreativeTab(Minestrappolation.tabMBuilding);
+		biome_plutonium = new BlockBiomePlutonium(2, 20, Material.rock, MapColor.stoneColor, MItems.plutonium, 1, 2, 1,
+		                                          0, "pickaxe", 2, true).setHardness(3.0F).setResistance(5.0F)
+		                                                                .setStepSound(Block.soundTypePiston)
+		                                                                .setUnlocalizedName("biome_plutonium")
+		                                                                .setCreativeTab(Minestrappolation.tabMBuilding);
+		uranium_ore = new BlockUraniumOre(2, 20, Material.rock, MapColor.stoneColor, MItems.uranium, 1, 2, 1, 0,
+		                                  "pickaxe", 2, true).setHardness(3.0F).setResistance(5.0F)
+		                                                     .setStepSound(Block.soundTypePiston)
+		                                                     .setUnlocalizedName("uranium_ore")
+		                                                     .setCreativeTab(Minestrappolation.tabMBuilding);
+		biome_uranium = new BlockBiomeUranium(2, 20, Material.rock, MapColor.stoneColor, MItems.uranium, 1, 2, 1, 0,
+		                                      "pickaxe", 2, true).setHardness(3.0F).setResistance(5.0F)
+		                                                         .setStepSound(Block.soundTypePiston)
+		                                                         .setUnlocalizedName("biome_uranium")
+		                                                         .setCreativeTab(Minestrappolation.tabMBuilding);
+		radiant_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.radiant_quartz, 0, 1, 5, 1, 2, "pickaxe",
+		                            3, true).setHardness(3.0F).setResistance(5.0F).setStepSound(Block.soundTypePiston)
+		                                    .setUnlocalizedName("radiant_ore")
+		                                    .setCreativeTab(Minestrappolation.tabMBuilding);
+		biome_radiant = new BlockBiomeRadiant(0, 0, Material.rock, MapColor.stoneColor, MItems.radiant_quartz, 0, 1, 5,
+		                                      1, 2, "pickaxe", 3, true).setHardness(3.0F).setResistance(5.0F)
+		                                                               .setStepSound(Block.soundTypePiston)
+		                                                               .setUnlocalizedName("biome_radiant")
+		                                                               .setCreativeTab(Minestrappolation.tabMBuilding);
+		biome_diamond = new BlockBiomeDiamond(0, 0, Material.rock, MapColor.stoneColor, Items.diamond, 0, 3, 7, 1, 0,
+		                                      "pickaxe", 2, true).setHardness(3.0F).setResistance(5.0F)
+		                                                         .setStepSound(Block.soundTypePiston)
+		                                                         .setUnlocalizedName("biome_diamond")
+		                                                         .setCreativeTab(Minestrappolation.tabMBuilding);
+		biome_emerald = new BlockBiomeEmerald(0, 0, Material.rock, MapColor.stoneColor, Items.emerald, 0, 3, 7, 1, 0,
+		                                      "pickaxe", 2, true).setHardness(3.0F).setResistance(5.0F)
+		                                                         .setStepSound(Block.soundTypePiston)
+		                                                         .setUnlocalizedName("biome_emerald")
+		                                                         .setCreativeTab(Minestrappolation.tabMBuilding);
+		blazium_ore = new MBlockOre(Material.rock, MapColor.stoneColor, MItems.blaze_shard, 0, 1, 2, 1, 4, "pickaxe", 2,
+		                            true).setHardness(3.0F).setStepSound(Block.soundTypePiston).setResistance(5.0F)
+		                                 .setLightLevel(0.5F).setUnlocalizedName("blazium_ore")
+		                                 .setCreativeTab(Minestrappolation.tabMBuilding);
+		soul_ore = new BlockSoulOre(Material.ground, MapColor.stoneColor, MItems.soul_gem, 0, 1, 7, 1, 0, "shovel", 2,
+		                            true).setHardness(2.0F).setStepSound(Block.soundTypeSand).setResistance(3.0F)
+		                                 .setUnlocalizedName("soul_ore").setCreativeTab(Minestrappolation.tabMBuilding);
+		titanium_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 3, false)
+			               .setHardness(5.0F).setResistance(100.0F).setStepSound(Block.soundTypePiston)
+			               .setUnlocalizedName("titanium_ore").setCreativeTab(Minestrappolation.tabMBuilding);
+		biome_titanium = new BlockBiomeTitanium(0, 0, Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe",
+		                                        3, false).setHardness(5.0F).setResistance(100.0F)
+		                                                 .setStepSound(Block.soundTypePiston)
+		                                                 .setUnlocalizedName("biome_titanium")
+		                                                 .setCreativeTab(Minestrappolation.tabMBuilding);
+		continnium_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 4, false)
+			                 .setHardness(4.0F).setResistance(20.0F).setLightLevel(0.5F)
+			                 .setStepSound(Block.soundTypePiston).setUnlocalizedName("continnium_ore")
+			                 .setCreativeTab(Minestrappolation.tabMBuilding);
+		dimensium_ore = new MBlockOre(Material.rock, MapColor.stoneColor, null, 0, 0, 1, 0, "pickaxe", 4, false)
+			                .setHardness(4.0F).setResistance(20.0F).setLightLevel(0.5F)
+			                .setStepSound(Block.soundTypePiston).setUnlocalizedName("dimensium_ore")
+			                .setCreativeTab(Minestrappolation.tabMBuilding);
+
 		//Stairs
-		redwood_stairs = new MBlockStairs(ministrapp_planks.getStateFromMeta(MWoodType.REDWOOD.getMetadata()), 300).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("redwood_stairs");
-		frozen_oak_stairs = new MBlockStairs(ministrapp_planks.getStateFromMeta(MWoodType.FROZEN.getMetadata()), 300).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood).setUnlocalizedName("frozen_oak_stairs");
-		andesite_brick_stairs = new MBlockStairs(andesite_bricks.getDefaultState(), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("andesite_brick_stairs");
-		diorite_brick_stairs = new MBlockStairs(diorite_bricks.getDefaultState(), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("diorite_brick_stairs");
-		granite_brick_stairs = new MBlockStairs(granite_bricks.getDefaultState(), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("granite_brick_stairs");
-		slate_brick_stairs = new MBlockStairs(slate_bricks.getDefaultState(), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("slate_brick_stairs");
-		sandstone_brick_stairs = new MBlockStairs(sandstone_bricks.getDefaultState(), 0).setHardness(0.8F).setStepSound(Block.soundTypePiston).setUnlocalizedName("sandstone_brick_stairs");
-		red_sandstone_brick_stairs = new MBlockStairs(red_sandstone_bricks.getDefaultState(), 0).setHardness(0.8F).setStepSound(Block.soundTypePiston).setUnlocalizedName("red_sandstone_brick_stairs");
-		desert_quartz_stairs = new MBlockStairs(desert_quartz_block.getDefaultState(), 0).setHardness(1.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("desert_quartz_stairs");
-		radiant_stairs = new MBlockStairs(radiant_block.getDefaultState(), 0).setHardness(1.0F).setLightLevel(0.6F).setStepSound(Block.soundTypePiston).setUnlocalizedName("radiant_quartz_stairs");
-		deepstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()), 0).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("deepstone_stairs");
-		coldstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.COLDSTONE.getMetadata()), 0).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("coldstone_stairs");
-		redrock_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.REDROCK.getMetadata()), 0).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("redrock_stairs");
-		oceanstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.OCEANSTONE.getMetadata()), 0).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("oceanstone_stairs");
-		icestone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.ICESTONE.getMetadata()), 0).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("icestone_stairs");
-		poceanstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()), 0).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("poceanstone_stairs");
-		glacierstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()), 0).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("glacierstone_stairs");
-		deep_redrock_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()), 0).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("deep_redrock_stairs");
-		deep_coldstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()), 0).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("deep_coldstone_stairs");
-		deepstone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("deepstone_brick_stairs");
-		coldstone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.COLDSTONE.getMetadata()), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("coldstone_brick_stairs");
-		redrock_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.REDROCK.getMetadata()), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("redrock_brick_stairs");
-		oceanstone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.OCEANSTONE.getMetadata()), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("oceanstone_brick_stairs");
-		icestone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.ICESTONE.getMetadata()), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("icestone_brick_stairs");
-		poceanstone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("poceanstone_brick_stairs");
-		glacierstone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("glacierstone_brick_stairs");
-		deep_redrock_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("deep_redrock_brick_stairs");
-		deep_coldstone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("deep_coldstone_brick_stairs");
-		prismarine_stairs = new MBlockStairs(Blocks.prismarine.getDefaultState(), 0).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("prismarine_stairs");
-		jadachite_brick_stairs = new MBlockStairs(MBlocks.jadachite_bricks.getDefaultState(), 0).setHardness(1.8F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setUnlocalizedName("jadachite_brick_stairs");
-		
+		redwood_stairs = new MBlockStairs(ministrapp_planks.getStateFromMeta(MWoodType.REDWOOD.getMetadata()), 300)
+			                 .setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood)
+			                 .setUnlocalizedName("redwood_stairs");
+		frozen_oak_stairs = new MBlockStairs(ministrapp_planks.getStateFromMeta(MWoodType.FROZEN.getMetadata()), 300)
+			                    .setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundTypeWood)
+			                    .setUnlocalizedName("frozen_oak_stairs");
+		andesite_brick_stairs = new MBlockStairs(andesite_bricks.getDefaultState(), 0).setHardness(1.5F)
+		                                                                              .setResistance(10.0F)
+		                                                                              .setStepSound(
+			                                                                              Block.soundTypePiston)
+		                                                                              .setUnlocalizedName(
+			                                                                              "andesite_brick_stairs");
+		diorite_brick_stairs = new MBlockStairs(diorite_bricks.getDefaultState(), 0).setHardness(1.5F)
+		                                                                            .setResistance(10.0F)
+		                                                                            .setStepSound(Block.soundTypePiston)
+		                                                                            .setUnlocalizedName(
+			                                                                            "diorite_brick_stairs");
+		granite_brick_stairs = new MBlockStairs(granite_bricks.getDefaultState(), 0).setHardness(1.5F)
+		                                                                            .setResistance(10.0F)
+		                                                                            .setStepSound(Block.soundTypePiston)
+		                                                                            .setUnlocalizedName(
+			                                                                            "granite_brick_stairs");
+		slate_brick_stairs = new MBlockStairs(slate_bricks.getDefaultState(), 0).setHardness(1.5F).setResistance(10.0F)
+		                                                                        .setStepSound(Block.soundTypePiston)
+		                                                                        .setUnlocalizedName(
+			                                                                        "slate_brick_stairs");
+		sandstone_brick_stairs = new MBlockStairs(sandstone_bricks.getDefaultState(), 0).setHardness(0.8F).setStepSound(
+			Block.soundTypePiston).setUnlocalizedName("sandstone_brick_stairs");
+		red_sandstone_brick_stairs = new MBlockStairs(red_sandstone_bricks.getDefaultState(), 0).setHardness(0.8F)
+		                                                                                        .setStepSound(
+			                                                                                        Block.soundTypePiston)
+		                                                                                        .setUnlocalizedName(
+			                                                                                        "red_sandstone_brick_stairs");
+		desert_quartz_stairs = new MBlockStairs(desert_quartz_block.getDefaultState(), 0).setHardness(1.0F)
+		                                                                                 .setStepSound(
+			                                                                                 Block.soundTypePiston)
+		                                                                                 .setUnlocalizedName(
+			                                                                                 "desert_quartz_stairs");
+		radiant_stairs = new MBlockStairs(radiant_block.getDefaultState(), 0).setHardness(1.0F).setLightLevel(0.6F)
+		                                                                     .setStepSound(Block.soundTypePiston)
+		                                                                     .setUnlocalizedName(
+			                                                                     "radiant_quartz_stairs");
+		deepstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()), 0)
+			                   .setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston)
+			                   .setUnlocalizedName("deepstone_stairs");
+		coldstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.COLDSTONE.getMetadata()), 0)
+			                   .setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston)
+			                   .setUnlocalizedName("coldstone_stairs");
+		redrock_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.REDROCK.getMetadata()), 0)
+			                 .setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston)
+			                 .setUnlocalizedName("redrock_stairs");
+		oceanstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.OCEANSTONE.getMetadata()), 0)
+			                    .setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston)
+			                    .setUnlocalizedName("oceanstone_stairs");
+		icestone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.ICESTONE.getMetadata()), 0)
+			                  .setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston)
+			                  .setUnlocalizedName("icestone_stairs");
+		poceanstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()), 0)
+			                     .setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston)
+			                     .setUnlocalizedName("poceanstone_stairs");
+		glacierstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()), 0)
+			                      .setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston)
+			                      .setUnlocalizedName("glacierstone_stairs");
+		deep_redrock_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()), 0)
+			                      .setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston)
+			                      .setUnlocalizedName("deep_redrock_stairs");
+		deep_coldstone_stairs = new MBlockStairs(biome_cobble.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()),
+		                                         0).setHardness(2.0F).setResistance(10.0F)
+		                                           .setStepSound(Block.soundTypePiston)
+		                                           .setUnlocalizedName("deep_coldstone_stairs");
+		deepstone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()), 0)
+			                         .setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston)
+			                         .setUnlocalizedName("deepstone_brick_stairs");
+		coldstone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.COLDSTONE.getMetadata()), 0)
+			                         .setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston)
+			                         .setUnlocalizedName("coldstone_brick_stairs");
+		redrock_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.REDROCK.getMetadata()), 0)
+			                       .setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston)
+			                       .setUnlocalizedName("redrock_brick_stairs");
+		oceanstone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.OCEANSTONE.getMetadata()),
+		                                           0).setHardness(1.5F).setResistance(10.0F)
+		                                             .setStepSound(Block.soundTypePiston)
+		                                             .setUnlocalizedName("oceanstone_brick_stairs");
+		icestone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.ICESTONE.getMetadata()), 0)
+			                        .setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston)
+			                        .setUnlocalizedName("icestone_brick_stairs");
+		poceanstone_brick_stairs = new MBlockStairs(biome_bricks.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()),
+		                                            0).setHardness(1.5F).setResistance(10.0F)
+		                                              .setStepSound(Block.soundTypePiston)
+		                                              .setUnlocalizedName("poceanstone_brick_stairs");
+		glacierstone_brick_stairs = new MBlockStairs(biome_bricks
+			                                             .getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()), 0)
+			                            .setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston)
+			                            .setUnlocalizedName("glacierstone_brick_stairs");
+		deep_redrock_brick_stairs = new MBlockStairs(biome_bricks
+			                                             .getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()), 0)
+			                            .setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston)
+			                            .setUnlocalizedName("deep_redrock_brick_stairs");
+		deep_coldstone_brick_stairs = new MBlockStairs(biome_bricks
+			                                               .getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()), 0)
+			                              .setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundTypePiston)
+			                              .setUnlocalizedName("deep_coldstone_brick_stairs");
+		prismarine_stairs = new MBlockStairs(Blocks.prismarine.getDefaultState(), 0).setHardness(1.5F)
+		                                                                            .setResistance(10.0F)
+		                                                                            .setStepSound(Block.soundTypePiston)
+		                                                                            .setUnlocalizedName(
+			                                                                            "prismarine_stairs");
+		jadachite_brick_stairs = new MBlockStairs(MBlocks.jadachite_bricks.getDefaultState(), 0).setHardness(1.8F)
+		                                                                                        .setResistance(10.0F)
+		                                                                                        .setStepSound(
+			                                                                                        Block.soundTypePiston)
+		                                                                                        .setUnlocalizedName(
+			                                                                                        "jadachite_brick_stairs");
+
 		//Slabs
 		redwood_slab = new BlockMSlab(Material.wood, "redwood_slab", 2F, 5F, "axe", 0, 300);
 		redwood_double_slab = new BlockMDoubleSlab(Material.wood, "redwood", 2F, 5F, "axe", 0, 300, redwood_slab);
 		frozen_oak_slab = new BlockMSlab(Material.wood, "frozen_oak_slab", 2F, 5F, "axe", 0, 300);
-		frozen_oak_double_slab = new BlockMDoubleSlab(Material.wood, "frozen_oak", 2F, 5F, "axe", 0, 300, frozen_oak_slab);
-		
+		frozen_oak_double_slab = new BlockMDoubleSlab(Material.wood, "frozen_oak", 2F, 5F, "axe", 0, 300,
+		                                              frozen_oak_slab);
+
 		andesite_brick_slab = new BlockMSlab(Material.rock, "andesite_brick_slab", 2F, 10F, "pickaxe", 0, 0);
-		andesite_brick_double_slab = new BlockMDoubleSlab(Material.rock, "andesite_brick", 2F, 10F, "pickaxe", 0, 0, andesite_brick_slab);
+		andesite_brick_double_slab = new BlockMDoubleSlab(Material.rock, "andesite_brick", 2F, 10F, "pickaxe", 0, 0,
+		                                                  andesite_brick_slab);
 		diorite_brick_slab = new BlockMSlab(Material.rock, "diorite_brick_slab", 2F, 10F, "pickaxe", 0, 0);
-		diorite_brick_double_slab = new BlockMDoubleSlab(Material.rock, "diorite_brick", 2F, 10F, "pickaxe", 0, 0, diorite_brick_slab);
+		diorite_brick_double_slab = new BlockMDoubleSlab(Material.rock, "diorite_brick", 2F, 10F, "pickaxe", 0, 0,
+		                                                 diorite_brick_slab);
 		granite_brick_slab = new BlockMSlab(Material.rock, "granite_brick_slab", 2F, 10F, "pickaxe", 0, 0);
-		granite_brick_double_slab = new BlockMDoubleSlab(Material.rock, "granite_brick", 2F, 10F, "pickaxe", 0, 0, granite_brick_slab);
+		granite_brick_double_slab = new BlockMDoubleSlab(Material.rock, "granite_brick", 2F, 10F, "pickaxe", 0, 0,
+		                                                 granite_brick_slab);
 		slate_brick_slab = new BlockMSlab(Material.rock, "slate_brick_slab", 2F, 10F, "pickaxe", 0, 0);
-		slate_brick_double_slab = new BlockMDoubleSlab(Material.rock, "slate_brick", 2F, 10F, "pickaxe", 0, 0, slate_brick_slab);
+		slate_brick_double_slab = new BlockMDoubleSlab(Material.rock, "slate_brick", 2F, 10F, "pickaxe", 0, 0,
+		                                               slate_brick_slab);
 		sandstone_brick_slab = new BlockMSlab(Material.rock, "sandstone_brick_slab", 2F, 10F, "pickaxe", 0, 0);
-		sandstone_brick_double_slab = new BlockMDoubleSlab(Material.rock, "sandstone_brick", 2F, 10F, "pickaxe", 0, 0, sandstone_brick_slab);
+		sandstone_brick_double_slab = new BlockMDoubleSlab(Material.rock, "sandstone_brick", 2F, 10F, "pickaxe", 0, 0,
+		                                                   sandstone_brick_slab);
 		red_sandstone_brick_slab = new BlockMSlab(Material.rock, "red_sandstone_brick_slab", 2F, 10F, "pickaxe", 0, 0);
-		red_sandstone_brick_double_slab = new BlockMDoubleSlab(Material.rock, "red_sandstone_brick", 2F, 10F, "pickaxe", 0, 0, red_sandstone_brick_slab);
+		red_sandstone_brick_double_slab = new BlockMDoubleSlab(Material.rock, "red_sandstone_brick", 2F, 10F, "pickaxe",
+		                                                       0, 0, red_sandstone_brick_slab);
 		desert_quartz_slab = new BlockMSlab(Material.rock, "desert_quartz_slab", 1F, 4F, "pickaxe", 0, 0);
-		desert_quartz_double_slab = new BlockMDoubleSlab(Material.rock, "desert_quartz", 1F, 4F, "pickaxe", 0, 0, desert_quartz_slab);
+		desert_quartz_double_slab = new BlockMDoubleSlab(Material.rock, "desert_quartz", 1F, 4F, "pickaxe", 0, 0,
+		                                                 desert_quartz_slab);
 		radiant_slab = new BlockMSlab(Material.rock, "radiant_quartz_slab", 1F, 4F, "pickaxe", 3, 0);
-		radiant_double_slab = new BlockMDoubleSlab(Material.rock, "radiant_quartz", 1F, 4F, "pickaxe", 3, 0, radiant_slab);
+		radiant_double_slab = new BlockMDoubleSlab(Material.rock, "radiant_quartz", 1F, 4F, "pickaxe", 3, 0,
+		                                           radiant_slab);
 		prismarine_slab = new BlockMSlab(Material.rock, "prismarine_slab", 1.5F, 10F, "pickaxe", 0, 0);
-		prismarine_double_slab = new BlockMDoubleSlab(Material.rock, "prismarine", 1.5F, 10F, "pickaxe", 0, 0, prismarine_slab);
+		prismarine_double_slab = new BlockMDoubleSlab(Material.rock, "prismarine", 1.5F, 10F, "pickaxe", 0, 0,
+		                                              prismarine_slab);
 		jadachite_brick_slab = new BlockMSlab(Material.rock, "jadachite_brick_slab", 1.5F, 10F, "pickaxe", 1, 0);
-		jadachite_brick_double_slab = new BlockMDoubleSlab(Material.rock, "jadachite_brick", 1.8F, 10F, "pickaxe", 1, 0, jadachite_brick_slab);
-		
+		jadachite_brick_double_slab = new BlockMDoubleSlab(Material.rock, "jadachite_brick", 1.8F, 10F, "pickaxe", 1, 0,
+		                                                   jadachite_brick_slab);
+
 		deepstone_slab = new BlockMSlab(Material.rock, "deepstone_slab", 2F, 10F, "pickaxe", 2, 0);
-		deepstone_double_slab = new BlockMDoubleSlab(Material.rock, "deepstone", 2F, 10F, "pickaxe", 2, 0, deepstone_slab);
+		deepstone_double_slab = new BlockMDoubleSlab(Material.rock, "deepstone", 2F, 10F, "pickaxe", 2, 0,
+		                                             deepstone_slab);
 		red_rock_slab = new BlockMSlab(Material.rock, "red_rock_slab", 2F, 10F, "pickaxe", 0, 0);
 		red_rock_double_slab = new BlockMDoubleSlab(Material.rock, "red_rock", 2F, 10F, "pickaxe", 0, 0, red_rock_slab);
 		deep_red_rock_slab = new BlockMSlab(Material.rock, "deep_red_rock_slab", 2F, 10F, "pickaxe", 2, 0);
-		deep_red_rock_double_slab = new BlockMDoubleSlab(Material.rock, "deep_red_rock", 2F, 10F, "pickaxe", 2, 0, deep_red_rock_slab);
+		deep_red_rock_double_slab = new BlockMDoubleSlab(Material.rock, "deep_red_rock", 2F, 10F, "pickaxe", 2, 0,
+		                                                 deep_red_rock_slab);
 		coldstone_slab = new BlockMSlab(Material.rock, "coldstone_slab", 2F, 10F, "pickaxe", 0, 0);
-		coldstone_double_slab = new BlockMDoubleSlab(Material.rock, "coldstone", 2F, 10F, "pickaxe", 0, 0, coldstone_slab);
+		coldstone_double_slab = new BlockMDoubleSlab(Material.rock, "coldstone", 2F, 10F, "pickaxe", 0, 0,
+		                                             coldstone_slab);
 		deep_coldstone_slab = new BlockMSlab(Material.rock, "deep_coldstone_slab", 2F, 10F, "pickaxe", 2, 0);
-		deep_coldstone_double_slab = new BlockMDoubleSlab(Material.rock, "deep", 2F, 10F, "pickaxe", 2, 0, deep_coldstone_slab);
+		deep_coldstone_double_slab = new BlockMDoubleSlab(Material.rock, "deep", 2F, 10F, "pickaxe", 2, 0,
+		                                                  deep_coldstone_slab);
 		icestone_slab = new BlockMSlab(Material.rock, "icestone_slab", 2F, 10F, "pickaxe", 0, 0);
 		icestone_double_slab = new BlockMDoubleSlab(Material.rock, "icestone", 2F, 10F, "pickaxe", 0, 0, icestone_slab);
 		glacierrock_slab = new BlockMSlab(Material.rock, "glacierrock_slab", 2F, 10F, "pickaxe", 2, 0);
-		glacierrock_double_slab = new BlockMDoubleSlab(Material.rock, "glacierrock", 2F, 10F, "pickaxe", 2, 0, glacierrock_slab);
+		glacierrock_double_slab = new BlockMDoubleSlab(Material.rock, "glacierrock", 2F, 10F, "pickaxe", 2, 0,
+		                                               glacierrock_slab);
 		oceanstone_slab = new BlockMSlab(Material.rock, "oceanstone_slab", 2F, 10F, "pickaxe", 0, 0);
-		oceanstone_double_slab = new BlockMDoubleSlab(Material.rock, "oceanstone", 2F, 10F, "pickaxe", 0, 0, oceanstone_slab);
+		oceanstone_double_slab = new BlockMDoubleSlab(Material.rock, "oceanstone", 2F, 10F, "pickaxe", 0, 0,
+		                                              oceanstone_slab);
 		poceanstone_slab = new BlockMSlab(Material.rock, "poceanstone_slab", 2F, 10F, "pickaxe", 2, 0);
-		poceanstone_double_slab = new BlockMDoubleSlab(Material.rock, "poceanstone", 2F, 10F, "pickaxe", 2, 0, poceanstone_slab);
-		
+		poceanstone_double_slab = new BlockMDoubleSlab(Material.rock, "poceanstone", 2F, 10F, "pickaxe", 2, 0,
+		                                               poceanstone_slab);
+
 		deepstone_cobble_slab = new BlockMSlab(Material.rock, "deepstone_cobble_slab", 2F, 10F, "pickaxe", 2, 0);
-		deepstone_cobble_double_slab = new BlockMDoubleSlab(Material.rock, "deepstone_cobble", 2F, 10F, "pickaxe", 2, 0, deepstone_cobble_slab);
+		deepstone_cobble_double_slab = new BlockMDoubleSlab(Material.rock, "deepstone_cobble", 2F, 10F, "pickaxe", 2, 0,
+		                                                    deepstone_cobble_slab);
 		red_rock_cobble_slab = new BlockMSlab(Material.rock, "red_rock_cobble_slab", 2F, 10F, "pickaxe", 0, 0);
-		red_rock_cobble_double_slab = new BlockMDoubleSlab(Material.rock, "red_rock_cobble", 2F, 10F, "pickaxe", 0, 0, red_rock_cobble_slab);
-		deep_red_rock_cobble_slab = new BlockMSlab(Material.rock, "deep_red_rock_cobble_slab", 2F, 10F, "pickaxe", 2, 0);
-		deep_red_rock_cobble_double_slab = new BlockMDoubleSlab(Material.rock, "deep_red_rock_cobble", 2F, 10F, "pickaxe", 2, 0, deep_red_rock_cobble_slab);
+		red_rock_cobble_double_slab = new BlockMDoubleSlab(Material.rock, "red_rock_cobble", 2F, 10F, "pickaxe", 0, 0,
+		                                                   red_rock_cobble_slab);
+		deep_red_rock_cobble_slab = new BlockMSlab(Material.rock, "deep_red_rock_cobble_slab", 2F, 10F, "pickaxe", 2,
+		                                           0);
+		deep_red_rock_cobble_double_slab = new BlockMDoubleSlab(Material.rock, "deep_red_rock_cobble", 2F, 10F,
+		                                                        "pickaxe", 2, 0, deep_red_rock_cobble_slab);
 		coldstone_cobble_slab = new BlockMSlab(Material.rock, "coldstone_cobble_slab", 2F, 10F, "pickaxe", 0, 0);
-		coldstone_cobble_double_slab = new BlockMDoubleSlab(Material.rock, "coldstone_cobble", 2F, 10F, "pickaxe", 0, 0, coldstone_cobble_slab);
-		deep_coldstone_cobble_slab = new BlockMSlab(Material.rock, "deep_coldstone_cobble_slab", 2F, 10F, "pickaxe", 2, 0);
-		deep_coldstone_cobble_double_slab = new BlockMDoubleSlab(Material.rock, "deep_coldstone_cobble", 2F, 10F, "pickaxe", 2, 0, deep_coldstone_cobble_slab);
+		coldstone_cobble_double_slab = new BlockMDoubleSlab(Material.rock, "coldstone_cobble", 2F, 10F, "pickaxe", 0, 0,
+		                                                    coldstone_cobble_slab);
+		deep_coldstone_cobble_slab = new BlockMSlab(Material.rock, "deep_coldstone_cobble_slab", 2F, 10F, "pickaxe", 2,
+		                                            0);
+		deep_coldstone_cobble_double_slab = new BlockMDoubleSlab(Material.rock, "deep_coldstone_cobble", 2F, 10F,
+		                                                         "pickaxe", 2, 0, deep_coldstone_cobble_slab);
 		icestone_cobble_slab = new BlockMSlab(Material.rock, "icestone_cobble_slab", 2F, 10F, "pickaxe", 0, 0);
-		icestone_cobble_double_slab = new BlockMDoubleSlab(Material.rock, "icestone_cobble", 2F, 10F, "pickaxe", 0, 0, icestone_cobble_slab);
+		icestone_cobble_double_slab = new BlockMDoubleSlab(Material.rock, "icestone_cobble", 2F, 10F, "pickaxe", 0, 0,
+		                                                   icestone_cobble_slab);
 		glacierrock_cobble_slab = new BlockMSlab(Material.rock, "glacierrock_cobble_slab", 2F, 10F, "pickaxe", 2, 0);
-		glacierrock_cobble_double_slab = new BlockMDoubleSlab(Material.rock, "glacierrock_cobble", 2F, 10F, "pickaxe", 2, 0, glacierrock_cobble_slab);
+		glacierrock_cobble_double_slab = new BlockMDoubleSlab(Material.rock, "glacierrock_cobble", 2F, 10F, "pickaxe",
+		                                                      2, 0, glacierrock_cobble_slab);
 		oceanstone_cobble_slab = new BlockMSlab(Material.rock, "oceanstone_cobble_slab", 2F, 10F, "pickaxe", 0, 0);
-		oceanstone_cobble_double_slab = new BlockMDoubleSlab(Material.rock, "oceanstone_cobble", 2F, 10F, "pickaxe", 0, 0, oceanstone_cobble_slab);
+		oceanstone_cobble_double_slab = new BlockMDoubleSlab(Material.rock, "oceanstone_cobble", 2F, 10F, "pickaxe", 0,
+		                                                     0, oceanstone_cobble_slab);
 		poceanstone_cobble_slab = new BlockMSlab(Material.rock, "poceanstone_cobble_slab", 2F, 10F, "pickaxe", 2, 0);
-		poceanstone_cobble_double_slab = new BlockMDoubleSlab(Material.rock, "poceanstone_cobble", 2F, 10F, "pickaxe", 2, 0, poceanstone_cobble_slab);
-		
+		poceanstone_cobble_double_slab = new BlockMDoubleSlab(Material.rock, "poceanstone_cobble", 2F, 10F, "pickaxe",
+		                                                      2, 0, poceanstone_cobble_slab);
+
 		deepstone_brick_slab = new BlockMSlab(Material.rock, "deepstone_brick_slab", 2F, 10F, "pickaxe", 2, 0);
-		deepstone_brick_double_slab = new BlockMDoubleSlab(Material.rock, "deepstone_brick", 2F, 10F, "pickaxe", 2, 0, deepstone_brick_slab);
+		deepstone_brick_double_slab = new BlockMDoubleSlab(Material.rock, "deepstone_brick", 2F, 10F, "pickaxe", 2, 0,
+		                                                   deepstone_brick_slab);
 		red_rock_brick_slab = new BlockMSlab(Material.rock, "red_rock_brick_slab", 2F, 10F, "pickaxe", 0, 0);
-		red_rock_brick_double_slab = new BlockMDoubleSlab(Material.rock, "red_rock_brick", 2F, 10F, "pickaxe", 0, 0, red_rock_brick_slab);
+		red_rock_brick_double_slab = new BlockMDoubleSlab(Material.rock, "red_rock_brick", 2F, 10F, "pickaxe", 0, 0,
+		                                                  red_rock_brick_slab);
 		deep_red_rock_brick_slab = new BlockMSlab(Material.rock, "deep_red_rock_brick_slab", 2F, 10F, "pickaxe", 2, 0);
-		deep_red_rock_brick_double_slab = new BlockMDoubleSlab(Material.rock, "deep_red_rock_brick", 2F, 10F, "pickaxe", 2, 0, deep_red_rock_cobble_slab);
+		deep_red_rock_brick_double_slab = new BlockMDoubleSlab(Material.rock, "deep_red_rock_brick", 2F, 10F, "pickaxe",
+		                                                       2, 0, deep_red_rock_cobble_slab);
 		coldstone_brick_slab = new BlockMSlab(Material.rock, "coldstone_brick_slab", 2F, 10F, "pickaxe", 0, 0);
-		coldstone_brick_double_slab = new BlockMDoubleSlab(Material.rock, "coldstone_brick", 2F, 10F, "pickaxe", 0, 0, coldstone_brick_slab);
-		deep_coldstone_brick_slab = new BlockMSlab(Material.rock, "deep_coldstone_brick_slab", 2F, 10F, "pickaxe", 2, 0);
-		deep_coldstone_brick_double_slab = new BlockMDoubleSlab(Material.rock, "deep_coldstone_brick", 2F, 10F, "pickaxe", 2, 0, deep_coldstone_brick_slab);
+		coldstone_brick_double_slab = new BlockMDoubleSlab(Material.rock, "coldstone_brick", 2F, 10F, "pickaxe", 0, 0,
+		                                                   coldstone_brick_slab);
+		deep_coldstone_brick_slab = new BlockMSlab(Material.rock, "deep_coldstone_brick_slab", 2F, 10F, "pickaxe", 2,
+		                                           0);
+		deep_coldstone_brick_double_slab = new BlockMDoubleSlab(Material.rock, "deep_coldstone_brick", 2F, 10F,
+		                                                        "pickaxe", 2, 0, deep_coldstone_brick_slab);
 		icestone_brick_slab = new BlockMSlab(Material.rock, "icestone_brick_slab", 2F, 10F, "pickaxe", 0, 0);
-		icestone_brick_double_slab = new BlockMDoubleSlab(Material.rock, "icestone_brick", 2F, 10F, "pickaxe", 0, 0, icestone_brick_slab);
+		icestone_brick_double_slab = new BlockMDoubleSlab(Material.rock, "icestone_brick", 2F, 10F, "pickaxe", 0, 0,
+		                                                  icestone_brick_slab);
 		glacierrock_brick_slab = new BlockMSlab(Material.rock, "glacierrock_brick_slab", 2F, 10F, "pickaxe", 2, 0);
-		glacierrock_brick_double_slab = new BlockMDoubleSlab(Material.rock, "glacierrock_brick", 2F, 10F, "pickaxe", 2, 0, glacierrock_brick_slab);
+		glacierrock_brick_double_slab = new BlockMDoubleSlab(Material.rock, "glacierrock_brick", 2F, 10F, "pickaxe", 2,
+		                                                     0, glacierrock_brick_slab);
 		oceanstone_brick_slab = new BlockMSlab(Material.rock, "oceanstone_brick_slab", 2F, 10F, "pickaxe", 0, 0);
-		oceanstone_brick_double_slab = new BlockMDoubleSlab(Material.rock, "oceanstone_brick", 2F, 10F, "pickaxe", 0, 0, oceanstone_brick_slab);
+		oceanstone_brick_double_slab = new BlockMDoubleSlab(Material.rock, "oceanstone_brick", 2F, 10F, "pickaxe", 0, 0,
+		                                                    oceanstone_brick_slab);
 		poceanstone_brick_slab = new BlockMSlab(Material.rock, "poceanstone_brick_slab", 2F, 10F, "pickaxe", 2, 0);
-		poceanstone_brick_double_slab = new BlockMDoubleSlab(Material.rock, "poceanstone_brick", 2F, 10F, "pickaxe", 2, 0, poceanstone_brick_slab);
-		
+		poceanstone_brick_double_slab = new BlockMDoubleSlab(Material.rock, "poceanstone_brick", 2F, 10F, "pickaxe", 2,
+		                                                     0, poceanstone_brick_slab);
+
 		//Fluid
 		magma = new BlockMagma().setUnlocalizedName("magma");
-		magmaBucket = new ItemBucket(magma).setUnlocalizedName("magma_bucket").setCreativeTab(Minestrappolation.tabMTools);	
-		
+		magmaBucket = new ItemBucket(magma).setUnlocalizedName("magma_bucket")
+		                                   .setCreativeTab(Minestrappolation.tabMTools);
+
 		//Vanilla
 		Blocks.bedrock.setHardness(70F);
-		
+
 		//Registry
 		register();
 		registerHarvestLevels();
-		
+
 		MinecraftForge.addGrassSeed(new ItemStack(pepper_seed), Config.pepperSeedChance);
 		MinecraftForge.addGrassSeed(new ItemStack(rice), Config.riceSeedChance);
 	}
-	
+
 	private static void register()
 	{
 		register(enderporter);
-		
+
 		//Building Tab
 		register(mud);
 		register(mud_bricks);
@@ -939,7 +1834,7 @@ public class MBlocks
 		register(wither_ash);
 		register(virtian_soil, ItemBlockVirtianSoil.class);
 		register(virtian_grass, ItemBlockVirtianGrass.class);
-		
+
 		register(compacted_dirt);
 		register(compacted_netherrack);
 		register(compacted_endstone);
@@ -956,7 +1851,7 @@ public class MBlocks
 		register(glass_tiles);
 		register(glass_window);
 		register(glow_glass);
-		
+
 		register(ministrapp_log, ItemBlockLog.class);
 		register(ministrapp_planks, ItemBlockPlanks.class);
 		register(ministrapp_boards, ItemBlockBoards.class);
@@ -966,7 +1861,7 @@ public class MBlocks
 		registerSlab("frozen_oak_slab", "frozen_oak_double_slab", frozen_oak_slab, frozen_oak_double_slab);
 		register(redwood_stairs);
 		register(frozen_oak_stairs);
-		
+
 		register(slate);
 		register(slate_bricks);
 		register(slate_pattern_bricks);
@@ -984,15 +1879,18 @@ public class MBlocks
 		register(andesite_bricks);
 		register(andesite_pattern_bricks);
 		register(andesite_brick_stairs);
-		registerSlab("andesite_brick_slab", "andesite_brick_double_slab", andesite_brick_slab, andesite_brick_double_slab);
+		registerSlab("andesite_brick_slab", "andesite_brick_double_slab", andesite_brick_slab,
+		             andesite_brick_double_slab);
 		register(sandstone_bricks);
 		register(sandstone_pattern_bricks);
 		register(sandstone_brick_stairs);
-		registerSlab("sandstone_brick_slab", "sandstone_brick_double_slab", sandstone_brick_slab, sandstone_brick_double_slab);
+		registerSlab("sandstone_brick_slab", "sandstone_brick_double_slab", sandstone_brick_slab,
+		             sandstone_brick_double_slab);
 		register(red_sandstone_bricks);
 		register(red_sandstone_pattern_bricks);
 		register(red_sandstone_brick_stairs);
-		registerSlab("red_sandstone_brick_slab", "red_sandstone_brick_double_slab", red_sandstone_brick_slab, red_sandstone_brick_double_slab);
+		registerSlab("red_sandstone_brick_slab", "red_sandstone_brick_double_slab", red_sandstone_brick_slab,
+		             red_sandstone_brick_double_slab);
 		register(flint_block);
 		register(flint_bricks);
 		register(flint_pattern_bricks);
@@ -1022,7 +1920,8 @@ public class MBlocks
 		register(jadachite_bricks);
 		register(jadachite_tiles);
 		register(jadachite_pillar);
-		registerSlab("jadachite_brick_slab", "jadachite_brick_double_slab", jadachite_brick_slab, jadachite_brick_double_slab);
+		registerSlab("jadachite_brick_slab", "jadachite_brick_double_slab", jadachite_brick_slab,
+		             jadachite_brick_double_slab);
 		register(jadachite_brick_stairs);
 		register(stone_pattern_bricks);
 		register(stone_refined);
@@ -1062,7 +1961,7 @@ public class MBlocks
 		register(glacierstone_brick_stairs);
 		register(deep_redrock_brick_stairs);
 		register(deep_coldstone_brick_stairs);
-		
+
 		register(sugar_block);
 		register(copper_block);
 		register(tin_block);
@@ -1080,13 +1979,13 @@ public class MBlocks
 		register(godstone);
 		register(dimensium_block);
 		register(terracreep, ItemBlockTerraCreep.class);
-		
+
 		register(stone_boulder);
 		register(red_rock_boulder);
 		register(coldstone_boulder);
 		register(icestone_boulder);
 		register(oceanstone_boulder);
-		
+
 		register(desert_quartz);
 		register(biome_coal, ItemBlockBiomeCoal.class);
 		register(copper_ore);
@@ -1119,7 +2018,7 @@ public class MBlocks
 		register(invincium);
 		register(continnium_ore);
 		register(dimensium_ore);
-		
+
 		//Decor Tab
 		register(shrub_grass);
 		register(moss);
@@ -1155,10 +2054,10 @@ public class MBlocks
 		register(huge_purple_glowshroom);
 		register(jadachite);
 		register(jadachiteroot);
-		
+
 		register(ministrapp_sapling, ItemBlockSapling.class);
 		register(ministrapp_leaves, ItemBlockLeaves.class);
-		
+
 		register(dead_branch);
 		register(cold_cobweb);
 		register(candle);
@@ -1216,7 +2115,7 @@ public class MBlocks
 		register(crate);
 		register(barrel);
 		register(chimney);
-		
+
 		//Tech Tab
 		register(fan);
 		register(pipe);
@@ -1260,55 +2159,74 @@ public class MBlocks
 		register(block_sheep_blue);
 		register(block_sheep_purple);
 		register(block_sheep_magenta);
-		
+
 		//Foods Tab
 		register(meat_block);
-		
+
 		//Unobtainable
 		register(decaying_compacted_dirt);
 		register(decaying_compacted_netherrack);
 		register(decaying_compacted_endstone);
 		register(decaying_compacted_glowshrooms);
-		
+
 		//Building Tab (Slabs)
 		registerSlab("deepstone_slab", "deepstone_double_slab", deepstone_slab, deepstone_double_slab);
 		registerSlab("red_rock_slab", "red_rock_double_slab", red_rock_slab, red_rock_double_slab);
 		registerSlab("deep_red_rock_slab", "deep_red_rock_double_slab", deep_red_rock_slab, deep_red_rock_double_slab);
 		registerSlab("coldstone_slab", "coldstone_double_slab", coldstone_slab, coldstone_double_slab);
-		registerSlab("deep_coldstone_slab", "deep_coldstone_double_slab", deep_coldstone_slab, deep_coldstone_double_slab);
+		registerSlab("deep_coldstone_slab", "deep_coldstone_double_slab", deep_coldstone_slab,
+		             deep_coldstone_double_slab);
 		registerSlab("icestone_slab", "icestone_double_slab", icestone_slab, icestone_double_slab);
 		registerSlab("glacierrock_slab", "glacierrock_double_slab", glacierrock_slab, glacierrock_double_slab);
 		registerSlab("oceanstone_slab", "oceanstone_double_slab", oceanstone_slab, oceanstone_double_slab);
 		registerSlab("poceanstone_slab", "poceanstone_double_slab", poceanstone_slab, poceanstone_double_slab);
-		
-		registerSlab("deepstone_cobble_slab", "deepstone_cobble_double_slab", deepstone_cobble_slab, deepstone_cobble_double_slab);
-		registerSlab("red_rock_cobble_slab", "red_rock_cobble_double_slab", red_rock_cobble_slab, red_rock_cobble_double_slab);
-		registerSlab("deep_red_rock_cobble_slab", "deep_red_rock_cobble_double_slab", deep_red_rock_cobble_slab, deep_red_rock_cobble_double_slab);
-		registerSlab("coldstone_cobble_slab", "coldstone_cobble_double_slab", coldstone_cobble_slab, coldstone_cobble_double_slab);
-		registerSlab("deep_coldstone_cobble_slab", "deep_coldstone_cobble_double_slab", deep_coldstone_cobble_slab, deep_coldstone_cobble_double_slab);
-		registerSlab("icestone_cobble_slab", "icestone_cobble_double_slab", icestone_cobble_slab, icestone_cobble_double_slab);
-		registerSlab("glacierrock_cobble_slab", "glacierrock_cobble_double_slab", glacierrock_cobble_slab, glacierrock_cobble_double_slab);
-		registerSlab("oceanstone_cobble_slab", "oceanstone_cobble_double_slab", oceanstone_cobble_slab, oceanstone_cobble_double_slab);
-		registerSlab("poceanstone_cobble_slab", "poceanstone_cobble_double_slab", poceanstone_cobble_slab, poceanstone_cobble_double_slab);
-		
-		registerSlab("deepstone_brick_slab", "deepstone_brick_double_slab", deepstone_brick_slab, deepstone_brick_double_slab);
-		registerSlab("red_rock_brick_slab", "red_rock_brick_double_slab", red_rock_brick_slab, red_rock_brick_double_slab);
-		registerSlab("deep_red_rock_brick_slab", "deep_red_rock_brick_double_slab", deep_red_rock_brick_slab, deep_red_rock_brick_double_slab);
-		registerSlab("coldstone_brick_slab", "coldstone_brick_double_slab", coldstone_brick_slab, coldstone_brick_double_slab);
-		registerSlab("deep_coldstone_brick_slab", "deep_coldstone_brick_double_slab", deep_coldstone_brick_slab, deep_coldstone_brick_double_slab);
-		registerSlab("icestone_brick_slab", "icestone_brick_double_slab", icestone_brick_slab, icestone_brick_double_slab);
-		registerSlab("glacierrock_brick_slab", "glacierrock_brick_double_slab", glacierrock_brick_slab, glacierrock_brick_double_slab);
-		registerSlab("oceanstone_brick_slab", "oceanstone_brick_double_slab", oceanstone_brick_slab, oceanstone_brick_double_slab);
-		registerSlab("poceanstone_brick_slab", "poceanstone_brick_double_slab", poceanstone_brick_slab, poceanstone_brick_double_slab);
-		
+
+		registerSlab("deepstone_cobble_slab", "deepstone_cobble_double_slab", deepstone_cobble_slab,
+		             deepstone_cobble_double_slab);
+		registerSlab("red_rock_cobble_slab", "red_rock_cobble_double_slab", red_rock_cobble_slab,
+		             red_rock_cobble_double_slab);
+		registerSlab("deep_red_rock_cobble_slab", "deep_red_rock_cobble_double_slab", deep_red_rock_cobble_slab,
+		             deep_red_rock_cobble_double_slab);
+		registerSlab("coldstone_cobble_slab", "coldstone_cobble_double_slab", coldstone_cobble_slab,
+		             coldstone_cobble_double_slab);
+		registerSlab("deep_coldstone_cobble_slab", "deep_coldstone_cobble_double_slab", deep_coldstone_cobble_slab,
+		             deep_coldstone_cobble_double_slab);
+		registerSlab("icestone_cobble_slab", "icestone_cobble_double_slab", icestone_cobble_slab,
+		             icestone_cobble_double_slab);
+		registerSlab("glacierrock_cobble_slab", "glacierrock_cobble_double_slab", glacierrock_cobble_slab,
+		             glacierrock_cobble_double_slab);
+		registerSlab("oceanstone_cobble_slab", "oceanstone_cobble_double_slab", oceanstone_cobble_slab,
+		             oceanstone_cobble_double_slab);
+		registerSlab("poceanstone_cobble_slab", "poceanstone_cobble_double_slab", poceanstone_cobble_slab,
+		             poceanstone_cobble_double_slab);
+
+		registerSlab("deepstone_brick_slab", "deepstone_brick_double_slab", deepstone_brick_slab,
+		             deepstone_brick_double_slab);
+		registerSlab("red_rock_brick_slab", "red_rock_brick_double_slab", red_rock_brick_slab,
+		             red_rock_brick_double_slab);
+		registerSlab("deep_red_rock_brick_slab", "deep_red_rock_brick_double_slab", deep_red_rock_brick_slab,
+		             deep_red_rock_brick_double_slab);
+		registerSlab("coldstone_brick_slab", "coldstone_brick_double_slab", coldstone_brick_slab,
+		             coldstone_brick_double_slab);
+		registerSlab("deep_coldstone_brick_slab", "deep_coldstone_brick_double_slab", deep_coldstone_brick_slab,
+		             deep_coldstone_brick_double_slab);
+		registerSlab("icestone_brick_slab", "icestone_brick_double_slab", icestone_brick_slab,
+		             icestone_brick_double_slab);
+		registerSlab("glacierrock_brick_slab", "glacierrock_brick_double_slab", glacierrock_brick_slab,
+		             glacierrock_brick_double_slab);
+		registerSlab("oceanstone_brick_slab", "oceanstone_brick_double_slab", oceanstone_brick_slab,
+		             oceanstone_brick_double_slab);
+		registerSlab("poceanstone_brick_slab", "poceanstone_brick_double_slab", poceanstone_brick_slab,
+		             poceanstone_brick_double_slab);
+
 		//Tools Tab
 		GameRegistry.registerBlock(magma, magma.getUnlocalizedName().substring(5));
 		GameRegistry.registerItem(magmaBucket, magmaBucket.getUnlocalizedName().substring(5));
 	}
-	
+
 	public static void registerRenders()
 	{
-		for(Block block: blockList)
+		for (Block block : blockList)
 		{
 			registerRender(block);
 		}
@@ -1316,7 +2234,7 @@ public class MBlocks
 		registerRender(frozen_door_item);
 		registerRender(glass_door_item);
 		registerRender(magmaBucket);
-		
+
 		registerRender(rice);
 		registerRender(pepper_seed);
 		registerRender(peanuts);
@@ -1327,34 +2245,46 @@ public class MBlocks
 		registerRender(tomato_seed);
 		registerRender(corn);
 	}
-	
+
 	private static void register(Block block)
 	{
 		GameRegistry.registerBlock(block, block.getUnlocalizedName().substring(5));
 		blockList.add(block);
 	}
-	
+
 	private static void register(Block block, Class<? extends ItemBlock> itemclass)
 	{
 		GameRegistry.registerBlock(block, itemclass, block.getUnlocalizedName().substring(5));
 		blockList.add(block);
 	}
-	
+
 	private static void registerRender(Block block)
 	{
 		Item item = Item.getItemFromBlock(block);
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(MReference.MODID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0,
+		                                                                       new ModelResourceLocation(MReference.MODID
+			                                                                                                 + ":"
+			                                                                                                 + item.getUnlocalizedName()
+			                                                                                                       .substring(
+				                                                                                                       5),
+		                                                                                                 "inventory"));
 	}
-	
+
 	private static void registerRender(Item item)
 	{
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(MReference.MODID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0,
+		                                                                       new ModelResourceLocation(MReference.MODID
+			                                                                                                 + ":"
+			                                                                                                 + item.getUnlocalizedName()
+			                                                                                                       .substring(
+				                                                                                                       5),
+		                                                                                                 "inventory"));
 	}
-	
+
 	private static void registerHarvestLevels()
 	{
 		compacted_glowshrooms.setHarvestLevel("axe", 0);
-		
+
 		moss.setHarvestLevel("shovel", 0);
 		mud.setHarvestLevel("shovel", 0);
 		mud_bricks.setHarvestLevel("shovel", 0);
@@ -1366,7 +2296,7 @@ public class MBlocks
 		compacted_dirt.setHarvestLevel("shovel", 0);
 		virtian_soil.setHarvestLevel("shovel", 0);
 		virtian_grass.setHarvestLevel("shovel", 0);
-		
+
 		compacted_netherrack.setHarvestLevel("pickaxe", 1);
 		compacted_endstone.setHarvestLevel("pickaxe", 1);
 		slate.setHarvestLevel("pickaxe", 0);
@@ -1438,9 +2368,9 @@ public class MBlocks
 		claimerator.setHarvestLevel("pickaxe", 2);
 		frost_generator.setHarvestLevel("pickaxe", 2);
 		ritual_conduit.setHarvestLevel("pickaxe", 2);
-		
+
 		glass_door.setHarvestLevel("pickaxe", 0);
-		
+
 		deepstone_stairs.setHarvestLevel("pickaxe", 2);
 		redrock_stairs.setHarvestLevel("pickaxe", 0);
 		deep_redrock_stairs.setHarvestLevel("pickaxe", 2);
@@ -1450,7 +2380,7 @@ public class MBlocks
 		glacierstone_stairs.setHarvestLevel("pickaxe", 2);
 		oceanstone_stairs.setHarvestLevel("pickaxe", 0);
 		poceanstone_stairs.setHarvestLevel("pickaxe", 2);
-		
+
 		deepstone_brick_stairs.setHarvestLevel("pickaxe", 2);
 		redrock_brick_stairs.setHarvestLevel("pickaxe", 0);
 		deep_redrock_brick_stairs.setHarvestLevel("pickaxe", 2);
@@ -1460,128 +2390,157 @@ public class MBlocks
 		glacierstone_brick_stairs.setHarvestLevel("pickaxe", 2);
 		oceanstone_brick_stairs.setHarvestLevel("pickaxe", 0);
 		poceanstone_brick_stairs.setHarvestLevel("pickaxe", 2);
-		
+
 		Blocks.bedrock.setHarvestLevel("pickaxe", 4);
-		
+
 		// Coal
 		biome_coal.setHarvestLevel("pickaxe", 2, biome_coal.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
 		biome_coal.setHarvestLevel("pickaxe", 2, biome_coal.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
 		biome_coal.setHarvestLevel("pickaxe", 2, biome_coal.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
 		biome_coal.setHarvestLevel("pickaxe", 2, biome_coal.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
 		biome_coal.setHarvestLevel("pickaxe", 2, biome_coal.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
-		
+
 		// Iron
 		biome_iron.setHarvestLevel("pickaxe", 2, biome_iron.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
 		biome_iron.setHarvestLevel("pickaxe", 2, biome_iron.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
 		biome_iron.setHarvestLevel("pickaxe", 2, biome_iron.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
 		biome_iron.setHarvestLevel("pickaxe", 2, biome_iron.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
 		biome_iron.setHarvestLevel("pickaxe", 2, biome_iron.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
-		
+
 		// Lapis
 		biome_lapis.setHarvestLevel("pickaxe", 2, biome_lapis.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
 		biome_lapis.setHarvestLevel("pickaxe", 2, biome_lapis.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
 		biome_lapis.setHarvestLevel("pickaxe", 2, biome_lapis.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
 		biome_lapis.setHarvestLevel("pickaxe", 2, biome_lapis.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
 		biome_lapis.setHarvestLevel("pickaxe", 2, biome_lapis.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
-		
+
 		// Tin
 		biome_tin.setHarvestLevel("pickaxe", 2, biome_tin.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
 		biome_tin.setHarvestLevel("pickaxe", 2, biome_tin.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
 		biome_tin.setHarvestLevel("pickaxe", 2, biome_tin.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
 		biome_tin.setHarvestLevel("pickaxe", 2, biome_tin.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
 		biome_tin.setHarvestLevel("pickaxe", 2, biome_tin.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
-		
+
 		// Copper
 		biome_copper.setHarvestLevel("pickaxe", 2, biome_copper.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
 		biome_copper.setHarvestLevel("pickaxe", 2, biome_copper.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
-		biome_copper.setHarvestLevel("pickaxe", 2, biome_copper.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
-		biome_copper.setHarvestLevel("pickaxe", 2, biome_copper.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
+		biome_copper
+			.setHarvestLevel("pickaxe", 2, biome_copper.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
+		biome_copper
+			.setHarvestLevel("pickaxe", 2, biome_copper.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
 		biome_copper.setHarvestLevel("pickaxe", 2, biome_copper.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
-		
+
 		// Stones
 		biome_stones.setHarvestLevel("pickaxe", 2, biome_stones.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
 		biome_stones.setHarvestLevel("pickaxe", 2, biome_stones.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
-		biome_stones.setHarvestLevel("pickaxe", 2, biome_stones.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
-		biome_stones.setHarvestLevel("pickaxe", 2, biome_stones.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
+		biome_stones
+			.setHarvestLevel("pickaxe", 2, biome_stones.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
+		biome_stones
+			.setHarvestLevel("pickaxe", 2, biome_stones.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
 		biome_stones.setHarvestLevel("pickaxe", 2, biome_stones.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
-		
+
 		// Cobble
 		biome_cobble.setHarvestLevel("pickaxe", 2, biome_cobble.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
 		biome_cobble.setHarvestLevel("pickaxe", 2, biome_cobble.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
-		biome_cobble.setHarvestLevel("pickaxe", 2, biome_cobble.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
-		biome_cobble.setHarvestLevel("pickaxe", 2, biome_cobble.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
+		biome_cobble
+			.setHarvestLevel("pickaxe", 2, biome_cobble.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
+		biome_cobble
+			.setHarvestLevel("pickaxe", 2, biome_cobble.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
 		biome_cobble.setHarvestLevel("pickaxe", 2, biome_cobble.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
-		
+
 		// Bricks
 		biome_bricks.setHarvestLevel("pickaxe", 2, biome_bricks.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
 		biome_bricks.setHarvestLevel("pickaxe", 2, biome_bricks.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
-		biome_bricks.setHarvestLevel("pickaxe", 2, biome_bricks.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
-		biome_bricks.setHarvestLevel("pickaxe", 2, biome_bricks.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
+		biome_bricks
+			.setHarvestLevel("pickaxe", 2, biome_bricks.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
+		biome_bricks
+			.setHarvestLevel("pickaxe", 2, biome_bricks.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
 		biome_bricks.setHarvestLevel("pickaxe", 2, biome_bricks.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
-		
+
 		// Chiseled
 		chiseled.setHarvestLevel("pickaxe", 2, chiseled.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
 		chiseled.setHarvestLevel("pickaxe", 2, chiseled.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
 		chiseled.setHarvestLevel("pickaxe", 2, chiseled.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
 		chiseled.setHarvestLevel("pickaxe", 2, chiseled.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
 		chiseled.setHarvestLevel("pickaxe", 2, chiseled.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
-				
+
 		// Mossy Cobble
 		mossy.setHarvestLevel("pickaxe", 2, mossy.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
 		mossy.setHarvestLevel("pickaxe", 2, mossy.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
 		mossy.setHarvestLevel("pickaxe", 2, mossy.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
 		mossy.setHarvestLevel("pickaxe", 2, mossy.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
 		mossy.setHarvestLevel("pickaxe", 2, mossy.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
-		
+
 		// Mossy Bricks
 		mossy_bricks.setHarvestLevel("pickaxe", 2, mossy_bricks.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
 		mossy_bricks.setHarvestLevel("pickaxe", 2, mossy_bricks.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
-		mossy_bricks.setHarvestLevel("pickaxe", 2, mossy_bricks.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
-		mossy_bricks.setHarvestLevel("pickaxe", 2, mossy_bricks.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
+		mossy_bricks
+			.setHarvestLevel("pickaxe", 2, mossy_bricks.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
+		mossy_bricks
+			.setHarvestLevel("pickaxe", 2, mossy_bricks.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
 		mossy_bricks.setHarvestLevel("pickaxe", 2, mossy_bricks.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
-		
+
 		// Cracked Bricks
-		cracked_bricks.setHarvestLevel("pickaxe", 2, cracked_bricks.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
-		cracked_bricks.setHarvestLevel("pickaxe", 2, cracked_bricks.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
-		cracked_bricks.setHarvestLevel("pickaxe", 2, cracked_bricks.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
-		cracked_bricks.setHarvestLevel("pickaxe", 2, cracked_bricks.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
-		cracked_bricks.setHarvestLevel("pickaxe", 2, cracked_bricks.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
-		
+		cracked_bricks
+			.setHarvestLevel("pickaxe", 2, cracked_bricks.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
+		cracked_bricks
+			.setHarvestLevel("pickaxe", 2, cracked_bricks.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
+		cracked_bricks
+			.setHarvestLevel("pickaxe", 2, cracked_bricks.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
+		cracked_bricks
+			.setHarvestLevel("pickaxe", 2, cracked_bricks.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
+		cracked_bricks
+			.setHarvestLevel("pickaxe", 2, cracked_bricks.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
+
 		// Refined
 		refined.setHarvestLevel("pickaxe", 2, refined.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
 		refined.setHarvestLevel("pickaxe", 2, refined.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
 		refined.setHarvestLevel("pickaxe", 2, refined.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
 		refined.setHarvestLevel("pickaxe", 2, refined.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
 		refined.setHarvestLevel("pickaxe", 2, refined.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
-		
+
 		// Tiles
 		tiles.setHarvestLevel("pickaxe", 2, tiles.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
 		tiles.setHarvestLevel("pickaxe", 2, tiles.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
 		tiles.setHarvestLevel("pickaxe", 2, tiles.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
 		tiles.setHarvestLevel("pickaxe", 2, tiles.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
 		tiles.setHarvestLevel("pickaxe", 2, tiles.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
-		
+
 		// Sunstone Lamp
 		lamp_sunstone.setHarvestLevel("pickaxe", 2, lamp_sunstone.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
-		lamp_sunstone.setHarvestLevel("pickaxe", 2, lamp_sunstone.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
-		lamp_sunstone.setHarvestLevel("pickaxe", 2, lamp_sunstone.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
-		lamp_sunstone.setHarvestLevel("pickaxe", 2, lamp_sunstone.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
-		lamp_sunstone.setHarvestLevel("pickaxe", 2, lamp_sunstone.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
-		
+		lamp_sunstone
+			.setHarvestLevel("pickaxe", 2, lamp_sunstone.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
+		lamp_sunstone
+			.setHarvestLevel("pickaxe", 2, lamp_sunstone.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
+		lamp_sunstone
+			.setHarvestLevel("pickaxe", 2, lamp_sunstone.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
+		lamp_sunstone
+			.setHarvestLevel("pickaxe", 2, lamp_sunstone.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
+
 		// Glowstone Lamp
-		lamp_glowstone.setHarvestLevel("pickaxe", 2, lamp_glowstone.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
-		lamp_glowstone.setHarvestLevel("pickaxe", 2, lamp_glowstone.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
-		lamp_glowstone.setHarvestLevel("pickaxe", 2, lamp_glowstone.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
-		lamp_glowstone.setHarvestLevel("pickaxe", 2, lamp_glowstone.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
-		lamp_glowstone.setHarvestLevel("pickaxe", 2, lamp_glowstone.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
-		
+		lamp_glowstone
+			.setHarvestLevel("pickaxe", 2, lamp_glowstone.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
+		lamp_glowstone
+			.setHarvestLevel("pickaxe", 2, lamp_glowstone.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
+		lamp_glowstone
+			.setHarvestLevel("pickaxe", 2, lamp_glowstone.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
+		lamp_glowstone
+			.setHarvestLevel("pickaxe", 2, lamp_glowstone.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
+		lamp_glowstone
+			.setHarvestLevel("pickaxe", 2, lamp_glowstone.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
+
 		// Prismarine Lamp
-		lamp_prismarine.setHarvestLevel("pickaxe", 2, lamp_prismarine.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
-		lamp_prismarine.setHarvestLevel("pickaxe", 2, lamp_prismarine.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
-		lamp_prismarine.setHarvestLevel("pickaxe", 2, lamp_prismarine.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
-		lamp_prismarine.setHarvestLevel("pickaxe", 2, lamp_prismarine.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
-		lamp_prismarine.setHarvestLevel("pickaxe", 2, lamp_prismarine.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
-		
+		lamp_prismarine
+			.setHarvestLevel("pickaxe", 2, lamp_prismarine.getStateFromMeta(MStoneType.DEEPSTONE.getMetadata()));
+		lamp_prismarine
+			.setHarvestLevel("pickaxe", 2, lamp_prismarine.getStateFromMeta(MStoneType.DEEPREDROCK.getMetadata()));
+		lamp_prismarine
+			.setHarvestLevel("pickaxe", 2, lamp_prismarine.getStateFromMeta(MStoneType.DEEPCOLDSTONE.getMetadata()));
+		lamp_prismarine
+			.setHarvestLevel("pickaxe", 2, lamp_prismarine.getStateFromMeta(MStoneType.GLACIERSTONE.getMetadata()));
+		lamp_prismarine
+			.setHarvestLevel("pickaxe", 2, lamp_prismarine.getStateFromMeta(MStoneType.POCEANSTONE.getMetadata()));
+
 		// Roads
 		roads.setHarvestLevel("pickaxe", 0, roads.getStateFromMeta(MRoadType.COBBLE.getMetadata()));
 		roads.setHarvestLevel("pickaxe", 0, roads.getStateFromMeta(MRoadType.SAND.getMetadata()));
@@ -1589,7 +2548,7 @@ public class MBlocks
 		roads.setHarvestLevel("pickaxe", 0, roads.getStateFromMeta(MRoadType.GRAVEL.getMetadata()));
 		roads.setHarvestLevel("pickaxe", 1, roads.getStateFromMeta(MRoadType.NETHER.getMetadata()));
 		roads.setHarvestLevel("pickaxe", 3, roads.getStateFromMeta(MRoadType.SOUL.getMetadata()));
-		
+
 		// Terracreep
 		terracreep.setHarvestLevel("pickaxe", 2, terracreep.getStateFromMeta(MCreepType.DEEPSTONE.getMetadata()));
 		terracreep.setHarvestLevel("pickaxe", 2, terracreep.getStateFromMeta(MCreepType.DEEPREDROCK.getMetadata()));
@@ -1597,11 +2556,11 @@ public class MBlocks
 		terracreep.setHarvestLevel("pickaxe", 2, terracreep.getStateFromMeta(MCreepType.GLACIERSTONE.getMetadata()));
 		terracreep.setHarvestLevel("pickaxe", 2, terracreep.getStateFromMeta(MCreepType.POCEANSTONE.getMetadata()));
 	}
-	
+
 	public static void registerSlab(String name, String name2, BlockMSlab one, BlockMDoubleSlab two)
 	{
-		GameRegistry.registerBlock(two, ItemBlockMSlab.class, name2, new Object[]{one, two});
-		GameRegistry.registerBlock(one, ItemBlockMSlab.class, name, new Object[]{one, two});
+		GameRegistry.registerBlock(two, ItemBlockMSlab.class, name2, one, two);
+		GameRegistry.registerBlock(one, ItemBlockMSlab.class, name, one, two);
 		blockList.add(one);
 		blockList.add(two);
 	}

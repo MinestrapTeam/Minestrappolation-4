@@ -585,7 +585,7 @@ public class TileEntityPipe extends TileEntityLockable implements IHopper, ITick
 	 * @param hopper The hopper the return an inventory for
 	 */
 	/*public static IInventory getHopperInventory(IHopper hopper)
-    {
+	{
         /**
          * Returns the IInventory (if applicable) of the TileEntity at the specified position
          *

@@ -1,6 +1,6 @@
 {
-    "parent": "block/cube_all",
-    "textures": {
-        "all": "ministrapp:blocks/compacted_endstone_4"
-    }
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "ministrapp:blocks/compacted_endstone_4"
+  }
 }

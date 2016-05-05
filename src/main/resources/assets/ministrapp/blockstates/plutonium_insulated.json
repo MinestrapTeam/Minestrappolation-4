@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:plutonium_insulated" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:plutonium_insulated"
     }
+  }
 }

@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:double_slab_oceanstone" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:double_slab_oceanstone"
     }
+  }
 }

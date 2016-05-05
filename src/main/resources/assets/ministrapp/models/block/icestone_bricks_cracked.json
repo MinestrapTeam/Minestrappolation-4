@@ -1,6 +1,6 @@
 {
-    "parent": "block/cube_all",
-    "textures": {
-        "all": "ministrapp:blocks/icestone_bricks_cracked"
-    }
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "ministrapp:blocks/icestone_bricks_cracked"
+  }
 }

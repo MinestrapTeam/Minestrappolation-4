@@ -1,7 +1,5 @@
 package minestrapteam.mods.minestrappolation.block;
 
-import java.util.Random;
-
 import minestrapteam.mods.minestrappolation.lib.MItems;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -17,38 +15,41 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 
+import java.util.Random;
+
 public class BlockMud extends MBlock
-{	
-	public BlockMud(Material materialIn, MapColor mapColorIn) 
+{
+	public BlockMud(Material materialIn, MapColor mapColorIn)
 	{
 		super(materialIn, mapColorIn);
 	}
-	
+
 	@Override
 	public AxisAlignedBB getCollisionBoundingBox(World worldIn, BlockPos pos, IBlockState state)
 	{
 		float f = 0.5F;
 		return new AxisAlignedBB(pos.getX(), pos.getY(), pos.getZ(), pos.getX() + 1, pos.getY() + f, pos.getZ() + 1);
 	}
-	
+
+	@Override
 	public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
-    {
-        if(entityIn instanceof EntityPig || entityIn instanceof EntityPigZombie)
-        {
-        	((EntityLivingBase) entityIn).addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 2, 1, true, false));
-        }
-        else
-        {
-        	entityIn.setInWeb();
-        }
-    }
-	
+	{
+		if (entityIn instanceof EntityPig || entityIn instanceof EntityPigZombie)
+		{
+			((EntityLivingBase) entityIn).addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 2, 1, true, false));
+		}
+		else
+		{
+			entityIn.setInWeb();
+		}
+	}
+
 	@Override
 	public int quantityDropped(Random random)
 	{
 		return 4;
 	}
-	
+
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
 	{

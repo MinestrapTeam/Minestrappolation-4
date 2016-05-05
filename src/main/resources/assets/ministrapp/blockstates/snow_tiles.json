@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:snow_tiles" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:snow_tiles"
     }
+  }
 }

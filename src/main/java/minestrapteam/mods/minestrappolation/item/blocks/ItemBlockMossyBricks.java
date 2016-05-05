@@ -7,21 +7,20 @@ import net.minecraft.item.ItemStack;
 
 public class ItemBlockMossyBricks extends ItemBlock
 {
-	
+
 	public ItemBlockMossyBricks(Block block)
 	{
 		super(block);
 		this.setHasSubtypes(true);
 		this.setMaxDamage(0);
-		
 	}
-	
+
 	@Override
 	public int getMetadata(int damageValue)
 	{
 		return damageValue;
 	}
-	
+
 	@Override
 	public String getUnlocalizedName(ItemStack item)
 	{

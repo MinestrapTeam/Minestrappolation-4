@@ -10,7 +10,7 @@ public class ContainerCrate extends MinestrappolationContainer
 	public ContainerCrate(EntityPlayer player, TileEntityCrate crate)
 	{
 		super(player, crate);
-		
+
 		for (int j = 0; j < 2; ++j)
 		{
 			for (int k = 0; k < 9; ++k)
@@ -20,7 +20,7 @@ public class ContainerCrate extends MinestrappolationContainer
 		}
 		this.addInventorySlots(0, -18);
 	}
-	
+
 	@Override
 	public int[] merge(EntityPlayer player, int slot, ItemStack stack)
 	{

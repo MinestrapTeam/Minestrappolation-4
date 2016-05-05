@@ -1,21 +1,77 @@
 {
-"__comment": "Designed by Delocuro with BDcraft Cubik PRO 0.95 Beta - http://bdcraft.net",
-"textures": {
+  "__comment": "Designed by Delocuro with BDcraft Cubik PRO 0.95 Beta - http://bdcraft.net",
+  "textures": {
     "particle": "ministrapp:blocks/geneblock_mooshroom",
     "texture": "ministrapp:blocks/geneblock_mooshroom"
-},
-"elements": [ 
-{
-    "from": [ 1, 0, 1 ],
-    "to": [ 15, 14, 15 ],
-    "faces": {
-        "down":  { "uv": [ 15, 15, 1, 1 ], "texture": "#texture" },
-        "up":    { "uv": [ 1, 1, 15, 15 ], "texture": "#texture" },
-        "north": { "uv": [ 1, 1, 15, 15 ], "texture": "#texture" },
-        "south": { "uv": [ 1, 1, 15, 15 ], "texture": "#texture" },
-        "west":  { "uv": [ 1, 1, 15, 15 ], "texture": "#texture" },
-        "east":  { "uv": [ 1, 1, 15, 15 ], "texture": "#texture" }
+  },
+  "elements": [
+    {
+      "from": [
+        1,
+        0,
+        1
+      ],
+      "to": [
+        15,
+        14,
+        15
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            15,
+            15,
+            1,
+            1
+          ],
+          "texture": "#texture"
+        },
+        "up": {
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ],
+          "texture": "#texture"
+        },
+        "north": {
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ],
+          "texture": "#texture"
+        },
+        "south": {
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ],
+          "texture": "#texture"
+        },
+        "west": {
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ],
+          "texture": "#texture"
+        },
+        "east": {
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ],
+          "texture": "#texture"
+        }
+      }
     }
-}
-]
+  ]
 }

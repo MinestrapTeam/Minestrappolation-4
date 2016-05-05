@@ -1,6 +1,6 @@
 {
-    "parent": "block/leaves",
-    "textures": {
-        "all": "ministrapp:blocks/frozen_oak_leaves"
-    }
+  "parent": "block/leaves",
+  "textures": {
+    "all": "ministrapp:blocks/frozen_oak_leaves"
+  }
 }

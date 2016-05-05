@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:soul_gem_block" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:soul_gem_block"
     }
+  }
 }

@@ -1,7 +1,5 @@
 package minestrapteam.mods.minestrappolation.block;
 
-import java.util.List;
-
 import minestrapteam.mods.minestrappolation.Minestrappolation;
 import minestrapteam.mods.minestrappolation.enumtypes.AllWoodTypes;
 import minestrapteam.mods.minestrappolation.lib.MReference;
@@ -24,13 +22,15 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import java.util.List;
+
 public class BlockBoards extends Block
 {
-	public static final PropertyEnum	VARIANT	= PropertyEnum.create("type", AllWoodTypes.class);
-	
-	private int							flammability;
-	private String						type;
-	
+	public static final PropertyEnum VARIANT = PropertyEnum.create("type", AllWoodTypes.class);
+
+	private int    flammability;
+	private String type;
+
 	public BlockBoards(int flame, String type)
 	{
 		super(Material.wood);
@@ -39,49 +39,49 @@ public class BlockBoards extends Block
 		this.type = type;
 		this.setUnlocalizedName("ministrapp_" + type);
 	}
-	
+
 	@Override
 	public int damageDropped(IBlockState state)
 	{
 		return ((AllWoodTypes) state.getValue(VARIANT)).getMetadata();
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item itemIn, CreativeTabs tab, List list)
 	{
 		AllWoodTypes[] aenumtype = AllWoodTypes.values();
 		int i = aenumtype.length;
-		
+
 		for (int j = 0; j < i; ++j)
 		{
 			AllWoodTypes enumtype = aenumtype[j];
 			list.add(new ItemStack(itemIn, 1, enumtype.getMetadata()));
 		}
 	}
-	
+
 	@Override
 	public IBlockState getStateFromMeta(int meta)
 	{
 		return this.getDefaultState().withProperty(VARIANT, AllWoodTypes.byMetadata(meta));
 	}
-	
+
 	@Override
 	public int getMetaFromState(IBlockState state)
 	{
 		return ((AllWoodTypes) state.getValue(VARIANT)).getMetadata();
 	}
-	
+
 	@Override
 	protected BlockState createBlockState()
 	{
-		return new BlockState(this, new IProperty[] { VARIANT });
+		return new BlockState(this, VARIANT);
 	}
-	
+
 	public static void inventoryRender(String type)
 	{
 		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "ministrapp_" + type);
-		
+
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:oak_" + type);
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:spruce_" + type);
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:birch_" + type);
@@ -90,23 +90,26 @@ public class BlockBoards extends Block
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:dark_oak_" + type);
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:redwood_" + type);
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:frozen_oak_" + type);
-		
+
 		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "ministrapp_" + type);
 		AllWoodTypes[] aenumtype = AllWoodTypes.values();
 		int i = aenumtype.length;
-		
+
 		for (int j = 0; j < i; ++j)
 		{
 			AllWoodTypes enumtype = aenumtype[j];
-			ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(MReference.MODID + ":" + enumtype.getUnlocalizedName() + "_" + type, "inventory");
-			Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, enumtype.getMetadata(), itemModelResourceLocation);
+			ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(MReference.MODID + ":"
+				                                                                            + enumtype
+					                                                                              .getUnlocalizedName()
+				                                                                            + "_" + type, "inventory");
+			Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
+			         .register(itemBlockVariants, enumtype.getMetadata(), itemModelResourceLocation);
 		}
 	}
-	
+
 	@Override
 	public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face)
 	{
 		return this.flammability;
 	}
-	
 }

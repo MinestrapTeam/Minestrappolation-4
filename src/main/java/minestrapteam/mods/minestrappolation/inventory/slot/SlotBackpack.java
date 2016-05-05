@@ -17,5 +17,4 @@ public class SlotBackpack extends Slot
 	{
 		return !(itemstack.getItem() instanceof ItemBackpack);
 	}
-
 }

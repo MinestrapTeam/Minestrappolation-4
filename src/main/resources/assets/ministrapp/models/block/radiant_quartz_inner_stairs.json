@@ -1,8 +1,8 @@
 {
-    "parent": "block/inner_stairs",
-    "textures": {
-        "bottom": "ministrapp:blocks/radiant_quartz",
-        "top": "ministrapp:blocks/radiant_quartz",
-        "side": "ministrapp:blocks/radiant_quartz"
-    }
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "ministrapp:blocks/radiant_quartz",
+    "top": "ministrapp:blocks/radiant_quartz",
+    "side": "ministrapp:blocks/radiant_quartz"
+  }
 }

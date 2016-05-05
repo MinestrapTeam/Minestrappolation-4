@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:icestone_boulder" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:icestone_boulder"
     }
+  }
 }

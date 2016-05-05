@@ -1,31 +1,31 @@
 {
-   "variants":{
-      "type=deepstone":{
-         "model":"ministrapp:deepstone_bricks_cracked"
-      },
-      "type=red_rock":{
-         "model":"ministrapp:red_rock_bricks_cracked"
-      },
-      "type=deep_redrock":{
-         "model":"ministrapp:deep_red_rock_bricks_cracked"
-      },
-      "type=coldstone":{
-         "model":"ministrapp:coldstone_bricks_cracked"
-      },
-      "type=deep_coldstone":{
-         "model":"ministrapp:deep_coldstone_bricks_cracked"
-      },
-      "type=icestone":{
-         "model":"ministrapp:icestone_bricks_cracked"
-      },
-      "type=glacierrock":{
-         "model":"ministrapp:glacierrock_bricks_cracked"
-      },
-      "type=oceanstone":{
-         "model":"ministrapp:oceanstone_bricks_cracked"
-      },
-      "type=pressurized_oceanstone":{
-         "model":"ministrapp:pressurized_oceanstone_bricks_cracked"
-      }
-   }
+  "variants": {
+    "type=deepstone": {
+      "model": "ministrapp:deepstone_bricks_cracked"
+    },
+    "type=red_rock": {
+      "model": "ministrapp:red_rock_bricks_cracked"
+    },
+    "type=deep_redrock": {
+      "model": "ministrapp:deep_red_rock_bricks_cracked"
+    },
+    "type=coldstone": {
+      "model": "ministrapp:coldstone_bricks_cracked"
+    },
+    "type=deep_coldstone": {
+      "model": "ministrapp:deep_coldstone_bricks_cracked"
+    },
+    "type=icestone": {
+      "model": "ministrapp:icestone_bricks_cracked"
+    },
+    "type=glacierrock": {
+      "model": "ministrapp:glacierrock_bricks_cracked"
+    },
+    "type=oceanstone": {
+      "model": "ministrapp:oceanstone_bricks_cracked"
+    },
+    "type=pressurized_oceanstone": {
+      "model": "ministrapp:pressurized_oceanstone_bricks_cracked"
+    }
+  }
 }

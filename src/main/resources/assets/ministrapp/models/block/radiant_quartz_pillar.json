@@ -1,7 +1,7 @@
 {
-    "parent": "block/cube_column",
-    "textures": {
-        "end": "ministrapp:blocks/radiant_quartz_pillar_top",
-        "side": "Ministrapp:blocks/radiant_quartz_pillar_side"
-    }
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "ministrapp:blocks/radiant_quartz_pillar_top",
+    "side": "Ministrapp:blocks/radiant_quartz_pillar_side"
+  }
 }

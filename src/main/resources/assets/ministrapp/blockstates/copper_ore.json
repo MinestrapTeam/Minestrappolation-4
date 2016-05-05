@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:copper_ore" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:copper_ore"
     }
+  }
 }

@@ -1,6 +1,6 @@
 {
-    "parent": "block/wall_ne",
-    "textures": {
-        "wall": "ministrapp:blocks/cobbled_coldstone"
-    }
+  "parent": "block/wall_ne",
+  "textures": {
+    "wall": "ministrapp:blocks/cobbled_coldstone"
+  }
 }

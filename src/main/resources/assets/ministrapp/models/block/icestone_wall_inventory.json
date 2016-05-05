@@ -1,6 +1,6 @@
 {
-    "parent": "block/wall_inventory",
-    "textures": {
-        "wall": "ministrapp:blocks/cracked_icestone"
-    }
+  "parent": "block/wall_inventory",
+  "textures": {
+    "wall": "ministrapp:blocks/cracked_icestone"
+  }
 }

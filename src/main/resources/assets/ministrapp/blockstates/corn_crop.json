@@ -1,12 +1,28 @@
 {
-    "variants": {
-        "age=0": { "model": "ministrapp:corn_stage0" },
-        "age=1": { "model": "ministrapp:corn_stage0" },
-        "age=2": { "model": "ministrapp:corn_stage1" },
-        "age=3": { "model": "ministrapp:corn_stage1" },
-        "age=4": { "model": "ministrapp:corn_stage2" },
-        "age=5": { "model": "ministrapp:corn_stage3" },
-        "age=6": { "model": "ministrapp:corn_stage4" },
-        "age=7": { "model": "ministrapp:corn_stage5" }
+  "variants": {
+    "age=0": {
+      "model": "ministrapp:corn_stage0"
+    },
+    "age=1": {
+      "model": "ministrapp:corn_stage0"
+    },
+    "age=2": {
+      "model": "ministrapp:corn_stage1"
+    },
+    "age=3": {
+      "model": "ministrapp:corn_stage1"
+    },
+    "age=4": {
+      "model": "ministrapp:corn_stage2"
+    },
+    "age=5": {
+      "model": "ministrapp:corn_stage3"
+    },
+    "age=6": {
+      "model": "ministrapp:corn_stage4"
+    },
+    "age=7": {
+      "model": "ministrapp:corn_stage5"
     }
+  }
 }

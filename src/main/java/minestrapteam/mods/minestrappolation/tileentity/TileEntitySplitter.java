@@ -17,58 +17,58 @@ import net.minecraft.util.ITickable;
 
 public class TileEntitySplitter extends TileEntityInventory implements ISidedInventory, ITickable
 {
-	public int					burnTime;
-	public int					maxBurnTime;
-	public int					splitTime;
-	
-	private static final int[]	topInputSlot	= new int[] { 0 };
-	private static final int[]	outputSlots		= new int[] { 2, 3 };
-	private static final int[]	inputSlots		= new int[] { 1 };
-	
+	public int burnTime;
+	public int maxBurnTime;
+	public int splitTime;
+
+	private static final int[] topInputSlot = new int[] { 0 };
+	private static final int[] outputSlots  = new int[] { 2, 3 };
+	private static final int[] inputSlots   = new int[] { 1 };
+
 	public TileEntitySplitter()
 	{
 		super(4);
 	}
-	
+
 	public final int getMaxSplitTime()
 	{
 		return 200;
 	}
-	
+
 	@Override
 	public int getSizeInventory()
 	{
 		return 4;
 	}
-	
+
 	@Override
 	public void readFromNBT(NBTTagCompound nbt)
 	{
 		super.readFromNBT(nbt);
-		
+
 		this.burnTime = nbt.getShort("BurnTime");
 		this.splitTime = nbt.getShort("CookTime");
 		this.maxBurnTime = getItemBurnTime(this.itemStacks[1]);
 		NBTTagList nbttaglist = nbt.getTagList("Items", 10);
 		this.itemStacks = new ItemStack[this.getSizeInventory()];
-		
+
 		for (int i = 0; i < nbttaglist.tagCount(); ++i)
 		{
 			NBTTagCompound nbttagcompound1 = nbttaglist.getCompoundTagAt(i);
 			byte b0 = nbttagcompound1.getByte("Slot");
-			
+
 			if (b0 >= 0 && b0 < this.itemStacks.length)
 			{
 				this.itemStacks[b0] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
 			}
 		}
 	}
-	
+
 	@Override
 	public void writeToNBT(NBTTagCompound nbt)
 	{
 		super.writeToNBT(nbt);
-		
+
 		nbt.setShort("BurnTime", (short) this.burnTime);
 		nbt.setShort("CookTime", (short) this.splitTime);
 		NBTTagList nbttaglist = new NBTTagList();
@@ -82,43 +82,43 @@ public class TileEntitySplitter extends TileEntityInventory implements ISidedInv
 				nbttaglist.appendTag(nbttagcompound1);
 			}
 		}
-		
+
 		nbt.setTag("Items", nbttaglist);
 	}
-	
+
 	public int getProgressScaled(int scalar)
 	{
 		return this.splitTime * scalar / this.getMaxSplitTime();
 	}
-	
+
 	public int getBurnTimeRemainingScaled(int scalar)
 	{
 		if (this.maxBurnTime == 0)
 		{
 			this.maxBurnTime = 200;
 		}
-		
+
 		return this.burnTime * scalar / this.maxBurnTime;
 	}
-	
+
 	public boolean isBurning()
 	{
 		return this.burnTime > 0;
 	}
-	
+
 	@Override
 	public void update()
 	{
 		boolean burning = this.burnTime > 0;
-		
+
 		if (burning)
 		{
-				this.burnTime -= 4;
+			this.burnTime -= 4;
 		}
-		
+
 		if (this.worldObj.isRemote)
 			return;
-		
+
 		if (this.canSplit())
 		{
 			if (this.burnTime == 0)
@@ -157,7 +157,7 @@ public class TileEntitySplitter extends TileEntityInventory implements ISidedInv
 		{
 			this.splitTime = 0;
 		}
-		
+
 		if (burning != this.burnTime > 0)
 		{
 			this.markDirty();
@@ -165,7 +165,7 @@ public class TileEntitySplitter extends TileEntityInventory implements ISidedInv
 			BlockSplitter.setState(this.isBurning(), this.worldObj, this.pos);
 		}
 	}
-	
+
 	private boolean canSplit()
 	{
 		ItemStack input = this.itemStacks[0];
@@ -175,26 +175,22 @@ public class TileEntitySplitter extends TileEntityInventory implements ISidedInv
 			ItemStack output2 = SplitterRecipes.instance().getResult2(input);
 			if (output == null && output2 == null)
 			{
-				return false;	
+				return false;
 			}
 			ItemStack outputSlot = this.itemStacks[2];
 			ItemStack outputSlot2 = this.itemStacks[3];
-			if(outputSlot == null && outputSlot2 == null)
-			{
-				return true;
-			}
-			else if ((outputSlot2 != null && outputSlot != null) && (outputSlot.isItemEqual(output) && outputSlot2.isItemEqual(output2)))
+			if (outputSlot == null && outputSlot2 == null)
 			{
 				return true;
 			}
 			else
-			{
-				return false;
-			}
+				return (outputSlot2 != null && outputSlot != null) && (outputSlot.isItemEqual(output) && outputSlot2
+					                                                                                         .isItemEqual(
+						                                                                                         output2));
 		}
 		return false;
 	}
-	
+
 	public void splitItem()
 	{
 		if (this.canSplit())
@@ -204,7 +200,7 @@ public class TileEntitySplitter extends TileEntityInventory implements ISidedInv
 			ItemStack output2 = SplitterRecipes.instance().getResult2(input);
 			ItemStack outputSlot = this.itemStacks[2];
 			ItemStack outputSlot2 = this.itemStacks[3];
-			
+
 			if (outputSlot == null && outputSlot2 == null)
 			{
 				this.itemStacks[2] = output.copy();
@@ -212,81 +208,98 @@ public class TileEntitySplitter extends TileEntityInventory implements ISidedInv
 			}
 			else
 			{
-					if(outputSlot.isItemEqual(output))
-					{
-						outputSlot.stackSize += output.stackSize;
-					}
-					if(outputSlot2.isItemEqual(output2))
-					{
-						outputSlot2.stackSize += output2.stackSize;
-					}
+				if (outputSlot.isItemEqual(output))
+				{
+					outputSlot.stackSize += output.stackSize;
+				}
+				if (outputSlot2.isItemEqual(output2))
+				{
+					outputSlot2.stackSize += output2.stackSize;
+				}
 			}
-			
+
 			--input.stackSize;
 			if (input.stackSize <= 0)
 			{
 				this.itemStacks[0] = null;
 			}
-
 		}
 	}
-	
+
 	public static boolean isItemFuel(ItemStack stack)
 	{
 		return getItemBurnTime(stack) > 0;
 	}
-	
+
 	public static int getItemBurnTime(ItemStack stack)
 	{
 		Item item = null;
-		if(stack != null)
+		if (stack != null)
 		{
 			item = stack.getItem();
 		}
-		if(item == Item.getItemFromBlock(MBlocks.hanging_glow_moss)) return 410;
-		if(item == MItems.mana_leaf) return 820;
-		if(item == Items.gold_nugget) return 960;
-		if(item == Item.getItemFromBlock(MBlocks.purple_glowshroom) || item == Item.getItemFromBlock(MBlocks.green_glowshroom)) return 1640;
-		if(item == Items.dye && item.getMetadata(stack) == 4) return 3200;
-		if(item == Items.gold_ingot) return 6400;
-		if(item == Item.getItemFromBlock(MBlocks.huge_purple_glowshroom) || item == Item.getItemFromBlock(MBlocks.huge_green_glowshroom)) return 6560;
-		if(item == MItems.soul_gem) return 9600;
-		if(item == MItems.radiant_quartz) return 12800;
-		if(item == Item.getItemFromBlock(Blocks.lapis_block))return 32000;
-		if(item == Item.getItemFromBlock(Blocks.gold_block) || item == Item.getItemFromBlock(MBlocks.radiant_block) || item == Item.getItemFromBlock(MBlocks.radiant_chiseled) || item == Item.getItemFromBlock(MBlocks.radiant_pillar))return 64000;
-		if(item == Item.getItemFromBlock(MBlocks.soul_gem_block)) return 96000;
+		if (item == Item.getItemFromBlock(MBlocks.hanging_glow_moss))
+			return 410;
+		if (item == MItems.mana_leaf)
+			return 820;
+		if (item == Items.gold_nugget)
+			return 960;
+		if (item == Item.getItemFromBlock(MBlocks.purple_glowshroom) || item == Item.getItemFromBlock(
+			MBlocks.green_glowshroom))
+			return 1640;
+		if (item == Items.dye && item.getMetadata(stack) == 4)
+			return 3200;
+		if (item == Items.gold_ingot)
+			return 6400;
+		if (item == Item.getItemFromBlock(MBlocks.huge_purple_glowshroom) || item == Item.getItemFromBlock(
+			MBlocks.huge_green_glowshroom))
+			return 6560;
+		if (item == MItems.soul_gem)
+			return 9600;
+		if (item == MItems.radiant_quartz)
+			return 12800;
+		if (item == Item.getItemFromBlock(Blocks.lapis_block))
+			return 32000;
+		if (item == Item.getItemFromBlock(Blocks.gold_block) || item == Item.getItemFromBlock(MBlocks.radiant_block)
+			    || item == Item.getItemFromBlock(MBlocks.radiant_chiseled) || item == Item.getItemFromBlock(
+			MBlocks.radiant_pillar))
+			return 64000;
+		if (item == Item.getItemFromBlock(MBlocks.soul_gem_block))
+			return 96000;
 		return 0;
 	}
-	
-	@Override
-	public boolean isItemValidForSlot(int index, ItemStack stack)
-    {
-		return index == 2 ? false : (index != 1 ? true : isItemFuel(stack) || SlotFurnaceFuel.isBucket(stack));
-    }
 
 	@Override
-	public int[] getSlotsForFace(EnumFacing side) {
+	public boolean isItemValidForSlot(int index, ItemStack stack)
+	{
+		return index != 2 && (index != 1 || (isItemFuel(stack) || SlotFurnaceFuel.isBucket(stack)));
+	}
+
+	@Override
+	public int[] getSlotsForFace(EnumFacing side)
+	{
 		return side == EnumFacing.DOWN ? outputSlots : (side == EnumFacing.UP ? topInputSlot : inputSlots);
 	}
 
+	@Override
 	public boolean canInsertItem(int index, ItemStack itemStackIn, EnumFacing direction)
 	{
-	    return this.isItemValidForSlot(index, itemStackIn);
+		return this.isItemValidForSlot(index, itemStackIn);
 	}
 
-
+	@Override
 	public boolean canExtractItem(int index, ItemStack stack, EnumFacing direction)
 	{
-	    if (direction == EnumFacing.DOWN && index == 1)
-	    {
-	            Item item = stack.getItem();
+		if (direction == EnumFacing.DOWN && index == 1)
+		{
+			Item item = stack.getItem();
 
-	        if (item != Items.water_bucket && item != Items.bucket)
-	        {
-	            return false;
-	        }
-	    }
+			if (item != Items.water_bucket && item != Items.bucket)
+			{
+				return false;
+			}
+		}
 
-	    return true;
+		return true;
 	}
 }

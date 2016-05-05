@@ -9,13 +9,13 @@ public class BlockPepper extends BlockCrops
 {
 	@Override
 	protected Item getSeed()
-    {
-        return MBlocks.pepper_seed;
-    }
+	{
+		return MBlocks.pepper_seed;
+	}
 
 	@Override
-    protected Item getCrop()
-    {
-        return MItems.pepper;
-    }
+	protected Item getCrop()
+	{
+		return MItems.pepper;
+	}
 }

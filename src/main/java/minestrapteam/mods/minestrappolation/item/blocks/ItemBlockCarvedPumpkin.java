@@ -1,30 +1,21 @@
 package minestrapteam.mods.minestrappolation.item.blocks;
 
 import minestrapteam.mods.minestrappolation.block.BlockCarvedPumpkin;
-import minestrapteam.mods.minestrappolation.enumtypes.ItemBrickTypes;
 import minestrapteam.mods.minestrappolation.enumtypes.MPumpkinType;
-import minestrapteam.mods.minestrappolation.enumtypes.MStoneType;
-import minestrapteam.mods.minestrappolation.lib.MReference;
 import net.minecraft.block.Block;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.resources.model.ModelBakery;
-import net.minecraft.client.resources.model.ModelResourceLocation;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemBlockCarvedPumpkin extends ItemBlock
 {
 	public Block block;
-	
+
 	public ItemBlockCarvedPumpkin(Block block)
 	{
 		super(block);
 		this.block = block;
 		this.setHasSubtypes(true);
 		this.setMaxDamage(0);
-		
 	}
 	
 	/*
@@ -48,16 +39,16 @@ public class ItemBlockCarvedPumpkin extends ItemBlock
 		}
 	}
 	*/
-	
+
 	@Override
 	public int getMetadata(int damageValue)
 	{
 		return damageValue;
 	}
-	
+
 	@Override
 	public String getUnlocalizedName(ItemStack item)
 	{
-		return MPumpkinType.byMetadata(item.getItemDamage()) + "_carved_" + ((BlockCarvedPumpkin)block).type;
+		return MPumpkinType.byMetadata(item.getItemDamage()) + "_carved_" + ((BlockCarvedPumpkin) this.block).type;
 	}
 }

@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:jadachite_bricks" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:jadachite_bricks"
     }
+  }
 }

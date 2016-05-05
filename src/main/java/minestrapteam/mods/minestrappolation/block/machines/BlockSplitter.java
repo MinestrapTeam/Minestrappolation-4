@@ -23,10 +23,10 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockSplitter extends BlockDirectional
 {
-	private static boolean					keepInventory	= false;
-	public final boolean					isBurning		= false;
-	public boolean							isActive		= false;
-	
+	private static boolean keepInventory = false;
+	public final   boolean isBurning     = false;
+	public         boolean isActive      = false;
+
 	public BlockSplitter(boolean active)
 	{
 		super(Material.rock);
@@ -37,105 +37,114 @@ public class BlockSplitter extends BlockDirectional
 			this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.05F, 1.45F, 1.05F);
 		}
 	}
-	
+
 	@Override
 	public TileEntity createNewTileEntity(World world, int metadata)
 	{
 		return new TileEntitySplitter();
 	}
-	
+
 	public static void setState(boolean active, World worldIn, BlockPos pos)
 	{
 		IBlockState iblockstate = worldIn.getBlockState(pos);
 		TileEntity tileentity = worldIn.getTileEntity(pos);
 		keepInventory = true;
-		
+
 		if (active)
 		{
-			worldIn.setBlockState(pos, MBlocks.splitter_active.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
-			worldIn.setBlockState(pos, MBlocks.splitter_active.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+			worldIn.setBlockState(pos, MBlocks.splitter_active.getDefaultState()
+			                                                  .withProperty(FACING, iblockstate.getValue(FACING)), 3);
+			worldIn.setBlockState(pos, MBlocks.splitter_active.getDefaultState()
+			                                                  .withProperty(FACING, iblockstate.getValue(FACING)), 3);
 		}
 		else
 		{
-			worldIn.setBlockState(pos, MBlocks.splitter.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
-			worldIn.setBlockState(pos, MBlocks.splitter.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+			worldIn.setBlockState(pos,
+			                      MBlocks.splitter.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)),
+			                      3);
+			worldIn.setBlockState(pos,
+			                      MBlocks.splitter.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)),
+			                      3);
 		}
-		
+
 		keepInventory = false;
-		
+
 		if (tileentity != null)
 		{
 			tileentity.validate();
 			worldIn.setTileEntity(pos, tileentity);
 		}
 	}
-	
+
 	@Override
 	public void breakBlock(World worldIn, BlockPos pos, IBlockState state)
 	{
 		if (!keepInventory)
 		{
 			TileEntity tileentity = worldIn.getTileEntity(pos);
-			
+
 			if (tileentity instanceof TileEntitySplitter)
 			{
 				InventoryHelper.dropInventoryItems(worldIn, pos, (TileEntitySplitter) tileentity);
 				worldIn.updateComparatorOutputLevel(pos, this);
 			}
 		}
-		
+
 		super.breakBlock(worldIn, pos, state);
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public EnumWorldBlockLayer getBlockLayer()
 	{
 		return EnumWorldBlockLayer.SOLID;
 	}
-	
+
 	@Override
 	public boolean isOpaqueCube()
 	{
 		return false;
 	}
-	
+
 	@Override
 	public boolean isFullCube()
 	{
 		return false;
 	}
-	
+
 	@Override
 	public int getRenderType()
 	{
 		return 3;
 	}
-	
+
 	@Override
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ)
 	{
 		if (worldIn.isRemote)
 			return true;
-		
-		playerIn.openGui(Minestrappolation.instance, MGuiHandler.GUIID_MELTER, worldIn, pos.getX(), pos.getY(), pos.getZ());
+
+		playerIn
+			.openGui(Minestrappolation.instance, MGuiHandler.GUIID_MELTER, worldIn, pos.getX(), pos.getY(), pos.getZ());
 		playerIn.addStat(MAchievements.splitter, 1);
 		return true;
 	}
-	
+
 	@Override
 	public ItemStack getPickBlock(MovingObjectPosition target, World world, BlockPos pos, EntityPlayer player)
-    {
-        return new ItemStack(MBlocks.splitter);
-    }
-	
+	{
+		return new ItemStack(MBlocks.splitter);
+	}
+
+	@Override
 	public boolean hasComparatorInputOverride()
-    {
-        return true;
-    }
-	
+	{
+		return true;
+	}
+
+	@Override
 	public int getComparatorInputOverride(World worldIn, BlockPos pos)
-    {
-        return Container.calcRedstone(worldIn.getTileEntity(pos));
-    }
+	{
+		return Container.calcRedstone(worldIn.getTileEntity(pos));
+	}
 }

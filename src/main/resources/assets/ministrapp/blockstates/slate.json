@@ -1,10 +1,18 @@
 {
-    "variants": {
-        "normal": [
-			{ "model": "ministrapp:slate_1" },
-			{ "model": "ministrapp:slate_2" },
-			{ "model": "ministrapp:slate_3" },
-			{ "model": "ministrapp:slate_4" }
-		]
-    }
+  "variants": {
+    "normal": [
+      {
+        "model": "ministrapp:slate_1"
+      },
+      {
+        "model": "ministrapp:slate_2"
+      },
+      {
+        "model": "ministrapp:slate_3"
+      },
+      {
+        "model": "ministrapp:slate_4"
+      }
+    ]
+  }
 }

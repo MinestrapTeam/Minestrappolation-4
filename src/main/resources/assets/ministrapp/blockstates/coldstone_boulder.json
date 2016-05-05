@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:coldstone_boulder" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:coldstone_boulder"
     }
+  }
 }

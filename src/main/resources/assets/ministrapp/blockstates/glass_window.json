@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:glass_window" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:glass_window"
     }
+  }
 }

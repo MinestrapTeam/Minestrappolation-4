@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:mud_bricks" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:mud_bricks"
     }
+  }
 }

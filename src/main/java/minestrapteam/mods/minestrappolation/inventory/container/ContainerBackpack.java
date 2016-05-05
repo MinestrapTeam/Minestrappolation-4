@@ -7,27 +7,25 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 
 public class ContainerBackpack extends MinestrappolationContainer
 {
 	public final InventoryBackpack inventory;
-	
+
 	/**
 	 * Current item using gui
 	 */
-	
+
 	public boolean needsUpdate;
 
 	private static final int INV_START = InventoryBackpack.INV_SIZE, INV_END = INV_START + 26,
 
 	HOTBAR_START = INV_END + 1, HOTBAR_END = HOTBAR_START + 8;
 
-	public ContainerBackpack(EntityPlayer par1Player, InventoryPlayer inventoryPlayer,
-			InventoryBackpack InventoryBackpack)
+	public ContainerBackpack(EntityPlayer par1Player, InventoryPlayer inventoryPlayer, InventoryBackpack InventoryBackpack)
 	{
 		super(par1Player, InventoryBackpack);
-		
+
 		this.inventory = InventoryBackpack;
 
 		// BARREL INVENTORY
@@ -38,7 +36,7 @@ public class ContainerBackpack extends MinestrappolationContainer
 				this.addSlotToContainer(new SlotBackpack(this.inventory, k + j * 9, 8 + k * 18, 18 + j * 18));
 			}
 		}
-		
+
 		this.addInventorySlots(0, 20);
 	}
 
@@ -48,19 +46,21 @@ public class ContainerBackpack extends MinestrappolationContainer
 		return true;
 	}
 
+	@Override
 	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2)
 	{
 		ItemStack itemstack = null;
 
-		Slot slot = (Slot) this.inventorySlots.get(par2);
+		Slot slot = this.inventorySlots.get(par2);
 
 		if (slot != null && slot.getHasStack())
 		{
 			ItemStack itemstack1 = slot.getStack();
 
 			itemstack = itemstack1.copy();
-			
-			if(itemstack.isItemEqual(new ItemStack(MItems.backpack)) || itemstack.isItemEqual(new ItemStack(MItems.satchel)))
+
+			if (itemstack.isItemEqual(new ItemStack(MItems.backpack)) || itemstack.isItemEqual(
+				new ItemStack(MItems.satchel)))
 			{
 				return null;
 			}
@@ -85,9 +85,7 @@ public class ContainerBackpack extends MinestrappolationContainer
 					{
 
 						return null;
-
 					}
-
 				}
 
 				else if (par2 >= HOTBAR_START && par2 < HOTBAR_END + 1)
@@ -98,36 +96,29 @@ public class ContainerBackpack extends MinestrappolationContainer
 					{
 
 						return null;
-
 					}
-
 				}
-
 			}
 
 			if (itemstack1.stackSize == 0)
 			{
 
-				slot.putStack((ItemStack) null);
-
+				slot.putStack(null);
 			}
 
 			else
 			{
 
 				slot.onSlotChanged();
-
 			}
 
 			if (itemstack1.stackSize == itemstack.stackSize)
 			{
 
 				return null;
-
 			}
 
 			slot.onPickupFromSlot(par1EntityPlayer, itemstack1);
-
 		}
 
 		this.needsUpdate = true;
@@ -150,7 +141,6 @@ public class ContainerBackpack extends MinestrappolationContainer
 		{
 
 			k = par3 - 1;
-
 		}
 
 		Slot slot;
@@ -165,14 +155,17 @@ public class ContainerBackpack extends MinestrappolationContainer
 
 			{
 
-				slot = (Slot) this.inventorySlots.get(k);
+				slot = this.inventorySlots.get(k);
 
 				itemstack1 = slot.getStack();
 
-				if (itemstack1 != null && itemstack1.getItem() == par1ItemStack.getItem()
-						&& (!par1ItemStack.getHasSubtypes()
-								|| par1ItemStack.getItemDamage() == itemstack1.getItemDamage())
-						&& ItemStack.areItemStackTagsEqual(par1ItemStack, itemstack1))
+				if (itemstack1 != null && itemstack1.getItem() == par1ItemStack.getItem() && (!par1ItemStack
+					                                                                               .getHasSubtypes() ||
+					                                                                              par1ItemStack
+						                                                                              .getItemDamage()
+						                                                                              == itemstack1
+							                                                                                 .getItemDamage())
+					    && ItemStack.areItemStackTagsEqual(par1ItemStack, itemstack1))
 
 				{
 
@@ -186,10 +179,9 @@ public class ContainerBackpack extends MinestrappolationContainer
 
 						itemstack1.stackSize = l;
 
-						inventory.markDirty();
+						this.inventory.markDirty();
 
 						flag1 = true;
-
 					}
 
 					else if (itemstack1.stackSize < par1ItemStack.getMaxStackSize() && l < slot.getSlotStackLimit())
@@ -200,12 +192,10 @@ public class ContainerBackpack extends MinestrappolationContainer
 
 						itemstack1.stackSize = par1ItemStack.getMaxStackSize();
 
-						inventory.markDirty();
+						this.inventory.markDirty();
 
 						flag1 = true;
-
 					}
-
 				}
 
 				if (par4)
@@ -213,7 +203,6 @@ public class ContainerBackpack extends MinestrappolationContainer
 				{
 
 					--k;
-
 				}
 
 				else
@@ -221,11 +210,8 @@ public class ContainerBackpack extends MinestrappolationContainer
 				{
 
 					++k;
-
 				}
-
 			}
-
 		}
 
 		if (par1ItemStack.stackSize > 0)
@@ -237,7 +223,6 @@ public class ContainerBackpack extends MinestrappolationContainer
 			{
 
 				k = par3 - 1;
-
 			}
 
 			else
@@ -245,14 +230,13 @@ public class ContainerBackpack extends MinestrappolationContainer
 			{
 
 				k = par2;
-
 			}
 
 			while (!par4 && k < par3 || par4 && k >= par2)
 
 			{
 
-				slot = (Slot) this.inventorySlots.get(k);
+				slot = this.inventorySlots.get(k);
 
 				itemstack1 = slot.getStack();
 
@@ -270,12 +254,11 @@ public class ContainerBackpack extends MinestrappolationContainer
 
 						par1ItemStack.stackSize = 0;
 
-						inventory.markDirty();
+						this.inventory.markDirty();
 
 						flag1 = true;
 
 						break;
-
 					}
 
 					else
@@ -286,12 +269,10 @@ public class ContainerBackpack extends MinestrappolationContainer
 
 						par1ItemStack.stackSize -= slot.getSlotStackLimit();
 
-						inventory.markDirty();
+						this.inventory.markDirty();
 
 						flag1 = true;
-
 					}
-
 				}
 
 				if (par4)
@@ -299,7 +280,6 @@ public class ContainerBackpack extends MinestrappolationContainer
 				{
 
 					--k;
-
 				}
 
 				else
@@ -307,36 +287,32 @@ public class ContainerBackpack extends MinestrappolationContainer
 				{
 
 					++k;
-
 				}
-
 			}
-
 		}
 
 		return flag1;
-
 	}
-	
+
 	@Override
 	public ItemStack slotClick(int slotId, int clickedButton, int mode, EntityPlayer playerIn)
-    {
+	{
 		this.needsUpdate = true;
 		InventoryPlayer inventoryplayer = playerIn.inventory;
-		
-		if(slotId >= 0 && this.getSlot(slotId) != null && this.getSlot(slotId).getStack() == playerIn.getHeldItem())
+
+		if (slotId >= 0 && this.getSlot(slotId) != null && this.getSlot(slotId).getStack() == playerIn.getHeldItem())
 		{
 			return null;
 		}
 		if (mode == 2 && clickedButton >= 0 && clickedButton < 9)
-        {
-			Slot slot2 = (Slot)this.inventorySlots.get(slotId);
+		{
+			Slot slot2 = this.inventorySlots.get(slotId);
 			ItemStack itemstack3 = inventoryplayer.getStackInSlot(clickedButton);
-			if(slot2.getStack() == playerIn.getHeldItem() || itemstack3 == playerIn.getHeldItem())
+			if (slot2.getStack() == playerIn.getHeldItem() || itemstack3 == playerIn.getHeldItem())
 			{
 				return null;
 			}
-        }
+		}
 		return super.slotClick(slotId, clickedButton, mode, playerIn);
-    }
+	}
 }

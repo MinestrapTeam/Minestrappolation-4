@@ -1,10 +1,10 @@
 {
-   "variants":{
-      "half=top":{
-         "model":"ministrapp:upper_slab_glacierrock_cobble"
-      },
-      "half=bottom":{
-         "model":"ministrapp:half_slab_glacierrock_cobble"
-      }
-   }
+  "variants": {
+    "half=top": {
+      "model": "ministrapp:upper_slab_glacierrock_cobble"
+    },
+    "half=bottom": {
+      "model": "ministrapp:half_slab_glacierrock_cobble"
+    }
+  }
 }

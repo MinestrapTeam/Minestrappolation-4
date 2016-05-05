@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:titanium_block" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:titanium_block"
     }
+  }
 }

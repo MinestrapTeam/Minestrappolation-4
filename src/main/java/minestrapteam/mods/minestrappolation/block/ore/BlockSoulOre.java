@@ -15,25 +15,27 @@ import net.minecraftforge.common.IPlantable;
 
 public class BlockSoulOre extends MBlockOre
 {
-	
+
 	public BlockSoulOre(Material materialIn, MapColor mapColorIn, Item itemDrop, int meta, int expMin, int expMax, int dropAmount, int bonusAmount, String tool, int level, boolean silkHarvest)
 	{
-		super(materialIn, mapColorIn, itemDrop, meta, expMin, expMax, dropAmount, bonusAmount, tool, level, silkHarvest);
+		super(materialIn, mapColorIn, itemDrop, meta, expMin, expMax, dropAmount, bonusAmount, tool, level,
+		      silkHarvest);
 	}
-	
+
 	@Override
 	public AxisAlignedBB getCollisionBoundingBox(World worldIn, BlockPos pos, IBlockState state)
 	{
-		return new AxisAlignedBB(pos.getX(), pos.getY(), pos.getZ(), (double) pos.getX() + 1, (double) pos.getY() + 0.875F, (double) pos.getZ() + 1);
+		return new AxisAlignedBB(pos.getX(), pos.getY(), pos.getZ(), (double) pos.getX() + 1,
+		                         (double) pos.getY() + 0.875F, (double) pos.getZ() + 1);
 	}
-	
+
 	@Override
 	public void onEntityCollidedWithBlock(World world, BlockPos pos, Entity entity)
 	{
 		entity.motionX *= 0.4D;
 		entity.motionZ *= 0.4D;
 	}
-	
+
 	@Override
 	public boolean canSustainPlant(IBlockAccess world, BlockPos pos, EnumFacing direction, IPlantable plantable)
 	{

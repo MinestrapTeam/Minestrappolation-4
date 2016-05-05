@@ -1,24 +1,24 @@
 package minestrapteam.mods.minestrappolation.world;
 
-import java.util.Random;
-
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
+import java.util.Random;
+
 public class WorldGenSpire extends WorldGenerator
 {
-	private Block	block;
-	private Block	spawnOn;
-	
+	private Block block;
+	private Block spawnOn;
+
 	public WorldGenSpire(Block block, Block canSpawnOn)
 	{
 		this.block = block;
 		this.spawnOn = canSpawnOn;
 	}
-	
+
 	@Override
 	public boolean generate(World world, Random rand, BlockPos pos)
 	{
@@ -26,7 +26,7 @@ public class WorldGenSpire extends WorldGenerator
 		{
 			return false;
 		}
-		
+
 		int depth = rand.nextInt(6) + 3;
 		for (int i = 0; i < depth; i++)
 		{
@@ -36,7 +36,7 @@ public class WorldGenSpire extends WorldGenerator
 			world.setBlockState(pos.add(0, -i, 1), this.block.getDefaultState(), 2);
 			world.setBlockState(pos.add(0, -i, -1), this.block.getDefaultState(), 2);
 		}
-		
+
 		int height = rand.nextInt(4) + 2;
 		for (int i = 0; i < height; i++)
 		{

@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:glacierite_block" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:glacierite_block"
     }
+  }
 }

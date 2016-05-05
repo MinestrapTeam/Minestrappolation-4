@@ -1,40 +1,160 @@
 {
-"__comment": "Designed by Delocuro with BDcraft Cubik PRO 0.95 Beta - http://bdcraft.net",
-"textures": {
+  "__comment": "Designed by Delocuro with BDcraft Cubik PRO 0.95 Beta - http://bdcraft.net",
+  "textures": {
     "particle": "ministrapp:blocks/geneblock_mooshroom",
     "texture": "ministrapp:blocks/geneblock_mooshroom",
     "mushroom_red": "ministrapp:blocks/mushroom_red"
-},
-"elements": [ 
-{
-    "from": [ 1, 0, 1 ],
-    "to": [ 15, 14, 15 ],
-    "faces": {
-        "down":  { "uv": [ 15, 15, 1, 1 ], "texture": "#texture" },
-        "up":    { "uv": [ 1, 1, 15, 15 ], "texture": "#texture" },
-        "north": { "uv": [ 1, 1, 15, 15 ], "texture": "#texture" },
-        "south": { "uv": [ 1, 1, 15, 15 ], "texture": "#texture" },
-        "west":  { "uv": [ 1, 1, 15, 15 ], "texture": "#texture" },
-        "east":  { "uv": [ 1, 1, 15, 15 ], "texture": "#texture" }
+  },
+  "elements": [
+    {
+      "from": [
+        1,
+        0,
+        1
+      ],
+      "to": [
+        15,
+        14,
+        15
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            15,
+            15,
+            1,
+            1
+          ],
+          "texture": "#texture"
+        },
+        "up": {
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ],
+          "texture": "#texture"
+        },
+        "north": {
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ],
+          "texture": "#texture"
+        },
+        "south": {
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ],
+          "texture": "#texture"
+        },
+        "west": {
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ],
+          "texture": "#texture"
+        },
+        "east": {
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ],
+          "texture": "#texture"
+        }
+      }
+    },
+    {
+      "from": [
+        5.0625,
+        14,
+        5.25
+      ],
+      "to": [
+        5.125,
+        20,
+        13.25
+      ],
+      "rotation": {
+        "origin": [
+          5.0625,
+          14,
+          5.25
+        ],
+        "axis": "y",
+        "angle": 45
+      },
+      "faces": {
+        "west": {
+          "uv": [
+            4,
+            10,
+            12,
+            16
+          ],
+          "texture": "#mushroom_red"
+        },
+        "east": {
+          "uv": [
+            4,
+            10,
+            12,
+            16
+          ],
+          "texture": "#mushroom_red"
+        }
+      }
+    },
+    {
+      "from": [
+        10.8125,
+        14,
+        5.1875
+      ],
+      "to": [
+        10.875,
+        20,
+        13.1875
+      ],
+      "rotation": {
+        "origin": [
+          10.8125,
+          14,
+          5.1875
+        ],
+        "axis": "y",
+        "angle": -45
+      },
+      "faces": {
+        "west": {
+          "uv": [
+            4,
+            10,
+            12,
+            16
+          ],
+          "texture": "#mushroom_red"
+        },
+        "east": {
+          "uv": [
+            4,
+            10,
+            12,
+            16
+          ],
+          "texture": "#mushroom_red"
+        }
+      }
     }
-},
-{
-    "from": [ 5.0625, 14, 5.25 ],
-    "to": [ 5.125, 20, 13.25 ],
-    "rotation": { "origin": [ 5.0625, 14, 5.25 ], "axis": "y", "angle": 45 },
-    "faces": {
-        "west":  { "uv": [ 4, 10, 12, 16 ], "texture": "#mushroom_red" },
-        "east":  { "uv": [ 4, 10, 12, 16 ], "texture": "#mushroom_red" }
-    }
-},
-{
-    "from": [ 10.8125, 14, 5.1875 ],
-    "to": [ 10.875, 20, 13.1875 ],
-    "rotation": { "origin": [ 10.8125, 14, 5.1875 ], "axis": "y", "angle": -45 },
-    "faces": {
-        "west":  { "uv": [ 4, 10, 12, 16 ], "texture": "#mushroom_red" },
-        "east":  { "uv": [ 4, 10, 12, 16 ], "texture": "#mushroom_red" }
-    }
-}
-]
+  ]
 }

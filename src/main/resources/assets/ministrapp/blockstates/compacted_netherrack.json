@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:compacted_netherrack_0" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:compacted_netherrack_0"
     }
+  }
 }

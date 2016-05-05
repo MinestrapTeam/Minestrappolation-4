@@ -8,13 +8,13 @@ public class BlockPeanuts extends BlockCrops
 {
 	@Override
 	protected Item getSeed()
-    {
-        return MBlocks.peanuts;
-    }
+	{
+		return MBlocks.peanuts;
+	}
 
 	@Override
-    protected Item getCrop()
-    {
-        return MBlocks.peanuts;
-    }
+	protected Item getCrop()
+	{
+		return MBlocks.peanuts;
+	}
 }

@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:snow_refined" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:snow_refined"
     }
+  }
 }

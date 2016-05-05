@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:fan" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:fan"
     }
+  }
 }

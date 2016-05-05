@@ -14,19 +14,20 @@ public class BlockCrate extends BlockBarrel
 {
 	public BlockCrate()
 	{
-		
+
 	}
-	
+
 	@Override
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ)
 	{
 		if (worldIn.isRemote)
 			return true;
-		
-		playerIn.openGui(Minestrappolation.instance, MGuiHandler.GUIID_CRATE, worldIn, pos.getX(), pos.getY(), pos.getZ());
+
+		playerIn
+			.openGui(Minestrappolation.instance, MGuiHandler.GUIID_CRATE, worldIn, pos.getX(), pos.getY(), pos.getZ());
 		return true;
 	}
-	
+
 	@Override
 	public TileEntity createNewTileEntity(World world, int metadata)
 	{

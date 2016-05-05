@@ -1,7 +1,5 @@
 package minestrapteam.mods.minestrappolation.block;
 
-import java.util.Random;
-
 import minestrapteam.mods.minestrappolation.Minestrappolation;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -19,52 +17,63 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import java.util.Random;
+
 public class BlockColdCobweb extends MBlock
 {
 	public BlockColdCobweb()
 	{
 		super(Material.web, MapColor.airColor);
-        this.setCreativeTab(Minestrappolation.tabMDecor);
+		this.setCreativeTab(Minestrappolation.tabMDecor);
 	}
-	
+
+	@Override
 	public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
-    {
-        entityIn.setInWeb();
-        if(entityIn instanceof EntityLivingBase)
-        {
-        	((EntityLivingBase) entityIn).addPotionEffect(new PotionEffect(Potion.moveSlowdown.getId(), 20 * 10, 2, false, false));
-        	((EntityLivingBase) entityIn).addPotionEffect(new PotionEffect(Potion.digSlowdown.getId(), 20 * 10, 2, false, false));
-        }
-    }
+	{
+		entityIn.setInWeb();
+		if (entityIn instanceof EntityLivingBase)
+		{
+			((EntityLivingBase) entityIn)
+				.addPotionEffect(new PotionEffect(Potion.moveSlowdown.getId(), 20 * 10, 2, false, false));
+			((EntityLivingBase) entityIn)
+				.addPotionEffect(new PotionEffect(Potion.digSlowdown.getId(), 20 * 10, 2, false, false));
+		}
+	}
 
-    public boolean isOpaqueCube()
-    {
-        return false;
-    }
+	@Override
+	public boolean isOpaqueCube()
+	{
+		return false;
+	}
 
-    public AxisAlignedBB getCollisionBoundingBox(World worldIn, BlockPos pos, IBlockState state)
-    {
-        return null;
-    }
+	@Override
+	public AxisAlignedBB getCollisionBoundingBox(World worldIn, BlockPos pos, IBlockState state)
+	{
+		return null;
+	}
 
-    public boolean isFullCube()
-    {
-        return false;
-    }
+	@Override
+	public boolean isFullCube()
+	{
+		return false;
+	}
 
-    public Item getItemDropped(IBlockState state, Random rand, int fortune)
-    {
-        return Items.string;
-    }
+	@Override
+	public Item getItemDropped(IBlockState state, Random rand, int fortune)
+	{
+		return Items.string;
+	}
 
-    protected boolean canSilkHarvest()
-    {
-        return true;
-    }
+	@Override
+	protected boolean canSilkHarvest()
+	{
+		return true;
+	}
 
-    @SideOnly(Side.CLIENT)
-    public EnumWorldBlockLayer getBlockLayer()
-    {
-        return EnumWorldBlockLayer.TRANSLUCENT;
-    }
+	@Override
+	@SideOnly(Side.CLIENT)
+	public EnumWorldBlockLayer getBlockLayer()
+	{
+		return EnumWorldBlockLayer.TRANSLUCENT;
+	}
 }

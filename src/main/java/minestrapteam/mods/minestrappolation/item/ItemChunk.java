@@ -1,7 +1,5 @@
 package minestrapteam.mods.minestrappolation.item;
 
-import java.util.List;
-
 import minestrapteam.mods.minestrappolation.enumtypes.MItemChunkTypes;
 import minestrapteam.mods.minestrappolation.lib.MReference;
 import net.minecraft.client.Minecraft;
@@ -14,19 +12,21 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import java.util.List;
+
 public class ItemChunk extends Item
 {
-	
+
 	public ItemChunk()
 	{
 		this.setHasSubtypes(true);
 		this.setMaxDamage(0);
 	}
-	
+
 	public static void inventoryRender()
 	{
 		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "chunks");
-		
+
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:stone_chunk");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:red_rock_chunk");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:coldstone_chunk");
@@ -38,34 +38,37 @@ public class ItemChunk extends Item
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:iron_chunk");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:torite_chunk");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:titanium_chunk");
-		
+
 		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "chunks");
 		MItemChunkTypes[] aenumtype = MItemChunkTypes.values();
 		int i = aenumtype.length;
-		
+
 		for (int j = 0; j < i; ++j)
 		{
 			MItemChunkTypes enumtype = aenumtype[j];
-			ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(MReference.MODID + ":" + enumtype.getUnlocalizedName() + "_chunk", "inventory");
-			Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, enumtype.getMetadata(), itemModelResourceLocation);
+			ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(MReference.MODID + ":"
+				                                                                            + enumtype
+					                                                                              .getUnlocalizedName()
+				                                                                            + "_chunk", "inventory");
+			Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
+			         .register(itemBlockVariants, enumtype.getMetadata(), itemModelResourceLocation);
 		}
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void getSubItems(Item itemIn, CreativeTabs tab, List list)
 	{
 		MItemChunkTypes[] aenumtype = MItemChunkTypes.values();
 		int i = aenumtype.length;
-		
+
 		for (int j = 0; j < i; ++j)
 		{
 			MItemChunkTypes enumtype = aenumtype[j];
 			list.add(new ItemStack(itemIn, 1, enumtype.getMetadata()));
 		}
-		
 	}
-	
+
 	@Override
 	public String getUnlocalizedName(ItemStack item)
 	{

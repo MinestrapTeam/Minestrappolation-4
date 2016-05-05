@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.IFuelHandler;
 
 public class MFuelHandler implements IFuelHandler
 {
-	
+
 	@Override
 	public int getBurnTime(ItemStack fuel)
 	{
@@ -90,5 +90,4 @@ public class MFuelHandler implements IFuelHandler
 			return 200000;
 		return 0;
 	}
-	
 }

@@ -1,10 +1,26 @@
 {
-    "variants": {
-        "facing=south": { "model": "ministrapp:sorter_horizontal", "y": 0 },
-	"facing=north": { "model": "ministrapp:sorter_horizontal", "y": 180 },
-	"facing=west": { "model": "ministrapp:sorter_horizontal", "y": 90 },
-	"facing=east": { "model": "ministrapp:sorter_horizontal", "y": 270 },
-	"facing=up": { "model": "ministrapp:sorter_vertical" },
-	"facing=down": { "model": "ministrapp:sorter_vertical" }
+  "variants": {
+    "facing=south": {
+      "model": "ministrapp:sorter_horizontal",
+      "y": 0
+    },
+    "facing=north": {
+      "model": "ministrapp:sorter_horizontal",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ministrapp:sorter_horizontal",
+      "y": 90
+    },
+    "facing=east": {
+      "model": "ministrapp:sorter_horizontal",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "ministrapp:sorter_vertical"
+    },
+    "facing=down": {
+      "model": "ministrapp:sorter_vertical"
     }
+  }
 }

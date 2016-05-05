@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:crate" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:crate"
     }
+  }
 }

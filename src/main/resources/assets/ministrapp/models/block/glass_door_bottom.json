@@ -1,7 +1,7 @@
 {
-    "parent": "block/door_bottom",
-    "textures": {
-        "bottom": "ministrapp:blocks/door_glass_lower",
-        "top": "ministrapp:blocks/door_glass_upper"
-    }
+  "parent": "block/door_bottom",
+  "textures": {
+    "bottom": "ministrapp:blocks/door_glass_lower",
+    "top": "ministrapp:blocks/door_glass_upper"
+  }
 }

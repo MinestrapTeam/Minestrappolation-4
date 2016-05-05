@@ -1,8 +1,8 @@
 {
-    "parent": "block/farmland",
-    "textures": {
-        "particle": "ministrapp:blocks/virtian_soil",
-        "dirt": "ministrapp:blocks/virtian_soil",
-        "top": "ministrapp:blocks/virtian_farmland_top"
-    }
+  "parent": "block/farmland",
+  "textures": {
+    "particle": "ministrapp:blocks/virtian_soil",
+    "dirt": "ministrapp:blocks/virtian_soil",
+    "top": "ministrapp:blocks/virtian_farmland_top"
+  }
 }

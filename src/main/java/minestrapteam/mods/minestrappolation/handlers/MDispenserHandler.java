@@ -3,7 +3,7 @@ package minestrapteam.mods.minestrappolation.handlers;
 import minestrapteam.mods.minestrappolation.lib.MItems;
 import net.minecraft.block.BlockDispenser;
 
-public class MDispenserHandler 
+public class MDispenserHandler
 {
 	public static void registerBehaviors()
 	{

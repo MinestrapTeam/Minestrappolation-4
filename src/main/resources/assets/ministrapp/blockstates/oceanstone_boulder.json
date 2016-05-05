@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:oceanstone_boulder" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:oceanstone_boulder"
     }
+  }
 }

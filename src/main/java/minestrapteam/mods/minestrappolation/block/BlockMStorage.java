@@ -7,15 +7,15 @@ import net.minecraft.block.state.IBlockState;
 
 public class BlockMStorage extends Block
 {
-	
-	private final MapColor	mapColor;
-	
+
+	private final MapColor mapColor;
+
 	public BlockMStorage(Material materialIn, MapColor mapColorIn)
 	{
 		super(materialIn);
 		this.mapColor = mapColorIn;
 	}
-	
+
 	@Override
 	public MapColor getMapColor(IBlockState state)
 	{

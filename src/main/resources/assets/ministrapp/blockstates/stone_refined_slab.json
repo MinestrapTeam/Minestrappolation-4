@@ -1,6 +1,10 @@
 {
-    "variants": {
-        "half=bottom": { "model": "half_slab_stone_refined" },
-        "half=top": { "model": "upper_slab_stone_refined" }
+  "variants": {
+    "half=bottom": {
+      "model": "half_slab_stone_refined"
+    },
+    "half=top": {
+      "model": "upper_slab_stone_refined"
     }
+  }
 }

@@ -1,25 +1,81 @@
 {
-    "variants": {
-       "age=0": { "model": "ministrapp:block_sheep_bare" },
-	   "age=1": { "model": "ministrapp:block_sheep_bare" },
-       "age=2": { "model": "ministrapp:block_sheep_bare" },
-       "age=3": { "model": "ministrapp:block_sheep_bare" },
-       "age=4": { "model": "ministrapp:block_sheep_bare" },
-       "age=5":[
-	       { "model": "ministrapp:block_sheep_wool_grey" },
-		   { "model": "ministrapp:block_sheep_wool_grey", "x": 90 },
-		   { "model": "ministrapp:block_sheep_wool_grey", "x": 180 },
-		   { "model": "ministrapp:block_sheep_wool_grey", "x": 270 },
-		   { "model": "ministrapp:block_sheep_wool_grey", "y": 90 },
-		   { "model": "ministrapp:block_sheep_wool_grey", "y": 180 },
-		   { "model": "ministrapp:block_sheep_wool_grey", "y": 270 },
-		   { "model": "ministrapp:block_sheep_wool_grey", "z": 90 },
-		   { "model": "ministrapp:block_sheep_wool_grey", "z": 180 },
-		   { "model": "ministrapp:block_sheep_wool_grey", "z": 270 },
-		   { "model": "ministrapp:block_sheep_wool_grey", "x": 90, "y": 90 },
-		   { "model": "ministrapp:block_sheep_wool_grey", "x": 90, "z": 90 },
-		   { "model": "ministrapp:block_sheep_wool_grey", "y": 90, "z": 90 },
-		   { "model": "ministrapp:block_sheep_wool_grey", "x": 90, "y": 90, "z": 90 }
-	   ]
-    }
+  "variants": {
+    "age=0": {
+      "model": "ministrapp:block_sheep_bare"
+    },
+    "age=1": {
+      "model": "ministrapp:block_sheep_bare"
+    },
+    "age=2": {
+      "model": "ministrapp:block_sheep_bare"
+    },
+    "age=3": {
+      "model": "ministrapp:block_sheep_bare"
+    },
+    "age=4": {
+      "model": "ministrapp:block_sheep_bare"
+    },
+    "age=5": [
+      {
+        "model": "ministrapp:block_sheep_wool_grey"
+      },
+      {
+        "model": "ministrapp:block_sheep_wool_grey",
+        "x": 90
+      },
+      {
+        "model": "ministrapp:block_sheep_wool_grey",
+        "x": 180
+      },
+      {
+        "model": "ministrapp:block_sheep_wool_grey",
+        "x": 270
+      },
+      {
+        "model": "ministrapp:block_sheep_wool_grey",
+        "y": 90
+      },
+      {
+        "model": "ministrapp:block_sheep_wool_grey",
+        "y": 180
+      },
+      {
+        "model": "ministrapp:block_sheep_wool_grey",
+        "y": 270
+      },
+      {
+        "model": "ministrapp:block_sheep_wool_grey",
+        "z": 90
+      },
+      {
+        "model": "ministrapp:block_sheep_wool_grey",
+        "z": 180
+      },
+      {
+        "model": "ministrapp:block_sheep_wool_grey",
+        "z": 270
+      },
+      {
+        "model": "ministrapp:block_sheep_wool_grey",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "ministrapp:block_sheep_wool_grey",
+        "x": 90,
+        "z": 90
+      },
+      {
+        "model": "ministrapp:block_sheep_wool_grey",
+        "y": 90,
+        "z": 90
+      },
+      {
+        "model": "ministrapp:block_sheep_wool_grey",
+        "x": 90,
+        "y": 90,
+        "z": 90
+      }
+    ]
+  }
 }

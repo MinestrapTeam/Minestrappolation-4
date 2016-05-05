@@ -13,7 +13,7 @@ import net.minecraft.world.World;
 
 public class BlockCardboard extends MBlock
 {
-	public BlockCardboard(Material materialIn, MapColor mapColorIn) 
+	public BlockCardboard(Material materialIn, MapColor mapColorIn)
 	{
 		super(materialIn, mapColorIn);
 	}
@@ -21,21 +21,21 @@ public class BlockCardboard extends MBlock
 	@Override
 	public void onNeighborBlockChange(World worldIn, BlockPos pos, IBlockState state, Block neighborBlock)
 	{
-		if(neighborBlock == Blocks.water || neighborBlock == Blocks.flowing_water)
+		if (neighborBlock == Blocks.water || neighborBlock == Blocks.flowing_water)
 		{
 			worldIn.setBlockState(pos, MBlocks.wet_cardboard_block.getDefaultState());
 		}
 	}
-	
+
 	@Override
 	public void fillWithRain(World worldIn, BlockPos pos)
 	{
-		if(worldIn.rand.nextInt(5) == 1)
+		if (worldIn.rand.nextInt(5) == 1)
 		{
 			worldIn.setBlockState(pos, MBlocks.wet_cardboard_block.getDefaultState());
 		}
 	}
-	
+
 	@Override
 	public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face)
 	{

@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:quantum_claimerator" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:quantum_claimerator"
     }
+  }
 }

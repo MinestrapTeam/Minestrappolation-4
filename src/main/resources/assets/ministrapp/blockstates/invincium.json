@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:invincium" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:invincium"
     }
+  }
 }

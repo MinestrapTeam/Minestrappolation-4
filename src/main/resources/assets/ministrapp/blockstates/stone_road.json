@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:stone_road" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:stone_road"
     }
+  }
 }

@@ -7,24 +7,23 @@ import net.minecraft.item.ItemStack;
 
 public class ItemBlockTerraCreep extends ItemBlock
 {
-	
+
 	public ItemBlockTerraCreep(Block block)
 	{
 		super(block);
 		this.setHasSubtypes(true);
 		this.setMaxDamage(0);
 	}
-	
+
 	@Override
 	public int getMetadata(int damageValue)
 	{
 		return damageValue;
 	}
-	
+
 	@Override
 	public String getUnlocalizedName(ItemStack item)
 	{
 		return MStoneType.byMetadata(item.getItemDamage()) + "_creep";
 	}
-	
 }

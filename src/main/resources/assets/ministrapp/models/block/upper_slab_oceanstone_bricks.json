@@ -1,8 +1,8 @@
 {
-    "parent": "block/upper_slab",
-    "textures": {
-        "bottom": "ministrapp:blocks/oceanstone_bricks",
-        "top": "ministrapp:blocks/oceanstone_bricks",
-        "side": "ministrapp:blocks/oceanstone_bricks"
-    }
+  "parent": "block/upper_slab",
+  "textures": {
+    "bottom": "ministrapp:blocks/oceanstone_bricks",
+    "top": "ministrapp:blocks/oceanstone_bricks",
+    "side": "ministrapp:blocks/oceanstone_bricks"
+  }
 }

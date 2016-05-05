@@ -1,6 +1,6 @@
 {
-    "parent": "block/cross",
-    "textures": {
-        "cross": "ministrapp:blocks/seaweed"
-    }
+  "parent": "block/cross",
+  "textures": {
+    "cross": "ministrapp:blocks/seaweed"
+  }
 }

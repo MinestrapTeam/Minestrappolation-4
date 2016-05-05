@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:block_flesh" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:block_flesh"
     }
+  }
 }

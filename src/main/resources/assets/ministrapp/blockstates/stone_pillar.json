@@ -1,8 +1,17 @@
 {
-    "variants": {
-        "axis=y":  { "model": "stone_pillar" },
-        "axis=z":   { "model": "stone_pillar", "x": 90 },
-        "axis=x":   { "model": "stone_pillar", "x": 90, "y": 90 }
+  "variants": {
+    "axis=y": {
+      "model": "stone_pillar"
+    },
+    "axis=z": {
+      "model": "stone_pillar",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "stone_pillar",
+      "x": 90,
+      "y": 90
     }
+  }
 }
 

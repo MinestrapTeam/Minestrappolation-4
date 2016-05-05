@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:blazium_block" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:blazium_block"
     }
+  }
 }

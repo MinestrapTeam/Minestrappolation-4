@@ -1,8 +1,16 @@
 {
-    "variants": {
-        "stage=0,type=redwood": { "model": "ministrapp:redwood_sapling" },
-        "stage=1,type=redwood": { "model": "ministrapp:redwood_sapling" },
-		"stage=0,type=frozen_oak": { "model": "ministrapp:frozen_oak_sapling" },
-        "stage=1,type=frozen_oak": { "model": "ministrapp:frozen_oak_sapling" }
+  "variants": {
+    "stage=0,type=redwood": {
+      "model": "ministrapp:redwood_sapling"
+    },
+    "stage=1,type=redwood": {
+      "model": "ministrapp:redwood_sapling"
+    },
+    "stage=0,type=frozen_oak": {
+      "model": "ministrapp:frozen_oak_sapling"
+    },
+    "stage=1,type=frozen_oak": {
+      "model": "ministrapp:frozen_oak_sapling"
     }
+  }
 }

@@ -8,37 +8,38 @@ import net.minecraft.item.Item;
 public class MTab extends CreativeTabs
 {
 	String tabLabel;
+
 	public MTab(String label)
 	{
 		super(label);
-		tabLabel = label;
+		this.tabLabel = label;
 		this.setBackgroundImageName("ministrappolation.png");
 	}
-	
+
 	@Override
 	public Item getTabIconItem()
 	{
-		if(tabLabel == "tabMBuilding")
+		if (this.tabLabel == "tabMBuilding")
 		{
 			return Item.getItemFromBlock(MBlocks.stone_pattern_bricks);
 		}
-		else if(tabLabel == "tabMDecor")
+		else if (this.tabLabel == "tabMDecor")
 		{
 			return Item.getItemFromBlock(MBlocks.ministrapp_sapling);
 		}
-		else if(tabLabel == "tabMTech")
+		else if (this.tabLabel == "tabMTech")
 		{
 			return Item.getItemFromBlock(MBlocks.alloy);
 		}
-		else if(tabLabel == "tabMMaterials")
+		else if (this.tabLabel == "tabMMaterials")
 		{
 			return MItems.reinforced_stick;
 		}
-		else if(tabLabel == "tabMFood")
+		else if (this.tabLabel == "tabMFood")
 		{
 			return MItems.sugar_cookie;
 		}
-		else if(tabLabel == "tabMTools")
+		else if (this.tabLabel == "tabMTools")
 		{
 			return MItems.copper_axe;
 		}
@@ -47,5 +48,4 @@ public class MTab extends CreativeTabs
 			return MItems.fire_sword;
 		}
 	}
-	
 }

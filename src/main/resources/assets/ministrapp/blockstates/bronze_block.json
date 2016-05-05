@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:bronze_block" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:bronze_block"
     }
+  }
 }

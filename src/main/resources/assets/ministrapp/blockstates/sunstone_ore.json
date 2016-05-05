@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:sunstone_ore" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:sunstone_ore"
     }
+  }
 }

@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:double_slab_deep_red_rock" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:double_slab_deep_red_rock"
     }
+  }
 }

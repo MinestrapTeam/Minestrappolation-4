@@ -1,10 +1,10 @@
 {
-   "variants":{
-      "half=top":{
-         "model":"ministrapp:upper_slab_icestone"
-      },
-      "half=bottom":{
-         "model":"ministrapp:half_slab_icestone"
-      }
-   }
+  "variants": {
+    "half=top": {
+      "model": "ministrapp:upper_slab_icestone"
+    },
+    "half=bottom": {
+      "model": "ministrapp:half_slab_icestone"
+    }
+  }
 }

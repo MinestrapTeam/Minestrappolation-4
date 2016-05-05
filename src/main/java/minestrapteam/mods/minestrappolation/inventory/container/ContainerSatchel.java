@@ -11,7 +11,7 @@ import net.minecraft.nbt.NBTTagCompound;
 public class ContainerSatchel extends MinestrappolationContainer
 {
 	public final InventoryBackpack inventory;
-	
+
 	/**
 	 * Current item using gui
 	 */
@@ -23,8 +23,7 @@ public class ContainerSatchel extends MinestrappolationContainer
 
 	HOTBAR_START = INV_END + 1, HOTBAR_END = HOTBAR_START + 8;
 
-	public ContainerSatchel(EntityPlayer par1Player, InventoryPlayer inventoryPlayer,
-			InventoryBackpack InventoryBackpack)
+	public ContainerSatchel(EntityPlayer par1Player, InventoryPlayer inventoryPlayer, InventoryBackpack InventoryBackpack)
 	{
 		super(par1Player, InventoryBackpack);
 
@@ -51,7 +50,7 @@ public class ContainerSatchel extends MinestrappolationContainer
 			this.containerstack.setTagCompound(new NBTTagCompound());
 		}
 
-		((InventoryBackpack) inventory).writeToNBT(this.containerstack.getTagCompound());
+		this.inventory.writeToNBT(this.containerstack.getTagCompound());
 	}
 
 	@Override
@@ -60,11 +59,12 @@ public class ContainerSatchel extends MinestrappolationContainer
 		return true;
 	}
 
+	@Override
 	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2)
 	{
 		ItemStack itemstack = null;
 
-		Slot slot = (Slot) this.inventorySlots.get(par2);
+		Slot slot = this.inventorySlots.get(par2);
 
 		if (slot != null && slot.getHasStack())
 		{
@@ -92,9 +92,7 @@ public class ContainerSatchel extends MinestrappolationContainer
 					{
 
 						return null;
-
 					}
-
 				}
 
 				else if (par2 >= HOTBAR_START && par2 < HOTBAR_END + 1)
@@ -105,35 +103,29 @@ public class ContainerSatchel extends MinestrappolationContainer
 					{
 
 						return null;
-
 					}
-
 				}
 			}
 
 			if (itemstack1.stackSize == 0)
 			{
 
-				slot.putStack((ItemStack) null);
-
+				slot.putStack(null);
 			}
 
 			else
 			{
 
 				slot.onSlotChanged();
-
 			}
 
 			if (itemstack1.stackSize == itemstack.stackSize)
 			{
 
 				return null;
-
 			}
 
 			slot.onPickupFromSlot(par1EntityPlayer, itemstack1);
-
 		}
 
 		this.needsUpdate = true;
@@ -146,20 +138,20 @@ public class ContainerSatchel extends MinestrappolationContainer
 	{
 		this.needsUpdate = true;
 		InventoryPlayer inventoryplayer = player.inventory;
-		
-		if(slotID >= 0 && this.getSlot(slotID) != null && this.getSlot(slotID).getStack() == player.getHeldItem())
+
+		if (slotID >= 0 && this.getSlot(slotID) != null && this.getSlot(slotID).getStack() == player.getHeldItem())
 		{
 			return null;
 		}
 		if (flag == 2 && buttonPressed >= 0 && buttonPressed < 9)
-        {
-			Slot slot2 = (Slot)this.inventorySlots.get(slotID);
+		{
+			Slot slot2 = this.inventorySlots.get(slotID);
 			ItemStack itemstack3 = inventoryplayer.getStackInSlot(buttonPressed);
-			if(slot2.getStack() == player.getHeldItem() || itemstack3 == player.getHeldItem())
+			if (slot2.getStack() == player.getHeldItem() || itemstack3 == player.getHeldItem())
 			{
 				return null;
 			}
-        }
+		}
 		return super.slotClick(slotID, buttonPressed, flag, player);
 	}
 
@@ -190,7 +182,6 @@ public class ContainerSatchel extends MinestrappolationContainer
 		{
 
 			k = par3 - 1;
-
 		}
 
 		Slot slot;
@@ -205,14 +196,17 @@ public class ContainerSatchel extends MinestrappolationContainer
 
 			{
 
-				slot = (Slot) this.inventorySlots.get(k);
+				slot = this.inventorySlots.get(k);
 
 				itemstack1 = slot.getStack();
 
-				if (itemstack1 != null && itemstack1.getItem() == par1ItemStack.getItem()
-						&& (!par1ItemStack.getHasSubtypes()
-								|| par1ItemStack.getItemDamage() == itemstack1.getItemDamage())
-						&& ItemStack.areItemStackTagsEqual(par1ItemStack, itemstack1))
+				if (itemstack1 != null && itemstack1.getItem() == par1ItemStack.getItem() && (!par1ItemStack
+					                                                                               .getHasSubtypes() ||
+					                                                                              par1ItemStack
+						                                                                              .getItemDamage()
+						                                                                              == itemstack1
+							                                                                                 .getItemDamage())
+					    && ItemStack.areItemStackTagsEqual(par1ItemStack, itemstack1))
 
 				{
 
@@ -226,10 +220,9 @@ public class ContainerSatchel extends MinestrappolationContainer
 
 						itemstack1.stackSize = l;
 
-						inventory.markDirty();
+						this.inventory.markDirty();
 
 						flag1 = true;
-
 					}
 
 					else if (itemstack1.stackSize < par1ItemStack.getMaxStackSize() && l < slot.getSlotStackLimit())
@@ -240,12 +233,10 @@ public class ContainerSatchel extends MinestrappolationContainer
 
 						itemstack1.stackSize = par1ItemStack.getMaxStackSize();
 
-						inventory.markDirty();
+						this.inventory.markDirty();
 
 						flag1 = true;
-
 					}
-
 				}
 
 				if (par4)
@@ -253,7 +244,6 @@ public class ContainerSatchel extends MinestrappolationContainer
 				{
 
 					--k;
-
 				}
 
 				else
@@ -261,11 +251,8 @@ public class ContainerSatchel extends MinestrappolationContainer
 				{
 
 					++k;
-
 				}
-
 			}
-
 		}
 
 		if (par1ItemStack.stackSize > 0)
@@ -277,7 +264,6 @@ public class ContainerSatchel extends MinestrappolationContainer
 			{
 
 				k = par3 - 1;
-
 			}
 
 			else
@@ -285,14 +271,13 @@ public class ContainerSatchel extends MinestrappolationContainer
 			{
 
 				k = par2;
-
 			}
 
 			while (!par4 && k < par3 || par4 && k >= par2)
 
 			{
 
-				slot = (Slot) this.inventorySlots.get(k);
+				slot = this.inventorySlots.get(k);
 
 				itemstack1 = slot.getStack();
 
@@ -310,12 +295,11 @@ public class ContainerSatchel extends MinestrappolationContainer
 
 						par1ItemStack.stackSize = 0;
 
-						inventory.markDirty();
+						this.inventory.markDirty();
 
 						flag1 = true;
 
 						break;
-
 					}
 
 					else
@@ -326,12 +310,10 @@ public class ContainerSatchel extends MinestrappolationContainer
 
 						par1ItemStack.stackSize -= slot.getSlotStackLimit();
 
-						inventory.markDirty();
+						this.inventory.markDirty();
 
 						flag1 = true;
-
 					}
-
 				}
 
 				if (par4)
@@ -339,7 +321,6 @@ public class ContainerSatchel extends MinestrappolationContainer
 				{
 
 					--k;
-
 				}
 
 				else
@@ -347,14 +328,10 @@ public class ContainerSatchel extends MinestrappolationContainer
 				{
 
 					++k;
-
 				}
-
 			}
-
 		}
 
 		return flag1;
-
 	}
 }

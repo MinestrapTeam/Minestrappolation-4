@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:cold_cobweb" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:cold_cobweb"
     }
+  }
 }

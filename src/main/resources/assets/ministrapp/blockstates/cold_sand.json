@@ -1,7 +1,10 @@
 {
-    "variants": {
-        "variant=sand": { "model": "ministrapp:cold_sand" },
-	   "variant=red_sand": { "model": "ministrapp:cold_red_sand" }
-
+  "variants": {
+    "variant=sand": {
+      "model": "ministrapp:cold_sand"
+    },
+    "variant=red_sand": {
+      "model": "ministrapp:cold_red_sand"
     }
+  }
 }

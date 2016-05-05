@@ -1,25 +1,18 @@
 package minestrapteam.mods.minestrappolation.item;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.entity.Entity;
+import minestrapteam.mods.minestrappolation.Minestrappolation;
+import minestrapteam.mods.minestrappolation.handlers.MGuiHandler;
+import minestrapteam.mods.minestrappolation.inventory.InventoryBackpack;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.client.FMLClientHandler;
-import org.lwjgl.input.Mouse;
-
-import minestrapteam.mods.minestrappolation.Minestrappolation;
-import minestrapteam.mods.minestrappolation.handlers.MGuiHandler;
-import minestrapteam.mods.minestrappolation.inventory.InventoryBackpack;
-import minestrapteam.mods.minestrappolation.inventory.container.ContainerBackpack;
-import minestrapteam.mods.minestrappolation.inventory.container.ContainerSatchel;
 
 public class ItemBackpack extends Item
 {
 	//0 = backpack, 1 = satchel
 	private int type;
-	
+
 	public ItemBackpack(int type)
 	{
 		this.maxStackSize = 1;
@@ -27,7 +20,7 @@ public class ItemBackpack extends Item
 	}
 
 	@Override
-	public int getMaxItemUseDuration(ItemStack stack) 
+	public int getMaxItemUseDuration(ItemStack stack)
 	{
 		return 1;
 	}
@@ -57,25 +50,27 @@ public class ItemBackpack extends Item
 	}	
 	*/
 
-    public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player)
-    {
-		ItemBackpack item = (ItemBackpack)player.getHeldItem().getItem();
+	@Override
+	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player)
+	{
+		ItemBackpack item = (ItemBackpack) player.getHeldItem().getItem();
 
-		if (!world.isRemote) 
+		if (!world.isRemote)
 		{
-			if (!player.isSneaking()) 
+			if (!player.isSneaking())
 			{
-				if(item.type == 0)
+				if (item.type == 0)
 				{
-					player.openGui(Minestrappolation.instance, MGuiHandler.GUIID_BACKPACK, world,(int) player.posX, (int) player.posY, (int) player.posZ);
-					
+					player.openGui(Minestrappolation.instance, MGuiHandler.GUIID_BACKPACK, world, (int) player.posX,
+					               (int) player.posY, (int) player.posZ);
 				}
-				if(item.type == 1)
+				if (item.type == 1)
 				{
-					player.openGui(Minestrappolation.instance, MGuiHandler.GUIID_SATCHEL, world,(int) player.posX, (int) player.posY, (int) player.posZ);
+					player.openGui(Minestrappolation.instance, MGuiHandler.GUIID_SATCHEL, world, (int) player.posX,
+					               (int) player.posY, (int) player.posZ);
 				}
-			} 
-			else 
+			}
+			else
 			{
 				new InventoryBackpack(player.getHeldItem());
 			}

@@ -5,19 +5,19 @@ import net.minecraft.nbt.NBTTagList;
 
 public class TileEntityCrate extends TileEntityInventory
 {
-	public String	test;
-	
+	public String test;
+
 	public TileEntityCrate()
 	{
 		super(18);
 	}
-	
+
 	@Override
 	public int getSizeInventory()
 	{
 		return 18;
 	}
-	
+
 	@Override
 	public void writeToNBT(NBTTagCompound parentNBTTagCompound)
 	{
@@ -35,7 +35,7 @@ public class TileEntityCrate extends TileEntityInventory
 		}
 		parentNBTTagCompound.setTag("Items", dataForAllSlots);
 	}
-	
+
 	@Override
 	public String getName()
 	{

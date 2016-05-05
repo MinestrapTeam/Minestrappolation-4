@@ -1,16 +1,52 @@
 {
-    "variants": {
-        "facing=south,variant=simple": { "model": "ministrapp:pumpkin_neutral_1_lit", "y": 0 },
-		"facing=north,variant=simple": { "model": "ministrapp:pumpkin_neutral_1_lit", "y": 180 },
-		"facing=west,variant=simple": { "model": "ministrapp:pumpkin_neutral_1_lit", "y": 90 },
-		"facing=east,variant=simple": { "model": "ministrapp:pumpkin_neutral_1_lit", "y": 270 },
-		"facing=south,variant=average": { "model": "ministrapp:pumpkin_neutral_2_lit", "y": 0 },
-		"facing=north,variant=average": { "model": "ministrapp:pumpkin_neutral_2_lit", "y": 180 },
-		"facing=west,variant=average": { "model": "ministrapp:pumpkin_neutral_2_lit", "y": 90 },
-		"facing=east,variant=average": { "model": "ministrapp:pumpkin_neutral_2_lit", "y": 270 },
-		"facing=south,variant=complex": { "model": "ministrapp:pumpkin_neutral_3_lit", "y": 0 },
-		"facing=north,variant=complex": { "model": "ministrapp:pumpkin_neutral_3_lit", "y": 180 },
-		"facing=west,variant=complex": { "model": "ministrapp:pumpkin_neutral_3_lit", "y": 90 },
-		"facing=east,variant=complex": { "model": "ministrapp:pumpkin_neutral_3_lit", "y": 270 }
+  "variants": {
+    "facing=south,variant=simple": {
+      "model": "ministrapp:pumpkin_neutral_1_lit",
+      "y": 0
+    },
+    "facing=north,variant=simple": {
+      "model": "ministrapp:pumpkin_neutral_1_lit",
+      "y": 180
+    },
+    "facing=west,variant=simple": {
+      "model": "ministrapp:pumpkin_neutral_1_lit",
+      "y": 90
+    },
+    "facing=east,variant=simple": {
+      "model": "ministrapp:pumpkin_neutral_1_lit",
+      "y": 270
+    },
+    "facing=south,variant=average": {
+      "model": "ministrapp:pumpkin_neutral_2_lit",
+      "y": 0
+    },
+    "facing=north,variant=average": {
+      "model": "ministrapp:pumpkin_neutral_2_lit",
+      "y": 180
+    },
+    "facing=west,variant=average": {
+      "model": "ministrapp:pumpkin_neutral_2_lit",
+      "y": 90
+    },
+    "facing=east,variant=average": {
+      "model": "ministrapp:pumpkin_neutral_2_lit",
+      "y": 270
+    },
+    "facing=south,variant=complex": {
+      "model": "ministrapp:pumpkin_neutral_3_lit",
+      "y": 0
+    },
+    "facing=north,variant=complex": {
+      "model": "ministrapp:pumpkin_neutral_3_lit",
+      "y": 180
+    },
+    "facing=west,variant=complex": {
+      "model": "ministrapp:pumpkin_neutral_3_lit",
+      "y": 90
+    },
+    "facing=east,variant=complex": {
+      "model": "ministrapp:pumpkin_neutral_3_lit",
+      "y": 270
     }
+  }
 }

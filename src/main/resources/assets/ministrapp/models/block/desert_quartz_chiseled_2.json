@@ -1,8 +1,8 @@
 {
-    "parent": "block/cube_bottom_top",
-    "textures": {
-        "bottom": "ministrapp:blocks/desert_quartz_chiseled_top_2",
-        "top": "ministrapp:blocks/desert_quartz_chiseled_top_2",
-        "side": "ministrapp:blocks/desert_quartz_chiseled_side_2"
-    }
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "ministrapp:blocks/desert_quartz_chiseled_top_2",
+    "top": "ministrapp:blocks/desert_quartz_chiseled_top_2",
+    "side": "ministrapp:blocks/desert_quartz_chiseled_side_2"
+  }
 }

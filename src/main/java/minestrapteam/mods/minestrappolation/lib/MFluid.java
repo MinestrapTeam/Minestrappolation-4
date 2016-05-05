@@ -18,43 +18,49 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class MFluid
 {
-	public static Fluid	MAGMA;
-	
+	public static Fluid MAGMA;
+
 	public static void init()
 	{
-		MAGMA = new Fluid("magma", getResource("magma_still"), getResource("magma_flowing")).setLuminosity(10).setViscosity(6500).setDensity(4000).setTemperature(1500);
+		MAGMA = new Fluid("magma", getResource("magma_still"), getResource("magma_flowing")).setLuminosity(10)
+		                                                                                    .setViscosity(6500)
+		                                                                                    .setDensity(4000)
+		                                                                                    .setTemperature(1500);
 		FluidRegistry.registerFluid(MAGMA);
 	}
-	
+
 	public static void load()
 	{
-		FluidContainerRegistry.registerFluidContainer(MAGMA, new ItemStack(MBlocks.magmaBucket), FluidContainerRegistry.EMPTY_BUCKET);
+		FluidContainerRegistry
+			.registerFluidContainer(MAGMA, new ItemStack(MBlocks.magmaBucket), FluidContainerRegistry.EMPTY_BUCKET);
 	}
-	
+
 	public static ResourceLocation getResource(String name)
 	{
 		return new ResourceLocation(MReference.MODID, "fluid/" + name);
 	}
-	
+
 	@SideOnly(Side.CLIENT)
 	public static void buildRenderFor(Block block, String name)
 	{
 		final ModelResourceLocation fluidLocation = new ModelResourceLocation(MReference.MODID + ":" + name, "fluid");
 		Item fluid = Item.getItemFromBlock(block);
-        ModelBakery.addVariantName(fluid);
-        ModelLoader.setCustomMeshDefinition(fluid, new ItemMeshDefinition()
-        {
-             public ModelResourceLocation getModelLocation(ItemStack stack)
-             {
-                 return fluidLocation;
-             }
-        });
-        ModelLoader.setCustomStateMapper(block, new StateMapperBase()
-        {
-             protected ModelResourceLocation getModelResourceLocation(IBlockState state)
-             {
-                 return fluidLocation;
-             }
-        });
+		ModelBakery.addVariantName(fluid);
+		ModelLoader.setCustomMeshDefinition(fluid, new ItemMeshDefinition()
+		{
+			@Override
+			public ModelResourceLocation getModelLocation(ItemStack stack)
+			{
+				return fluidLocation;
+			}
+		});
+		ModelLoader.setCustomStateMapper(block, new StateMapperBase()
+		{
+			@Override
+			protected ModelResourceLocation getModelResourceLocation(IBlockState state)
+			{
+				return fluidLocation;
+			}
+		});
 	}
 }

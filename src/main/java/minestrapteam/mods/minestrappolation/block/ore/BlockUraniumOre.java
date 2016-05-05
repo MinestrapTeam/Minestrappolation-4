@@ -17,9 +17,10 @@ public class BlockUraniumOre extends BlockRadiation
 {
 	public BlockUraniumOre(int range, int rate, Material material, MapColor mapColor, Item itemDrop, int expMin, int expMax, int dropAmount, int bonusAmount, String tool, int level, boolean silkHarvest)
 	{
-		super(range, rate, material, mapColor, itemDrop, expMin, expMax, dropAmount, bonusAmount, tool, level, silkHarvest);
+		super(range, rate, material, mapColor, itemDrop, expMin, expMax, dropAmount, bonusAmount, tool, level,
+		      silkHarvest);
 	}
-	
+
 	@Override
 	public void addPotionEffect(EntityLivingBase living, World world, BlockPos pos)
 	{
@@ -33,13 +34,13 @@ public class BlockUraniumOre extends BlockRadiation
 			living.addPotionEffect(new PotionEffect(Potion.poison.getId(), 20 * 10, 0, false, false));
 		}
 	}
-	
+
 	@Override
 	public int getExpDrop(IBlockAccess world, BlockPos pos, int fortune)
 	{
 		return 5 + fortune;
 	}
-	
+
 	@Override
 	public void onBlockDestroyedByExplosion(World world, BlockPos pos, Explosion explosion)
 	{

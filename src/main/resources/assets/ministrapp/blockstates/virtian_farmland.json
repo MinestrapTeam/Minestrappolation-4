@@ -1,12 +1,28 @@
 {
-    "variants": {
-        "moisture=0": { "model": "ministrapp:virtian_farmland_dry" },
-        "moisture=1": { "model": "ministrapp:virtian_farmland_dry" },
-        "moisture=2": { "model": "ministrapp:virtian_farmland_dry" },
-        "moisture=3": { "model": "ministrapp:virtian_farmland_dry" },
-        "moisture=4": { "model": "ministrapp:virtian_farmland_dry" },
-        "moisture=5": { "model": "ministrapp:virtian_farmland_dry" },
-        "moisture=6": { "model": "ministrapp:virtian_farmland_dry" },
-        "moisture=7": { "model": "ministrapp:virtian_farmland_moist" }
+  "variants": {
+    "moisture=0": {
+      "model": "ministrapp:virtian_farmland_dry"
+    },
+    "moisture=1": {
+      "model": "ministrapp:virtian_farmland_dry"
+    },
+    "moisture=2": {
+      "model": "ministrapp:virtian_farmland_dry"
+    },
+    "moisture=3": {
+      "model": "ministrapp:virtian_farmland_dry"
+    },
+    "moisture=4": {
+      "model": "ministrapp:virtian_farmland_dry"
+    },
+    "moisture=5": {
+      "model": "ministrapp:virtian_farmland_dry"
+    },
+    "moisture=6": {
+      "model": "ministrapp:virtian_farmland_dry"
+    },
+    "moisture=7": {
+      "model": "ministrapp:virtian_farmland_moist"
     }
+  }
 }

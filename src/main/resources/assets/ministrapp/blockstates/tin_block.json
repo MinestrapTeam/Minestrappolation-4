@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:tin_block" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:tin_block"
     }
+  }
 }

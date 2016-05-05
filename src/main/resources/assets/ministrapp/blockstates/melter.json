@@ -1,8 +1,20 @@
 {
-    "variants": {
-        "facing=south": { "model": "ministrapp:melter_idle", "y": 0 },
-		"facing=north": { "model": "ministrapp:melter_idle", "y": 180 },
-		"facing=west": { "model": "ministrapp:melter_idle", "y": 90 },
-		"facing=east": { "model": "ministrapp:melter_idle", "y": 270 }
+  "variants": {
+    "facing=south": {
+      "model": "ministrapp:melter_idle",
+      "y": 0
+    },
+    "facing=north": {
+      "model": "ministrapp:melter_idle",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ministrapp:melter_idle",
+      "y": 90
+    },
+    "facing=east": {
+      "model": "ministrapp:melter_idle",
+      "y": 270
     }
+  }
 }

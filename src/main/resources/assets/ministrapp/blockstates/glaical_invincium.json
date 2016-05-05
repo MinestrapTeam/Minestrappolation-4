@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:glacial_invincium" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:glacial_invincium"
     }
+  }
 }

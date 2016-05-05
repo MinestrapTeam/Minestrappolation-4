@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "ministrapp:compacted_dirt_0" }
+  "variants": {
+    "normal": {
+      "model": "ministrapp:compacted_dirt_0"
     }
+  }
 }

@@ -6,11 +6,10 @@ import net.minecraft.item.ItemDoor;
 
 public class ItemMDoor extends ItemDoor
 {
-	
+
 	public ItemMDoor(Block block)
 	{
 		super(block);
 		this.setCreativeTab(Minestrappolation.tabMDecor);
 	}
-	
 }

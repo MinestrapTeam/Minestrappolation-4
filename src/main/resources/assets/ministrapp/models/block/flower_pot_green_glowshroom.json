@@ -1,6 +1,6 @@
 {
-    "parent": "block/flower_pot_cross",
-    "textures": {
-        "plant": "ministrapp:blocks/green_glowshroom"
-    }
+  "parent": "block/flower_pot_cross",
+  "textures": {
+    "plant": "ministrapp:blocks/green_glowshroom"
+  }
 }
