@@ -1,16 +1,12 @@
 #Workspace Files
-asm
-gradle
-gradlew
-gradlew.bat
-.gradle
+.gradle/
 .classpath
-.settings
-.project
-backups
-bin
-eclipse
-Forum Resources
+.settings/
+.project/
+backups/
+bin/
+eclipse/
+Forum Resources/
 build.bat
 CREDITS-fml.txt
 LICENSE-fml.txt
@@ -18,12 +14,14 @@ MinecraftForge-Credits.txt
 MinecraftForge-License.txt
 setup eclipse.bat
 setup workspace.bat
-Minestrappolation-4.iml
-.idea
-build
-wrapper
-classes
-run
+*.iml
+*.ipr
+*.iws
+*.launch
+.idea/
+build/
+classes/
+run/
 
 # Windows image file caches
 Thumbs.db
@@ -67,3 +65,7 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+*.ipr
+
+*.iws
