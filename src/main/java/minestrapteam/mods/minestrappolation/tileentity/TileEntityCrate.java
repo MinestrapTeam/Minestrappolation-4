@@ -37,7 +37,7 @@ public class TileEntityCrate extends TileEntityInventory
 	}
 	
 	@Override
-	public String getCommandSenderName() 
+	public String getName()
 	{
 		return "container.crate";
 	}

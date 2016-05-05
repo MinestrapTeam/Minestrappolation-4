@@ -277,7 +277,7 @@ public class TileEntityCrusher extends TileEntityInventory implements ITickable,
 	}
 	
 	@Override
-	public String getCommandSenderName() 
+	public String getName()
 	{
 		return "container.crusher";
 	}

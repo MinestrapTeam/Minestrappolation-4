@@ -35,7 +35,7 @@ public class TileEntityBarrel extends TileEntityInventory
 	}
 	
 	@Override
-	public String getCommandSenderName() 
+	public String getName()
 	{
 		return "container.barrel";
 	}

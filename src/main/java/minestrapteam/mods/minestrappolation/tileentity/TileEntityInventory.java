@@ -85,7 +85,7 @@ public abstract class TileEntityInventory extends TileEntity implements IInvento
 	}
 	
 	@Override
-	public ItemStack getStackInSlotOnClosing(int slotID)
+	public ItemStack removeStackFromSlot(int slotID)
 	{
 		if (this.rangeCheck(slotID) && this.itemStacks[slotID] != null)
 		{
@@ -117,7 +117,7 @@ public abstract class TileEntityInventory extends TileEntity implements IInvento
 	}
 	
 	@Override
-	public String getCommandSenderName()
+	public String getName()
 	{
 		if (this.name != null && !this.name.isEmpty())
 			return this.name;
@@ -240,7 +240,7 @@ public abstract class TileEntityInventory extends TileEntity implements IInvento
 	@Override
 	public IChatComponent getDisplayName()
 	{
-		return this.hasCustomName() ? new ChatComponentText(this.getCommandSenderName()) : new ChatComponentTranslation(this.getCommandSenderName(), new Object[0]);
+		return this.hasCustomName() ? new ChatComponentText(this.getName()) : new ChatComponentTranslation(this.getName(), new Object[0]);
 	}
 	
 	// From

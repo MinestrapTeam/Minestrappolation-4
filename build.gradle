@@ -32,8 +32,8 @@ if (ENV.DRONE_BUILD_NUMBER)
 }
 
 minecraft {
-	version = '1.8.9-11.15.1.1732'
-	mappings = 'snapshot_20151122'
+	version = '1.8.9-11.15.1.1722'
+	mappings = 'stable_22'
 
 	if (file("../run").exists())
 	{

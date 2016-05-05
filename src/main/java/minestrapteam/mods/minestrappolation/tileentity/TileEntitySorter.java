@@ -1,19 +1,15 @@
 package minestrapteam.mods.minestrappolation.tileentity;
 
-import java.util.List;
+import minestrapteam.mods.minestrappolation.block.machines.BlockSorter;
+import minestrapteam.mods.minestrappolation.inventory.container.ContainerSorter;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockChest;
-import minestrapteam.mods.minestrappolation.block.machines.BlockSorter;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.inventory.Container;
-import minestrapteam.mods.minestrappolation.inventory.container.ContainerSorter;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.ISidedInventory;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
@@ -21,13 +17,10 @@ import net.minecraft.tileentity.IHopper;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.tileentity.TileEntityLockable;
-import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.BlockPos;
-import net.minecraft.util.EntitySelectors;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.ITickable;
-import net.minecraft.util.MathHelper;
+import net.minecraft.util.*;
 import net.minecraft.world.World;
+
+import java.util.List;
 
 public class TileEntitySorter extends TileEntityLockable implements IHopper, ITickable, ISidedInventory
 {
@@ -35,6 +28,7 @@ public class TileEntitySorter extends TileEntityLockable implements IHopper, ITi
     private String customName;
     private int transferCooldown = -1;
 
+    @Override
     public void readFromNBT(NBTTagCompound compound)
     {
         super.readFromNBT(compound);
@@ -60,6 +54,7 @@ public class TileEntitySorter extends TileEntityLockable implements IHopper, ITi
         }
     }
 
+    @Override
     public void writeToNBT(NBTTagCompound compound)
     {
         super.writeToNBT(compound);
@@ -89,6 +84,7 @@ public class TileEntitySorter extends TileEntityLockable implements IHopper, ITi
      * For tile entities, ensures the chunk containing the tile entity is saved to disk later - the game won't think it
      * hasn't changed and skip it.
      */
+    @Override
     public void markDirty()
     {
         super.markDirty();
@@ -97,6 +93,7 @@ public class TileEntitySorter extends TileEntityLockable implements IHopper, ITi
     /**
      * Returns the number of slots in the inventory.
      */
+    @Override
     public int getSizeInventory()
     {
         return this.inventory.length;
@@ -107,6 +104,7 @@ public class TileEntitySorter extends TileEntityLockable implements IHopper, ITi
      *  
      * @param index The slot to retrieve from.
      */
+    @Override
     public ItemStack getStackInSlot(int index)
     {
         return this.inventory[index];
@@ -118,6 +116,7 @@ public class TileEntitySorter extends TileEntityLockable implements IHopper, ITi
      * @param index The slot to remove from.
      * @param count The maximum amount of items to remove.
      */
+    @Override
     public ItemStack decrStackSize(int index, int count)
     {
         if (this.inventory[index] != null)
@@ -151,7 +150,8 @@ public class TileEntitySorter extends TileEntityLockable implements IHopper, ITi
      *  
      * @param index The slot to remove a stack from.
      */
-    public ItemStack getStackInSlotOnClosing(int index)
+    @Override
+    public ItemStack removeStackFromSlot(int index)
     {
         if (this.inventory[index] != null)
         {
@@ -168,6 +168,7 @@ public class TileEntitySorter extends TileEntityLockable implements IHopper, ITi
     /**
      * Sets the given item stack to the specified slot in the inventory (can be crafting or armor sections).
      */
+    @Override
     public void setInventorySlotContents(int index, ItemStack stack)
     {
         this.inventory[index] = stack;
@@ -181,7 +182,8 @@ public class TileEntitySorter extends TileEntityLockable implements IHopper, ITi
     /**
      * Gets the name of this command sender (usually username, but possibly "Rcon")
      */
-    public String getCommandSenderName()
+    @Override
+    public String getName()
     {
         return this.hasCustomName() ? this.customName : "container.hopper";
     }
@@ -189,6 +191,7 @@ public class TileEntitySorter extends TileEntityLockable implements IHopper, ITi
     /**
      * Returns true if this thing is named
      */
+    @Override
     public boolean hasCustomName()
     {
         return this.customName != null && this.customName.length() > 0;
@@ -202,6 +205,7 @@ public class TileEntitySorter extends TileEntityLockable implements IHopper, ITi
     /**
      * Returns the maximum stack size for a inventory slot. Seems to always be 64, possibly will be extended.
      */
+    @Override
     public int getInventoryStackLimit()
     {
         return 64;
@@ -210,15 +214,21 @@ public class TileEntitySorter extends TileEntityLockable implements IHopper, ITi
     /**
      * Do not make give this method the name canInteractWith because it clashes with Container
      */
+    @Override
     public boolean isUseableByPlayer(EntityPlayer player)
     {
-        return this.worldObj.getTileEntity(this.pos) != this ? false : player.getDistanceSq((double)this.pos.getX() + 0.5D, (double)this.pos.getY() + 0.5D, (double)this.pos.getZ() + 0.5D) <= 64.0D;
+        return this.worldObj.getTileEntity(this.pos) == this && player.getDistanceSq((double) this.pos.getX() + 0.5D,
+                                                                                     (double) this.pos.getY() + 0.5D,
+                                                                                     (double) this.pos.getZ() + 0.5D)
+                                                                    <= 64.0D;
     }
 
+    @Override
     public void openInventory(EntityPlayer player)
     {
     }
 
+    @Override
     public void closeInventory(EntityPlayer player)
     {
     }
@@ -226,6 +236,7 @@ public class TileEntitySorter extends TileEntityLockable implements IHopper, ITi
     /**
      * Returns true if automation is allowed to insert the given stack (ignoring stack size) into the given slot.
      */
+    @Override
     public boolean isItemValidForSlot(int index, ItemStack stack)
     {
         return true;
@@ -234,6 +245,7 @@ public class TileEntitySorter extends TileEntityLockable implements IHopper, ITi
     /**
      * Like the old updateEntity(), except more generic.
      */
+    @Override
     public void update()
     {
         if (this.worldObj != null && !this.worldObj.isRemote)
@@ -363,9 +375,9 @@ public class TileEntitySorter extends TileEntityLockable implements IHopper, ITi
             ISidedInventory isidedinventory = (ISidedInventory)inventoryIn;
             int[] aint = isidedinventory.getSlotsForFace(side);
 
-            for (int k = 0; k < aint.length; ++k)
+            for (int anAint : aint)
             {
-                ItemStack itemstack1 = isidedinventory.getStackInSlot(aint[k]);
+                ItemStack itemstack1 = isidedinventory.getStackInSlot(anAint);
 
                 if (itemstack1 == null || itemstack1.stackSize != itemstack1.getMaxStackSize())
                 {
@@ -404,9 +416,9 @@ public class TileEntitySorter extends TileEntityLockable implements IHopper, ITi
             ISidedInventory isidedinventory = (ISidedInventory)inventoryIn;
             int[] aint = isidedinventory.getSlotsForFace(side);
 
-            for (int i = 0; i < aint.length; ++i)
+            for (int anAint : aint)
             {
-                if (isidedinventory.getStackInSlot(aint[i]) != null)
+                if (isidedinventory.getStackInSlot(anAint) != null)
                 {
                     return false;
                 }
@@ -471,7 +483,9 @@ public class TileEntitySorter extends TileEntityLockable implements IHopper, ITi
      */
     private static boolean canInsertItemInSlot(IInventory inventoryIn, ItemStack stack, int index, EnumFacing side)
     {
-        return !inventoryIn.isItemValidForSlot(index, stack) ? false : !(inventoryIn instanceof ISidedInventory) || ((ISidedInventory)inventoryIn).canInsertItem(index, stack, side);
+        return inventoryIn.isItemValidForSlot(index, stack) && (!(inventoryIn instanceof ISidedInventory)
+                                                                    || ((ISidedInventory) inventoryIn)
+                                                                           .canInsertItem(index, stack, side));
     }
 
     /**
@@ -598,7 +612,7 @@ public class TileEntitySorter extends TileEntityLockable implements IHopper, ITi
 
         if (iinventory == null)
         {
-            List<Entity> list = worldIn.getEntitiesInAABBexcluding((Entity)null, new AxisAlignedBB(x - 0.5D, y - 0.5D, z - 0.5D, x + 0.5D, y + 0.5D, z + 0.5D), EntitySelectors.selectInventories);
+            List<Entity> list = worldIn.getEntitiesInAABBexcluding(null, new AxisAlignedBB(x - 0.5D, y - 0.5D, z - 0.5D, x + 0.5D, y + 0.5D, z + 0.5D), EntitySelectors.selectInventories);
 
             if (list.size() > 0)
             {
@@ -611,12 +625,16 @@ public class TileEntitySorter extends TileEntityLockable implements IHopper, ITi
 
     private static boolean canCombine(ItemStack stack1, ItemStack stack2)
     {
-        return stack1.getItem() != stack2.getItem() ? false : (stack1.getMetadata() != stack2.getMetadata() ? false : (stack1.stackSize > stack1.getMaxStackSize() ? false : ItemStack.areItemStackTagsEqual(stack1, stack2)));
+        return stack1.getItem() == stack2.getItem() && (stack1.getMetadata() == stack2.getMetadata()
+                                                            && (stack1.stackSize <= stack1.getMaxStackSize()
+                                                                    && ItemStack
+                                                                           .areItemStackTagsEqual(stack1, stack2)));
     }
 
     /**
      * Gets the world X position for this hopper entity.
      */
+    @Override
     public double getXPos()
     {
         return (double)this.pos.getX() + 0.5D;
@@ -625,6 +643,7 @@ public class TileEntitySorter extends TileEntityLockable implements IHopper, ITi
     /**
      * Gets the world Y position for this hopper entity.
      */
+    @Override
     public double getYPos()
     {
         return (double)this.pos.getY() + 0.5D;
@@ -633,6 +652,7 @@ public class TileEntitySorter extends TileEntityLockable implements IHopper, ITi
     /**
      * Gets the world Z position for this hopper entity.
      */
+    @Override
     public double getZPos()
     {
         return (double)this.pos.getZ() + 0.5D;
@@ -653,30 +673,36 @@ public class TileEntitySorter extends TileEntityLockable implements IHopper, ITi
         return this.transferCooldown <= 1;
     }
 
+    @Override
     public String getGuiID()
     {
         return "minestrapp:sorter";
     }
 
+    @Override
     public Container createContainer(InventoryPlayer playerInventory, EntityPlayer playerIn)
     {
         return new ContainerSorter(playerIn, this);
     }
 
+    @Override
     public int getField(int id)
     {
         return 0;
     }
 
+    @Override
     public void setField(int id, int value)
     {
     }
 
+    @Override
     public int getFieldCount()
     {
         return 0;
     }
 
+    @Override
     public void clear()
     {
         for (int i = 0; i < this.inventory.length; ++i)
@@ -685,15 +711,11 @@ public class TileEntitySorter extends TileEntityLockable implements IHopper, ITi
         }
     }
     
+    @Override
     public boolean canExtractItem(int index, ItemStack stack, EnumFacing direction)
 	{
-	    if (direction == EnumFacing.DOWN && index == 1)
-	    {
-	        return false;
-	    }
-
-	    return true;
-	}
+        return !(direction == EnumFacing.DOWN && index == 1);
+    }
 
 	@Override
 	public int[] getSlotsForFace(EnumFacing side)
@@ -704,10 +726,7 @@ public class TileEntitySorter extends TileEntityLockable implements IHopper, ITi
 	@Override
 	public boolean canInsertItem(int index, ItemStack itemStackIn, EnumFacing direction)
 	{
-		if(index == 0)
-			return true;
-		else
-			return false;
+        return index == 0;
 	}
 
 

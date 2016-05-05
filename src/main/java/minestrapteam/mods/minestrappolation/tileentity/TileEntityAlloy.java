@@ -270,7 +270,7 @@ public class TileEntityAlloy extends TileEntityInventory implements ISidedInvent
 	}
 
 	@Override
-	public String getCommandSenderName() 
+	public String getName()
 	{
 		return "container.alloy";
 	}
