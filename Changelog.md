@@ -1,0 +1,345 @@
+Minestrappolation v1.8.9-4.3.0
+==============================
+
+- Updated the mod to Minecraft 1.8.8/1.8.9.
+- Added Wood Boards. Milled with four Logs in a 2x2 square and gives 24 per craft. Comes in all 8 wood types, and can replace Planks in any recipe.
+- Added Mossy Wood Planks and Mossy Wood Boards. Milled with 8 PLanks/Boards of the same type surrounding a Moss or Hanging Moss. Purely cosmetic.
+- Added Tomato Seeds. Dropped occasionally when breaking Ferns, or when sifting Mud.
+- Added Tomatoes. Obtained by harvesting Tomato Crops and can be crafted into various foods.
+- Added Tomato Sauce. Crafted with a Bowl, two Tomatoes, and some Peppercorns.
+- Added Tomato Soup. Alloyed with Tomato Sauce and Fat.
+- Added Dried Spaghetti. Alloyed with Dough and a Steel Mesh (the Steel Mesh isn't consumed in the process).
+- Added Spaghetti. Alloyed with Tomato Sauce and Dried Spaghetti.
+- Added a seecret Spaghetti achievement...
+- Added Item Pipes! Crafted with 5 Copper Ingots and a Dropper, and gives 16 per craft, making long-range item transportation MUCH easier.
+- Pipes behave similar to Hoppers, but can be placed facing all 6 directions. They also can't remove items from any container; only place their own items into the container they're facing into.
+- Unlike Hoppers, Pipes also can't be locked by powering them (though they DO output a Comparator signal based on how many items are inside them).
+- Added Filter Pipes! Crafted with a Pipe, a Bronze Plating, and a Hopper, and gives 2 per craft. Acts like a normal Pipe, but can only be placed facing all directions but down.
+- Additionally, Filter Pipes have a bottom slot that isn't affected by any other Pipes or Hoppers. If there is an item in this slot, any item that enters the Filter will be placed into the container BELOW the Filter, rather than whatever one the Filter is facing towards. This allows for hyper-compact auto sorters, though Filters can get expensive if used in bulk.
+- Added Dimensium Ore. Generates in the End, is mined with a Titanium Pickaxe or better, and can be melted into Ingots.
+- Added Dimensium Chunks. Obtained by crushing Dimensium Ore, and can be melted into Ingots.
+- Added Dimensium Ingots. Used in crafting most space-bending blocks and items.
+- Added Dimensium Dust. Obtained by crushing Dimensium Ingots.
+- Added Blocks of Dimensium. Storage for Dimensium Ingots.
+- Added Continnium Ore. Generates in the End, is mined with a Titanium Pickaxe or better, and can be melted into Continnium Hourglasses.
+- Added Continnium Chunks. Obtained by crushing Continnium Ore and can be melted into Hourglasses.
+- Added Hourglasses! A new decorative block that has a few Redstone uses as well. Empty Hourglasses are crafted with two Redwood Slabs, four Bronze Ingots, and a Bottle.
+- Hourglasses can be placed and "flipped" by right-clicking them, triggering a visual animation.
+- Hourglasses can be filled with various blocks to change their appearance, as well as how fast they deplete. In order of fastest to slowest, the standard materials are Red Sand, Sand, Cold Red Sand, and Cold Sand.
+- All Hourglasses output a Redstone Comparator signal based on their current level, making them useful for Redstone timers.
+- Hourglasses can also be filled with Redstone Dust to output a Redstone signal without the use of a Comparator.
+- Continnium Ore can be melted with an Empty Hourglass in the Bucket slot to produce a Continnium Hourglass, which will cycle endlessly when placed.
+- Added Bronze Plating. Cut with 6 Ingots just like the other ones.
+- Added Ritual Conduits. Crafted with 7 Iron Ingots and a Bronze Plating. Can be filled with Ghast Tears by right-clicking them. Required in constructing the Dimensional Fishery altar.
+- Each Conduit can be filled with up to 3 Ghast Tears, and will output a Comparator signal based on how full it is. Layers of liquid Ghast Tears will also flow around between any connected Conduits, making them useful for Redstone randomizers and such.
+- Added Wither Ash. Can be placed in layers like Snow. Unlike Snow, however, it is affected by gravity and will attempt to spread itself into a cone-shape if more than one layer is stacked.
+- Added Withered Bones. Dropped rarely by Wither Skeletons.
+- Added Deathmeal. Crafted with Withered Bones. Acts like anti-Bonemeal, turning most organic blocks into Wither Ash.
+- Added Ender Aura. Dropped by Endermites (they finally have a use!). Used in crafting teleporty things, as well as Bottled Will o the Wisp.
+- Added Bottled Will o' the Wisp. Crafted with a Glass Bottle, Wither Ash, Blaze Powder, Ender Aura, Grease, and Animal Bones. Used for creating Unholy Candles.
+- Added Unholy Candles. Created by right-clicking a Candle with a Bottled Will o' the Wisp. Required for setting up the Dimensional Fishery altar.
+- Added Advanced Technological Doodads. Crafted with four Diamond Dust, four Technological Doodads, and a Titanium Ingot.
+- Added Compacted Dirt, Netherrack, End Stone, and Glowshrooms. Crafted with 9 of their respective block.
+- Compacted blocks mostly serve as compact storage, but can also be used to get randomized loot from their respective dimensions via the Dimensional Fishery.
+- Added the Dimensional Fishery! It's a new post-end-game tech block that can fish any naturally occurring item out of any dimension at a low cost. Crafted with 2 Prismarine Blocks, 2 Obsidian Brick blocks, 2 Dimensium Ingots, a Radiant Quartz, a Continnium Hourglass, and an Advanced Technological Doodad.
+- The block itself is useless without its Altar. In order to create it, the player must place a Beacon in the center, four Ritual Conduits on each side of the Beacon, four prismarine in the corners of that 3x3 square of blocks, then surround that with a 5x5 ring of 16 Ritual Conduits, and then place 12 Obsidian Bricks on the outside of that ring, 3 on each side. After that, the player must fill all the Ritual Conduits with Ghast Tears (there should be 20 Conduits, and they can hold 3 Tears each, so you'll need 60 Ghast Tears. This is why this is SUPER end game, lol). Once that's done, you must then place four Chiseled Radiant Quartz blocks on top of each corner of the Conduit ring, and then place four Candles on top of each Chiseled Radiant Quartz. Then simply light the Candles with Bottled Will o' the Wisp, place the Dimensional Fishery in the center, and you should be good.
+- You'll know if you made the altar correctly if the Dimensional Fishery gets little extended feet and spikes on top. If you're having trouble figuring it out, we've modified one of the Vanilla paintings to show what the final product should look like, sort of like that one that shows how to build the Wither.
+- When the altar is set up and the Dimensional Fishery is active, simply place any Compacted block on top of the Fishery, and it will consume the block and drop a random item from that dimension.
+- The item probabilities and quantities are loosely based on the frequency they are found in their respective dimension. I.e., you'll probably get Grass more often than Diamond Ore, but you have a chance to get either.
+- The pool of potential drops is determined by which Compacted block you place: Compacted Dirt will drop Overworld items, Compacted Netherrack will drop Nether items, Compacted End Stone will drop End Stone items, and Compacted Glowshrooms will drop items from our upcoming dimension, the Virtia (see this page for the original ModJam mod we're basing it off of: https://www.youtube.com/watch?v=JVxE0C6phnE). We haven't had time to code the dimension itself yet, but many of the blocks and items are functional and integrated into the tech tree, and we'll be adding more over the next few updates. :D
+- Added Terracreep! It's a new plant obtainable via the Dimensional Fishery's Virtia drops that effectively acts like a quarry. When right-clicked onto any Stone block, the Terracreep will very slowly eat away all the stone in the area, leaving only the ores and other blocks there for easy mining. It may take a few tries to get a good quarry going though, as the spores have a chance to decay without spreading.
+- Added Jadachite Roots. Obtainable via the Dimensional Fishery's Virtia drops. They're a crystalline structure that can be planted on a 3x3 platform of Virtian Grass. When planted, they will grow upward and horizontal in a winding pattern sort of similar to that Windows XP pipes screensaver.
+- Breaking one block of the Jadachite structure will break the rest, dropping Jadachite Shards which can be crafted into various decor blocks.
+- Added Jadachite Blocks, Bricks, Tiles, Pillars, Brick Slabs, and Brick Stairs.
+- Added Enderporters! They're a new GUI block that can teleport any entity across infinite distances instantaneously. Crafted with two Jadachite Blocks, an Advanced Technological Doodad, two Obsidian Brick blocks, an Ender Aura, a Crystal Heart, and two Dimensium Ingots.
+- Enderporters require Ender Pearls in the top left slot to function, and consume one each time they are used (by default, players can right-click the Enderporter with an item in their hand to use it. Right clicking without an item opens the GUI).
+- Added Positional Chips. Crafted with four Redstone Dust, three Dimensium Dust, an empty Map, and a Technological Doodad. When right-clicked, they store the current block position, as well as the type of block in that space.
+- Positional Chips can be placed in the top right slot of the Enderporter to specify a different position to teleport to (it defaults to the block above the Enderporter itself). However, the block at the specified position must be another Enderporter in order for it to work, unless there is a Self-Sufficiency Chip in one of the upgrade slots.
+- Added Inert Chips. Crafted with four Copper Ingots, four Steel Plating, and a Technological Doodad. Used in crafting all Upgrade Chips, which can be placed in either of the bottom two Enderporter slots to upgrade its abilities.
+- Added Preserver Upgrade Chips. Crafted with an Inert Chip and an Ender Aura. Gives the Enderporter a chance to not destroy an Ender Pearl when used, allowing the player to waste less of them.
+- Added Collision Upgrade Chips. Crafted with an Inert Chip and a Gold Weighted Pressure Plate. Makes entities auto-teleport upon touching the Enderporter, allowing it to teleport things like items and mobs instead of only players.
+- Added Inversion Upgrade Chips. Crafted with an Inert Chip and a Compass. Makes teleported entities appear underneath the specified destination block, rather than above it (which is the default).
+- Added Self-Sufficiency Chips. Crafted with an Inert Chip and an Advanced Technological Doodad. Allows the Enderporter to teleport entities to locations without another Enderporter.
+- Added Placer Chips. Allows Enderporters to place teleported block entities at the destination.
+- Added Virtian Soil. Obtainable via the Dimensional Fishery Virtia drops. Can be sifted to yield a few different Virtia blocks and items.
+- Added Virtian Grass. Obtainable via the Dimensional Fishery Virtia drops. Can spread to Virtian Soil, as well as sustain Jadachite Roots (more Virtia plants coming in the future). Can be sifted as well.
+- Added Barren Virtian Soil. Obtainable via the Dimensional Fishery or by crafting Virtian Soil with Gravel just like Course Dirt. Acts the same as Virtian Soil, but Virtian Grass can't spread to it. Can be tilled back into Virtian Soil.
+- Added Ashen Virtian Soil. Obtainable via the Dimensional Fishery. Mostly cosmetic, but can drop Wither Ash when sifted.
+- Added Wrenches. WIP item, doesn't currently have a use.
+- Added a config option to disable biome-specific stone types (i.e.; Coldstone, Red Rock, Icestone, etc). Disabling them adds replacement crafting recipes for each one so you can still progress through the tech tree.
+- Snowballs can be melted into Bottles of Water by placing a Glass Bottle in the Bucket slot.
+- Changed Vanilla Hopper recipe to balance out their additional functionality in relativity to Pipes. They're crafted in the same shape, but with Steel Ingots instead of Iron Ingots, and with a Pipe instead of a Chest.
+- Blazium Pickaxes now automatically smelt any stone block they mine.
+- Blazium Axes now automatically smelt any wood block they break.
+- Blazium Shovels now automatically smelt any soil block they dig.
+- Decreased the leaf radius on Redwood trees.
+- Decreased the tree density of Redwood biomes.
+- Backpacks and Satchels with custom names now show their name in the GUI.
+- Moss can now grow on Mud in full daylight.
+- Rope can now be placed underneath Fences.
+- Rotten Flesh can now be alloyed with any Regeneration Potion to produce Flesh.
+- All Minestrappolation GUI blocks now output a Comparator signal based on how full their inventory is.
+- Cleaned up Boulder drop code and (hopefully) fixed crashes when looking at boulders while using HUD block label mods.
+- Fixed Boats being crafted instead of Milled.
+- Fixed Splitters not having a progress bar in their GUI.
+- Fixed Blazium Ore not emitting light.
+- Fixed Minestrapp mob drops dropping way too frequently.
+- Fixed Sifter drops not syncing between the client and server. They'll no longer change whenever you try to pull an item out of your inventory.
+- Fixed Sifters not giving items if the player's inventory is full.
+- Fixed Lichen-Coated Permafrost having the wrong top color in the inventory.
+- Fixed only half of the Carved Pumpkin recipes giving the proper result.
+- Fixed being able to shift-click Backpacks and Satchels into other Backpacks and Satchels.
+- Fixed Melters getting stuck when switching between boosted and non-boosted states.
+- Fixed Dirt having an abnormally high chance of dropping nothing when sifted.
+- Fixed Podzol always dropping something when sifted.
+- Fixed Minestrapp Saplings burning too long when used as fuel.
+- Fixed Minestrapp Wood Slabs not being usable as fuel.
+- Fixed Frozen Oak Fences, Fence Gates, and Stairs not being usable as fuel.
+- Fixed Minestrapp Bricks being registered wrong in Ore Dictionary.
+- Fixed Leaves and Logs not being alloyable with Rotten Flesh for producing Leather.
+- Fixed not being able to shift-click items into Alloy Furnaces.
+- Fixed shift-clicking issues with Stonecutters.
+- Shift-clicking Moss, Hanging Moss, Glow Moss, Dyes, and Crushed Ice into a Stonecutter now places it in the add-on slot.
+- Fixed Redstone Comparators not being craftable with all three types of Quartz.
+- Fixed Hoppers not removing items from Crushers' bonus output slots.
+- Fixed Hoppers not removing empty Buckets from the Melter fuel slot.
+- Fixed Melters consuming items in the Bucket slot even if the recipe doesn't require them.
+- Fixed Hoppers, Pipes, etc placing fuel into the Bucket slot and Buckets into the fuel slot if either of the two was full on the Melter.
+- Fixed smelting Dough into Bread not giving the Bake Bread achievement (though as a consequence you can now also get it from taking Bread out of dungeon chests).
+- Fixed only one half of Double-Tall Grass actually dropping Corn.
+- Fixed some typos in the config.
+- Fixed shift-clicking not working for the bottom-right slot of Satchels and Backpacks.
+- Fixed Porcum Amulets never breaking.
+- Fixed a crash when attempting to use a Soul Bottle that had been shift-clicked out of the crafting window.
+- Fixed Glass Bottles not being craftable with all colorless Glass types.
+- Fixed Hoppers not removing items from the second Splitter output slot.
+
+Minestrappolation v1.8.9-4.2.666
+================================
+
+- Added Corn! A new crop obtained occasionally when breaking the BOTTOM HALF of Double-Tall Grass.
+- Added Corn on a Stick.
+- Added Grilled Corn.
+- Added Corn Meal.
+- Added Corn Bread.
+- Added Popcorn.
+- Added Glowshrooms! Luminescent Mushrooms that generate in the Nether. They can be used in crafting Hallucinogenic Glowshroom Stew, or can be used as Splitter fuel.
+- Added Huge Glowshroom blocks. Huge Glowshrooms are created by Bone-Mealing Glowshrooms. They're a good decorative lighting source, and can also be used as Splitter fuel.
+- Added Hallucinogenic Glowshroom Stew. Gives you Speed IV, Haste IV, and Regeneration II, making it useful for strip-mining, but it also gives you Nausea, Blindness, and Night Vision, making it very hard to see...
+- Added Fat. Dropped from Pigs and Zombie Pigmen. Can be smelted into Tallow or melted into Grease.
+- Added Tallow. Used for crafting Candles.
+- Added Grease. Used for frying certain foods.
+- Added French Fries.
+- Added Fried Fish.
+- Added Fried Salmon.
+- Added Salmon Burgers.
+- Added Fish and Chips.
+- Added Candy! Comes in three varieties, and is dropped by most mobs any time between October 20th and October 31st. Doesn't restore Hunger, but gives you free Potion effects!
+- Added Candles! Purely decorative, but do emit light. Aren't lit when placed, so you'll have to right-click them with something that creates Fire...
+- Lit Candles can also be extinguished in a similar manner.
+- Added the new Pumpkin Carving system! Place a Pumpkin in the center of the crafting grid, a Candle at the bottom, and some Shears anywhere in the top 5 empty slots to craft a Simple Carved Pumpkin.
+- Once placed, Simple Carved Pumpkins can be right-clicked with Shears to carve them further. They can also be lit or extinguished in the same way as Candles.
+- Carving a Pumpkin too far will turn it into a Smashed Pumpkin. Smashed Pumpkins can still be lit, though.
+- There are 15 Carving patterns total (16 if you count Smashed Pumpkins).
+- Vanilla Pumpkins no longer have a carved face by default.
+- Vanilla Jack o'Lanterns have been replaced with "Glowpumpkins" -- alloyed with 8 Purple Glowshrooms and a Pumpkin. Purely decorative.
+- Hanging Glow Moss can now be used as Splitter fuel.
+- Fixed Panes, Fences, etc connecting to Crates and Barrels.
+
+Minestrappolation v1.8.9-4.2.1
+==============================
+
+- Added Magnetic Torches. When the block they're placed on is broken, they try to attatch to another neighboring block before dropping as an item. Idea taken from IntegerArray's Smart Torches mod with permission.
+- Added Guano. Dropped by Bats, acts like Bonemeal, and can be used as an efficient fuel source.
+- Added Fermented Bat Gene Samples.
+- Added Bat Gene Blocks. Spawn Guano items around them over time.
+- Blaze Shards now burn longer.
+- Blazium Ingots burn longer.
+- Blazium Blocks burn longer.
+- Magma Buckets can be used as a fuel source, and are more efficient than Lava.
+- Improved Glow Glass texture.
+- Fixed Satchel dupe glitch.
+- Fixed shift-clicking in Satchels and Backpacks.
+- Fixed Alchemical Splitter's GUI texture showing a glitchy progress bar.
+- Fixed not being able to shift-click items into the Splitter input slot.
+- Fixed middle-clicking Minestrapp machines in Creative giving the active state.
+- Fixed middle-clicking Minestrapp Doors in Creative giving Vanilla Oak Doors.
+
+Minestrappolation v1.8.9-4.2.0
+==============================
+
+- Added Cardboard.
+- Added Cardboard Blocks. Very useful for temporary scaffolding.
+- Added Wet Cardboard Blocks. Created when Cardboard Blocks are touched by Rain or Water, and collapse when you try to walk on them.
+- Added Granite Brick Stairs and Slabs.
+- Added Diorite Brick Stairs and Slabs.
+- Added Andesite Brick Stairs and Slabs.
+- Added Slate Brick Stairs and Slabs.
+- Added Cobbled Red Rock, Cobbled Coldstone, Cracked Icestone, and Cobbled Oceanstone Walls.
+- Added Mossy Cobbled Red Rock, Mossy Cobbled Coldstone, Wet Cracked Icestone, and Mossy Cobbled Oceanstone Walls.
+- Added Sandstone and Red Sandstone Brick items.
+- Added Sandstone and Red Sandstone Brick blocks.
+- Added Sandstone and Red Sandstone Patterned Bricks.
+- Added Sandstone and Red Sandstone Brick Stairs and Slabs.
+- Added Hanging Moss. Generates on the underside of blocks in Mountain, Jungle, Swamp, and Roofed Forest biomes. Used for the same stuff as normal Moss, mostly just makes the world look fancier.
+- Added Hanging Glow Moss. Generates on the underside of blocks in the Nether and End, and emits light.
+- Added Glow-Mossy Netherrack. Can be cut with Glow Moss, or can be found in patches in the Nether.
+- Added Glow-Mossy Nether Bricks. Can be cut with Glow Moss, or can be found in patches in Nether Fortresses.
+- Added Glow-Mossy End Stone. Can be cut with Glow Moss.
+- Added Diamond Dust. Obtained by crushing Diamonds.
+- Added Crystal Hearts. Require a Heart Piece and Diamond Dust to craft. They also can't be used for anything until you activate them, which requires you to already have at least one extra heart of health, since it saps 5 hearts of health when activated.
+- Added Blocks of Flesh.
+- Added Reactive Blocks of Flesh. Created by right-clicking a Block of Flesh with any Potion or Splash Potion of Regeneration.
+- Added Slime Cores. Dropped by Slimes. Duh.
+- Added Fermented Rabbit Gene Samples.
+- Added Fermented Chicken Gene Samples.
+- Added Fermented Cow Gene Samples.
+- Added Fermented Sheep Gene Samples.
+- Added Fermented Wolf Gene Samples.
+- Added Infectious Fungus. Dropped by Mooshrooms.
+- Added Rabbit Gene Blocks. Can be sheared for Rabbit Hide and sometimes Rabbit Feet.
+- Added Chicken Gene Blocks. Randomly generate Eggs and Feathers around them over time.
+- Added Cow Gene Blocks. Can be right-clicked with a Bucket to fill it with Milk.
+- Added Mooshroom Gene Blocks. Acts like a Cow Block, plus it can be right-clicked with a Bowl to get Mushroom Stew, or sheared to harvest the Red Mushroom on its top.
+- Added Sheep Gene Blocks. Can be sheared for Wool, and comes in 16 vivid technicolors!
+- Added Wolf Gene Blocks. Can be sheared for Wolf Hide.
+- Added Shrub Grass. Drops Celery Seeds and replaces all the Tall Grass and Flowers in snowy biomes.
+- Added an achievement for obtaining Diamond Dust.
+- Added an achievement for activating a Crystal Heart.
+- Added an achievement for creating any type of Gene Block.
+- Added an achievement for getting  a Pink Sheep Gene Block by random chance while creating Sheep Gene Blocks.
+- All Dirt, Coarse Dirt, Podzol, Grass, Sand, Red Sand, and Cobwebs in snowy biomes are now replaced with their frozen counterparts.
+- Frost Generators now freeze Tall Grass and Ferns into Shrub Grass rather than Dead Shrubs.
+- Celery Seeds can no longer be found by breaking Tall Grass, and are instead only obtainable via Shrub Grass.
+- Nerfed Tin, Meurodite, and Torite Armor.
+- Buffed Fire and Ice Armor.
+- Ice Charges now deal more damage.
+- Fire Charges shot from Charge Guns are now Ghast fireballs instead of Blaze fireballs. This means they deal more damage and cause explosion damage to any terrain that they hit.
+- Decreased Hang Glider durability.
+- Nerfed Calamari, Sushi, and Onigiri hunger values.
+- Increased Oves Amulet durability.
+- Decreased Pullum Amulet durability.
+- Server admins can now build inside claims and manually remove Quantum Claimerators.
+- Added most residual missing Splitter recipes.
+- Frost Generators and Quantum Claimerators are now harvestable with an Iron Pickaxe or better, rather than Diamond.
+- Changed Flower Pots' recipe to include Dirt.
+- All Amulets now require an Emerald in their crafting recipe.
+- Added the Emerald used in their recipe to all Amulets' textures.
+- The Splitter GUI now uses magic particles instead of flames as the fuel meter texture to better indicate that it doesn't use combustable fuels.
+- Elder Guardians now have a 70% chance to drop a Heart Piece when killed.
+- Moss and Hanging Moss can now be used as fuel to smelt up to two items. Not very useful early-game, but it does allow for automated infinite fuel farms in the late game.
+- Improved Vanilla Netherrack and Nether Quartz Ore textures.
+- Changed Blazium Ore texture to match the new Netherrack texture.
+- Fixed Godstone and Obsidian Bricks being destroyable by the Ender Dragon.
+- Fixed Meurodite Armor not taking durability damage while the player is in Lava.
+- Fixed Frost Generators being instantly minable.
+- Fixed Bowl Ice Cream dupe glitch.
+- Fixed floating Glacieric Ice Deposits.
+- Fixed Z-fighting issues with Furnace, Alloy Furnace, and Melter models.
+- Fixed Melters not changing to their inactive texture while inactive.
+- Fixed Steel Mesh and Minestrapp Glass Panes sometimes rendering weird.
+- Fixed Squids not dropping pre-cooked Calamari when killed via fire.
+- Fixed Insulated Uranium having no blast resistance or step sound.
+- Fixed Mana Leaves' burn time being just barely less than 2 items in the Splitter.
+- Fixed Minestrapp Saplings not being plantable in Flower Pots. WARNING: Break and re-craft all your Flower Pots in existing worlds. We had to code in an entirely new replacement Flower Pot block to do this, so old ones won't work.
+- Fixed Redwood Leaves decaying so much. They'll still decay sometimes, but not as much, and they have less chance to drop Saplings, so the lag should be reduced in Redwood biomes.
+- Fixed Backpack/Satchel item duplication glitch.
+- Fixed a number of plant/wood-based Minestrapp blocks not being flammable.
+- Fixed Glacierite Blocks not being usable as Beacon Bases.
+
+Minestrappolation v1.8.9-4.1.0
+==============================
+
+- Added Mud blocks. Can be crafted, and also generate in Rivers and Swamps.
+- Added Mud Bricks.
+- Added Mud Balls. Throwable like Eggs or Snowballs, and give players Blindness.
+- Added Rubble. Generates in Gravel and in Strongholds. Has a chance to drop any type of Brick item or Chunk when harvested.
+- Added Crushed Ice. Can be eaten to extinguish the player.
+- Added Ice Cream. Credit to Godzillanator for the original texture.
+- Added Glacial Invincium.
+- Added Glacieric Ice Deposits. They are indestructable and generate on Glacial Invincium mounds in the Frost, but can be harvested like Berry Bushes while holding a Pickaxe.
+- Added Glacieric Ice Shards.
+- Added Glacieric Ice blocks.
+- Added Glacierite Ingots.
+- Added Blocks of Glacierite.
+- Added Ice Tools. Behave the same way as Fire Tools, but freeze blocks when right-clicked.
+- Added Ice Swords. Behave the same way as Fire Swords, but freeze mobs and blocks.
+- Added Ice Armor. Wearing a full set freezes any blocks you walk on.
+- Added Titanium Mining Sieves. Have more durability than Copper Mining Sieves, and can also be repaired when broken.
+- Added Satchels. Right-click to open. Has the same storage space as a Crate.
+- Added Backpacks. Right-click to open. Has the same storage space as a Barrel.
+- Added Ice Charges. Act like Fire Charges, but freeze blocks and mobs instead of igniting them.
+- Added Charge Guns. Act similar to Bows, but use Fire and Ice Charges as ammo, allowing you to use them without setting up a Dispenser first.
+- Added an achievement for placing a Frost Generator.
+- Added an achievement for harvesting a Glacieric Ice Deposit.
+- Added an achievement for eating Ice Cream.
+- Added an achievement for using a Heart Container.
+- Added an achievement for using an Alchemical Splitter.
+- Added a bunch of new Config options.
+- Decreased default Wolf Hide and Mob Feet drop chances.
+- Clay is now siftable.
+- Glacieric Ice Shards can be found by sifting Permafrost, Lichen-Covered Permafrost, Cold Sand, and Cold Red Sand.
+- Propellers and Technological Doodads can be found by sifting Rubble.
+- Insulated Uranium and Plutonium now require a Technological Doodad to craft.
+- Frost Generators are now crafted with Glacieric Ice instead of Packed Ice.
+- Other players can now open claimed Doors and use claimed Levers and Buttons.
+- Amulets now have a Latin description that explains what they do.
+- Brick items are now handled under 1 ID. Could cause already existant Brick items to get deleted/change what type of brick they are.
+- Fixed Minestrapp crashing if another mod adds Ores.
+- Fixed Hoppers not placing items in Minestrapp machines correctly.
+- Fixed Minestrapp machines not giving XP.
+- Fixed crafting recipes that require a Water Bottle not returning the emptied Glass Bottle.
+- Fixed Alloy Furnace recipes not being mirrorable.
+- Fixed Titanium and Glow Glass Melter recipes requiring a Bucket.
+- Fixed Insulated Uranium and Plutonium being broken instantly.
+- Fixed NEI crashing every time you press "U", but had to temporarily remove NEI support for Crusher recipes.
+- Fixed Blazium Ingots being craftable.
+- Fixed Redwood Leaves decaying too much (for realsies this time).
+
+Minestrappolation v1.8.9-4.0.2A
+===============================
+
+- Added Chicken Feet (dropped by Chickens).
+- Added Sheep Feet (dropped by Sheep).
+- Added Pig Feet (dropped by Pigs and Zombie Pigmen).
+- Added Cow Feet (dropped by Cows and Mooshrooms).
+- Added Pullum Amulets.
+- Added Oves Amulets.
+- Added Porcum Amulets.
+- Added Vaccam Amulets.
+- Added Wolf Hide (dropped by Wolves).
+- Added Squid Tentacles (dropped by Squids and Guardians).
+- Added Calamari.
+- Added Onigiri.
+- Added Sushi.
+- Added Lucky Sushi.
+- Added Propellers.
+- Added Technological Doodads (found in dungeon Chests and dropped by Iron Golems).
+- Added Resilient Armor (protects against Uranium and Plutonium Ores' effects).
+- Added Fan blocks.
+- Added Chimney blocks.
+- Added growable Seaweed blocks and items (generate in Ocean biomes).
+- Added Prismarine Slabs.
+- Added Prismarine Stairs.
+- Right-clicking crops with a Torite Hoe will Bone Meal them at the cost of 10 durability.
+- Blazium Tools' Flint and Steel effect now costs 4 durability per use instead of 2 (with the eception of Blazium Hoes).
+- Wearing a full set of Blazium Armor now causes all direct attackers to be lit on fire.
+- Tweaked Berry hunger restoration values.
+- Fixed Soul Bottles not working in multiplayer.
+- Fixed rice bowls dropping stick that coudlnt be picked up.
+- Fixed Version checker message displaying after every respawn
+- Fixed Berry Bushes making Stone sounds when broken.
+- Fixed Redwood Leaves' decay range being much shorter than their generated distance from the trunk.
+- Fixed being able to shift-sneak off the edge of Roads.
+- Fixed Roads giving players a speed boost when they bump against the side of the Road block.
+- Fixed Achievements resetting upon logging off of a server.
+- Fixed non-Bucket melting recipes (such as Titanium Ore to Titanium Ingots) requiring a Bucket.
+- Added Not Enough Items support for all milling, cutting, alloying, melting, and crushing recipes.
+- Changed Vanilla's Rain texture to make it less obtrusive.
+- Improved Wing Sinew texture.
+- Improved Meurodite and Titanium Armor model textures.
+
+Minestrappolation v1.8.9-4.0.1A
+===============================
+
+- Initial release.
