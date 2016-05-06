@@ -8,7 +8,7 @@ public class MReference
 	public static final String MODID   = "ministrapp";
 	public static final String ACRONYM = "M";
 	public static final String NAME    = "Minestrappolation Mod";
-	public static final String VERSION = "1.8.0-4.3.0";
+	public static final String VERSION = "1.8.9-4.3.0";
 
 	public static final List<String> AUTHORS = Arrays.asList("Delocuro", "TheWerty1124", "SoBioHazardous");
 

@@ -1,3 +1,6 @@
+import java.util.regex.Matcher
+import java.util.regex.Pattern
+
 buildscript {
 	repositories {
 		jcenter()
@@ -14,14 +17,7 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle.forge'
 apply plugin: 'idea'
 
-/*
-// for people who want stable - not yet functional for MC 1.8.8 - we require the forgegradle 2.1 snapshot
-plugins {
-    id "net.minecraftforge.gradle.forge" version "2.1"
-}
-*/
-
-version = "1.8-4.2.666"
+version = "1.8.9-4.3.0"
 group = "minestrapteam"
 archivesBaseName = "Minestrappolation"
 
@@ -45,7 +41,65 @@ minecraft {
 	}
 }
 
-task textureZip(type: Zip) << {
+//noinspection GroovyAssignabilityCheck
+sourceSets {
+	main {
+		java {
+			srcDir 'src/main/java'
+		}
+		resources {
+			srcDir 'src/main/resources'
+
+			// Exclude Dev Textures
+			exclude '**/textures/dev'
+			exclude '**/textures/dev/*'
+		}
+	}
+}
+
+//noinspection GroovyAssignabilityCheck
+processResources {
+	// this will ensure that this task is redone when the versions change.
+	inputs.property "version", project.version
+	inputs.property "mcversion", project.minecraft.version
+
+	// replace stuff in mcmod.info, nothing else
+	from(sourceSets.main.resources) {
+		include 'mcmod.info'
+
+		// replace version and mcversion
+		expand 'version': project.version, 'mcversion': project.minecraft.version
+	}
+
+	// copy everything else, thats not the mcmod.info
+	from(sourceSets.main.resources) {
+		exclude 'mcmod.info'
+
+		exclude '**/*.json'
+	}
+
+	from(sourceSets.main.resources) {
+		include '**/*.json'
+
+		filter { String line ->
+			Pattern clean = Pattern.compile(/ \s+|("(?:[^"\\]|\\.)*") /, Pattern.DOTALL);
+
+			StringBuffer sb = new StringBuffer();
+			Matcher m = clean.matcher(line);
+			while (m.find())
+			{
+				m.appendReplacement(sb, "");
+				if (m.group(1) != null) sb.append(m.group(1));
+			}
+			m.appendTail(sb);
+
+			return sb ? sb.toString() : null;
+		}
+	}
+}
+
+task textureZip(type: Zip)
+textureZip {
 	classifier = 'avt'
 	archiveName = "$archivesBaseName-$version-avt.zip";
 
@@ -54,31 +108,28 @@ task textureZip(type: Zip) << {
 	}
 }
 
-task devJar(type: Jar, dependsOn: 'classes') << {
+task devJar(type: Jar, dependsOn: 'classes')
+devJar {
 	classifier = 'dev'
 	archiveName = "$archivesBaseName-$version-dev.jar"
 
-	from('build/classes/main') {
-		include('minestrapteam/minestrappolation/**')
+	from("$buildDir/classes/main") {
+		include('minestrapteam/mods/**')
 	}
-	from('build/resources/main') {
-		include('assets/**')
-	}
+	from("$buildDir/resources/main")
 }
 
-task srcJar(type: Jar) << {
+artifacts {
+	archives devJar
+	archives textureZip
+}
+
+sourceJar {
 	classifier = 'src'
 	archiveName = "$archivesBaseName-$version-src.jar"
-
-	from('src/main/java') {
-		include('minestrapteam/minestrappolation/**')
-	}
-	from('src/main/resources') {
-		include('assets/**')
-	}
 }
 
-task buildApi(dependsOn: [ 'build', 'srcJar', 'devJar', 'textureZip' ])
+build.dependsOn 'devJar', 'textureZip'
 
 dependencies {
 	// you may put jars on which you depend on in ./libs
@@ -103,31 +154,7 @@ dependencies {
 	// http://www.gradle.org/docs/current/userguide/dependency_management.html
 }
 
-processResources {
-	// this will ensure that this task is redone when the versions change.
-	inputs.property "version", project.version
-	inputs.property "mcversion", project.minecraft.version
-
-	// replace stuff in mcmod.info, nothing else
-	from(sourceSets.main.resources.srcDirs) {
-		include 'mcmod.info'
-
-		// replace version and mcversion
-		expand 'version': project.version, 'mcversion': project.minecraft.version
-	}
-
-	// copy everything else, thats not the mcmod.info
-	from(sourceSets.main.resources.srcDirs) {
-		exclude 'mcmod.info'
-	}
-}
-
-artifacts {
-	archives srcJar
-	archives devJar
-}
-
-//fix IntelliJ assets
+// Fix IntelliJ assets
 idea {
 	module {
 		inheritOutputDirs = true

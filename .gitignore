@@ -1,28 +1,43 @@
-#Workspace Files
+# Workspace Files
+
+# Gradle
 .gradle/
+build/
+
+# IntelliJ IDEA
+*.iml
+*.ipr
+*.iws
+.idea/
+classes/
+
+# Eclipse
 .classpath
 .settings/
 .project/
-backups/
 bin/
 eclipse/
+
+# Misc
+
+backups/
 Forum Resources/
 build.bat
 CREDITS-fml.txt
 LICENSE-fml.txt
 MinecraftForge-Credits.txt
 MinecraftForge-License.txt
-setup eclipse.bat
 setup workspace.bat
-*.iml
-*.ipr
-*.iws
+setup eclipse.bat
 *.launch
-.idea/
-build/
-classes/
 run/
 
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Operating System Files
+
+# Windows
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
@@ -30,22 +45,13 @@ ehthumbs.db
 # Folder config file
 Desktop.ini
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
 # Windows Installer files
 *.cab
 *.msi
 *.msm
 *.msp
 
-# =========================
-# Operating System Files
-# =========================
-
 # OSX
-# =========================
-
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -65,7 +71,3 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
-
-*.ipr
-
-*.iws
