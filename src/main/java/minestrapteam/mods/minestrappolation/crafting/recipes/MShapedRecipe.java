@@ -62,7 +62,7 @@ public class MShapedRecipe extends ShapedRecipes
 
 				if (itemstack1 != null || itemstack != null)
 				{
-					if (itemstack1 == null && itemstack != null || itemstack1 != null && itemstack == null)
+					if (itemstack1 == null || itemstack == null)
 					{
 						return false;
 					}
@@ -92,11 +92,10 @@ public class MShapedRecipe extends ShapedRecipes
 
 		if (recipeComponents[i] instanceof String[])
 		{
-			String[] astring = recipeComponents[i++];
+			String[] astring = (String[]) recipeComponents[i++];
 
-			for (int l = 0; l < astring.length; ++l)
+			for (String s1 : astring)
 			{
-				String s1 = astring[l];
 				++k;
 				j = s1.length();
 				s = s + s1;
@@ -113,7 +112,7 @@ public class MShapedRecipe extends ShapedRecipes
 			}
 		}
 
-		HashMap hashmap;
+		HashMap<Character, ItemStack> hashmap;
 
 		for (hashmap = Maps.newHashMap(); i < recipeComponents.length; i += 2)
 		{
@@ -142,9 +141,9 @@ public class MShapedRecipe extends ShapedRecipes
 		{
 			char c0 = s.charAt(i1);
 
-			if (hashmap.containsKey(Character.valueOf(c0)))
+			if (hashmap.containsKey(c0))
 			{
-				aitemstack[i1] = ((ItemStack) hashmap.get(Character.valueOf(c0))).copy();
+				aitemstack[i1] = hashmap.get(c0).copy();
 			}
 			else
 			{
