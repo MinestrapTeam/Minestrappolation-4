@@ -103,9 +103,7 @@ textureZip {
 	classifier = 'avt'
 	archiveName = "$archivesBaseName-$version-avt.zip";
 
-	from('src/extra/resources') {
-		include('**')
-	}
+	include('src/main/resources/assets/minecraft/**/*.*')
 }
 
 task devJar(type: Jar, dependsOn: 'classes')
