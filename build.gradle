@@ -158,3 +158,17 @@ idea {
 		inheritOutputDirs = true
 	}
 }
+
+// Run Wrapper with more available Memory
+wrapper {
+	gradleVersion = '2.7'
+
+	def jvmOpts = "-Xmx1g"
+	inputs.property("jvmOpts", jvmOpts)
+
+	doLast {
+		def optsEnvVar = "DEFAULT_JVM_OPTS"
+		scriptFile.write scriptFile.text.replace("$optsEnvVar=\"\"", "$optsEnvVar=\"$jvmOpts\"")
+		batchScript.write batchScript.text.replace("set $optsEnvVar=", "set $optsEnvVar=$jvmOpts")
+	}
+}
