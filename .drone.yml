@@ -1,0 +1,2 @@
+branches:
+  - master # Whitelist master until 1.9 is fully updated
