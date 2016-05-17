@@ -4,7 +4,6 @@ import java.io.Serializable;
 
 public class Key implements Serializable
 {
-
 	private final int x;
 	private final int y;
 

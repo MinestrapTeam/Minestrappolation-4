@@ -1,14 +1,11 @@
 package minestrapteam.mods.chunkster;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.server.MinecraftServer;
-
 import java.io.*;
 import java.util.HashMap;
 
 public class ChunkProtector
 {
-	public static HashMap<Key, ProtectionData> prot = new HashMap<Key, ProtectionData>();
+	public static HashMap<Key, ProtectionData> prot = new HashMap<>();
 
 	public static boolean protectChunk(int x, int y, String playerName)
 	{
@@ -41,13 +38,6 @@ public class ChunkProtector
 	public static ProtectionData getProtectionData(int x, int y)
 	{
 		return prot.get(new Key(x, y));
-	}
-
-	public static boolean canEditChunk(EntityPlayer player, int x, int y)
-	{
-		return MinecraftServer.getServer().getConfigurationManager().getOppedPlayers()
-		                      .getGameProfileFromName(player.getName()) != null || getProtectionData(x, y).canEdit(
-			UUIDHelper.getPlayerUUID(player.getName()));
 	}
 
 	public static void updateFile(String path)
