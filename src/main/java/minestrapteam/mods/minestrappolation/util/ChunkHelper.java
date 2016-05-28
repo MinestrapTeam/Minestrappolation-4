@@ -1,7 +1,7 @@
 package minestrapteam.mods.minestrappolation.util;
 
 import net.minecraft.entity.Entity;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.chunk.Chunk;
 
 public class ChunkHelper

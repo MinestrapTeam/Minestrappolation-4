@@ -6,14 +6,14 @@ import net.minecraft.block.BlockFalling;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyInteger;
-import net.minecraft.block.state.BlockState;
+import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityFallingBlock;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
-import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -235,7 +235,7 @@ public class BlockWitherAsh extends BlockFalling
 	}
 
 	/**
-	 * Convert the given metadata into a BlockState for this Block
+	 * Convert the given metadata into a BlockStateContainer for this Block
 	 */
 	@Override
 	public IBlockState getStateFromMeta(int meta)
@@ -253,7 +253,7 @@ public class BlockWitherAsh extends BlockFalling
 	}
 
 	/**
-	 * Convert the BlockState into the correct metadata value
+	 * Convert the BlockStateContainer into the correct metadata value
 	 */
 	@Override
 	public int getMetaFromState(IBlockState state)
@@ -262,9 +262,9 @@ public class BlockWitherAsh extends BlockFalling
 	}
 
 	@Override
-	protected BlockState createBlockState()
+	protected BlockStateContainer createBlockState()
 	{
-		return new BlockState(this, LAYERS);
+		return new BlockStateContainer(this, LAYERS);
 	}
 
 	@Override

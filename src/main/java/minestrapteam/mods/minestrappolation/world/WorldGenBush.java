@@ -2,7 +2,7 @@ package minestrapteam.mods.minestrappolation.world;
 
 import minestrapteam.mods.minestrappolation.block.BlockBush;
 import net.minecraft.block.Block;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 

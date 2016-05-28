@@ -11,8 +11,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.FakePlayer;
@@ -55,9 +55,9 @@ public class BlockIceDeposit extends BlockBush
 	}
 
 	@Override
-	public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
+	public boolean canPlaceBlockAt(World world, BlockPos pos)
 	{
-		Block block = worldIn.getBlockState(pos.down()).getBlock();
+		Block block = world.getBlockState(pos.down()).getBlock();
 		return block == MBlocks.glaical_invincium;
 	}
 

@@ -7,14 +7,14 @@ import net.minecraft.block.BlockFenceGate;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyBool;
-import net.minecraft.block.state.BlockState;
+import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -180,7 +180,7 @@ public class MBlockWall extends Block
 	}
 
 	/**
-	 * Convert the given metadata into a BlockState for this Block
+	 * Convert the given metadata into a BlockStateContainer for this Block
 	 */
 	@Override
 	public IBlockState getStateFromMeta(int meta)
@@ -189,7 +189,7 @@ public class MBlockWall extends Block
 	}
 
 	/**
-	 * Convert the BlockState into the correct metadata value
+	 * Convert the BlockStateContainer into the correct metadata value
 	 */
 	@Override
 	public int getMetaFromState(IBlockState state)
@@ -212,8 +212,8 @@ public class MBlockWall extends Block
 	}
 
 	@Override
-	protected BlockState createBlockState()
+	protected BlockStateContainer createBlockState()
 	{
-		return new BlockState(this, UP, NORTH, EAST, WEST, SOUTH);
+		return new BlockStateContainer(this, UP, NORTH, EAST, WEST, SOUTH);
 	}
 }

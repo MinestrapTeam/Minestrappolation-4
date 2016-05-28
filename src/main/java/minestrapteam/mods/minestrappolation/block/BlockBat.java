@@ -4,13 +4,12 @@ import minestrapteam.mods.minestrappolation.Config;
 import minestrapteam.mods.minestrappolation.lib.MItems;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyInteger;
-import net.minecraft.block.state.BlockState;
+import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 import java.util.Random;
@@ -22,7 +21,7 @@ public class BlockBat extends BlockFlesh
 	public BlockBat(Material materialIn, MapColor mapColorIn)
 	{
 		super(materialIn, mapColorIn);
-		this.setDefaultState(this.blockState.getBaseState().withProperty(AGE, Integer.valueOf(0)));
+		this.setDefaultState(this.blockState.getBaseState().withProperty(AGE, 0));
 		this.setTickRandomly(true);
 	}
 
@@ -66,12 +65,12 @@ public class BlockBat extends BlockFlesh
 	@Override
 	public int getMetaFromState(IBlockState state)
 	{
-		return state.getValue(AGE).intValue();
+		return state.getValue(AGE);
 	}
 
 	@Override
-	protected BlockState createBlockState()
+	protected BlockStateContainer createBlockState()
 	{
-		return new BlockState(this, AGE);
+		return new BlockStateContainer(this, AGE);
 	}
 }

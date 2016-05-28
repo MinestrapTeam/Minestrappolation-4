@@ -3,7 +3,7 @@ package minestrapteam.mods.minestrappolation.world;
 import minestrapteam.mods.minestrappolation.enumtypes.MWoodType;
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import net.minecraft.init.Blocks;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 import java.util.Random;

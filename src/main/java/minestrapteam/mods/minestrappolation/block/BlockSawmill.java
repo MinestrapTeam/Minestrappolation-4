@@ -9,12 +9,12 @@ import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
-import net.minecraft.block.state.BlockState;
+import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumWorldBlockLayer;
 import net.minecraft.world.World;
@@ -124,7 +124,7 @@ public class BlockSawmill extends BlockContainer
 	}
 
 	/**
-	 * Convert the given metadata into a BlockState for this Block
+	 * Convert the given metadata into a BlockStateContainer for this Block
 	 */
 	@Override
 	public IBlockState getStateFromMeta(int meta)
@@ -140,7 +140,7 @@ public class BlockSawmill extends BlockContainer
 	}
 
 	/**
-	 * Convert the BlockState into the correct metadata value
+	 * Convert the BlockStateContainer into the correct metadata value
 	 */
 	@Override
 	public int getMetaFromState(IBlockState state)
@@ -149,9 +149,9 @@ public class BlockSawmill extends BlockContainer
 	}
 
 	@Override
-	protected BlockState createBlockState()
+	protected BlockStateContainer createBlockState()
 	{
-		return new BlockState(this, FACING);
+		return new BlockStateContainer(this, FACING);
 	}
 
 	@SideOnly(Side.CLIENT)

@@ -5,28 +5,26 @@ import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyInteger;
-import net.minecraft.block.state.BlockState;
+import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumWorldBlockLayer;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.common.IShearable;
 import net.minecraftforge.common.util.FakePlayer;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -48,67 +46,62 @@ public class BlockBush extends MBlock implements IPlantable, IShearable
 	@Override
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
 	{
-		if (worldIn.getBlockState(pos.down()).getBlock() == this || this.checkForDrop(worldIn, pos, state))
+		if (worldIn.getBlockState(pos.down()).getBlock() != this && !this.checkForDrop(worldIn, pos, state))
 		{
-			int j = state.getValue(AGE).intValue();
-			if (j < 5)
-			{
-				int chance = rand.nextInt(Config.bushGrowChance);
-				if (chance == 1)
-				{
-					worldIn.setBlockState(pos, state.withProperty(AGE, Integer.valueOf(j + 1)), 2);
-				}
-			}
+			return;
+		}
+
+		final int age = state.getValue(AGE);
+		if (age < 5 && rand.nextInt(Config.bushGrowChance) == 0)
+		{
+			worldIn.setBlockState(pos, state.withProperty(AGE, age + 1), 2);
 		}
 	}
 
 	@Override
-	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ)
+	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ)
+	{
+		if (state.getValue(AGE) != 5)
+		{
+			return false;
+		}
+
+		if (worldIn.isRemote)
+		{
+			return true;
+		}
+
+		worldIn.setBlockState(pos, this.getDefaultState(), 2);
+		EntityItem ei = new EntityItem(worldIn, playerIn.posX, playerIn.posY, playerIn.posZ, new ItemStack(this.item));
+		worldIn.spawnEntityInWorld(ei);
+
+		if (playerIn instanceof FakePlayer)
+		{
+			ei.onCollideWithPlayer(playerIn);
+		}
+		return true;
+	}
+
+	@Override
+	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)
 	{
 		if (state.getValue(AGE) == 5)
 		{
-			if (worldIn.isRemote)
-				return true;
-			worldIn.setBlockState(pos, this.getDefaultState(), 2);
-			EntityItem ei = new EntityItem(worldIn, playerIn.posX, playerIn.posY, playerIn.posZ, new ItemStack(this.item));
-			worldIn.spawnEntityInWorld(ei);
-			if (playerIn instanceof FakePlayer)
-				ei.onCollideWithPlayer(playerIn);
-			return true;
+			return FULL_BLOCK_AABB;
 		}
-		return false;
+		return new AxisAlignedBB(0.1, 0.1, 0.1, 0.9, 0.9, 0.9);
 	}
 
 	@Override
-	public void setBlockBoundsBasedOnState(IBlockAccess worldIn, BlockPos pos)
+	public boolean canPlaceBlockAt(World world, BlockPos pos)
 	{
-		if (worldIn.getBlockState(pos).getValue(AGE) <= 4)
-		{
-			this.setBlockBounds(0.0F, 0.0F, 0.0F, .9F, .9F, .9F);
-		}
-		if (worldIn.getBlockState(pos).getValue(AGE) == 5)
-		{
-			this.setBlockBounds(0.0F, 0.0F, 0.0F, 1F, 1F, 1F);
-		}
-	}
+		final IBlockState blockState = world.getBlockState(pos.down());
 
-	@Override
-	public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
-	{
-		Block block = worldIn.getBlockState(pos.down()).getBlock();
+		Block block = blockState.getBlock();
 
-		if (block.canSustainPlant(worldIn, pos.down(), EnumFacing.UP, this))
-			return true;
-
-		if (block == this)
-		{
-			return true;
-		}
-		else if (block != Blocks.grass && block != Blocks.dirt && block != Blocks.sand)
-		{
-			return block == Blocks.mycelium && this == MBlocks.mana_bush;
-		}
-		return false;
+		return block == this || block.canSustainPlant(blockState, world, pos.down(), EnumFacing.UP, this)
+			       || block == Blocks.GRASS || block == Blocks.DIRT || block == Blocks.SAND
+			       || block == Blocks.MYCELIUM && this == MBlocks.mana_bush; // Mana bushes can grow on Mycelium
 	}
 
 	@Override
@@ -137,7 +130,7 @@ public class BlockBush extends MBlock implements IPlantable, IShearable
 	}
 
 	@Override
-	public AxisAlignedBB getCollisionBoundingBox(World worldIn, BlockPos pos, IBlockState state)
+	public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, World worldIn, BlockPos pos)
 	{
 		return null;
 	}
@@ -145,29 +138,28 @@ public class BlockBush extends MBlock implements IPlantable, IShearable
 	@Override
 	public IBlockState getStateFromMeta(int meta)
 	{
-		return this.getDefaultState().withProperty(AGE, Integer.valueOf(meta));
+		return this.getDefaultState().withProperty(AGE, meta);
 	}
 
 	@Override
-	@SideOnly(Side.CLIENT)
-	public EnumWorldBlockLayer getBlockLayer()
+	public BlockRenderLayer getBlockLayer()
 	{
 		if (this == MBlocks.mana_bush || this == MBlocks.glacieric_ice_vein)
-			return EnumWorldBlockLayer.TRANSLUCENT;
+			return BlockRenderLayer.TRANSLUCENT;
 		else
-			return EnumWorldBlockLayer.CUTOUT;
+			return BlockRenderLayer.CUTOUT;
 	}
 
 	@Override
 	public int getMetaFromState(IBlockState state)
 	{
-		return state.getValue(AGE).intValue();
+		return state.getValue(AGE);
 	}
 
 	@Override
-	protected BlockState createBlockState()
+	protected BlockStateContainer createBlockState()
 	{
-		return new BlockState(this, AGE);
+		return new BlockStateContainer(this, AGE);
 	}
 
 	@Override
@@ -183,7 +175,7 @@ public class BlockBush extends MBlock implements IPlantable, IShearable
 	}
 
 	@Override
-	public boolean isOpaqueCube()
+	public boolean isOpaqueCube(IBlockState state)
 	{
 		return false;
 	}
@@ -203,9 +195,7 @@ public class BlockBush extends MBlock implements IPlantable, IShearable
 	@Override
 	public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune)
 	{
-		ArrayList<ItemStack> list = new ArrayList();
-		list.add(new ItemStack(this, 1, 0));
-		return list;
+		return Collections.singletonList(new ItemStack(this));
 	}
 
 	@Override

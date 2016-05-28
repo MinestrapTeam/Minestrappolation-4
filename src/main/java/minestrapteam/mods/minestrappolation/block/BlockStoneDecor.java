@@ -5,7 +5,7 @@ import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
-import net.minecraft.block.state.BlockState;
+import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -61,7 +61,7 @@ public class BlockStoneDecor extends MBlock
 	}
 
 	/**
-	 * Convert the given metadata into a BlockState for this Block
+	 * Convert the given metadata into a BlockStateContainer for this Block
 	 */
 	@Override
 	public IBlockState getStateFromMeta(int meta)
@@ -70,7 +70,7 @@ public class BlockStoneDecor extends MBlock
 	}
 
 	/**
-	 * Convert the BlockState into the correct metadata value
+	 * Convert the BlockStateContainer into the correct metadata value
 	 */
 	@Override
 	public int getMetaFromState(IBlockState state)
@@ -79,9 +79,9 @@ public class BlockStoneDecor extends MBlock
 	}
 
 	@Override
-	protected BlockState createBlockState()
+	protected BlockStateContainer createBlockState()
 	{
-		return new BlockState(this, VARIANT);
+		return new BlockStateContainer(this, VARIANT);
 	}
 
 	public enum EnumType implements IStringSerializable

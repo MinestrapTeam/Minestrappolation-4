@@ -5,7 +5,7 @@ import minestrapteam.mods.minestrappolation.world.WorldGenBigGlowShroom;
 import net.minecraft.block.BlockMushroom;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 import java.util.Random;
