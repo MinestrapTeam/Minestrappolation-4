@@ -51,7 +51,8 @@ public class MGenHandler implements IWorldGenerator
 		// chunkX <<= 4;
 		// chunkZ <<= 4;
 		BlockPos pos = new BlockPos(chunkX, 1, chunkZ);
-		if (chunkGenerator instanceof ChunkProviderGenerate)
+		if (chunkGenerator instanceof ChunkProviderGenerate
+				|| chunkGenerator.getClass().toString().contains("ChunkProviderRTG"))
 		{
 			this.generateOverworld(world, random, chunkX, chunkZ);
 			if (Config.genBiomeStones == true)
@@ -117,71 +118,96 @@ public class MGenHandler implements IWorldGenerator
 		                 BlockHelper.forBlock(Blocks.stonebrick), Config.genRubble);
 		this.generateBoulder(world, rand, x1, z1);
 
-		if (biome == BiomeGenBase.ocean || biome == BiomeGenBase.river || biome == BiomeGenBase.deepOcean
-			    || biome == BiomeGenBase.swampland)
+		if (biomeCompare(biome, BiomeGenBase.ocean)
+				|| biomeCompare(biome, BiomeGenBase.river)
+				|| biomeCompare(biome, BiomeGenBase.deepOcean)
+				|| biomeCompare(biome, BiomeGenBase.swampland))
 		{
 			this.generateSeaweed(world, rand, x1, z1);
 		}
 
-		if (biome == BiomeGenBase.jungle || biome == BiomeGenBase.jungleEdge || biome == BiomeGenBase.jungleHills
-			    || biome == BiomeGenBase.swampland || biome == BiomeGenBase.roofedForest
-			    || biome == MBiomeManager.redwood)
+		if (biomeCompare(biome, BiomeGenBase.jungle)
+				|| biomeCompare(biome, BiomeGenBase.jungleEdge)
+				|| biomeCompare(biome, BiomeGenBase.jungleHills)
+				|| biomeCompare(biome, BiomeGenBase.swampland)
+				|| biomeCompare(biome, BiomeGenBase.roofedForest)
+				|| biomeCompare(biome, MBiomeManager.redwood))
 		{
 			this.generateOre(MBlocks.torite_ore, world, rand, x1, z1, 1, 6, 4, 1, 20,
 			                 BlockHelper.forBlock(Blocks.stone), Config.genTorite);
 			this.generateHangingMoss(world, rand, x1, z1, MBlocks.hanging_moss);
 		}
-		if (biome == BiomeGenBase.desert || biome == BiomeGenBase.desertHills || biome == MBiomeManager.redwood)
+		if (biomeCompare(biome, BiomeGenBase.desert)
+				|| biomeCompare(biome, BiomeGenBase.desertHills)
+				|| biomeCompare(biome, MBiomeManager.redwood))
 		{
 			this.generateDesertQuartz(world, rand, x1, z1);
 		}
-		if (biome == BiomeGenBase.forest || biome == BiomeGenBase.megaTaiga || biome == BiomeGenBase.megaTaigaHills
-			    || biome == BiomeGenBase.swampland || biome == MBiomeManager.redwood)
+		if (biomeCompare(biome, BiomeGenBase.forest)
+				|| biomeCompare(biome, BiomeGenBase.megaTaiga)
+				|| biomeCompare(biome, BiomeGenBase.megaTaigaHills)
+				|| biomeCompare(biome, BiomeGenBase.swampland)
+				|| biomeCompare(biome, MBiomeManager.redwood))
 		{
 			this.generateMoss(world, rand, x1, z1);
 		}
 
 		//Berries
-		if (biome == BiomeGenBase.forest || biome == BiomeGenBase.forestHills || biome == BiomeGenBase.birchForest
-			    || biome == BiomeGenBase.birchForestHills)
+		if (biomeCompare(biome, BiomeGenBase.forest)
+				|| biomeCompare(biome, BiomeGenBase.forestHills)
+				|| biomeCompare(biome, BiomeGenBase.birchForest)
+				|| biomeCompare(biome, BiomeGenBase.birchForestHills))
 		{
 			this.generateBerries(world, rand, x1, z1, new WorldGenBush(MBlocks.blueberry_bush));
 		}
-		if (biome == BiomeGenBase.roofedForest || biome == BiomeGenBase.swampland)
+		if (biomeCompare(biome, BiomeGenBase.roofedForest)
+				|| biomeCompare(biome, BiomeGenBase.swampland))
 		{
 			this.generateBerries(world, rand, x1, z1, new WorldGenBush(MBlocks.strawberry_bush));
 		}
-		if (biome == BiomeGenBase.extremeHills || biome == BiomeGenBase.extremeHillsEdge
-			    || biome == BiomeGenBase.extremeHillsPlus || biome == BiomeGenBase.taiga
-			    || biome == BiomeGenBase.taigaHills || biome == BiomeGenBase.megaTaiga
-			    || biome == BiomeGenBase.megaTaigaHills)
+		if (biomeCompare(biome, BiomeGenBase.extremeHills)
+				|| biomeCompare(biome, BiomeGenBase.extremeHillsEdge)
+			    || biomeCompare(biome, BiomeGenBase.extremeHillsPlus)
+			    || biomeCompare(biome, BiomeGenBase.taiga)
+			    || biomeCompare(biome, BiomeGenBase.taigaHills)
+			    || biomeCompare(biome, BiomeGenBase.megaTaiga)
+			    || biomeCompare(biome, BiomeGenBase.megaTaigaHills))
 		{
 			this.generateBerries(world, rand, x1, z1, new WorldGenBush(MBlocks.blackberry_bush));
-			if (biome == BiomeGenBase.extremeHills || biome == BiomeGenBase.extremeHillsEdge
-				    || biome == BiomeGenBase.extremeHillsPlus || biome == BiomeGenBase.taigaHills)
+			if (biomeCompare(biome, BiomeGenBase.extremeHills)
+					|| biomeCompare(biome, BiomeGenBase.extremeHillsEdge)
+				    || biomeCompare(biome, BiomeGenBase.extremeHillsPlus)
+				    || biomeCompare(biome, BiomeGenBase.taigaHills))
 			{
 				new WorldGenRedWoodTreeSmall().generate(world, rand, pos);
 				this.generateHangingMoss(world, rand, x1, z1, MBlocks.hanging_moss);
 			}
 		}
-		if (biome == BiomeGenBase.savanna || biome == BiomeGenBase.savannaPlateau || biome == BiomeGenBase.mesa
-			    || biome == BiomeGenBase.mesaPlateau || biome == BiomeGenBase.mesaPlateau_F
-			    || biome == MBiomeManager.redwood)
+		if (biomeCompare(biome, BiomeGenBase.savanna)
+				|| biomeCompare(biome, BiomeGenBase.savannaPlateau)
+				|| biomeCompare(biome, BiomeGenBase.mesa)
+			    || biomeCompare(biome, BiomeGenBase.mesaPlateau)
+			    || biomeCompare(biome, BiomeGenBase.mesaPlateau_F)
+			    || biomeCompare(biome, MBiomeManager.redwood))
 		{
 			this.generateBerries(world, rand, x1, z1, new WorldGenBush(MBlocks.raspberry_bush));
 		}
-		if (biome == BiomeGenBase.mushroomIsland || biome == BiomeGenBase.mushroomIslandShore
-			    || biome == BiomeGenBase.deepOcean || biome == BiomeGenBase.ocean)
+		if (biomeCompare(biome, BiomeGenBase.mushroomIsland)
+				|| biomeCompare(biome, BiomeGenBase.mushroomIslandShore)
+			    || biomeCompare(biome, BiomeGenBase.deepOcean)
+			    || biomeCompare(biome, BiomeGenBase.ocean))
 		{
 			this.generateBerries(world, rand, x1, z1, new WorldGenBush(MBlocks.mana_bush));
 		}
 
-		if (biome == MBiomeManager.frost)
+		if (biomeCompare(biome, MBiomeManager.frost))
 		{
 			new WorldGenIceMound().generate(world, rand, pos);
 		}
 
-		if (biome == BiomeGenBase.swampland || biome == BiomeGenBase.river || biome == BiomeGenBase.frozenRiver)
+		if (biomeCompare(biome, BiomeGenBase.swampland)
+				|| biomeCompare(biome, BiomeGenBase.river)
+				|| biomeCompare(biome, BiomeGenBase.frozenRiver))
 		{
 			this.generateMud(world, rand, x1, z1, 4, 10, 20, 50, 64, Config.genMud);
 		}
@@ -582,5 +608,10 @@ public class MGenHandler implements IWorldGenerator
 			return block;
 		}
 		return oreReplacements.get(block);
+	}
+
+	private boolean biomeCompare(BiomeGenBase biome1, BiomeGenBase biome2)
+	{
+		return biome1.biomeID == biome2.biomeID;
 	}
 }
