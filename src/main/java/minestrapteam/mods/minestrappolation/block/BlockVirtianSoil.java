@@ -8,6 +8,7 @@ import minestrapteam.mods.minestrappolation.lib.MReference;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDirt;
 import net.minecraft.block.BlockSand.EnumType;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -35,16 +36,17 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockVirtianSoil extends BlockDirt
 {
-	public BlockVirtianSoil()
+	public BlockVirtianSoil(SoundType sound)
 	{
+		this.blockSoundType=sound;
 	}
 	
 	public MapColor getMapColor(IBlockState state)
     {
         if (state.getValue(VARIANT).getMetadata() == 2)
-        	return MapColor.blackColor;
+        	return MapColor.BLACK;
         else
-        	return MapColor.pinkColor;
+        	return MapColor.PINK;
     }
 	
 	public static void inventoryRender()

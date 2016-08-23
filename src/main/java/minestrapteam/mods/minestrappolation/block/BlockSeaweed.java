@@ -9,6 +9,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.BlockLiquid;
 import net.minecraft.block.BlockTallGrass;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -31,11 +32,12 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockSeaweed extends Block {
 
-	public BlockSeaweed()
+	public BlockSeaweed(SoundType sound)
 	{
-		super(Material.water);
+		super(Material.WATER);
 		setDefaultState(blockState.getBaseState().withProperty(BlockLiquid.LEVEL, 15));
 		this.setTickRandomly(true);
+		this.blockSoundType=sound;
 	}
 
 	@Override

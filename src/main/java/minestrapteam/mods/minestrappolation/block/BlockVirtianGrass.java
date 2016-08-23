@@ -10,6 +10,7 @@ import net.minecraft.block.BlockFlower;
 import net.minecraft.block.BlockGrass;
 import net.minecraft.block.BlockTallGrass;
 import net.minecraft.block.IGrowable;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyBool;
@@ -30,10 +31,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class BlockVirtianGrass extends BlockGrass
 {
 	
-	public BlockVirtianGrass()
+	public BlockVirtianGrass(SoundType sound)
 	{
 		this.setDefaultState(this.blockState.getBaseState().withProperty(SNOWY, Boolean.valueOf(false)));
 		this.setTickRandomly(true);
+		this.blockSoundType=sound;
 	}
 	
 	@Override

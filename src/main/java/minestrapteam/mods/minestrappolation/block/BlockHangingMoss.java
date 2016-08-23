@@ -9,6 +9,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.BlockLiquid;
 import net.minecraft.block.BlockTallGrass;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -36,12 +37,13 @@ public class BlockHangingMoss extends Block {
 	public static final PropertyBool BOTTOM = PropertyBool.create("bottom");
 	private int	flammability;
 	
-	public BlockHangingMoss(int flame)
+	public BlockHangingMoss(int flame, SoundType sound)
 	{
-		super(Material.vine);
+		super(Material.VINE);
 		setDefaultState(blockState.getBaseState().withProperty(BOTTOM, Boolean.valueOf(false)));
 		this.setTickRandomly(true);
 		this.flammability = flame;
+		this.blockSoundType=sound;
 	}
 
 	public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos)

@@ -5,6 +5,7 @@ import java.util.Random;
 
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import net.minecraft.block.IGrowable;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -23,9 +24,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockDeadBranch extends MBlock implements IGrowable, net.minecraftforge.common.IShearable
 {	
-	public BlockDeadBranch(Material materialIn, MapColor mapColorIn)
+	public BlockDeadBranch(Material materialIn, MapColor mapColorIn, SoundType sound)
 	{
-		super(materialIn, mapColorIn);
+		super(materialIn, mapColorIn, sound);
 	}
 	
 	@Override

@@ -5,6 +5,7 @@ import java.util.Random;
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import minestrapteam.mods.minestrappolation.lib.MItems;
 import net.minecraft.block.BlockFalling;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -18,10 +19,11 @@ public class BlockMFalling extends BlockFalling
 	public int meta;
 	public boolean droppingItem;
 	
-	public BlockMFalling(Material materialIn, MapColor mapColorIn)
+	public BlockMFalling(Material materialIn, MapColor mapColorIn, SoundType sound)
 	{
 		super(materialIn);
 		this.mapColor = mapColorIn;
+		this.blockSoundType = sound;
 		meta = 0;
 		droppingItem = false;
 	}

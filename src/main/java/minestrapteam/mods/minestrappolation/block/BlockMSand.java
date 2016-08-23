@@ -2,18 +2,19 @@ package minestrapteam.mods.minestrappolation.block;
 
 import minestrapteam.mods.minestrappolation.lib.MReference;
 import net.minecraft.block.BlockSand;
+import net.minecraft.block.SoundType;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.resources.model.ModelBakery;
-import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.client.renderer.block.model.ModelBakery;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class BlockMSand extends BlockSand
 {
 	
-	public BlockMSand()
+	public BlockMSand(SoundType sound)
 	{
-		
+		this.setSoundType(sound);
 	}
 	
 	public static void inventoryRender()

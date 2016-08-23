@@ -1,6 +1,7 @@
 package minestrapteam.mods.minestrappolation.block;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -38,9 +39,9 @@ public class BlockBush extends MBlock implements IPlantable, IShearable{
 	public static final PropertyInteger AGE = PropertyInteger.create("age", 0, 5);
     public Item item;
 	
-    public BlockBush(Material material, Item item, MapColor mapcolor)
+    public BlockBush(Material material, Item item, MapColor mapcolor, SoundType sound)
     {
-        super(material, mapcolor);
+        super(material, mapcolor, sound);
         this.setDefaultState(this.blockState.getBaseState().withProperty(AGE, Integer.valueOf(0)));
         this.setLightOpacity(0);
         this.setTickRandomly(true);

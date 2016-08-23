@@ -9,6 +9,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.BlockDirt;
 import net.minecraft.block.IGrowable;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -24,14 +25,15 @@ public class BlockMoss extends BlockBush implements IGrowable
 {
 	private final MapColor mapColor;
 	
-	public BlockMoss(MapColor mapColor) 
+	public BlockMoss(MapColor mapColor, SoundType sound) 
 	{
-		super(Material.snow);
+		super(Material.SNOW);
 		this.mapColor = mapColor;
 		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.0625F, 1.0F);
         this.setTickRandomly(true);
         this.setCreativeTab(Minestrappolation.tabMDecor);
         this.setBlockBoundsFromMeta(0);
+        this.blockSoundType=sound;
 	}
 	
 	@Override

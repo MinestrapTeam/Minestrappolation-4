@@ -3,6 +3,7 @@ package minestrapteam.mods.minestrappolation.block;
 import java.util.Random;
 
 import minestrapteam.mods.minestrappolation.lib.MItems;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -13,15 +14,15 @@ import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.item.Item;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class BlockMud extends MBlock
 {	
-	public BlockMud(Material materialIn, MapColor mapColorIn) 
+	public BlockMud(Material materialIn, MapColor mapColorIn, SoundType sound) 
 	{
-		super(materialIn, mapColorIn);
+		super(materialIn, mapColorIn, sound);
 	}
 	
 	@Override

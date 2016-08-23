@@ -9,6 +9,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.BlockTallGrass;
 import net.minecraft.block.IGrowable;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
@@ -23,10 +24,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockShrubGrass extends BlockBush implements IGrowable, net.minecraftforge.common.IShearable
 {
-	public BlockShrubGrass()
+	public BlockShrubGrass(SoundType sound)
     {
         float f = 0.4F;
         this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, 0.8F, 0.5F + f);
+        this.blockSoundType=sound;
     }
 
 	public boolean canBlockStay(World worldIn, BlockPos pos, IBlockState state)

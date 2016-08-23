@@ -5,6 +5,8 @@ import java.util.Random;
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFalling;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyInteger;
@@ -20,8 +22,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.StatList;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.EnumSkyBlock;
 import net.minecraft.world.IBlockAccess;
@@ -33,14 +35,21 @@ public class BlockWitherAsh extends BlockFalling
 {
     public static final PropertyInteger LAYERS = PropertyInteger.create("layers", 1, 8);
 
-    public BlockWitherAsh()
+    public BlockWitherAsh(SoundType sound)
     {
-        super(Material.snow);
+        super(Material.SNOW);
         this.setDefaultState(this.blockState.getBaseState().withProperty(LAYERS, Integer.valueOf(1)));
         this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.125F, 1.0F);
         this.setTickRandomly(true);
         this.setBlockBoundsForItemRender();
+        this.blockSoundType=sound;
     }
+    
+    @Override
+	public MapColor getMapColor(IBlockState state)
+	{
+		return MapColor.BLACK;
+	}
     
     public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state)
     {
