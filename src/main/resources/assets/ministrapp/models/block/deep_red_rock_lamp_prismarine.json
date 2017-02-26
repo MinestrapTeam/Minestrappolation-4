@@ -1,6 +1,6 @@
 {
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "ministrapp:blocks/deepredrock_lamp_prismarine"
-  }
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "ministrapp:blocks/deepredrock_lamp_prismarine"
+    }
 }

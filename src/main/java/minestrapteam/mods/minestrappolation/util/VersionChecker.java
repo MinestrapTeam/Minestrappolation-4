@@ -1,32 +1,32 @@
 package minestrapteam.mods.minestrappolation.util;
 
-import net.minecraft.util.ChatComponentText;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 
+import net.minecraft.util.text.TextComponentString;
+
 public class VersionChecker implements Runnable
 {
-
-	private String versionToCheck;
-	private String urlToCheck;
-	private String name;
-
-	public static boolean hasChecked = false;
-
-	public static ChatComponentText uptoDate;
-	public static ChatComponentText motd;
-
+	
+	private String					versionToCheck;
+	private String					urlToCheck;
+	private  String					name;
+	
+	public static boolean			hasChecked	= false;
+	
+	public static TextComponentString	uptoDate;
+	public static TextComponentString	motd;
+	
 	public VersionChecker(String versionToCheck, String url, String name)
 	{
 		this.versionToCheck = versionToCheck;
 		this.urlToCheck = url;
 		this.name = name;
 	}
-
-	private boolean checkIfCurrent(String versiontocheck, String urlToCheck)
+	
+	private  boolean checkIfCurrent(String versiontocheck, String urlToCheck)
 	{
 		boolean upToDate = false;
 		try
@@ -35,7 +35,7 @@ public class VersionChecker implements Runnable
 			BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
 			String str;
 			String version = "";
-
+			
 			while ((str = in.readLine()) != null)
 			{
 				if (str.contains("version="))
@@ -44,17 +44,17 @@ public class VersionChecker implements Runnable
 					if (version.equals(versiontocheck))
 					{
 						upToDate = true;
-						uptoDate = new ChatComponentText("ï¿½2" + this.name + " is the current version");
+						uptoDate = new TextComponentString("§2"+ name + " is the current version");
 					}
 					else
 					{
 						upToDate = false;
-						uptoDate = new ChatComponentText("ï¿½cA newer version of " + this.name + " is available: " + version);
+						uptoDate = new TextComponentString("§cA newer version of " + name +" is available: " + version);
 					}
 				}
 				if (str.contains("motd="))
 				{
-					motd = new ChatComponentText(str.substring(6));
+					motd = new TextComponentString(str.substring(6));
 				}
 			}
 			in.close();
@@ -62,15 +62,15 @@ public class VersionChecker implements Runnable
 		catch (IOException e)
 		{
 			System.err.println("Version file not found at: " + urlToCheck);
-			uptoDate = new ChatComponentText("ï¿½c" + this.name + " cannont find the latest version.");
-			motd = new ChatComponentText("ï¿½cAre you connected to the internet?");
+			uptoDate = new TextComponentString("§c"+ name +" cannont find the latest version.");
+			motd = new TextComponentString("§cAre you connected to the internet?");
 		}
 		return upToDate;
 	}
-
+	
 	@Override
 	public void run()
 	{
-		this.checkIfCurrent(this.versionToCheck, this.urlToCheck);
+		checkIfCurrent(this.versionToCheck, this.urlToCheck);
 	}
 }

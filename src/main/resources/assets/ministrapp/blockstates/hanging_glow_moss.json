@@ -1,10 +1,6 @@
 {
-  "variants": {
-    "bottom=true": {
-      "model": "ministrapp:hanging_glow_moss_bottom"
-    },
-    "bottom=false": {
-      "model": "ministrapp:hanging_glow_moss"
+    "variants": {
+        "bottom=true": { "model": "ministrapp:hanging_glow_moss_bottom" },
+		"bottom=false": { "model": "ministrapp:hanging_glow_moss" }
     }
-  }
 }

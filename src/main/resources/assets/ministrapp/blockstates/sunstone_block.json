@@ -1,7 +1,5 @@
 {
-  "variants": {
-    "normal": {
-      "model": "ministrapp:sunstone_block"
+    "variants": {
+        "normal": { "model": "ministrapp:sunstone_block" }
     }
-  }
 }

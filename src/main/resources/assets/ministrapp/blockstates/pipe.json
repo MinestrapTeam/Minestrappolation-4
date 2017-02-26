@@ -1,33 +1,10 @@
 {
-  "variants": {
-    "facing=south": {
-      "model": "ministrapp:pipe_vertical",
-      "x": 90,
-      "y": 0
-    },
-    "facing=north": {
-      "model": "ministrapp:pipe_vertical",
-      "x": 90,
-      "y": 180
-    },
-    "facing=west": {
-      "model": "ministrapp:pipe_vertical",
-      "x": 90,
-      "y": 90
-    },
-    "facing=east": {
-      "model": "ministrapp:pipe_vertical",
-      "x": 90,
-      "y": 270
-    },
-    "facing=up": {
-      "model": "ministrapp:pipe_vertical",
-      "x": 180,
-      "y": 90
-    },
-    "facing=down": {
-      "model": "ministrapp:pipe_vertical",
-      "y": 90
+    "variants": {
+        "facing=south": { "model": "ministrapp:pipe_vertical", "x": 90, "y": 0 },
+		"facing=north": { "model": "ministrapp:pipe_vertical", "x": 90, "y": 180 },
+		"facing=west": { "model": "ministrapp:pipe_vertical", "x": 90, "y": 90 },
+		"facing=east": { "model": "ministrapp:pipe_vertical", "x": 90, "y": 270 },
+"facing=up": { "model": "ministrapp:pipe_vertical", "x": 180, "y": 90 },
+"facing=down": { "model": "ministrapp:pipe_vertical", "y": 90 }
     }
-  }
 }

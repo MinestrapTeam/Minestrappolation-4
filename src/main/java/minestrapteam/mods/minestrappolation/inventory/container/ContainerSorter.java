@@ -10,12 +10,12 @@ public class ContainerSorter extends MinestrappolationContainer
 	public ContainerSorter(EntityPlayer player, TileEntitySorter sorter)
 	{
 		super(player, sorter);
-
+		
 		this.addSlotToContainer(new Slot(sorter, 0, 80, 17));
 		this.addSlotToContainer(new Slot(sorter, 1, 80, 52));
 		this.addInventorySlots(0, 3);
 	}
-
+	
 	@Override
 	public int[] merge(EntityPlayer player, int slot, ItemStack stack)
 	{

@@ -1,7 +1,5 @@
 {
-  "variants": {
-    "normal": {
-      "model": "ministrapp:sugar_block"
+    "variants": {
+        "normal": { "model": "ministrapp:sugar_block" }
     }
-  }
 }

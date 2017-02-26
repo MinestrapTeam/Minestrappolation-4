@@ -1,7 +1,5 @@
 {
-  "variants": {
-    "normal": {
-      "model": "ministrapp:soul_ore"
+    "variants": {
+        "normal": { "model": "ministrapp:soul_ore" }
     }
-  }
 }

@@ -1,7 +1,7 @@
 {
-  "parent": "ministrapp:block/bush_base_4",
-  "textures": {
-    "cross": "ministrapp:blocks/mana_stem",
-    "leaves": "ministrapp:blocks/mana_leaves"
-  }
+    "parent": "ministrapp:block/bush_base_4",
+    "textures": {
+        "cross": "ministrapp:blocks/mana_stem",
+		"leaves": "ministrapp:blocks/mana_leaves"
+    }
 }

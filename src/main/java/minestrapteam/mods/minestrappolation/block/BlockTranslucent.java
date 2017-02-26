@@ -8,14 +8,14 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockTranslucent extends BlockTransparent
 {
-
-	private boolean ignoreSimilarity;
-
+	
+	private boolean	ignoreSimilarity;
+	
 	public BlockTranslucent(Material materialIn, MapColor mapColorIn, boolean ignoreSimilarityIn)
 	{
 		super(materialIn, mapColorIn, ignoreSimilarityIn);
 	}
-
+	
 	@Override
 	@SideOnly(Side.CLIENT)
 	public EnumWorldBlockLayer getBlockLayer()

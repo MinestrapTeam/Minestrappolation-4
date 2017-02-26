@@ -1,6 +1,6 @@
 {
-  "parent": "block/crop",
-  "textures": {
-    "crop": "ministrapp:blocks/tomato_5"
-  }
+    "parent": "block/crop",
+    "textures": {
+        "crop": "ministrapp:blocks/tomato_5"
+    }
 }

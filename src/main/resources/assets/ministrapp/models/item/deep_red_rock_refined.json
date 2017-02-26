@@ -1,22 +1,10 @@
 {
-  "parent": "ministrapp:block/deep_red_rock_refined”,
+  "parent":"ministrapp:block/deep_red_rock_refined”,
   "display": {
     "thirdperson": {
-      "rotation": [
-        10,
-        -45,
-        170
-      ],
-      "translation": [
-        0,
-        1.5,
-        -2.75
-      ],
-      "scale": [
-        0.375,
-        0.375,
-        0.375
-      ]
+      "rotation": [ 10, -45, 170 ],
+      "translation": [ 0, 1.5, -2.75 ],
+      "scale": [ 0.375, 0.375, 0.375 ]
     }
   }
 }

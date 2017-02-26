@@ -1,8 +1,8 @@
 {
-  "parent": "block/inner_stairs",
-  "textures": {
-    "bottom": "ministrapp:blocks/coldstone_bricks",
-    "top": "ministrapp:blocks/coldstone_bricks",
-    "side": "ministrapp:blocks/coldstone_bricks"
-  }
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "ministrapp:blocks/coldstone_bricks",
+        "top": "ministrapp:blocks/coldstone_bricks",
+        "side": "ministrapp:blocks/coldstone_bricks"
+    }
 }

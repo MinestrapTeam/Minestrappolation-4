@@ -1,7 +1,5 @@
 {
-  "variants": {
-    "normal": {
-      "model": "ministrapp:shrub_grass"
+    "variants": {
+        "normal": { "model": "ministrapp:shrub_grass" }
     }
-  }
 }

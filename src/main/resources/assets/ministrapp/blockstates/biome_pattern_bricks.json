@@ -1,31 +1,31 @@
 {
-  "variants": {
-    "type=deepstone": {
-      "model": "ministrapp:deepstone_pattern_bricks"
-    },
-    "type=red_rock": {
-      "model": "ministrapp:red_rock_pattern_bricks"
-    },
-    "type=deep_redrock": {
-      "model": "ministrapp:deep_red_rock_pattern_bricks"
-    },
-    "type=coldstone": {
-      "model": "ministrapp:coldstone_pattern_bricks"
-    },
-    "type=deep_coldstone": {
-      "model": "ministrapp:deep_coldstone_pattern_bricks"
-    },
-    "type=icestone": {
-      "model": "ministrapp:icestone_pattern_bricks"
-    },
-    "type=glacierrock": {
-      "model": "ministrapp:glacierrock_pattern_bricks"
-    },
-    "type=oceanstone": {
-      "model": "ministrapp:oceanstone_pattern_bricks"
-    },
-    "type=pressurized_oceanstone": {
-      "model": "ministrapp:pressurized_oceanstone_pattern_bricks"
-    }
-  }
+   "variants":{
+      "type=deepstone":{
+         "model":"ministrapp:deepstone_pattern_bricks"
+      },
+      "type=red_rock":{
+         "model":"ministrapp:red_rock_pattern_bricks"
+      },
+      "type=deep_redrock":{
+         "model":"ministrapp:deep_red_rock_pattern_bricks"
+      },
+      "type=coldstone":{
+         "model":"ministrapp:coldstone_pattern_bricks"
+      },
+      "type=deep_coldstone":{
+         "model":"ministrapp:deep_coldstone_pattern_bricks"
+      },
+      "type=icestone":{
+         "model":"ministrapp:icestone_pattern_bricks"
+      },
+      "type=glacierrock":{
+         "model":"ministrapp:glacierrock_pattern_bricks"
+      },
+      "type=oceanstone":{
+         "model":"ministrapp:oceanstone_pattern_bricks"
+      },
+      "type=pressurized_oceanstone":{
+         "model":"ministrapp:pressurized_oceanstone_pattern_bricks"
+      }
+   }
 }

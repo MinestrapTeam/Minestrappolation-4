@@ -1,10 +1,10 @@
 {
-  "variants": {
-    "half=top": {
-      "model": "ministrapp:upper_slab_poceanstone"
-    },
-    "half=bottom": {
-      "model": "ministrapp:half_slab_poceanstone"
-    }
-  }
+   "variants":{
+      "half=top":{
+         "model":"ministrapp:upper_slab_poceanstone"
+      },
+      "half=bottom":{
+         "model":"ministrapp:half_slab_poceanstone"
+      }
+   }
 }

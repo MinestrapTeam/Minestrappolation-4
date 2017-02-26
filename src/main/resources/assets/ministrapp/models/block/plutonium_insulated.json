@@ -1,8 +1,8 @@
 {
-  "parent": "block/cube_bottom_top",
-  "textures": {
-    "bottom": "ministrapp:blocks/steel_block_bottom",
-    "top": "ministrapp:blocks/steel_block_top",
-    "side": "ministrapp:blocks/plutonium_insulated"
-  }
+    "parent": "block/cube_bottom_top",
+    "textures": {
+        "bottom": "ministrapp:blocks/steel_block_bottom",
+        "top": "ministrapp:blocks/steel_block_top",
+        "side": "ministrapp:blocks/plutonium_insulated"
+    }
 }

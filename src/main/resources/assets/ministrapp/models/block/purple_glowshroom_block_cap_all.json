@@ -1,6 +1,6 @@
 {
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "ministrapp:blocks/giant_purple_mushroom"
-  }
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "ministrapp:blocks/giant_purple_mushroom"
+    }
 }

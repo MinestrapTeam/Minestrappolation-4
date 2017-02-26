@@ -1,7 +1,7 @@
 {
-  "parent": "block/pane_nse",
-  "textures": {
-    "edge": "ministrapp:blocks/glow_glass",
-    "pane": "ministrapp:blocks/glow_glass"
-  }
+    "parent": "block/pane_nse",
+    "textures": {
+        "edge": "ministrapp:blocks/glow_glass",
+        "pane": "ministrapp:blocks/glow_glass"
+    }
 }

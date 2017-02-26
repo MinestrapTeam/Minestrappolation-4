@@ -1,20 +1,8 @@
 {
-  "variants": {
-    "facing=south": {
-      "model": "ministrapp:pumpkin_smashed_lit",
-      "y": 0
-    },
-    "facing=north": {
-      "model": "ministrapp:pumpkin_smashed_lit",
-      "y": 180
-    },
-    "facing=west": {
-      "model": "ministrapp:pumpkin_smashed_lit",
-      "y": 90
-    },
-    "facing=east": {
-      "model": "ministrapp:pumpkin_smashed_lit",
-      "y": 270
+    "variants": {
+        "facing=south": { "model": "ministrapp:pumpkin_smashed_lit", "y": 0 },
+		"facing=north": { "model": "ministrapp:pumpkin_smashed_lit", "y": 180 },
+		"facing=west": { "model": "ministrapp:pumpkin_smashed_lit", "y": 90 },
+		"facing=east": { "model": "ministrapp:pumpkin_smashed_lit", "y": 270 }
     }
-  }
 }

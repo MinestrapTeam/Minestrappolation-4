@@ -7,23 +7,24 @@ import net.minecraft.item.ItemStack;
 
 public class ItemBlockBoards extends ItemBlock
 {
-
+	
 	public ItemBlockBoards(Block block)
 	{
 		super(block);
 		this.setHasSubtypes(true);
 		this.setMaxDamage(0);
 	}
-
+	
 	@Override
 	public int getMetadata(int damageValue)
 	{
 		return damageValue;
 	}
-
+	
 	@Override
 	public String getUnlocalizedName(ItemStack item)
 	{
 		return AllWoodTypes.byMetadata(item.getItemDamage()) + "_boards";
 	}
+	
 }

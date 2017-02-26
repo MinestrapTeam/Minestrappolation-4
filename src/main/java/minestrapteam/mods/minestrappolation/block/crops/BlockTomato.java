@@ -5,17 +5,16 @@ import minestrapteam.mods.minestrappolation.lib.MItems;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.item.Item;
 
-public class BlockTomato extends BlockCrops
-{
+public class BlockTomato extends BlockCrops{
 	@Override
 	protected Item getSeed()
-	{
-		return MBlocks.tomato_seed;
-	}
+    {
+        return MBlocks.tomato_seed;
+    }
 
 	@Override
-	protected Item getCrop()
-	{
-		return MItems.tomato;
-	}
+    protected Item getCrop()
+    {
+        return MItems.tomato;
+    }
 }

@@ -1,6 +1,6 @@
 {
-  "parent": "block/torch",
-  "textures": {
-    "torch": "ministrapp:blocks/magnetic_torch"
-  }
+    "parent": "block/torch",
+    "textures": {
+        "torch": "ministrapp:blocks/magnetic_torch"
+    }
 }

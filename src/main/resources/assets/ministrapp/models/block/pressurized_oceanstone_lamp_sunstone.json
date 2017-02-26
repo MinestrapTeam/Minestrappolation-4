@@ -1,6 +1,6 @@
 {
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "ministrapp:blocks/pressurizedoceanstone_lamp_sunstone"
-  }
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "ministrapp:blocks/pressurizedoceanstone_lamp_sunstone"
+    }
 }

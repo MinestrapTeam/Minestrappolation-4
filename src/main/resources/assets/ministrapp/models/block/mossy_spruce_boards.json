@@ -1,6 +1,6 @@
 {
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "ministrapp:blocks/mossy_spruce_boards"
-  }
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "ministrapp:blocks/mossy_spruce_boards"
+    }
 }

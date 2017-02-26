@@ -1,6 +1,6 @@
 {
-  "parent": "block/leaves",
-  "textures": {
-    "all": "ministrapp:blocks/redwood_leaves"
-  }
+    "parent": "block/leaves",
+    "textures": {
+        "all": "ministrapp:blocks/redwood_leaves"
+    }
 }

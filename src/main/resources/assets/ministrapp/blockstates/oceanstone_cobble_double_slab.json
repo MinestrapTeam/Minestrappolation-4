@@ -1,7 +1,5 @@
 {
-  "variants": {
-    "normal": {
-      "model": "ministrapp:oceanstone_cobble"
+    "variants": {
+        "normal": { "model": "ministrapp:oceanstone_cobble" }
     }
-  }
 }

@@ -1,6 +1,6 @@
 {
-  "parent": "block/crop",
-  "textures": {
-    "crop": "ministrapp:blocks/celery_5"
-  }
+    "parent": "block/crop",
+    "textures": {
+        "crop": "ministrapp:blocks/celery_5"
+    }
 }

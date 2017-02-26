@@ -1,7 +1,5 @@
 {
-  "variants": {
-    "normal": {
-      "model": "ministrapp:pressurized_oceanstone_bricks"
+    "variants": {
+        "normal": { "model": "ministrapp:pressurized_oceanstone_bricks" }
     }
-  }
 }

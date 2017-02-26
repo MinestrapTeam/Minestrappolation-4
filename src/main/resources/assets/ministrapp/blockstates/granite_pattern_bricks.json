@@ -1,7 +1,5 @@
 {
-  "variants": {
-    "normal": {
-      "model": "ministrapp:granite_pattern_bricks"
+    "variants": {
+        "normal": { "model": "ministrapp:granite_pattern_bricks" }
     }
-  }
 }

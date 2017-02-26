@@ -1,7 +1,5 @@
 {
-  "variants": {
-    "normal": {
-      "model": "ministrapp:red_rock_cobble"
+    "variants": {
+        "normal": { "model": "ministrapp:red_rock_cobble" }
     }
-  }
 }

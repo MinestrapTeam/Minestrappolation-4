@@ -1,5 +1,8 @@
 package minestrapteam.mods.minestrappolation.crafting.stonecutter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import minestrapteam.mods.minestrappolation.util.MStacks;
 import net.minecraft.block.Block;
 import net.minecraft.inventory.InventoryCrafting;
@@ -7,24 +10,21 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class ShapelessCuttingRecipe implements ICuttingRecipes
 {
-	public final List      recipeItems;
-	public final ItemStack recipeOutput;
-	public final ItemStack extraSlot;
-
+	public final List		recipeItems;
+	public final ItemStack	recipeOutput;
+	public final ItemStack	extraSlot;
+	
 	public ShapelessCuttingRecipe(ItemStack output, ItemStack extraSlot, Object... data)
 	{
 		ArrayList list = new ArrayList();
 		int len = data.length;
-
+		
 		for (int i = 0; i < len; ++i)
 		{
 			Object o = data[i];
-
+			
 			if (o instanceof ItemStack)
 			{
 				list.add(((ItemStack) o).copy());
@@ -40,19 +40,19 @@ public class ShapelessCuttingRecipe implements ICuttingRecipes
 			else
 				throw new RuntimeException("Invalid shapeless recipy!");
 		}
-
+		
 		this.recipeItems = list;
 		this.recipeOutput = output;
 		this.extraSlot = extraSlot;
 	}
-
+	
 	public ShapelessCuttingRecipe(ItemStack output, List items, ItemStack extraSlot)
 	{
 		this.recipeOutput = output;
 		this.recipeItems = items;
 		this.extraSlot = extraSlot;
 	}
-
+	
 	@Override
 	public ItemStack getRecipeOutput()
 	{
@@ -64,13 +64,13 @@ public class ShapelessCuttingRecipe implements ICuttingRecipes
 	{
 		if (!MStacks.equals(this.extraSlot, extra))
 			return false;
-
+		
 		ArrayList<ItemStack> list = new ArrayList(this.recipeItems);
-
+		
 		for (int i = 0; i < inventory.getSizeInventory(); ++i)
 		{
 			ItemStack stack = inventory.getStackInSlot(i);
-
+			
 			if (stack != null)
 			{
 				boolean flag = false;
@@ -83,21 +83,21 @@ public class ShapelessCuttingRecipe implements ICuttingRecipes
 						break;
 					}
 				}
-
+				
 				if (!flag)
 					return false;
 			}
 		}
-
+		
 		return list.isEmpty();
 	}
-
+	
 	@Override
 	public ItemStack getCraftingResult(InventoryCrafting inventory, ItemStack extra)
 	{
 		return this.recipeOutput.copy();
 	}
-
+	
 	@Override
 	public int getRecipeSize()
 	{

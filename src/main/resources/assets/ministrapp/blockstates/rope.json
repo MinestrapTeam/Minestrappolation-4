@@ -1,7 +1,5 @@
 {
-  "variants": {
-    "normal": {
-      "model": "ministrapp:rope"
+    "variants": {
+        "normal": { "model": "ministrapp:rope" }
     }
-  }
 }

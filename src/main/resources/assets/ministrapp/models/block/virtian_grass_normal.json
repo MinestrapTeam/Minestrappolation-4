@@ -1,10 +1,10 @@
 {
-  "parent": "block/grass",
-  "textures": {
-    "particle": "ministrapp:blocks/virtian_soil",
-    "bottom": "ministrapp:blocks/virtian_soil",
-    "top": "ministrapp:blocks/virtian_grass_top",
-    "side": "ministrapp:blocks/virtian_grass_side",
-    "overlay": "ministrapp:blocks/virtian_grass_side_overlay"
-  }
+    "parent": "block/grass",
+    "textures": {
+        "particle": "ministrapp:blocks/virtian_soil",
+        "bottom": "ministrapp:blocks/virtian_soil",
+        "top": "ministrapp:blocks/virtian_grass_top",
+        "side": "ministrapp:blocks/virtian_grass_side",
+        "overlay": "ministrapp:blocks/virtian_grass_side_overlay"
+    }
 }

@@ -1,7 +1,5 @@
 {
-  "variants": {
-    "normal": {
-      "model": "ministrapp:glacierrock_cobble"
+    "variants": {
+        "normal": { "model": "ministrapp:glacierrock_cobble" }
     }
-  }
 }

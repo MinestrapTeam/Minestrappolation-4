@@ -1,7 +1,5 @@
 {
-  "variants": {
-    "normal": {
-      "model": "ministrapp:flint_bricks"
+    "variants": {
+        "normal": { "model": "ministrapp:flint_bricks" }
     }
-  }
 }

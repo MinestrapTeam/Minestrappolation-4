@@ -1,6 +1,6 @@
 {
-  "parent": "block/crop",
-  "textures": {
-    "crop": "ministrapp:blocks/pepper_0"
-  }
+    "parent": "block/crop",
+    "textures": {
+        "crop": "ministrapp:blocks/pepper_0"
+    }
 }

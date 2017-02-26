@@ -1,6 +1,11 @@
 package minestrapteam.mods.minestrappolation.lib;
 
-public class MPotions
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
+
+public class MPotions 
 {
 	public static void loadPotions()
 	{

@@ -1,7 +1,5 @@
 {
-  "variants": {
-    "normal": {
-      "model": "ministrapp:radiant_quartz_chiseled"
+    "variants": {
+        "normal": { "model": "ministrapp:radiant_quartz_chiseled" }
     }
-  }
 }

@@ -1,7 +1,5 @@
 {
-  "variants": {
-    "normal": {
-      "model": "ministrapp:desert_quartz"
+    "variants": {
+        "normal": { "model": "ministrapp:desert_quartz" }
     }
-  }
 }

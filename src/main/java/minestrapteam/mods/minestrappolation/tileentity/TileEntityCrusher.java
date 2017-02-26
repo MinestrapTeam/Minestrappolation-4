@@ -1,5 +1,7 @@
 package minestrapteam.mods.minestrappolation.tileentity;
 
+import java.util.Random;
+
 import minestrapteam.mods.minestrappolation.block.machines.BlockCrusher;
 import minestrapteam.mods.minestrappolation.crafting.recipes.CrusherRecipes;
 import net.minecraft.init.Items;
@@ -13,61 +15,59 @@ import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ITickable;
 
-import java.util.Random;
-
 public class TileEntityCrusher extends TileEntityInventory implements ITickable, ISidedInventory
 {
-	private static final int[] slotsTop    = new int[] { 0 };
-	private static final int[] slotsBottom = new int[] { 2, 1, 3 };
-	private static final int[] slotsSides  = new int[] { 1 };
-	public int burnTime;
-	public int maxCrushTime;
-	public int crushTime;
-
+	private static final int[] slotsTop = new int[] {0};
+    private static final int[] slotsBottom = new int[] {2, 1, 3};
+    private static final int[] slotsSides = new int[] {1};
+	public int	burnTime;
+	public int	maxCrushTime;
+	public int	crushTime;
+	
 	public TileEntityCrusher()
 	{
 		super(4);
 	}
-
+	
 	public final int getMaxCrushTime()
 	{
 		return 150;
 	}
-
+	
 	@Override
 	public int getSizeInventory()
 	{
 		return 4;
 	}
-
+	
 	@Override
 	public void readFromNBT(NBTTagCompound nbt)
 	{
 		super.readFromNBT(nbt);
-
+		
 		this.burnTime = nbt.getShort("BurnTime");
 		this.crushTime = nbt.getShort("CookTime");
 		this.maxCrushTime = getItemBurnTime(this.itemStacks[1]);
 		NBTTagList nbttaglist = nbt.getTagList("Items", 10);
 		this.itemStacks = new ItemStack[this.getSizeInventory()];
-
+		
 		for (int i = 0; i < nbttaglist.tagCount(); ++i)
 		{
 			NBTTagCompound nbttagcompound1 = nbttaglist.getCompoundTagAt(i);
 			byte b0 = nbttagcompound1.getByte("Slot");
-
+			
 			if (b0 >= 0 && b0 < this.itemStacks.length)
 			{
 				this.itemStacks[b0] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
 			}
 		}
 	}
-
+	
 	@Override
 	public void writeToNBT(NBTTagCompound nbt)
 	{
 		super.writeToNBT(nbt);
-
+		
 		nbt.setShort("BurnTime", (short) this.burnTime);
 		nbt.setShort("CookTime", (short) this.crushTime);
 		NBTTagList nbttaglist = new NBTTagList();
@@ -81,43 +81,43 @@ public class TileEntityCrusher extends TileEntityInventory implements ITickable,
 				nbttaglist.appendTag(nbttagcompound1);
 			}
 		}
-
+		
 		nbt.setTag("Items", nbttaglist);
 	}
-
+	
 	public int getProgressScaled(int scalar)
 	{
 		return this.crushTime * scalar / this.getMaxCrushTime();
 	}
-
+	
 	public int getBurnTimeRemainingScaled(int scalar)
 	{
 		if (this.maxCrushTime == 0)
 		{
 			this.maxCrushTime = 200;
 		}
-
+		
 		return this.burnTime * scalar / this.maxCrushTime;
 	}
-
+	
 	public boolean isBurning()
 	{
 		return this.burnTime > 0;
 	}
-
+	
 	@Override
 	public void update()
 	{
 		boolean burning = this.burnTime > 0;
-
+		
 		if (burning)
 		{
 			this.burnTime -= 4;
 		}
-
+		
 		if (this.worldObj.isRemote)
 			return;
-
+		
 		if (this.canCrush())
 		{
 			if (this.burnTime == 0)
@@ -156,7 +156,7 @@ public class TileEntityCrusher extends TileEntityInventory implements ITickable,
 		{
 			this.crushTime = 0;
 		}
-
+		
 		if (burning != this.burnTime > 0)
 		{
 			this.markDirty();
@@ -164,7 +164,7 @@ public class TileEntityCrusher extends TileEntityInventory implements ITickable,
 			BlockCrusher.setState(this.isBurning(), this.worldObj, this.pos);
 		}
 	}
-
+	
 	private boolean canCrush()
 	{
 		ItemStack input = this.itemStacks[0];
@@ -183,14 +183,14 @@ public class TileEntityCrusher extends TileEntityInventory implements ITickable,
 		}
 		return false;
 	}
-
+	
 	public void crushItem()
 	{
 		if (this.canCrush())
 		{
 			Random rand = new Random();
 			int chance = rand.nextInt(100);
-
+			
 			ItemStack input = this.itemStacks[0];
 			int itemChance = CrusherRecipes.instance().getChance(input);
 			ItemStack output = CrusherRecipes.instance().getResult(input);
@@ -203,13 +203,13 @@ public class TileEntityCrusher extends TileEntityInventory implements ITickable,
 			{
 				outputSlot.stackSize += output.stackSize;
 			}
-
+			
 			--input.stackSize;
 			if (input.stackSize <= 0)
 			{
 				this.itemStacks[0] = null;
 			}
-
+			
 			if (chance < itemChance && this.itemStacks[3] == null)
 			{
 				this.itemStacks[3] = CrusherRecipes.instance().getExtra(input);
@@ -224,62 +224,60 @@ public class TileEntityCrusher extends TileEntityInventory implements ITickable,
 			}
 		}
 	}
-
+	
 	public static boolean isItemFuel(ItemStack stack)
 	{
 		return getItemBurnTime(stack) > 0;
 	}
-
+	
 	public static int getItemBurnTime(ItemStack stack)
 	{
 		if (stack == null)
 			return 0;
-
+		
 		int i = TileEntityFurnace.getItemBurnTime(stack);
 		if (i == 0)
 		{
 			Item item = stack.getItem();
 		}
-
+		
 		return i;
 	}
-
+	
 	@Override
 	public boolean isItemValidForSlot(int index, ItemStack stack)
-	{
-		return !(index == 2 || index == 3) && (index != 1 || (isItemFuel(stack) || SlotFurnaceFuel.isBucket(stack)));
-	}
+    {
+		return index == 2 || index == 3 ? false : (index != 1 ? true : isItemFuel(stack) || SlotFurnaceFuel.isBucket(stack));
+    }
 
 	@Override
-	public int[] getSlotsForFace(EnumFacing side)
-	{
+	public int[] getSlotsForFace(EnumFacing side) {
 		return side == EnumFacing.DOWN ? slotsBottom : (side == EnumFacing.UP ? slotsTop : slotsSides);
 	}
 
-	@Override
 	public boolean canInsertItem(int index, ItemStack itemStackIn, EnumFacing direction)
 	{
-		return this.isItemValidForSlot(index, itemStackIn);
+	    return this.isItemValidForSlot(index, itemStackIn);
 	}
 
-	@Override
+
 	public boolean canExtractItem(int index, ItemStack stack, EnumFacing direction)
 	{
-		if (direction == EnumFacing.DOWN && index == 1)
-		{
-			Item item = stack.getItem();
+	    if (direction == EnumFacing.DOWN && index == 1)
+	    {
+	            Item item = stack.getItem();
 
-			if (item != Items.water_bucket && item != Items.bucket)
-			{
-				return false;
-			}
-		}
+	        if (item != Items.water_bucket && item != Items.bucket)
+	        {
+	            return false;
+	        }
+	    }
 
-		return true;
+	    return true;
 	}
-
+	
 	@Override
-	public String getName()
+	public String getCommandSenderName() 
 	{
 		return "container.crusher";
 	}

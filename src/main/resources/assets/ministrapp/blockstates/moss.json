@@ -1,21 +1,10 @@
 {
-  "variants": {
-    "normal": [
-      {
-        "model": "ministrapp:moss"
-      },
-      {
-        "model": "ministrapp:moss",
-        "y": 90
-      },
-      {
-        "model": "ministrapp:moss",
-        "y": 180
-      },
-      {
-        "model": "ministrapp:moss",
-        "y": 270
-      }
-    ]
-  }
+    "variants": {
+        "normal": [
+			{ "model": "ministrapp:moss" },
+			{ "model": "ministrapp:moss", "y": 90 },
+			{ "model": "ministrapp:moss", "y": 180 },
+			{ "model": "ministrapp:moss", "y": 270 }
+		]
+    }
 }

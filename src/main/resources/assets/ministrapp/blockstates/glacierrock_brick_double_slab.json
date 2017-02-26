@@ -1,7 +1,5 @@
 {
-  "variants": {
-    "normal": {
-      "model": "ministrapp:glacierrock_bricks"
+    "variants": {
+        "normal": { "model": "ministrapp:glacierrock_bricks" }
     }
-  }
 }

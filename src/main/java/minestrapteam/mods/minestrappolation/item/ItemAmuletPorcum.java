@@ -1,5 +1,6 @@
 package minestrapteam.mods.minestrappolation.item;
 
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -11,7 +12,7 @@ public class ItemAmuletPorcum extends ItemAmulet
 	{
 		super(50, desc);
 	}
-
+	
 	@Override
 	public void onUpdate(ItemStack stack, World world, Entity entity, int i, boolean flag)
 	{
@@ -21,7 +22,7 @@ public class ItemAmuletPorcum extends ItemAmulet
 			if (player.getRNG().nextInt(60) == 0 && player.getFoodStats().needFood())
 			{
 				player.getFoodStats().addStats(1, 0F);
-				if (stack.getItemDamage() < stack.getMaxDamage() && stack.stackSize > 0)
+				if(stack.getItemDamage() < stack.getMaxDamage() && stack.stackSize > 0)
 					stack.damageItem(1, player);
 				else
 					player.destroyCurrentEquippedItem();

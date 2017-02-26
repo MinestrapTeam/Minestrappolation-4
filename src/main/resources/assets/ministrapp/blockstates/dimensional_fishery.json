@@ -1,10 +1,10 @@
 {
-  "variants": {
-    "active=true": {
-      "model": "ministrapp:dimensional_fishery"
-    },
-    "active=false": {
-      "model": "ministrapp:dimensional_fishery_inactive"
-    }
-  }
+   "variants":{
+      "active=true":{
+         "model":"ministrapp:dimensional_fishery"
+      },
+      "active=false":{
+         "model":"ministrapp:dimensional_fishery_inactive"
+      }
+   }
 }

@@ -1,7 +1,5 @@
 {
-  "variants": {
-    "normal": {
-      "model": "ministrapp:flint_block"
+    "variants": {
+        "normal": { "model": "ministrapp:flint_block" }
     }
-  }
 }

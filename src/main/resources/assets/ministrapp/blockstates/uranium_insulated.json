@@ -1,7 +1,5 @@
 {
-  "variants": {
-    "normal": {
-      "model": "ministrapp:uranium_insulated"
+    "variants": {
+        "normal": { "model": "ministrapp:uranium_insulated" }
     }
-  }
 }

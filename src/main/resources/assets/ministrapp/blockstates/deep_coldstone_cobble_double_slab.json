@@ -1,7 +1,5 @@
 {
-  "variants": {
-    "normal": {
-      "model": "ministrapp:deep_coldstone_cobble"
+    "variants": {
+        "normal": { "model": "ministrapp:deep_coldstone_cobble" }
     }
-  }
 }

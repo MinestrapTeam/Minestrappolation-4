@@ -1,9 +1,8 @@
 package minestrapteam.mods.minestrappolation.block;
 
-import com.google.common.base.Predicate;
-import minestrapteam.mods.minestrappolation.enumtypes.MWoodType;
-import minestrapteam.mods.minestrappolation.lib.MBlocks;
-import minestrapteam.mods.minestrappolation.lib.MReference;
+import java.util.List;
+import java.util.Random;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
@@ -28,43 +27,45 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import java.util.List;
-import java.util.Random;
+import com.google.common.base.Predicate;
+
+import minestrapteam.mods.minestrappolation.enumtypes.MWoodType;
+import minestrapteam.mods.minestrappolation.lib.MBlocks;
+import minestrapteam.mods.minestrappolation.lib.MReference;
 
 public class MBlockLeaves extends MBlockLeavesBase
 {
-	public static final PropertyEnum VARIANT = PropertyEnum.create("variant", MWoodType.class, new Predicate()
-	{
-		public boolean apply(MWoodType type)
-		{
-			return type.getMetadata() < 4;
-		}
-
-		@Override
-		public boolean apply(Object p_apply_1_)
-		{
-			return this.apply((MWoodType) p_apply_1_);
-		}
-	});
-
-	private int flammability;
-
+	public static final PropertyEnum	VARIANT	= PropertyEnum.create("variant", MWoodType.class, new Predicate()
+												{
+													public boolean apply(MWoodType type)
+													{
+														return type.getMetadata() < 4;
+													}
+													
+													@Override
+													public boolean apply(Object p_apply_1_)
+													{
+														return this.apply((MWoodType) p_apply_1_);
+													}
+												});
+	
+	private int							flammability;
+	
 	public MBlockLeaves(int flame)
 	{
-		this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, MWoodType.REDWOOD)
-		                                    .withProperty(CHECK_DECAY, Boolean.valueOf(true))
-		                                    .withProperty(DECAYABLE, Boolean.valueOf(true)));
+		this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, MWoodType.REDWOOD).withProperty(CHECK_DECAY, Boolean.valueOf(true)).withProperty(DECAYABLE, Boolean.valueOf(true)));
 		this.flammability = flame;
 	}
-
+	
 	@Override
 	protected int getSaplingDropChance(IBlockState state)
 	{
 		return super.getSaplingDropChance(state);
 	}
-
+	
 	/**
-	 * returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
+	 * returns a list of blocks with the same ID, but different meta (eg: wood
+	 * returns 4 blocks)
 	 */
 	@Override
 	@SideOnly(Side.CLIENT)
@@ -72,31 +73,29 @@ public class MBlockLeaves extends MBlockLeavesBase
 	{
 		MWoodType[] aenumtype = MWoodType.values();
 		int i = aenumtype.length;
-
+		
 		for (int j = 0; j < i; ++j)
 		{
 			MWoodType enumtype = aenumtype[j];
 			list.add(new ItemStack(itemIn, 1, enumtype.getMetadata()));
 		}
 	}
-
+	
 	@Override
 	protected ItemStack createStackedBlock(IBlockState state)
 	{
 		return new ItemStack(Item.getItemFromBlock(this), 1, ((MWoodType) state.getValue(VARIANT)).getMetadata());
 	}
-
+	
 	/**
 	 * Convert the given metadata into a BlockState for this Block
 	 */
 	@Override
 	public IBlockState getStateFromMeta(int meta)
 	{
-		return this.getDefaultState().withProperty(VARIANT, this.getCustomWoodType(meta))
-		           .withProperty(DECAYABLE, Boolean.valueOf((meta & 4) == 0))
-		           .withProperty(CHECK_DECAY, Boolean.valueOf((meta & 8) > 0));
+		return this.getDefaultState().withProperty(VARIANT, this.getCustomWoodType(meta)).withProperty(DECAYABLE, Boolean.valueOf((meta & 4) == 0)).withProperty(CHECK_DECAY, Boolean.valueOf((meta & 8) > 0));
 	}
-
+	
 	/**
 	 * Convert the BlockState into the correct metadata value
 	 */
@@ -105,31 +104,31 @@ public class MBlockLeaves extends MBlockLeavesBase
 	{
 		byte b0 = 0;
 		int i = b0 | ((MWoodType) state.getValue(VARIANT)).getMetadata();
-
-		if (!state.getValue(DECAYABLE).booleanValue())
+		
+		if (!((Boolean) state.getValue(DECAYABLE)).booleanValue())
 		{
 			i |= 4;
 		}
-
-		if (state.getValue(CHECK_DECAY).booleanValue())
+		
+		if (((Boolean) state.getValue(CHECK_DECAY)).booleanValue())
 		{
 			i |= 8;
 		}
-
+		
 		return i;
 	}
-
+	
 	public MWoodType getCustomWoodType(int meta)
 	{
 		return MWoodType.byMetadata((meta & 3) % 4);
 	}
-
+	
 	@Override
 	protected BlockState createBlockState()
 	{
-		return new BlockState(this, VARIANT, CHECK_DECAY, DECAYABLE);
+		return new BlockState(this, new IProperty[] { VARIANT, CHECK_DECAY, DECAYABLE });
 	}
-
+	
 	/**
 	 * Get the damage value that this Block should drop
 	 */
@@ -138,83 +137,77 @@ public class MBlockLeaves extends MBlockLeavesBase
 	{
 		return ((MWoodType) state.getValue(VARIANT)).getMetadata();
 	}
-
+	
 	@Override
 	public void harvestBlock(World worldIn, EntityPlayer player, BlockPos pos, IBlockState state, TileEntity te)
 	{
-		if (!worldIn.isRemote && player.getCurrentEquippedItem() != null
-			    && player.getCurrentEquippedItem().getItem() == Items.shears)
+		if (!worldIn.isRemote && player.getCurrentEquippedItem() != null && player.getCurrentEquippedItem().getItem() == Items.shears)
 		{
 			player.triggerAchievement(StatList.mineBlockStatArray[Block.getIdFromBlock(this)]);
-			spawnAsEntity(worldIn, pos, new ItemStack(Item.getItemFromBlock(this), 1,
-			                                          ((MWoodType) state.getValue(VARIANT)).getMetadata()));
+			spawnAsEntity(worldIn, pos, new ItemStack(Item.getItemFromBlock(this), 1, ((MWoodType) state.getValue(VARIANT)).getMetadata()));
 		}
 		else
 		{
 			super.harvestBlock(worldIn, player, pos, state, te);
 		}
 	}
-
+	
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
 	{
 		return Item.getItemFromBlock(MBlocks.ministrapp_sapling);
 	}
-
+	
 	@Override
 	public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune)
 	{
 		IBlockState state = world.getBlockState(pos);
-		return new java.util.ArrayList(java.util.Arrays.asList(
-			new ItemStack(this, 0, ((MWoodType) state.getValue(VARIANT)).getMetadata())));
+		return new java.util.ArrayList(java.util.Arrays.asList(new ItemStack(this, 0, ((MWoodType) state.getValue(VARIANT)).getMetadata())));
 	}
-
+	
 	@Override
 	public boolean isOpaqueCube()
 	{
 		return this.fancyGraphics;
 	}
-
+	
 	@Override
 	@SideOnly(Side.CLIENT)
 	public EnumWorldBlockLayer getBlockLayer()
 	{
 		return Minecraft.isFancyGraphicsEnabled() ? EnumWorldBlockLayer.TRANSLUCENT : EnumWorldBlockLayer.SOLID;
 	}
-
+	
 	@Override
 	public MWoodType getWoodType(int meta)
 	{
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+	
 	@Override
 	public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face)
 	{
 		return this.flammability;
 	}
-
+	
 	public static void inventoryRender()
 	{
 		Item itemBlockBrickVariants = GameRegistry.findItem(MReference.MODID, "ministrapp_leaves");
-
+		
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:redwood_leaves");
 		ModelBakery.addVariantName(itemBlockBrickVariants, "ministrapp:frozen_oak_leaves");
-
+		
 		Item itemBlockVariants = GameRegistry.findItem(MReference.MODID, "ministrapp_leaves");
 		MWoodType[] aenumtype = MWoodType.values();
 		int i = aenumtype.length;
-
+		
 		for (int j = 0; j < i; ++j)
 		{
 			MWoodType enumtype = aenumtype[j];
-			ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(MReference.MODID + ":"
-				                                                                            + enumtype
-					                                                                              .getUnlocalizedName()
-				                                                                            + "_leaves", "inventory");
-			Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
-			         .register(itemBlockVariants, enumtype.getMetadata(), itemModelResourceLocation);
+			ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation(MReference.MODID + ":" + enumtype.getUnlocalizedName() + "_leaves", "inventory");
+			Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(itemBlockVariants, enumtype.getMetadata(), itemModelResourceLocation);
 		}
 	}
+	
 }

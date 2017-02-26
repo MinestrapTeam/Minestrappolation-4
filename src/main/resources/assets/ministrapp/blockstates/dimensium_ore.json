@@ -1,7 +1,5 @@
 {
-  "variants": {
-    "normal": {
-      "model": "ministrapp:dimensium_ore"
+    "variants": {
+        "normal": { "model": "ministrapp:dimensium_ore" }
     }
-  }
 }

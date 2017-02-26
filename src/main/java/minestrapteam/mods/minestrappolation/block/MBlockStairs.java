@@ -10,7 +10,7 @@ import net.minecraft.world.IBlockAccess;
 public class MBlockStairs extends BlockStairs
 {
 	private int flammability;
-
+	
 	public MBlockStairs(IBlockState modelState, int flame)
 	{
 		super(modelState);
@@ -18,10 +18,11 @@ public class MBlockStairs extends BlockStairs
 		this.setCreativeTab(Minestrappolation.tabMBuilding);
 		this.flammability = flame;
 	}
-
+	
 	@Override
 	public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face)
 	{
 		return this.flammability;
 	}
+	
 }

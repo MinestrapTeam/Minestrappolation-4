@@ -1,7 +1,7 @@
 {
-  "parent": "block/door_top",
-  "textures": {
-    "bottom": "ministrapp:blocks/door_frozen_oak_lower",
-    "top": "ministrapp:blocks/door_frozen_oak_upper"
-  }
+    "parent": "block/door_top",
+    "textures": {
+        "bottom": "ministrapp:blocks/door_frozen_oak_lower",
+        "top": "ministrapp:blocks/door_frozen_oak_upper"
+    }
 }

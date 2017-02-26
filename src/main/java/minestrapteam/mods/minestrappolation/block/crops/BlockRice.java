@@ -8,13 +8,13 @@ public class BlockRice extends BlockCrops
 {
 	@Override
 	protected Item getSeed()
-	{
-		return MBlocks.rice;
-	}
+    {
+        return MBlocks.rice;
+    }
 
 	@Override
-	protected Item getCrop()
-	{
-		return MBlocks.rice;
-	}
+    protected Item getCrop()
+    {
+        return MBlocks.rice;
+    }
 }

@@ -1,7 +1,7 @@
 {
-  "parent": "block/pane_nse",
-  "textures": {
-    "edge": "blocks/iron_bars",
-    "pane": "ministrapp:blocks/glass_window"
-  }
+    "parent": "block/pane_nse",
+    "textures": {
+        "edge": "blocks/iron_bars",
+        "pane": "ministrapp:blocks/glass_window"
+    }
 }

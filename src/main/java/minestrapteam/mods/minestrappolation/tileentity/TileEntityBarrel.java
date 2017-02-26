@@ -9,13 +9,13 @@ public class TileEntityBarrel extends TileEntityInventory
 	{
 		super(36);
 	}
-
+	
 	@Override
 	public int getSizeInventory()
 	{
 		return 36;
 	}
-
+	
 	@Override
 	public void writeToNBT(NBTTagCompound parentNBTTagCompound)
 	{
@@ -33,10 +33,11 @@ public class TileEntityBarrel extends TileEntityInventory
 		}
 		parentNBTTagCompound.setTag("Items", dataForAllSlots);
 	}
-
+	
 	@Override
-	public String getName()
+	public String getCommandSenderName() 
 	{
 		return "container.barrel";
 	}
+
 }

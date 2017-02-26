@@ -11,11 +11,12 @@ public class MItemFoiled extends Item
 	{
 		super();
 	}
-
+	
 	@Override
 	@SideOnly(Side.CLIENT)
 	public boolean hasEffect(ItemStack stack)
 	{
 		return true;
 	}
+
 }

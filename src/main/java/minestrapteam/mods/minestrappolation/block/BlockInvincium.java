@@ -16,14 +16,14 @@ public class BlockInvincium extends MBlock
 		super(material, MapColor.redColor);
 		this.setCreativeTab(Minestrappolation.tabMBuilding);
 	}
-
+	
 	@Override
 	public void onEntityCollidedWithBlock(World world, BlockPos pos, IBlockState state, Entity entity)
 	{
 		super.onEntityCollidedWithBlock(world, pos, state, entity);
 		entity.setFire(15);
 	}
-
+	
 	@Override
 	public boolean canEntityDestroy(IBlockAccess world, BlockPos pos, Entity entity)
 	{

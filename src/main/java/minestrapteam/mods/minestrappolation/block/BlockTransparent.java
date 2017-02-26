@@ -1,5 +1,7 @@
 package minestrapteam.mods.minestrappolation.block;
 
+import java.util.Random;
+
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
@@ -12,58 +14,55 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import java.util.Random;
-
 public class BlockTransparent extends MBlock
 {
-
-	private boolean ignoreSimilarity;
-
+	
+	private boolean	ignoreSimilarity;
+	
 	public BlockTransparent(Material materialIn, MapColor mapColorIn, boolean ignoreSimilarityIn)
 	{
 		super(materialIn, mapColorIn);
 		this.ignoreSimilarity = ignoreSimilarityIn;
 	}
-
+	
 	@Override
 	public boolean isOpaqueCube()
 	{
 		return false;
 	}
-
+	
 	@Override
 	@SideOnly(Side.CLIENT)
 	public EnumWorldBlockLayer getBlockLayer()
 	{
 		return EnumWorldBlockLayer.CUTOUT;
 	}
-
+	
 	@Override
 	@SideOnly(Side.CLIENT)
 	public boolean shouldSideBeRendered(IBlockAccess worldIn, BlockPos pos, EnumFacing side)
 	{
 		IBlockState iblockstate = worldIn.getBlockState(pos);
 		Block block = iblockstate.getBlock();
-
-		if (this == MBlocks.glass_bricks || this == MBlocks.glass_refined || this == MBlocks.glass_tiles
-			    || this == MBlocks.glass_window || this == MBlocks.glow_glass)
+		
+		if (this == MBlocks.glass_bricks || this == MBlocks.glass_refined || this == MBlocks.glass_tiles || this == MBlocks.glass_window || this == MBlocks.glow_glass)
 		{
 			if (worldIn.getBlockState(pos.offset(side.getOpposite())) != iblockstate)
 				return true;
-
+			
 			if (block == this)
 				return false;
 		}
-
-		return !(!this.ignoreSimilarity && block == this) && super.shouldSideBeRendered(worldIn, pos, side);
+		
+		return !this.ignoreSimilarity && block == this ? false : super.shouldSideBeRendered(worldIn, pos, side);
 	}
-
+	
 	@Override
 	public boolean isFullCube()
 	{
 		return false;
 	}
-
+	
 	@Override
 	public int quantityDropped(Random random)
 	{
@@ -72,7 +71,7 @@ public class BlockTransparent extends MBlock
 		else
 			return 0;
 	}
-
+	
 	@Override
 	protected boolean canSilkHarvest()
 	{

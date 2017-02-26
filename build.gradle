@@ -1,174 +1,134 @@
-import java.util.regex.Matcher
-import java.util.regex.Pattern
-
 buildscript {
-	repositories {
-		jcenter()
-		maven {
-			name = "forge"
-			url = "http://files.minecraftforge.net/maven"
-		}
-	}
-	dependencies {
-		classpath 'net.minecraftforge.gradle:ForgeGradle:2.1-SNAPSHOT'
-	}
+    repositories {
+        jcenter()
+        maven { url = "http://files.minecraftforge.net/maven" }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.2-SNAPSHOT'
+    }
 }
-
 apply plugin: 'net.minecraftforge.gradle.forge'
-apply plugin: 'idea'
+//Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
-version = "1.8.9-4.3.0"
-group = "minestrapteam"
+
+version = "1.11-4.3"
+group= "minestrapteam"
 archivesBaseName = "Minestrappolation"
 
 def ENV = System.getenv()
-if (ENV.DRONE_BUILD_NUMBER)
-{
-	version += ".nightly_" + ENV.DRONE_BUILD_NUMBER
+if (ENV.DRONE_BUILD_NUMBER) {
+    version += ".nightly_" + ENV.DRONE_BUILD_NUMBER
+}
+sourceCompatibility = targetCompatibility = "1.6" // Need this here so eclipse task generates correctly.
+compileJava {
+    sourceCompatibility = targetCompatibility = "1.6"
 }
 
 minecraft {
-	version = '1.8.9-11.15.1.1722'
-	mappings = 'stable_22'
-
-	if (file("../run").exists())
-	{
-		runDir = "../run"
-	}
-	else
-	{
-		runDir = "run"
-	}
-}
-
-//noinspection GroovyAssignabilityCheck
-sourceSets {
-	main {
-		java {
-			srcDir 'src/main/java'
-		}
-		resources {
-			srcDir 'src/main/resources'
-
-			// Exclude Dev Textures
-			exclude '**/textures/dev'
-			exclude '**/textures/dev/*'
-		}
-	}
-}
-
-//noinspection GroovyAssignabilityCheck
-processResources {
-	// this will ensure that this task is redone when the versions change.
-	inputs.property "version", project.version
-	inputs.property "mcversion", project.minecraft.version
-
-	// replace stuff in mcmod.info, nothing else
-	from(sourceSets.main.resources) {
-		include 'mcmod.info'
-
-		// replace version and mcversion
-		expand 'version': project.version, 'mcversion': project.minecraft.version
-	}
-
-	// copy everything else, thats not the mcmod.info
-	from(sourceSets.main.resources) {
-		exclude 'mcmod.info'
-
-		exclude '**/*.json'
-	}
-
-	from(sourceSets.main.resources) {
-		include '**/*.json'
-
-		filter { String line ->
-			Pattern clean = Pattern.compile(/ \s+|("(?:[^"\\]|\\.)*") /, Pattern.DOTALL);
-
-			StringBuffer sb = new StringBuffer();
-			Matcher m = clean.matcher(line);
-			while (m.find())
-			{
-				m.appendReplacement(sb, "");
-				if (m.group(1) != null) sb.append(m.group(1));
-			}
-			m.appendTail(sb);
-
-			return sb ? sb.toString() : null;
-		}
-	}
+    version = "1.11.2-13.20.0.2236"
+    runDir = "run"
+    
+    // the mappings can be changed at any time, and must be in the following format.
+    // snapshot_YYYYMMDD   snapshot are built nightly.
+    // stable_#            stables are built at the discretion of the MCP team.
+    // Use non-default mappings at your own risk. they may not always work.
+    // simply re-run your setup task after changing the mappings to update your workspace.
+    mappings = "snapshot_20161220"
+    // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
 }
 
 task textureZip(type: Zip)
-textureZip {
+textureZip
+{
 	classifier = 'avt'
-	archiveName = "$archivesBaseName-$version-avt.zip";
-
-	include('src/main/resources/assets/minecraft/**/*.*')
+	archiveName = "${archivesBaseName}-${version}-avt.zip";
+	
+	from ('src/extra/resources')
+    {
+        include('**')
+    }
 }
 
 task devJar(type: Jar, dependsOn: 'classes')
-devJar {
-	classifier = 'dev'
-	archiveName = "$archivesBaseName-$version-dev.jar"
-
-	from("$buildDir/classes/main") {
-		include('minestrapteam/mods/**')
-	}
-	from("$buildDir/resources/main")
+devJar
+{
+    classifier = 'dev'
+    archiveName = "${archivesBaseName}-${version}-dev.jar"
+    
+    from ('build/classes/main')
+    {
+        include('minestrapteam/minestrappolation/**')
+    }
+    from ('build/resources/main')
+    {
+        include('assets/**')
+    }
 }
 
-artifacts {
-	archives devJar
-	archives textureZip
+task srcJar(type: Jar)
+srcJar
+{
+    classifier = 'src'
+    archiveName = "${archivesBaseName}-${version}-src.jar"
+    
+    from ('src/main/java')
+    {
+        include('minestrapteam/minestrappolation/**')
+    }
+    from ('src/main/resources')
+    {
+        include('assets/**')
+    }
 }
 
-sourceJar {
-	classifier = 'src'
-	archiveName = "$archivesBaseName-$version-src.jar"
-}
-
-build.dependsOn 'devJar', 'textureZip'
+task buildApi(dependsOn: ['build', 'srcJar', 'devJar', 'textureZip'])
 
 dependencies {
-	// you may put jars on which you depend on in ./libs
-	// or you may define them like so..
-	//compile "some.group:artifact:version:classifier"
-	//compile "some.group:artifact:version"
+    // you may put jars on which you depend on in ./libs
+    // or you may define them like so..
+    //compile "some.group:artifact:version:classifier"
+    //compile "some.group:artifact:version"
+      
+    // real examples
+    //compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env
+    //compile 'com.googlecode.efficient-java-matrix-library:ejml:0.24' // adds ejml to the dev env
 
-	// real examples
-	//compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env
-	//compile 'com.googlecode.efficient-java-matrix-library:ejml:0.24' // adds ejml to the dev env
+    // the 'provided' configuration is for optional dependencies that exist at compile-time but might not at runtime.
+    //provided 'com.mod-buildcraft:buildcraft:6.0.8:dev'
 
-	// the 'provided' configuration is for optional dependencies that exist at compile-time but might not at runtime.
-	//provided 'com.mod-buildcraft:buildcraft:6.0.8:dev'
+    // the deobf configurations:  'deobfCompile' and 'deobfProvided' are the same as the normal compile and provided,
+    // except that these dependencies get remapped to your current MCP mappings
+    //deobfCompile 'com.mod-buildcraft:buildcraft:6.0.8:dev'
+    //deobfProvided 'com.mod-buildcraft:buildcraft:6.0.8:dev'
 
-	// the deobf configurations:  'deobfCompile' and 'deobfProvided' are the same as the normal compile and provided,
-	// except that these dependencies get remapped to your current MCP mappings
-	//deobfCompile 'com.mod-buildcraft:buildcraft:6.0.8:dev'
-	//deobfProvided 'com.mod-buildcraft:buildcraft:6.0.8:dev'
+    // for more info...
+    // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
+    // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
-	// for more info...
-	// http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
-	// http://www.gradle.org/docs/current/userguide/dependency_management.html
 }
 
-// Fix IntelliJ assets
-idea {
-	module {
-		inheritOutputDirs = true
-	}
+processResources {
+    // this will ensure that this task is redone when the versions change.
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
+
+    // replace stuff in mcmod.info, nothing else
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+                
+        // replace version and mcversion
+        expand 'version':project.version, 'mcversion':project.minecraft.version
+    }
+        
+    // copy everything else except the mcmod.info
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
+}
+artifacts {
+    archives srcJar
+    archives devJar
 }
 
-// Run Wrapper with more available Memory
-wrapper {
-	gradleVersion = '2.7'
-
-	def jvmOpts = "-Xmx1g"
-	inputs.property("jvmOpts", jvmOpts)
-
-	doLast {
-		def optsEnvVar = "DEFAULT_JVM_OPTS"
-		scriptFile.write scriptFile.text.replace("$optsEnvVar=\"\"", "$optsEnvVar=\"$jvmOpts\"")
-		batchScript.write batchScript.text.replace("set $optsEnvVar=", "set $optsEnvVar=$jvmOpts")
-	}
-}
+//fix IntelliJ assets
+idea { module { inheritOutputDirs = true } }

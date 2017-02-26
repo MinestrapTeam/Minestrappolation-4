@@ -1,20 +1,8 @@
 {
-  "variants": {
-    "facing=south": {
-      "model": "ministrapp:carpenters_bench",
-      "y": 180
-    },
-    "facing=north": {
-      "model": "ministrapp:carpenters_bench",
-      "y": 0
-    },
-    "facing=west": {
-      "model": "ministrapp:carpenters_bench",
-      "y": 270
-    },
-    "facing=east": {
-      "model": "ministrapp:carpenters_bench",
-      "y": 90
+    "variants": {
+        "facing=south": { "model": "ministrapp:carpenters_bench", "y": 180 },
+		"facing=north": { "model": "ministrapp:carpenters_bench", "y": 0 },
+		"facing=west": { "model": "ministrapp:carpenters_bench", "y": 270 },
+		"facing=east": { "model": "ministrapp:carpenters_bench", "y": 90 }
     }
-  }
 }

@@ -11,7 +11,7 @@ public class ItemAmuletVaccam extends ItemAmulet
 	{
 		super(50, desc);
 	}
-
+	
 	@Override
 	public boolean hitEntity(ItemStack stack, EntityLivingBase entity, EntityLivingBase attacker)
 	{
@@ -22,7 +22,7 @@ public class ItemAmuletVaccam extends ItemAmulet
 			player.onCriticalHit(entity);
 			stack.damageItem(1, player);
 		}
-
+		
 		return true;
 	}
 }

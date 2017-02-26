@@ -1,7 +1,7 @@
 {
-  "parent": "block/cube_column",
-  "textures": {
-    "end": "ministrapp:blocks/redwood_log_top",
-    "side": "Ministrapp:blocks/redwood_log_side"
-  }
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "ministrapp:blocks/redwood_log_top",
+        "side": "Ministrapp:blocks/redwood_log_side"
+    }
 }

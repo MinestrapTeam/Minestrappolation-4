@@ -9,17 +9,17 @@ public interface ICuttingRecipes
 	/**
 	 * Used to check if a recipe matches current crafting inventory
 	 */
-	boolean matches(InventoryCrafting inventory, ItemStack extra, World world);
-
+	public boolean matches(InventoryCrafting inventory, ItemStack extra, World world);
+	
 	/**
 	 * Returns an Item that is the result of this recipe
 	 */
-	ItemStack getCraftingResult(InventoryCrafting inventory, ItemStack extra);
-
+	public ItemStack getCraftingResult(InventoryCrafting inventory, ItemStack extra);
+	
 	/**
 	 * Returns the size of the recipe area
 	 */
-	int getRecipeSize();
-
-	ItemStack getRecipeOutput();
+	public int getRecipeSize();
+	
+	public ItemStack getRecipeOutput();
 }

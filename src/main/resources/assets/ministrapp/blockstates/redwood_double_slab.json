@@ -1,7 +1,5 @@
 {
-  "variants": {
-    "normal": {
-      "model": "ministrapp:redwood_planks"
+    "variants": {
+        "normal": { "model": "ministrapp:redwood_planks" }
     }
-  }
 }

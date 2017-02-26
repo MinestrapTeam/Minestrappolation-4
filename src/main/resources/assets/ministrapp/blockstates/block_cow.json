@@ -1,7 +1,5 @@
 {
-  "variants": {
-    "normal": {
-      "model": "ministrapp:block_cow"
+    "variants": {
+        "normal": { "model": "ministrapp:block_cow" }
     }
-  }
 }

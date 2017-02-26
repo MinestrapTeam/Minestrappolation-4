@@ -8,7 +8,14 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
-import net.minecraft.util.*;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.EnumBlockRenderType;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.EnumParticleTypes;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -16,140 +23,111 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class BlockClaimerator extends MBlock
 {
 
-	public BlockClaimerator(Material materialIn, MapColor mapColorIn)
+	public BlockClaimerator(Material materialIn, MapColor mapColorIn) 
 	{
 		super(materialIn, mapColorIn);
 	}
 
 	@Override
-	public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
+    public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack)
 	{
-		super.onBlockPlaced(worldIn, pos, facing, hitX, hitY, hitZ, meta, placer);
-		if (placer instanceof EntityPlayer)
+		if(placer instanceof EntityPlayer)
 		{
-			ChunkProtector.protectChunk(worldIn.getChunkFromBlockCoords(pos).xPosition,
-			                            worldIn.getChunkFromBlockCoords(pos).zPosition,
-			                            UUIDHelper.getPlayerUUID(placer.getName()));
+			EntityPlayer player = (EntityPlayer)placer;
+			ChunkProtector.protectChunk(worldIn.getChunkFromBlockCoords(pos).xPosition, worldIn.getChunkFromBlockCoords(pos).zPosition, UUIDHelper.getPlayerUUID(placer.getName()));
 		}
-		return this.getDefaultState();
 	}
-
+	
 	@Override
-	public void onBlockDestroyedByPlayer(World worldIn, BlockPos pos, IBlockState state)
+	public void onBlockDestroyedByPlayer(World worldIn, BlockPos pos, IBlockState state) 
 	{
-		ChunkProtector.unprotectChunk(worldIn.getChunkFromBlockCoords(pos).xPosition,
-		                              worldIn.getChunkFromBlockCoords(pos).zPosition);
+		ChunkProtector.unprotectChunk(worldIn.getChunkFromBlockCoords(pos).xPosition, worldIn.getChunkFromBlockCoords(pos).zPosition);
 	}
-
+	
 	@Override
 	public void onBlockClicked(World worldIn, BlockPos pos, EntityPlayer playerIn)
 	{
-		for (int j = 8; j >= -8; j--)
+		for(int j = 8 ; j >= -8 ; j--)
 		{
-			for (int i = 15; i >= 0; i--)
+			for(int i = 15 ; i >= 0 ; i--)
 			{
-				worldIn.spawnParticle(EnumParticleTypes.REDSTONE,
-				                      worldIn.getChunkFromBlockCoords(pos).getChunkCoordIntPair().getXStart() + i,
-				                      pos.getY() + j,
-				                      worldIn.getChunkFromBlockCoords(pos).getChunkCoordIntPair().getZStart(), 0.0D,
-				                      0.0D, 1.0D, new int[40]);
-				worldIn.spawnParticle(EnumParticleTypes.REDSTONE,
-				                      worldIn.getChunkFromBlockCoords(pos).getChunkCoordIntPair().getXStart() + i,
-				                      pos.getY() + j,
-				                      worldIn.getChunkFromBlockCoords(pos).getChunkCoordIntPair().getZEnd(), 0.0D, 0.0D,
-				                      1.0D, new int[40]);
-				worldIn.spawnParticle(EnumParticleTypes.REDSTONE,
-				                      worldIn.getChunkFromBlockCoords(pos).getChunkCoordIntPair().getXStart(),
-				                      pos.getY() + j,
-				                      worldIn.getChunkFromBlockCoords(pos).getChunkCoordIntPair().getZStart() + i, 0.0D,
-				                      0.0D, 1.0D, new int[40]);
-				worldIn.spawnParticle(EnumParticleTypes.REDSTONE,
-				                      worldIn.getChunkFromBlockCoords(pos).getChunkCoordIntPair().getXEnd(),
-				                      pos.getY() + j,
-				                      worldIn.getChunkFromBlockCoords(pos).getChunkCoordIntPair().getZStart() + i, 0.0D,
-				                      0.0D, 1.0D, new int[40]);
+				worldIn.spawnParticle(EnumParticleTypes.REDSTONE, worldIn.getChunkFromBlockCoords(pos).getPos().getXStart() + i, pos.getY() + j, worldIn.getChunkFromBlockCoords(pos).getPos().getZStart(), 0.0D, 0.0D, 1.0D, new int[40]);
+				worldIn.spawnParticle(EnumParticleTypes.REDSTONE, worldIn.getChunkFromBlockCoords(pos).getPos().getXStart() + i, pos.getY() + j, worldIn.getChunkFromBlockCoords(pos).getPos().getZEnd(), 0.0D, 0.0D, 1.0D, new int[40]);
+				worldIn.spawnParticle(EnumParticleTypes.REDSTONE, worldIn.getChunkFromBlockCoords(pos).getPos().getXStart(), pos.getY() + j, worldIn.getChunkFromBlockCoords(pos).getPos().getZStart() + i, 0.0D, 0.0D, 1.0D, new int[40]);
+				worldIn.spawnParticle(EnumParticleTypes.REDSTONE, worldIn.getChunkFromBlockCoords(pos).getPos().getXEnd(), pos.getY() + j, worldIn.getChunkFromBlockCoords(pos).getPos().getZStart() + i, 0.0D, 0.0D, 1.0D, new int[40]);
 			}
 		}
 	}
-
+	
 	@Override
-	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ)
+    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
 	{
 		if (worldIn.isRemote)
 			return true;
-
-		if (playerIn.getHeldItem() != null)
+		
+		if(playerIn.getHeldItemMainhand() != null)
 		{
-			if (playerIn.getHeldItem().getItem() == Items.name_tag)
+			if(playerIn.getHeldItemMainhand().getItem() == Items.NAME_TAG)
 			{
-				String name = playerIn.getHeldItem().getDisplayName();
-
-				if (UUIDHelper.isValidUUID(name))
+				String name = playerIn.getHeldItemMainhand().getDisplayName();
+				
+				if(UUIDHelper.isValidUUID(name))
 				{
-					if (ChunkProtector.addCoOwner(worldIn.getChunkFromBlockCoords(pos).xPosition,
-					                              worldIn.getChunkFromBlockCoords(pos).zPosition,
-					                              UUIDHelper.getPlayerUUID(name)))
-					{
-						playerIn.addChatMessage(
-							new ChatComponentText(name + " with UUID " + UUIDHelper.getPlayerUUID(name)
-								                      + " can now edit this chunk!"));
-					}
-					else
-					{
-						playerIn.addChatMessage(new ChatComponentText(name + " can already edit this chunk"));
-					}
+						if(ChunkProtector.addCoOwner(worldIn.getChunkFromBlockCoords(pos).xPosition, worldIn.getChunkFromBlockCoords(pos).zPosition, UUIDHelper.getPlayerUUID(name)))
+						{
+							playerIn.sendMessage(new TextComponentString(name + " with UUID " + UUIDHelper.getPlayerUUID(name) + " can now edit this chunk!"));
+						}	
+						else
+						{
+							playerIn.sendMessage(new TextComponentString(name + " can already edit this chunk"));
+						}			
 				}
 				else
 				{
-					playerIn.addChatMessage(new ChatComponentText("Invalid UUID is the username correct?"));
+					playerIn.sendMessage(new TextComponentString("Invalid UUID is the username correct?"));
 				}
 			}
-
-			if (playerIn.getHeldItem().getItem() == Items.redstone)
+			
+			if(playerIn.getHeldItemMainhand().getItem() == Items.REDSTONE)
 			{
-				if (playerIn.isSneaking())
+				if(playerIn.isSneaking())
 				{
-					ChunkProtector.getProtectionData(worldIn.getChunkFromBlockCoords(pos).xPosition,
-					                                 worldIn.getChunkFromBlockCoords(pos).zPosition)
-					              .setUseRedstoneObjects(false);
-					playerIn
-						.addChatMessage(new ChatComponentText("Levers, doors, and buttons CANNOT be used by everyone"));
+					ChunkProtector.getProtectionData(worldIn.getChunkFromBlockCoords(pos).xPosition, worldIn.getChunkFromBlockCoords(pos).zPosition).setUseRedstoneObjects(false);
+					playerIn.sendMessage(new TextComponentString("Levers, doors, and buttons CANNOT be used by everyone"));
 				}
 				else
 				{
-					ChunkProtector.getProtectionData(worldIn.getChunkFromBlockCoords(pos).xPosition,
-					                                 worldIn.getChunkFromBlockCoords(pos).zPosition)
-					              .setUseRedstoneObjects(true);
-					playerIn.addChatMessage(
-						new ChatComponentText("Levers, doors, and buttons CAN now be used by everyone"));
+					ChunkProtector.getProtectionData(worldIn.getChunkFromBlockCoords(pos).xPosition, worldIn.getChunkFromBlockCoords(pos).zPosition).setUseRedstoneObjects(true);
+					playerIn.sendMessage(new TextComponentString("Levers, doors, and buttons CAN now be used by everyone"));
 				}
 			}
+			
 		}
 		return true;
 	}
-
+	
 	@Override
 	@SideOnly(Side.CLIENT)
-	public EnumWorldBlockLayer getBlockLayer()
+    public BlockRenderLayer getBlockLayer()
 	{
-		return EnumWorldBlockLayer.SOLID;
+		return BlockRenderLayer.SOLID;
 	}
-
+	
 	@Override
-	public boolean isOpaqueCube()
+    public boolean isOpaqueCube(IBlockState state)
 	{
 		return false;
 	}
-
+	
 	@Override
-	public boolean isFullCube()
+	public boolean isFullCube(IBlockState state)
 	{
 		return false;
 	}
-
+	
 	@Override
-	public int getRenderType()
+	public EnumBlockRenderType getRenderType(IBlockState state)
 	{
-		return 3;
+		return EnumBlockRenderType.MODEL;
 	}
 }

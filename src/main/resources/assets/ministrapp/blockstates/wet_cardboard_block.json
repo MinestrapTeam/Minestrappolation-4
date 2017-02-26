@@ -1,7 +1,5 @@
 {
-  "variants": {
-    "normal": {
-      "model": "ministrapp:cardboard_wet"
+    "variants": {
+        "normal": { "model": "ministrapp:cardboard_wet" }
     }
-  }
 }

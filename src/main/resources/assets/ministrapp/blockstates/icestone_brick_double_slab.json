@@ -1,7 +1,5 @@
 {
-  "variants": {
-    "normal": {
-      "model": "ministrapp:icestone_bricks"
+    "variants": {
+        "normal": { "model": "ministrapp:icestone_bricks" }
     }
-  }
 }

@@ -6,6 +6,7 @@ import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import minestrapteam.mods.minestrappolation.lib.MItems;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
+import net.minecraft.inventory.SlotFurnaceFuel;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -16,65 +17,65 @@ import net.minecraft.util.ITickable;
 
 public class TileEntityMelter extends TileEntityInventory implements ISidedInventory, ITickable
 {
-	public int burnTime;
-	public int maxBurnTime;
-	public int meltTime;
-
-	public boolean hasPower;
-
-	private static final int[] topInputSlot = new int[] { 0 };
-	private static final int[] outputSlots  = new int[] { 1, 2 };
-	private static final int[] inputSlots   = new int[] { 1, 3 };
-
+	public int					burnTime;
+	public int					maxBurnTime;
+	public int					meltTime;
+	
+	public boolean				hasPower;
+	
+	private static final int[]	topInputSlot	= new int[] {0};
+	private static final int[]	outputSlots		= new int[] {1,2};
+	private static final int[]	inputSlots		= new int[] {1,3};
+	
 	public TileEntityMelter()
 	{
 		super(4);
 	}
-
+	
 	public final int getMaxMeltTime()
 	{
 		return this.hasPower ? 800 : 1600;
 	}
-
+	
 	@Override
 	public int getSizeInventory()
 	{
 		return 4;
 	}
-
+	
 	@Override
 	public void readFromNBT(NBTTagCompound nbt)
 	{
 		super.readFromNBT(nbt);
-
+		
 		this.burnTime = nbt.getShort("BurnTime");
 		this.meltTime = nbt.getShort("CookTime");
 		this.maxBurnTime = getItemBurnTime(this.itemStacks[1]);
 		NBTTagList nbttaglist = nbt.getTagList("Items", 10);
 		this.itemStacks = new ItemStack[this.getSizeInventory()];
-
+		
 		for (int i = 0; i < nbttaglist.tagCount(); ++i)
 		{
 			NBTTagCompound nbttagcompound1 = nbttaglist.getCompoundTagAt(i);
 			byte b0 = nbttagcompound1.getByte("Slot");
-
+			
 			if (b0 >= 0 && b0 < this.itemStacks.length)
 			{
 				this.itemStacks[b0] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
 			}
 		}
 	}
-
+	
 	public boolean isPowered()
 	{
 		return this.hasPower;
 	}
-
+	
 	@Override
 	public void writeToNBT(NBTTagCompound nbt)
 	{
 		super.writeToNBT(nbt);
-
+		
 		nbt.setShort("BurnTime", (short) this.burnTime);
 		nbt.setShort("CookTime", (short) this.meltTime);
 		NBTTagList nbttaglist = new NBTTagList();
@@ -88,43 +89,50 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 				nbttaglist.appendTag(nbttagcompound1);
 			}
 		}
-
+		
 		nbt.setTag("Items", nbttaglist);
 	}
-
+	
 	public int getProgressScaled(int scalar)
 	{
 		return this.meltTime * scalar / this.getMaxMeltTime();
 	}
-
+	
 	public int getBurnTimeRemainingScaled(int scalar)
 	{
 		if (this.maxBurnTime == 0)
 		{
 			this.maxBurnTime = 200;
 		}
-
+		
 		return this.burnTime * scalar / this.maxBurnTime;
 	}
-
+	
 	public boolean isBurning()
 	{
 		return this.burnTime > 0;
 	}
-
+	
 	@Override
 	public void update()
 	{
-		this.hasPower = this.worldObj.isBlockIndirectlyGettingPowered(this.getPos()) > 0;
-
+		if (this.worldObj.isBlockIndirectlyGettingPowered(this.getPos()) > 0)
+		{
+			this.hasPower = true;
+		}
+		else
+		{
+			this.hasPower = false;
+		}
+		
 		boolean burning = this.burnTime > 0;
-
+		
 		if (burning)
 		{
-
+			
 			if (this.hasPower)
 			{
-				if (this.burnTime - 16 < 0)
+				if(this.burnTime - 16 < 0)
 				{
 					this.burnTime = 0;
 				}
@@ -138,10 +146,10 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 				this.burnTime -= 4;
 			}
 		}
-
+		
 		if (this.worldObj.isRemote)
 			return;
-
+		
 		if (this.canSmelt())
 		{
 			if (this.burnTime == 0)
@@ -180,7 +188,7 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 		{
 			this.meltTime = 0;
 		}
-
+		
 		if (burning != this.burnTime > 0)
 		{
 			this.markDirty();
@@ -188,7 +196,7 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 			BlockMelter.setState(this.isBurning(), this.worldObj, this.pos);
 		}
 	}
-
+	
 	private boolean canSmelt()
 	{
 		ItemStack input = this.itemStacks[0];
@@ -198,7 +206,7 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 			if (output == null)
 				return false;
 			ItemStack container = new ItemStack(MelterRecipes.instance().getRequiredContainer(input));
-			if (MelterRecipes.instance().needsBucket(input))
+			if(MelterRecipes.instance().needsBucket(input))
 			{
 				if (container != null)
 				{
@@ -216,7 +224,7 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 		}
 		return false;
 	}
-
+	
 	public void smeltItem()
 	{
 		if (this.canSmelt())
@@ -232,19 +240,17 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 			{
 				outputSlot.stackSize += output.stackSize;
 			}
-
+			
 			--input.stackSize;
 			if (input.stackSize <= 0)
 			{
 				this.itemStacks[0] = null;
 			}
-
+			
 			ItemStack bucket = this.itemStacks[3];
-			if (bucket != null && ItemStack.areItemsEqual(bucket, new ItemStack(MelterRecipes.instance()
-			                                                                                 .getRequiredContainer(
-				                                                                                 input))))
+			if (bucket != null && ItemStack.areItemsEqual(bucket, new ItemStack(MelterRecipes.instance().getRequiredContainer(input))))
 			{
-				if (MelterRecipes.instance().needsBucket(input))
+				if(MelterRecipes.instance().needsBucket(input))
 				{
 					--bucket.stackSize;
 					if (bucket.stackSize <= 0)
@@ -255,40 +261,43 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 			}
 		}
 	}
-
+	
 	public static boolean isItemFuel(ItemStack stack)
 	{
 		return getItemBurnTime(stack) > 0;
 	}
-
+	
 	public static int getItemBurnTime(ItemStack stack)
 	{
 		if (stack == null)
 			return 0;
-
+		
 		int i = TileEntityFurnace.getItemBurnTime(stack);
 		if (i == 0)
 		{
 			Item item = stack.getItem();
 		}
-
+		
 		return i;
 	}
-
+	
 	@Override
 	public boolean isItemValidForSlot(int index, ItemStack stack)
-	{
-		if (index == 3)
+    {
+		if(index == 3)
 		{
-			return stack.getItem() == Items.bucket ||
-				       stack.getItem() == Items.glass_bottle ||
-				       stack.getItem() == Items.bowl ||
-				       stack.getItem() == MItems.bread_bowl ||
-				       stack.getItem() == Item.getItemFromBlock(MBlocks.hourglass_empty);
+			if (stack.getItem() == Items.bucket ||
+				stack.getItem() == Items.glass_bottle ||
+				stack.getItem() == Items.bowl ||
+				stack.getItem() == MItems.bread_bowl ||
+				stack.getItem() == Item.getItemFromBlock(MBlocks.hourglass_empty))
+				return true;
+			else
+				return false;
 		}
 		else
-			return index != 2 && (index != 1 || isItemFuel(stack));
-	}
+			return index == 2 ? false : (index != 1 ? true : isItemFuel(stack));
+    }
 
 	@Override
 	public int[] getSlotsForFace(EnumFacing side)
@@ -296,24 +305,28 @@ public class TileEntityMelter extends TileEntityInventory implements ISidedInven
 		return side == EnumFacing.DOWN ? outputSlots : (side == EnumFacing.UP ? topInputSlot : inputSlots);
 	}
 
-	@Override
 	public boolean canInsertItem(int index, ItemStack itemStackIn, EnumFacing direction)
 	{
-		return this.isItemValidForSlot(index, itemStackIn);
+	    return this.isItemValidForSlot(index, itemStackIn);
 	}
 
-	@Override
+
 	public boolean canExtractItem(int index, ItemStack stack, EnumFacing direction)
 	{
 		if (direction == EnumFacing.DOWN && index == 1)
-		{
-			Item item = stack.getItem();
+        {
+            Item item = stack.getItem();
 
-			if (item != Items.water_bucket && item != Items.bucket)
-			{
-				return false;
-			}
+            if (item != Items.water_bucket && item != Items.bucket)
+            {
+                return false;
+            }
+        }
+		if (direction == EnumFacing.DOWN && index == 3)
+		{
+			return false;
 		}
-		return !(direction == EnumFacing.DOWN && index == 3);
+
+        return true;
 	}
 }

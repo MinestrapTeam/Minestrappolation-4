@@ -1,7 +1,5 @@
 {
-  "variants": {
-    "normal": {
-      "model": "ministrapp:radiant_ore"
+    "variants": {
+        "normal": { "model": "ministrapp:radiant_ore" }
     }
-  }
 }

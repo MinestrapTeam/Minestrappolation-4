@@ -1,28 +1,29 @@
 {
-  "variants": {
-    "type=oak": {
-      "model": "ministrapp:oak_boards"
-    },
-    "type=spruce": {
-      "model": "ministrapp:spruce_boards"
-    },
-    "type=birch": {
-      "model": "ministrapp:birch_boards"
-    },
-    "type=jungle": {
-      "model": "ministrapp:jungle_boards"
-    },
-    "type=acacia": {
-      "model": "ministrapp:acacia_boards"
-    },
-    "type=dark_oak": {
-      "model": "ministrapp:dark_oak_boards"
-    },
-    "type=redwood": {
-      "model": "ministrapp:redwood_boards"
-    },
-    "type=frozen_oak": {
-      "model": "ministrapp:frozen_oak_boards"
+   "variants":{
+	"type=oak":{
+         "model":"ministrapp:oak_boards"
+      },
+	"type=spruce":{
+         "model":"ministrapp:spruce_boards"
+      },
+	"type=birch":{
+         "model":"ministrapp:birch_boards"
+      },
+	"type=jungle":{
+         "model":"ministrapp:jungle_boards"
+      },
+	"type=acacia":{
+         "model":"ministrapp:acacia_boards"
+      },
+	"type=dark_oak":{
+         "model":"ministrapp:dark_oak_boards"
+      },
+	"type=redwood":{
+         "model":"ministrapp:redwood_boards"
+      },
+	"type=frozen_oak":{
+         "model":"ministrapp:frozen_oak_boards"
+      }
+
     }
-  }
 }

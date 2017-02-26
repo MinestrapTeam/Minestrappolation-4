@@ -1,6 +1,6 @@
 {
-  "parent": "block/cross",
-  "textures": {
-    "cross": "ministrapp:blocks/purple_glowshroom"
-  }
+    "parent": "block/cross",
+    "textures": {
+        "cross": "ministrapp:blocks/purple_glowshroom"
+    }
 }

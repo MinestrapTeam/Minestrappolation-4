@@ -1,55 +1,55 @@
 {
-  "variants": {
-    "level=0": {
-      "model": "ministrapp:hourglass_empty"
-    },
-    "level=1": {
-      "model": "ministrapp:hourglass_empty"
-    },
-    "level=2": {
-      "model": "ministrapp:hourglass_empty"
-    },
-    "level=3": {
-      "model": "ministrapp:hourglass_empty"
-    },
-    "level=4": {
-      "model": "ministrapp:hourglass_empty"
-    },
-    "level=5": {
-      "model": "ministrapp:hourglass_empty"
-    },
-    "level=6": {
-      "model": "ministrapp:hourglass_empty"
-    },
-    "level=7": {
-      "model": "ministrapp:hourglass_empty"
-    },
-    "level=8": {
-      "model": "ministrapp:hourglass_empty"
-    },
-    "level=9": {
-      "model": "ministrapp:hourglass_empty"
-    },
-    "level=10": {
-      "model": "ministrapp:hourglass_empty"
-    },
-    "level=11": {
-      "model": "ministrapp:hourglass_empty"
-    },
-    "level=12": {
-      "model": "ministrapp:hourglass_empty"
-    },
-    "level=13": {
-      "model": "ministrapp:hourglass_empty"
-    },
-    "level=14": {
-      "model": "ministrapp:hourglass_empty"
-    },
-    "level=15": {
-      "model": "ministrapp:hourglass_empty"
-    },
-    "level=16": {
-      "model": "ministrapp:hourglass_empty"
-    }
-  }
+   "variants":{
+      "level=0":{
+         "model":"ministrapp:hourglass_empty"
+      },
+      "level=1":{
+         "model":"ministrapp:hourglass_empty"
+      },
+	  "level=2":{
+         "model":"ministrapp:hourglass_empty"
+      },
+	  "level=3":{
+         "model":"ministrapp:hourglass_empty"
+      },
+	  "level=4":{
+         "model":"ministrapp:hourglass_empty"
+      },
+	  "level=5":{
+         "model":"ministrapp:hourglass_empty"
+      },
+	  "level=6":{
+         "model":"ministrapp:hourglass_empty"
+      },
+	  "level=7":{
+         "model":"ministrapp:hourglass_empty"
+      },
+	  "level=8":{
+         "model":"ministrapp:hourglass_empty"
+      },
+	  "level=9":{
+         "model":"ministrapp:hourglass_empty"
+      },
+	  "level=10":{
+         "model":"ministrapp:hourglass_empty"
+      },
+	  "level=11":{
+         "model":"ministrapp:hourglass_empty"
+      },
+	  "level=12":{
+         "model":"ministrapp:hourglass_empty"
+      },
+	  "level=13":{
+         "model":"ministrapp:hourglass_empty"
+      },
+	  "level=14":{
+         "model":"ministrapp:hourglass_empty"
+      },
+	  "level=15":{
+         "model":"ministrapp:hourglass_empty"
+      },
+	  "level=16":{
+         "model":"ministrapp:hourglass_empty"
+      }
+   }
 }

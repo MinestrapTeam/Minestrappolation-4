@@ -1,5 +1,7 @@
 package minestrapteam.mods.minestrappolation.block.ore;
 
+import java.util.Random;
+
 import minestrapteam.mods.minestrappolation.block.MBlock;
 import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import net.minecraft.block.material.MapColor;
@@ -17,20 +19,18 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-import java.util.Random;
-
 public class MBlockOre extends MBlock
 {
-	Item    itemStack;
-	int     dropAmount;
-	int     bonusAmount;
-	int     expMin;
-	int     expMax;
-	int     meta;
-	boolean silkHarvest;
-
-	boolean isBeingSilkHarvested = false;
-
+	Item	itemStack;
+	int		dropAmount;
+	int		bonusAmount;
+	int		expMin;
+	int		expMax;
+	int		meta;
+	boolean	silkHarvest;
+	
+	boolean	isBeingSilkHarvested	= false;
+	
 	public MBlockOre(Material materialIn, MapColor mapColorIn, Item itemDrop, int meta, int expMin, int expMax, int dropAmount, int bonusAmount, String tool, int level, boolean silkHarvest)
 	{
 		super(materialIn, mapColorIn);
@@ -43,7 +43,7 @@ public class MBlockOre extends MBlock
 		this.silkHarvest = silkHarvest;
 		this.meta = meta;
 	}
-
+	
 	public MBlockOre(Material materialIn, MapColor mapColorIn, Item itemDrop, int expMin, int expMax, int dropAmount, int bonusAmount, String tool, int level, boolean silkHarvest)
 	{
 		super(materialIn, mapColorIn);
@@ -56,7 +56,7 @@ public class MBlockOre extends MBlock
 		this.silkHarvest = silkHarvest;
 		this.meta = 0;
 	}
-
+	
 	@Override
 	public int damageDropped(IBlockState state)
 	{
@@ -64,7 +64,7 @@ public class MBlockOre extends MBlock
 			return this.getMetaFromState(state);
 		return this.meta;
 	}
-
+	
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
 	{
@@ -73,7 +73,7 @@ public class MBlockOre extends MBlock
 			return this.itemStack;
 		return Item.getItemFromBlock(this);
 	}
-
+	
 	@Override
 	public int quantityDropped(Random random)
 	{
@@ -81,32 +81,31 @@ public class MBlockOre extends MBlock
 			return this.dropAmount;
 		return this.dropAmount + random.nextInt(this.bonusAmount);
 	}
-
+	
 	@Override
 	public int quantityDroppedWithBonus(int fortune, Random random)
 	{
-		if (fortune > 0 && Item.getItemFromBlock(this) != this.getItemDropped(
-			this.getBlockState().getValidStates().iterator().next(), random, fortune))
+		if (fortune > 0 && Item.getItemFromBlock(this) != this.getItemDropped((IBlockState) this.getBlockState().getValidStates().iterator().next(), random, fortune))
 		{
 			int j = random.nextInt(fortune + 2) - 1;
-
+			
 			if (j < 0)
 			{
 				j = 0;
 			}
-
+			
 			return this.quantityDropped(random) * (j + 1);
 		}
 		else
 			return this.quantityDropped(random);
 	}
-
+	
 	@Override
 	public void dropBlockAsItemWithChance(World worldIn, BlockPos pos, IBlockState state, float chance, int fortune)
 	{
 		super.dropBlockAsItemWithChance(worldIn, pos, state, chance, fortune);
 	}
-
+	
 	@Override
 	public int getExpDrop(IBlockAccess world, BlockPos pos, int fortune)
 	{
@@ -120,27 +119,25 @@ public class MBlockOre extends MBlock
 		}
 		return 0;
 	}
-
+	
 	@Override
 	public void harvestBlock(World worldIn, EntityPlayer player, BlockPos pos, IBlockState state, TileEntity te)
 	{
 		player.triggerAchievement(StatList.mineBlockStatArray[getIdFromBlock(this)]);
 		player.addExhaustion(0.025F);
-
-		if (this.canSilkHarvest(worldIn, pos, worldIn.getBlockState(pos), player) && EnchantmentHelper
-			                                                                             .getSilkTouchModifier(player))
+		
+		if (this.canSilkHarvest(worldIn, pos, worldIn.getBlockState(pos), player) && EnchantmentHelper.getSilkTouchModifier(player))
 		{
 			this.isBeingSilkHarvested = true;
 			java.util.ArrayList<ItemStack> items = new java.util.ArrayList<ItemStack>();
 			ItemStack itemstack = this.createStackedBlock(state);
-
+			
 			if (itemstack != null)
 			{
 				items.add(itemstack);
 			}
-
-			net.minecraftforge.event.ForgeEventFactory
-				.fireBlockHarvesting(items, worldIn, pos, worldIn.getBlockState(pos), 0, 1.0f, true, player);
+			
+			net.minecraftforge.event.ForgeEventFactory.fireBlockHarvesting(items, worldIn, pos, worldIn.getBlockState(pos), 0, 1.0f, true, player);
 			for (ItemStack stack : items)
 			{
 				spawnAsEntity(worldIn, pos, stack);
@@ -154,18 +151,22 @@ public class MBlockOre extends MBlock
 			this.harvesters.set(null);
 		}
 	}
-
+	
 	@Override
 	public boolean canSilkHarvest(World world, BlockPos pos, IBlockState state, EntityPlayer player)
 	{
-
+		
 		return this.silkHarvest;
 	}
-
+	
 	@Override
-	public boolean canEntityDestroy(IBlockAccess world, BlockPos pos, Entity entity)
-	{
-		return !(entity instanceof net.minecraft.entity.boss.EntityDragon && (this == MBlocks.continnium_ore
-			                                                                      || this == MBlocks.dimensium_ore));
-	}
+    public boolean canEntityDestroy(IBlockAccess world, BlockPos pos, Entity entity)
+    {
+        if (entity instanceof net.minecraft.entity.boss.EntityDragon && (this == MBlocks.continnium_ore || this == MBlocks.dimensium_ore))
+        {
+            return false;
+        }
+
+        return true;
+    }
 }

@@ -1,12 +1,12 @@
 {
-  "parent": "block/cube",
-  "textures": {
-    "particle": "ministrapp:blocks/giant_glowshroom_pores",
-    "down": "ministrapp:blocks/giant_glowshroom_pores",
-    "up": "ministrapp:blocks/giant_purple_mushroom",
-    "north": "ministrapp:blocks/giant_glowshroom_pores",
-    "east": "ministrapp:blocks/giant_glowshroom_pores",
-    "south": "ministrapp:blocks/giant_glowshroom_pores",
-    "west": "ministrapp:blocks/giant_purple_mushroom"
-  }
+    "parent": "block/cube",
+    "textures": {
+        "particle": "ministrapp:blocks/giant_glowshroom_pores",
+        "down": "ministrapp:blocks/giant_glowshroom_pores",
+        "up": "ministrapp:blocks/giant_purple_mushroom",
+        "north": "ministrapp:blocks/giant_glowshroom_pores",
+        "east": "ministrapp:blocks/giant_glowshroom_pores",
+        "south": "ministrapp:blocks/giant_glowshroom_pores",
+        "west": "ministrapp:blocks/giant_purple_mushroom"
+    }
 }

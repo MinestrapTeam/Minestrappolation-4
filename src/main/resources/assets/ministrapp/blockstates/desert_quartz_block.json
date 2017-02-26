@@ -1,18 +1,10 @@
 {
-  "variants": {
-    "normal": [
-      {
-        "model": "ministrapp:desert_quartz_block_1"
-      },
-      {
-        "model": "ministrapp:desert_quartz_block_2"
-      },
-      {
-        "model": "ministrapp:desert_quartz_block_3"
-      },
-      {
-        "model": "ministrapp:desert_quartz_block_4"
-      }
-    ]
-  }
+    "variants": {
+        "normal": [
+			{ "model": "ministrapp:desert_quartz_block_1" },
+			{ "model": "ministrapp:desert_quartz_block_2" },
+			{ "model": "ministrapp:desert_quartz_block_3" },
+			{ "model": "ministrapp:desert_quartz_block_4" }
+		]
+    }
 }

@@ -1,22 +1,9 @@
 {
-  "variants": {
-    "facing=up": {
-      "model": "ministrapp:magnetic_torch"
-    },
-    "facing=east": {
-      "model": "ministrapp:magnetic_torch_wall"
-    },
-    "facing=south": {
-      "model": "ministrapp:magnetic_torch_wall",
-      "y": 90
-    },
-    "facing=west": {
-      "model": "ministrapp:magnetic_torch_wall",
-      "y": 180
-    },
-    "facing=north": {
-      "model": "ministrapp:magnetic_torch_wall",
-      "y": 270
+    "variants": {
+        "facing=up": { "model": "ministrapp:magnetic_torch" },
+        "facing=east": { "model": "ministrapp:magnetic_torch_wall" },
+        "facing=south": { "model": "ministrapp:magnetic_torch_wall", "y": 90 },
+        "facing=west": { "model": "ministrapp:magnetic_torch_wall", "y": 180 },
+        "facing=north": { "model": "ministrapp:magnetic_torch_wall", "y": 270 }
     }
-  }
 }

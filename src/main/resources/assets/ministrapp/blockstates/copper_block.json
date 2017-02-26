@@ -1,7 +1,5 @@
 {
-  "variants": {
-    "normal": {
-      "model": "ministrapp:copper_block"
+    "variants": {
+        "normal": { "model": "ministrapp:copper_block" }
     }
-  }
 }

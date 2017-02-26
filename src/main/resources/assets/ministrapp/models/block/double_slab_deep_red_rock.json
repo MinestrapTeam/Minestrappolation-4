@@ -1,8 +1,8 @@
 {
-  "parent": "block/cube_bottom_top",
-  "textures": {
-    "bottom": "ministrapp:blocks/deepredrock_slab_top",
-    "top": "ministrapp:blocks/deepredrock_slab_top",
-    "side": "ministrapp:blocks/deepredrock_slab_side"
-  }
+    "parent": "block/cube_bottom_top",
+    "textures": {
+        "bottom": "ministrapp:blocks/deepredrock_slab_top",
+        "top": "ministrapp:blocks/deepredrock_slab_top",
+        "side": "ministrapp:blocks/deepredrock_slab_side"
+    }
 }

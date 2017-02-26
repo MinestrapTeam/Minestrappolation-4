@@ -1,7 +1,5 @@
 {
-  "variants": {
-    "normal": {
-      "model": "ministrapp:diorite_pattern_bricks"
+    "variants": {
+        "normal": { "model": "ministrapp:diorite_pattern_bricks" }
     }
-  }
 }

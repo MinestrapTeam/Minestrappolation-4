@@ -7,20 +7,21 @@ import net.minecraft.item.ItemStack;
 
 public class ItemBlockBiomeTitanium extends ItemBlock
 {
-
+	
 	public ItemBlockBiomeTitanium(Block block)
 	{
 		super(block);
 		this.setHasSubtypes(true);
 		this.setMaxDamage(0);
+		
 	}
-
+	
 	@Override
 	public int getMetadata(int damageValue)
 	{
 		return damageValue;
 	}
-
+	
 	@Override
 	public String getUnlocalizedName(ItemStack item)
 	{

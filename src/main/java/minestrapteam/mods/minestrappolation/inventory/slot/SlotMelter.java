@@ -5,28 +5,30 @@ import minestrapteam.mods.minestrappolation.lib.MAchievements;
 import minestrapteam.mods.minestrappolation.lib.MItems;
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
+import net.minecraft.stats.AchievementList;
 import net.minecraft.util.MathHelper;
 
 public class SlotMelter extends Slot
 {
-	private EntityPlayer thePlayer;
-	private int          amountCrafted;
-
+	private EntityPlayer	thePlayer;
+	private int				amountCrafted;
+	
 	public SlotMelter(EntityPlayer player, IInventory inventory, int id, int x, int y)
 	{
 		super(inventory, id, x, y);
 		this.thePlayer = player;
 	}
-
+	
 	@Override
 	public boolean isItemValid(ItemStack stack)
 	{
 		return false;
 	}
-
+	
 	@Override
 	public ItemStack decrStackSize(int amount)
 	{
@@ -36,21 +38,21 @@ public class SlotMelter extends Slot
 		}
 		return super.decrStackSize(amount);
 	}
-
+	
 	@Override
 	public void onPickupFromSlot(EntityPlayer player, ItemStack stack)
 	{
 		this.onCrafting(stack);
 		super.onPickupFromSlot(player, stack);
 	}
-
+	
 	@Override
 	protected void onCrafting(ItemStack stack, int amount)
 	{
 		this.amountCrafted += amount;
 		this.onCrafting(stack);
 	}
-
+	
 	@Override
 	protected void onCrafting(ItemStack stack)
 	{
@@ -67,8 +69,7 @@ public class SlotMelter extends Slot
 			else if (exp < 1.0F)
 			{
 				exp1 = MathHelper.floor_float(amount * exp);
-				if (exp1 < MathHelper.ceiling_float_int((float) amount * exp)
-					    && Math.random() < (double) ((float) amount * exp - (float) exp1))
+				if (exp1 < MathHelper.ceiling_float_int((float)amount * exp) && Math.random() < (double)((float)amount * exp - (float)exp1))
 				{
 					++exp1;
 				}
@@ -78,16 +79,14 @@ public class SlotMelter extends Slot
 			{
 				exp1 = EntityXPOrb.getXPSplit(amount);
 				amount -= exp1;
-				this.thePlayer.worldObj.spawnEntityInWorld(
-					new EntityXPOrb(this.thePlayer.worldObj, this.thePlayer.posX, this.thePlayer.posY + 0.5D,
-					                this.thePlayer.posZ + 0.5D, exp1));
+				this.thePlayer.worldObj.spawnEntityInWorld(new EntityXPOrb(this.thePlayer.worldObj, this.thePlayer.posX, this.thePlayer.posY + 0.5D, this.thePlayer.posZ + 0.5D, exp1));
 			}
 		}
 		this.amountCrafted = 0;
-
+		
 		if (stack.getItem() == MItems.titanium_ingot)
-		{
-			this.thePlayer.triggerAchievement(MAchievements.titanium);
-		}
+        {
+            this.thePlayer.triggerAchievement(MAchievements.titanium);
+        }
 	}
 }

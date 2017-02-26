@@ -5,17 +5,16 @@ import minestrapteam.mods.minestrappolation.lib.MItems;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.item.Item;
 
-public class BlockCelery extends BlockCrops
-{
+public class BlockCelery extends BlockCrops{
 	@Override
 	protected Item getSeed()
-	{
-		return MBlocks.celery_seed;
-	}
+    {
+        return MBlocks.celery_seed;
+    }
 
 	@Override
-	protected Item getCrop()
-	{
-		return MItems.celery;
-	}
+    protected Item getCrop()
+    {
+        return MItems.celery;
+    }
 }

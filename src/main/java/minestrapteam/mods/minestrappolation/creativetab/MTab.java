@@ -4,48 +4,49 @@ import minestrapteam.mods.minestrappolation.lib.MBlocks;
 import minestrapteam.mods.minestrappolation.lib.MItems;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 
 public class MTab extends CreativeTabs
 {
 	String tabLabel;
-
 	public MTab(String label)
 	{
 		super(label);
-		this.tabLabel = label;
+		tabLabel = label;
 		this.setBackgroundImageName("ministrappolation.png");
 	}
-
+	
 	@Override
-	public Item getTabIconItem()
+	public ItemStack getTabIconItem()
 	{
-		if (this.tabLabel == "tabMBuilding")
+		if(tabLabel == "tabMBuilding")
 		{
-			return Item.getItemFromBlock(MBlocks.stone_pattern_bricks);
+			return new ItemStack(MBlocks.stone_pattern_bricks);
 		}
-		else if (this.tabLabel == "tabMDecor")
+		else if(tabLabel == "tabMDecor")
 		{
-			return Item.getItemFromBlock(MBlocks.ministrapp_sapling);
+			return new ItemStack(MBlocks.ministrapp_sapling);
 		}
-		else if (this.tabLabel == "tabMTech")
+		else if(tabLabel == "tabMTech")
 		{
-			return Item.getItemFromBlock(MBlocks.alloy);
+			return new ItemStack(MBlocks.alloy);
 		}
-		else if (this.tabLabel == "tabMMaterials")
+		else if(tabLabel == "tabMMaterials")
 		{
-			return MItems.reinforced_stick;
+			return new ItemStack(MItems.reinforced_stick);
 		}
-		else if (this.tabLabel == "tabMFood")
+		else if(tabLabel == "tabMFood")
 		{
-			return MItems.sugar_cookie;
+			return new ItemStack(MItems.sugar_cookie);
 		}
-		else if (this.tabLabel == "tabMTools")
+		else if(tabLabel == "tabMTools")
 		{
-			return MItems.copper_axe;
+			return new ItemStack(MItems.copper_axe);
 		}
 		else
 		{
-			return MItems.fire_sword;
+			return new ItemStack(MItems.fire_sword);
 		}
 	}
+	
 }

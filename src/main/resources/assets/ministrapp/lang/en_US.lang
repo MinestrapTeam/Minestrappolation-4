@@ -3,6 +3,7 @@ tile.red_rock_boulder.name=Red Rock Boulder
 tile.coldstone_boulder.name=Coldstone Boulder
 tile.icestone_boulder.name=Icestone Boulder
 tile.oceanstone_boulder.name=Oceanstone Boulder
+
 deepstone_coal.name=Coal Ore
 red_rock_coal.name=Coal Ore
 deep_redrock_coal.name=Coal Ore
@@ -12,6 +13,7 @@ icestone_coal.name=Coal Ore
 glacierrock_coal.name=Coal Ore
 oceanstone_coal.name=Coal Ore
 pressurized_oceanstone_coal.name=Coal Ore
+
 deepstone_iron.name=Iron Ore
 red_rock_iron.name=Iron Ore
 deep_redrock_iron.name=Iron Ore
@@ -21,6 +23,7 @@ icestone_iron.name=Iron Ore
 glacierrock_iron.name=Iron Ore
 oceanstone_iron.name=Iron Ore
 pressurized_oceanstone_iron.name=Iron Ore
+
 deepstone_gold.name=Gold Ore
 red_rock_gold.name=Gold Ore
 deep_redrock_gold.name=Gold Ore
@@ -30,6 +33,7 @@ icestone_gold.name=Gold Ore
 glacierrock_gold.name=Gold Ore
 oceanstone_gold.name=Gold Ore
 pressurized_oceanstone_gold.name=Gold Ore
+
 deepstone_redstone.name=Redstone Ore
 red_rock_redstone.name=Redstone Ore
 deep_redrock_redstone.name=Redstone Ore
@@ -39,6 +43,7 @@ icestone_redstone.name=Redstone Ore
 glacierrock_redstone.name=Redstone Ore
 oceanstone_redstone.name=Redstone Ore
 pressurized_oceanstone_redstone.name=Redstone Ore
+
 deepstone_lapis.name=Lapis Lazuli Ore
 red_rock_lapis.name=Lapis Lazuli Ore
 deep_redrock_lapis.name=Lapis Lazuli Ore
@@ -48,6 +53,7 @@ icestone_lapis.name=Lapis Lazuli Ore
 glacierrock_lapis.name=Lapis Lazuli Ore
 oceanstone_lapis.name=Lapis Lazuli Ore
 pressurized_oceanstone_lapis.name=Lapis Lazuli Ore
+
 deepstone_diamond.name=Diamond Ore
 red_rock_diamond.name=Diamond Ore
 deep_redrock_diamond.name=Diamond Ore
@@ -57,6 +63,7 @@ icestone_diamond.name=Diamond Ore
 glacierrock_diamond.name=Diamond Ore
 oceanstone_diamond.name=Diamond Ore
 pressurized_oceanstone_diamond.name=Diamond Ore
+
 deepstone_emerald.name=Emerald Ore
 red_rock_emerald.name=Emerald Ore
 deep_redrock_emerald.name=Emerald Ore
@@ -66,6 +73,7 @@ icestone_emerald.name=Emerald Ore
 glacierrock_emerald.name=Emerald Ore
 oceanstone_emerald.name=Emerald Ore
 pressurized_oceanstone_emerald.name=Emerald Ore
+
 tile.sunstone_ore.name=Sunstone Ore
 deepstone_sunstone.name=Sunstone Ore
 red_rock_sunstone.name=Sunstone Ore
@@ -76,6 +84,7 @@ icestone_sunstone.name=Sunstone Ore
 glacierrock_sunstone.name=Sunstone Ore
 oceanstone_sunstone.name=Sunstone Ore
 pressurized_oceanstone_sunstone.name=Sunstone Ore
+
 tile.copper_ore.name=Copper Ore
 deepstone_copper.name=Copper Ore
 red_rock_copper.name=Copper Ore
@@ -86,6 +95,7 @@ icestone_copper.name=Copper Ore
 glacierrock_copper.name=Copper Ore
 oceanstone_copper.name=Copper Ore
 pressurized_oceanstone_copper.name=Copper Ore
+
 tile.tin_ore.name=Tin Ore
 deepstone_tin.name=Tin Ore
 red_rock_tin.name=Tin Ore
@@ -96,6 +106,7 @@ icestone_tin.name=Tin Ore
 glacierrock_tin.name=Tin Ore
 oceanstone_tin.name=Tin Ore
 pressurized_oceanstone_tin.name=Tin Ore
+
 tile.plutonium_ore.name=Plutonium Ore
 deepstone_plutonium.name=Plutonium Ore
 red_rock_plutonium.name=Plutonium Ore
@@ -106,6 +117,7 @@ icestone_plutonium.name=Plutonium Ore
 glacierrock_plutonium.name=Plutonium Ore
 oceanstone_plutonium.name=Plutonium Ore
 pressurized_oceanstone_plutonium.name=Plutonium Ore
+
 tile.uranium_ore.name=Uranium Ore
 deepstone_uranium.name=Uranium Ore
 red_rock_uranium.name=Uranium Ore
@@ -116,6 +128,7 @@ icestone_uranium.name=Uranium Ore
 glacierrock_uranium.name=Uranium Ore
 oceanstone_uranium.name=Uranium Ore
 pressurized_oceanstone_uranium.name=Uranium Ore
+
 tile.titanium_ore.name=Titanium Ore
 deepstone_titanium.name=Titanium Ore
 red_rock_titanium.name=Titanium Ore
@@ -126,6 +139,7 @@ icestone_titanium.name=Titanium Ore
 glacierrock_titanium.name=Titanium Ore
 oceanstone_titanium.name=Titanium Ore
 pressurized_oceanstone_titanium.name=Titanium Ore
+
 tile.meurodite_ore.name=Meurodite Ore
 deepstone_meurodite.name=Meurodite Ore
 red_rock_meurodite.name=Meurodite Ore
@@ -136,6 +150,7 @@ icestone_meurodite.name=Meurodite Ore
 glacierrock_meurodite.name=Meurodite Ore
 oceanstone_meurodite.name=Meurodite Ore
 pressurized_oceanstone_meurodite.name=Meurodite Ore
+
 tile.torite_ore.name=Torite Ore
 deepstone_torite.name=Torite Ore
 red_rock_torite.name=Torite Ore
@@ -146,6 +161,7 @@ icestone_torite.name=Torite Ore
 glacierrock_torite.name=Torite Ore
 oceanstone_torite.name=Torite Ore
 pressurized_oceanstone_torite.name=Torite Ore
+
 tile.radiant_ore.name=Radiant Quartz Ore
 deepstone_radiant.name=Radiant Quartz Ore
 red_rock_radiant.name=Radiant Quartz Ore
@@ -156,9 +172,11 @@ icestone_radiant.name=Radiant Quartz Ore
 glacierrock_radiant.name=Radiant Quartz Ore
 oceanstone_radiant.name=Radiant Quartz Ore
 pressurized_oceanstone_radiant.name=Radiant Quartz Ore
+
 tile.desert_quartz.name=Desert Quartz Ore
 tile.blazium_ore.name=Blazium Ore
 tile.soul_ore.name=Soul Ore
+
 tile.copper_block.name=Block of Copper
 tile.tin_block.name=Block of Tin
 tile.bronze_block.name=Block of Bronze
@@ -175,6 +193,7 @@ tile.blazium_block.name=Block of Blazium
 tile.soul_gem_block.name=Soul Gem Block
 tile.godstone.name=Godstone
 tile.glacierite_block.name=Block of Glacierite
+
 redwood_log.name=Redwood
 redwood_leaves.name=Redwood Leaves
 redwood_sapling.name=Redwood Sapling
@@ -194,13 +213,16 @@ tile.frozen_oak_fence_gate.name=Frozen Oak Fence Gate
 tile.frozen_oak_fence.name=Frozen Oak Fence
 item.frozen_oak_door_item.name=Frozen Oak Door
 tile.dead_branch.name=Dead Branches
+
 item.glass_door_item.name=Glass Door
+
 tile.stone_pattern_bricks.name=Patterned Stone Bricks
 tile.stone_refined.name=Polished Stone
 tile.stone_tiles.name=Stone Tiles
 tile.stone_lamp_glowstone.name=Stone Glowstone Lamp
 tile.stone_lamp_prismarine.name=Stone Prismarine Lamp
 tile.stone_lamp_sunstone.name=Stone Sunstone Lamp
+
 deepstone_rock.name=Deepstone
 deepstone_cobble.name=Cobbled Deepstone
 deepstone_bricks.name=Deepstone Bricks
@@ -219,6 +241,7 @@ tile.deepstone_cobble_slab.name=Cobbled Deepstone Slab
 tile.deepstone_brick_slab.name=Deepstone Brick Slab
 tile.deepstone_stairs.name=Cobbled Deepstone Stairs
 tile.deepstone_brick_stairs.name=Deepstone Brick Stairs
+
 red_rock_rock.name=Red Rock
 red_rock_cobble.name=Cobbled Red Rock
 red_rock_bricks.name=Red Rock Bricks
@@ -237,6 +260,7 @@ tile.red_rock_cobble_slab.name=Cobbled Red Rock Slab
 tile.red_rock_brick_slab.name=Red Rock Brick Slab
 tile.redrock_stairs.name=Cobbled Red Rock Stairs
 tile.redrock_brick_stairs.name=Red Rock Brick Stairs
+
 deep_redrock_rock.name=Deep Red Rock
 deep_redrock_cobble.name=Cobbled Deep Red Rock
 deep_redrock_bricks.name=Deep Red Rock Bricks
@@ -255,6 +279,7 @@ tile.deep_red_rock_cobble_slab.name=Cobbled Deep Red Rock Slab
 tile.deep_red_rock_brick_slab.name=Deep Red Rock Brick Slab
 tile.deep_redrock_stairs.name=Cobbled Deep Red Rock Stairs
 tile.deep_redrock_brick_stairs.name=Deep Red Rock Brick Stairs
+
 coldstone_rock.name=Coldstone
 coldstone_cobble.name=Cobbled Coldstone
 coldstone_bricks.name=Coldstone Bricks
@@ -273,6 +298,7 @@ tile.coldstone_cobble_slab.name=Cobbled Coldstone Slab
 tile.coldstone_brick_slab.name=Coldstone Brick Slab
 tile.coldstone_stairs.name=Cobbled Coldstone Stairs
 tile.coldstone_brick_stairs.name=Coldstone Brick Stairs
+
 deep_coldstone_rock.name=Deep Coldstone
 deep_coldstone_cobble.name=Cobbled Deep Coldstone
 deep_coldstone_bricks.name=Deep Coldstone Bricks
@@ -291,6 +317,7 @@ tile.deep_coldstone_cobble_slab.name=Cobbled Deep Coldstone Slab
 tile.deep_coldstone_brick_slab.name=Deep Coldstone Brick Slab
 tile.deep_coldstone_stairs.name=Cobbled Deep Coldstone Stairs
 tile.deep_coldstone_brick_stairs.name=Deep Coldstone Brick Stairs
+
 icestone_rock.name=Icestone
 icestone_cobble.name=Cracked Icestone
 icestone_bricks.name=Icestone Bricks
@@ -309,6 +336,7 @@ tile.icestone_cobble_slab.name=Cracked Icestone Slab
 tile.icestone_brick_slab.name=Icestone Brick Slab
 tile.icestone_stairs.name=Cracked Icestone Stairs
 tile.icestone_brick_stairs.name=Icestone Brick Stairs
+
 glacierrock_rock.name=Glacierrock
 glacierrock_cobble.name=Cracked Glacierrock
 glacierrock_bricks.name=Glacierrock Bricks
@@ -327,6 +355,7 @@ tile.glacierrock_cobble_slab.name=Cracked Glacierrock Slab
 tile.glacierrock_brick_slab.name=Glacierrock Brick Slab
 tile.glacierstone_stairs.name=Cracked Glacierrock Stairs
 tile.glacierstone_brick_stairs.name=Glacierrock Brick Stairs
+
 oceanstone_rock.name=Oceanstone
 oceanstone_cobble.name=Cobbled Oceanstone
 oceanstone_bricks.name=Oceanstone Bricks
@@ -345,6 +374,7 @@ tile.oceanstone_cobble_slab.name=Cobbled Oceanstone Slab
 tile.oceanstone_brick_slab.name=Oceanstone Brick Slab
 tile.oceanstone_stairs.name=Cobbled Oceanstone Stairs
 tile.oceanstone_brick_stairs.name=Oceanstone Brick Stairs
+
 pressurized_oceanstone_rock.name=Pressurized Oceanstone
 pressurized_oceanstone_cobble.name=Cracked Pressurized Oceanstone
 pressurized_oceanstone_bricks.name=Pressurized Oceanstone Bricks
@@ -363,6 +393,7 @@ tile.poceanstone_cobble_slab.name=Cracked Pressurized Oceanstone Slab
 tile.poceanstone_brick_slab.name=Pressurized Oceanstone Brick Slab
 tile.poceanstone_stairs.name=Cracked Pressurized Oceanstone Stairs
 tile.poceanstone_brick_stairs.name=Pressurized Oceanstone Brick Stairs
+
 cobble_road.name=Cobblestone Road
 gravel_road.name=Cobbled Coldstone Road
 sand_road.name=Cobbled Oceanstone Road
@@ -370,6 +401,7 @@ red_sand_road.name=Cobbled Red Rock Road
 permafrost_road.name=Cracked Icestone Road
 nether_road.name=Netherrack Road
 soul_road.name=Soul Steel Road
+
 tile.slate.name=Slate
 tile.slate_bricks.name=Slate Bricks
 tile.slate_pattern_bricks.name=Patterned Slate Bricks
@@ -409,12 +441,14 @@ tile.radiant_pillar.name=Radiant Quartz Pillar
 tile.obsidian_bricks.name=Obsidian Bricks
 tile.prismarine_slab.name=Prismarine Slab
 tile.prismarine_stairs.name=Prismarine Stairs
+
 tile.flint_block.name=Block of Flint
 tile.sugar_block.name=Block of Sugar
 tile.meat_block.name=Meat Block
 tile.invincium.name=Invincium
 tile.glaical_invincium.name=Glacial Invincium
 tile.glacieric_ice_vein.name=Glacieric Ice Deposit
+
 tile.glass_bricks.name=Bricked Glass
 tile.bricked_pane.name=Bricked Glass Pane
 tile.glass_refined.name=Polished Glass
@@ -426,23 +460,29 @@ tile.framed_pane.name=Framed Glass Pane
 tile.glow_glass.name=Glow Glass
 tile.glow_glass_pane.name=Glow Glass Pane
 tile.rope.name=Rope
+
 tile.steel_mesh.name=Steel Mesh
+
 tile.snow_bricks.name=Snow Bricks
 tile.snow_refined.name=Packed Snow
 tile.snow_tiles.name=Snow Tiles
 tile.glacieric_ice.name=Glacieric Ice
 tile.melon_bricks.name=Melon Bricks
+
 tile.dirt_permafrost.name=Permafrost
 cold_sand.name=Cold Sand
 cold_red_sand.name=Cold Red Sand
 permafrost.name=Lichen-Coated Permafrost
 tile.cold_cobweb.name=Frozen Cobweb
+
 tile.mud.name=Mud
 tile.mud_bricks.name=Mud Bricks
 tile.rubble.name=Rubble
+
 tile.cardboard.name=Cardboard
 tile.cardboard_block.name=Block of Cardboard
 tile.wet_cardboard_block.name=Wet Block of Cardboard
+
 tile.crate.name=Crate
 tile.barrel.name=Barrel
 tile.melter.name=Melter
@@ -455,6 +495,7 @@ tile.splitter.name=Alchemical Splitter
 tile.claimerator.name=Quantum Claimerator
 tile.fan.name=Fan
 tile.chimney.name=Chimney
+
 tile.moss.name=Moss Lump
 tile.seaweed.name=Seaweed
 tile.blueberry_bush.name=Blueberry Bush
@@ -462,6 +503,7 @@ tile.raspberry_bush.name=Raspberry Bush
 tile.blackberry_bush.name=Blackberry Bush
 tile.strawberry_bush.name=Strawberry Bush
 tile.mana_bush.name=Mana Bush
+
 tile.block_flesh.name=Block of Flesh
 tile.block_flesh_reactive.name=Reactive Block of Flesh
 tile.block_cow.name=Cow Gene Block
@@ -485,6 +527,7 @@ tile.block_sheep_blue.name=Blue Sheep Gene Block
 tile.block_sheep_purple.name=Purple Sheep Gene Block
 tile.block_sheep_magenta.name=Magenta Sheep Gene Block
 tile.block_rabbit.name=Rabbit Gene Block
+
 tile.red_rock_wall.name=Cobbled Red Rock Wall
 tile.red_rock_wall_mossy.name=Mossy Cobbled Red Rock Wall
 tile.coldstone_wall.name=Cobbled Coldstone Wall
@@ -493,7 +536,9 @@ tile.icestone_wall.name=Cracked Icestone Wall
 tile.icestone_wall_mossy.name=Wet Cracked Icestone Wall
 tile.oceanstone_wall.name=Cobbled Oceanstone Wall
 tile.oceanstone_wall_mossy.name=Mossy Cobbled Oceanstone Wall
+
 tile.ministrapp_flower_pot.name=Flower Pot
+
 tile.sandstone_bricks.name=Sandstone Bricks
 tile.sandstone_pattern_bricks.name=Patterned Sandstone Bricks
 tile.sandstone_brick_stairs.name=Sandstone Brick Stairs
@@ -502,14 +547,17 @@ tile.red_sandstone_bricks.name=Red Sandstone Bricks
 tile.red_sandstone_pattern_bricks.name=Red Patterned Sandstone Bricks
 tile.red_sandstone_brick_stairs.name=Red Sandstone Brick Stairs
 tile.red_sandstone_brick_slab.name=Red Sandstone Brick Slab
+
 tile.hanging_moss.name=Hanging Moss
 tile.hanging_glow_moss.name=Hanging Glow Moss
 tile.glow_mossy_netherrack.name=Glow-Mossy Netherrack
 tile.glow_mossy_nether_bricks.name=Glow-Mossy Nether Bricks
 tile.glow_mossy_end_stone=Glow-Mossy End Stone
 tile.shrub_grass.name=Shrub Grass
+
 tile.magnetic_torch.name=Magnetic Torch
 tile.block_bat.name=Bat Gene Block
+
 tile.candle.name=Candle
 tile.lit_candle.name=Lit Candle
 tile.purple_glowshroom.name=Glowshroom
@@ -548,6 +596,7 @@ average_carved_neutral_lit.name=Average Neutral Jack o'Lantern
 complex_carved_neutral_lit.name=Intricate Neutral Jack o'Lantern
 tile.pumpkin_smashed.name=Smashed Pumpkin
 tile.pumpkin_smashed_lit.name=Smashed Jack o'Lantern
+
 tile.unholy_candle.name=Unholy Lit Candle
 tile.compacted_dirt.name=Compressed Dirt
 tile.compacted_netherrack.name=Compressed Netherrack
@@ -608,6 +657,7 @@ redwood_mossy_planks.name=Mossy Redwood Planks
 frozen_oak_mossy_planks.name=Mossy Frozen Oak Wood Planks
 tile.pipe.name=Pipe
 tile.sorter.name=Filter
+
 item.dough.name=Dough
 item.bun.name=Bun
 item.pbj_sandwich.name=Peanut Butter and Jelly Sandwich
@@ -662,6 +712,7 @@ item.onigiri.name=Onigiri
 item.crushed_ice.name=Crushed Ice
 item.icecream.name=Ice Cream
 item.bread_icecream.name=Ice Cream
+
 item.copper_ingot.name=Copper Ingot
 item.tin_ingot.name=Tin Ingot
 item.sunstone_shard.name=Sunstone Shard
@@ -679,6 +730,7 @@ item.plutonium.name=Plutonium
 item.uranium.name=Uranium
 item.glacieric_ice_shard.name=Glacieric Ice Shard
 item.glacierite_ingot.name=Glacierite Ingot
+
 item.mud_ball.name=Mud Ball
 stone_chunk.name=Stone Chunk
 red_rock_chunk.name=Red Rock Chunk
@@ -691,6 +743,7 @@ iron_chunk.name=Iron Ore Chunk
 gold_chunk.name=Gold Ore Chunk
 torite_chunk.name=Torite Ore Chunk
 titanium_chunk.name=Titanium Ore Chunk
+
 item.tin_plating.name=Tin Plating
 item.steel_plating.name=Steel Plating
 item.meurodite_plating.name=Meurodite Plating
@@ -705,6 +758,7 @@ item.sheep_foot.name=Sheep Hoof
 item.chicken_foot.name=Chicken Foot
 item.wolf_hide.name=Wolf Hide
 item.technological_doodad.name=Technological Doodad
+
 stone_brick.name=Stone Brick
 deepstone_brick.name=Deepstone Brick
 red_rock_brick.name=Red Rock Brick
@@ -721,86 +775,105 @@ diorite_brick.name=Diorite Brick
 andesite_brick.name=Andesite Brick
 flint_brick.name=Flint Brick
 obsidian_brick.name=Obsidian Brick
+
 item.copper_pickaxe.name=Copper Pickaxe
 item.copper_axe.name=Copper Axe
 item.copper_shovel.name=Copper Shovel
 item.copper_hoe.name=Copper Hoe
 item.copper_sword.name=Copper Sword
+
 item.bronze_pickaxe.name=Bronze Pickaxe
 item.bronze_axe.name=Bronze Axe
 item.bronze_shovel.name=Bronze Shovel
 item.bronze_hoe.name=Bronze Hoe
 item.bronze_sword.name=Bronze Sword
+
 item.steel_pickaxe.name=Steel Pickaxe
 item.steel_axe.name=Steel Axe
 item.steel_shovel.name=Steel Shovel
 item.steel_hoe.name=Steel Hoe
 item.steel_sword.name=Steel Sword
+
 item.meurodite_pickaxe.name=Meurodite Pickaxe
 item.meurodite_axe.name=Meurodite Axe
 item.meurodite_shovel.name=Meurodite Shovel
 item.meurodite_hoe.name=Meurodite Hoe
 item.meurodite_sword.name=Meurodite Sword
+
 item.torite_pickaxe.name=Torite Pickaxe
 item.torite_axe.name=Torite Axe
 item.torite_shovel.name=Torite Shovel
 item.torite_hoe.name=Torite Hoe
 item.torite_sword.name=Torite Sword
+
 item.fire_pickaxe.name=Fire Pickaxe
 item.fire_axe.name=Fire Axe
 item.fire_shovel.name=Fire Shovel
 item.fire_hoe.name=Fire Hoe
 item.fire_sword.name=Fire Sword
+
 item.ice_pickaxe.name=Ice Pickaxe
 item.ice_axe.name=Ice Axe
 item.ice_shovel.name=Ice Shovel
 item.ice_hoe.name=Ice Hoe
 item.ice_sword.name=Ice Sword
+
 item.titanium_pickaxe.name=Titanium Pickaxe
 item.titanium_axe.name=Titanium Axe
 item.titanium_shovel.name=Titanium Shovel
 item.titanium_hoe.name=Titanium Hoe
 item.titanium_sword.name=Titanium Sword
+
 item.bedrock_pickaxe.name=Bedrock Pickaxe
 item.bedrock_axe.name=Bedrock Axe
 item.bedrock_shovel.name=Bedrock Shovel
 item.bedrock_hoe.name=Bedrock Hoe
+
 item.tin_helmet.name=Tin Helmet
 item.tin_chestplate.name=Tin Chestplate
 item.tin_leggings.name=Tin Leggings
 item.tin_boots.name=Tin Boots
+
 item.bronze_helmet.name=Bronze Helmet
 item.bronze_chestplate.name=Bronze Chestplate
 item.bronze_leggings.name=Bronze Leggings
 item.bronze_boots.name=Bronze Boots
+
 item.steel_helmet.name=Steel Helmet
 item.steel_chestplate.name=Steel Chestplate
 item.steel_leggings.name=Steel Leggings
 item.steel_boots.name=Steel Boots
+
 item.meurodite_helmet.name=Meurodite Helmet
 item.meurodite_chestplate.name=Meurodite Chestplate
 item.meurodite_leggings.name=Meurodite Leggings
 item.meurodite_boots.name=Meurodite Boots
+
 item.torite_helmet.name=Torite Helmet
 item.torite_chestplate.name=Torite Chestplate
 item.torite_leggings.name=Torite Leggings
 item.torite_boots.name=Torite Boots
+
 item.blazium_helmet.name=Fire Helmet
 item.blazium_chestplate.name=Fire Chestplate
 item.blazium_leggings.name=Fire Leggings
 item.blazium_boots.name=Fire Boots
+
 item.ice_helmet.name=Ice Helmet
 item.ice_chestplate.name=Ice Chestplate
 item.ice_leggings.name=Ice Leggings
 item.ice_boots.name=Ice Boots
+
 item.titanium_helmet.name=Titanium Helmet
 item.titanium_chestplate.name=Titanium Chestplate
 item.titanium_leggings.name=Titanium Leggings
 item.titanium_boots.name=Titanium Boots
+
 item.rad_helmet.name=Resilient Helmet
 item.rad_chestplate.name=Resilient Chestplate
 item.rad_leggings.name=Resilient Leggings
 item.rad_boots.name=Resilient Boots
+
 item.sifter.name=Copper Mining Sieve
 item.titanium_sifter.name=Titanium Mining Sieve
 item.empty_titanium_sifter.name=Broken Titanium Mining Sieve
@@ -817,6 +890,7 @@ item.charge_gun.name=Charge Gun
 item.ice_charge.name=Ice Charge
 item.backpack.name=Backpack
 item.satchel.name=Satchel
+
 item.inert_crystal_heart.name=Inert Crystal Heart
 item.crystal_heart.name=Crystal Heart
 item.diamond_dust.name=Diamond Dust
@@ -828,10 +902,13 @@ item.chicken_gene_sample.name=Fermented Chicken Gene Sample
 item.wolf_gene_sample.name=Fermented Wolf Gene Sample
 item.sheep_gene_sample.name=Fermented Sheep Gene Sample
 item.rabbit_gene_sample.name=Fermented Rabbit Gene Sample
+
 item.guano.name=Guano
 item.bat_gene_sample.name=Fermented Bat Gene Sample
+
 sandstone_brick.name=Sandstone Brick
 red_sandstone_brick.name=Red Sandstone Brick
+
 item.fat.name=Fat
 item.grease.name=Grease
 item.tallow.name=Tallow
@@ -853,6 +930,7 @@ item.fried_fish.name=Fried Fish
 item.fried_salmon.name=Fried Salmon
 item.fish_and_chips.name=Fish and Chips
 item.salmon_burger.name=Salmon Burger
+
 item.tomato.name=Tomato
 item.tomato_seeds.name=Tomato Seeds
 item.tomato_sauce.name=Tomato Sauce
@@ -882,6 +960,7 @@ placer_chips.name=Placer Upgrade
 item.inert_chip.name=Inert Upgrade Chip
 item.terracreep_spore.name=Terracreep Spore
 item.minestrapp_wrench.name=Steel Wrench
+
 itemGroup.tabMBuilding=Minestrapp Building Blocks
 itemGroup.tabMDecor=Minestrapp Decoration Blocks
 itemGroup.tabMTech=Minestrapp Tech Blocks
@@ -889,6 +968,7 @@ itemGroup.tabMMaterials=Minestrapp Materials
 itemGroup.tabMFood=Minestrapp Foodstuffs
 itemGroup.tabMTools=Minestrapp Tools
 itemGroup.tabMCombat=Minestrapp Combat
+
 achievement.stonecutter=Pocket edition?
 achievement.stonecutter.desc=Use a stone cutter.
 achievement.sawmill=Why can't I craft a bed?!?!
@@ -935,6 +1015,7 @@ achievement.reflux=Acid Reflux
 achievement.reflux.desc=Sample the glowshroom stew.
 achievement.bonetrousle=Bonetrousle
 achievement.bonetrousle.desc=NYEH HEH HEH!!!
+
 recipe.melting=Melting
 recipe.sawmill.shaped=Shaped Milling
 recipe.sawmill.shapeless=Shapeless Milling
@@ -942,5 +1023,232 @@ recipe.stonecutter.shaped=Shaped Cutting
 recipe.stonecutter.shapeless=Shapeless Cutting
 recipe.alloy=Alloying
 recipe.melter_fuel=Melter Fuel
+
 item.technological_doodad.desc=An advanced relic of the past. You're not really sure how it works.
 item.advanced_tech_doodad.desc=Is this really even science anymore?
+
+minechiridion.stone.desc=A grey, rather standard-looking type of stone. Commonly found near the surface in mild biomes. It drops a block of Cobblestone when mined without Silk Touch.
+minechiridion.granite.desc=A salmon-colored rock found underground in any biome. Mostly useful for decoration.
+minechiridion.polished_granite.desc=A polished, decorative block of Granite.
+minechiridion.diorite.desc=A white, speckled rock found underground in any biome. Mostly useful for decoration.
+minechiridion.polished_diorite.desc=A polished, decorative block of Diorite.
+minechiridion.andesite.desc=A greyish rock found underground in any biome. Mostly useful for decoration.
+minechiridion.polished_andesite.desc=A polished, decorative block of Andesite.
+minechiridion.grass.desc=A block of Dirt with a layer of grass growing on it. When placed, it will spread to nearby Dirt blocks, provided they are recieving a high enough light level. Can sustain most Overworld plants, including Tall Grass, Saplings, Berry Bushes, etcetera. Drops Dirt if mined without Silk Touch, and can be tilled into Farmland.
+minechiridion.dirt.desc=A block of Dirt, found abundantly in the Overworld. Grass and Mycellium blocks can spread to it when placed, and it can be tilled into Farmland. Can sustain most Overworld plants, though not quite as many as Grass.
+minechiridion.coarse_dirt.desc=A block of Gravel-crusted Dirt, which Grass cannot spread to. It can be tilled back into normal Dirt.
+minechiridion.podzol.desc=A block of Dirt coated in dead leaves and other plant matter. Found commonly in Redwood and Mega Taiga biomes. Unlike Grass, it cannot spread to nearby Dirt blocks, but still drops Dirt when harvested without Silk Touch. Mushrooms and Moss can grow on Podzol at any light level, and most types of Seeds and Saplings can be found by sifting it.
+minechiridion.cobblestone.desc=A cobbled block of Stone, obtained by mining Stone without Silk Touch. Used in many crafting recipes.
+minechiridion.oak_planks.desc=Planks made from Oak Wood. Useful for decoration, as well as many crafting recipes. Is flammable, and can be used as fuel.
+minechiridion.birch_planks.desc=Planks made from Birch Wood. Useful for decoration, as well as many crafting recipes. Is flammable, and can be used as fuel.
+minechiridion.spruce_planks.desc=Planks made from Spruce Wood. Useful for decoration, as well as many crafting recipes. Is flammable, and can be used as fuel.
+minechiridion.jungle_planks.desc=Planks made from Jungle Wood. Useful for decoration, as well as many crafting recipes. Is flammable, and can be used as fuel.
+minechiridion.acacia_planks.desc=Planks made from Acacia Wood. Useful for decoration, as well as many crafting recipes. Is flammable, and can be used as fuel.
+minechiridion.dark_oak_planks.desc=Planks made from Dark Oak Wood. Useful for decoration, as well as many crafting recipes. Is flammable, and can be used as fuel.
+minechiridion.oak_sapling.desc=The Sapling of an Oak tree. When planted on Dirt, Podzol, or Grass, it will grow into an Oak tree over time. Bonemeal can be used to make it grow faster.
+minechiridion.birch_sapling.desc=The Sapling of a Birch tree. When planted on Dirt, Podzol, or Grass, it will grow into a Birch tree over time. Bonemeal can be used to make it grow faster.
+minechiridion.spruce_sapling.desc=The Sapling of a Spruce tree. When planted on Dirt, Podzol, or Grass, it will grow into a Spruce tree over time. Bonemeal can be used to make it grow faster, and placing 4 Spruce Saplings in a 2x2 square will grow a giant Spruce tree instead.
+minechiridion.jungle_sapling.desc=The Sapling of a Jungle tree. When planted on Dirt, Podzol, or Grass, it will grow into a Jungle tree over time. Bonemeal can be used to make it grow faster, and placing 4 Jungle Saplings in a 2x2 square will grow a giant Jungle tree instead.
+minechiridion.acacia_sapling.desc=The Sapling of an Acacia tree. When planted on Dirt, Podzol, or Grass, it will grow into an Acacia tree over time. Bonemeal can be used to make it grow faster.
+minechiridion.dark_oak_sapling.desc=The Sapling of a Dark Oak tree. When 4 are planted in a 2x2 square on Dirt, Podzol, or Grass, they will grow into a Dark Oak tree over time. Bonemeal can be used to make them grow faster.
+minechiridion.bedrock.desc=The hardest minable stone in any dimension. In most dimensions, it can be found at the very bottom of the world, just above the Invincium layer. It deals enormous durability damage to any Pickaxe used to mine it, is impervious to explosions, and can only be harvested with a Titanium Pickaxe or better. It can, however, be used to craft Bedrock Tools, which have the highest durability of any toolset.
+minechiridion.sand.desc=A block of Sand, found extremely commonly in Beaches, Deserts, Rivers, and Oceans. It can sustain Cacti and Dead Shrubs, and is affected by gravity. While Sand blocks themselves are limited in uses, they are used in making Sandstone and Glass, both highly useful decorative blocks.
+minechiridion.red_sand.desc=A red-tinted Sand block found in Mesa biomes. It functions identically to normal Sand, but can be crafted into Red Sandstone instead of normal Sandstone.
+minechiridion.gravel.desc=A block of crumbled stones found commonly in Overworld caves, as well as the Nether. Occasionally known as "Miner's Bane", Gravel can often kill players who dig upwards into a Gravel deposit, as it is affected by gravity. It can, however, be sifted to produce some useful items.
+minechiridion.gold_ore.desc=A stone block with traces of Gold embedded in it. It can be found semi-rarely in small veins deep underground, but can also be found in enormous quantities at high altitudes in Mesa biomes.
+minechiridion.iron_ore.desc=A stone block with traces of Iron embedded in it. It can be found fairly commonly in medium-sized veins at most altitudes below sea level.
+minechiridion.coal_ore.desc=A stone block with traces of Coal embedded in it. It can be found very commonly in large veins at most altitudes. It drops one Coal when mined without Silk Touch, though this number can be increased by mining it with Fortune.
+minechiridion.oak_log.desc=A log from an Oak tree. It is flammable and can be used as fuel, though the more efficient method is smelting it into Charcoal. It can also be crafted or milled into Wood Planks and Boards.
+minechiridion.birch_log.desc=A log from a Birch tree. It is flammable and can be used as fuel, though the more efficient method is smelting it into Charcoal. It can also be crafted or milled into Wood Planks and Boards.
+minechiridion.spruce_log.desc=A log from a Spruce tree. It is flammable and can be used as fuel, though the more efficient method is smelting it into Charcoal. It can also be crafted or milled into Wood Planks and Boards.
+minechiridion.jungle_log.desc=A log from a Jungle tree. It is flammable and can be used as fuel, though the more efficient method is smelting it into Charcoal. It can also be crafted or milled into Wood Planks and Boards.
+minechiridion.acacia_log.desc=A log from an Acacia tree. It is flammable and can be used as fuel, though the more efficient method is smelting it into Charcoal. It can also be crafted or milled into Wood Planks and Boards.
+minechiridion.dark_oak_log.desc=A log from a Dark Oak tree. It is flammable and can be used as fuel, though the more efficient method is smelting it into Charcoal. It can also be crafted or milled into Wood Planks and Boards.
+minechiridion.oak_leaves.desc=Leaves from an Oak tree. Drops Oak Saplings when harvested normally, though the block itself can be obtained by harvesting it with Shears. Generated Leaves despawn over time if too far away from a Log, while player-placed Leaves will never despawn. All types of Leaves, however, are very flammable and can be used as somewhat inefficient fuel.
+minechiridion.birch_leaves.desc=Leaves from a Birch tree. Drops Birch Saplings when harvested normally, though the block itself can be obtained by harvesting it with Shears. Generated Leaves despawn over time if too far away from a Log, while player-placed Leaves will never despawn. All types of Leaves, however, are very flammable and can be used as somewhat inefficient fuel.
+minechiridion.spruce_leaves.desc=Leaves from a Spruce tree. Drops Oak Saplings when harvested normally, though the block itself can be obtained by harvesting it with Shears. Generated Leaves despawn over time if too far away from a Log, while player-placed Leaves will never despawn. All types of Leaves, however, are very flammable and can be used as somewhat inefficient fuel.
+minechiridion.jungle_leaves.desc=Leaves from a Jungle tree. Occasionally drops Jungle Saplings when harvested normally, though the block itself can be obtained by harvesting it with Shears. Generated Leaves despawn over time if too far away from a Log, while player-placed Leaves will never despawn. All types of Leaves, however, are very flammable and can be used as somewhat inefficient fuel.
+minechiridion.acacia_leaves.desc=Leaves from an Acacia tree. Drops Acacia Saplings when harvested normally, though the block itself can be obtained by harvesting it with Shears. Generated Leaves despawn over time if too far away from a Log, while player-placed Leaves will never despawn. All types of Leaves, however, are very flammable and can be used as somewhat inefficient fuel.
+minechiridion.dark_oak_leaves.desc=Leaves from a Dark Oak tree. Occasionally drops Dark Oak Saplings when harvested normally, though the block itself can be obtained by harvesting it with Shears. Generated Leaves despawn over time if too far away from a Log, while player-placed Leaves will never despawn. All types of Leaves, however, are very flammable and can be used as somewhat inefficient fuel.
+minechiridion.sponge.desc=A dry Sponge block. When placed in Water, it will remove all the Water sources within a certain area and become Wet. The Water, however, is prone to re-filling in around the Sponge afterward, so it is easier to remove water located in a small, enclosed area.
+minechiridion.wet_sponge.desc=A wet Sponge block. Doesn't absorb Water like a dry Sponge would, but it can be dried again by smelting it.
+minechiridion.glass.desc=A block of raw glass. It was roughly hewn of raw Sand, so its surface isn't as clear as that of Polished Glass. Useful for decoration, as well as several recipes.
+minechiridion.lapis_ore.desc=A stone block with traces of Lapis Lazuli embedded in it. It can be found semi-rarely in small veins deep underground. It drops 4-8 Lapis Lazuli when mined without Silk Touch, though this number can be increased by mining it with Fortune.
+minechiridion.lapis_block.desc=A solid block of Lapis Lazuli. Mostly useful for decoration and compressed storage.
+minechiridion.dispenser.desc=A Redstone mechanism used for dispensing items. It works similarly to a Dropper, but when dispensing projectiles such as Snowballs, Eggs, Arrows, Splash Potions, etc, it will throw them in their projectile form rather than drop them as an item. It will also dispense activated TNT when firing TNT blocks, place Pumpkins and Wither Skulls on top of Golem/Wither bases, place Boats and Minecarts on Water/Rails, and place/remove Water and Lava sources via buckets.
+minechiridion.sandstone.desc=A block of compressed Sand found commonly under the topsoil of Beaches and Deserts. Useful for decoration.
+minechiridion.smooth_sandstone.desc=A polished, decorative block of Sandstone.
+minechiridion.chiseled_sandstone.desc=A block of Polished Sandstone that appears to have some sort of hieroglyphs chiseled into it. Who carved these?
+minechiridion.noteblock.desc=A Redstone mechanism that plays a note when powered. Right-clicking it tunes the block, and the instrument played varies based on the material of the block located below it.
+minechiridion.bed.desc=A standard-looking Bed made of Wood and Wool. Right-clicking it lets you sleep through the night, and, mysteriously, seems to cause any current weather to dissapate. In multiplayer, all players must be sleeping in a Bed at the same time for this to work.
+minechiridion.golden_rail.desc=A special, golden piece of Minecart track that, when powered, increases the velocity of any Minecart that moves over it. While unpowered, it does the opposite, acting as a form of breaks. It can connect to adjacent rails located one block above it, but, unlike normal Rails, cannot curve to connect to rails on two adjacent sides.
+minechiridion.golden_rail.desc=A special type of rail that emits a Redstone signal whenever a Minecart passes over it. It also outputs a Comparator signal relative to the inventory of any Chest or Hopper Minecarts that pass over it. It can connect to adjacent rails located one block above it, but, unlike normal Rails, cannot curve to connect to rails on two adjacent sides.
+minechiridion.sticky_piston.desc=A Piston with Slime slathered over its head. It behaves just like a normal Piston, but can pull blocks back towards it in addition to pushing them.
+minechiridion.web.desc=A sticky block of Spider Web, mostly found in Abandoned Mineshafts. It is flammable, and greatly slows any entity that passes through it, other than Spiders and Cave Spiders. It drops String when harvested with a Sword, and drops itself when harvested with Shears.
+minechiridion.tallgrass.desc=A tall tuft of grass found commonly on the surface of the Overworld. It drops various types of Seeds when broken, and drops itself when harvested with Shears. It can grow on Grass, Dirt, and Podzol, and can be Bonemealed into Double-Tall Grass.
+minechiridion.fern.desc=A leafy Fern, commonly found in Taiga, Redwood, and Jungle biomes. It occasionally drops Tomato Seeds when broken, and drops itself when harvested with Shears. It can grow on Grass, Dirt, Podzol, or in a Flower Pot, and can be Bonemealed into a Tall Fern.
+minechiridion.double_tallgrass.desc=Very high Tall Grass, commonly found in Savannas. It can be grown by Bonemealing Tall Grass, but cannot be harvested back as an item - when broken, it sometimes drops Corn among other Seeds, and when harvested with Shears it only drops 2 normal Tall Grass items. It can, however, be obtained in item form via the Dimensional Fishery.
+minechiridion.double_fern.desc=A taller variety of Fern, found occasionally in Tiaga, Redwood, and Jungle biomes. It can be grown by Bonemealing Ferns, but cannot be harvested back as an item - when broken, it sometimes drops Tomato Seeds among others, and when harvested with Shears it only drops 2 normal Fern items. It can, however, be obtained in item form via the Dimensional Fishery.
+minechiridion.deadbush.desc=A dead, withered Berry Bush, sometimes found in Deserts, Mesas, and Redwood biomes. It drops 0-2 Sticks when broken, though it can be obtained in item form by harvesting it with Shears. Once harvested, it can be re-planted on Sand, Podzol, Hardened Clay, or in a Flower Pot.
+minechiridion.piston.desc=A Redstone mechanism used for pushing blocks from place to place. When powered, the Piston's "head" will extend in the direction it is facing, pushing any adjacent blocks forward one block. Pistons can push up to 12 blocks at once, and beyond that they will simply refuse to activate. Additionally, certain blocks will break rather than move when pushed, such as Buttons, Levers, and Torches, and some blocks, such as Obsidian, Chests, Furnaces, and Invincium, cannot be pushed at all.
+minechiridion.white_wool.desc=A normal, colorless block of Wool, commonly obtained by shearing Sheep. It can be dyed 15 different colors.
+minechiridion.orange_wool.desc=An orange-dyed block of Wool, created with Orange pigments.
+minechiridion.magenta_wool.desc=A magenta-dyed block of Wool, created with Magenta pigments.
+minechiridion.light_blue_wool.desc=A light-blue-dyed block of Wool, created with Light Blue pigments.
+minechiridion.yellow_wool.desc=A yellow-dyed block of Wool, created with ground-up Dandelion pigment.
+minechiridion.lime_wool.desc=A lime-dyed block of Wool, created with Lime pigments.
+minechiridion.pink_wool.desc=A pink-dyed block of Wool, created with Pink pigments. It can very rarely be found on naturally spawning Sheep.
+minechiridion.gray_wool.desc=A grey-dyed block of Wool, created with Grey pigments. It can sometimes be found on naturally spawning Sheep.
+minechiridion.light_gray_wool.desc=A light-grey-dyed block of Wool, created with Light Grey pigments. It can sometimes be found on naturally spawning Sheep.
+minechiridion.cyan_wool.desc=A cyan-dyed block of Wool, created with Cyan pigments.
+minechiridion.purple_wool.desc=A purple-dyed block of Wool, created with Purple pigments.
+minechiridion.blue_wool.desc=A blue-dyed block of Wool, created with Lapis Lazuli dust.
+minechiridion.brown_wool.desc=A brown-dyed block of Wool, created with ground-up Cocoa Beans. It can rarely be found on naturally spawning Sheep.
+minechiridion.green_wool.desc=A green-dyed block of Wool, created with ground-up Cactus pigment.
+minechiridion.red_wool.desc=A red-dyed block of Wool, created with ground-up Rose pigment.
+minechiridion.black_wool.desc=A black-dyed block of Wool, created with Squid Ink. It can sometimes be found on naturally spawning Sheep.
+minechiridion.dandelion.desc=A small, yellow flower found in most biomes and commonly referred to as a weed. It can be crafted into Yellow Dye, or planted on Dirt, Grass, Farmland, Podzol, or in a Flower Pot. Dandelions can also be used to breed and lead Rabbits.
+minechiridion.poppy.desc=A small, red flower found in most biomes. It can be crafted into Red Dye, or planted on Dirt, Grass, Farmland, Podzol, or in a Flower Pot.
+minechiridion.orchid.desc=A slender, blue flower found in swamp biomes. It can be crafted into Light Blue Dye, or planted on Dirt, Grass, Farmland, Podzol, or in a Flower Pot.
+minechiridion.allium.desc=A pinkish, spherical flower found exclusively in Flower Forest biomes. It can be crafted into Magenta Dye, or planted on Dirt, Grass, Farmland, Podzol, or in a Flower Pot. It also occasionally drops Onions when broken.
+minechiridion.azure_bluet.desc=A short clump of white flowers found commonly in Plains biomes. Contrary to their name, they are not azure nor blue in color. It can be crafted into Light Grey Dye, or planted on Dirt, Grass, Farmland, Podzol, or in a Flower Pot.
+minechiridion.red_tulip.desc=One of the four types of Tulips found in Plains and Flower Forests. It can be crafted into Red Dye, or planted on Dirt, Grass, Farmland, Podzol, or in a Flower Pot.
+minechiridion.orange_tulip.desc=One of the four types of Tulips found in Plains and Flower Forests. It can be crafted into Orange Dye, or planted on Dirt, Grass, Farmland, Podzol, or in a Flower Pot.
+minechiridion.white_tulip.desc=One of the four types of Tulips found in Plains and Flower Forests. It can be crafted into Light Grey Dye, or planted on Dirt, Grass, Farmland, Podzol, or in a Flower Pot.
+minechiridion.pink_tulip.desc=One of the four types of Tulips found in Plains and Flower Forests. It can be crafted into Pink Dye, or planted on Dirt, Grass, Farmland, Podzol, or in a Flower Pot.
+minechiridion.oxeye_daisy.desc=A white flower with a large, iconic head, found commonly in Plains biomes. It can be crafted into Light Grey Dye, or planted on Dirt, Grass, Farmland, Podzol, or in a Flower Pot. It can also be used to emblazen a flower charge on a Banner.
+minechiridion.sunflower.desc=A tall, yellow flower that generates exclusively in Sunflower Plains biomes. Its flower always faces to the east. It can be crafted into Yellow Dye, or planted on Dirt, Grass, Farmland, or Podzol. It can also be Bonemealed to produce more Sunflowers.
+minechiridion.lilac.desc=A tall bush with purple flowers that generates commonly in Forests. It can be crafted into Magenta Dye, or planted on Dirt, Grass, Farmland, or Podzol. It can also be Bonemealed to produce more Lilacs.
+minechiridion.rose_bush.desc=A tall bush of thorny Roses that generates commonly in Forests. It can be crafted into Red Dye, or planted on Dirt, Grass, Farmland, or Podzol. It can also be Bonemealed to produce more Rose Bushes.
+minechiridion.peony.desc=A tall bush with large, pink flowers that generates commonly in Forests. It can be crafted into Pink Dye, or planted on Dirt, Grass, Farmland, or Podzol. It can also be Bonemealed to produce more Peonies. Jeb is a fan.
+minechiridion.brown_mushroom.desc=A squat, brown Mushroom found abundantly in Swamps, caves, and the Nether. It is used in crafting different types of Stew, as well as fermenting certain types of items. It will slowly spread to nearby blocks, provided their light level is low enough, and can be Bonemealed into a Giant Brown Mushroom. It can be planted on many types of blocks, but not in direct sunlight unless it is on Podzol or Mycellium.
+minechiridion.red_mushroom.desc=A spotted red Mushroom found occasionally in Swamps, caves, and the Nether. It has fewer uses than Brown Mushrooms, but is also found less commonly. It will slowly spread to nearby blocks, provided their light level is low enough, and can be Bonemealed into a Giant Red Mushroom. It can be planted on many types of blocks, but not in direct sunlight unless it is on Podzol or Mycellium.
+minechiridion.gold_block.desc=A solid block of Gold. Mostly useful for decoration, compressed storage, and displaying your gratuitous wealth, but can also be used in a Beacon Base.
+minechiridion.iron_block.desc=A solid block of Iron. Mostly useful for decoration and compressed storage, but can also be used in a Beacon Base.
+minechiridion.stone_slab.desc=A smooth, decorative Half Slab of Stone.
+minechiridion.sandstone_slab.desc=A decorative Half Slab of Sandstone.
+minechiridion.cobblestone_slab.desc=A decorative Half Slab of Cobblestone.
+minechiridion.brick_slab.desc=A decorative Half Slab of Clay Bricks.
+minechiridion.stone_brick_slab.desc=A decorative Half Slab of Stone Bricks.
+minechiridion.oak_slab.desc=A decorative Half Slab of Oak Wood Planks.
+minechiridion.birch_slab.desc=A decorative Half Slab of Birch Wood Planks.
+minechiridion.spruce_slab.desc=A decorative Half Slab of Spruce Wood Planks.
+minechiridion.jungle_slab.desc=A decorative Half Slab of Jungle Wood Planks.
+minechiridion.acacia_slab.desc=A decorative Half Slab of Acacia Wood Planks.
+minechiridion.dark_oak_slab.desc=A decorative Half Slab of Dark Oak Wood Planks.
+minechiridion.nether_brick_slab.desc=A decorative Half Slab of Nether Bricks.
+minechiridion.red_sandstone_slab.desc=A decorative Half Slab of Red Sandstone.
+minechiridion.purpur_slab.desc=A decorative Half Slab of Purpur Tiles.
+minechiridion.brick_block.desc=A block of sturdy Clay Bricks. It can be used to emblazon a field masoned on a Banner.
+minechiridion.tnt.desc=A volatile package of Sulfur and Silicon. When powered by Redstone, right-clicked with a Flint and Steel, or fired from a Dispenser, it will start flashing for a few seconds. In this state, it will be affected by physics, and will proceed to violently explode soon after. TNT is commonly used for clearing away large areas of blocks - it is not, however, advisable for resource mining, as most of the drops are destroyed in the explosion.
+minechiridion.bookshelf.desc=A decorative, wooden shelf full of books. When placed near an Enchanting Table, it will shoot particles toward the Table, boosting the maximum level of its available enchantments. Unfortunately, the Bookshelf's construction requires the books to be molecularly fused to the shelf, rendering them unreadable.
+minechiridion.mossy_cobblestone.desc=A block of Cobblestone with Moss growing between the cracks. It must have been sitting in one spot for quite some time.
+minechiridion.obsidian.desc=A block of shiny, black volcanic glass formed by rapidly cooled Lava. It seems to possess trans-dimensional properties, and is said to have been frequently used by the Farlanders before their dissapearance.
+minechiridion.torch.desc=A flaming Stick. Useful for lighting up caves, as well as for decorative home lighting. It can be placed on the top or sides of any solid block, but breaks off if that block is broken. Strangely, it doesn't seem to be capable of igniting other blocks, despite being on fire itself.
+minechiridion.fire.desc=Fire. Literally just fire. How did you even get this? Stop trying to break the game.
+minechiridion.mob_spawner.desc=A mysterious cage made of some unknown material. The inside seems to be wreathed in flames, and it appears to summon monsters into the air around it. You have no idea how it works, let alone who made it.
+minechiridion.oak_stairs.desc=Decorative Oak Plank Stairs. They can be placed facing 8 different directions, and will connect to neighboring Stairs.
+minechiridion.birch_stairs.desc=Decorative Birch Plank Stairs. They can be placed facing 8 different directions, and will connect to neighboring Stairs.
+minechiridion.spruce_stairs.desc=Decorative Spruce Plank Stairs. They can be placed facing 8 different directions, and will connect to neighboring Stairs.
+minechiridion.jungle_stairs.desc=Decorative Jungle Plank Stairs. They can be placed facing 8 different directions, and will connect to neighboring Stairs.
+minechiridion.acacia_stairs.desc=Decorative Acacia Plank Stairs. They can be placed facing 8 different directions, and will connect to neighboring Stairs.
+minechiridion.dark_oak_stairs.desc=Decorative Dark Oak Plank Stairs. They can be placed facing 8 different directions, and will connect to neighboring Stairs.
+minechiridion.sandstone_stairs.desc=Decorative Sandstone Stairs. They can be placed facing 8 different directions, and will connect to neighboring Stairs.
+minechiridion.cobblestone_stairs.desc=Decorative Cobblestone Stairs. They can be placed facing 8 different directions, and will connect to neighboring Stairs.
+minechiridion.red_sandstone_stairs.desc=Decorative Red Sandstone Stairs. They can be placed facing 8 different directions, and will connect to neighboring Stairs.
+minechiridion.brick_stairs.desc=Decorative Clay Brick Stairs. They can be placed facing 8 different directions, and will connect to neighboring Stairs.
+minechiridion.stone_brick_stairs.desc=Decorative Stone Brick Stairs. They can be placed facing 8 different directions, and will connect to neighboring Stairs.
+minechiridion.nether_brick_stairs.desc=Decorative Nether Brick Stairs. They can be placed facing 8 different directions, and will connect to neighboring Stairs.
+minechiridion.nether_quartz_stairs.desc=Decorative Nether Quartz Stairs. They can be placed facing 8 different directions, and will connect to neighboring Stairs.
+minechiridion.purpur_stairs.desc=Decorative Purpur Tile Stairs. They can be placed facing 8 different directions, and will connect to neighboring Stairs.
+minechiridion.chest.desc=A fairly standard, wooden Chest. It can only hold 27 stacks of items by itself, but can be placed next to another Chest to form a Double Chest, which can hold 54. You cannot, however, place more than 2 Chests next to eachother, making them less optimal than Crates or Barrels for compact mass storage.
+minechiridion.redstone.desc=A strange, red, conductive type of dust. It can be placed on the ground to form a sort of binary electrical wiring that can power various machines and mechanisms. Redstone Dust can connect to adjacent Redstone Dust, adjacent Redstone mechanisms, or even adjacent Dust located one block above or below itself. Redstone current can travel through a maximum of 15 Redstone Dust blocks, and can also be transfered through solid, non-Redstone blocks in certain situations.
+minechiridion.diamond_ore.desc=A stone block with Diamonds embedded in it. It can be found rarely in small veins very deep underground. It drops 1 Diamond when mined without Silk Touch, though this number can be increased by mining it with Fortune.
+minechiridion.diamond_block.desc=A solid block of Diamonds. Mostly useful for decoration, compressed storage, and displaying your gratuitous wealth, but can also be used in a Beacon Base.
+minechiridion.crafting_table.desc=One of the most useful blocks in the game, this wooden workbench can be used to craft an enormous variety of blocks and items. Its interface works the same as the in-inventory crafting menu, but with a 3x3 grid instead of a 2x2 - placing certain items in certain configurations on the grid will produce other items, which can be picked out of the slot to the right of the crafting grid.
+minechiridion.furnace.desc=A small, stone oven used for smelting certain blocks and items into other blocks and items. To-be-smelted items go in the top left slot, and fuel items go in the bottom left slot. If the top left item can be smelted, the smelting process will start, and the fuel will begin to deplete - each fuel source lasts a different duration than others. Once the arrow in the center fills up completely, the smelting result can be picked out of the right slot. This block is also a necessary ingredient in several later game machines.
+minechiridion.sign.desc=A small, wooden sign. When placed, you can type up to 4 lines of text on it. Signs are also impervious to liquids and have no collision, making them useful for controling Water flows - they can, however, be ignited by Lava.
+minechiridion.oak_door.desc=A quaint, standard-looking door made of Oak Wood. It can be opened and closed by right clicking it or powering it with Redstone.
+minechiridion.birch_door.desc=An elegant door made of Birch Wood with a translucent, paper window. It can be opened and closed by right clicking it or powering it with Redstone.
+minechiridion.spruce_door.desc=A sturdy, rustic door made of Spruce Wood. It can be opened and closed by right clicking it or powering it with Redstone.
+minechiridion.jungle_door.desc=A funky-looking door with two odd-shaped windows made of Jungle Wood. It can be opened and closed by right clicking it or powering it with Redstone.
+minechiridion.acacia_door.desc=An airy, grated door made of Acacia Wood bars. It can be opened and closed by right clicking it or powering it with Redstone.
+minechiridion.dark_oak_door.desc=A classy door made of Dark Oak Wood with Gold handles. It can be opened and closed by right clicking it or powering it with Redstone.
+minechiridion.iron_door.desc=A hefty, solid-iron door. It has no handle, and can only be opened and closed by powering it with Redstone.
+minechiridion.ladder.desc=A rather plain-looking wooden Ladder. It can be placed on the side of any solid block, and can be climbed by running into it. Crouch while climbing to stay at one elevation, or jump to drop off the Ladder.
+minechiridion.rail.desc=A set of Iron tracks designed to guide a Minecart. Placing a Minecart on the tracks will attach it to the Rails, where it can be moved freely along the track. Adjacent Minecart Rails will attach to one another, and can even attach to rails one block above or below themselves. Normal Rails do now, however, move their Minecarts, which must be powered along by other means. Additionally, mobs will avoid walking over Rails when they can, making them useful for routing monsters to specific locations.
+minechiridion.lever.desc=A simple Lever made of Wood and stone. Right-clicking it will cause it to produce a full Redstone signal, making it useful for turning Redstone devices on and off. Levers can be placed on any solid side of a block, and will break if the block they are connected to is broken.
+minechiridion.stone_pressure_plate.desc=A thin stone tile that emits a full Redstone signal whenever a mob or player steps on it, making it useful for auto-opening doors, player traps, or mob alarms.
+minechiridion.wood_pressure_plate.desc=A thin Wood tile that emits a full Redstone signal whenever any entity (including Items and projectiles) touches it.
+minechiridion.redstone_ore.desc=A stone block with Redstone Dust embedded in it. It can be found somewhat often in medium-sized veins deep underground. It drops 4-5 Redstone Dust when mined without Silk Touch, though this number can be increased by mining it with Fortune.
+minechiridion.redstone_torch.desc=A special Torch fueled by Redstone rather than Coal. It acts like a normal Torch, but emits far less light. It does, however, emit a full Redstone signal to any adjacent Redstone Dust or components, and stops emitting current when the block it is placed on is powered. This behavior makes it extremely useful for things like inverting Redstone current, building Redstone logic gates, and moving Redstone current vertically.
+minechiridion.stone_button.desc=A small stone Button, which can be activated by right-clicking it. Once activated, it delivers a 10 tick Redstone Pulse, making it useful for machines which don't need to stay active.
+minechiridion.wood_button.desc=A small wooden Button. It behaves in exactly the same way as a Stone Button, but can be forced to stay active by firing an Arrow into it.
+minechiridion.snow_layer.desc=A thin layer of Snow, often found coating the ground in snowy biomes. Snow layers can be stacked up to 8 times, with a single layer being 2 pixels tall, and 8 layers being a full block. When broken, they drop nothing unless harvested with a Shovel, in which case they drop a number of Snowballs corresponding to the number of stacked layers. Snow Layers will melt over time when placed near a light source. Snowy weather will also create Snow Layers on the ground, though they will not stack any higher than one layer.
+minechiridion.ice.desc=A block of frozen water. Ice can be found covering the rivers and lakes in snowy biomes, and drops nothing when broken unless harvested with Silk Touch. It is slippery, and is thus often useful for transporting items or entities long distances. Any Water sources will turn into Ice over time when placed in a snowy biome with exposure to the sun, making it easily obtainable and renewable. Like Snow Layers, Ice will melt into a Water source when placed near any light source.
+minechiridion.snow.desc=A solid block of Snow. Mostly decorative, though its fast mining speed makes it useful as scaffolding. It drops nothing when broken, unless harvested with a Shovel, in which case it drops 4 Snowballs. Unlike Snow Layers, it does not melt when near light sources.
+minechiridion.cactus.desc=A prickly, thorn-coated plant found in Desert biomes. While its short arms won't hurt the player, running into the base will, making it useful for protecting your yard from monsters. When broken, it can be re-planted on Sand, Red Sand, or other Cacti. A single Cactus block will grow to 3 block high over time, but they can be manually stacked as high as you want. It has few crafting uses, but can be smelted into Green Dye.
+minechiridion.clay.desc=A block of thick, clumpy earth found commonly at the bottoms of Swamps and River beds. It drops 4 Clay Balls when harvested without Silk Touch, and the block itself can be smelted into Hardened Clay.
+minechiridion.reeds.desc=A bundle of thin, bamboo-like stalks often found growing on the coasts of Rivers, lakes, and Oceans. Can be planted on any Sand, Dirt, Grass, or Podzol block that has a neighboring Water block to produce a Sugar Cane plant, which will grow up to 3 blocks tall before stopping.
+minechiridion.jukebox.desc=A wooden mechanism that can play songs when right-clicked with an old, vinyl Disk. Now if only you knew how to make vinyl...
+minechiridion.oak_fence.desc=A decorative Fence made of Oak Planks. When placed, it can connect to adjacent Fences, as well as adjacent solid blocks. Despite appearing only 1 block tall, it actually has a collision of 1.5 blocks, preventing mobs and players from easily jumping over it.
+minechiridion.birch_fence.desc=A decorative Fence made of Birch Planks. When placed, it can connect to adjacent Fences, as well as adjacent solid blocks. Despite appearing only 1 block tall, it actually has a collision of 1.5 blocks, preventing mobs and players from easily jumping over it.
+minechiridion.spruce_fence.desc=A decorative Fence made of Spruce Planks. When placed, it can connect to adjacent Fences, as well as adjacent solid blocks. Despite appearing only 1 block tall, it actually has a collision of 1.5 blocks, preventing mobs and players from easily jumping over it.
+minechiridion.jungle_fence.desc=A decorative Fence made of Jungle Planks. When placed, it can connect to adjacent Fences, as well as adjacent solid blocks. Despite appearing only 1 block tall, it actually has a collision of 1.5 blocks, preventing mobs and players from easily jumping over it.
+minechiridion.acacia_fence.desc=A decorative Fence made of Acacia Planks. When placed, it can connect to adjacent Fences, as well as adjacent solid blocks. Despite appearing only 1 block tall, it actually has a collision of 1.5 blocks, preventing mobs and players from easily jumping over it.
+minechiridion.dark_oak_fence.desc=A decorative Fence made of Dark Oak Planks. When placed, it can connect to adjacent Fences, as well as adjacent solid blocks. Despite appearing only 1 block tall, it actually has a collision of 1.5 blocks, preventing mobs and players from easily jumping over it.
+minechiridion.nether_brick_fence.desc=A decorative Fence made of Nether Bricks. When placed, it can connect to adjacent Fences, as well as adjacent solid blocks. Despite appearing only 1 block tall, it actually has a collision of 1.5 blocks, preventing mobs and players from easily jumping over it.
+minechiridion.pumpkin.desc=A cube-shaped Pumpkin with the vine still growing on one side. Though it does not seem to posess any unique qualities, it has been found that Pumpkins have some connection with Golemancy, and can be placed in certain configurations with other blocks to form different types of utility Golems. If you don't want to make it into food, you could always try carving it. Wearing a Pumpkin on your head is said to help avoid the wrath of Endermen, but then again, you wouldn't be able to see a thing...
+minechiridion.netherrack.desc=A strange, somewhat mushy, red block of stone found just about everywhere in the Nether. The stench it emits is nearly unbearable, and it's unclear what gives it such a vivid color, but it is quite useful in its ability to sustain a flame indefinitely.
+minechiridion.soul_sand.desc=A brown, sticky sand that slows entities walking through it. It could be a trick of the light, but the shadows on the surface look almost like faces, and it seems to be emitting an almost imperceptible screaming sound...
+minechiridion.glowstone.desc=A glowing block of lumpy, luminescent pebbles that seem to be stuck together with a great deal of Glowmoss sap. It can be found growing in almost stalactite-like clusters dripping from the roof of the Nether. It emits a bright light level when placed, making it useful for both decorative and underwater lighting. It drops 2-4 Glowstone Dust when mined, unless harvested with Silk Touch.
+minechiridion.lit_pumpkin.desc=A purple, luminescent Pumpkin, created by melting Purple Glowshroom essence into the skin of a Pumpkin. Like normal Pumpkins, Glowpumpkins can be used for various purposes in Golemancy, and are useful for decorative lighting as an alternative to Glowstone.
+minechiridion.cake.desc=An attractive looking, white-frosted Cake. It cannot be eaten directly, but once placed, each slice eated by right-clicking will restore 1 bar of hunger and 0.4 saturation points, ammounting to 7 hunger bars and 7 saturation points total. Cakes are often regarded as a symbol of status, due to their high resource cost and relatively low hunger output.
+minechiridion.redstone_repeater.desc=A small Redstone device designed to extend a Redstone current. A Repeater recieving any level of Redstone current will emit a full level 15 current in the direction it is facing, allowing it to effectively extend a signal farther than 15 blocks. Powering a Repeater from the side using another Repeater will lock the first Repeater in whichever power state it was in, no matter whether it is currently recieving power or not - a trick that becomes quite useful for logic gates and the like.
+minechiridion.white_glass.desc=A Glass block stained White with ground-up Bone pigment.
+minechiridion.orange_glass.desc=A Glass block stained Orange with Orange pigments.
+minechiridion.magenta_glass.desc=A Glass block stained Magenta with Magenta pigments.
+minechiridion.light_blue_glass.desc=A Glass block stained Light Blue with Light Blue pigments.
+minechiridion.yellow_glass.desc=A Glass block stained Yellow with ground-up Dandellion pigment.
+minechiridion.lime_glass.desc=A Glass block stained Lime with Lime pigments.
+minechiridion.pink_glass.desc=A Glass block stained Pink with Pink pigments.
+minechiridion.grey_glass.desc=A Glass block stained Grey with Grey pigments.
+minechiridion.light_grey_glass.desc=A Glass block stained Light Grey with Light Grey pigments.
+minechiridion.cyan_glass.desc=A Glass block stained Cyan with Cyan pigments.
+minechiridion.purple_glass.desc=A Glass block stained Purple with Purple pigments.
+minechiridion.blue_glass.desc=A Glass block stained Blue with Lapis Lazuli dust.
+minechiridion.brown_glass.desc=A Glass block stained Brown with ground-up Cocoa Bean pigment.
+minechiridion.green_glass.desc=A Glass block stained Green with ground-up Cactus pigment.
+minechiridion.red_glass.desc=A Glass block stained Red with ground-up Rose pigment.
+minechiridion.black_glass.desc=A Glass block stained Black with Squid ink.
+minechiridion.trapdoor.desc=A small, horizontally hinged, wooden door. It can be opened by right-clicking it or powering it with Redstone. Contrary to its name, Trapdoors are one of the least useful blocks for trapping players, as they are very easy to distinguish from any surrounding blocks. Unlike normal Doors, however, they do not break when the block they were placed on is broken, making them very useful for decoration.
+minechiridion.monster_egg_stone.desc=A block of Stone containing a hidden Silverfish.
+minechiridion.monster_egg_cobblestone.desc=A block of Cobblestone containing a hidden Silverfish.
+minechiridion.monster_egg_stonebrick.desc=A block of Stone Bricks containing a hidden Silverfish.
+minechiridion.brown_mushroom_block.desc=A block from a Huge Brown Mushroom. It sometimes drops a Brown Mushroom when broken, unless harvested with Silk Touch. Though it doesn't have as many uses as normal Brown Mushrooms, it can be used as fuel or melted into more efficient stew.
+minechiridion.red_mushroom_block.desc=A block from a Huge Red Mushroom. It sometimes drops a Red Mushroom when broken, unless harvested with Silk Touch. Though it doesn't have as many uses as normal Red Mushrooms, it can be used as fuel or melted into more efficient stew.
+minechiridion.iron_bars.desc=Rusty, almost prison-style Iron Bars for all your rustic fence needs. They will connect to any adjacent Iron Bars or solid blocks, similarly to Fences or Glass Panes. These seem to be found often in cells in abandoned ruins - but what were they trapping inside?
+minechiridion.glass_pane.desc=A thin pane of Glass, used most often in constructing windows. It will connect to adjacent Panes and solid blocks when placed, similarly to Fences.
+minechiridion.melon_block.desc=An enormous, cubic Melon block. It bursts into slices when harvested without Silk Touch.
+minechiridion.vine.desc=A hanging, tangled mat of Vines commonly seen in Swamps and Jungles. It grows and spreads along the sides of blocks, and can hang in open air provided there is another Vine block above it. The thick, knotted tendrils are so sturdy that they can be climbed in the same manner as a Ladder - but only when there is a block located behind them.
+minechiridion.oak_fence_gate.desc=A short wooden gate made of Oak planks. Fences will connect to it, and it lowers slightly when connected to Cobbled Walls. Like Doors, it can be opened by right-clicking or powering it with Redstone, and like Fences, its collisions are 1.5 blocks tall, preventing mobs and players from jumping it.
+minechiridion.birch_fence_gate.desc=A short wooden gate made of Birch planks. Fences will connect to it, and it lowers slightly when connected to Cobbled Walls. Like Doors, it can be opened by right-clicking or powering it with Redstone, and like Fences, its collisions are 1.5 blocks tall, preventing mobs and players from jumping it.
+minechiridion.spruce_fence_gate.desc=A short wooden gate made of Spruce planks. Fences will connect to it, and it lowers slightly when connected to Cobbled Walls. Like Doors, it can be opened by right-clicking or powering it with Redstone, and like Fences, its collisions are 1.5 blocks tall, preventing mobs and players from jumping it.
+minechiridion.jungle_fence_gate.desc=A short wooden gate made of Jungle planks. Fences will connect to it, and it lowers slightly when connected to Cobbled Walls. Like Doors, it can be opened by right-clicking or powering it with Redstone, and like Fences, its collisions are 1.5 blocks tall, preventing mobs and players from jumping it.
+minechiridion.acacia_fence_gate.desc=A short wooden gate made of Acacia planks. Fences will connect to it, and it lowers slightly when connected to Cobbled Walls. Like Doors, it can be opened by right-clicking or powering it with Redstone, and like Fences, its collisions are 1.5 blocks tall, preventing mobs and players from jumping it.
+minechiridion.dark_oak_fence_gate.desc=A short wooden gate made of Dark Oak planks. Fences will connect to it, and it lowers slightly when connected to Cobbled Walls. Like Doors, it can be opened by right-clicking or powering it with Redstone, and like Fences, its collisions are 1.5 blocks tall, preventing mobs and players from jumping it.
+minechiridion.mycellium.desc=A block of Dirt coated in a purple, fungal crust, somewhat similar to Grass. Like Grass, it will spread to nearby Dirt blocks with a high enough light level over time, though it can sustain far less plant species than Grass. Unlike Grass, however, Mycellium can sustain Mushrooms at any light level and in direct sunlight, a property only shared by Podzol. Mycellium itself cannot be tilled, though the Dirt it drops when mined without Silk Touch can.
+minechiridion.waterlilly.desc=A large, solid water plant found in Swamp biomes. It can only be planted on Water sources, but has an almost perfectly flat collision, making it popular as a cover for Water sources in farms. Though it cannot be grown or spread like most other plants, it can occasionally be found when fishing.
+minechiridion.nether_brick.desc=A block of dark maroon bricks created by melting down Netherrack. Unlike the block it was made from, however, these Bricks are quite structurally durable.
+minechiridion.enchanting_table.desc=A magical utility block designed for casting enchantments on tools, weapons, and armor. The GUI contains two slots and three empty bars to the right of them. When an enchantable tool, weapon, or piece of armor is placed in the left slot, and some Lapis Lazuli is placed in the right, the three slots on the right will light up, displaying the enchantment possibilities. The XP Orb with the number to the left of each of these bars indicates how many levels will be spent on the enchantment, while the number on the bottom right of the bar indicates the level the player must be to select it. Mousing over the enchantment options also shows the first of however many enchantments the option contains, though the enchants themselves are randomly selected. Additionally, each numbered option requires the corresponding ammount of Lapis Lazuli to fuel the table - choosing option 1 will consume 1 Lapis from the right slot, while option 3 will consume 3. Upon choosing an enchantment, the item in the left slot will be enchanted, and the Lapis Lazuli will be consumed.
+minechiridion.brewing_stand.desc=A device used for the brewing and bottling of Potions. It must be fueled with Blaze Powder by placing it in the top left slot before it can be used. Once the orange fuel meter has been filled, up to 3 Potions or Water Bottles can be placed in the three slots at the bottom. Once the Bottles are placed and a compatible ingredient has been placed in the top center slot, the Potions will begin brewing, consuming some of the fuel meter and transforming into their resulting forms after a few seconds.
+minechiridion.cauldron.desc=An Iron kettle designed for storing Water. It can be filled either by activating it with a Bucket of Water, or by leaving it out in the rain, and once filled, can be used to fill empty Buckets and Glass Bottles. Cauldrons are particularly useful for storing Water in the Nether, and can also be used to wash the Dye off of Leather Armor, or to remove the topmost layer of a Banner design. Jumping into a filled Cauldron will extinguish fire, and filled Cauldrons will additionally output a Comparator signal relative to their current fill-level.
+minechiridion.end_portal_frame.desc=A mysterious mechanism used for creating a gateway to another dimension. It seems it must be filled with something in order to function...
+minechiridion.end_stone.desc=A block of porous, white stone found abundantly in the End. Though it doesn't seem to have any significant magical properties, it is the only block that can sustain Chorus plants, and seems to be hospitable to Glow Moss as well.
+minechiridion.dragon_egg.desc=An enormous black egg left by a slain Ender Dragon. It seems to be the only one of its kind. Faint scratching sounds keep coming from the inside, but perhaps it would be best to avoid hatching it...
+minechiridion.redstone_lamp.desc=A Redstone mechanism that emits a bright light when powered.
+minechiridion.emerald_ore.desc=A stone block with Emeralds embedded in it. It can be found very rarely in tiny veins underground in Extreme Hills biomes. It drops 1 Emerald when mined without Silk Touch, though this number can be increased by mining it with Fortune.
+minechiridion.ender_chest.desc=An enchanted Chest made of Obsidion. Using Farlandian dimensional rift technology, anyone who opens the Chest is able to access their own personal pocket dimension, in which they can store up to 27 stacks of items. While it is impossible to access anyone else's pocket dimensions, one may access their own from any Ender Chest at any location, allowing it to act as a highly portable and secure storage vault. Unfortunately, the Chest itself is somewhat unstable, and will break into 8 Obsidian when broken without Silk Touch.
+minechiridion.tripwire_hook.desc=A metal hook on a wood base, used for building lines of Tripwire. When placed opposite another Tripwire Hook and connected to said Hook with String, the two Hooks will emit a Redstone signal any time an entity touches any part of the connecting String. Additionally, the Hooks will also emit a Redstone pulse if any part of the String is broken without Shears, preventing players from easily defusing Tripwire traps.
+minechiridion.emerald_block.desc=A solid block of Emeralds. Mostly useful for decoration, compressed storage, and displaying your gratuitous wealth, but can also be used in a Beacon Base.
+minechiridion.beacon.desc=A powerful magical artifact that can grant unending status effects to any players within its radius.

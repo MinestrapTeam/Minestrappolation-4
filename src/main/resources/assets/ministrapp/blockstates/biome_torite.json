@@ -1,31 +1,31 @@
 {
-  "variants": {
-    "type=deepstone": {
-      "model": "ministrapp:torite_ore_deepstone"
-    },
-    "type=red_rock": {
-      "model": "ministrapp:torite_ore_red_rock"
-    },
-    "type=deep_redrock": {
-      "model": "ministrapp:torite_ore_deep_red_rock"
-    },
-    "type=coldstone": {
-      "model": "ministrapp:torite_ore_coldstone"
-    },
-    "type=deep_coldstone": {
-      "model": "ministrapp:torite_ore_deep_coldstone"
-    },
-    "type=icestone": {
-      "model": "ministrapp:torite_ore_icestone"
-    },
-    "type=glacierrock": {
-      "model": "ministrapp:torite_ore_glacierrock"
-    },
-    "type=oceanstone": {
-      "model": "ministrapp:torite_ore_oceanstone"
-    },
-    "type=pressurized_oceanstone": {
-      "model": "ministrapp:torite_ore_pressurized_oceanstone"
-    }
-  }
+   "variants":{
+      "type=deepstone":{
+         "model":"ministrapp:torite_ore_deepstone"
+      },
+      "type=red_rock":{
+         "model":"ministrapp:torite_ore_red_rock"
+      },
+      "type=deep_redrock":{
+         "model":"ministrapp:torite_ore_deep_red_rock"
+      },
+      "type=coldstone":{
+         "model":"ministrapp:torite_ore_coldstone"
+      },
+      "type=deep_coldstone":{
+         "model":"ministrapp:torite_ore_deep_coldstone"
+      },
+      "type=icestone":{
+         "model":"ministrapp:torite_ore_icestone"
+      },
+      "type=glacierrock":{
+         "model":"ministrapp:torite_ore_glacierrock"
+      },
+      "type=oceanstone":{
+         "model":"ministrapp:torite_ore_oceanstone"
+      },
+      "type=pressurized_oceanstone":{
+         "model":"ministrapp:torite_ore_pressurized_oceanstone"
+      }
+   }
 }

@@ -1,22 +1,10 @@
 {
-  "variants": {
-    "age=0": {
-      "model": "ministrapp:block_mooshroom"
-    },
-    "age=1": {
-      "model": "ministrapp:block_mooshroom"
-    },
-    "age=2": {
-      "model": "ministrapp:block_mooshroom"
-    },
-    "age=3": {
-      "model": "ministrapp:block_mooshroom"
-    },
-    "age=4": {
-      "model": "ministrapp:block_mooshroom"
-    },
-    "age=5": {
-      "model": "ministrapp:block_mooshroom_grown"
+    "variants": {
+       "age=0": { "model": "ministrapp:block_mooshroom" },
+	  "age=1": { "model": "ministrapp:block_mooshroom" },
+       "age=2": { "model": "ministrapp:block_mooshroom" },
+       "age=3": { "model": "ministrapp:block_mooshroom" },
+       "age=4": { "model": "ministrapp:block_mooshroom" },
+       "age=5": { "model": "ministrapp:block_mooshroom_grown" }
     }
-  }
 }

@@ -1,5 +1,7 @@
 package minestrapteam.mods.minestrappolation.block;
 
+import java.util.Random;
+
 import minestrapteam.mods.minestrappolation.lib.MItems;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -10,28 +12,26 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-import java.util.Random;
-
 public class BlockSoul extends MBlock
 {
-
+	
 	public BlockSoul(Material materialIn, MapColor mapColorIn)
 	{
 		super(materialIn, mapColorIn);
 	}
-
+	
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune)
 	{
 		return MItems.soul_gem;
 	}
-
+	
 	@Override
 	public int quantityDropped(Random random)
 	{
 		return random.nextInt(5);
 	}
-
+	
 	@Override
 	public int getExpDrop(IBlockAccess world, BlockPos pos, int fortune)
 	{
@@ -45,4 +45,5 @@ public class BlockSoul extends MBlock
 		}
 		return 0;
 	}
+	
 }

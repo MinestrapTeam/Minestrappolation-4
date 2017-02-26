@@ -6,8 +6,8 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
-import net.minecraft.util.ChatComponentText;
-import net.minecraft.util.IChatComponent;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.common.util.Constants;
 
 public class InventoryBackpack implements IInventory
@@ -23,41 +23,40 @@ public class InventoryBackpack implements IInventory
 	public InventoryBackpack(ItemStack stack)
 	{
 		this.invStack = stack;
-		if (!this.invStack.hasTagCompound())
+		if (!invStack.hasTagCompound())
 		{
-			this.invStack.setTagCompound(new NBTTagCompound());
+			invStack.setTagCompound(new NBTTagCompound());
 		}
-		this.readFromNBT(this.invStack.getTagCompound());
+		readFromNBT(invStack.getTagCompound());
 	}
 
 	@Override
 
 	public int getSizeInventory()
 	{
-		return this.inventory.length;
+		return inventory.length;
 	}
 
 	@Override
 
 	public ItemStack getStackInSlot(int slot)
 	{
-		return this.inventory[slot];
+		return inventory[slot];
 	}
 
 	@Override
 	public ItemStack decrStackSize(int slot, int amount)
 	{
-		ItemStack stack = this.getStackInSlot(slot);
+		ItemStack stack = getStackInSlot(slot);
 		if (stack != null)
 		{
-			if (stack.stackSize > amount)
+			if (stack.getCount() > amount)
 			{
 				stack = stack.splitStack(amount);
-				this.markDirty();
-			}
-			else
+				markDirty();
+			} else
 			{
-				this.setInventorySlotContents(slot, null);
+				setInventorySlotContents(slot, null);
 			}
 		}
 
@@ -67,32 +66,32 @@ public class InventoryBackpack implements IInventory
 	@Override
 	public ItemStack removeStackFromSlot(int slot)
 	{
-		ItemStack stack = this.getStackInSlot(slot);
-		this.setInventorySlotContents(slot, null);
+		ItemStack stack = getStackInSlot(slot);
+		setInventorySlotContents(slot, null);
 		return stack;
 	}
 
 	@Override
 	public void setInventorySlotContents(int slot, ItemStack stack)
 	{
-		this.inventory[slot] = stack;
-		if (stack != null && stack.stackSize > this.getInventoryStackLimit())
+		inventory[slot] = stack;
+		if (stack != null && stack.getCount() > getInventoryStackLimit())
 		{
-			stack.stackSize = this.getInventoryStackLimit();
+			stack.setCount(getInventoryStackLimit());
 		}
-		this.markDirty();
+		markDirty();
 	}
 
 	@Override
-	public String getName()
+	public String getName() 
 	{
-		return this.name;
+		return name;
 	}
 
 	@Override
 	public boolean hasCustomName()
 	{
-		return this.name.length() > 0;
+		return name.length() > 0;
 	}
 
 	@Override
@@ -105,19 +104,19 @@ public class InventoryBackpack implements IInventory
 	@Override
 	public void markDirty()
 	{
-		for (int i = 0; i < this.getSizeInventory(); ++i)
+		for (int i = 0; i < getSizeInventory(); ++i)
 		{
-			if (this.getStackInSlot(i) != null && this.getStackInSlot(i).stackSize == 0)
-				this.inventory[i] = null;
+			if (getStackInSlot(i) != null && getStackInSlot(i).getCount() == 0)
+				inventory[i] = null;
 		}
-		this.writeToNBT(this.invStack.getTagCompound());
+		writeToNBT(invStack.getTagCompound());
 	}
 
 	@Override
 
-	public boolean isUseableByPlayer(EntityPlayer entityplayer)
+	public boolean isUsableByPlayer(EntityPlayer player)
 	{
-		return entityplayer.getHeldItem() == this.invStack;
+		return player.getHeldItemMainhand() == invStack;
 	}
 
 	@Override
@@ -126,6 +125,7 @@ public class InventoryBackpack implements IInventory
 		return !(itemstack.getItem() instanceof ItemBackpack);
 	}
 
+	
 	public void readFromNBT(NBTTagCompound compound)
 	{
 		NBTTagList items = compound.getTagList("ItemInventory", Constants.NBT.TAG_COMPOUND);
@@ -133,41 +133,42 @@ public class InventoryBackpack implements IInventory
 		{
 			NBTTagCompound item = items.getCompoundTagAt(i);
 			byte slot = item.getByte("Slot");
-			if (slot >= 0 && slot < this.getSizeInventory())
+			if (slot >= 0 && slot < getSizeInventory())
 			{
-				this.inventory[slot] = ItemStack.loadItemStackFromNBT(item);
+				inventory[slot] = new ItemStack(item);
 			}
 		}
 	}
-
+	
+	
 	public void writeToNBT(NBTTagCompound compound)
 	{
 		NBTTagList items = new NBTTagList();
-		for (int i = 0; i < this.getSizeInventory(); ++i)
+		for (int i = 0; i < getSizeInventory(); ++i)
 		{
-			if (this.getStackInSlot(i) != null)
+			if (getStackInSlot(i) != null)
 			{
 				NBTTagCompound item = new NBTTagCompound();
 				item.setByte("Slot", (byte) i);
-				this.getStackInSlot(i).writeToNBT(item);
+				getStackInSlot(i).writeToNBT(item);
 				items.appendTag(item);
 			}
 		}
 		compound.setTag("ItemInventory", items);
 	}
 
+
+	
 	@Override
-	public IChatComponent getDisplayName()
+	public ITextComponent getDisplayName()
 	{
-		return new ChatComponentText(this.name);
+		return new TextComponentString(name);
 	}
 
-	@Override
 	public void openInventory(EntityPlayer player)
 	{
 	}
 
-	@Override
 	public void closeInventory(EntityPlayer player)
 	{
 	}
@@ -195,9 +196,16 @@ public class InventoryBackpack implements IInventory
 	@Override
 	public void clear()
 	{
-		for (int i = 0; i < this.inventory.length; ++i)
+		for (int i = 0; i < inventory.length; ++i)
 		{
-			this.inventory[i] = null;
+			inventory[i] = null;
+
 		}
+	}
+
+	@Override
+	public boolean isEmpty() 
+	{
+		return false;
 	}
 }
